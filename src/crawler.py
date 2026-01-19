@@ -1,7 +1,17 @@
+
+# Change this line:
+# base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s19/{brand}/{model}"
+# TO:
+# import urllib.parse  (add at top if missing)
+# base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s1/{brand}/{urllib.parse.quote(model)}"
+
+# Test after editing
+python src/crawler.py --brand VW --model "Golf, e-Golf"
 """
 DPPM Car Parts Data Collector v1.0
 Scrapes used car parts pricing data from Varaosahaku.fi for thesis research.
 Collects: part names, prices, quality grades, OEM numbers, engine codes, mileage, and metadata.
+import urllib.parse
 
 Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
@@ -82,7 +92,8 @@ def scrape_brand_model(brand, model):
     Extracts detailed product information from individual product pages.
     Saves data incrementally to CSV after each product to prevent data loss.
     """
-    base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s19/{brand}/{model}"
+    base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s1/{brand}/{urllib.parse.quote(model)}"
+    print(f"Accessing URL: {base_url}")
     main_page = fetch_page(base_url)
     
     all_parts_data = []
@@ -250,22 +261,21 @@ if __name__ == '__main__':
     print(f"\nTotal parts scraped: {len(results)}")
     print(f"Output saved to: {OUTPUT_CSV}")
     
-    print(f"\n{'='*70}")
-    print("Data Quality Summary:")
-    print(f"{'='*70}")
-    print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
-    print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
-    print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
-    print(f"Parts with mileage:       {results['mileage'].notna().sum():>6} / {len(results)}")
-    print(f"Parts with quality grade: {results['quality_grade'].notna().sum():>6} / {len(results)}")
+    if len(results) > 0:
+        print(f"\n{'='*70}")
+        print("Data Quality Summary:")
+        print(f"{'='*70}")
+        print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with mileage:       {results['mileage'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with quality grade: {results['quality_grade'].notna().sum():>6} / {len(results)}")
+        
+        print(f"\nQuality Grades Distribution:")
+        for grade, count in results['quality_grade'].value_counts().items():
+            print(f"  {grade}: {count}")
+        
+        print(f"\nPrice Statistics:")
+    else:
+        print("\nNo parts found. Check if the brand/model name is correct.")
     
-    print(f"\nQuality Grades Distribution:")
-    for grade, count in results['quality_grade'].value_counts().items():
-        print(f"  {grade}: {count}")
-    
-    print(f"\nPrice Statistics:")
-    print(f"  Min:    €{results['price'].min():.2f}")
-    print(f"  Max:    €{results['price'].max():.2f}")
-    print(f"  Mean:   €{results['price'].mean():.2f}")
-    print(f"  Median: €{results['price'].median():.2f}")
-    print(f"\n{'='*70}")
