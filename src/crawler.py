@@ -1,12 +1,4 @@
 
-# Change this line:
-# base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s19/{brand}/{model}"
-# TO:
-# import urllib.parse  (add at top if missing)
-# base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s1/{brand}/{urllib.parse.quote(model)}"
-
-# Test after editing
-python src/crawler.py --brand VW --model "Golf, e-Golf"
 """
 DPPM Car Parts Data Collector v1.0
 Scrapes used car parts pricing data from Varaosahaku.fi for thesis research.
@@ -16,6 +8,7 @@ import urllib.parse
 Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
 """
+import urllib.parse
 import argparse
 import pandas as pd
 import time
@@ -93,7 +86,7 @@ def scrape_brand_model(brand, model):
     Saves data incrementally to CSV after each product to prevent data loss.
     """
     base_url = f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s1/{brand}/{urllib.parse.quote(model)}"
-    print(f"Accessing URL: {base_url}")
+    print(f"Accessing URL: {base_url}") 
     main_page = fetch_page(base_url)
     
     all_parts_data = []
@@ -119,12 +112,13 @@ def scrape_brand_model(brand, model):
             
             # Filter out navigation links and duplicates
             if (not subcategory_name or
-                subcategory_name in ['Etusivu', 'Jäsenyritykset', 'Toyota', 'Corolla', 'Autonosat', 'Valmistaja'] or
-                subcategory_name in processed_subcategories or
-                subcategory_url in visited_subcategory_urls or
-                category_url not in subcategory_url or
-                subcategory_url == category_url or
-                ('?' in subcategory_url and subcategory_url.split('?')[0] == category_url)):
+                subcategory_name in ['Etusivu', 'Jäsenyritykset', 'Autonosat', 'Valmistaja'] or \
+                    brand.lower() in subcategory_name.lower() or model.lower() in subcategory_name.lower() or \
+                        subcategory_name in processed_subcategories or \
+                    subcategory_url in visited_subcategory_urls or \
+                    category_url not in subcategory_url or \
+                    subcategory_url == category_url or \
+                    ('?' in subcategory_url and subcategory_url.split('?')[0] == category_url)):
                 continue
             
             visited_subcategory_urls.add(subcategory_url)
