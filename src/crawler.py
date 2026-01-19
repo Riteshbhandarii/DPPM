@@ -192,7 +192,7 @@ def scrape_brand_model(brand, model):
                     base_model in href and
                     link_text and
                     link_text != category_name and
-                    link_text not in ['Etusivu', 'Jäsenyritykset', brand, base_model]):
+                    link_text not in ['Etusivu', 'Jäsenyritykset', brand, base_model, 'Kaikki']):
                     subcategory_links.append((link_text, href))
             
             # Remove duplicates
