@@ -1,3 +1,0 @@
-Toyota,Corolla
-VW,Golf
-Skoda,Octavia
