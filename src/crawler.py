@@ -1,5 +1,5 @@
 """
-DPPM Car Parts Data Collector v1.2 - Fixed Navigation
+DPPM Car Parts Data Collector v1.3 - Fixed Navigation + Sampling
 Scrapes used car parts pricing data from Varaosahaku.fi for thesis research.
 Collects: part names, prices, quality grades, OEM numbers, engine codes, mileage, and metadata.
 
@@ -21,6 +21,7 @@ USER_AGENT = 'ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic resea
 DELAY_SECONDS = 1.0
 OUTPUT_CSV = 'dppm_corolla_test.csv'
 CATEGORIES_TO_SCRAPE = ['Jarrut', 'Moottori', 'Kori']  # Brakes, Engine, Body
+MAX_PARTS_PER_SUBCATEGORY = 30  # Limit parts per subcategory for reasonable sample size
 
 
 def fetch_page(url):
@@ -169,9 +170,14 @@ def scrape_brand_model(brand, model):
             # Products are directly on category page
             print(f"  Found {len(direct_products)} products directly on category page")
             
+            parts_scraped = 0
             for product_url in direct_products:
                 if product_url in scraped_product_urls:
                     continue
+                if parts_scraped >= MAX_PARTS_PER_SUBCATEGORY:
+                    print(f"  Reached limit of {MAX_PARTS_PER_SUBCATEGORY} parts for this category")
+                    break
+                    
                 scraped_product_urls.add(product_url)
                 
                 part_data = scrape_product_page(product_url, brand, model, category_name, "Main")
@@ -179,6 +185,7 @@ def scrape_brand_model(brand, model):
                     all_parts_data.append(part_data)
                     pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
                     print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
+                    parts_scraped += 1
         
         else:
             # Need to navigate to subcategories
@@ -209,9 +216,15 @@ def scrape_brand_model(brand, model):
                 subcategory_url = urljoin('https://www.varaosahaku.fi/', subcategory_href)
                 print(f"\n  Subcategory: {subcategory_name}")
                 
+                parts_in_subcategory = 0
+                
                 # Paginate through all listing pages
                 page_num = 1
                 while True:
+                    if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
+                        print(f"    Reached limit of {MAX_PARTS_PER_SUBCATEGORY} parts for this subcategory")
+                        break
+                        
                     if '?' in subcategory_url:
                         listing_page_url = f"{subcategory_url}&page={page_num}"
                     else:
@@ -232,6 +245,9 @@ def scrape_brand_model(brand, model):
                     for product_url in product_urls:
                         if product_url in scraped_product_urls:
                             continue
+                        if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
+                            break
+                            
                         scraped_product_urls.add(product_url)
                         
                         part_data = scrape_product_page(product_url, brand, model, category_name, subcategory_name)
@@ -239,6 +255,10 @@ def scrape_brand_model(brand, model):
                             all_parts_data.append(part_data)
                             pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
                             print(f"    [{len(all_parts_data)}] {part_data['part_name'][:50]}")
+                            parts_in_subcategory += 1
+                    
+                    if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
+                        break
                     
                     page_num += 1
     
@@ -331,8 +351,9 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
 
 if __name__ == '__main__':
     print("="*70)
-    print("DPPM Car Parts Data Collector v1.2")
+    print("DPPM Car Parts Data Collector v1.3 - With Sampling")
     print("="*70)
+    print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
     print()
     
     parser = argparse.ArgumentParser()
