@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 # Configuration
 USER_AGENT = 'ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic research)'
 DELAY_SECONDS = 1.0
-OUTPUT_CSV = 'dppm_corolla_test.csv'
+OUTPUT_CSV = 'dppm_corolla_test.csv' # initial 
 CATEGORIES_TO_SCRAPE = ['Jarrut', 'Moottori', 'Kori']  # Brakes, Engine, Body
 MAX_PARTS_PER_SUBCATEGORY = 30  # Limit parts per subcategory for reasonable sample size
 
