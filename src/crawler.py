@@ -7,6 +7,7 @@ Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
 """
 import argparse
+from ast import pattern
 import pandas as pd
 import time
 import json
@@ -239,7 +240,7 @@ def scrape_brand_model(brand, model):
                     if not product_urls:
                         break
                     
-                    print(f"    Page {page_num}: Found {len(product_urls)} products")
+                    print(f"Page {page_num}: Found {len(product_urls)} products")
                     
                     # Scrape each individual product page
                     for product_url in product_urls:
@@ -327,12 +328,24 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
     
     # Extract mileage
     mileage = None
-    for pattern in [r'Lukema[:\s]*(\d{5,7})', r'(\d{5,7})\s*km', r'matkamittarilukema[:\s]*(\d{5,7})']:
-        mileage_match = re.search(pattern, page_text, re.IGNORECASE)
-        if mileage_match:
-            mileage = int(mileage_match.group(1))
+    mileage_patterns = [
+        r"lukema(?:t)?\s*\(km\)\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})",  # "lukemat (km): 123 456"
+        r"lukema(?:t)?\s*([0-9][0-9\s\.,]{0,12})\s*km?",              # "lukema 123456 km"
+        r"(\d{1,3}(?:\s|\.)?\d{3})\s*km",                              # "123 456 km" or "123.456 km"
+        r"(\d{1,7})\s*km",                                             # "1234567 km" (1-7 digits)
+        r"matkamittari\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})",            # "matkamittari: 123456"
+]
+
+    for pattern in mileage_patterns:
+        m = re.search(pattern, page_text, re.IGNORECASE)
+        if m:
+            raw = m.group(1)
+        digits_only = re.sub(r"[^\d]", "", raw)  # Remove spaces/dots/commas
+        if digits_only and len(digits_only) >= 1:
+            mileage = int(digits_only)
             break
-    
+
+
     # Store extracted data
     return {
         'part_name': part_name,
@@ -341,7 +354,7 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
         'year': year,
         'oem_number': oem_number,
         'engine_code': engine_code,
-        'mileage': mileage,
+        'parts-mileage': mileage,
         'brand': brand,
         'model': model,
         'category': category_name,
