@@ -71,18 +71,30 @@ def clean_part_name(name, brand, model):
     return name.strip() or "Unknown Part"
 
 
+def extract_product_id(url):
+    """
+    Extracts unique product ID from URL.
+    Returns product ID string or None if not found.
+    """
+    match = re.search(r'ID-(\d+)', url)
+    return match.group(1) if match else None
+
+
 def get_product_links_from_listing(soup):
     """
     Extracts all unique product URLs from a listing page.
     Identifies product links by their ID pattern in the URL.
     """
-    product_urls = set()
+    product_dict = {}
     
     for link in soup.find_all('a', href=re.compile(r'ID-\d+')):
         url = urljoin('https://www.varaosahaku.fi/', link.get('href', ''))
-        product_urls.add(url)
+        product_id = extract_product_id(url)
+        
+        if product_id and product_id not in product_dict:
+            product_dict[product_id] = url
     
-    return list(product_urls)
+    return product_dict
 
 
 def scrape_brand_model(brand, model):
@@ -112,7 +124,7 @@ def scrape_brand_model(brand, model):
         return pd.DataFrame()
     
     all_parts_data = []
-    scraped_product_urls = set()
+    scraped_product_ids = set()
     
     # Get base model name for filtering
     base_model = model.split(',')[0].split('-')[0]
@@ -172,16 +184,16 @@ def scrape_brand_model(brand, model):
             print(f"  Found {len(direct_products)} products directly on category page")
             
             parts_scraped = 0
-            for product_url in direct_products:
-                if product_url in scraped_product_urls:
+            for product_id, product_url in direct_products.items():
+                if product_id in scraped_product_ids:
                     continue
                 if parts_scraped >= MAX_PARTS_PER_SUBCATEGORY:
                     print(f"  Reached limit of {MAX_PARTS_PER_SUBCATEGORY} parts for this category")
                     break
                     
-                scraped_product_urls.add(product_url)
+                scraped_product_ids.add(product_id)
                 
-                part_data = scrape_product_page(product_url, brand, model, category_name, "Main")
+                part_data = scrape_product_page(product_url, brand, model, category_name, "Main", product_id)
                 if part_data:
                     all_parts_data.append(part_data)
                     pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
@@ -235,23 +247,23 @@ def scrape_brand_model(brand, model):
                     if not listing_page:
                         break
                     
-                    product_urls = get_product_links_from_listing(listing_page)
+                    product_dict = get_product_links_from_listing(listing_page)
                     
-                    if not product_urls:
+                    if not product_dict:
                         break
                     
-                    print(f"Page {page_num}: Found {len(product_urls)} products")
+                    print(f"    Page {page_num}: Found {len(product_dict)} products")
                     
                     # Scrape each individual product page
-                    for product_url in product_urls:
-                        if product_url in scraped_product_urls:
+                    for product_id, product_url in product_dict.items():
+                        if product_id in scraped_product_ids:
                             continue
                         if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
                             break
                             
-                        scraped_product_urls.add(product_url)
+                        scraped_product_ids.add(product_id)
                         
-                        part_data = scrape_product_page(product_url, brand, model, category_name, subcategory_name)
+                        part_data = scrape_product_page(product_url, brand, model, category_name, subcategory_name, product_id)
                         if part_data:
                             all_parts_data.append(part_data)
                             pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
@@ -263,10 +275,17 @@ def scrape_brand_model(brand, model):
                     
                     page_num += 1
     
-    return pd.DataFrame(all_parts_data)
+    # Final deduplication based on product_id
+    final_df = pd.DataFrame(all_parts_data)
+    if not final_df.empty and 'product_id' in final_df.columns:
+        final_df = final_df.drop_duplicates(subset=['product_id'], keep='first')
+        final_df.to_csv(OUTPUT_CSV, index=False)
+        print(f"\n✓ Removed {len(all_parts_data) - len(final_df)} duplicate entries")
+    
+    return final_df
 
 
-def scrape_product_page(product_url, brand, model, category_name, subcategory_name):
+def scrape_product_page(product_url, brand, model, category_name, subcategory_name, product_id):
     """
     Scrapes a single product page and extracts all relevant data.
     """
@@ -358,13 +377,14 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
 
     # Store extracted data
     return {
+        'product_id': product_id,
         'part_name': part_name,
         'price': price,
         'quality_grade': quality_grade,
         'year': year,
         'oem_number': oem_number,
         'engine_code': engine_code,
-        'parts-mileage': mileage,
+        'mileage': mileage,
         'brand': brand,
         'model': model,
         'category': category_name,
@@ -373,6 +393,49 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
 
 
 if __name__ == '__main__':
+    print("="*70)
+    print("DPPM Car Parts Data Collector v1.3 - With Sampling")
+    print("="*70)
+    print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
+    print()
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--brand', required=True)
+    parser.add_argument('--model', required=True)
+    args = parser.parse_args()
+    
+    OUTPUT_CSV = f'dppm_{args.brand.lower()}_{args.model.lower().replace(",", "_").replace("-", "_")}.csv'
+    results = scrape_brand_model(args.brand, args.model)
+    
+    # Data quality summary
+    print(f"\n{'='*70}")
+    print("Scraping Completed!")
+    print(f"{'='*70}")
+    print(f"\nTotal parts scraped: {len(results)}")
+    print(f"Output saved to: {OUTPUT_CSV}")
+    
+    if len(results) == 0:
+        print("\nWARNING: No parts were scraped!")
+    else:
+        print(f"\n{'='*70}")
+        print("Data Quality Summary:")
+        print(f"{'='*70}")
+        print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with mileage:       {results['mileage'].notna().sum():>6} / {len(results)}")
+        print(f"Parts with quality grade: {results['quality_grade'].notna().sum():>6} / {len(results)}")
+        
+        print(f"\nQuality Grades Distribution:")
+        for grade, count in results['quality_grade'].value_counts().items():
+            print(f"  {grade}: {count}")
+        
+        print(f"\nPrice Statistics:")
+        print(f"  Min:    €{results['price'].min():.2f}")
+        print(f"  Max:    €{results['price'].max():.2f}")
+        print(f"  Mean:   €{results['price'].mean():.2f}")
+        print(f"  Median: €{results['price'].median():.2f}")
+    print(f"\n{'='*70}")
     print("="*70)
     print("DPPM Car Parts Data Collector v1.3 - With Sampling")
     print("="*70)
