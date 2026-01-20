@@ -308,12 +308,22 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
     
     # Extract OEM part number
     oem_number = None
-    oem_match = re.search(r'Alkuperäinen\s+nro\s*:?\s*([A-Z0-9-]+)', page_text, re.IGNORECASE)
-    if oem_match:
-        raw_oem = oem_match.group(1)
-        oem_number = re.sub(r'[A-Za-z]+$', '', raw_oem).strip('-').replace('-', '')
-        if len(oem_number) < 6:
-            oem_number = None
+    oem_patterns = [
+         r'(?:alkuperäinen|oem)\s*(?:nro|numero|num)\s*:?\s*([A-Z0-9\-/]{6,20})',  # "Alkuperäinen nro: 12345-678"
+        r'oem[:\-]?\s*([A-Z0-9\-/]{6,20})',                                     # "OEM: 12345-678"
+        r'pn[:\-]?\s*([A-Z0-9\-/]{6,20})',                                      # "PN: 123456"
+    r'([A-Z]{2,4}\d{4,8}[A-Z\-]?)',                                         # OEM-like: "1NDT12345", "47070-47090"
+]
+    for pattern in oem_patterns:
+        m = re.search(pattern, page_text, re.IGNORECASE)
+        if m:
+            raw_oem = m.group(1)
+        # Clean and validate
+            cleaned = re.sub(r'[^\w\-/]', '', raw_oem.upper())
+            if len(cleaned) >= 6 and len(cleaned) <= 20:  # Reasonable OEM length
+                oem_number = cleaned
+            break
+
     
     # Extract engine code
     engine_code = None
