@@ -363,16 +363,16 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
         r"(\d{1,3}(?:\s|\.)?\d{3})\s*km",                              # "123 456 km" or "123.456 km"
         r"(\d{1,7})\s*km",                                             # "1234567 km" (1-7 digits)
         r"matkamittari\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})",            # "matkamittari: 123456"
-]
+    ]
 
     for pattern in mileage_patterns:
         m = re.search(pattern, page_text, re.IGNORECASE)
         if m:
             raw = m.group(1)
-        digits_only = re.sub(r"[^\d]", "", raw)  # Remove spaces/dots/commas
-        if digits_only and len(digits_only) >= 1:
-            mileage = int(digits_only)
-            break
+            digits_only = re.sub(r"[^\d]", "", raw)  # Remove spaces/dots/commas
+            if digits_only and len(digits_only) >= 1:
+                mileage = int(digits_only)
+                break
 
 
     # Store extracted data
@@ -393,49 +393,6 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
 
 
 if __name__ == '__main__':
-    print("="*70)
-    print("DPPM Car Parts Data Collector v1.3 - With Sampling")
-    print("="*70)
-    print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
-    print()
-    
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--brand', required=True)
-    parser.add_argument('--model', required=True)
-    args = parser.parse_args()
-    
-    OUTPUT_CSV = f'dppm_{args.brand.lower()}_{args.model.lower().replace(",", "_").replace("-", "_")}.csv'
-    results = scrape_brand_model(args.brand, args.model)
-    
-    # Data quality summary
-    print(f"\n{'='*70}")
-    print("Scraping Completed!")
-    print(f"{'='*70}")
-    print(f"\nTotal parts scraped: {len(results)}")
-    print(f"Output saved to: {OUTPUT_CSV}")
-    
-    if len(results) == 0:
-        print("\nWARNING: No parts were scraped!")
-    else:
-        print(f"\n{'='*70}")
-        print("Data Quality Summary:")
-        print(f"{'='*70}")
-        print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
-        print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
-        print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
-        print(f"Parts with mileage:       {results['mileage'].notna().sum():>6} / {len(results)}")
-        print(f"Parts with quality grade: {results['quality_grade'].notna().sum():>6} / {len(results)}")
-        
-        print(f"\nQuality Grades Distribution:")
-        for grade, count in results['quality_grade'].value_counts().items():
-            print(f"  {grade}: {count}")
-        
-        print(f"\nPrice Statistics:")
-        print(f"  Min:    €{results['price'].min():.2f}")
-        print(f"  Max:    €{results['price'].max():.2f}")
-        print(f"  Mean:   €{results['price'].mean():.2f}")
-        print(f"  Median: €{results['price'].median():.2f}")
-    print(f"\n{'='*70}")
     print("="*70)
     print("DPPM Car Parts Data Collector v1.3 - With Sampling")
     print("="*70)
