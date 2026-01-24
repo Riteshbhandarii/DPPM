@@ -7,12 +7,11 @@ Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
 """
 import argparse
-from ast import pattern
 import pandas as pd
 import time
 import json
 import re
-from urllib.parse import urljoin, urlparse, quote
+from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
@@ -328,32 +327,41 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
     # Extract OEM part number
     oem_number = None
     oem_patterns = [
-         r'(?:alkuperäinen|oem)\s*(?:nro|numero|num)\s*:?\s*([A-Z0-9\-/]{6,20})',  # "Alkuperäinen nro: 12345-678"
-        r'oem[:\-]?\s*([A-Z0-9\-/]{6,20})',                                     # "OEM: 12345-678"
-        r'pn[:\-]?\s*([A-Z0-9\-/]{6,20})',                                      # "PN: 123456"
-    r'([A-Z]{2,4}\d{4,8}[A-Z\-]?)',                                         # OEM-like: "1NDT12345", "47070-47090"
-]
+        r'(?:alkuperäinen|oem)\s*(?:nro|numero|num)\s*:?\s*([A-Z0-9\-/]{6,20})',  # "Alkuperäinen nro: 12345-678"
+        r'oem[:\-]?\s*([A-Z0-9\-/]{6,20})',                                       # "OEM: 12345-678"
+        r'pn[:\-]?\s*([A-Z0-9\-/]{6,20})',                                        # "PN: 123456"
+        r'([A-Z]{2,4}\d{4,8}[A-Z\-]?)',                                           # OEM-like: "1NDT12345", "47070-47090"
+    ]
     for pattern in oem_patterns:
         m = re.search(pattern, page_text, re.IGNORECASE)
         if m:
             raw_oem = m.group(1)
-        # Clean and validate
+            # Clean and validate
             cleaned = re.sub(r'[^\w\-/]', '', raw_oem.upper())
             if len(cleaned) >= 6 and len(cleaned) <= 20:  # Reasonable OEM length
                 oem_number = cleaned
-            break
-
+                break
     
-    # Extract engine code
+    # Extract engine code - IMPROVED PATTERNS
     engine_code = None
-    engine_match = re.search(r'Moottorin\s+koodi\s*:?\s*([A-Z0-9-]+)', page_text, re.IGNORECASE)
-    if engine_match:
-        raw_engine = engine_match.group(1)
-        if (3 <= len(raw_engine) <= 8 and 
-            any(c.isalpha() for c in raw_engine) and 
-            any(c.isdigit() for c in raw_engine) and
-            not raw_engine.startswith('1900')):
-            engine_code = raw_engine.replace('-', '')
+    engine_patterns = [
+        r'Moottorin\s+koodi\s*:?\s*([A-Z0-9-]+)',           # "Moottorin koodi: 1ZZ-FE"
+        r'moottorik[oö]{2}di\s*:?\s*([A-Z0-9-]+)',          # "Moottorikoodi: 1ZZ-FE" (no space)
+        r'Moottori\s*:?\s*([A-Z]{1,2}\d{1,2}[A-Z]{0,3})',   # "Moottori: 1ZZ"
+        r'Engine\s+code\s*:?\s*([A-Z0-9-]+)',               # English
+    ]
+    
+    for pattern in engine_patterns:
+        engine_match = re.search(pattern, page_text, re.IGNORECASE)
+        if engine_match:
+            raw_engine = engine_match.group(1).strip()
+            # Validate: 3-8 chars, has letters AND digits, not a year
+            if (3 <= len(raw_engine) <= 8 and 
+                any(c.isalpha() for c in raw_engine) and 
+                any(c.isdigit() for c in raw_engine) and
+                not raw_engine.startswith(('19', '20'))):
+                engine_code = raw_engine.replace('-', '').upper()
+                break
     
     # Extract mileage
     mileage = None
@@ -373,7 +381,6 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
             if digits_only and len(digits_only) >= 1:
                 mileage = int(digits_only)
                 break
-
 
     # Store extracted data
     return {
