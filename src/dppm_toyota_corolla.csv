@@ -1,0 +1,53 @@
+product_id,part_name,price,quality_grade,year,oem_number,engine_code,mileage,brand,model,category,subcategory
+54335221,Virranjaoitin,71.0,A2,1988-1992,FI06376738O,,,Toyota,Corolla,Moottori,Virranjaoitin
+54341466,Virranjaoitin,71.0,A2,1993-1997,FI06376738O,,220000.0,Toyota,Corolla,Moottori,Virranjaoitin
+54345881,Virranjaoitin,71.0,A2,1993-1997,FI06376738O,,233000.0,Toyota,Corolla,Moottori,Virranjaoitin
+53954187,Virranjaoitin,68.0,A2,1988-1992,02920-0113,,148000.0,Toyota,Corolla,Moottori,Virranjaoitin
+53832764,Virranjaoitin,61.0,B2,1988-1992,FI01853355O,,,Toyota,Corolla,Moottori,Virranjaoitin
+53832935,Virranjaoitin,61.0,B2,1988-1992,029020-1068ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin
+54550646,Virranjaoitin,60.0,A2,1988-1992,FI15710056O,,241000.0,Toyota,Corolla,Moottori,Virranjaoitin
+54572294,Virranjaoitin AE82,60.0,B2,1983-1987,FI15710056O,,196000.0,Toyota,Corolla,Moottori,Virranjaoitin
+53687628,Virranjaoitin,56.7,A2,1988-1992,FI07265116O,,,Toyota,Corolla,Moottori,Virranjaoitin
+54575137,Virranjaoitin,60.0,A2,1988-1992,FI15710056O,,,Toyota,Corolla,Moottori,Virranjaoitin
+54475593,Virranjaoitin,60.0,B2,1988-1992,FI06018105O,,241000.0,Toyota,Corolla,Moottori,Virranjaoitin
+54505192,Virranjaoitin,55.0,A2,1988-1992,FI11042417O,,370000.0,Toyota,Corolla,Moottori,Virranjaoitin
+54310467,Virranjaoitin,51.0,A2,1993-1997,FI06376738O,,,Toyota,Corolla,Moottori,Virranjaoitin
+54497668,Virranjaoitin,50.0,A2,1988-1992,FI11042417O,,,Toyota,Corolla,Moottori,Virranjaoitin
+54520169,Virranjaoitin,50.0,A2,1988-1992,FI11042417O,,323000.0,Toyota,Corolla,Moottori,Virranjaoitin
+54475591,Virranjaoitin,50.0,A2,1988-1992,FI06018105O,,238000.0,Toyota,Corolla,Moottori,Virranjaoitin
+53694343,Virranjaoitin,40.0,A2,1988-1992,FI09992720O,,,Toyota,Corolla,Moottori,Virranjaoitin
+60261118,Virranjaoitin,40.0,A2,1988-1992,FI05351686O,,223000.0,Toyota,Corolla,Moottori,Virranjaoitin
+60261119,Virranjaoitin,40.0,A2,1988-1992,FI05351686O,,334000.0,Toyota,Corolla,Moottori,Virranjaoitin
+56939596,Moottori Bensiini,3090.0,A2,2019-2027,190000T580ALKUPER,2ZR,63000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+59140483,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,87000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+53848511,Moottori Bensiini,3000.0,A1,2019-2027,XM20A-E92CGALKUPER,M20AFXS,4000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+53605194,Moottori Bensiini,3000.0,B1,2019-2027,FI02042722O,,20000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+63352462,Moottori Bensiini,3100.0,A1,2019-2027,190000T840ALKUPER,2ZRFXE,51000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+62989746,Moottori Bensiini,3100.0,A1,2019-2027,190000T820ALKUPER,2ZRFXE,48000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65433218,Moottori Bensiini,3100.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,103000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+63305356,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,102000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+66423845,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,64000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+63117883,Moottori Bensiini,3000.0,A2,2019-2027,190000T580ALKUPER,2ZRFXE,81000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+66412411,Moottori Bensiini,3100.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,66000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65176844,Moottori Bensiini,3000.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,80000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+64538310,Moottori Bensiini,3000.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,89000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+59078050,Moottori Bensiini,2900.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,65000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65107242,Moottori Bensiini,2900.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,115000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+64005293,Moottori Bensiini,2900.0,B2,2019-2027,1900024320ALKUPER,M20AFXS,60000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+63127407,Moottori Bensiini,2900.0,A1,2019-2027,190000T840ALKUPER,,53000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+58037219,Moottori Bensiini,2950.0,B2,2019-2027,FI05351686O,2ZRFXE,13000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+61788095,Moottori Bensiini,2900.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,153000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+58967670,Moottori Bensiini,2850.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,119000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+64503487,Moottori Bensiini,2800.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,98000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+53895744,Moottori Bensiini,2850.0,B2,2019-2027,FI05351686O,M20AFXS,38000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65097646,Moottori Bensiini,2700.0,A2,2019-2027,FI05028803O,2ZRFXE,52000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65374179,Moottori Bensiini,2700.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,148000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+53935109,Moottori Bensiini,2800.0,B2,2019-2027,FI05351686O,2ZRFXE,21000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+53365769,Moottori Bensiini,2600.0,A3,2019-2027,190000T820ALKUPER,2ZRFXE,213000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+65309142,Moottori Bensiini,2750.0,B2,2019-2027,FI05351686O,2ZRFXE,17000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+63355525,Moottori Bensiini,2500.0,A3,2019-2027,190000T820ALKUPER,2ZRFXE,328000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+55909039,Moottori Bensiini,2500.0,B2,2013-2018,190000T072ALKUPER,1ZRFAE,70000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+62117684,Moottori Bensiini,2375.0,C3,2019-2027,190000T840ALKUPER,2ZRFXE,40000.0,Toyota,Corolla,Moottori,Moottori Bensiini
+54777206,Ahdin,120.0,A2,2002-2007,17201-27050ALKUPER,1CDFTV,488000.0,Toyota,Corolla,Moottori,Ahdin
+53617942,Ahdin,100.0,A3,2002-2007,FI32037991O,,325000.0,Toyota,Corolla,Moottori,Ahdin
+54529615,Ahdin,100.0,A2,2002-2007,17201-27050ALKUPER,1CDFTV,412000.0,Toyota,Corolla,Moottori,Ahdin
