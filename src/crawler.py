@@ -7,10 +7,14 @@ Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
 """
 import argparse
+from pathlib import Path
 import pandas as pd
 import time
 import json
+import os
 import re
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
@@ -19,7 +23,7 @@ from bs4 import BeautifulSoup
 # Configuration
 USER_AGENT = 'ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic research)'
 DELAY_SECONDS = 1.0
-OUTPUT_CSV = 'dppm_corolla_test.csv' # initial 
+OUTPUT_CSV = None
 CATEGORIES_TO_SCRAPE = ['Jarrut', 'Moottori', 'Kori']  # Brakes, Engine, Body
 MAX_PARTS_PER_SUBCATEGORY = 30  # Limit parts per subcategory for reasonable sample size
 
@@ -123,6 +127,17 @@ def scrape_brand_model(brand, model):
         return pd.DataFrame()
     
     all_parts_data = []
+    csv_exists = Path(OUTPUT_CSV).exists()
+
+    def append_row(part_data):
+        nonlocal csv_exists
+        pd.DataFrame([part_data]).to_csv(
+            OUTPUT_CSV,
+            mode='a',
+            header=not csv_exists,
+            index=False
+        )
+        csv_exists = True
     scraped_product_ids = set()
     
     # Get base model name for filtering
@@ -162,7 +177,10 @@ def scrape_brand_model(brand, model):
         return pd.DataFrame()
     
     print(f"Found {len(category_links)} categories to scrape\n")
-    
+
+    # Scrape date for this run (Helsinki time)
+    scrape_date = datetime.now(ZoneInfo("Europe/Helsinki")).date().isoformat()
+
     # Navigate through main categories
     for category_name, category_href in category_links:
         category_url = urljoin('https://www.varaosahaku.fi/', category_href)
@@ -192,10 +210,18 @@ def scrape_brand_model(brand, model):
                     
                 scraped_product_ids.add(product_id)
                 
-                part_data = scrape_product_page(product_url, brand, model, category_name, "Main", product_id)
+                part_data = scrape_product_page(
+                    product_url,
+                    brand,
+                    model,
+                    category_name,
+                    "Main",
+                    product_id,
+                    scrape_date,
+                )
                 if part_data:
                     all_parts_data.append(part_data)
-                    pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
+                    append_row(part_data)
                     print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
                     parts_scraped += 1
         
@@ -262,10 +288,18 @@ def scrape_brand_model(brand, model):
                             
                         scraped_product_ids.add(product_id)
                         
-                        part_data = scrape_product_page(product_url, brand, model, category_name, subcategory_name, product_id)
+                        part_data = scrape_product_page(
+                            product_url,
+                            brand,
+                            model,
+                            category_name,
+                            subcategory_name,
+                            product_id,
+                            scrape_date,
+                        )
                         if part_data:
                             all_parts_data.append(part_data)
-                            pd.DataFrame(all_parts_data).to_csv(OUTPUT_CSV, index=False)
+                            append_row(part_data)
                             print(f"    [{len(all_parts_data)}] {part_data['part_name'][:50]}")
                             parts_in_subcategory += 1
                     
@@ -284,7 +318,7 @@ def scrape_brand_model(brand, model):
     return final_df
 
 
-def scrape_product_page(product_url, brand, model, category_name, subcategory_name, product_id):
+def scrape_product_page(product_url, brand, model, category_name, subcategory_name, product_id, scrape_date):
     """
     Scrapes a single product page and extracts all relevant data.
     """
@@ -395,7 +429,8 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
         'brand': brand,
         'model': model,
         'category': category_name,
-        'subcategory': subcategory_name
+        'subcategory': subcategory_name,
+        'scrape_date': scrape_date
     }
 
 
@@ -411,7 +446,18 @@ if __name__ == '__main__':
     parser.add_argument('--model', required=True)
     args = parser.parse_args()
     
-    OUTPUT_CSV = f'dppm_{args.brand.lower()}_{args.model.lower().replace(",", "_").replace("-", "_")}.csv'
+    base_output = f'dppm_{args.brand.lower()}_{args.model.lower().replace(",", "_").replace("-", "_")}'
+    scrape_date = datetime.now(ZoneInfo("Europe/Helsinki")).date().isoformat()
+    repo_root = Path(__file__).resolve().parents[1]
+    output_dir = repo_root / "datasets" / "new"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    candidate = output_dir / f"{base_output}_{scrape_date}.csv"
+    if candidate.exists():
+        suffix = 2
+        while (output_dir / f"{base_output}_{scrape_date}_v{suffix}.csv").exists():
+            suffix += 1
+        candidate = output_dir / f"{base_output}_{scrape_date}_v{suffix}.csv"
+    OUTPUT_CSV = str(candidate)
     results = scrape_brand_model(args.brand, args.model)
     
     # Data quality summary
