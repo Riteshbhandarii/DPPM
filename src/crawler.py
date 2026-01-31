@@ -7,14 +7,14 @@ Author: Ritesh Bhandari (ritesh.bhandari@edu.turkuamk.fi)
 Institution: Turku University of Applied Sciences
 """
 import argparse
-from pathlib import Path
-import pandas as pd
-import time
 import json
-import os
 import re
+import time
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
+
+import pandas as pd
 from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
@@ -347,7 +347,7 @@ def scrape_product_page(product_url, brand, model, category_name, subcategory_na
         try:
             data = json.loads(json_ld.string)
             price = data.get('offers', {}).get('price')
-        except:
+        except Exception:
             pass
     
     # Extract quality grade
