@@ -484,7 +484,7 @@ if __name__ == "__main__":
 
     # Playwright started (stability + speed)
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.firefox.launch(headless=True)
         page = browser.new_page(user_agent=USER_AGENT)
 
         results = scrape_brand_model(page, args.brand, args.model)
