@@ -1,0 +1,528 @@
+product_id,part_name,price,quality_grade,year,oem_number,engine_code,mileage,brand,model,category,subcategory,scrape_date
+65309287,ABS Hydraulikoneisto,500.0,A2,2019-2027,44050-02K71ALKUPER,2ZRFXE,17000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+65250408,ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,80000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+63026248,ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,81000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+65680819,ABS Hydraulikoneisto,500.0,A2,2019-2027,4405002K71ALKUPER,2ZRFXE,72000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+66223587,ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70ALKUPER,M20AFXS,64000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+63083244,ABS Hydraulikoneisto,470.0,A2,2019-2027,4405012E70ALKUPER,,53000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+57231205,ABS Hydraulikoneisto,465.0,A2,2019-2027,4405012E70ALKUPER,2ZR,74000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+59140465,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,M20AFXS,87000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+60496419,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,M20AFXS,147000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+61076241,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,50000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+62404925,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,83000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+60058714,ABS Hydraulikoneisto,450.0,A2,2019-2027,FI27837687O,2ZRFXE,119000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+63310160,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,M20AFXS,102000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+63350249,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,48000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+65399912,ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,148000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+66448033,ABS Hydraulikoneisto,427.5,A2,2019-2027,4405012E70ALKUPER,2ZRFXE,62000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+54219888,ABS Hydraulikoneisto,410.0,A2,2013-2018,FI09389104O,1ZRFAE,92000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+54082264,ABS Hydraulikoneisto,400.0,A2,2008-2012,0265951057ALKUPER,,51000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+54083609,ABS Hydraulikoneisto,400.0,A2,2008-2012,0265950512ALKUPER,,265000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+61923913,ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002740ALKUPER,1ZRFAE,103000,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto,2026-01-31
+53950212,Jarrulevy AE82,11.0,A2,1983-1987,FI06408963O,,115000,Toyota,Corolla,Jarrut,Etu,2026-01-31
+54483257,Jarrulevy,10.0,A2,1998-2001,FI06018105O,,125000,Toyota,Corolla,Jarrut,Etu,2026-01-31
+54491283,Jarrulevy,10.0,A2,1998-2001,FI06018105O,,125000,Toyota,Corolla,Jarrut,Etu,2026-01-31
+53950695,Jarrulevy AE82,5.0,C2,1983-1987,FI06408963O,,101000,Toyota,Corolla,Jarrut,Etu,2026-01-31
+62404919,Jarrusatula,150.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,83000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+60496428,Jarrusatula,150.0,A2,2019-2027,47750F4010ALKUPER,M20AFXS,147000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+65250414,Jarrusatula,150.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,80000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+60058883,Jarrusatula,150.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+63310200,Jarrusatula,150.0,A2,2019-2027,47750F4010ALKUPER,M20AFXS,102000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+63350262,Jarrusatula,150.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,48000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53928357,Jarrusatula,140.0,A2,2019-2027,FI05351686O,2ZRFXE,21000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+64546414,Jarrusatula,150.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,89000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+65107263,Jarrusatula,140.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,115000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53859829,Jarrusatula,120.0,A2,2019-2027,FI05028803O,M20AFXS,,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53860488,Jarrusatula,120.0,A1,2019-2027,02705203947ALKUPER,2ZRFXE,2000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53879067,Jarrusatula,120.0,A1,2019-2027,FI05028803O,M20AFXS,4000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+66220619,Jarrusatula,120.0,A2,2019-2027,FI05028803O,2ZRFXE,52000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53606571,Jarrusatula,100.0,A1,2019-2027,FI02042722O,,20000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+65594835,Jarrusatula,100.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,141000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+65680818,Jarrusatula,100.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,72000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+66456204,Jarrusatula,95.0,A2,2019-2027,4775002490ALKUPER,2ZRFXE,62000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+56269539,Jarrusatula,80.0,A2,2008-2012,47750-02341ALKUPER,1ZRFAE,26000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+53421620,Jarrusatula,80.0,A2,2013-2018,4775002250ALKUPER,1ZRFAE,49000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+54151660,Jarrusatula,80.0,A1,2019-2027,FI06292622O,,18000,Toyota,Corolla,Jarrut,Vasen etu,2026-01-31
+61076237,502 Bad Gateway,,,,,,,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+65399920,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,148000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+62404916,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,83000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+65250413,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,80000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+60058882,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+63310199,Jarrusatula,150.0,A2,2019-2027,47730F4010ALKUPER,M20AFXS,102000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+63350261,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,48000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53895810,Jarrusatula,140.0,A2,2019-2027,FI05351686O,M20AFXS,38000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53928356,Jarrusatula,140.0,A2,2019-2027,FI05351686O,2ZRFXE,21000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+64546413,Jarrusatula,150.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,89000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+65107262,Jarrusatula,140.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,115000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53859828,Jarrusatula,120.0,A2,2019-2027,FI05028803O,M20AFXS,,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53860450,Jarrusatula,120.0,A1,2019-2027,FI05028803O,M20AFXS,4000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53860490,Jarrusatula,120.0,A1,2019-2027,02705205145ALKUPER,2ZRFXE,2000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+58717890,Jarrusatula,120.0,A2,2019-2027,FI05028803O,2ZRFXE,58000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+66223635,Jarrusatula,120.0,A2,2019-2027,FI05028803O,2ZRFXE,52000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53577515,Jarrusatula,100.0,A2,2019-2027,FI02042722O,,20000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+65594826,Jarrusatula,100.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,141000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+65680816,Jarrusatula,100.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,72000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+66456203,Jarrusatula,95.0,A2,2019-2027,4773002590ALKUPER,2ZRFXE,62000,Toyota,Corolla,Jarrut,Oikea etu,2026-01-31
+53859868,Jarrusatula,150.0,A2,2019-2027,FI05028803O,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+53860486,Jarrusatula,150.0,A1,2019-2027,46310-F4011ALKUPER,2ZRFXE,2000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+53867130,Jarrusatula,150.0,A1,2019-2027,46310-F4011ALKUPER,M20AFXS,4000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+58755577,Jarrusatula,150.0,A2,2019-2027,FI05028803O,2ZRFXE,58000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+53608961,Jarrusatula,150.0,A1,2019-2027,FI02042722O,,20000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+62418498,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,8NRFTS,17000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+59249690,Jarrusatula,142.5,A1,2019-2027,4785002350ALKUPER,2ZRFXE,10000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+65250412,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,80000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+65680817,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,72000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+59131988,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,M20AFXS,87000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+62404922,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,83000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+64546416,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,89000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+66223739,Jarrusatula,150.0,A2,2019-2027,4785002350ALKUPER,M20AFXS,64000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+60058881,Jarrusatula,140.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+65107265,Jarrusatula,140.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,115000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+65434801,Jarrusatula,140.0,A2,2019-2027,4785002350ALKUPER,2ZRFXE,103000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+54615836,Jarrusatula,120.0,A2,2013-2018,FI03986645O,1ZRFAE,35000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+60134501,Jarrusatula,120.0,A2,2019-2027,FI03986645O,2ZRFXE,30000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+61746105,Jarrusatula,114.0,A2,2019-2027,4782209100ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+60496425,Jarrusatula,120.0,A2,2019-2027,4785002350ALKUPER,M20AFXS,147000,Toyota,Corolla,Jarrut,Vasen taka,2026-01-31
+63350259,Jarrusatula,160.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,48000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+53850683,Jarrusatula,150.0,A1,2019-2027,46310-F4011ALKUPER,2ZRFXE,2000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+53859861,Jarrusatula,150.0,A2,2019-2027,FI05028803O,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+58755576,Jarrusatula,150.0,A2,2019-2027,FI05028803O,2ZRFXE,58000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+62418504,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,8NRFTS,17000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+59249691,Jarrusatula,142.5,A1,2019-2027,4783002360ALKUPER,2ZRFXE,10000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+65434800,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,103000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+65250411,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,80000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+53608052,Jarrusatula,150.0,A1,2019-2027,4783002360ALKUPER,,20000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+65680815,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,72000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+59131987,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,M20AFXS,87000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+62404920,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,83000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+63310198,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,M20AFXS,102000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+64546415,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,89000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+66220602,Jarrusatula,150.0,A2,2019-2027,FI05028803O,2ZRFXE,52000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+66223738,Jarrusatula,150.0,A2,2019-2027,4783002360ALKUPER,M20AFXS,64000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+60058880,Jarrusatula,140.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+65107264,Jarrusatula,140.0,A2,2019-2027,4783002360ALKUPER,2ZRFXE,115000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+54589718,Jarrusatula,120.0,A2,2013-2018,FI03986645O,1ZRFAE,35000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+60134505,Jarrusatula,120.0,A2,2019-2027,FI03986645O,2ZRFXE,30000,Toyota,Corolla,Jarrut,Oikea taka,2026-01-31
+55161324,Jarrusatulan pidin,61.0,A2,2002-2007,FI06376738O,3ZZFE,230000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+61766112,Jarrusatulan pidin,57.0,A2,2019-2027,4772209260ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+61416229,Jarrusatulan pidin,47.5,A2,2008-2012,4782209020ALKUPER,1NDTV,262000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+62463270,Jarrusatulan pidin,45.0,A2,2002-2007,FI30987993O,,240000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+62648549,Jarrusatulan pidin,45.0,A2,2002-2007,FI30987993O,,214000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+62648588,Jarrusatulan pidin,45.0,A2,2002-2007,FI30987993O,,214000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+54537570,Jarrusatulan pidin,40.0,A2,2002-2007,FI30987993O,,152000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+59868871,Jarrusatulan pidin,38.0,A2,2002-2007,4772109170ALKUPER,3ZZFE,84000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+55488983,Jarrusatulan pidin,28.5,A2,2002-2007,FI06509801O,4ZZFE,351000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+56121481,Jarrusatulan pidin,28.5,A2,2002-2007,FI06509801O,3ZZFE,467000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+57168980,Jarrusatulan pidin,28.5,A2,2002-2007,FI06509801O,3ZZFE,251000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+57168981,Jarrusatulan pidin,28.5,A2,2002-2007,FI06509801O,3ZZFE,251000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+61855470,Jarrusatulan pidin,30.0,A2,2002-2007,FI09992720O,,266000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+56121480,Jarrusatulan pidin,25.6,A2,2002-2007,FI06509801O,3ZZFE,467000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+54457578,Jarrusatulan pidin,17.1,A2,2008-2012,4772112A10ALKUPER,1ZRFE,234000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+54457585,Jarrusatulan pidin,17.1,A2,2008-2012,4772212A10ALKUPER,1ZRFE,234000,Toyota,Corolla,Jarrut,Jarrusatulan pidin,2026-01-31
+53607268,Jarrutehostin,500.0,A1,2019-2027,FI02042722O,,20000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+63127022,Jarrutehostin,500.0,A2,2019-2027,4705012A01ALKUPER,,53000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+66447576,Jarrutehostin,475.0,A2,2019-2027,4705012A01ALKUPER,2ZRFXE,62000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+61721306,Jarrutehostin,427.5,A2,2019-2027,4707047090ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+61751538,Jarrutehostin,427.5,A2,2019-2027,4705012A00ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+61997837,Jarrutehostin,427.5,A2,2019-2027,4707047090ALKUPER,2ZRFXE,40000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+65861514,Jarrutehostin,450.0,A2,2019-2027,4705012A00ALKUPER,M20AFXS,153000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+54151623,Jarrutehostin,370.0,A1,2019-2027,47210-12500ALKUPER,,18000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+55885461,Jarrutehostin,130.0,A2,2013-2018,47200-02E91-BALKUPER,1ZRFAE,70000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+54219687,Jarrutehostin,125.0,A2,2013-2018,FI09389104O,1ZRFAE,92000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+53421835,Jarrutehostin,110.0,A2,2013-2018,4461009D10ALKUPER,1ZRFAE,49000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+54472538,Jarrutehostin,110.0,A2,2008-2012,4720002581ALKUPER,1ZRFE,204000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+61886697,Jarrutehostin,100.0,A2,2013-2018,4461009A30ALKUPER,1ZRFAE,103000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+54066047,Jarrutehostin,100.0,A2,2008-2012,47200-02580-AALKUPER,1ZRFE,77000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+53714970,Jarrutehostin,100.0,A2,1998-2001,FI02154548O,,117000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+64976673,Jarrutehostin,100.0,A2,2013-2018,4461009D10ALKUPER,1ZRFAE,275000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+65203182,Jarrutehostin,95.0,A2,2008-2012,4461009410ALKUPER,1ZRFAE,157000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+65434871,Jarrutehostin,100.0,A2,2008-2012,4461009411ALKUPER,1ZRFAE,225000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+65789967,Jarrutehostin,100.0,A2,2008-2012,4461009411ALKUPER,1ZRFAE,119000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+62753576,Jarrutehostin,100.0,A2,2008-2012,4461009641ALKUPER,1NRFE,109000,Toyota,Corolla,Jarrut,Jarrutehostin,2026-01-31
+65434802,Pääsylinteri,500.0,A2,2019-2027,4705012A00ALKUPER,2ZRFXE,103000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+65107261,Pääsylinteri,500.0,A2,2019-2027,4705012A00ALKUPER,2ZRFXE,115000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+65399927,Pääsylinteri,500.0,A2,2019-2027,4705012A00ALKUPER,2ZRFXE,148000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+60058879,Pääsylinteri,500.0,A2,2019-2027,FI27837687O,2ZRFXE,119000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+66220344,Pääsylinteri,500.0,A2,2019-2027,FI05028803O,2ZRFXE,52000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+66424831,Pääsylinteri,500.0,A2,2019-2027,4705012A00ALKUPER,2ZRFXE,66000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+59746205,Pääsylinteri,60.0,A2,2002-2007,FI22893129O,,,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+59747247,Pääsylinteri,60.0,A2,2002-2007,FI22893129O,3ZZFE,308000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+54513878,Pääsylinteri,60.0,A2,2008-2012,FI11042417O,1ADFTV,376000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+54341930,Pääsylinteri,51.0,A2,2002-2007,FI06376738O,,130000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+54371340,Pääsylinteri,51.0,A2,1988-1992,FI06376738O,,170000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+54538992,Pääsylinteri,51.0,A2,1993-1997,FI30987993O,,,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+56051567,Pääsylinteri,51.0,A2,2002-2007,FI30987993O,,214000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+53723167,Pääsylinteri,50.0,A2,1993-1997,FI02154548O,,156000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+53392046,Pääsylinteri,50.0,A2,2013-2018,4720109710ALKUPER,1ZRFAE,49000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+53493625,Pääsylinteri,50.0,A2,2008-2012,0204Y24235ALKUPER,1ZRFE,128000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+60522307,Pääsylinteri,50.0,A2,2008-2012,4720109500ALKUPER,1NDTV,304000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+60971993,Pääsylinteri,50.0,A2,2008-2012,4720109500ALKUPER,1ZRFAE,250000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+61886689,Pääsylinteri,50.0,A2,2013-2018,4720109710ALKUPER,1ZRFAE,103000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+53604545,Pääsylinteri,50.0,A2,2008-2012,FI02042722O,1NRFE,95000,Toyota,Corolla,Jarrut,Pääsylinteri,2026-01-31
+61070893,ABS Hydraulipumppu,450.0,A2,2019-2027,4707047090ALKUPER,2ZRFXE,50000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+63083764,ABS Hydraulipumppu,460.0,A2,2019-2027,4707047090ALKUPER,,53000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+60058715,ABS Hydraulipumppu,450.0,A2,2019-2027,4707047090ALKUPER,2ZRFXE,119000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+66424690,ABS Hydraulipumppu,450.0,A2,2019-2027,4707047090ALKUPER,2ZRFXE,66000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+66456417,ABS Hydraulipumppu,427.5,A2,2019-2027,4707047090ALKUPER,2ZRFXE,62000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54151616,ABS Hydraulipumppu,370.0,A1,2019-2027,47070-47070ALKUPER,,18000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54063593,ABS Hydraulipumppu,350.0,A2,2008-2012,44540-02080ALKUPER,1ZRFE,77000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54556265,ABS Hydraulipumppu,350.0,A2,2008-2012,44540-02190ALKUPER,1NDTV,232000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54586417,ABS Hydraulipumppu,250.0,A2,2002-2007,FI15710056O,,134000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+56798552,ABS Hydraulipumppu,250.0,A2,2008-2012,44540-02360,1ZRFAE,97000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+53685056,ABS Hydraulipumppu,225.0,A2,2008-2012,44050-02430ALKUPER,1ZRFAE,200000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54573754,ABS Hydraulipumppu,250.0,A2,2002-2007,FI15710056O,,124000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+55593606,ABS Hydraulipumppu,200.0,A2,2002-2007,44510-02050ALKUPER,4ZZFE,130000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+53728071,ABS Hydraulipumppu,200.0,A2,1998-2001,FI02154548O,,164000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54552749,ABS Hydraulipumppu,200.0,A2,2002-2007,44510-02050ALKUPER,,241000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+59181925,ABS Hydraulipumppu,200.0,A2,1998-2001,89541-02020ALKUPER,,580000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+53729663,ABS Hydraulipumppu,180.0,A3,2002-2007,FI02154548O,,128000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+61771536,ABS Hydraulipumppu,180.0,A2,2008-2012,4405012301ALKUPER,1ZRFE,235000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+61812330,ABS Hydraulipumppu,180.0,A2,2008-2012,4405012650ALKUPER,1ADFTV,218000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54070476,ABS Hydraulipumppu,150.0,A2,2002-2007,44510-02050ALKUPER,,239000,Toyota,Corolla,Jarrut,ABS Hydraulipumppu,2026-01-31
+54574587,Jarruvoimansäädin,40.0,A2,2002-2007,FI15710056O,,215000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54579182,Jarruvoimansäädin,40.0,A2,2002-2007,FI15710056O,,242000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54580238,Jarruvoimansäädin,40.0,A2,2002-2007,FI15710056O,,241000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54597165,Jarruvoimansäädin,40.0,A2,2002-2007,FI03986645O,3ZZFE,103000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54617886,Jarruvoimansäädin,40.0,A2,2002-2007,FI03986645O,3ZZFE,169000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54627742,Jarruvoimansäädin,40.0,A2,2002-2007,FI03986645O,4ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54642418,Jarruvoimansäädin,40.0,A2,2002-2007,FI03986645O,3ZZFE,200000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54642605,Jarruvoimansäädin,40.0,A2,2002-2007,FI03986645O,3ZZFE,153000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54570677,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,223000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+59181924,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,580000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54547464,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,4ZZFE,265000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54551682,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54551730,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54582967,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54582969,Jarruvoimansäädin,30.0,A2,1998-2001,FI15710056O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+53814274,Jarruvoimansäädin,30.0,A3,2002-2007,FI01853355O,1NDTV,260000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+60931120,Jarruvoimansäädin,20.0,A2,1998-2001,FI06408963O,,400000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54603903,Jarruvoimansäädin AE82,20.0,A3,1983-1987,FI03986645O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54607047,Jarruvoimansäädin KE70,20.0,A3,1982-1987,FI03986645O,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+54088941,Jarruvoimansäädin,15.0,A2,2002-2007,FI06292622O,81KW,156000,Toyota,Corolla,Jarrut,Jarruvoimansäädin,2026-01-31
+53881176,Käsijarrun kahva,40.0,A2,2008-2012,FI05028803O,1NDTV,301000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54365316,Käsijarrun kahva,40.0,A2,1998-2001,FI06376738O,,84000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54598960,Käsijarrun kahva,40.0,A2,2002-2007,FI03986645O,3ZZFE,200000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54516999,Käsijarrun kahva,40.0,A2,2008-2012,FI11042417O,1ADFTV,376000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53882640,Käsijarrun kahva,35.0,A2,2002-2007,FI05028803O,3ZZFE,172000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53994088,Käsijarrun kahva,35.0,A2,2002-2007,FI10331575O,4ZZFE,133000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53836781,Käsijarrun kahva,35.0,A2,1993-1997,FI05028803O,,,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53855578,Käsijarrun kahva,35.0,A2,2002-2007,FI05028803O,3ZZFE,63000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54365725,Käsijarrun kahva,35.0,A2,1988-1992,FI06376738O,,,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53817071,Käsijarrun kahva,30.0,A2,1998-2001,FI01853355O,,160000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+53829075,Käsijarrun kahva,30.0,A2,1998-2001,FI01853355O,4EFE,197000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54365356,Käsijarrun kahva,30.0,A2,1988-1992,FI06376738O,,170000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54365466,Käsijarrun kahva,30.0,A2,1993-1997,FI06376738O,,,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54365505,Käsijarrun kahva,30.0,A2,1993-1997,FI06376738O,,220000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54134876,Käsijarrun kahva,30.0,A2,2008-2012,FI06292622O,,172000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54618069,Käsijarrun kahva,30.0,A1,2008-2012,FI03986645O,1ZRFAE,55000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54618255,Käsijarrun kahva,30.0,A2,2008-2012,FI03986645O,1NDTV,,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+56296634,Käsijarrun kahva,30.0,A2,2008-2012,FI03986645O,1ZRFAE,111000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+65735584,Käsijarrun kahva,30.0,A2,1998-2001,FI11042417O,,,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+65736575,Käsijarrun kahva,30.0,A2,1993-1997,FI11042417O,,489000,Toyota,Corolla,Jarrut,Käsijarrun kahva,2026-01-31
+54471048,Roiskesuoja,20.0,A2,2008-2012,FI06018105O,1ZRFAE,121000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+55665136,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+55665137,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+55665138,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+55665139,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+61842699,Roiskesuoja,20.0,A2,2008-2012,FI06018105O,,297000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54202598,Roiskesuoja,18.0,A2,2002-2007,FI06294476O,,149000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54466992,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,66000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54466993,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,66000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54483617,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,175000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54483920,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,175000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54485282,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,175000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54490126,Roiskesuoja,20.0,A2,1998-2001,FI06018105O,,66000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62480816,Roiskesuoja,19.0,A2,2008-2012,FI06294476O,1NDTV,340000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62480832,Roiskesuoja,19.0,A2,2008-2012,FI06294476O,1NDTV,340000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62480841,Roiskesuoja,19.0,A2,2008-2012,FI06294476O,1NDTV,340000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62515746,Roiskesuoja,19.0,A2,2008-2012,FI06294476O,1ZRFE,118000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62515753,Roiskesuoja,19.0,A2,2008-2012,FI06294476O,1ZRFE,118000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+62515835,Roiskesuoja,19.0,A2,2008-2012,416E396300ALKUPER,1ZRFE,118000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+54456711,Roiskesuoja,11.4,A2,2008-2012,FI06509801O,1ZRFE,234000,Toyota,Corolla,Kori,Roiskesuoja,2026-01-31
+55880209,Sisälokasuoja,60.0,A2,2013-2018,FI06018105O,1ZRFAE,70000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+62514264,Sisälokasuoja,52.2,A2,2008-2012,5259102150ALKUPER,1ZRFE,118000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+55777100,Sisälokasuoja,50.0,A2,2002-2007,6563802020ALKUPER,3ZZFE,164000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+55777101,Sisälokasuoja,50.0,A2,2002-2007,6563702020ALKUPER,3ZZFE,164000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+55788422,Sisälokasuoja,50.0,A2,2002-2007,FI06018105O,4ZZFE,303000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+60285233,Sisälokasuoja,50.0,A2,2002-2007,5387602070ALKUPER,,,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+65400001,Sisälokasuoja,50.0,A2,2019-2027,6563802210ALKUPER,2ZRFXE,148000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+65798258,Sisälokasuoja,50.0,A2,2002-2007,FI06018105O,,292000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+65400011,Sisälokasuoja,50.0,A2,2019-2027,6563702210ALKUPER,2ZRFXE,148000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+61759576,Sisälokasuoja,47.5,A3,2019-2027,5387602630ALKUPER,2ZRFXE,119000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+66424453,Sisälokasuoja,50.0,A2,2019-2027,5387602630ALKUPER,2ZRFXE,115000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+65798254,Sisälokasuoja,50.0,A2,2002-2007,FI06018105O,,292000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+53823548,Sisälokasuoja,40.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+53827841,Sisälokasuoja,40.0,A2,2002-2007,FI01853355O,,295000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+53829239,Sisälokasuoja,40.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+63126958,Sisälokasuoja,40.0,A2,2019-2027,6563802210ALKUPER,,53000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+64959623,Sisälokasuoja,40.0,A2,2013-2018,5387502481ALKUPER,1ZRFAE,275000,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+64257713,Sisälokasuoja,40.0,A2,2002-2007,FI06376738O,3ZZFE,,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+62006140,Sisälokasuoja,40.0,,2002-2007,8116387ALKUPER,,,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+62793177,Sisälokasuoja,40.0,A1,1993-1997,FI11042417O,,,Toyota,Corolla,Kori,Sisälokasuoja,2026-01-31
+65600136,Kattokaiteet / Kattoteline,200.0,A2,2019-2027,6347002060ALKUPER,2ZRFXE,72000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53999051,Kattokaiteet / Kattoteline,120.0,B2,2002-2007,FI10331575O,E3ZY52L,204000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53823571,Kattokaiteet / Kattoteline,122.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53869185,Kattokaiteet / Kattoteline,120.0,A2,2002-2007,FI05028803O,3ZZFE,63000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53706171,Kattokaiteet / Kattoteline,100.0,A2,2002-2007,FI02154548O,,94000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53657499,Kattokaiteet / Kattoteline,72.0,A2,2002-2007,FI07265116O,3ZZFE,299000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53657516,Kattokaiteet / Kattoteline,72.0,A3,2002-2007,FI07265116O,1CDFTV,350000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53657645,Kattokaiteet / Kattoteline,72.0,A3,2002-2007,FI07265116O,1CDFTV,350000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53714171,Kattokaiteet / Kattoteline,80.0,B2,2002-2007,FI02154548O,,160000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+55161334,Kattokaiteet / Kattoteline,76.0,A2,2002-2007,FI06376738O,3ZZFE,230000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53657616,Kattokaiteet / Kattoteline,46.8,A1,1998-2001,FI07265116O,4EFE,300000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+53657699,Kattokaiteet / Kattoteline,46.8,A1,1998-2001,FI07265116O,4EFE,300000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+54124336,Kattokaiteet / Kattoteline,10.0,A2,2002-2007,FI06292622O,,324000,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline,2026-01-31
+56855420,Nosturi / Tunkki,23.7,A2,2002-2007,FI06294476O,,329000,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+53969891,Nosturi / Tunkki,25.0,A2,1998-2001,09111-05010ALKUPER,,400000,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54316439,Nosturi / Tunkki,20.0,A2,1998-2001,FI06376738O,,84000,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54335879,Nosturi / Tunkki,20.0,A2,1988-1992,FI06376738O,,170000,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54365095,Nosturi / Tunkki,20.0,A2,1993-1997,FI06376738O,,,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54475133,Nosturi / Tunkki,20.0,A2,1998-2001,FI06018105O,,260000,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54472868,Nosturi / Tunkki AE82,10.0,A2,1983-1987,FI06018105O,,,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54476216,Nosturi / Tunkki AE82,10.0,A2,1983-1987,FI06018105O,,,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54477682,Nosturi / Tunkki AE82,10.0,A2,1983-1987,FI06018105O,,,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+54478688,Nosturi / Tunkki AE82,10.0,A2,1983-1987,FI06018105O,,,Toyota,Corolla,Kori,Nosturi / Tunkki,2026-01-31
+55161305,Vetokoukku,163.0,A2,2002-2007,FI06376738O,3ZZFE,230000,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+59545738,Vetokoukku,163.0,A2,2008-2012,FI06376738O,1NDTV,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+64533192,Vetokoukku,160.0,A2,2008-2012,FI03986645O,1ADFTV,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+63233203,Vetokoukku,160.0,A2,2002-2007,FI06376738O,4ZZFE,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+65735613,Vetokoukku,150.0,A2,1998-2001,FI11042417O,,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+65450461,Vetokoukku,142.5,A3,2008-2012,FI06509801O,1ZRFE,350000,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+62101650,Vetokoukku,135.0,A2,2002-2007,FI11042417O,,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+63341541,Vetokoukku,130.0,A2,2002-2007,FI06018105O,,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+62481998,Vetokoukku,122.5,A3,2008-2012,FI06294476O,1NDTV,340000,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+65635008,Vetokoukku,100.0,A3,2002-2007,FI05351686O,,,Toyota,Corolla,Kori,Vetokoukku,2026-01-31
+53913410,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,28100-37030ALKUPER,2WW,114000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+56268870,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,28100-0T010ALKUPER,1ZRFAE,26000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53397731,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,28100-37030ALKUPER,1ZRFE,178000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53705104,Käynnistinmoottori Bensiini,80.0,A2,2002-2007,FI02154548O,E3ZY52L,122000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53727493,Käynnistinmoottori Bensiini,80.0,A2,2002-2007,FI02154548O,,160000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+64976668,Käynnistinmoottori Bensiini,80.0,A2,2013-2018,281000T030ALKUPER,1ZRFAE,275000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+54648612,Käynnistinmoottori Bensiini,80.0,A1,2013-2018,28100-0T030-FALKUPER,1ZRFAE,35000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+65434891,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000T010ALKUPER,1ZRFAE,225000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+65774526,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000T010ALKUPER,1ZRFAE,119000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+54528712,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,FI11042417O,1ZRFAE,117000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+61808600,Käynnistinmoottori Bensiini,80.0,A2,2013-2018,FI05351686O,1ZRFAE,102000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+62753472,Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000Y041ALKUPER,1NRFE,109000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+58355946,Käynnistinmoottori Bensiini,80.0,A2,2013-2018,FI06018105O,1ZRFAE,70000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53821469,Käynnistinmoottori Bensiini,71.0,A2,1998-2001,FI01853355O,,90000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53725225,Käynnistinmoottori Bensiini,70.0,A2,1998-2001,FI02154548O,,215000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+54544574,Käynnistinmoottori Bensiini,71.0,A2,1998-2001,FI30987993O,,272000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+58540688,Käynnistinmoottori Bensiini,70.0,A2,2008-2012,281000T010ALKUPER,1ZRFAE,129000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+53821474,Käynnistinmoottori Bensiini,71.0,A3,2002-2007,28100-22040ALKUPER,3ZZS52,57000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+59078800,Käynnistinmoottori Bensiini,70.0,A2,2008-2012,281000Y042ALKUPER,1NRFE,105000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+64498733,Käynnistinmoottori Bensiini,70.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,209000,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini,2026-01-31
+54230860,Laturi,125.0,A2,2013-2018,FI09389104O,1ZRFAE,92000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+61842750,Laturi,120.0,A1,2008-2012,104210-5350ALKUPER,,297000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+64572767,Laturi,120.0,A2,2008-2012,270600T061ALKUPER,1ZRFE,138000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+64471152,Laturi,120.0,A2,2008-2012,2706026051ALKUPER,1ADFTV,434000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+66395007,Laturi,125.0,A2,2013-2018,270600T360ALKUPER,1ZRFAE,85000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+65774513,Laturi,120.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,119000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+61808601,Laturi,120.0,A2,2013-2018,FI05351686O,1ZRFAE,102000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+53727775,Laturi,110.0,A2,2002-2007,FI02154548O,,160000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+53713804,Laturi,110.0,A2,2002-2007,FI02154548O,,128000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+53705345,Laturi,100.0,A2,2002-2007,FI02154548O,,160000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+58508409,Laturi,100.0,A2,2008-2012,270600Y090ALKUPER,1NRFE,134000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+64498731,Laturi,100.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,209000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+65618407,Laturi,90.0,A2,1998-2001,FI07265116O,3ZZFE,250000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+56919452,Laturi,100.0,A2,2008-2012,FI11042417O,1NDTV,405000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+65735586,Laturi,100.0,A2,1998-2001,FI11042417O,,,Toyota,Corolla,Moottori,Laturi,2026-01-31
+60971874,Laturi,100.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,250000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+61071374,Laturi,100.0,A2,2013-2018,270600T200ALKUPER,1ZRFAE,180000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+62753471,Laturi,100.0,A2,2008-2012,270600Y091ALKUPER,1NRFE,109000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+66560857,Laturi,100.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,268000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+65434882,Laturi,100.0,A2,2008-2012,270600T091ALKUPER,1ZRFAE,225000,Toyota,Corolla,Moottori,Laturi,2026-01-31
+56939596,Moottori Bensiini,3090.0,A2,2019-2027,190000T580ALKUPER,2ZR,63000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+59140483,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,87000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+53848511,Moottori Bensiini,3000.0,A1,2019-2027,XM20A-E92CGALKUPER,M20AFXS,4000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+53605194,Moottori Bensiini,3000.0,B1,2019-2027,FI02042722O,,20000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+63352462,Moottori Bensiini,3100.0,A1,2019-2027,190000T840ALKUPER,2ZRFXE,51000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+62989746,Moottori Bensiini,3100.0,A1,2019-2027,190000T820ALKUPER,2ZRFXE,48000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+65433218,Moottori Bensiini,3100.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,103000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+63305356,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,102000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+66423845,Moottori Bensiini,3100.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,64000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+66412411,Moottori Bensiini,3100.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,66000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+63117883,Moottori Bensiini,3000.0,A2,2019-2027,190000T580ALKUPER,2ZRFXE,81000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+65176844,Moottori Bensiini,3000.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,80000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+64538310,Moottori Bensiini,3000.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,89000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+59078050,Moottori Bensiini,2900.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,65000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+65107242,Moottori Bensiini,2900.0,A2,2019-2027,190000T840ALKUPER,2ZRFXE,115000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+64005293,Moottori Bensiini,2900.0,B2,2019-2027,1900024320ALKUPER,M20AFXS,60000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+63127407,Moottori Bensiini,2900.0,A1,2019-2027,190000T840ALKUPER,,53000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+58037219,Moottori Bensiini,2950.0,B2,2019-2027,FI05351686O,2ZRFXE,13000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+61788095,Moottori Bensiini,2900.0,A2,2019-2027,1900024320ALKUPER,M20AFXS,153000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+58967670,Moottori Bensiini,2850.0,A2,2019-2027,190000T820ALKUPER,2ZRFXE,119000,Toyota,Corolla,Moottori,Moottori Bensiini,2026-01-31
+58955945,Sytytyspuola,45.0,A2,2002-2007,90919-02238ALKUPER,2ZZGE,334000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+58955946,Sytytyspuola,45.0,A2,2002-2007,90919-02238ALKUPER,2ZZGE,334000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54321523,Sytytyspuola,45.0,A1,2002-2007,FI06376738O,,15000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+64465053,Sytytyspuola,45.0,A2,2002-2007,90080-19019ALKUPER,3ZZFE,300000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+64465065,Sytytyspuola,45.0,A2,2002-2007,90080-19019ALKUPER,3ZZFE,300000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+64465066,Sytytyspuola,45.0,A2,2002-2007,90080-19019ALKUPER,3ZZFE,300000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+64465067,Sytytyspuola,45.0,A2,2002-2007,90080-19019ALKUPER,3ZZFE,300000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54533639,Sytytyspuola,45.0,A2,2002-2007,90080-19019ALKUPER,,152000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54579565,Sytytyspuola,40.0,A2,1998-2001,90080-19017ALKUPER,,,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54311388,Sytytyspuola,40.0,A1,2002-2007,FI06376738O,4ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54316693,Sytytyspuola,40.0,A2,1998-2001,FI06376738O,,84000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+55161386,Sytytyspuola,40.0,A2,2002-2007,FI06376738O,3ZZFE,230000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54325977,Sytytyspuola,40.0,A1,2002-2007,FI06376738O,,15000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+65592302,Sytytyspuola,40.0,A2,2019-2027,9091902272ALKUPER,2ZRFXE,141000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+65592303,Sytytyspuola,40.0,A2,2019-2027,9091902272ALKUPER,2ZRFXE,141000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+65592316,Sytytyspuola,40.0,A2,2019-2027,9091902272ALKUPER,2ZRFXE,141000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+65592317,Sytytyspuola,40.0,A2,2019-2027,9091902272ALKUPER,2ZRFXE,141000,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+64257771,Sytytyspuola,40.0,A2,2002-2007,FI06376738O,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+63233184,Sytytyspuola,40.0,A2,2002-2007,FI06376738O,4ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54501254,Sytytyspuola,40.0,A2,1998-2001,FI11042417O,,,Toyota,Corolla,Moottori,Sytytyspuola,2026-01-31
+54335221,Virranjaoitin,71.0,A2,1988-1992,FI06376738O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54341466,Virranjaoitin,71.0,A2,1993-1997,FI06376738O,,220000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54345881,Virranjaoitin,71.0,A2,1993-1997,FI06376738O,,233000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+53954187,Virranjaoitin,68.0,A2,1988-1992,02920-0113,,148000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+53832764,Virranjaoitin,61.0,B2,1988-1992,FI01853355O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+53832935,Virranjaoitin,61.0,B2,1988-1992,029020-1068ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54550646,Virranjaoitin,60.0,A2,1988-1992,FI15710056O,,241000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54572294,Virranjaoitin AE82,60.0,B2,1983-1987,FI15710056O,,196000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+53687628,Virranjaoitin,56.7,A2,1988-1992,FI07265116O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54575137,Virranjaoitin,60.0,A2,1988-1992,FI15710056O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54475593,Virranjaoitin,60.0,B2,1988-1992,FI06018105O,,241000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54505192,Virranjaoitin,55.0,A2,1988-1992,FI11042417O,,370000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54310467,Virranjaoitin,51.0,A2,1993-1997,FI06376738O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54497668,Virranjaoitin,50.0,A2,1988-1992,FI11042417O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54520169,Virranjaoitin,50.0,A2,1988-1992,FI11042417O,,323000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54475591,Virranjaoitin,50.0,A2,1988-1992,FI06018105O,,238000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+53694343,Virranjaoitin,40.0,A2,1988-1992,FI09992720O,,,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+60261118,Virranjaoitin,40.0,A2,1988-1992,FI05351686O,,223000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+60261119,Virranjaoitin,40.0,A2,1988-1992,FI05351686O,,334000,Toyota,Corolla,Moottori,Virranjaoitin,2026-01-31
+54777206,Ahdin,120.0,A2,2002-2007,17201-27050ALKUPER,1CDFTV,488000,Toyota,Corolla,Moottori,Ahdin,2026-01-31
+53617942,Ahdin,100.0,A3,2002-2007,FI32037991O,,325000,Toyota,Corolla,Moottori,Ahdin,2026-01-31
+54529615,Ahdin,100.0,A2,2002-2007,17201-27050ALKUPER,1CDFTV,412000,Toyota,Corolla,Moottori,Ahdin,2026-01-31
+64546672,Hybridi muunnin,350.0,A2,2019-2027,G920047330ALKUPER,2ZRFXE,89000,Toyota,Corolla,Moottori,Hybridi muunnin,2026-01-31
+63350083,Hybridi muunnin,320.0,A2,2019-2027,G920049135ALKUPER,2ZRFXE,48000,Toyota,Corolla,Moottori,Hybridi muunnin,2026-01-31
+53398890,Hybridi muunnin,300.0,A2,2019-2027,G920049135ALKUPER,2ZRFXE,213000,Toyota,Corolla,Moottori,Hybridi muunnin,2026-01-31
+54562239,Moottorin kiinnikekorvake,40.0,A2,2002-2007,FI15710056O,,240000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54571879,Moottorin kiinnikekorvake,40.0,A2,2002-2007,FI15710056O,,172000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54575568,Moottorin kiinnikekorvake,40.0,A1,2002-2007,FI15710056O,,51000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53688752,Moottorin kiinnikekorvake,36.0,A2,2008-2012,FI07265116O,1ZRFE,190000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53819537,Moottorin kiinnikekorvake,40.0,A2,1993-1997,FI01853355O,4AFE,261000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53816223,Moottorin kiinnikekorvake,40.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54539423,Moottorin kiinnikekorvake,40.0,A2,1998-2001,FI30987993O,,272000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54546190,Moottorin kiinnikekorvake,40.0,A2,1998-2001,FI30987993O,4AFE,300000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54620422,Moottorin kiinnikekorvake,40.0,A2,2002-2007,FI03986645O,3ZZFE,136000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54634804,Moottorin kiinnikekorvake,40.0,A2,2002-2007,FI03986645O,4ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+56321356,Moottorin kiinnikekorvake,40.0,A2,2008-2012,FI03986645O,1ZRFAE,111000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53823584,Moottorin kiinnikekorvake,30.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53823586,Moottorin kiinnikekorvake,30.0,A2,2002-2007,FI01853355O,,282000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54597784,Moottorin kiinnikekorvake,30.0,A2,1993-1997,FI03986645O,4AFE,175000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54609722,Moottorin kiinnikekorvake,30.0,A2,2002-2007,FI03986645O,3ZZFE,200000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54614346,Moottorin kiinnikekorvake,30.0,A2,1993-1997,FI03986645O,4EFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54616183,Moottorin kiinnikekorvake,30.0,A2,2002-2007,FI03986645O,3ZZFE,136000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54661656,Moottorin kiinnikekorvake,30.0,A2,1993-1997,12371-11430ALKUPER,4EFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+53584896,Moottorin kiinnikekorvake,25.0,A2,2002-2007,FI02042722O,3ZZFE,185000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+54405642,Moottorin kiinnikekorvake,25.0,A2,1998-2001,1236222020ALKUPER,,195000,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake,2026-01-31
+63050947,Moottorin kumityyny,24.0,A2,2002-2007,FI22893129O,3ZZFE,235000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+63050948,Moottorin kumityyny,24.0,A2,2002-2007,FI22893129O,3ZZFE,235000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54085064,Moottorin kumityyny,20.0,A2,2002-2007,FI06292622O,,324000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54100965,Moottorin kumityyny,20.0,A2,2002-2007,FI06292622O,81KW,156000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54142195,Moottorin kumityyny,20.0,A2,2002-2007,FI06292622O,81KW,156000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54084378,Moottorin kumityyny,15.0,A2,2002-2007,FI06292622O,66KW,257000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54098489,Moottorin kumityyny,15.0,A2,2002-2007,FI06292622O,,324000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54099109,Moottorin kumityyny,15.0,A2,2002-2007,FI06292622O,,324000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54105228,Moottorin kumityyny,15.0,A2,2002-2007,FI06292622O,,324000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54121433,Moottorin kumityyny,15.0,A2,2002-2007,FI06292622O,,287000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+54084790,Moottorin kumityyny,5.0,A2,2002-2007,FI06292622O,,77000,Toyota,Corolla,Moottori,Moottorin kumityyny,2026-01-31
+63452429,Käynnistinmoottori Diesel,80.0,A2,2002-2007,281000G010ALKUPER,,320000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+65735585,Käynnistinmoottori Diesel,80.0,A2,1998-2001,FI11042417O,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54505247,Käynnistinmoottori Diesel,80.0,A2,1993-1997,FI11042417O,,338000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54054291,Käynnistinmoottori Diesel,60.0,A2,2002-2007,28100-33080ALKUPER,,301000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54571054,Käynnistinmoottori Diesel,60.0,A2,1988-1992,FI15710056O,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54583169,Käynnistinmoottori Diesel KE70,60.0,A2,1982-1987,FI15710056O,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+62496233,Käynnistinmoottori Diesel,60.0,A2,2002-2007,28100-33080ALKUPER,1NDTV,253000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+61425451,Käynnistinmoottori Diesel,57.0,A2,2008-2012,28100330802810033080,1NDTV,262000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53496516,Käynnistinmoottori Diesel,50.0,A2,2002-2007,FI27837687O,1CDFTV,358000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53836067,Käynnistinmoottori Diesel,50.0,A2,2002-2007,FI05028803O,1NDTV,374000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54186234,Käynnistinmoottori Diesel,50.0,A2,2002-2007,28100-33080ALKUPER,1NDTV,159000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+60805742,Käynnistinmoottori Diesel,50.0,A2,2008-2012,28100-0N030ALKUPER,1NDTV,404000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+56096102,Käynnistinmoottori Diesel,50.0,A2,2008-2012,28100-0N030ALKUPER,1NDTV,143000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+63207438,Käynnistinmoottori Diesel,50.0,A2,2002-2007,FI02042722O,,229000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+62990377,Käynnistinmoottori Diesel,50.0,A2,2002-2007,28100-33080ALKUPER,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+62482081,Käynnistinmoottori Diesel,46.5,A3,2008-2012,2810033080ALKUPER,1NDTV,340000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53953819,Käynnistinmoottori Diesel,46.0,A2,1988-1992,028000-837ALKUPER,,98000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53822624,Käynnistinmoottori Diesel,40.0,A3,2002-2007,FI01853355O,1NDTV,260000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+54086714,Käynnistinmoottori Diesel,40.0,A2,2002-2007,FI06292622O,,411000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53617592,Käynnistinmoottori Diesel,40.0,A2,2002-2007,LRS02099,,325000,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel,2026-01-31
+53996296,Moottori Diesel,800.0,A3,2002-2007,FI10331575O,,301000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+54010499,Moottori Diesel,800.0,A2,2002-2007,FI10331575O,,239000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+60793089,Moottori Diesel,800.0,A3,2008-2012,FI32385945O,1NDTV,404000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53368241,Moottori Diesel,780.0,A3,2002-2007,19000-27200ALKUPER,1CDFTV,304000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+59692172,Moottori Diesel,759.0,A2,2008-2012,1900033260ALKUPER,1NDTV,340000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53365016,Moottori Diesel,790.0,A3,2002-2007,FI27837687O,1NDFTV,308000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+58974428,Moottori Diesel,790.0,A3,2002-2007,FI27837687O,1NDTV,310000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53728297,Moottori Diesel,700.0,B3,2002-2007,FI02154548O,,291000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53884324,Moottori Diesel,690.0,A2,2002-2007,FI05028803O,1NDTV,374000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+64470037,Moottori Diesel,700.0,A3,2008-2012,1900033260ALKUPER,1NDTV,332000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53365006,Moottori Diesel,670.0,A3,2002-2007,1900027280ALKUPER,1CDFTV,352000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53492819,Moottori Diesel,650.0,A3,2002-2007,19000-27200ALKUPER,1CDFTV,358000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53386263,Moottori Diesel,680.0,A3,2002-2007,FI27837687O,1NDFTV,382000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+54348690,Moottori Diesel,510.0,A2,2002-2007,FI06376738O,,274000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53657292,Moottori Diesel,441.0,B2,2002-2007,FI07265116O,1CDFTV,300000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+56102434,Moottori Diesel,400.0,B3,2002-2007,1CD-FTW,1CDFTV,446000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+54137964,Moottori Diesel,360.0,A2,2002-2007,1ND-E52CALKUPER,,287000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+54459758,Moottori Diesel,342.0,A2,2002-2007,FI06509801O,1NDE52C,,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+54550271,Moottori Diesel,200.0,A2,2002-2007,FI15710056O,1NDTV,345000,Toyota,Corolla,Moottori,Moottori Diesel,2026-01-31
+53573496,Hihnapyörä,50.0,A2,2002-2007,FI02042722O,,186000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+54547063,Hihnapyörä,50.0,A2,1993-1997,FI15710056O,,301000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+59184602,Hihnapyörä,50.0,A2,1998-2001,FI15710056O,,580000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+56109868,Hihnapyörä,50.0,A2,2008-2012,FI06292622O,1NDTV,143000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+54512254,Hihnapyörä,50.0,A2,2002-2007,FI11042417O,3ZZFE,140000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+57195021,Hihnapyörä,40.0,A2,2002-2007,FI15710056O,,314000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+54586067,Hihnapyörä,40.0,A2,2002-2007,FI15710056O,1NDTV,345000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+54476682,Hihnapyörä AE82,10.0,A2,1983-1987,FI06018105O,,267000,Toyota,Corolla,Moottori,Hihnapyörä,2026-01-31
+54612069,Moottorin Koppa,50.0,A2,2002-2007,11212-0D060ALKUPER,3ZZFE,169000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54634256,Moottorin Koppa,50.0,A2,2002-2007,FI03986645O,3ZZFE,150000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54634380,Moottorin Koppa,50.0,A2,2008-2012,FI03986645O,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+62470766,Moottorin Koppa,50.0,A2,2002-2007,FI06018105O,1NDTV,253000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+65678183,Moottorin Koppa,50.0,A2,2008-2012,FI01853355O,1NDTV,371000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+53677350,Moottorin Koppa,40.5,A2,2002-2007,FI07265116O,1CDFTV,,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+58397284,Moottorin Koppa,40.5,A2,2002-2007,FI07265116O,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+59921570,Moottorin Koppa,40.5,A2,2008-2012,FI07265116O,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54398229,Moottorin Koppa,45.0,A2,1998-2001,11212-22030ALKUPER,,,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+55544010,Moottorin Koppa,45.0,A2,2002-2007,FI32037991O,1CDFTV,408000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54533387,Moottorin Koppa,45.0,A2,2002-2007,FI30987993O,,152000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54192064,Moottorin Koppa,40.0,A2,2008-2012,FI26167503O,1ADFTV,330000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54679094,Moottorin Koppa,40.0,A2,2002-2007,FI23857664O,,205000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+58423332,Moottorin Koppa,40.0,A2,2002-2007,FI22893129O,3ZZFE,230000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54081552,Moottorin Koppa,40.0,A2,2008-2012,FI08409732O,,265000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54679100,Moottorin Koppa,40.0,A2,1998-2001,FI23857664O,,343000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+53970055,Moottorin Koppa,39.0,A2,2002-2007,FI06408963O,,347000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54199099,Moottorin Koppa,33.2,A2,2002-2007,11212-22130ALKUPER,,149000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+54205668,Moottorin Koppa,33.2,A2,2002-2007,FI06294476O,3ZZFE,220000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+56855417,Moottorin Koppa,33.2,A2,2002-2007,FI06294476O,,329000,Toyota,Corolla,Moottori,Moottorin Koppa,2026-01-31
+56109857,Mäntä / Kiertokanki,40.0,A2,2008-2012,FI06292622O,1NDTV,143000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+56109858,Mäntä / Kiertokanki,40.0,A2,2008-2012,FI06292622O,1NDTV,143000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+54475624,Mäntä / Kiertokanki,40.0,A2,1998-2001,FI06018105O,,131000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+54483536,Mäntä / Kiertokanki,40.0,A2,1998-2001,FI06018105O,,131000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+54484093,Mäntä / Kiertokanki,40.0,A2,1998-2001,FI06018105O,,131000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+54484658,Mäntä / Kiertokanki,40.0,A2,1998-2001,FI06018105O,,131000,Toyota,Corolla,Moottori,Mäntä / Kiertokanki,2026-01-31
+54570499,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,266000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54572869,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-02010ALKUPER,,144000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54573063,Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,89420-02010ALKUPER,,241000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54573661,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,191000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54573914,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-12090ALKUPER,,120000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54575400,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-12090ALKUPER,,196000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54575452,Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,FI15710056O,,114000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54577513,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,359000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54583967,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-02010ALKUPER,,170000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54584014,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-12090ALKUPER,,403000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54570238,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,237000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54570295,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,253000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54583204,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,FI15710056O,,359000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54570367,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-12090ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54574618,Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,89420-02010ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54576384,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-02010ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54582921,Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,89420-02010ALKUPER,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+54315378,Virranjaoitin Alipainesäädin,81.0,A2,1993-1997,100798-2781ALKUPER,,170000,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+53831563,Virranjaoitin Alipainesäädin,51.0,B1,1998-2001,FI01853355O,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+53831624,Virranjaoitin Alipainesäädin,51.0,B1,1998-2001,FI01853355O,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin,2026-01-31
+59185397,Öljypohja,50.0,A2,1998-2001,FI15710056O,,580000,Toyota,Corolla,Moottori,Öljypohja,2026-01-31
+54560355,Öljypohja,40.0,A2,2002-2007,FI15710056O,1NDTV,345000,Toyota,Corolla,Moottori,Öljypohja,2026-01-31
+56109850,Öljypohja,40.0,A2,2008-2012,FI06292622O,1NDTV,143000,Toyota,Corolla,Moottori,Öljypohja,2026-01-31
+54229732,Öljypohja,30.0,A2,2013-2018,FI09389104O,1ZRFAE,92000,Toyota,Corolla,Moottori,Öljypohja,2026-01-31
+53468309,Öljypohja AE82,20.0,A2,1983-1987,FI27837687O,,,Toyota,Corolla,Moottori,Öljypohja,2026-01-31
