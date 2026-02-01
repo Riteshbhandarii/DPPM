@@ -15,7 +15,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from urllib.parse import urljoin
+from urllib.parse import urljoin, unquote
 
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -132,14 +132,66 @@ def dedupe_preserve_order(items):
     return list(dict.fromkeys(items))
 
 
+def _normalize_url_for_match(url):
+    """
+    Lowercase + URL-decode for reliable substring checks.
+    """
+    return unquote(url).lower()
+
+
+def find_category_links(main_page, base_url, base_domain, brand, model):
+    """
+    Find category links on the brand/model landing page.
+    Uses multiple heuristics to handle site changes.
+    """
+    all_links = main_page.find_all("a", href=True)
+    category_links = []
+
+    brand_l = brand.lower()
+    model_l = model.lower()
+    base_url_norm = _normalize_url_for_match(base_url).rstrip("/")
+
+    blacklist = {
+        brand,
+        "Search unattached part",
+        "Registration number search",
+    }
+
+    for link in all_links:
+        href = link.get("href", "")
+        link_text = link.get_text(strip=True)
+        if not link_text or link_text in blacklist:
+            continue
+
+        full_url = urljoin(base_domain + "/", href)
+        full_url_norm = _normalize_url_for_match(full_url).rstrip("/")
+
+        # Heuristic 1: historical /sNN pattern
+        if "/s" in href and href.split("/s")[-1].isdigit():
+            category_links.append((link_text, href))
+            continue
+
+        # Heuristic 2: brand+model scoped car-parts links (newer structure)
+        is_car_parts = "/pb/search/car-parts" in full_url_norm
+        has_brand_model = f"/{brand_l}/" in full_url_norm and f"/{model_l}" in full_url_norm
+        is_base_url = full_url_norm == base_url_norm
+
+        if is_car_parts and has_brand_model and not is_base_url:
+            category_links.append((link_text, href))
+
+    return dedupe_preserve_order(category_links), all_links
+
 def scrape_brand_model(page, brand, model):
     """
     Main scraping function that crawls all categories and subcategories for a specific car brand and model.
     Writes rows incrementally to CSV (crash-safe).
     """
+
+    BASE_URL = "https://www.varaosahaku.fi/en-se"
+
     base_urls = [
-        f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s19/{brand}/{model}",
-        f"https://www.varaosahaku.fi/fi-fi/pb/Hae/Autonosat/s1/{brand}/{model}",
+        f"{BASE_URL}/pb/Search/Car-parts/s19/{brand}/{model}",
+        f"{BASE_URL}/pb/Search/Car-parts/s1/{brand}/{model}",
     ]
 
     main_page = None
@@ -172,37 +224,22 @@ def scrape_brand_model(page, brand, model):
         )
         csv_exists = True
 
-    base_model = model.split(",")[0].split("-")[0]
-
     # Find category links
-    all_links = main_page.find_all("a", href=True)
-    category_links = []
-
-    for link in all_links:
-        href = link.get("href", "")
-        link_text = link.get_text(strip=True)
-
-        if (
-            base_model in href
-            and link_text
-            and link_text not in ["Etusivu", "Jäsenyritykset", brand, base_model, "Autonosat", "Valmistaja"]
-        ):
-            if CATEGORIES_TO_SCRAPE:
-                if any(cat in link_text for cat in CATEGORIES_TO_SCRAPE):
-                    category_links.append((link_text, href))
-            else:
-                category_links.append((link_text, href))
-
-    category_links = dedupe_preserve_order(category_links)
+    category_links, all_links = find_category_links(
+        main_page,
+        base_url,
+        BASE_URL,
+        brand,
+        model,
+    )
 
     if not category_links:
         print("\nERROR: No category links found!")
         print("Available categories on page:")
         for link in all_links:
-            href = link.get("href", "")
-            link_text = link.get_text(strip=True)
-            if base_model in href and link_text and link_text not in ["Etusivu", "Jäsenyritykset"]:
-                print(f"  - {link_text}")
+            text = link.get_text(strip=True)
+            if text:
+                print(f"  - {text}")
         return pd.DataFrame(columns=FINAL_COLUMNS)
 
     print(f"Found {len(category_links)} categories to scrape\n")
@@ -210,7 +247,7 @@ def scrape_brand_model(page, brand, model):
     scrape_date = datetime.now(ZoneInfo("Europe/Helsinki")).date().isoformat()
 
     for category_name, category_href in category_links:
-        category_url = urljoin("https://www.varaosahaku.fi/", category_href)
+        category_url = urljoin(BASE_URL + "/", category_href)
         print(f"\n{'='*70}")
         print(f"Category: {category_name}")
         print(f"{'='*70}")
@@ -230,7 +267,6 @@ def scrape_brand_model(page, brand, model):
                 if product_id in scraped_product_ids:
                     continue
                 if parts_scraped >= MAX_PARTS_PER_SUBCATEGORY:
-                    print(f"  Reached limit of {MAX_PARTS_PER_SUBCATEGORY} parts for this category")
                     break
 
                 scraped_product_ids.add(product_id)
@@ -257,37 +293,30 @@ def scrape_brand_model(page, brand, model):
             for link in category_page.find_all("a", href=True):
                 href = link.get("href", "")
                 link_text = link.get_text(strip=True)
-                full = urljoin("https://www.varaosahaku.fi/", href)
+                full = urljoin(BASE_URL + "/", href)
+                full_norm = _normalize_url_for_match(full)
+                brand_l = brand.lower()
+                model_l = model.lower()
 
                 if (
-                    category_url in full
-                    and base_model in href
-                    and link_text
+                    link_text
                     and link_text != category_name
-                    and link_text not in ["Etusivu", "Jäsenyritykset", brand, base_model, "Kaikki"]
+                    and "/pb/search/car-parts" in full_norm
+                    and f"/{brand_l}/" in full_norm
+                    and f"/{model_l}" in full_norm
                 ):
                     subcategory_links.append((link_text, href))
 
             subcategory_links = dedupe_preserve_order(subcategory_links)
 
             if not subcategory_links:
-                print("  No subcategories found, skipping...")
                 continue
 
-            print(f"  Found {len(subcategory_links)} subcategories")
-
             for subcategory_name, subcategory_href in subcategory_links:
-                subcategory_url = urljoin("https://www.varaosahaku.fi/", subcategory_href)
-                print(f"\n  Subcategory: {subcategory_name}")
-
-                parts_in_subcategory = 0
+                subcategory_url = urljoin(BASE_URL + "/", subcategory_href)
                 page_num = 1
 
                 while True:
-                    if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
-                        print(f"    Reached limit of {MAX_PARTS_PER_SUBCATEGORY} parts for this subcategory")
-                        break
-
                     if "?" in subcategory_url:
                         listing_page_url = f"{subcategory_url}&page={page_num}"
                     else:
@@ -301,13 +330,9 @@ def scrape_brand_model(page, brand, model):
                     if not product_dict:
                         break
 
-                    print(f"    Page {page_num}: Found {len(product_dict)} products")
-
                     for product_id, product_url in product_dict.items():
                         if product_id in scraped_product_ids:
                             continue
-                        if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
-                            break
 
                         scraped_product_ids.add(product_id)
 
@@ -324,15 +349,10 @@ def scrape_brand_model(page, brand, model):
                         if part_data:
                             all_parts_data.append(part_data)
                             append_row(part_data)
-                            print(f"    [{len(all_parts_data)}] {part_data['part_name'][:50]}")
-                            parts_in_subcategory += 1
-
-                    if parts_in_subcategory >= MAX_PARTS_PER_SUBCATEGORY:
-                        break
+                            print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
 
                     page_num += 1
 
-    # Return dataframe for summary printing (do NOT overwrite CSV)
     df_final = pd.DataFrame(all_parts_data).reindex(columns=FINAL_COLUMNS)
     if not df_final.empty and "product_id" in df_final.columns:
         df_final = df_final.drop_duplicates(subset=["product_id"], keep="first")
