@@ -34,7 +34,7 @@ KEEP_CATEGORIES = [
     "Fuel",
     "Electric / Transmitter / Databox / Sensor",
     "Vehicle exterior / Suspension",
-]  # Core dataset
+]
 MAX_PARTS_PER_SUBCATEGORY = 60  # Limit parts per subcategory for reasonable sample size
 
 FINAL_COLUMNS = [
@@ -51,7 +51,6 @@ FINAL_COLUMNS = [
     "category",
     "subcategory",
     "scrape_date",
-    "scrape_timestamp",
 ]
 
 
@@ -270,9 +269,7 @@ def scrape_brand_model(page, brand, model):
 
     print(f"Found {len(category_links)} categories to scrape\n")
 
-    now = datetime.now(ZoneInfo("Europe/Helsinki"))
-    scrape_date = now.date().isoformat()
-    scrape_timestamp = now.isoformat(timespec="seconds")
+    scrape_date = datetime.now(ZoneInfo("Europe/Helsinki")).date().isoformat()
 
     for category_name, category_href in category_links:
         category_url = urljoin(BASE_URL + "/", category_href)
@@ -308,7 +305,6 @@ def scrape_brand_model(page, brand, model):
                     "Main",
                     product_id,
                     scrape_date,
-                    scrape_timestamp,
                 )
                 if part_data:
                     all_parts_data.append(part_data)
@@ -377,7 +373,6 @@ def scrape_brand_model(page, brand, model):
                             subcategory_name,
                             product_id,
                             scrape_date,
-                            scrape_timestamp,
                         )
                         if part_data:
                             all_parts_data.append(part_data)
@@ -397,7 +392,7 @@ def scrape_brand_model(page, brand, model):
     return df_final
 
 
-def scrape_product_page(page, product_url, brand, model, category_name, subcategory_name, product_id, scrape_date, scrape_timestamp):
+def scrape_product_page(page, product_url, brand, model, category_name, subcategory_name, product_id, scrape_date):
     """
     Scrapes a single product page and extracts all relevant data.
     """
@@ -529,14 +524,13 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
         "category": category_name,
         "subcategory": subcategory_name,
         "scrape_date": scrape_date,
-        "scrape_timestamp": scrape_timestamp,
     }
 
 
 if __name__ == "__main__":
-    print("-" * 40)
+    print("-" * 10)
     print("DPPM Car Parts Data Collector")
-    print("-" * 70)
+    print("-" * 10)
     print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
     print()
 
@@ -570,18 +564,18 @@ if __name__ == "__main__":
 
         browser.close()
 
-    print(f"\n{'-'*40}")
+    print(f"\n{'-'*10}")
     print("Scraping Completed!")
-    print(f"{'='*40}")
+    print(f"{'='*10}  ")
     print(f"\nTotal parts scraped: {len(results)}")
     print(f"Output saved to: {OUTPUT_CSV}")
 
     if len(results) == 0:
         print("\nWARNING: No parts were scraped!")
     else:
-        print(f"\n{'-'*40}")
+        print(f"\n{'-'*10}")
         print("Data Quality Summary:")
-        print(f"{'-'*40}")
+        print(f"{'-'*10}")
         print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
         print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
         print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
@@ -599,4 +593,4 @@ if __name__ == "__main__":
             print(f"  Mean:   €{results['price'].mean():.2f}")
             print(f"  Median: €{results['price'].median():.2f}")
 
-    print(f"\n{'-'*40}")
+    print(f"\n{'-'*10}")
