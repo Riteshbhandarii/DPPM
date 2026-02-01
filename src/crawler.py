@@ -26,7 +26,7 @@ from playwright.sync_api import sync_playwright
 USER_AGENT = "ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic research)"
 DELAY_SECONDS = 1.0
 OUTPUT_CSV = None
-CATEGORIES_TO_SCRAPE = ["Jarrut", "Moottori", "Kori"]  # Brakes, Engine, Body
+CATEGORIES_TO_SCRAPE = ["Jarrut", "Moottori", "Kori"]  # Brakes, Engine, Body + adding more soon
 MAX_PARTS_PER_SUBCATEGORY = 20  # Limit parts per subcategory for reasonable sample size
 
 FINAL_COLUMNS = [
