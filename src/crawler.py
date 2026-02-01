@@ -26,8 +26,16 @@ from playwright.sync_api import sync_playwright
 USER_AGENT = "ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic research)"
 DELAY_SECONDS = 1.0
 OUTPUT_CSV = None
-CATEGORIES_TO_SCRAPE = ["Jarrut", "Moottori", "Kori"]  # Brakes, Engine, Body + adding more soon
-MAX_PARTS_PER_SUBCATEGORY = 20  # Limit parts per subcategory for reasonable sample size
+KEEP_CATEGORIES = [
+    "Brakes",
+    "Engine",
+    "Airbag",
+    "Gear box / Drive axle / Middle axle",
+    "Fuel",
+    "Electric / Transmitter / Databox / Sensor",
+    "Vehicle exterior / Suspension",
+]  # Core dataset
+MAX_PARTS_PER_SUBCATEGORY = 60  # Limit parts per subcategory for reasonable sample size
 
 FINAL_COLUMNS = [
     "product_id",
@@ -43,6 +51,7 @@ FINAL_COLUMNS = [
     "category",
     "subcategory",
     "scrape_date",
+    "scrape_timestamp",
 ]
 
 
@@ -82,7 +91,13 @@ def clean_part_name(name, brand, model):
     # Clean up extra whitespace
     name = re.sub(r"\s+", " ", name)
 
-    return name.strip() or "Unknown Part"
+    name = name.strip()
+
+    # Remove trailing "to" (often leftover from EN translation)
+    if name.lower().endswith(" to"):
+        name = name[:-3].rstrip()
+
+    return name or "Unknown Part"
 
 
 def extract_product_id(url):
@@ -157,6 +172,7 @@ def find_category_links(main_page, base_url, base_domain, brand, model):
         "Registration number search",
     }
 
+    car_parts_candidates = []
     for link in all_links:
         href = link.get("href", "")
         link_text = link.get_text(strip=True)
@@ -165,6 +181,8 @@ def find_category_links(main_page, base_url, base_domain, brand, model):
 
         full_url = urljoin(base_domain + "/", href)
         full_url_norm = _normalize_url_for_match(full_url).rstrip("/")
+        if "/pb/search/car-parts" in full_url_norm:
+            car_parts_candidates.append((link_text, href, full_url))
 
         # Heuristic 1: historical /sNN pattern
         if "/s" in href and href.split("/s")[-1].isdigit():
@@ -233,6 +251,14 @@ def scrape_brand_model(page, brand, model):
         model,
     )
 
+    if KEEP_CATEGORIES:
+        keep_normalized = {c.strip().lower() for c in KEEP_CATEGORIES}
+        category_links = [
+            (name, href)
+            for (name, href) in category_links
+            if name.strip().lower() in keep_normalized
+        ]
+
     if not category_links:
         print("\nERROR: No category links found!")
         print("Available categories on page:")
@@ -244,23 +270,25 @@ def scrape_brand_model(page, brand, model):
 
     print(f"Found {len(category_links)} categories to scrape\n")
 
-    scrape_date = datetime.now(ZoneInfo("Europe/Helsinki")).date().isoformat()
+    now = datetime.now(ZoneInfo("Europe/Helsinki"))
+    scrape_date = now.date().isoformat()
+    scrape_timestamp = now.isoformat(timespec="seconds")
 
     for category_name, category_href in category_links:
         category_url = urljoin(BASE_URL + "/", category_href)
-        print(f"\n{'='*70}")
+        print(f"\n{'-'*40}")
         print(f"Category: {category_name}")
-        print(f"{'='*70}")
+        print(f"{'-'*40}")
 
         category_page = fetch_page(page, category_url)
         if not category_page:
-            print("  ✗ Failed to load category page")
+            print(" ✗ Failed to load category page")
             continue
 
         direct_products = get_product_links_from_listing(category_page)
 
         if direct_products:
-            print(f"  Found {len(direct_products)} products directly on category page")
+            print(f"Found {len(direct_products)} products directly on category page")
 
             parts_scraped = 0
             for product_id, product_url in direct_products.items():
@@ -280,6 +308,7 @@ def scrape_brand_model(page, brand, model):
                     "Main",
                     product_id,
                     scrape_date,
+                    scrape_timestamp,
                 )
                 if part_data:
                     all_parts_data.append(part_data)
@@ -315,6 +344,7 @@ def scrape_brand_model(page, brand, model):
             for subcategory_name, subcategory_href in subcategory_links:
                 subcategory_url = urljoin(BASE_URL + "/", subcategory_href)
                 page_num = 1
+                parts_scraped = 0
 
                 while True:
                     if "?" in subcategory_url:
@@ -333,6 +363,8 @@ def scrape_brand_model(page, brand, model):
                     for product_id, product_url in product_dict.items():
                         if product_id in scraped_product_ids:
                             continue
+                        if parts_scraped >= MAX_PARTS_PER_SUBCATEGORY:
+                            break
 
                         scraped_product_ids.add(product_id)
 
@@ -345,11 +377,16 @@ def scrape_brand_model(page, brand, model):
                             subcategory_name,
                             product_id,
                             scrape_date,
+                            scrape_timestamp,
                         )
                         if part_data:
                             all_parts_data.append(part_data)
                             append_row(part_data)
                             print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
+                            parts_scraped += 1
+
+                    if parts_scraped >= MAX_PARTS_PER_SUBCATEGORY:
+                        break
 
                     page_num += 1
 
@@ -360,7 +397,7 @@ def scrape_brand_model(page, brand, model):
     return df_final
 
 
-def scrape_product_page(page, product_url, brand, model, category_name, subcategory_name, product_id, scrape_date):
+def scrape_product_page(page, product_url, brand, model, category_name, subcategory_name, product_id, scrape_date, scrape_timestamp):
     """
     Scrapes a single product page and extracts all relevant data.
     """
@@ -370,10 +407,17 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
 
     page_text = soup.get_text()
 
-    # Extract part name from page title
+    # Extract part name (prefer H1, then title)
     part_name = None
+
+    h1_tag = soup.find("h1")
+    if h1_tag:
+        h1_text = h1_tag.get_text(strip=True)
+        if h1_text:
+            part_name = h1_text
+
     title_tag = soup.find("title")
-    if title_tag:
+    if title_tag and not part_name:
         title_text = title_tag.get_text()
         if "|" in title_text:
             part_name = title_text.split("|")[0].strip()
@@ -393,8 +437,17 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
             price = None
     price = parse_price(price)
 
-    # Extract quality grade
-    quality_match = re.search(r"Laatu:\s*([A-C][1-3]?)", page_text)
+    # Extract quality grade (FI + EN)
+    quality_patterns = [
+        r"Laatu:\s*([A-C][1-3]?)",
+        r"Quality(?:\s*grade)?\s*:?\s*([A-C][1-3]?)",
+        r"Condition\s*:?\s*([A-C][1-3]?)",
+    ]
+    quality_match = None
+    for pattern in quality_patterns:
+        quality_match = re.search(pattern, page_text, re.IGNORECASE)
+        if quality_match:
+            break
     quality_grade = quality_match.group(1) if quality_match else None
 
     # Extract year range
@@ -405,6 +458,7 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
     oem_number = None
     oem_patterns = [
         r"(?:alkuperäinen|oem)\s*(?:nro|numero|num)\s*:?\s*([A-Z0-9\-/]{6,20})",
+        r"(?:original|oem)\s*(?:no|number|num)\s*:?\s*([A-Z0-9\-/]{6,20})",
         r"oem[:\-]?\s*([A-Z0-9\-/]{6,20})",
         r"pn[:\-]?\s*([A-Z0-9\-/]{6,20})",
         r"([A-Z]{2,4}\d{4,8}[A-Z\-]?)",
@@ -425,6 +479,7 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
         r"moottorik[oö]{2}di\s*:?\s*([A-Z0-9-]+)",
         r"Moottori\s*:?\s*([A-Z]{1,2}\d{1,2}[A-Z]{0,3})",
         r"Engine\s+code\s*:?\s*([A-Z0-9-]+)",
+        r"Engine\s*:?\s*code\s*([A-Z0-9-]+)",
     ]
     for pattern in engine_patterns:
         engine_match = re.search(pattern, page_text, re.IGNORECASE)
@@ -447,6 +502,9 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
         r"(\d{1,3}(?:\s|\.)?\d{3})\s*km",
         r"(\d{1,7})\s*km",
         r"matkamittari\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})",
+        r"Mileage\s*\(km\)\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})",
+        r"Mileage\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})\s*km?",
+        r"Odometer\s*[:\-]?\s*([0-9][0-9\s\.,]{0,12})\s*km?",
     ]
     for pattern in mileage_patterns:
         m = re.search(pattern, page_text, re.IGNORECASE)
@@ -471,13 +529,14 @@ def scrape_product_page(page, product_url, brand, model, category_name, subcateg
         "category": category_name,
         "subcategory": subcategory_name,
         "scrape_date": scrape_date,
+        "scrape_timestamp": scrape_timestamp,
     }
 
 
 if __name__ == "__main__":
-    print("=" * 70)
-    print("DPPM Car Parts Data Collector - Stable Browser + Sampling")
-    print("=" * 70)
+    print("-" * 40)
+    print("DPPM Car Parts Data Collector")
+    print("-" * 70)
     print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
     print()
 
@@ -511,18 +570,18 @@ if __name__ == "__main__":
 
         browser.close()
 
-    print(f"\n{'='*70}")
+    print(f"\n{'-'*40}")
     print("Scraping Completed!")
-    print(f"{'='*70}")
+    print(f"{'='*40}")
     print(f"\nTotal parts scraped: {len(results)}")
     print(f"Output saved to: {OUTPUT_CSV}")
 
     if len(results) == 0:
         print("\nWARNING: No parts were scraped!")
     else:
-        print(f"\n{'='*70}")
+        print(f"\n{'-'*40}")
         print("Data Quality Summary:")
-        print(f"{'='*70}")
+        print(f"{'-'*40}")
         print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
         print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
         print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
@@ -540,4 +599,4 @@ if __name__ == "__main__":
             print(f"  Mean:   €{results['price'].mean():.2f}")
             print(f"  Median: €{results['price'].median():.2f}")
 
-    print(f"\n{'='*70}")
+    print(f"\n{'-'*40}")
