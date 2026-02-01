@@ -31,9 +31,9 @@ def _build_output_path(brand, model, scrape_date):
 
 
 def main():
-    print("-" * 10)
+    print("-" * 30)
     print("DPPM Car Parts Data Collector")
-    print("-" * 10)
+    print("-" * 30)
     print(f"Max parts per subcategory: {MAX_PARTS_PER_SUBCATEGORY}")
     print()
 
@@ -54,18 +54,18 @@ def main():
 
         browser.close()
 
-    print(f"\n{'-'*10}")
+    print(f"\n{'-'*30}")
     print("Scraping Completed!")
-    print(f"{'='*10}")
+    print(f"{'-'*30}")
     print(f"\nTotal parts scraped: {len(results)}")
     print(f"Output saved to: {output_csv}")
 
     if len(results) == 0:
         print("\nWARNING: No parts were scraped!")
     else:
-        print(f"\n{'-'*10}")
+        print(f"\n{'-'*30}")
         print("Data Quality Summary:")
-        print(f"{'-'*10}")
+        print(f"{'-'*30}")
         print(f"Parts with prices:        {results['price'].notna().sum():>6} / {len(results)}")
         print(f"Parts with OEM numbers:   {results['oem_number'].notna().sum():>6} / {len(results)}")
         print(f"Parts with engine codes:  {results['engine_code'].notna().sum():>6} / {len(results)}")
@@ -83,7 +83,7 @@ def main():
             print(f"  Mean:   €{results['price'].mean():.2f}")
             print(f"  Median: €{results['price'].median():.2f}")
 
-    print(f"\n{'-'*10}")
+    print(f"\n{'-'*30}")
 
 
 if __name__ == "__main__":
