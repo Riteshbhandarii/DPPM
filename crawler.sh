@@ -34,7 +34,6 @@ python3 -c "from zoneinfo import ZoneInfo; print('zoneinfo OK')"
 run_one () {
   local BRAND="$1"
   local MODEL="$2"
-  echo "========================================"
   echo "START: ${BRAND} | ${MODEL}"
   echo "TIME:  $(date)"
   python3 -m crawler.src.crawler --brand "${BRAND}" --model "${MODEL}"
@@ -49,7 +48,6 @@ run_one "Toyota" "Corolla" || FAIL=1
 run_one "Skoda" "Octavia" || FAIL=1
 run_one "VW" "Golf,-e_Golf" || FAIL=1
 
-echo "========================================"
 echo "ALL DONE. FAIL=${FAIL}"
 echo "TIME: $(date)"
 exit $FAIL
