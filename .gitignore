@@ -1,2 +1,10 @@
 playwright/
 __pycache__/
+
+# logs
+*.out
+*.err
+*.log
+
+# optional: datasets (comment this OUT if you want to commit csv outputs)
+# crawler/crawler_datasets/
