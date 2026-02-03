@@ -2,7 +2,7 @@
 #SBATCH --job-name=crawler
 #SBATCH --account=project_2017273
 #SBATCH --partition=small
-#SBATCH --time=06:00:00
+#SBATCH --time=10:00:00
 #SBATCH --mem=4G
 #SBATCH --cpus-per-task=1
 #SBATCH --output=crawler_%j.out
