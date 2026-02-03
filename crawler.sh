@@ -26,7 +26,7 @@ module use --append /appl/soft/ai/tykky/modulefiles
 module load python-data
 
 # Move to project root so package imports work correctly
-cd ~/DPPM
+cd /scratch/project_2017273/DPPM
 
 # Sanity checks (useful for debugging SLURM jobs)
 echo "PWD:    $(pwd)"
