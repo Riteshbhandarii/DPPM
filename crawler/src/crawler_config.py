@@ -15,7 +15,7 @@ KEEP_CATEGORIES = [
     "Vehicle exterior / Suspension",
 ]
 
-MAX_PARTS_PER_SUBCATEGORY = 30
+MAX_PARTS_PER_SUBCATEGORY = 15 
 
 FINAL_COLUMNS = [
     "product_id",
