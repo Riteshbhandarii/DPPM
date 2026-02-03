@@ -38,10 +38,14 @@ def scrape_brand_model(page, brand, model, output_csv):
     csv_exists = Path(output_csv).exists()
     scraped_product_ids = set()
 
-    def append_row(part_data):
+    def flush_rows(rows):
         nonlocal csv_exists
-        df_row = pd.DataFrame([part_data]).reindex(columns=FINAL_COLUMNS)
-        df_row.to_csv(
+        if not rows:
+            return
+        if not csv_exists:
+            csv_exists = Path(output_csv).exists()
+        df_rows = pd.DataFrame(rows).reindex(columns=FINAL_COLUMNS)
+        df_rows.to_csv(
             output_csv,
             mode="a",
             header=not csv_exists,
@@ -91,6 +95,7 @@ def scrape_brand_model(page, brand, model, output_csv):
             print(f"Found {len(direct_products)} products directly on category page")
 
             parts_scraped = 0
+            subcategory_rows = []
             for product_id, product_url in direct_products.items():
                 if product_id in scraped_product_ids:
                     continue
@@ -112,9 +117,11 @@ def scrape_brand_model(page, brand, model, output_csv):
                 )
                 if part_data:
                     all_parts_data.append(part_data)
-                    append_row(part_data)
+                    subcategory_rows.append(part_data)
                     print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
                     parts_scraped += 1
+            flush_rows(subcategory_rows)
+            subcategory_rows.clear()
 
         else:
             subcategory_links = []
@@ -144,6 +151,7 @@ def scrape_brand_model(page, brand, model, output_csv):
                 subcategory_url = urljoin(BASE_URL + "/", subcategory_href)
                 page_num = 1
                 parts_scraped = 0
+                subcategory_rows = []
 
                 while True:
                     if "?" in subcategory_url:
@@ -180,7 +188,7 @@ def scrape_brand_model(page, brand, model, output_csv):
                         )
                         if part_data:
                             all_parts_data.append(part_data)
-                            append_row(part_data)
+                            subcategory_rows.append(part_data)
                             print(f"  [{len(all_parts_data)}] {part_data['part_name'][:50]}")
                             parts_scraped += 1
 
@@ -188,6 +196,8 @@ def scrape_brand_model(page, brand, model, output_csv):
                         break
 
                     page_num += 1
+                flush_rows(subcategory_rows)
+                subcategory_rows.clear()
 
     df_final = pd.DataFrame(all_parts_data).reindex(columns=FINAL_COLUMNS)
     if not df_final.empty and "product_id" in df_final.columns:
