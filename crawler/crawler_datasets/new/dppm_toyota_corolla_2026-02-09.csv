@@ -1,0 +1,517 @@
+product_id,part_name,price,quality_grade,year,oem_number,engine_code,mileage,brand,model,category,subcategory,scrape_date,scrape_timestamp
+63019913,Contact roll Airbag -,235.9,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Airbag,Contact roll Airbag,2026-02-09,2026-02-09T00:01:50+02:00
+63126049,Contact roll Airbag -,224.1,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Airbag,Contact roll Airbag,2026-02-09,2026-02-09T00:01:50+02:00
+61076273,Contact roll Airbag -,212.3,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Airbag,Contact roll Airbag,2026-02-09,2026-02-09T00:01:50+02:00
+63099984,Contact roll Airbag -,224.1,A2,2008-2012,FI22893129A,1ZRFE,306000,Toyota,Corolla,Airbag,Contact roll Airbag,2026-02-09,2026-02-09T00:01:50+02:00
+65759035,Contact roll Airbag -,200.5,A2,2002-2007,FI06018105A,,292000,Toyota,Corolla,Airbag,Contact roll Airbag,2026-02-09,2026-02-09T00:01:50+02:00
+65257588,Curtain airbags -(Left),235.9,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Airbag,Left,2026-02-09,2026-02-09T00:01:50+02:00
+66455068,Curtain airbags -(Left),224.1,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Airbag,Left,2026-02-09,2026-02-09T00:01:50+02:00
+65400008,Curtain airbags -(Left),235.9,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Airbag,Left,2026-02-09,2026-02-09T00:01:50+02:00
+63350255,Curtain airbags -(Left),224.1,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Airbag,Left,2026-02-09,2026-02-09T00:01:50+02:00
+63310187,Curtain airbags -(Left),224.1,A3,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Airbag,Left,2026-02-09,2026-02-09T00:01:50+02:00
+65257587,Curtain airbags -(Right),235.9,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Airbag,Right,2026-02-09,2026-02-09T00:01:50+02:00
+66455069,Curtain airbags -(Right),224.1,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Airbag,Right,2026-02-09,2026-02-09T00:01:50+02:00
+65399988,Curtain airbags -(Right),235.9,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Airbag,Right,2026-02-09,2026-02-09T00:01:50+02:00
+63350254,Curtain airbags -(Right),224.1,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Airbag,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54331761,Curtain airbags -(Right),180.4,A2,2002-2007,FI06376738A,,274000,Toyota,Corolla,Airbag,Right,2026-02-09,2026-02-09T00:01:50+02:00
+65680833,Curtain airbags -(Right),259.5,A2,2019-2027,FI27837687A,2ZRFXE,72000,Toyota,Corolla,Airbag,All,2026-02-09,2026-02-09T00:01:50+02:00
+65680834,Curtain airbags -(Left),259.5,A2,2019-2027,FI27837687A,2ZRFXE,72000,Toyota,Corolla,Airbag,All,2026-02-09,2026-02-09T00:01:50+02:00
+63310181,Curtain airbags -(Right),259.5,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Airbag,All,2026-02-09,2026-02-09T00:01:50+02:00
+64546891,Curtain airbags -(Right),259.5,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Airbag,All,2026-02-09,2026-02-09T00:01:50+02:00
+64546896,Curtain airbags -(Left),259.5,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Airbag,All,2026-02-09,2026-02-09T00:01:50+02:00
+61094461,Knee -,294.9,A2,2013-2018,FI09389104A,1ZRFAE,180000,Toyota,Corolla,Airbag,Knee,2026-02-09,2026-02-09T00:01:50+02:00
+66394997,Knee -,294.9,A2,2013-2018,FI09389104A,1ZRFAE,85000,Toyota,Corolla,Airbag,Knee,2026-02-09,2026-02-09T00:01:50+02:00
+54568070,Knee -,235.9,A2,2008-2012,FI15710056A,1NDTV,232000,Toyota,Corolla,Airbag,Knee,2026-02-09,2026-02-09T00:01:50+02:00
+63109721,Knee -,212.3,A2,2008-2012,FI22893129A,1ZRFE,306000,Toyota,Corolla,Airbag,Knee,2026-02-09,2026-02-09T00:01:50+02:00
+53472131,Knee -,188.7,A2,2008-2012,FI27837687A,1ZRFE,128000,Toyota,Corolla,Airbag,Knee,2026-02-09,2026-02-09T00:01:50+02:00
+66209839,Passenger airbag -,330.2,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Airbag,Passenger airbag,2026-02-09,2026-02-09T00:01:50+02:00
+59140468,Passenger airbag -,294.9,A2,2019-2027,FI27837687A,M20AFXS,87000,Toyota,Corolla,Airbag,Passenger airbag,2026-02-09,2026-02-09T00:01:50+02:00
+61076256,Passenger airbag -,294.9,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Airbag,Passenger airbag,2026-02-09,2026-02-09T00:01:50+02:00
+53713033,Passenger airbag -,294.9,A2,2002-2007,FI02154548A,,218000,Toyota,Corolla,Airbag,Passenger airbag,2026-02-09,2026-02-09T00:01:50+02:00
+64597454,Passenger airbag -,294.9,A2,2019-2027,FI27837687A,M20AFXS,64000,Toyota,Corolla,Airbag,Passenger airbag,2026-02-09,2026-02-09T00:01:50+02:00
+60058723,Steering wheel airbag -,294.9,A2,2019-2027,FI27837687A,2ZRFXE,119000,Toyota,Corolla,Airbag,Steering wheel airbag,2026-02-09,2026-02-09T00:01:50+02:00
+63041911,Steering wheel airbag -,294.9,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Airbag,Steering wheel airbag,2026-02-09,2026-02-09T00:01:50+02:00
+63461617,Steering wheel airbag -,294.9,A2,2019-2027,FI09389104A,2ZRFXE,209000,Toyota,Corolla,Airbag,Steering wheel airbag,2026-02-09,2026-02-09T00:01:50+02:00
+64976681,Steering wheel airbag -,294.9,A2,2013-2018,FI27837687A,1ZRFAE,275000,Toyota,Corolla,Airbag,Steering wheel airbag,2026-02-09,2026-02-09T00:01:50+02:00
+63350256,Steering wheel airbag -,294.9,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Airbag,Steering wheel airbag,2026-02-09,2026-02-09T00:01:50+02:00
+65309287,ABS Hydraulic Aggregate -,589.7,A2,2019-2027,FI05351686A,2ZRFXE,17000,Toyota,Corolla,Brakes,ABS Hydraulic Aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+65250408,ABS Hydraulic Aggregate -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Brakes,ABS Hydraulic Aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+63026248,ABS Hydraulic Aggregate -,589.7,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Brakes,ABS Hydraulic Aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+65680819,ABS Hydraulic Aggregate -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,72000,Toyota,Corolla,Brakes,ABS Hydraulic Aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+66223587,ABS Hydraulic Aggregate -,589.7,A2,2019-2027,FI27837687A,M20AFXS,64000,Toyota,Corolla,Brakes,ABS Hydraulic Aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+60496428,Brake Caliper -(Left front),176.9,A2,2019-2027,FI27837687A,M20AFXS,147000,Toyota,Corolla,Brakes,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+65250414,Brake Caliper -(Left front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Brakes,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+60058883,Brake Caliper -(Left front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,119000,Toyota,Corolla,Brakes,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+63310200,Brake Caliper -(Left front),176.9,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Brakes,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+63350262,Brake Caliper -(Left front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Brakes,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+61076237,Brake Caliper -(Right front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Brakes,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+62404916,Brake Caliper -(Right front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Brakes,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+65250413,Brake Caliper -(Right front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Brakes,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+60058882,Brake Caliper -(Right front),176.9,A2,2019-2027,FI27837687A,2ZRFXE,119000,Toyota,Corolla,Brakes,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+63310199,Brake Caliper -(Right front),176.9,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Brakes,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+53859868,Brake Caliper -(Left rear),176.9,A2,2019-2027,FI05028803A,M20AFXS,,Toyota,Corolla,Brakes,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+53860486,Brake Caliper -(Left rear),176.9,A1,2019-2027,FI05028803A,2ZRFXE,2000.0,Toyota,Corolla,Brakes,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+53867130,Brake Caliper -(Left rear),176.9,A1,2019-2027,FI05028803A,M20AFXS,4000.0,Toyota,Corolla,Brakes,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+58755577,Brake Caliper -(Left rear),176.9,A2,2019-2027,FI05028803A,2ZRFXE,58000.0,Toyota,Corolla,Brakes,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+53608961,Brake Caliper -(Left rear),176.9,A1,2019-2027,FI02042722A,,20000.0,Toyota,Corolla,Brakes,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+63350259,Brake Caliper-(Right rear),188.7,A2,2019-2027,FI27837687A,2ZRFXE,48000.0,Toyota,Corolla,Brakes,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+53850683,Brake Caliper -(Right rear),176.9,A1,2019-2027,FI05028803A,2ZRFXE,2000.0,Toyota,Corolla,Brakes,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+53859861,Brake Caliper -(Right rear),176.9,A2,2019-2027,FI05028803A,M20AFXS,,Toyota,Corolla,Brakes,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+58755576,Brake Caliper -(Right rear),176.9,A2,2019-2027,FI05028803A,2ZRFXE,58000.0,Toyota,Corolla,Brakes,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+62418504,Brake Caliper -(Right rear),176.9,A2,2019-2027,FI02042722A,8NRFTS,17000.0,Toyota,Corolla,Brakes,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+63127091,Brake Caliper -(Right rear),235.9,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+63127100,Brake Caliper -(Left rear),235.9,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+65309569,Brake Caliper -(Right front),235.9,A2,2019-2027,FI05351686A,2ZRFXE,17000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+65309578,Brake Caliper -(Left front),235.9,A2,2019-2027,FI05351686A,2ZRFXE,17000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+65309593,Brake Caliper -(Right rear),235.9,A2,2019-2027,FI05351686A,2ZRFXE,17000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+53950212,Brake disc -(Front),13.0,A2,1983-1987,FI06408963A,,115000,Toyota,Corolla,Brakes,Front,2026-02-09,2026-02-09T00:01:50+02:00
+54483257,Brake disc-(Front),11.8,A2,1998-2001,FI06018105A,,125000,Toyota,Corolla,Brakes,Front,2026-02-09,2026-02-09T00:01:50+02:00
+54491283,Brake disc -(Front),11.8,A2,1998-2001,FI06018105A,,125000,Toyota,Corolla,Brakes,Front,2026-02-09,2026-02-09T00:01:50+02:00
+53950695,Brake disc -(Front),5.9,C2,1983-1987,FI06408963A,,101000,Toyota,Corolla,Brakes,Front,2026-02-09,2026-02-09T00:01:50+02:00
+54474214,Brake disc -(Front),17.7,A1,1983-1987,BDC3558,,114000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+54490150,Brake disc -(Front),17.7,A2,1998-2001,FI06018105A,,66000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+54490161,Brake disc -(Front),17.7,c,1998-2001,FI06018105A,,66000,Toyota,Corolla,Brakes,All,2026-02-09,2026-02-09T00:01:50+02:00
+53607268,Brake servo -,589.7,A1,2019-2027,FI02042722A,,20000,Toyota,Corolla,Brakes,Brake servo,2026-02-09,2026-02-09T00:01:50+02:00
+63127022,Brake servo -,589.7,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Brakes,Brake servo,2026-02-09,2026-02-09T00:01:50+02:00
+66447576,Brake servo -,560.2,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Brakes,Brake servo,2026-02-09,2026-02-09T00:01:50+02:00
+61721306,Brake servo -,504.2,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Brakes,Brake servo,2026-02-09,2026-02-09T00:01:50+02:00
+61751538,Brake servo -,504.2,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Brakes,Brake servo,2026-02-09,2026-02-09T00:01:50+02:00
+55161324,Caliper Bracket -,71.9,A2,2002-2007,FI06376738A,3ZZFE,230000,Toyota,Corolla,Brakes,Caliper Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+61766112,Caliper Bracket -,67.3,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Brakes,Caliper Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+61416229,Caliper Bracket -,56.0,A2,2008-2012,FI07713839A,1NDTV,262000,Toyota,Corolla,Brakes,Caliper Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+62463270,Caliper Bracket -(Left rear),53.1,A2,2002-2007,FI30987993A,,240000,Toyota,Corolla,Brakes,Caliper Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+62648549,Caliper Bracket -(Left rear),53.1,A2,2002-2007,FI30987993A,,214000,Toyota,Corolla,Brakes,Caliper Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+65434802,Main cylinder -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,103000,Toyota,Corolla,Brakes,Main cylinder,2026-02-09,2026-02-09T00:01:50+02:00
+65107261,Main cylinder -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,115000,Toyota,Corolla,Brakes,Main cylinder,2026-02-09,2026-02-09T00:01:50+02:00
+60058879,Main cylinder -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,119000,Toyota,Corolla,Brakes,Main cylinder,2026-02-09,2026-02-09T00:01:50+02:00
+66220344,Main cylinder -,589.7,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Brakes,Main cylinder,2026-02-09,2026-02-09T00:01:50+02:00
+66424831,Main cylinder -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,66000,Toyota,Corolla,Brakes,Main cylinder,2026-02-09,2026-02-09T00:01:50+02:00
+61070893,ABS Hydraulic pump -,530.7,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Brakes,ABS Hydraulic pump,2026-02-09,2026-02-09T00:01:50+02:00
+63083764,ABS Hydraulic pump -,542.5,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Brakes,ABS Hydraulic pump,2026-02-09,2026-02-09T00:01:50+02:00
+60058715,ABS Hydraulic pump -,530.7,A2,2019-2027,FI27837687A,2ZRFXE,119000,Toyota,Corolla,Brakes,ABS Hydraulic pump,2026-02-09,2026-02-09T00:01:50+02:00
+66424690,ABS Hydraulic pump -,530.7,A2,2019-2027,FI27837687A,2ZRFXE,66000,Toyota,Corolla,Brakes,ABS Hydraulic pump,2026-02-09,2026-02-09T00:01:50+02:00
+66456417,ABS Hydraulic pump -,504.2,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Brakes,ABS Hydraulic pump,2026-02-09,2026-02-09T00:01:50+02:00
+54574587,Brake intensity regulator -,47.2,A2,2002-2007,FI15710056A,,215000,Toyota,Corolla,Brakes,Brake intensity regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54579182,Brake intensity regulator -,47.2,A2,2002-2007,FI15710056A,,242000,Toyota,Corolla,Brakes,Brake intensity regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54580238,Brake intensity regulator -,47.2,A2,2002-2007,FI15710056A,,241000,Toyota,Corolla,Brakes,Brake intensity regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54597165,Brake intensity regulator -,47.2,A2,2002-2007,FI03986645A,3ZZFE,103000,Toyota,Corolla,Brakes,Brake intensity regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54617886,Brake intensity regulator -,47.2,A2,2002-2007,FI03986645A,3ZZFE,169000,Toyota,Corolla,Brakes,Brake intensity regulator,2026-02-09,2026-02-09T00:01:50+02:00
+53881176,Hand brake lever -,47.2,A2,2008-2012,FI05028803A,1NDTV,301000,Toyota,Corolla,Brakes,Hand brake lever,2026-02-09,2026-02-09T00:01:50+02:00
+54365316,Hand brake lever -,47.2,A2,1998-2001,FI06376738A,,84000,Toyota,Corolla,Brakes,Hand brake lever,2026-02-09,2026-02-09T00:01:50+02:00
+54598960,Hand brake lever -,47.2,A2,2002-2007,FI03986645A,3ZZFE,200000,Toyota,Corolla,Brakes,Hand brake lever,2026-02-09,2026-02-09T00:01:50+02:00
+54516999,Hand brake lever -,47.2,A2,2008-2012,FI11042417A,1ADFTV,376000,Toyota,Corolla,Brakes,Hand brake lever,2026-02-09,2026-02-09T00:01:50+02:00
+53882640,Hand brake lever -,41.3,A2,2002-2007,FI05028803A,3ZZFE,172000,Toyota,Corolla,Brakes,Hand brake lever,2026-02-09,2026-02-09T00:01:50+02:00
+61772965,Actuator loom -(Left front),67.3,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Actuator loom,2026-02-09,2026-02-09T00:01:50+02:00
+61772978,Actuator loom -(Left rear),67.3,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Actuator loom,2026-02-09,2026-02-09T00:01:50+02:00
+62010234,Actuator loom -(Right rear),67.3,A1,2019-2027,FI06509801A,2ZRFXE,40000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Actuator loom,2026-02-09,2026-02-09T00:01:50+02:00
+62010239,Actuator loom -(Right front),67.3,A1,2019-2027,FI06509801A,2ZRFXE,40000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Actuator loom,2026-02-09,2026-02-09T00:01:50+02:00
+62010243,Actuator loom -(Left rear),67.3,A1,2019-2027,FI06509801A,2ZRFXE,40000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Actuator loom,2026-02-09,2026-02-09T00:01:50+02:00
+66546356,Airbag Control unit -,336.1,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+65399938,Airbag Control unit -,353.8,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53729424,Airbag Control unit -,259.5,A2,2002-2007,FI02154548A,,269000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53729426,Airbag Control unit -,259.5,A2,2002-2007,FI02154548A,,128000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54080251,Airbag Control unit -,235.9,A2,2008-2012,FI08409732A,,265000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54547852,Airbag Front sensor -(Left),35.4,A2,1998-2001,FI15710056A,,254000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Left,2026-02-09,2026-02-09T00:01:50+02:00
+54556139,Airbag Front sensor -(Left),35.4,A2,1998-2001,FI15710056A,4ZZFE,265000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Left,2026-02-09,2026-02-09T00:01:50+02:00
+54578670,Airbag Front sensor -(Left),35.4,A2,1998-2001,FI15710056A,,289000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Left,2026-02-09,2026-02-09T00:01:50+02:00
+53832121,Airbag Front sensor -(Left),35.4,A2,1998-2001,FI01853355A,,160000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Left,2026-02-09,2026-02-09T00:01:50+02:00
+53834609,Airbag Front sensor -(Left front),35.4,A2,2002-2007,FI01853355A,,295000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Left,2026-02-09,2026-02-09T00:01:50+02:00
+54652108,Airbag Front sensor -(Right front),47.2,A2,2002-2007,FI03986645A,3ZZFE,134000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54655734,Airbag Front sensor -(Right front),47.2,A2,2008-2012,FI03986645A,1NDTV,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54659450,Airbag Front sensor -(Right),47.2,A2,2002-2007,FI03986645A,3ZZFE,127000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54661374,Airbag Front sensor -(Right front),47.2,A2,1998-2001,FI03986645A,4AFE,178000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53941959,Airbag Front sensor -(Right front),47.2,A2,2002-2007,FI05351686A,,101000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54555195,Airbag Front sensor -(Left),47.2,A2,2002-2007,FI15710056A,,172000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,All,2026-02-09,2026-02-09T00:01:50+02:00
+54579179,Airbag Front sensor -(Left),47.2,A2,2002-2007,FI15710056A,,242000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,All,2026-02-09,2026-02-09T00:01:50+02:00
+54585113,Airbag Front sensor -(Right),47.2,A2,2002-2007,FI15710056A,,172000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,All,2026-02-09,2026-02-09T00:01:50+02:00
+54469880,Airbag Front sensor -(Right),47.2,A2,2002-2007,FI06018105A,,130000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,All,2026-02-09,2026-02-09T00:01:50+02:00
+64412340,Airbag Front sensor -(Right),47.2,A2,2002-2007,FI30987993A,3ZZFE,300000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,All,2026-02-09,2026-02-09T00:01:50+02:00
+62999040,Aktivt kollisionsskydd Sensor -(Left),471.8,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Aktivt kollisionsskydd Sensor,2026-02-09,2026-02-09T00:01:50+02:00
+64546679,Aktivt kollisionsskydd Sensor -,471.8,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Aktivt kollisionsskydd Sensor,2026-02-09,2026-02-09T00:01:50+02:00
+65459574,Aktivt kollisionsskydd Sensor -(Left rear),471.8,A2,2019-2027,FI27837687A,2ZRFXE,141000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Aktivt kollisionsskydd Sensor,2026-02-09,2026-02-09T00:01:50+02:00
+65399936,Injection Control unit -,589.7,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Injection Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+65257613,Injection Control unit -,530.7,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Injection Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+63047746,Injection Control unit -,530.7,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Injection Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+61766032,Injection Control unit -,493.0,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Injection Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+66547815,Injection Control unit -,493.0,A2,2019-2027,FI07713839A,2ZRFXE,62000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Injection Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+62135565,Kamera Utvändig -,707.6,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Kamera Utvändig,2026-02-09,2026-02-09T00:01:50+02:00
+66210961,Kamera Utvändig -,707.6,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Kamera Utvändig,2026-02-09,2026-02-09T00:01:50+02:00
+65400022,Kamera Utvändig -,707.6,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Kamera Utvändig,2026-02-09,2026-02-09T00:01:50+02:00
+54129716,Kamera Utvändig -,648.7,A1,2019-2027,FI06292622A,,18000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Kamera Utvändig,2026-02-09,2026-02-09T00:01:50+02:00
+61918245,Kamera Utvändig -,599.4,A2,2019-2027,FI06509801A,2ZRFXE,40000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Kamera Utvändig,2026-02-09,2026-02-09T00:01:50+02:00
+54500179,Other relay -,47.2,A2,2002-2007,FI11042417A,,419000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other relay,2026-02-09,2026-02-09T00:01:50+02:00
+54504299,Other relay -,47.2,A2,2002-2007,FI11042417A,3ZZFE,140000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other relay,2026-02-09,2026-02-09T00:01:50+02:00
+57891268,Other relay -,41.3,A2,2002-2007,FI15710056A,,189000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other relay,2026-02-09,2026-02-09T00:01:50+02:00
+57897105,Other relay -,41.3,A2,2002-2007,FI15710056A,,189000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other relay,2026-02-09,2026-02-09T00:01:50+02:00
+54547503,Other relay -,41.3,A2,2002-2007,FI15710056A,,240000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other relay,2026-02-09,2026-02-09T00:01:50+02:00
+54469879,Power steering Control unit -,235.9,A2,2002-2007,FI06018105A,,130000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Power steering Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54471168,Power steering Control unit -,235.9,A2,2008-2012,FI06018105A,1ZRFAE,121000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Power steering Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+65771647,Power steering Control unit -,235.9,A2,2008-2012,FI27837687A,1ZRFAE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Power steering Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53696108,Power steering Control unit -,176.9,A2,2002-2007,FI09992720A,,206000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Power steering Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54684107,Power steering Control unit -,176.9,A2,2002-2007,FI23857664A,4ZZFE,80000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Power steering Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54573990,Sensor ABS -,59.0,A2,2002-2007,FI15710056A,,240000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor ABS,2026-02-09,2026-02-09T00:01:50+02:00
+54585381,Sensor ABS -,59.0,A2,2008-2012,FI15710056A,1NDTV,232000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor ABS,2026-02-09,2026-02-09T00:01:50+02:00
+54552575,Sensor ABS -,47.2,A2,1998-2001,FI15710056A,,114000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor ABS,2026-02-09,2026-02-09T00:01:50+02:00
+54558254,Sensor ABS -,47.2,A2,1998-2001,FI15710056A,,135000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor ABS,2026-02-09,2026-02-09T00:01:50+02:00
+54558373,Sensor ABS -,47.2,A2,1998-2001,FI15710056A,,223000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor ABS,2026-02-09,2026-02-09T00:01:50+02:00
+58926177,Hybrid Batteri -,1456.6,A1,2019-2027,FI09389104A,M20AFXS,60000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Batteri,2026-02-09,2026-02-09T00:01:50+02:00
+65150963,Hybrid Batteri -,1415.3,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Batteri,2026-02-09,2026-02-09T00:01:50+02:00
+61156018,Hybrid Batteri -,1344.5,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Batteri,2026-02-09,2026-02-09T00:01:50+02:00
+54137921,Hybrid Batteri -,1356.3,A1,2019-2027,FI06292622A,,18000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Batteri,2026-02-09,2026-02-09T00:01:50+02:00
+62769932,Hybrid Batteri -,1297.3,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Batteri,2026-02-09,2026-02-09T00:01:50+02:00
+65151015,Hybrid Inverter -,1179.4,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Inverter,2026-02-09,2026-02-09T00:01:50+02:00
+61905395,Hybrid Inverter -,1098.0,A2,2019-2027,FI06509801A,2ZRFXE,40000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Inverter,2026-02-09,2026-02-09T00:01:50+02:00
+61156102,Hybrid Inverter -,1081.2,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Inverter,2026-02-09,2026-02-09T00:01:50+02:00
+54137927,Hybrid Inverter -,1085.0,A2,2019-2027,FI06292622A,,18000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Inverter,2026-02-09,2026-02-09T00:01:50+02:00
+54232530,Hybrid Inverter -,1032.0,A1,2019-2027,FI09389104A,2ZR,55000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Hybrid Inverter,2026-02-09,2026-02-09T00:01:50+02:00
+63169176,Fuse box / Electricity central -,117.9,A2,2008-2012,FI22893129A,1ZRFE,306000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Fuse box / Electricity central,2026-02-09,2026-02-09T00:01:50+02:00
+53864019,Fuse box / Electricity central -,100.2,A2,1993-1997,FI05028803A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Fuse box / Electricity central,2026-02-09,2026-02-09T00:01:50+02:00
+54035815,Fuse box / Electricity central -,94.4,A2,2008-2012,FI10331575A,1ZRFE,77000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Fuse box / Electricity central,2026-02-09,2026-02-09T00:01:50+02:00
+55161385,Fuse box / Electricity central -,95.5,A2,2002-2007,FI06376738A,3ZZFE,230000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Fuse box / Electricity central,2026-02-09,2026-02-09T00:01:50+02:00
+54556301,Fuse box / Electricity central -,94.4,A3,2008-2012,FI15710056A,1NDTV,232000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Fuse box / Electricity central,2026-02-09,2026-02-09T00:01:50+02:00
+53685047,Wiper arm motor relay -,31.9,A2,2008-2012,FI07265116A,1ZRFAE,200000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Wiper arm motor relay,2026-02-09,2026-02-09T00:01:50+02:00
+57682964,Wiper arm motor relay -,35.4,A2,1998-2001,FI09515254A,,195000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Wiper arm motor relay,2026-02-09,2026-02-09T00:01:50+02:00
+59245086,Airbag krocksensor -,56.0,A2,2019-2027,FI06509801A,2ZRFXE,10000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag krocksensor,2026-02-09,2026-02-09T00:01:50+02:00
+59245089,Airbag krocksensor -,56.0,A2,2019-2027,FI06509801A,2ZRFXE,10000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag krocksensor,2026-02-09,2026-02-09T00:01:50+02:00
+54492383,Airbag krocksensor -,59.0,A2,2008-2012,FI06018105A,1ZRFE,204000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag krocksensor,2026-02-09,2026-02-09T00:01:50+02:00
+54492396,Airbag krocksensor -,59.0,A2,2008-2012,FI06018105A,1ZRFE,204000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag krocksensor,2026-02-09,2026-02-09T00:01:50+02:00
+60132894,Airbag krocksensor -,54.9,A1,2019-2027,POSITION,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Airbag krocksensor,2026-02-09,2026-02-09T00:01:50+02:00
+63351902,Parkeringshjälp Frontsensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Parkeringshjälp Frontsensor,2026-02-09,2026-02-09T00:01:50+02:00
+63351960,Parkeringshjälp Frontsensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Parkeringshjälp Frontsensor,2026-02-09,2026-02-09T00:01:50+02:00
+63351992,Parkeringshjälp Frontsensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Parkeringshjälp Frontsensor,2026-02-09,2026-02-09T00:01:50+02:00
+61070360,Parkeringshjälp Frontsensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Parkeringshjälp Frontsensor,2026-02-09,2026-02-09T00:01:50+02:00
+53393524,Parkeringshjälp Frontsensor -,47.2,A2,2013-2018,FI27837687A,1ZRFAE,49000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Parkeringshjälp Frontsensor,2026-02-09,2026-02-09T00:01:50+02:00
+61693784,Rear sensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,35000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Rear sensor,2026-02-09,2026-02-09T00:01:50+02:00
+61693785,Rear sensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,35000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Rear sensor,2026-02-09,2026-02-09T00:01:50+02:00
+61693786,Rear sensor -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,35000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Rear sensor,2026-02-09,2026-02-09T00:01:50+02:00
+65594680,Rear sensor -(Interior),59.0,A2,2019-2027,FI27837687A,2ZRFXE,141000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Rear sensor,2026-02-09,2026-02-09T00:01:50+02:00
+65594689,Rear sensor -(Interior),59.0,A2,2019-2027,FI27837687A,2ZRFXE,141000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Rear sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54018118,ABS Control unit -,88.5,A2,1998-2001,FI10331575A,,138000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,ABS Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54064332,ABS Control unit -,88.5,A2,1998-2001,FI10331575A,,71000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,ABS Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54196395,ABS Control unit -,47.2,A2,1998-2001,FI26167503A,,68000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,ABS Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54585352,Central lock Control unit -,47.2,A2,2002-2007,FI15710056A,,242000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Central lock Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53614687,Central lock Control unit -,47.2,A2,1998-2001,FI32037991A,3ZZFE,213000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Central lock Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53831847,Central lock Control unit -,41.3,B2,1993-1997,FI01853355A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Central lock Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53834371,Central lock Control unit -,41.3,A2,1993-1997,FI01853355A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Central lock Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+53621030,Central lock Control unit -,41.3,A2,1998-2001,FI32037991A,3ZZFE,280000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Central lock Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+55828295,Control unit Xenon -,141.5,A2,2019-2027,FI02154548A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Control unit Xenon,2026-02-09,2026-02-09T00:01:50+02:00
+55828296,Control unit Xenon -,117.9,A3,2019-2027,FI02154548A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Control unit Xenon,2026-02-09,2026-02-09T00:01:50+02:00
+63170801,Control unit Xenon -,117.9,A2,2019-2027,FI02154548A,,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Control unit Xenon,2026-02-09,2026-02-09T00:01:50+02:00
+63687615,Control unit Xenon -(Left),94.4,A2,2019-2027,FI27837687A,2ZRFXE,65000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Control unit Xenon,2026-02-09,2026-02-09T00:01:50+02:00
+63687620,Control unit Xenon -(Right),94.4,A2,2019-2027,FI27837687A,2ZRFXE,65000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Control unit Xenon,2026-02-09,2026-02-09T00:01:50+02:00
+53650419,Insp.pump Diesel Control unit -,212.3,A2,2002-2007,FI07265116A,1CDFTV,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Insp.pump Diesel Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+56109907,Insp.pump Diesel Control unit -,235.9,A2,2008-2012,FI06292622A,1NDTV,143000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Insp.pump Diesel Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54531250,Insp.pump Diesel Control unit -,235.9,A2,2002-2007,FI11042417A,1CDFTV,412000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Insp.pump Diesel Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+65701404,Insp.pump Diesel Control unit -,212.3,A2,2002-2007,FI07265116A,1CDFTV,,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Insp.pump Diesel Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54571247,Insp.pump Diesel Control unit -,212.3,A2,1998-2001,FI15710056A,,260000.0,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Insp.pump Diesel Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+63125499,Other Control unit -,471.8,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+63464449,Other Control unit -,471.8,A2,2019-2027,FI09389104A,2ZRFXE,209000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+63020235,Other Control unit -,471.8,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54137955,Other Control unit -,436.4,A2,2019-2027,FI06292622A,,18000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+65151598,Other Control unit -,412.8,A2,2019-2027,FI09389104A,M20AFXS,331000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Other Control unit,2026-02-09,2026-02-09T00:01:50+02:00
+54479020,Sensor steering -,70.8,A2,2008-2012,FI06018105A,1ZRFE,204000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor steering,2026-02-09,2026-02-09T00:01:50+02:00
+64781438,Sensor tire pressure -,29.5,A2,2019-2027,VS62U009,2ZRFXE,89000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor tire pressure,2026-02-09,2026-02-09T00:01:50+02:00
+64781440,Sensor tire pressure -,29.5,A2,2019-2027,VS62U009,2ZRFXE,89000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor tire pressure,2026-02-09,2026-02-09T00:01:50+02:00
+64781443,Sensor tire pressure -,29.5,A2,2019-2027,VS62U009,2ZRFXE,89000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Sensor tire pressure,2026-02-09,2026-02-09T00:01:50+02:00
+54316286,Tank transmitters -,47.2,A2,1998-2001,FI06376738A,,84000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Tank transmitters,2026-02-09,2026-02-09T00:01:50+02:00
+54556663,Tank transmitters -,35.4,A2,2002-2007,FI15710056A,1NDTV,345000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Tank transmitters,2026-02-09,2026-02-09T00:01:50+02:00
+54561043,Tank transmitters -,35.4,A2,1998-2001,FI15710056A,,237000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Tank transmitters,2026-02-09,2026-02-09T00:01:50+02:00
+54346603,Tank transmitters -,35.4,A2,1988-1992,FI06376738A,,154000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Tank transmitters,2026-02-09,2026-02-09T00:01:50+02:00
+54380818,Tank transmitters -,35.4,A2,1988-1992,FI06376738A,,170000,Toyota,Corolla,Electric / Transmitter / Databox / Sensor,Tank transmitters,2026-02-09,2026-02-09T00:01:50+02:00
+54230860,Alternator -,147.4,A2,2013-2018,FI09389104A,1ZRFAE,92000,Toyota,Corolla,Engine,Alternator,2026-02-09,2026-02-09T00:01:50+02:00
+61842750,Alternator -,141.5,A1,2008-2012,FI06018105A,,297000,Toyota,Corolla,Engine,Alternator,2026-02-09,2026-02-09T00:01:50+02:00
+64572767,Alternator -,141.5,A2,2008-2012,FI27837687A,1ZRFE,138000,Toyota,Corolla,Engine,Alternator,2026-02-09,2026-02-09T00:01:50+02:00
+64471152,Alternator -,141.5,A2,2008-2012,FI27837687A,1ADFTV,434000,Toyota,Corolla,Engine,Alternator,2026-02-09,2026-02-09T00:01:50+02:00
+66395007,Alternator -,147.4,A2,2013-2018,FI09389104A,1ZRFAE,85000,Toyota,Corolla,Engine,Alternator,2026-02-09,2026-02-09T00:01:50+02:00
+58955945,Coil -,53.1,A2,2002-2007,FI32037991A,2ZZGE,334000,Toyota,Corolla,Engine,Coil,2026-02-09,2026-02-09T00:01:50+02:00
+58955946,Coil -,53.1,A2,2002-2007,FI32037991A,2ZZGE,334000,Toyota,Corolla,Engine,Coil,2026-02-09,2026-02-09T00:01:50+02:00
+54321523,Coil -,53.1,A1,2002-2007,FI06376738A,,15000,Toyota,Corolla,Engine,Coil,2026-02-09,2026-02-09T00:01:50+02:00
+64465053,Coil -,53.1,A2,2002-2007,FI30987993A,3ZZFE,300000,Toyota,Corolla,Engine,Coil,2026-02-09,2026-02-09T00:01:50+02:00
+64465065,Coil -,53.1,A2,2002-2007,FI30987993A,3ZZFE,300000,Toyota,Corolla,Engine,Coil,2026-02-09,2026-02-09T00:01:50+02:00
+54335221,Distributors -,83.7,A2,1988-1992,FI06376738A,,,Toyota,Corolla,Engine,Distributors,2026-02-09,2026-02-09T00:01:50+02:00
+54341466,Distributors -,83.7,A2,1993-1997,FI06376738A,,220000.0,Toyota,Corolla,Engine,Distributors,2026-02-09,2026-02-09T00:01:50+02:00
+54345881,Distributors -,83.7,A2,1993-1997,FI06376738A,,233000.0,Toyota,Corolla,Engine,Distributors,2026-02-09,2026-02-09T00:01:50+02:00
+53954187,Distributors -,80.2,A2,1988-1992,FI06408963A,,148000.0,Toyota,Corolla,Engine,Distributors,2026-02-09,2026-02-09T00:01:50+02:00
+53832764,Distributors -,71.9,B2,1988-1992,FI01853355A,,,Toyota,Corolla,Engine,Distributors,2026-02-09,2026-02-09T00:01:50+02:00
+56939596,Engine Gasoline -,3644.3,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Engine,Engine Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+59140483,Engine Gasoline -,3656.1,A2,2019-2027,FI27837687A,M20AFXS,87000,Toyota,Corolla,Engine,Engine Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53848511,Engine Gasoline -,3538.2,A1,2019-2027,FI05028803A,M20AFXS,4000,Toyota,Corolla,Engine,Engine Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53605194,Engine Gasoline -,3538.2,B1,2019-2027,FI02042722A,,20000,Toyota,Corolla,Engine,Engine Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+63352462,Engine Gasoline -,3656.1,A1,2019-2027,FI27837687A,2ZRFXE,51000,Toyota,Corolla,Engine,Engine Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53913410,Starter Gasoline -,94.4,A2,2008-2012,FI05351686A,2WW,114000,Toyota,Corolla,Engine,Starter Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+56268870,Starter Gasoline -,94.4,A2,2008-2012,FI23857664A,1ZRFAE,26000,Toyota,Corolla,Engine,Starter Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53397731,Starter Gasoline -,94.4,A2,2008-2012,FI27837687A,1ZRFE,178000,Toyota,Corolla,Engine,Starter Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53705104,Starter Gasoline -,94.4,A2,2002-2007,FI02154548A,E3ZY52L,122000,Toyota,Corolla,Engine,Starter Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53727493,Starter Gasoline -,94.4,A2,2002-2007,FI02154548A,,160000,Toyota,Corolla,Engine,Starter Gasoline,2026-02-09,2026-02-09T00:01:50+02:00
+53996296,Engine Diesel -,943.5,A3,2002-2007,FI10331575A,,301000,Toyota,Corolla,Engine,Engine Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54010499,Engine Diesel -,943.5,A2,2002-2007,FI10331575A,,239000,Toyota,Corolla,Engine,Engine Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+60793089,Engine Diesel -,943.5,A3,2008-2012,FI32385945A,1NDTV,404000,Toyota,Corolla,Engine,Engine Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+53368241,Engine Diesel -,919.9,A3,2002-2007,FI27837687A,1CDFTV,304000,Toyota,Corolla,Engine,Engine Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+59692172,Engine Diesel -,895.2,A2,2008-2012,FI06294476A,1NDTV,340000,Toyota,Corolla,Engine,Engine Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54570499,Distributors Vacuum regulator -,100.2,A2,1993-1997,FI15710056A,,266000,Toyota,Corolla,Engine,Distributors Vacuum regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54572869,Distributors Vacuum regulator -,100.2,A2,1993-1997,FI15710056A,,144000,Toyota,Corolla,Engine,Distributors Vacuum regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54573063,Distributors Vacuum regulator -,100.2,A2,1998-2001,FI15710056A,,241000,Toyota,Corolla,Engine,Distributors Vacuum regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54573661,Distributors Vacuum regulator -,100.2,A2,1993-1997,FI15710056A,,191000,Toyota,Corolla,Engine,Distributors Vacuum regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54573914,Distributors Vacuum regulator -,100.2,A2,1993-1997,FI15710056A,,120000,Toyota,Corolla,Engine,Distributors Vacuum regulator,2026-02-09,2026-02-09T00:01:50+02:00
+54612069,Engine casing -,59.0,A2,2002-2007,FI03986645A,3ZZFE,169000.0,Toyota,Corolla,Engine,Engine casing,2026-02-09,2026-02-09T00:01:50+02:00
+54634256,Engine casing -,59.0,A2,2002-2007,FI03986645A,3ZZFE,150000.0,Toyota,Corolla,Engine,Engine casing,2026-02-09,2026-02-09T00:01:50+02:00
+54634380,Engine casing -,59.0,A2,2008-2012,FI03986645A,1NDTV,,Toyota,Corolla,Engine,Engine casing,2026-02-09,2026-02-09T00:01:50+02:00
+62470766,Engine casing -,59.0,A2,2002-2007,FI06018105A,1NDTV,253000.0,Toyota,Corolla,Engine,Engine casing,2026-02-09,2026-02-09T00:01:50+02:00
+65678183,Engine casing -,59.0,A2,2008-2012,FI01853355A,1NDTV,371000.0,Toyota,Corolla,Engine,Engine casing,2026-02-09,2026-02-09T00:01:50+02:00
+56109857,Piston / Rod -,47.2,A2,2008-2012,FI06292622A,1NDTV,143000,Toyota,Corolla,Engine,Piston / Rod,2026-02-09,2026-02-09T00:01:50+02:00
+56109858,Piston / Rod -,47.2,A2,2008-2012,FI06292622A,1NDTV,143000,Toyota,Corolla,Engine,Piston / Rod,2026-02-09,2026-02-09T00:01:50+02:00
+54475624,Piston / Rod -,47.2,A2,1998-2001,FI06018105A,,131000,Toyota,Corolla,Engine,Piston / Rod,2026-02-09,2026-02-09T00:01:50+02:00
+54483536,Piston / Rod -,47.2,A2,1998-2001,FI06018105A,,131000,Toyota,Corolla,Engine,Piston / Rod,2026-02-09,2026-02-09T00:01:50+02:00
+54484093,Piston / Rod -,47.2,A2,1998-2001,FI06018105A,,131000,Toyota,Corolla,Engine,Piston / Rod,2026-02-09,2026-02-09T00:01:50+02:00
+53573496,Pulley -,59.0,A2,2002-2007,FI02042722A,,186000,Toyota,Corolla,Engine,Pulley,2026-02-09,2026-02-09T00:01:50+02:00
+54547063,Pulley -,59.0,A2,1993-1997,FI15710056A,,301000,Toyota,Corolla,Engine,Pulley,2026-02-09,2026-02-09T00:01:50+02:00
+59184602,Pulley -,59.0,A2,1998-2001,FI15710056A,,580000,Toyota,Corolla,Engine,Pulley,2026-02-09,2026-02-09T00:01:50+02:00
+56109868,Pulley -,59.0,A2,2008-2012,FI06292622A,1NDTV,143000,Toyota,Corolla,Engine,Pulley,2026-02-09,2026-02-09T00:01:50+02:00
+54512254,Pulley -,59.0,A2,2002-2007,FI11042417A,3ZZFE,140000,Toyota,Corolla,Engine,Pulley,2026-02-09,2026-02-09T00:01:50+02:00
+59185397,Sump -,59.0,A2,1998-2001,FI15710056A,,580000.0,Toyota,Corolla,Engine,Sump,2026-02-09,2026-02-09T00:01:50+02:00
+54560355,Sump -,47.2,A2,2002-2007,FI15710056A,1NDTV,345000.0,Toyota,Corolla,Engine,Sump,2026-02-09,2026-02-09T00:01:50+02:00
+56109850,Sump -,47.2,A2,2008-2012,FI06292622A,1NDTV,143000.0,Toyota,Corolla,Engine,Sump,2026-02-09,2026-02-09T00:01:50+02:00
+54229732,Sump -,35.4,A2,2013-2018,FI09389104A,1ZRFAE,92000.0,Toyota,Corolla,Engine,Sump,2026-02-09,2026-02-09T00:01:50+02:00
+53468309,Sump -,23.6,A2,1983-1987,FI27837687A,,,Toyota,Corolla,Engine,Sump,2026-02-09,2026-02-09T00:01:50+02:00
+64546672,Hybrid converter -,412.8,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Engine,Hybrid converter,2026-02-09,2026-02-09T00:01:50+02:00
+63350083,Hybrid converter -,377.4,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Engine,Hybrid converter,2026-02-09,2026-02-09T00:01:50+02:00
+53398890,Hybrid converter -,353.8,A2,2019-2027,FI27837687A,2ZRFXE,213000,Toyota,Corolla,Engine,Hybrid converter,2026-02-09,2026-02-09T00:01:50+02:00
+63452429,Starter Diesel -,94.4,A2,2002-2007,FI26167503A,,320000.0,Toyota,Corolla,Engine,Starter Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+65735585,Starter Diesel -,94.4,A2,1998-2001,FI11042417A,,,Toyota,Corolla,Engine,Starter Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54505247,Starter Diesel -,94.4,A2,1993-1997,FI11042417A,,338000.0,Toyota,Corolla,Engine,Starter Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54054291,Starter Diesel -,70.8,A2,2002-2007,FI10331575A,,301000.0,Toyota,Corolla,Engine,Starter Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54571054,Starter Diesel -,70.8,A2,1988-1992,FI15710056A,,,Toyota,Corolla,Engine,Starter Diesel,2026-02-09,2026-02-09T00:01:50+02:00
+54562239,Motor Bracket -,47.2,A2,2002-2007,FI15710056A,,240000,Toyota,Corolla,Engine,Motor Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+54571879,Motor Bracket -,47.2,A2,2002-2007,FI15710056A,,172000,Toyota,Corolla,Engine,Motor Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+54575568,Motor Bracket -,47.2,A1,2002-2007,FI15710056A,,51000,Toyota,Corolla,Engine,Motor Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+53688752,Motor Bracket -,42.5,A2,2008-2012,FI07265116A,1ZRFE,190000,Toyota,Corolla,Engine,Motor Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+53819537,Motor Bracket -,47.2,A2,1993-1997,FI01853355A,4AFE,261000,Toyota,Corolla,Engine,Motor Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+63050947,Motor cushion -,28.3,A2,2002-2007,FI22893129A,3ZZFE,235000,Toyota,Corolla,Engine,Motor cushion,2026-02-09,2026-02-09T00:01:50+02:00
+63050948,Motor cushion -,28.3,A2,2002-2007,FI22893129A,3ZZFE,235000,Toyota,Corolla,Engine,Motor cushion,2026-02-09,2026-02-09T00:01:50+02:00
+54085064,Motor cushion -,23.6,A2,2002-2007,FI06292622A,,324000,Toyota,Corolla,Engine,Motor cushion,2026-02-09,2026-02-09T00:01:50+02:00
+54100965,Motor cushion -,23.6,A2,2002-2007,FI06292622A,81KW,156000,Toyota,Corolla,Engine,Motor cushion,2026-02-09,2026-02-09T00:01:50+02:00
+54142195,Motor cushion -,23.6,A2,2002-2007,FI06292622A,81KW,156000,Toyota,Corolla,Engine,Motor cushion,2026-02-09,2026-02-09T00:01:50+02:00
+54777206,Turbo aggregate -,141.5,A2,2002-2007,FI06292622A,1CDFTV,488000,Toyota,Corolla,Engine,Turbo aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+53617942,Turbo aggregate -,117.9,A3,2002-2007,FI32037991A,,325000,Toyota,Corolla,Engine,Turbo aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+54529615,Turbo aggregate -,117.9,A2,2002-2007,FI11042417A,1CDFTV,412000,Toyota,Corolla,Engine,Turbo aggregate,2026-02-09,2026-02-09T00:01:50+02:00
+66208956,Air purifier -,94.4,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Fuel,Air purifier,2026-02-09,2026-02-09T00:01:50+02:00
+65400023,Air purifier -,94.4,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Fuel,Air purifier,2026-02-09,2026-02-09T00:01:50+02:00
+54382401,Air purifier -,77.8,A2,1993-1997,FI06376738A,4AFE,374000,Toyota,Corolla,Fuel,Air purifier,2026-02-09,2026-02-09T00:01:50+02:00
+62516003,Air purifier -,72.9,A2,2008-2012,FI06294476A,1ZRFE,118000,Toyota,Corolla,Fuel,Air purifier,2026-02-09,2026-02-09T00:01:50+02:00
+53880349,Air purifier -,70.8,A2,2008-2012,FI05028803A,1NDTV,301000,Toyota,Corolla,Fuel,Air purifier,2026-02-09,2026-02-09T00:01:50+02:00
+58954021,Deliverer -,141.5,A2,2002-2007,FI32037991A,2ZZGE,334000.0,Toyota,Corolla,Fuel,Deliverer,2026-02-09,2026-02-09T00:01:50+02:00
+62991558,Deliverer -,141.5,A2,2002-2007,FI11042417A,,,Toyota,Corolla,Fuel,Deliverer,2026-02-09,2026-02-09T00:01:50+02:00
+62991561,Deliverer -,141.5,A2,2002-2007,FI11042417A,,,Toyota,Corolla,Fuel,Deliverer,2026-02-09,2026-02-09T00:01:50+02:00
+62991562,Deliverer -,141.5,A2,2002-2007,FI11042417A,,,Toyota,Corolla,Fuel,Deliverer,2026-02-09,2026-02-09T00:01:50+02:00
+62991563,Deliverer -,141.5,A2,2002-2007,FI11042417A,,,Toyota,Corolla,Fuel,Deliverer,2026-02-09,2026-02-09T00:01:50+02:00
+54555307,Fuel filling pipe / tube -,59.0,A2,1998-2001,FI15710056A,,289000.0,Toyota,Corolla,Fuel,Fuel filling pipe / tube,2026-02-09,2026-02-09T00:01:50+02:00
+54571032,Fuel filling pipe / tube -,59.0,A2,1998-2001,FI15710056A,,,Toyota,Corolla,Fuel,Fuel filling pipe / tube,2026-02-09,2026-02-09T00:01:50+02:00
+54571340,Fuel filling pipe / tube -,59.0,A2,1998-2001,FI15710056A,,242000.0,Toyota,Corolla,Fuel,Fuel filling pipe / tube,2026-02-09,2026-02-09T00:01:50+02:00
+54574525,Fuel filling pipe / tube -,59.0,A2,1998-2001,FI15710056A,,223000.0,Toyota,Corolla,Fuel,Fuel filling pipe / tube,2026-02-09,2026-02-09T00:01:50+02:00
+54555440,Fuel filling pipe / tube -,47.2,A2,1998-2001,FI15710056A,,402000.0,Toyota,Corolla,Fuel,Fuel filling pipe / tube,2026-02-09,2026-02-09T00:01:50+02:00
+54584947,Fuel pump electric -,106.1,A2,1998-2001,FI15710056A,,135000,Toyota,Corolla,Fuel,Fuel pump electric,2026-02-09,2026-02-09T00:01:50+02:00
+54575104,Fuel pump electric -,106.1,A2,1998-2001,FI15710056A,,66000,Toyota,Corolla,Fuel,Fuel pump electric,2026-02-09,2026-02-09T00:01:50+02:00
+55593930,Fuel pump electric -,100.2,A2,2002-2007,FI15710056A,4ZZFE,130000,Toyota,Corolla,Fuel,Fuel pump electric,2026-02-09,2026-02-09T00:01:50+02:00
+54549667,Fuel pump electric -,100.2,A2,1993-1997,FI15710056A,,227000,Toyota,Corolla,Fuel,Fuel pump electric,2026-02-09,2026-02-09T00:01:50+02:00
+54549674,Fuel pump electric -,100.2,A2,1993-1997,FI15710056A,,156000,Toyota,Corolla,Fuel,Fuel pump electric,2026-02-09,2026-02-09T00:01:50+02:00
+63181431,Fuel tank Injection -,165.1,A2,2002-2007,FI06376738A,,300000.0,Toyota,Corolla,Fuel,Fuel tank Injection,2026-02-09,2026-02-09T00:01:50+02:00
+64257752,Fuel tank Injection -,165.1,A2,2002-2007,FI06376738A,3ZZFE,,Toyota,Corolla,Fuel,Fuel tank Injection,2026-02-09,2026-02-09T00:01:50+02:00
+60133533,Fuel tank Injection -,94.4,B2,1998-2001,FI03986645A,4AFE,,Toyota,Corolla,Fuel,Fuel tank Injection,2026-02-09,2026-02-09T00:01:50+02:00
+53431833,Mass air-flow sensor -,82.6,A2,2002-2007,FI27837687A,,76000,Toyota,Corolla,Fuel,Mass air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+53475815,Mass air-flow sensor -,82.6,A1,2002-2007,FI27837687A,4ZZFE,34000,Toyota,Corolla,Fuel,Mass air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+53727895,Mass air-flow sensor -,82.6,A2,2002-2007,FI02154548A,,128000,Toyota,Corolla,Fuel,Mass air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+58433455,Mass air-flow sensor -,82.6,A2,2002-2007,FI22893129A,3ZZFE,230000,Toyota,Corolla,Fuel,Mass air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+65255097,Mass air-flow sensor -,82.6,A2,2019-2027,FI27837687A,2ZRFXE,80000,Toyota,Corolla,Fuel,Mass air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+62148794,Tank lid -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Fuel,Tank lid,2026-02-09,2026-02-09T00:01:50+02:00
+65400005,Tank lid -,59.0,A2,2019-2027,FI27837687A,2ZRFXE,148000,Toyota,Corolla,Fuel,Tank lid,2026-02-09,2026-02-09T00:01:50+02:00
+53902200,Tank lid -,47.2,A2,2013-2018,FI05351686A,1ZRFAE,96000,Toyota,Corolla,Fuel,Tank lid,2026-02-09,2026-02-09T00:01:50+02:00
+53395854,Tank lid -,47.2,A2,2008-2012,FI27837687A,,94000,Toyota,Corolla,Fuel,Tank lid,2026-02-09,2026-02-09T00:01:50+02:00
+53686810,Tank lid -,42.5,A2,2008-2012,FI07265116A,1ZRFAE,200000,Toyota,Corolla,Fuel,Tank lid,2026-02-09,2026-02-09T00:01:50+02:00
+53815841,Carbon canister -,29.5,A2,1993-1997,FI01853355A,4AFE,261000.0,Toyota,Corolla,Fuel,Carbon canister,2026-02-09,2026-02-09T00:01:50+02:00
+53832778,Carbon canister -,29.5,B2,1993-1997,FI01853355A,,,Toyota,Corolla,Fuel,Carbon canister,2026-02-09,2026-02-09T00:01:50+02:00
+54530861,Carbon canister -,29.5,A2,2002-2007,FI11042417A,,211000.0,Toyota,Corolla,Fuel,Carbon canister,2026-02-09,2026-02-09T00:01:50+02:00
+54016548,Carbon canister -,23.6,A2,2002-2007,FI10331575A,E3ZY52L,204000.0,Toyota,Corolla,Fuel,Carbon canister,2026-02-09,2026-02-09T00:01:50+02:00
+54523885,Carbon canister -,23.6,A2,2002-2007,FI11042417A,3ZZFE,143000.0,Toyota,Corolla,Fuel,Carbon canister,2026-02-09,2026-02-09T00:01:50+02:00
+56873959,Fuel filter / Holder -,47.2,A2,2008-2012,FI11042417A,1NDTV,405000.0,Toyota,Corolla,Fuel,Fuel filter / Holder,2026-02-09,2026-02-09T00:01:50+02:00
+54522220,Fuel filter / Holder -,47.2,A2,2002-2007,FI11042417A,,444000.0,Toyota,Corolla,Fuel,Fuel filter / Holder,2026-02-09,2026-02-09T00:01:50+02:00
+62989066,Fuel filter / Holder -,47.2,A2,2002-2007,FI11042417A,,,Toyota,Corolla,Fuel,Fuel filter / Holder,2026-02-09,2026-02-09T00:01:50+02:00
+60114021,Fuel filter / Holder -,35.4,A2,2002-2007,FI06292622A,,244000.0,Toyota,Corolla,Fuel,Fuel filter / Holder,2026-02-09,2026-02-09T00:01:50+02:00
+54016497,Fuel filter / Holder -,35.4,A2,2002-2007,FI10331575A,,239000.0,Toyota,Corolla,Fuel,Fuel filter / Holder,2026-02-09,2026-02-09T00:01:50+02:00
+54777181,Diesel injection pump -,141.5,A2,2002-2007,FI06292622A,1CDFTV,488000,Toyota,Corolla,Fuel,Diesel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+54169592,Diesel injection pump -,47.2,A2,2002-2007,FI06292622A,,324000,Toyota,Corolla,Fuel,Diesel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+53713302,Fuel injection pump -,117.9,A2,1988-1992,FI02154548A,,,Toyota,Corolla,Fuel,Fuel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+53717128,Fuel injection pump -,117.9,A2,1998-2001,FI02154548A,,,Toyota,Corolla,Fuel,Fuel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+54051647,Fuel injection pump -,117.9,A2,2008-2012,FI10331575A,1ZRFE,77000.0,Toyota,Corolla,Fuel,Fuel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+53720617,Fuel injection pump -,117.9,A2,2002-2007,FI02154548A,3ZZS52,105000.0,Toyota,Corolla,Fuel,Fuel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+54472609,Fuel injection pump -,117.9,A2,2008-2012,FI06018105A,1ZRFE,204000.0,Toyota,Corolla,Fuel,Fuel injection pump,2026-02-09,2026-02-09T00:01:50+02:00
+54310660,Air-flow sensor -,23.6,A2,2002-2007,FI06376738A,,274000,Toyota,Corolla,Fuel,Air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54326986,Air-flow sensor -,23.6,A2,2002-2007,FI06376738A,,134000,Toyota,Corolla,Fuel,Air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54340197,Air-flow sensor -,23.6,A2,2002-2007,FI06376738A,3ZZS52,150000,Toyota,Corolla,Fuel,Air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54346272,Air-flow sensor -,23.6,A2,2002-2007,FI06376738A,,107000,Toyota,Corolla,Fuel,Air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54357747,Air-flow sensor -,23.6,A1,2002-2007,FI06376738A,,15000,Toyota,Corolla,Fuel,Air-flow sensor,2026-02-09,2026-02-09T00:01:50+02:00
+54443287,Rubber bellow / Tube -,35.4,A2,2002-2007,FI09515254A,3ZZFE,168000.0,Toyota,Corolla,Fuel,Rubber bellow / Tube,2026-02-09,2026-02-09T00:01:50+02:00
+63006838,Rubber bellow / Tube -,35.4,A2,2002-2007,FI30987993A,,240000.0,Toyota,Corolla,Fuel,Rubber bellow / Tube,2026-02-09,2026-02-09T00:01:50+02:00
+54327539,Rubber bellow / Tube -,29.5,A2,2002-2007,FI06376738A,,49000.0,Toyota,Corolla,Fuel,Rubber bellow / Tube,2026-02-09,2026-02-09T00:01:50+02:00
+62465248,Rubber bellow / Tube -,29.5,A2,2002-2007,FI06376738A,3ZZFE,,Toyota,Corolla,Fuel,Rubber bellow / Tube,2026-02-09,2026-02-09T00:01:50+02:00
+65106415,Rubber bellow / Tube -,29.5,A1,2002-2007,FI06376738A,4ZZFE,,Toyota,Corolla,Fuel,Rubber bellow / Tube,2026-02-09,2026-02-09T00:01:50+02:00
+58399521,Throttle Housing -,153.3,A2,2013-2018,FI06018105A,1ZRFAE,70000,Toyota,Corolla,Fuel,Throttle Housing,2026-02-09,2026-02-09T00:01:50+02:00
+65066105,Throttle Housing -,153.3,A2,2013-2018,FI27837687A,1ZRFAE,58000,Toyota,Corolla,Fuel,Throttle Housing,2026-02-09,2026-02-09T00:01:50+02:00
+54272034,Throttle Housing -,153.3,A1,2008-2012,FI09389104A,1ZRFAE,57000,Toyota,Corolla,Fuel,Throttle Housing,2026-02-09,2026-02-09T00:01:50+02:00
+53707825,Throttle Housing -,141.5,A2,1998-2001,FI02154548A,,117000,Toyota,Corolla,Fuel,Throttle Housing,2026-02-09,2026-02-09T00:01:50+02:00
+53685062,Throttle Housing -,127.4,A2,2008-2012,FI07265116A,1ZRFAE,200000,Toyota,Corolla,Fuel,Throttle Housing,2026-02-09,2026-02-09T00:01:50+02:00
+59269879,Automatic gear -,3037.0,A1,2019-2027,FI09389104A,M20AFXS,47000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Automatic gear,2026-02-09,2026-02-09T00:01:50+02:00
+65097247,Automatic gear -,2948.5,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Automatic gear,2026-02-09,2026-02-09T00:01:50+02:00
+62404956,Automatic gear -,2948.5,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Automatic gear,2026-02-09,2026-02-09T00:01:50+02:00
+59131981,Automatic gear -,2948.5,A2,2019-2027,FI27837687A,M20AFXS,87000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Automatic gear,2026-02-09,2026-02-09T00:01:50+02:00
+63305358,Automatic gear -,2948.5,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Automatic gear,2026-02-09,2026-02-09T00:01:50+02:00
+65399928,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,2ZRFXE,148000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+60059054,Drive shaft -(Left front),283.1,A2,2019-2027,FI27837687A,2ZRFXE,119000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+61770180,Drive shaft -(Left front),246.5,A2,2019-2027,FI06509801A,2ZRFXE,119000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+64489889,Drive shaft -(Left front),235.9,A2,2019-2027,FI09389104A,2ZRFXE,209000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+64578967,Drive shaft -(Left front),212.3,A2,2002-2007,FI07265116A,1CDFTV,,Toyota,Corolla,Gear box / Drive axle / Middle axle,Left front,2026-02-09,2026-02-09T00:01:50+02:00
+64546406,Drive shaft -(Right front),353.8,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+63350267,Drive shaft -(Right front),353.8,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+63083525,Drive shaft -(Right front),342.0,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+66434290,Drive shaft-(Right front),353.8,A2,2019-2027,FI27837687A,2ZRFXE,66000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+54521427,Drive shaft-(Right front),294.9,A2,2008-2012,FI11042417A,1ADFTV,376000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Right front,2026-02-09,2026-02-09T00:01:50+02:00
+66223983,Drive shaft -(Right front),353.8,A2,2019-2027,FI05028803A,2ZRFXE,52000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Either side front,2026-02-09,2026-02-09T00:01:50+02:00
+63310210,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Either side front,2026-02-09,2026-02-09T00:01:50+02:00
+63350268,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Either side front,2026-02-09,2026-02-09T00:01:50+02:00
+60496432,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,M20AFXS,147000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Either side front,2026-02-09,2026-02-09T00:01:50+02:00
+65680788,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,2ZRFXE,72000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Either side front,2026-02-09,2026-02-09T00:01:50+02:00
+65865835,Drive shaft -(Right front),294.9,A2,2019-2027,FI27837687A,M20AFXS,153000,Toyota,Corolla,Gear box / Drive axle / Middle axle,All,2026-02-09,2026-02-09T00:01:50+02:00
+59131986,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,M20AFXS,87000,Toyota,Corolla,Gear box / Drive axle / Middle axle,All,2026-02-09,2026-02-09T00:01:50+02:00
+64546407,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Gear box / Drive axle / Middle axle,All,2026-02-09,2026-02-09T00:01:50+02:00
+66223598,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,M20AFXS,64000,Toyota,Corolla,Gear box / Drive axle / Middle axle,All,2026-02-09,2026-02-09T00:01:50+02:00
+66434289,Drive shaft -(Left front),294.9,A2,2019-2027,FI27837687A,2ZRFXE,66000,Toyota,Corolla,Gear box / Drive axle / Middle axle,All,2026-02-09,2026-02-09T00:01:50+02:00
+66739627,Gear Box 5 Speed -,825.6,A2,2002-2007,FI06018105A,,292000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+64935321,Gear Box 5 Speed -,766.6,A2,2008-2012,FI11042417A,1NDTV,405000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+64929292,Gear Box 5 Speed -,707.6,A2,2002-2007,FI02154548A,,267000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+56989378,Gear Box 5 Speed -,636.8,A2,1998-2001,FI07265116A,,200000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+53889068,Gear Box 5 Speed -,648.7,A2,2002-2007,FI05351686A,1CDFTV,242000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+54593502,Gear lever -,188.7,A1,2013-2018,FI03986645A,1ZRFAE,35000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear lever,2026-02-09,2026-02-09T00:01:50+02:00
+53700152,Gear lever -,176.9,A2,2002-2007,FI09992720A,,145000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear lever,2026-02-09,2026-02-09T00:01:50+02:00
+53886312,Gear lever-,176.9,A1,2019-2027,FI05028803A,2ZRFXE,2000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear lever,2026-02-09,2026-02-09T00:01:50+02:00
+58718927,Gear lever -,176.9,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear lever,2026-02-09,2026-02-09T00:01:50+02:00
+61092453,Gear lever -,176.9,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear lever,2026-02-09,2026-02-09T00:01:50+02:00
+53817670,Clutch cylinder Main -,47.2,A2,2002-2007,FI01853355A,,154000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Main,2026-02-09,2026-02-09T00:01:50+02:00
+53827266,Clutch cylinder Main -,47.2,A1,2002-2007,FI01853355A,3ZZS52,57000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Main,2026-02-09,2026-02-09T00:01:50+02:00
+54544437,Clutch cylinder Main -,47.2,A2,1998-2001,FI30987993A,,272000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Main,2026-02-09,2026-02-09T00:01:50+02:00
+63181386,Clutch cylinder Main -,47.2,A2,2002-2007,FI06376738A,,300000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Main,2026-02-09,2026-02-09T00:01:50+02:00
+62465201,Clutch cylinder Main -,41.3,A2,2002-2007,FI06376738A,3ZZFE,,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Main,2026-02-09,2026-02-09T00:01:50+02:00
+54524529,Clutch cylinder Slave -,35.4,A2,1998-2001,FI11042417A,3ZZFE,174000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Slave,2026-02-09,2026-02-09T00:01:50+02:00
+62482104,Clutch cylinder Slave -,32.5,A2,2008-2012,FI06294476A,1NDTV,340000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Slave,2026-02-09,2026-02-09T00:01:50+02:00
+53836797,Clutch cylinder Slave -,29.5,A2,1993-1997,FI05028803A,,,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Slave,2026-02-09,2026-02-09T00:01:50+02:00
+53858372,Clutch cylinder Slave -,29.5,A2,1998-2001,FI05028803A,4ZZFE,253000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Slave,2026-02-09,2026-02-09T00:01:50+02:00
+54552325,Clutch cylinder Slave -,29.5,A2,1993-1997,FI15710056A,,182000.0,Toyota,Corolla,Gear box / Drive axle / Middle axle,Clutch cylinder Slave,2026-02-09,2026-02-09T00:01:50+02:00
+65209258,Gear Box 6 Speed -,1344.5,A2,2008-2012,FI07713839A,1ZRFAE,157000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+60987037,Gear Box 6 Speed -,1415.3,A2,2008-2012,FI27837687A,1ZRFAE,250000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+56321370,Gear Box 6 Speed-,1415.3,A2,2008-2012,FI03986645A,1ZRFAE,111000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+58540693,Gear Box 6 Speed-,1356.3,A2,2008-2012,FI09389104A,1ZRFAE,129000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+56279319,Gear Box 6 Speed-,1179.4,A2,2008-2012,FI23857664A,1ZRFAE,26000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-09,2026-02-09T00:01:50+02:00
+54622479,Gear Box Bracket -,47.2,A2,1998-2001,FI03986645A,4AFE,125000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+54635082,Gear Box Bracket -(Rear),47.2,A2,1998-2001,FI03986645A,3ZZFE,139000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+54635083,Gear Box Bracket -,47.2,A2,1998-2001,FI03986645A,3ZZFE,139000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+56321357,Gear Box Bracket -,47.2,A2,2008-2012,FI03986645A,1ZRFAE,111000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+56321358,Gear Box Bracket -(Rear),47.2,A2,2008-2012,FI03986645A,1ZRFAE,111000,Toyota,Corolla,Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-09,2026-02-09T00:01:50+02:00
+56326691,Rear axle -(Rear),330.2,A2,2008-2012,FI03986645A,1ZRFAE,111000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle,2026-02-09,2026-02-09T00:01:50+02:00
+65806379,Rear axle -,318.4,A2,2008-2012,FI27837687A,1ZRFE,138000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle,2026-02-09,2026-02-09T00:01:50+02:00
+54403966,Rear axle -,318.4,A3,2008-2012,FI09515254A,1ZRFAE,222000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle,2026-02-09,2026-02-09T00:01:50+02:00
+65434864,Rear axle -,318.4,A2,2008-2012,FI27837687A,1ZRFAE,225000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle,2026-02-09,2026-02-09T00:01:50+02:00
+54668815,Rear axle -,294.9,A2,2002-2007,FI23857664A,3ZZFE,324000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle,2026-02-09,2026-02-09T00:01:50+02:00
+61749414,Shock absorbers rear -(Rear),61.7,A2,2019-2027,FI06509801A,2ZRFXE,119000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+61749415,Shock absorbers rear -(Rear),61.7,A2,2019-2027,FI06509801A,2ZRFXE,119000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+53819760,Shock absorbers rear -(Rear),60.1,A2,1998-2001,FI01853355A,4EFE,197000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+53824358,Shock absorbers rear -(Rear),60.1,A2,1998-2001,FI01853355A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+57225601,Shock absorbers rear -(Left rear),59.0,A2,2002-2007,FI22893129A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54389246,Shock absorbers rear -(Rear),60.1,A1,2002-2007,FI06376738A,,49000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54389283,Shock absorbers rear -(Rear),60.1,A2,1993-1997,FI06376738A,,220000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54389284,Shock absorbers rear -(Rear),60.1,A1,2002-2007,FI06376738A,,49000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54389563,Shock absorbers rear -(Rear),60.1,A2,2002-2007,FI06376738A,,130000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54389838,Shock absorbers rear -(Rear),60.1,A2,2002-2007,FI06376738A,,130000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+64248644,Strut rear -(Right),59.0,A2,2002-2007,FI06376738A,3ZZFE,,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53721223,Strut rear -(Right),59.0,A2,1998-2001,FI02154548A,,6000.0,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53467029,Strut rear -(Right),47.2,A2,1998-2001,FI27837687A,3ZZFE,435000.0,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53662663,Strut rear -(Right),44.6,A2,1988-1992,FI07265116A,,,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+54338198,Strut rear -(Right),47.2,A2,1993-1997,FI06376738A,,,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53650880,Strut rear -(Left),42.5,A2,2002-2007,FI07265116A,1CDFTV,350000.0,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+53664653,Strut rear -(Left),42.5,A2,2002-2007,FI07265116A,1CD,120000.0,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+53689539,Strut rear -(Left),42.5,A2,2002-2007,FI07265116A,3ZZFE,280000.0,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+54646065,Strut rear -(Left rear),47.2,A2,1998-2001,FI03986645A,7AFE,,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+54423828,Strut rear -(Left rear),42.5,A2,2002-2007,FI09515254A,4ZZFE,140000.0,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+59166460,Strut rear -(Left),59.0,A2,1998-2001,FI15710056A,,580000.0,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53792102,Strut rear -(Right),59.0,A2,1988-1992,FI32385945A,,213000.0,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+54484620,Strut rear -(Right),59.0,A2,1998-2001,FI06018105A,,,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53679064,Strut rear -(Left),55.2,A2,1993-1997,FI07265116A,,300000.0,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+62953076,Strut rear -(Left),59.0,A2,2002-2007,FI30987993A,,,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+62953077,Strut rear -(Right),59.0,A2,2002-2007,FI30987993A,,,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+64248645,Strut rear -(Left),59.0,A2,2002-2007,FI06376738A,3ZZFE,,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+62466708,Strut rear -(Left rear),59.0,A2,2002-2007,FI30987993A,,240000.0,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+53589483,Strut rear -(Left),53.1,A2,2002-2007,FI02042722A,E3ZY52L,89000.0,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54321498,Strut rear -(Left),53.1,A2,1993-1997,FI06376738A,,,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+61751482,Wheel bearing spindle shaft -(Left rear),201.7,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Vehicle exterior / Suspension,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+58825527,Wheel bearing spindle shaft -(Left rear),176.9,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+60496437,Wheel bearing spindle shaft -(Left rear),176.9,A2,2019-2027,FI27837687A,M20AFXS,147000,Toyota,Corolla,Vehicle exterior / Suspension,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+61076252,Wheel bearing spindle shaft -(Left rear),176.9,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Vehicle exterior / Suspension,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+63127113,Wheel bearing spindle shaft -(Left rear),176.9,A2,2019-2027,FI24637030A,,53000,Toyota,Corolla,Vehicle exterior / Suspension,Left rear,2026-02-09,2026-02-09T00:01:50+02:00
+59241761,Wheel bearing spindle shaft -(Right rear),190.5,A2,2019-2027,FI06509801A,2ZRFXE,10000,Toyota,Corolla,Vehicle exterior / Suspension,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+61751473,Wheel bearing spindle shaft -(Right rear),201.7,A2,2019-2027,FI06509801A,2ZRFXE,119000,Toyota,Corolla,Vehicle exterior / Suspension,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+64536608,Wheel bearing spindle shaft -(Right rear),188.7,A2,2019-2027,FI09389104A,2ZRFXE,81000,Toyota,Corolla,Vehicle exterior / Suspension,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+58825525,Wheel bearing spindle shaft -(Right rear),176.9,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+61076249,Wheel bearing spindle shaft -(Right rear),176.9,A2,2019-2027,FI27837687A,2ZRFXE,50000,Toyota,Corolla,Vehicle exterior / Suspension,Right rear,2026-02-09,2026-02-09T00:01:50+02:00
+56933447,Wheel bearing spindle shaft -(Right rear),206.4,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+56933448,Wheel bearing spindle shaft -(Left rear),206.4,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+57222704,Wheel bearing spindle shaft -(Right rear),206.4,A2,2019-2027,FI09389104A,2ZR,74000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+60419506,Wheel bearing spindle shaft -(Left rear),206.4,A1,2019-2027,FI09389104A,M20AFXS,60000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+53853342,Wheel bearing spindle shaft-(Left rear),200.5,A1,2019-2027,FI05028803A,2ZRFXE,2000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+63305368,Rear axle beam -,412.8,A2,2019-2027,FI27837687A,M20AFXS,102000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle beam,2026-02-09,2026-02-09T00:01:50+02:00
+63350257,Rear axle beam -,412.8,A2,2019-2027,FI27837687A,2ZRFXE,48000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle beam,2026-02-09,2026-02-09T00:01:50+02:00
+65680830,Rear axle beam -,412.8,A2,2019-2027,FI27837687A,2ZRFXE,72000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle beam,2026-02-09,2026-02-09T00:01:50+02:00
+64546427,Rear axle beam -,412.8,A2,2019-2027,FI27837687A,2ZRFXE,89000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle beam,2026-02-09,2026-02-09T00:01:50+02:00
+66424833,Rear axle beam -,412.8,A2,2019-2027,FI27837687A,2ZRFXE,66000,Toyota,Corolla,Vehicle exterior / Suspension,Rear axle beam,2026-02-09,2026-02-09T00:01:50+02:00
+53865601,Suspension -(Rear),47.2,A1,2019-2027,FI05028803A,2ZRFXE,2000,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+58825993,Suspension -(Rear),47.2,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+58825994,Suspension -(Rear),47.2,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+60498741,Suspension -(Rear),47.2,A2,2019-2027,FI27837687A,M20AFXS,147000,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+60498767,Suspension -(Rear),47.2,A2,2019-2027,FI27837687A,M20AFXS,147000,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+59230183,Suspension -(Rear),44.8,A1,2019-2027,FI06509801A,2ZRFXE,10000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+59230184,Suspension -(Rear),44.8,A1,2019-2027,FI06509801A,2ZRFXE,10000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+62122633,Suspension -(Rear),47.2,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+62122634,Suspension -(Rear),47.2,A2,2019-2027,FI27837687A,2ZRFXE,83000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+53817908,Suspension -(Rear),47.2,A1,2002-2007,FI01853355A,3ZZS52,57000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+66735158,Hub rear -(Rear),117.9,A2,2002-2007,FI09992720A,,277000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+53866330,Hub rear -(Left rear),100.2,A2,1993-1997,FI05028803A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+53866331,Hub rear -(Right rear),100.2,A2,1993-1997,FI05028803A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+56097887,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,1CDFTV,446000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+57180324,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,314000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+57182287,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,314000.0,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+57894044,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,189000.0,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+57894045,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,189000.0,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58671369,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58671370,Hub rear -(Rear),94.4,A2,2002-2007,FI15710056A,,,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+53822125,Strut bearing rear -(Left rear),23.6,B2,1998-2001,FI01853355A,,160000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54469818,Strut bearing rear -(Rear),23.6,A2,1988-1992,FI06018105A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54472631,Strut bearing rear -(Rear),23.6,A2,1988-1992,FI06018105A,,,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54473017,Strut bearing rear -(Rear),23.6,A2,1988-1992,FI06018105A,,241000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54478903,Strut bearing rear -(Rear),23.6,A2,1988-1992,FI06018105A,,241000.0,Toyota,Corolla,Vehicle exterior / Suspension,Rear,2026-02-09,2026-02-09T00:01:50+02:00
+54480215,Strut bearing rear -(Rear),23.6,A2,1988-1992,FI06018105A,,238000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58830600,Trailing link rear -(Left),70.8,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+56933452,Trailing link rear -(Left),70.8,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+58228809,Trailing link rear -(Left),70.8,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+55987887,Trailing link rear -(Left),70.8,A2,2019-2027,FI02042722A,,20000,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+55987889,Trailing link rear -(Left),70.8,A2,2019-2027,FI02042722A,,20000,Toyota,Corolla,Vehicle exterior / Suspension,Left,2026-02-09,2026-02-09T00:01:50+02:00
+56933451,Trailing link rear -(Right),70.8,A2,2019-2027,FI09389104A,2ZR,63000,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+55987886,Trailing link rear -(Right),70.8,A2,2019-2027,FI02042722A,,20000,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+55987888,Trailing link rear -(Right),70.8,A2,2019-2027,FI02042722A,,20000,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+60410030,Trailing link rear -(Right upper),70.8,A1,2019-2027,FI09389104A,M20AFXS,60000,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+60410177,Trailing link rear -(Right),70.8,A1,2019-2027,FI09389104A,M20AFXS,60000,Toyota,Corolla,Vehicle exterior / Suspension,Right,2026-02-09,2026-02-09T00:01:50+02:00
+53848794,Trailing link rear -(Right),70.8,A2,2019-2027,FI05028803A,M20AFXS,,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53848801,Trailing link rear-(Left),70.8,A2,2019-2027,FI05028803A,M20AFXS,,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53848803,Trailing link rear -(Right),70.8,A2,2019-2027,FI05028803A,M20AFXS,,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53869465,Trailing link rear -(Left),70.8,A1,2019-2027,FI05028803A,M20AFXS,4000.0,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+53883759,Trailing link rear -(Left),70.8,A1,2019-2027,FI05028803A,2ZRFXE,2000.0,Toyota,Corolla,Vehicle exterior / Suspension,Either side,2026-02-09,2026-02-09T00:01:50+02:00
+54360056,Trailing link rear -(Right),71.9,A2,1998-2001,FI06376738A,,84000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+54363441,Trailing link rear -(Left),71.9,A2,1998-2001,FI06376738A,,84000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58830597,Trailing link rear -(Left),70.8,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58830598,Trailing link rear -(Right),70.8,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
+58830599,Trailing link rear -(Right),70.8,A2,2019-2027,FI05028803A,2ZRFXE,58000,Toyota,Corolla,Vehicle exterior / Suspension,All,2026-02-09,2026-02-09T00:01:50+02:00
