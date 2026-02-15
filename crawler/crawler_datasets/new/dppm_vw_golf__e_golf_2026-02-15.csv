@@ -364,3 +364,276 @@ product_id,part_name,price,quality_grade,year,oem_number,engine_code,mileage,bra
 54142483,"Crankshaft - , e-",112.7,A2,2004-2009,FI06292622A,,128000,VW,"Golf,-e_Golf",Engine,Crankshaft,2026-02-15,2026-02-15T21:38:50+02:00
 54137828,"Crankshaft - , e-",77.1,A2,2004-2009,FI06292622A,,88000,VW,"Golf,-e_Golf",Engine,Crankshaft,2026-02-15,2026-02-15T21:38:50+02:00
 54635308,"Crankshaft - , e-",71.2,A3,1998-2006,FI03986645A,,220000,VW,"Golf,-e_Golf",Engine,Crankshaft,2026-02-15,2026-02-15T21:38:50+02:00
+63741088,"Dipstick - , e-",23.7,A2,2004-2009,FI26167503A,,320000.0,VW,"Golf,-e_Golf",Engine,Dipstick,2026-02-15,2026-02-15T21:38:50+02:00
+54316903,"Dipstick - , e-",23.7,A2,1992-1999,FI06376738A,,,VW,"Golf,-e_Golf",Engine,Dipstick,2026-02-15,2026-02-15T21:38:50+02:00
+60220863,"Dipstick - , e-",19.0,A2,1998-2006,FI22893129A,,,VW,"Golf,-e_Golf",Engine,Dipstick,2026-02-15,2026-02-15T21:38:50+02:00
+56877048,"Dipstick - , e-",17.8,A2,2009-2013,FI09515254A,,120000.0,VW,"Golf,-e_Golf",Engine,Dipstick,2026-02-15,2026-02-15T21:38:50+02:00
+53694786,"Dipstick - , e-",16.6,A2,1998-2006,FI09992720A,,264000.0,VW,"Golf,-e_Golf",Engine,Dipstick,2026-02-15,2026-02-15T21:38:50+02:00
+54142915,"Piston / Rod - , e-",35.6,A2,2004-2009,FI06292622A,,75000,VW,"Golf,-e_Golf",Engine,Piston / Rod,2026-02-15,2026-02-15T21:38:50+02:00
+54100052,"Piston / Rod - , e-",23.7,A2,2004-2009,FI06292622A,,128000,VW,"Golf,-e_Golf",Engine,Piston / Rod,2026-02-15,2026-02-15T21:38:50+02:00
+54124986,"Piston / Rod - , e-",23.7,A2,2004-2009,FI06292622A,,118000,VW,"Golf,-e_Golf",Engine,Piston / Rod,2026-02-15,2026-02-15T21:38:50+02:00
+54124988,"Piston / Rod - , e-",23.7,A2,2004-2009,FI06292622A,,118000,VW,"Golf,-e_Golf",Engine,Piston / Rod,2026-02-15,2026-02-15T21:38:50+02:00
+54125831,"Piston / Rod - , e-",23.7,A2,2004-2009,FI06292622A,,118000,VW,"Golf,-e_Golf",Engine,Piston / Rod,2026-02-15,2026-02-15T21:38:50+02:00
+54055052,"Motor cushion - , e-",59.3,A2,2009-2013,FI10331575A,,153000.0,VW,"Golf,-e_Golf",Engine,Motor cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54071481,"Motor cushion - , e-",59.3,A2,2009-2013,FI10331575A,,71000.0,VW,"Golf,-e_Golf",Engine,Motor cushion,2026-02-15,2026-02-15T21:38:50+02:00
+53608557,"Motor cushion - , e-",59.3,A2,2013-2020,FI02042722A,,122000.0,VW,"Golf,-e_Golf",Engine,Motor cushion,2026-02-15,2026-02-15T21:38:50+02:00
+53835906,"Motor cushion - , e-",59.3,A2,1998-2006,FI05028803A,,,VW,"Golf,-e_Golf",Engine,Motor cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54166559,"Motor cushion - , e-",59.3,A1,2013-2020,FI06292622A,,21000.0,VW,"Golf,-e_Golf",Engine,Motor cushion,2026-02-15,2026-02-15T21:38:50+02:00
+63238739,"Air purifier - , e-",94.9,A2,2013-2020,FI27837687A,,253000,VW,"Golf,-e_Golf",Fuel,Air purifier,2026-02-15,2026-02-15T21:38:50+02:00
+53985258,"Air purifier - , e-",94.9,A1,2013-2020,FI10331575A,,18000,VW,"Golf,-e_Golf",Fuel,Air purifier,2026-02-15,2026-02-15T21:38:50+02:00
+54073986,"Air purifier - , e-",94.9,A1,2013-2020,FI10331575A,,11000,VW,"Golf,-e_Golf",Fuel,Air purifier,2026-02-15,2026-02-15T21:38:50+02:00
+54074053,"Air purifier - , e-",94.9,A1,2013-2020,FI10331575A,,12000,VW,"Golf,-e_Golf",Fuel,Air purifier,2026-02-15,2026-02-15T21:38:50+02:00
+54959086,"Air purifier - , e-",94.9,A2,2004-2009,FI27837687A,,341000,VW,"Golf,-e_Golf",Fuel,Air purifier,2026-02-15,2026-02-15T21:38:50+02:00
+64863773,"Deliverer - , e-",237.2,A2,2013-2020,FI09515254A,,288000.0,VW,"Golf,-e_Golf",Fuel,Deliverer,2026-02-15,2026-02-15T21:38:50+02:00
+64863775,"Deliverer - , e-",237.2,A2,2013-2020,FI09515254A,,288000.0,VW,"Golf,-e_Golf",Fuel,Deliverer,2026-02-15,2026-02-15T21:38:50+02:00
+64863779,"Deliverer - , e-",237.2,A2,2013-2020,FI09515254A,,288000.0,VW,"Golf,-e_Golf",Fuel,Deliverer,2026-02-15,2026-02-15T21:38:50+02:00
+55328011,"Deliverer - , e-",160.1,A2,1998-2006,FI07265116A,,,VW,"Golf,-e_Golf",Fuel,Deliverer,2026-02-15,2026-02-15T21:38:50+02:00
+55328012,"Deliverer - , e-",160.1,A2,1998-2006,FI07265116A,,,VW,"Golf,-e_Golf",Fuel,Deliverer,2026-02-15,2026-02-15T21:38:50+02:00
+57733393,"Diesel injection pump - , e-",332.1,A2,2013-2020,FI05028803A,,180000.0,VW,"Golf,-e_Golf",Fuel,Diesel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+53523674,"Diesel injection pump - , e-",332.1,A2,1998-2006,FI23403240A,,460000.0,VW,"Golf,-e_Golf",Fuel,Diesel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+54309282,"Diesel injection pump - , e-",302.5,A2,2004-2009,FI06376738A,,149000.0,VW,"Golf,-e_Golf",Fuel,Diesel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+53679613,"Diesel injection pump - , e-",266.9,A2,1984-1991,FI07265116A,,,VW,"Golf,-e_Golf",Fuel,Diesel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+60553538,"Diesel injection pump - , e-",177.9,A2,2004-2009,FI06018105A,,203000.0,VW,"Golf,-e_Golf",Fuel,Diesel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+54250831,"Fuel distributor - , e-",112.7,A2,2009-2013,FI09389104A,,92000,VW,"Golf,-e_Golf",Fuel,Fuel distributor,2026-02-15,2026-02-15T21:38:50+02:00
+54250832,"Fuel distributor - , e-",112.7,A2,2009-2013,FI09389104A,,116000,VW,"Golf,-e_Golf",Fuel,Fuel distributor,2026-02-15,2026-02-15T21:38:50+02:00
+53477126,"Fuel distributor - , e-",94.9,A2,2009-2013,FI27837687A,,82000,VW,"Golf,-e_Golf",Fuel,Fuel distributor,2026-02-15,2026-02-15T21:38:50+02:00
+54267520,"Fuel distributor - , e-",94.9,A2,2009-2013,FI09389104A,,180000,VW,"Golf,-e_Golf",Fuel,Fuel distributor,2026-02-15,2026-02-15T21:38:50+02:00
+62199608,"Fuel distributor - , e-",94.9,A2,2013-2020,FI02042722A,,170000,VW,"Golf,-e_Golf",Fuel,Fuel distributor,2026-02-15,2026-02-15T21:38:50+02:00
+54038218,"Fuel filter / Holder - , e-",71.2,A2,2009-2013,FI10331575A,,80000.0,VW,"Golf,-e_Golf",Fuel,Fuel filter / Holder,2026-02-15,2026-02-15T21:38:50+02:00
+54058306,"Fuel filter / Holder - , e-",71.2,A2,2009-2013,FI10331575A,,153000.0,VW,"Golf,-e_Golf",Fuel,Fuel filter / Holder,2026-02-15,2026-02-15T21:38:50+02:00
+53986991,"Fuel filter / Holder - , e-",71.2,A2,2009-2013,FI10331575A,,147000.0,VW,"Golf,-e_Golf",Fuel,Fuel filter / Holder,2026-02-15,2026-02-15T21:38:50+02:00
+53820707,"Fuel filter / Holder - , e-",60.5,A2,1998-2006,FI01853355A,,,VW,"Golf,-e_Golf",Fuel,Fuel filter / Holder,2026-02-15,2026-02-15T21:38:50+02:00
+54079016,"Fuel filter / Holder - , e-",59.3,A2,2009-2013,FI08409732A,,194000.0,VW,"Golf,-e_Golf",Fuel,Fuel filter / Holder,2026-02-15,2026-02-15T21:38:50+02:00
+54291789,"Fuel injection pump - , e-",148.3,A1,2013-2020,FI09389104A,,17000,VW,"Golf,-e_Golf",Fuel,Fuel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+54430621,"Fuel injection pump - , e-",142.3,A2,2013-2020,FI09515254A,,108000,VW,"Golf,-e_Golf",Fuel,Fuel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+54657674,"Fuel injection pump - , e-",142.3,A1,2013-2020,FI03986645A,,47000,VW,"Golf,-e_Golf",Fuel,Fuel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+66552461,"Fuel injection pump - , e-(Rear)",135.2,A2,2009-2013,FI07713839A,,161000,VW,"Golf,-e_Golf",Fuel,Fuel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+54024254,"Fuel injection pump - , e-",118.6,A2,2009-2013,FI10331575A,,66000,VW,"Golf,-e_Golf",Fuel,Fuel injection pump,2026-02-15,2026-02-15T21:38:50+02:00
+57331992,"Fuel pump electric - , e-",177.9,A2,2013-2020,FI27837687A,,114000.0,VW,"Golf,-e_Golf",Fuel,Fuel pump electric,2026-02-15,2026-02-15T21:38:50+02:00
+65445075,"Fuel pump electric - , e-",177.9,A2,2009-2013,FI22893129A,,,VW,"Golf,-e_Golf",Fuel,Fuel pump electric,2026-02-15,2026-02-15T21:38:50+02:00
+59725313,"Fuel pump electric - , e-",177.9,A2,2013-2020,FI27837687A,,194000.0,VW,"Golf,-e_Golf",Fuel,Fuel pump electric,2026-02-15,2026-02-15T21:38:50+02:00
+58737420,"Fuel pump electric - , e-",166.1,A2,2013-2020,FI27837687A,,190000.0,VW,"Golf,-e_Golf",Fuel,Fuel pump electric,2026-02-15,2026-02-15T21:38:50+02:00
+66468709,"Fuel pump electric - , e-(Rear)",142.3,A2,2013-2020,FI23403240A,,124000.0,VW,"Golf,-e_Golf",Fuel,Fuel pump electric,2026-02-15,2026-02-15T21:38:50+02:00
+54055840,"Fuel tank lid - , e-",17.8,A2,2009-2013,FI10331575A,,80000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+54341902,"Fuel tank lid - , e-",17.8,A1,1998-2006,FI06376738A,,250000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+54360755,"Fuel tank lid - , e-",17.8,A2,1998-2006,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Fuel tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+54373904,"Fuel tank lid - , e-",17.8,A2,1992-1999,FI06376738A,,236000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+54411874,"Fuel tank lid - , e-",17.8,A2,1998-2006,FI09515254A,,175000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+56228413,"Mass air-flow sensor - , e-",83.0,A2,2013-2020,FI09389104A,,98000.0,VW,"Golf,-e_Golf",Fuel,Mass air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+60226848,"Mass air-flow sensor - , e-",83.0,A2,2004-2009,FI22893129A,,,VW,"Golf,-e_Golf",Fuel,Mass air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+53938447,"Mass air-flow sensor - , e-",83.0,A1,1998-2006,FI05351686A,,56000.0,VW,"Golf,-e_Golf",Fuel,Mass air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+54337899,"Mass air-flow sensor - , e-",78.3,A2,1992-1999,FI06376738A,,236000.0,VW,"Golf,-e_Golf",Fuel,Mass air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+54380915,"Mass air-flow sensor - , e-",78.3,A1,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Mass air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+58950659,"Rubber bellow / Tube - , e-",41.5,A2,2013-2020,FI10331575A,,125000,VW,"Golf,-e_Golf",Fuel,Rubber bellow / Tube,2026-02-15,2026-02-15T21:38:50+02:00
+54074047,"Rubber bellow / Tube - , e-",41.5,A1,2013-2020,FI10331575A,,12000,VW,"Golf,-e_Golf",Fuel,Rubber bellow / Tube,2026-02-15,2026-02-15T21:38:50+02:00
+53382600,"Rubber bellow / Tube - , e-",35.6,A2,2009-2013,FI27837687A,,227000,VW,"Golf,-e_Golf",Fuel,Rubber bellow / Tube,2026-02-15,2026-02-15T21:38:50+02:00
+54399458,"Rubber bellow / Tube - , e-",35.6,A2,2004-2009,FI09515254A,,253000,VW,"Golf,-e_Golf",Fuel,Rubber bellow / Tube,2026-02-15,2026-02-15T21:38:50+02:00
+54432860,"Rubber bellow / Tube - , e-",35.6,A2,2013-2020,FI09515254A,,103000,VW,"Golf,-e_Golf",Fuel,Rubber bellow / Tube,2026-02-15,2026-02-15T21:38:50+02:00
+61779175,"Tank lid - , e-",59.3,A2,2013-2020,FI05351686A,,223000,VW,"Golf,-e_Golf",Fuel,Tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+65758942,"Tank lid - , e-(Rear)",59.3,A2,2009-2013,FI32037991A,,241000,VW,"Golf,-e_Golf",Fuel,Tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+62187719,"Tank lid - , e-",59.3,A2,2013-2020,FI05351686A,,71000,VW,"Golf,-e_Golf",Fuel,Tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+66703902,"Tank lid - , e-",59.3,A2,2013-2020,FI23403240A,,124000,VW,"Golf,-e_Golf",Fuel,Tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+54055839,"Tank lid - , e-",47.4,A2,2009-2013,FI10331575A,,80000,VW,"Golf,-e_Golf",Fuel,Tank lid,2026-02-15,2026-02-15T21:38:50+02:00
+55732520,"Throttle Housing - , e-",201.7,A2,2004-2009,FI05351686A,,,VW,"Golf,-e_Golf",Fuel,Throttle Housing,2026-02-15,2026-02-15T21:38:50+02:00
+61796395,"Throttle Housing - , e-",185.9,A2,2004-2009,FI07713839A,,178000.0,VW,"Golf,-e_Golf",Fuel,Throttle Housing,2026-02-15,2026-02-15T21:38:50+02:00
+64814195,"Throttle Housing - , e-",189.8,A2,2009-2013,FI22893129A,,266000.0,VW,"Golf,-e_Golf",Fuel,Throttle Housing,2026-02-15,2026-02-15T21:38:50+02:00
+55972729,"Throttle Housing - , e-",177.9,A2,2013-2020,FI10331575A,,100000.0,VW,"Golf,-e_Golf",Fuel,Throttle Housing,2026-02-15,2026-02-15T21:38:50+02:00
+56502635,"Throttle Housing - , e-",177.9,A1,2013-2020,FI10331575A,,51000.0,VW,"Golf,-e_Golf",Fuel,Throttle Housing,2026-02-15,2026-02-15T21:38:50+02:00
+53606842,"Air throttle housing / Throttle housing - , e-",94.9,A2,2004-2009,FI02042722A,,106000.0,VW,"Golf,-e_Golf",Fuel,Air throttle housing / Throttle housing,2026-02-15,2026-02-15T21:38:50+02:00
+64345962,"Air throttle housing / Throttle housing - , e-",94.9,A2,2004-2009,FI06292622A,,189000.0,VW,"Golf,-e_Golf",Fuel,Air throttle housing / Throttle housing,2026-02-15,2026-02-15T21:38:50+02:00
+54163225,"Air throttle housing / Throttle housing - , e-",83.0,A2,2004-2009,FI06292622A,,144000.0,VW,"Golf,-e_Golf",Fuel,Air throttle housing / Throttle housing,2026-02-15,2026-02-15T21:38:50+02:00
+64336350,"Air throttle housing / Throttle housing - , e-",71.2,A2,2004-2009,FI06292622A,,189000.0,VW,"Golf,-e_Golf",Fuel,Air throttle housing / Throttle housing,2026-02-15,2026-02-15T21:38:50+02:00
+53585126,"Air throttle housing / Throttle housing - , e-",59.3,A2,1998-2006,FI02042722A,,,VW,"Golf,-e_Golf",Fuel,Air throttle housing / Throttle housing,2026-02-15,2026-02-15T21:38:50+02:00
+54005766,"Carbon canister - , e-",41.5,A1,2009-2013,FI10331575A,,25000.0,VW,"Golf,-e_Golf",Fuel,Carbon canister,2026-02-15,2026-02-15T21:38:50+02:00
+54027932,"Carbon canister - , e-",41.5,A2,2009-2013,FI10331575A,,66000.0,VW,"Golf,-e_Golf",Fuel,Carbon canister,2026-02-15,2026-02-15T21:38:50+02:00
+53984272,"Carbon canister - , e-",41.5,A2,2009-2013,FI10331575A,,105000.0,VW,"Golf,-e_Golf",Fuel,Carbon canister,2026-02-15,2026-02-15T21:38:50+02:00
+53985310,"Carbon canister - , e-",41.5,A2,2009-2013,FI10331575A,,71000.0,VW,"Golf,-e_Golf",Fuel,Carbon canister,2026-02-15,2026-02-15T21:38:50+02:00
+54380653,"Carbon canister - , e-",35.6,A2,1992-1999,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Carbon canister,2026-02-15,2026-02-15T21:38:50+02:00
+54020235,"Diesel tank - , e-",177.9,B2,2009-2013,FI10331575A,,153000.0,VW,"Golf,-e_Golf",Fuel,Diesel tank,2026-02-15,2026-02-15T21:38:50+02:00
+54185803,"Diesel tank - , e-",177.9,A2,2009-2013,FI26167503A,,160000.0,VW,"Golf,-e_Golf",Fuel,Diesel tank,2026-02-15,2026-02-15T21:38:50+02:00
+64952167,"Diesel tank - , e-",177.9,A2,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Diesel tank,2026-02-15,2026-02-15T21:38:50+02:00
+60058884,"Diesel tank - , e-",166.1,B2,2009-2013,FI03986645A,,,VW,"Golf,-e_Golf",Fuel,Diesel tank,2026-02-15,2026-02-15T21:38:50+02:00
+53707675,"Diesel tank - , e-",154.2,A2,1998-2006,FI02154548A,,,VW,"Golf,-e_Golf",Fuel,Diesel tank,2026-02-15,2026-02-15T21:38:50+02:00
+54324453,"Fuel tank Injection - , e-",121.0,A2,1998-2006,FI06376738A,,150000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank Injection,2026-02-15,2026-02-15T21:38:50+02:00
+54322755,"Fuel tank Injection - , e-",102.0,A2,1998-2006,FI06376738A,,250000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank Injection,2026-02-15,2026-02-15T21:38:50+02:00
+54027084,"Fuel tank Injection - , e-",89.0,B2,2004-2009,FI10331575A,,155000.0,VW,"Golf,-e_Golf",Fuel,Fuel tank Injection,2026-02-15,2026-02-15T21:38:50+02:00
+54323239,"Fuel tank Injection - , e-",84.2,A2,1998-2006,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Fuel tank Injection,2026-02-15,2026-02-15T21:38:50+02:00
+54341230,"Fuel tank Injection - , e-",72.4,A2,1998-2006,FI06376738A,,,VW,"Golf,-e_Golf",Fuel,Fuel tank Injection,2026-02-15,2026-02-15T21:38:50+02:00
+54378877,"Air-flow sensor - , e-",60.5,A2,1998-2006,FI06376738A,,150000,VW,"Golf,-e_Golf",Fuel,Air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+53559706,"Air-flow sensor - , e-",35.6,A2,1998-2006,FI23403240A,,38000,VW,"Golf,-e_Golf",Fuel,Air-flow sensor,2026-02-15,2026-02-15T21:38:50+02:00
+57712714,"Automatic gear - , e-",3795.8,A1,2013-2020,FI09389104A,,31000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Automatic gear,2026-02-15,2026-02-15T21:38:50+02:00
+64594102,"Automatic gear - , e-",3914.5,A2,2020-2027,FI27837687A,,74000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Automatic gear,2026-02-15,2026-02-15T21:38:50+02:00
+58738183,"Automatic gear - , e-",3324.3,A2,2013-2020,FI06509801A,,102000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Automatic gear,2026-02-15,2026-02-15T21:38:50+02:00
+54417791,"Automatic gear - , e-",3558.6,A2,2013-2020,GC300011M,,63000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Automatic gear,2026-02-15,2026-02-15T21:38:50+02:00
+54417788,"Automatic gear - , e-",3440.0,A2,2013-2020,CW300047E,,49000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Automatic gear,2026-02-15,2026-02-15T21:38:50+02:00
+54263144,"Drive shaft - , e-(Left front)",308.4,A1,2013-2020,FI09389104A,,11000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left front,2026-02-15,2026-02-15T21:38:50+02:00
+64251591,"Drive shaft - , e-(Left front)",296.5,A1,2020-2027,FI09389104A,,44000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left front,2026-02-15,2026-02-15T21:38:50+02:00
+53938689,"Drive shaft - , e-(Left front)",290.6,A1,2013-2020,FI05351686A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left front,2026-02-15,2026-02-15T21:38:50+02:00
+53938690,"Drive shaft - , e-(Left front)",290.6,A1,2013-2020,FI05351686A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left front,2026-02-15,2026-02-15T21:38:50+02:00
+54260459,"Drive shaft - , e-(Left front)",266.9,A2,2013-2020,FI09389104A,,109000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left front,2026-02-15,2026-02-15T21:38:50+02:00
+53862511,"Drive shaft - , e-(Left rear)",201.7,A2,2009-2013,FI05028803A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+54362669,"Drive shaft - , e-(Left rear)",181.5,A2,2013-2020,FI06376738A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+64667066,"Drive shaft - , e-(Left rear)",177.9,A2,2013-2020,FI27837687A,,281000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+60073919,"Drive shaft - , e-(Left rear)",160.1,A2,2009-2013,FI07265116A,,260000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+54416445,"Drive shaft - , e-(Left rear)",160.1,A2,2004-2009,FI09515254A,,77000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+54257213,"Drive shaft - , e-(Right rear)",219.4,A2,2009-2013,FI09389104A,,116000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+53862513,"Drive shaft - , e-(Right rear)",201.7,A2,2009-2013,FI05028803A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+54361570,"Drive shaft - , e-(Right rear)",181.5,A2,2013-2020,FI06376738A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+64667063,"Drive shaft - , e-(Right rear)",177.9,A2,2013-2020,FI27837687A,,281000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+60073918,"Drive shaft - , e-(Right rear)",160.1,A2,2009-2013,FI07265116A,,260000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+57338371,"Drive shaft - , e-(Right front)",261.0,A2,2013-2020,FI22893129A,,124000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right front,2026-02-15,2026-02-15T21:38:50+02:00
+62191587,"Drive shaft - , e-(Right front)",261.0,A2,2013-2020,FI05351686A,,71000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right front,2026-02-15,2026-02-15T21:38:50+02:00
+54243008,"Drive shaft - , e-(Right front)",243.2,A2,2013-2020,FI09389104A,,122000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right front,2026-02-15,2026-02-15T21:38:50+02:00
+56147885,"Drive shaft - , e-(Right front)",243.2,A2,2013-2020,FI09389104A,,108000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right front,2026-02-15,2026-02-15T21:38:50+02:00
+56935026,"Drive shaft - , e-(Right front)",243.2,A2,2013-2020,FI09389104A,,69000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Right front,2026-02-15,2026-02-15T21:38:50+02:00
+54268110,"Drive shaft - , e-(Left rear)",243.2,A2,2013-2020,FI09389104A,,83000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side rear,2026-02-15,2026-02-15T21:38:50+02:00
+54268111,"Drive shaft - , e-(Right rear)",243.2,A2,2013-2020,FI09389104A,,83000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side rear,2026-02-15,2026-02-15T21:38:50+02:00
+54291801,"Drive shaft - , e-(Left rear)",243.2,A1,2013-2020,FI09389104A,,49000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side rear,2026-02-15,2026-02-15T21:38:50+02:00
+54069563,"Drive shaft - , e-(Left rear)",237.2,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side rear,2026-02-15,2026-02-15T21:38:50+02:00
+54070809,"Drive shaft - , e-(Right rear)",237.2,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side rear,2026-02-15,2026-02-15T21:38:50+02:00
+66403102,Unknown Part,,,,,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side front,2026-02-15,2026-02-15T21:38:50+02:00
+64496424,"Drive shaft - , e-(Left front)",320.3,A2,2013-2020,FI32037991A,,89000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side front,2026-02-15,2026-02-15T21:38:50+02:00
+54223177,"Drive shaft - , e-(Left front)",308.4,A1,2013-2020,FI09389104A,,19000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side front,2026-02-15,2026-02-15T21:38:50+02:00
+54244809,"Drive shaft - , e-(Left front)",308.4,A1,2013-2020,FI09389104A,,17000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side front,2026-02-15,2026-02-15T21:38:50+02:00
+54245168,"Drive shaft - , e-(Left front)",308.4,A2,2013-2020,FI09389104A,,81000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Either side front,2026-02-15,2026-02-15T21:38:50+02:00
+64047277,"Drive shaft - , e-(Right rear)",355.9,A1,2020-2027,FI10331575A,06Q,34000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,All,2026-02-15,2026-02-15T21:38:50+02:00
+66403051,Unknown Part,,,,,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,All,2026-02-15,2026-02-15T21:38:50+02:00
+54247541,"Drive shaft - , e-(Left front)",308.4,A1,2013-2020,FI09389104A,,2000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,All,2026-02-15,2026-02-15T21:38:50+02:00
+54253076,"Drive shaft - , e-(Right rear)",308.4,A1,2013-2020,FI09389104A,,38000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,All,2026-02-15,2026-02-15T21:38:50+02:00
+54253079,"Drive shaft - , e-(Left rear)",308.4,A1,2013-2020,FI09389104A,,38000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,All,2026-02-15,2026-02-15T21:38:50+02:00
+66694471,"Fly Wheel Automat - , e-(Front)",243.2,A2,2013-2020,FI23403240A,,124000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Automat,2026-02-15,2026-02-15T21:38:50+02:00
+54577204,"Fly Wheel Manual - , e-",142.3,A2,2004-2009,FI15710056A,,199000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Manual,2026-02-15,2026-02-15T21:38:50+02:00
+53987010,"Fly Wheel Manual - , e-",142.3,A2,2009-2013,FI10331575A,,147000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Manual,2026-02-15,2026-02-15T21:38:50+02:00
+53426452,"Fly Wheel Manual - , e-",142.3,A2,2004-2009,FI27837687A,,174000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Manual,2026-02-15,2026-02-15T21:38:50+02:00
+54166562,"Fly Wheel Manual - , e-",118.6,A2,2009-2013,FI06292622A,,108000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Manual,2026-02-15,2026-02-15T21:38:50+02:00
+54109076,"Fly Wheel Manual - , e-",106.8,A2,2004-2009,FI06292622A,,75000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Fly Wheel Manual,2026-02-15,2026-02-15T21:38:50+02:00
+59207247,"Gear Box 5 Speed - , e-",1813.9,A2,2013-2020,FI07265116A,,240000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+66541683,"Gear Box 5 Speed - , e-",2135.2,A2,2013-2020,FI09389104A,,95000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+63158314,"Gear Box 5 Speed - , e-",2016.5,A2,2013-2020,AF300042R,,87000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+58672402,"Gear Box 5 Speed - , e-",1957.2,A2,2013-2020,FI27837687A,,194000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+64496754,"Gear Box 5 Speed - , e-(Front)",1779.3,A2,2013-2020,FI32037991A,,89000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 5 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+53463140,"Gear Box 6 Speed - , e-",2241.9,A2,2013-2020,AJ300043,,56000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+62191263,"Gear Box 6 Speed - , e-",2372.4,A2,2013-2020,FI05351686A,,71000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+53593831,"Gear Box 6 Speed - , e-",2135.2,A2,2013-2020,FI02042722A,04E,101000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+53997371,"Gear Box 6 Speed - , e-",2135.2,A2,2013-2020,FI10331575A,,80000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+54025922,"Gear Box 6 Speed - , e-",2135.2,A2,2013-2020,FI10331575A,,79000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box 6 Speed,2026-02-15,2026-02-15T21:38:50+02:00
+54427542,"Gear Box Bracket - , e-",53.4,A2,2004-2009,FI09515254A,,77000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-15,2026-02-15T21:38:50+02:00
+53826568,"Gear Box Bracket - , e-",53.4,A2,1998-2006,FI01853355A,1J12J4,95000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-15,2026-02-15T21:38:50+02:00
+58900682,"Gear Box Bracket - , e-",47.4,A2,2009-2013,FI05028803A,,250000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-15,2026-02-15T21:38:50+02:00
+54044473,"Gear Box Bracket - , e-",47.4,A2,2013-2020,FI10331575A,,85000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-15,2026-02-15T21:38:50+02:00
+55057785,"Gear Box Bracket - , e-",47.4,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box Bracket,2026-02-15,2026-02-15T21:38:50+02:00
+58360868,"Gear distributor box - , e-",1097.2,A2,2013-2020,CN409053A,,159000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear distributor box,2026-02-15,2026-02-15T21:38:50+02:00
+56162775,"Gear distributor box - , e-",1103.2,A2,2004-2009,AV409053K,,68000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear distributor box,2026-02-15,2026-02-15T21:38:50+02:00
+63451851,"Gear distributor box - , e-",1067.6,A2,2013-2020,CN409053A,,171000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear distributor box,2026-02-15,2026-02-15T21:38:50+02:00
+53407905,"Gear distributor box - , e-",960.8,A2,1998-2006,FI27837687A,,211000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear distributor box,2026-02-15,2026-02-15T21:38:50+02:00
+66413511,"Gear distributor box - , e-(Front)",1008.3,A2,2013-2020,CN409053A,,124000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear distributor box,2026-02-15,2026-02-15T21:38:50+02:00
+53940105,"Gear lever - , e-",177.9,A2,2013-2020,FI05351686A,,177000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear lever,2026-02-15,2026-02-15T21:38:50+02:00
+55904254,"Gear lever - , e-",177.9,A2,2013-2020,FI09992720A,,100000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear lever,2026-02-15,2026-02-15T21:38:50+02:00
+54068070,"Gear lever - , e-",177.9,A2,2009-2013,FI10331575A,,66000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear lever,2026-02-15,2026-02-15T21:38:50+02:00
+60225593,"Gear lever - , e-",177.9,A2,2009-2013,FI22893129A,,273000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear lever,2026-02-15,2026-02-15T21:38:50+02:00
+62029274,"Gear lever - , e-",177.9,A2,2013-2020,FI27837687A,,258000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear lever,2026-02-15,2026-02-15T21:38:50+02:00
+54354638,"Gear regulator - , e-",72.4,A2,1998-2006,FI06376738A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear regulator,2026-02-15,2026-02-15T21:38:50+02:00
+54382680,"Gear regulator - , e-",72.4,A2,1998-2006,FI06376738A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear regulator,2026-02-15,2026-02-15T21:38:50+02:00
+55743091,"Gear regulator - , e-",71.2,A2,1998-2006,FI02154548A,,245000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear regulator,2026-02-15,2026-02-15T21:38:50+02:00
+53679703,"Gear regulator - , e-",64.1,A2,2004-2009,FI07265116A,,190000.0,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear regulator,2026-02-15,2026-02-15T21:38:50+02:00
+53820701,"Gear regulator - , e-",60.5,A2,1998-2006,FI01853355A,,,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear regulator,2026-02-15,2026-02-15T21:38:50+02:00
+59328519,"Inter axle Compl. - , e-",474.5,A2,2009-2013,FI27837687A,,268000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Inter axle Compl.,2026-02-15,2026-02-15T21:38:50+02:00
+60073930,"Inter axle Compl. - , e-",427.1,A2,2009-2013,FI07265116A,,260000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Inter axle Compl.,2026-02-15,2026-02-15T21:38:50+02:00
+63589705,"Inter axle Compl. - , e-",474.5,A2,2013-2020,FI09389104A,,171000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Inter axle Compl.,2026-02-15,2026-02-15T21:38:50+02:00
+54398358,"Inter axle Compl. - , e-",427.0,A2,2009-2013,FI09515254A,,290000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Inter axle Compl.,2026-02-15,2026-02-15T21:38:50+02:00
+54398390,"Inter axle Compl. - , e-",427.0,A2,2009-2013,FI09515254A,,254000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Inter axle Compl.,2026-02-15,2026-02-15T21:38:50+02:00
+54004519,"Gear Box cushion - , e-",47.4,A2,2013-2020,FI10331575A,,79000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54037003,"Gear Box cushion - , e-",47.4,A2,2013-2020,FI10331575A,,123000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54048694,"Gear Box cushion - , e-",47.4,A2,2013-2020,FI10331575A,,68000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54053254,"Gear Box cushion - , e-",47.4,A2,2013-2020,FI10331575A,,79000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box cushion,2026-02-15,2026-02-15T21:38:50+02:00
+54101065,"Gear Box cushion - , e-",47.4,A1,2009-2013,FI06292622A,,32000,VW,"Golf,-e_Golf",Gear box / Drive axle / Middle axle,Gear Box cushion,2026-02-15,2026-02-15T21:38:50+02:00
+53847073,"Hub rear - , e-(Rear)",261.0,A2,2009-2013,FI05028803A,,72000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+53882061,"Hub rear - , e-(Rear)",261.0,A2,2009-2013,FI05028803A,,94000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54012212,"Hub rear - , e-(Rear)",237.2,A2,2009-2013,FI10331575A,,66000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54022459,"Hub rear - , e-(Rear)",237.2,A2,2009-2013,FI10331575A,,66000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54011729,"Hub rear - , e-(Rear)",237.2,A1,2009-2013,FI10331575A,,7000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54033319,"Hub rear - , e-(Rear)",237.2,A1,2009-2013,FI10331575A,,7000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53908797,"Hub rear - , e-(Left rear)",177.9,A1,2013-2020,FI05351686A,,15000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53909464,"Hub rear - , e-(Right rear)",177.9,A1,2013-2020,FI05351686A,,15000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54012202,"Hub rear - , e-(Rear)",177.9,A2,2004-2009,FI10331575A,,80000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54012204,"Hub rear - , e-(Rear)",177.9,A2,2004-2009,FI10331575A,,80000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+66459895,"Rear axle - , e-",415.2,A2,2013-2020,FI27837687A,,53000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle,2026-02-15,2026-02-15T21:38:50+02:00
+53393680,"Rear axle - , e-",379.6,A2,2013-2020,FI27837687A,,60000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle,2026-02-15,2026-02-15T21:38:50+02:00
+53894970,"Rear axle - , e-",355.9,A1,2013-2020,FI05351686A,,15000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle,2026-02-15,2026-02-15T21:38:50+02:00
+53894983,"Rear axle - , e-",355.9,B2,2013-2020,FI05351686A,,111000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle,2026-02-15,2026-02-15T21:38:50+02:00
+53905737,"Rear axle - , e-",355.9,A2,2013-2020,FI05351686A,,177000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle,2026-02-15,2026-02-15T21:38:50+02:00
+53365106,"Rear gear / Diff. - , e-",901.5,B3,2009-2013,AV525010L,,30000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear gear / Diff.,2026-02-15,2026-02-15T21:38:50+02:00
+53815272,"Rear gear / Diff. - , e-",907.4,A2,1998-2006,FI01853355A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear gear / Diff.,2026-02-15,2026-02-15T21:38:50+02:00
+53403606,"Rear gear / Diff. - , e-",830.3,A3,1998-2006,FI27837687A,,303000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear gear / Diff.,2026-02-15,2026-02-15T21:38:50+02:00
+62058588,"Rear gear / Diff. - , e-",830.3,A2,2004-2009,FI11042417A,,269000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear gear / Diff.,2026-02-15,2026-02-15T21:38:50+02:00
+62527580,"Rear gear / Diff. - , e-",830.3,A3,2009-2013,FI27837687A,,343000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear gear / Diff.,2026-02-15,2026-02-15T21:38:50+02:00
+53713162,"Shock absorbers rear - , e-(Rear)",71.2,A2,1998-2006,FI02154548A,,7000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+53923221,"Shock absorbers rear - , e-(Rear)",59.3,A1,2004-2009,FI05351686A,,40000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54389700,"Shock absorbers rear - , e-(Rear)",60.5,A2,1998-2006,FI06376738A,,250000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+53725158,"Shock absorbers rear - , e-(Rear)",59.3,A2,1992-1999,FI02154548A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+56566915,"Shock absorbers rear - , e-(Rear)",59.3,A1,2020-2027,FI09389104A,,50000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+53719558,"Shock absorbers rear - , e-(Rear)",59.3,A2,1998-2006,FI02154548A,,308000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53721299,"Shock absorbers rear - , e-(Rear)",59.3,A2,1998-2006,FI02154548A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+64496467,"Shock absorbers rear - , e-(Right rear)",59.3,A2,2013-2020,FI32037991A,,89000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53824510,"Shock absorbers rear - , e-(Rear)",60.5,A2,1998-2006,FI01853355A,1J12J4,95000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53828430,"Shock absorbers rear - , e-(Rear)",60.5,A2,1998-2006,FI01853355A,1J12J4,95000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53449037,"Suspension - , e-(Rear)",59.3,A2,2020-2027,FI27837687A,,20000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+54245118,"Suspension - , e-(Rear)",59.3,A2,2013-2020,FI09389104A,,81000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+57147922,"Suspension - , e-(Rear)",59.3,A2,2013-2020,FI09389104A,,47000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+61159009,"Suspension - , e-(Rear)",59.3,A2,2009-2013,FI27837687A,,226000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+61159010,"Suspension - , e-(Rear)",59.3,A2,2009-2013,FI27837687A,,226000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear,2026-02-15,2026-02-15T21:38:50+02:00
+55068239,"Suspension - , e-(Rear)",59.3,A2,2013-2020,FI10331575A,,100000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+55068240,"Suspension - , e-(Rear)",59.3,A2,2013-2020,FI10331575A,,100000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53710187,"Suspension - , e-(Rear)",59.3,A2,1998-2006,FI02154548A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+65057619,"Suspension - , e-(Rear)",59.3,A2,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+64947839,"Suspension - , e-(Rear)",59.3,A2,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54077263,"Trailing link rear - , e-(Right upper)",47.4,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right upper,2026-02-15,2026-02-15T21:38:50+02:00
+55078289,"Trailing link rear - , e-(Right upper)",47.4,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right upper,2026-02-15,2026-02-15T21:38:50+02:00
+53818503,"Trailing link rear - , e-(Right rear upper)",47.4,A2,2004-2009,FI01853355A,,171000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right upper,2026-02-15,2026-02-15T21:38:50+02:00
+54254408,"Trailing link rear - , e-(Right upper)",47.4,A1,2013-2020,FI09389104A,,2000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right upper,2026-02-15,2026-02-15T21:38:50+02:00
+55718253,"Trailing link rear - , e-(Right upper)",47.4,A2,2009-2013,FI27837687A,,71000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right upper,2026-02-15,2026-02-15T21:38:50+02:00
+64048539,"Trailing link rear - , e-(Left rear)",83.0,A1,2020-2027,FI10331575A,06Q,34000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left,2026-02-15,2026-02-15T21:38:50+02:00
+59888970,"Trailing link rear - , e-(Left)",83.0,A2,2009-2013,FI05351686A,,55000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left,2026-02-15,2026-02-15T21:38:50+02:00
+54017984,"Trailing link rear - , e-(Left)",77.1,A2,2004-2009,FI10331575A,,80000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left,2026-02-15,2026-02-15T21:38:50+02:00
+65059353,"Trailing link rear - , e-(Left)",77.1,A2,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left,2026-02-15,2026-02-15T21:38:50+02:00
+54004599,"Trailing link rear - , e-(Left)",77.1,A1,2009-2013,FI10331575A,,7000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left,2026-02-15,2026-02-15T21:38:50+02:00
+53833336,"Trailing link rear - , e-(Right)",84.2,A2,2004-2009,FI01853355A,,171000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right,2026-02-15,2026-02-15T21:38:50+02:00
+54360181,"Trailing link rear - , e-(Right)",84.2,A2,2004-2009,FI06376738A,,164000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right,2026-02-15,2026-02-15T21:38:50+02:00
+64048622,"Trailing link rear - , e-(Right rear)",83.0,A1,2020-2027,FI10331575A,06Q,34000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right,2026-02-15,2026-02-15T21:38:50+02:00
+53932790,"Trailing link rear - , e-(Right)",83.0,A2,2009-2013,FI05351686A,,55000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right,2026-02-15,2026-02-15T21:38:50+02:00
+65059352,"Trailing link rear - , e-(Right)",77.1,A2,2004-2009,FI06376738A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right,2026-02-15,2026-02-15T21:38:50+02:00
+54246609,"Trailing link rear - , e-(Left upper)",47.4,A2,2009-2013,FI09389104A,,68000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left upper,2026-02-15,2026-02-15T21:38:50+02:00
+55078288,"Trailing link rear - , e-(Left upper)",47.4,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left upper,2026-02-15,2026-02-15T21:38:50+02:00
+53827797,"Trailing link rear - , e-(Left rear upper)",47.4,A2,2004-2009,FI01853355A,,171000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left upper,2026-02-15,2026-02-15T21:38:50+02:00
+62729114,"Trailing link rear - , e-(Left upper)",47.4,A2,2009-2013,FI27837687A,,157000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left upper,2026-02-15,2026-02-15T21:38:50+02:00
+55786133,"Trailing link rear - , e-(Left upper)",47.4,A2,2009-2013,FI27837687A,,234000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left upper,2026-02-15,2026-02-15T21:38:50+02:00
+53420558,"Trailing link rear - , e-(Right)",94.9,A2,2013-2020,FI27837687A,,174000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Either side,2026-02-15,2026-02-15T21:38:50+02:00
+53591509,"Trailing link rear - , e-(Left)",94.9,A2,2009-2013,FI02042722A,,85000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Either side,2026-02-15,2026-02-15T21:38:50+02:00
+53878896,"Trailing link rear - , e-(Either side)",94.9,A2,2009-2013,FI05028803A,,94000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Either side,2026-02-15,2026-02-15T21:38:50+02:00
+65138583,"Trailing link rear - , e-(Left)",94.9,A2,2020-2027,FI27837687A,,67000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Either side,2026-02-15,2026-02-15T21:38:50+02:00
+65138584,"Trailing link rear - , e-(Right)",94.9,A2,2020-2027,FI27837687A,,67000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Either side,2026-02-15,2026-02-15T21:38:50+02:00
+64675777,"Trailing link rear - , e-(Right)",94.9,A2,2020-2027,FI27837687A,,74000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+64675780,"Trailing link rear - , e-(Left)",94.9,A2,2020-2027,FI27837687A,,74000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53833699,"Trailing link rear - , e-(Left)",84.2,A2,2004-2009,FI01853355A,,171000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54359584,"Trailing link rear - , e-(Left)",84.2,A2,2004-2009,FI06376738A,,164000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54006448,"Trailing link rear - , e-(Right)",77.1,A1,2009-2013,FI10331575A,,7000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+53368149,"Wheel bearing spindle shaft - , e-(Left rear)",213.5,A2,2013-2020,FI27837687A,,38000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+53399113,"Wheel bearing spindle shaft - , e-(Left rear)",213.5,A2,2013-2020,FI27837687A,,60000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+53400059,"Wheel bearing spindle shaft - , e-(Left rear)",213.5,A2,2013-2020,FI27837687A,,174000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+54428094,"Wheel bearing spindle shaft - , e-(Left rear)",213.5,A2,2004-2009,FI09515254A,,77000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+54290596,"Wheel bearing spindle shaft - , e-(Left rear)",207.6,A1,2013-2020,FI09389104A,,49000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Left rear,2026-02-15,2026-02-15T21:38:50+02:00
+64675772,"Wheel bearing spindle shaft - , e-(Right rear)",237.2,A2,2020-2027,FI27837687A,,74000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+56566908,"Wheel bearing spindle shaft - , e-(Right rear)",219.4,A1,2020-2027,WA505436G,,50000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+53399687,"Wheel bearing spindle shaft - , e-(Right rear)",213.5,A2,2013-2020,FI27837687A,,60000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+53401366,"Wheel bearing spindle shaft - , e-(Right rear)",213.5,A2,2013-2020,FI27837687A,,174000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+54428216,"Wheel bearing spindle shaft - , e-(Right rear)",213.5,A2,2009-2013,FI09515254A,,254000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Right rear,2026-02-15,2026-02-15T21:38:50+02:00
+55067193,"Wheel bearing spindle shaft - , e-(Right rear)",237.2,A2,2013-2020,FI10331575A,,100000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+65682704,"Wheel bearing spindle shaft - , e-(Right rear)",237.2,A2,2013-2020,FI05351686A,,195000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+65682707,"Wheel bearing spindle shaft - , e-(Left rear)",237.2,A2,2013-2020,FI05351686A,,195000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+65661352,"Wheel bearing spindle shaft - , e-(Right rear)",237.2,A2,2013-2020,FI05351686A,,194000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+65661358,"Wheel bearing spindle shaft - , e-(Left rear)",237.2,A2,2013-2020,FI05351686A,,194000,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,All,2026-02-15,2026-02-15T21:38:50+02:00
+54245153,"Rear axle beam - , e-",367.7,A2,2013-2020,FI09389104A,,81000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle beam,2026-02-15,2026-02-15T21:38:50+02:00
+54253106,"Rear axle beam - , e-",367.7,A2,2013-2020,FI09389104A,,38000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle beam,2026-02-15,2026-02-15T21:38:50+02:00
+54315789,"Rear axle beam - , e-",363.0,A2,2013-2020,FI06376738A,,,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle beam,2026-02-15,2026-02-15T21:38:50+02:00
+60228190,"Rear axle beam - , e-",355.9,A2,2004-2009,FI22893129A,,256000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle beam,2026-02-15,2026-02-15T21:38:50+02:00
+54035214,"Rear axle beam - , e-",355.9,A2,2013-2020,FI10331575A,,100000.0,VW,"Golf,-e_Golf",Vehicle exterior / Suspension,Rear axle beam,2026-02-15,2026-02-15T21:38:50+02:00
