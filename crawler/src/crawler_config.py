@@ -1,7 +1,7 @@
 """Shared configuration for the DPPM crawler."""
 
 USER_AGENT = "ThesisScraper/1.0 (ritesh.bhandari@edu.turkuamk.fi; academic research)"
-DELAY_SECONDS = 1.0
+DELAY_SECONDS = 2.0
 TIMEZONE = "Europe/Helsinki"
 BASE_URL = "https://www.varaosahaku.fi/en-se"
 
