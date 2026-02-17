@@ -14,6 +14,9 @@ from .crawler_config import MAX_PARTS_PER_SUBCATEGORY, TIMEZONE, USER_AGENT
 from .crawler_scraper import scrape_brand_model
 
 
+BLOCKED_RESOURCE_TYPES = {"image", "media"}
+
+
 def _build_output_path(brand, model, scrape_date):
     base_output = f"dppm_{brand.lower()}_{model.lower().replace(',', '_').replace('-', '_').replace(' ', '_')}"
     crawler_root = Path(__file__).resolve().parents[1]
@@ -49,6 +52,12 @@ def main():
     with sync_playwright() as p:
         browser = p.firefox.launch(headless=True)
         page = browser.new_page(user_agent=USER_AGENT)
+        page.route(
+            "**/*",
+            lambda route: route.abort()
+            if route.request.resource_type in BLOCKED_RESOURCE_TYPES
+            else route.continue_(),
+        )
 
         results = scrape_brand_model(page, args.brand, args.model, output_csv)
 
