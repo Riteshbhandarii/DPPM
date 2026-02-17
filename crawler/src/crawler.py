@@ -52,11 +52,25 @@ def main():
     with sync_playwright() as p:
         browser = p.firefox.launch(headless=True)
         page = browser.new_page(user_agent=USER_AGENT)
+        request_stats = {"total": 0, "blocked_total": 0, "blocked_by_type": {}}
+
+        def _handle_route(route):
+            resource_type = route.request.resource_type
+            request_stats["total"] += 1
+
+            if resource_type in BLOCKED_RESOURCE_TYPES:
+                request_stats["blocked_total"] += 1
+                request_stats["blocked_by_type"][resource_type] = (
+                    request_stats["blocked_by_type"].get(resource_type, 0) + 1
+                )
+                route.abort()
+                return
+
+            route.continue_()
+
         page.route(
             "**/*",
-            lambda route: route.abort()
-            if route.request.resource_type in BLOCKED_RESOURCE_TYPES
-            else route.continue_(),
+            _handle_route,
         )
 
         results = scrape_brand_model(page, args.brand, args.model, output_csv)
@@ -68,6 +82,12 @@ def main():
     print(f"{'-'*30}")
     print(f"\nTotal parts scraped: {len(results)}")
     print(f"Output saved to: {output_csv}")
+    print("\nRequest Summary:")
+    print(f"Total network requests seen: {request_stats['total']}")
+    print(f"Blocked requests:            {request_stats['blocked_total']}")
+    if request_stats["blocked_by_type"]:
+        for resource_type, count in sorted(request_stats["blocked_by_type"].items()):
+            print(f"  - {resource_type}: {count}")
 
     if len(results) == 0:
         print("\nWARNING: No parts were scraped!")
