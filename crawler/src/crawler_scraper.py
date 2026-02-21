@@ -21,14 +21,41 @@ def scrape_brand_model(page, brand, model, output_csv):
 
     main_page = None
     base_url = None
+    base_category_links = []
+    base_all_links = []
 
     for url in base_urls:
         print(f"Trying URL: {url}")
         main_page = fetch_page(page, url, DELAY_SECONDS)
-        if main_page and len(main_page.find_all("a", href=True)) > 10:
+        if not main_page:
+            print(" ✗ Failed to load URL")
+            continue
+
+        category_links, all_links = find_category_links(
+            main_page,
+            url,
+            BASE_URL,
+            brand,
+            model,
+        )
+
+        if category_links:
             base_url = url
+            base_category_links = category_links
+            base_all_links = all_links
             print(f"✓ Successfully loaded: {url}\n")
             break
+
+        title_tag = main_page.find("title")
+        title = title_tag.get_text(strip=True) if title_tag else ""
+        link_count = len(all_links)
+        print("WARNING: Base URL loaded but no category links were detected")
+        if title:
+            print(f"Page title: {title}")
+        print(f"Link count: {link_count}")
+        current_url = getattr(page, "url", "")
+        if current_url and current_url != url:
+            print(f"Redirected to: {current_url}")
 
     if not main_page or not base_url:
         print("ERROR: Could not load any base URL")
@@ -53,15 +80,8 @@ def scrape_brand_model(page, brand, model, output_csv):
         )
         csv_exists = True
 
-    category_links, all_links = find_category_links(
-        main_page,
-        base_url,
-        BASE_URL,
-        brand,
-        model,
-    )
-
-    category_links = filter_categories(category_links, KEEP_CATEGORIES)
+    category_links = filter_categories(base_category_links, KEEP_CATEGORIES)
+    all_links = base_all_links or main_page.find_all("a", href=True)
 
     if not category_links:
         print("\nERROR: No category links found!")
