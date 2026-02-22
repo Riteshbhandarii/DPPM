@@ -10,7 +10,13 @@ import pandas as pd
 from .crawler_categories import filter_categories, find_category_links
 from .crawler_config import BASE_URL, DELAY_SECONDS, FINAL_COLUMNS, KEEP_CATEGORIES, MAX_PARTS_PER_SUBCATEGORY, TIMEZONE
 from .crawler_parser import parse_product_page
-from .crawler_utils import fetch_page, get_product_links_from_listing, normalize_url_for_match, dedupe_preserve_order
+from .crawler_utils import (
+    debug_dump_page,
+    dedupe_preserve_order,
+    fetch_page,
+    get_product_links_from_listing,
+    normalize_url_for_match,
+)
 
 
 def scrape_brand_model(page, brand, model, output_csv):
@@ -56,6 +62,7 @@ def scrape_brand_model(page, brand, model, output_csv):
         current_url = getattr(page, "url", "")
         if current_url and current_url != url:
             print(f"Redirected to: {current_url}")
+        debug_dump_page(page, main_page, f"base_no_categories_{brand}_{model}")
 
     if not main_page or not base_url:
         print("ERROR: Could not load any base URL")
@@ -85,6 +92,7 @@ def scrape_brand_model(page, brand, model, output_csv):
 
     if not category_links:
         print("\nERROR: No category links found!")
+        debug_dump_page(page, main_page, f"no_filtered_categories_{brand}_{model}")
         print("Available categories on page:")
         for link in all_links:
             text = link.get_text(strip=True)
@@ -144,6 +152,7 @@ def scrape_brand_model(page, brand, model, output_csv):
             subcategory_rows.clear()
 
         else:
+            debug_dump_page(page, category_page, f"category_no_direct_products_{brand}_{model}_{category_name}")
             subcategory_links = []
             for link in category_page.find_all("a", href=True):
                 href = link.get("href", "")
@@ -165,6 +174,8 @@ def scrape_brand_model(page, brand, model, output_csv):
             subcategory_links = dedupe_preserve_order(subcategory_links)
 
             if not subcategory_links:
+                print(f"WARNING: No subcategory links found for {category_name}")
+                debug_dump_page(page, category_page, f"no_subcategories_{brand}_{model}_{category_name}")
                 continue
 
             for subcategory_name, subcategory_href in subcategory_links:
@@ -185,6 +196,12 @@ def scrape_brand_model(page, brand, model, output_csv):
 
                     product_dict = get_product_links_from_listing(listing_page)
                     if not product_dict:
+                        print(f"WARNING: No product links on listing page {listing_page_url}")
+                        debug_dump_page(
+                            page,
+                            listing_page,
+                            f"listing_no_products_{brand}_{model}_{category_name}_{subcategory_name}_p{page_num}",
+                        )
                         break
 
                     for product_id, product_url in product_dict.items():
