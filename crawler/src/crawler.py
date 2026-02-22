@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 
 from playwright.sync_api import sync_playwright
 
-from .crawler_config import MAX_PARTS_PER_SUBCATEGORY, TIMEZONE, USER_AGENT
+from .crawler_config import MAX_PARTS_PER_SUBCATEGORY, TIMEZONE
 from .crawler_scraper import scrape_brand_model
 
 
@@ -51,7 +51,9 @@ def main():
 
     with sync_playwright() as p:
         browser = p.firefox.launch(headless=True)
-        page = browser.new_page(user_agent=USER_AGENT)
+        # Use the browser's default UA; custom scraper-like UAs are more likely to
+        # receive alternate/limited responses than a normal browser.
+        page = browser.new_page()
         request_stats = {"total": 0, "blocked_total": 0, "blocked_by_type": {}}
 
         def _handle_route(route):

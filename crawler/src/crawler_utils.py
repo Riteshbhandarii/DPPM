@@ -2,6 +2,7 @@
 
 import re
 import time
+from pathlib import Path
 from urllib.parse import urljoin, unquote
 
 from bs4 import BeautifulSoup
@@ -14,9 +15,14 @@ def fetch_page(page, url, delay_seconds):
     try:
         # "networkidle" is brittle on pages with chat/analytics widgets that keep
         # requests open; DOMContentLoaded is enough because the target pages are SSR.
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        response = page.goto(url, wait_until="domcontentloaded", timeout=60000)
         page.wait_for_selector("body", timeout=10000)
         html_content = page.content()
+        if response is not None:
+            try:
+                print(f"[fetch] {response.status} {getattr(page, 'url', url)}")
+            except Exception:
+                pass
     except Exception as exc:
         # If navigation times out after partial render, try to salvage the current DOM.
         # This avoids losing usable pages when third-party widgets keep loading.
@@ -33,6 +39,37 @@ def fetch_page(page, url, delay_seconds):
 
     time.sleep(delay_seconds)
     return BeautifulSoup(html_content, "lxml")
+
+
+def debug_dump_page(page, soup, label):
+    """
+    Print a compact debug summary and save the current HTML for inspection.
+    """
+    try:
+        title_tag = soup.find("title") if soup else None
+        title = title_tag.get_text(strip=True) if title_tag else "(no title)"
+        link_count = len(soup.find_all("a", href=True)) if soup else 0
+        text_preview = (soup.get_text(" ", strip=True)[:300] if soup else "").strip()
+        current_url = getattr(page, "url", "")
+
+        print(f"[debug] {label}")
+        if current_url:
+            print(f"[debug] current_url: {current_url}")
+        print(f"[debug] title: {title}")
+        print(f"[debug] link_count: {link_count}")
+        if text_preview:
+            print(f"[debug] text_preview: {text_preview}")
+
+        crawler_root = Path(__file__).resolve().parents[1]
+        debug_dir = crawler_root / "crawler_datasets" / "debug"
+        debug_dir.mkdir(parents=True, exist_ok=True)
+        safe_label = re.sub(r"[^a-zA-Z0-9._-]+", "_", label).strip("_")[:80] or "page"
+        html_path = debug_dir / f"{safe_label}.html"
+        html = str(soup) if soup is not None else page.content()
+        html_path.write_text(html, encoding="utf-8")
+        print(f"[debug] html_saved: {html_path}")
+    except Exception as exc:
+        print(f"[debug] failed to collect debug info: {exc}")
 
 
 def clean_part_name(name, brand, model):
