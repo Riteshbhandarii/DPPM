@@ -12,11 +12,24 @@ def fetch_page(page, url, delay_seconds):
     Fetches and renders a JS-heavy page using a shared Playwright page.
     """
     try:
-        page.goto(url, wait_until="networkidle", timeout=60000)
+        # "networkidle" is brittle on pages with chat/analytics widgets that keep
+        # requests open; DOMContentLoaded is enough because the target pages are SSR.
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_selector("body", timeout=10000)
         html_content = page.content()
     except Exception as exc:
-        print(f"Error loading {url}: {exc}")
-        return None
+        # If navigation times out after partial render, try to salvage the current DOM.
+        # This avoids losing usable pages when third-party widgets keep loading.
+        try:
+            html_content = page.content()
+            if html_content and "<html" in html_content.lower():
+                print(f"Warning loading {url}: {exc} (using partial page content)")
+            else:
+                print(f"Error loading {url}: {exc}")
+                return None
+        except Exception:
+            print(f"Error loading {url}: {exc}")
+            return None
 
     time.sleep(delay_seconds)
     return BeautifulSoup(html_content, "lxml")
