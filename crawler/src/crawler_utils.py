@@ -3,15 +3,48 @@
 import re
 import time
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 from urllib.parse import urljoin, unquote
 
 from bs4 import BeautifulSoup
+
+
+FALLBACK_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
+
+
+def _fetch_with_http_fallback(url, timeout=60):
+    req = Request(url, headers=FALLBACK_HEADERS)
+    try:
+        with urlopen(req, timeout=timeout) as resp:
+            status = getattr(resp, "status", None)
+            html = resp.read().decode("utf-8", errors="replace")
+            print(f"[fetch-fallback] {status or 200} {url}")
+            return html
+    except HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        print(f"[fetch-fallback] {exc.code} {url}")
+        return body
+    except URLError as exc:
+        print(f"[fetch-fallback] error {url}: {exc}")
+        return None
 
 
 def fetch_page(page, url, delay_seconds):
     """
     Fetches and renders a JS-heavy page using a shared Playwright page.
     """
+    response = None
+    html_content = None
     try:
         # "networkidle" is brittle on pages with chat/analytics widgets that keep
         # requests open; DOMContentLoaded is enough because the target pages are SSR.
@@ -32,10 +65,24 @@ def fetch_page(page, url, delay_seconds):
                 print(f"Warning loading {url}: {exc} (using partial page content)")
             else:
                 print(f"Error loading {url}: {exc}")
-                return None
         except Exception:
             print(f"Error loading {url}: {exc}")
-            return None
+
+    # Playwright may get 403 (headless/automation fingerprint) even when plain HTTP
+    # with browser-like headers works from the same host/IP.
+    status = None
+    try:
+        status = response.status if response is not None else None
+    except Exception:
+        status = None
+
+    if not html_content or status == 403 or "403 Forbidden" in html_content[:500]:
+        fallback_html = _fetch_with_http_fallback(url)
+        if fallback_html and "<html" in fallback_html.lower():
+            html_content = fallback_html
+
+    if not html_content:
+        return None
 
     time.sleep(delay_seconds)
     return BeautifulSoup(html_content, "lxml")
