@@ -1,0 +1,10 @@
+product_id,part_name,price,quality_grade,year,oem_number,engine_code,mileage,brand,model,category,subcategory
+59783910,ABS Hydraulikoneisto XP21,513.0,A2,2020-2027,440500DG50ALKUPER,M15AFXE,12000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+62213706,ABS Hydraulikoneisto XP21,541.5,A1,2020-2027,440500DG32ALKUPER,M15AFXE,10000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+54967565,ABS Hydraulikoneisto XP130,515.0,A1,2015-2020,440500D810ALKUPER,2NRFKE,35000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+53977000,ABS Hydraulikoneisto XP130,500.0,A1,2015-2020,47050-52480ALKUPER,,60000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+60991939,ABS Hydraulikoneisto XP130,500.0,A1,2015-2020,4705052480ALKUPER,1NZFXE,54000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+54210461,ABS Hydraulikoneisto XP130,474.0,A1,2015-2020,H14J3020417AALKUPER,1NZFXE,10000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+54429526,ABS Hydraulikoneisto XP130,500.0,A2,2012-2014,44540-0D020,1NRFE,44000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+59857278,ABS Hydraulikoneisto XP21,500.0,A2,2020-2027,44540-K0140ALKUPER,M15AFXE,48000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto
+62936015,ABS Hydraulikoneisto XP21,489.2,A1,2020-2027,440500DG30ALKUPER,M15AFXE,25000,Toyota,Yaris,Jarrut,ABS Hydraulikoneisto

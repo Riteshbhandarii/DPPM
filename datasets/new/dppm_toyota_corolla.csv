@@ -1,0 +1,691 @@
+part_name,price,quality_grade,year,oem_number,engine_code,mileage,brand,model,category,subcategory
+Moottorin kumityyny,15.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,15.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,20.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,15.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,15.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,20.0,A2,2002-2007,,81kW,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,24.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,24.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,20.0,A2,2002-2007,,81kW,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,15.0,A2,2002-2007,,66kW,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottorin kumityyny,5.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kumityyny
+Moottori Diesel,700.0,A3,2008-2012,1900033260,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,800.0,A3,2002-2007,,,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,700.0,B3,2002-2007,,,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,790.0,A3,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,800.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,759.0,A2,2008-2012,1900033260,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,790.0,A3,2002-2007,,1NDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,780.0,A3,2002-2007,1900027200,1CDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,690.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,800.0,A3,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,400.0,B3,2002-2007,,1CDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,360.0,A2,2002-2007,1NDE52,,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,680.0,A3,2002-2007,,1NDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,510.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,342.0,A2,2002-2007,,1NDE52C,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,200.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,670.0,A3,2002-2007,1900027280,1CDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,441.0,B2,2002-2007,,1CDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Moottori Diesel,650.0,A3,2002-2007,1900027200,1CDFTV,,Toyota,Corolla,Moottori,Moottori Diesel
+Käynnistinmoottori Diesel,60.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2002-2007,,1CDFTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,60.0,A2,2002-2007,2810033080,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel KE70,60.0,A2,1982-1987,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,80.0,A2,2002-2007,281000G010,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,60.0,A2,2002-2007,2810033080,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,57.0,A2,2008-2012,2810033080281003308084,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,80.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,80.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2002-2007,2810033080,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,46.5,A3,2008-2012,2810033080,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,40.0,A3,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,46.0,A2,1988-1992,028000837,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2002-2007,2810033080,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2008-2012,281000N030,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,50.0,A2,2008-2012,281000N030,1NDTV,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,34.2,A2,2002-2007,2810033080,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,38.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel AE82,25.0,A3,1983-1987,0280008371,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel AE82,30.0,A2,1983-1987,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,34.2,A2,2002-2007,2810033040,,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Käynnistinmoottori Diesel,28.5,A2,2002-2007,,1NDE52C,,Toyota,Corolla,Moottori,Käynnistinmoottori Diesel
+Virranjaoitin,71.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,68.0,A2,1988-1992,029200113,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,61.0,B2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,60.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,71.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,61.0,B2,1988-1992,0290201068,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin AE82,60.0,B2,1983-1987,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,71.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,56.7,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,60.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,40.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,40.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,50.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,50.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,51.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,40.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,55.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,50.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,50.0,A2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Virranjaoitin,60.0,B2,1988-1992,,,,Toyota,Corolla,Moottori,Virranjaoitin
+Laturi,125.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,110.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Laturi
+Laturi,110.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A2,2008-2012,2706026051,1ADFTV,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A2,2008-2012,270600T061,1ZRFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,120.0,A1,2008-2012,1042105350,,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,95.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,85.0,A2,2002-2007,2706022210,2ZZGE,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2013-2018,270600T200,1ZRFAE,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2008-2012,270600Y091,1NRFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,100.0,A2,2008-2012,270600Y090,1NRFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,90.0,A2,1998-2001,,3ZZFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,270600D030,E3ZY52L,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,1998-2001,270600D030,,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2008-2012,270600Y091,1NRFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,270600D030,,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,270600D140,,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Laturi
+Laturi,76.0,A2,2002-2007,270600D030,3ZZFE,,Toyota,Corolla,Moottori,Laturi
+Laturi,80.0,A2,1993-1997,269898,,,Toyota,Corolla,Moottori,Laturi
+Moottorin Koppa,45.0,A2,2002-2007,,1CDFTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.5,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,50.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,45.0,A2,1998-2001,1121222030,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,50.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.5,A2,2002-2007,,1CDFTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,50.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.5,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,50.0,A2,2002-2007,112120D060,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,50.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,33.2,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,39.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.0,A2,2008-2012,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,45.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,33.2,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,33.2,A2,2002-2007,1121222130,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,40.0,A2,2008-2012,,1ADFTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,30.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,30.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,25.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,25.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,25.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,30.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,30.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,25.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,28.5,A2,2002-2007,1121222070,4ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottorin Koppa,30.0,A1,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin Koppa
+Moottori Bensiini,3090.0,A2,2019-2027,190000T580,2ZR,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3295.0,A1,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3000.0,A1,2019-2027,XM20AE92,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A2,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A2,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3000.0,B1,2019-2027,,,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A1,2019-2027,190000T840,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3195.0,A2,2019-2027,,2ZR,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3200.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A1,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2900.0,A2,2019-2027,190000T840,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2900.0,A1,2019-2027,190000T840,,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2900.0,A2,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3000.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3000.0,A2,2019-2027,190000T580,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2900.0,A2,2019-2027,190000T840,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A2,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3100.0,A2,2019-2027,190000T840,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,3000.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2900.0,B2,2019-2027,1900024320,M20AFXS,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2850.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2800.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2375.0,C3,2019-2027,190000T840,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2600.0,A3,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2500.0,B2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2700.0,A2,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2700.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2500.0,B2,2013-2018,190000T072,1ZRFAE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2500.0,A3,2019-2027,190000T820,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Moottori Bensiini,2400.0,A2,2019-2027,190000T580,2ZRFXE,,Toyota,Corolla,Moottori,Moottori Bensiini
+Hybridi muunnin,320.0,A2,2019-2027,G920049135,2ZRFXE,,Toyota,Corolla,Moottori,Hybridi muunnin
+Hybridi muunnin,300.0,A2,2019-2027,G920049135,2ZRFXE,,Toyota,Corolla,Moottori,Hybridi muunnin
+Hihnapyörä,50.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä AE82,10.0,A2,1983-1987,,,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,50.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,50.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,40.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,50.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Hihnapyörä
+Hihnapyörä,50.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Hihnapyörä
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,2810037030,1ZRFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2002-2007,,E3ZY52L,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000T010,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,2810037030,2WW,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A1,2013-2018,281000T030,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000T010,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000T010,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2013-2018,281000T030,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2008-2012,281000Y041,1NRFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,71.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,71.0,A3,2002-2007,2810022040,3ZZS52,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,70.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,70.0,A2,2008-2012,270600T091,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,71.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,80.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,70.0,A2,2008-2012,281000T010,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,70.0,A2,2008-2012,281000Y042,1NRFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,65.5,A2,2008-2012,281000T010,1ZRFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,66.0,A2,1998-2001,,4AFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,60.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,70.0,A2,2013-2018,281000T030,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,60.0,A3,1998-2001,281001619084,4AFE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,65.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,60.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,65.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,65.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Käynnistinmoottori Bensiini,61.0,A3,1988-1992,2810010040,,,Toyota,Corolla,Moottori,Käynnistinmoottori Bensiini
+Öljypohja,40.0,A2,2002-2007,,1NDTV,,Toyota,Corolla,Moottori,Öljypohja
+Öljypohja,30.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Moottori,Öljypohja
+Öljypohja,40.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Öljypohja
+Öljypohja,50.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Öljypohja
+Öljypohja AE82,20.0,A2,1983-1987,,,,Toyota,Corolla,Moottori,Öljypohja
+Moottorin kiinnikekorvake,40.0,A2,1998-2001,,4AFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,1993-1997,,4AFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A1,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,36.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,25.0,A2,1998-2001,1236222020,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,25.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,1993-1997,1237111430,4EFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,1993-1997,,4EFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,2002-2007,,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,40.0,A2,2008-2012,,1ZRFAE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,30.0,A2,1993-1997,,4AFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,20.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,16.0,A2,2002-2007,123710D090,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Moottorin kiinnikekorvake,20.0,A2,1998-2001,1230511050,,,Toyota,Corolla,Moottori,Moottorin kiinnikekorvake
+Mäntä / Kiertokanki,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Mäntä / Kiertokanki,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Mäntä / Kiertokanki,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Mäntä / Kiertokanki,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Mäntä / Kiertokanki,40.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Mäntä / Kiertokanki,40.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Moottori,Mäntä / Kiertokanki
+Ahdin,100.0,A3,2002-2007,,,,Toyota,Corolla,Moottori,Ahdin
+Ahdin,120.0,A2,2002-2007,1720127050,1CDFTV,,Toyota,Corolla,Moottori,Ahdin
+Ahdin,100.0,A2,2002-2007,1720127050,1CDFTV,,Toyota,Corolla,Moottori,Ahdin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942012090,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942012090,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942012090,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,51.0,B1,1998-2001,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,81.0,A2,1993-1997,1007982781,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1998-2001,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,51.0,B1,1998-2001,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942012090,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,85.0,A2,1993-1997,8942002010,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,35.0,B2,1993-1997,1007982782,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Virranjaoitin Alipainesäädin,50.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Virranjaoitin Alipainesäädin
+Sytytyspuola,45.0,A2,2002-2007,9008019019,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9091902238,2ZZGE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9008019019,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9008019019,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9091902238,2ZZGE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9008019019,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A1,2002-2007,,4ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,1998-2001,9008019017,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A2,2002-2007,9008019019,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,45.0,A1,2002-2007,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2019-2027,9091902272,2ZRFXE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2019-2027,9091902272,2ZRFXE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2019-2027,9091902272,2ZRFXE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2019-2027,9091902272,2ZRFXE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A1,2002-2007,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,31.5,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,31.5,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A3,2019-2027,9091902277,M20AFXS,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A3,2019-2027,9091902277,M20AFXS,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,40.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A3,2019-2027,9091902277,M20AFXS,,Toyota,Corolla,Moottori,Sytytyspuola
+Sytytyspuola,35.0,A2,1998-2001,,,,Toyota,Corolla,Moottori,Sytytyspuola
+Roiskesuoja,20.0,A2,2008-2012,,1ZRFAE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,2008-2012,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,18.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,4ZZFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,11.4,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,416E396300,1ZRFE,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,19.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,10.0,A2,1988-1992,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,10.0,A2,1988-1992,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,10.0,B2,1998-2001,,,,Toyota,Corolla,Kori,Roiskesuoja
+Roiskesuoja,11.4,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Roiskesuoja
+Nosturi / Tunkki AE82,10.0,A2,1983-1987,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki AE82,10.0,A2,1983-1987,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki AE82,10.0,A2,1983-1987,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,20.0,A2,1988-1992,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,25.0,A2,1998-2001,0911105010,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki AE82,10.0,A2,1983-1987,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,20.0,A2,1993-1997,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,20.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Nosturi / Tunkki,23.7,A2,2002-2007,,,,Toyota,Corolla,Kori,Nosturi / Tunkki
+Vetokoukku,135.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,163.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,130.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,122.5,A3,2008-2012,,1NDTV,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,150.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,160.0,A2,2008-2012,,1ADFTV,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,163.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,142.5,A3,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,160.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Kori,Vetokoukku
+Vetokoukku,100.0,A3,2002-2007,,,,Toyota,Corolla,Kori,Vetokoukku
+Sisälokasuoja,50.0,A2,2002-2007,5387602070,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2019-2027,6563802210,2ZRFXE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2002-2007,6563802020,3ZZFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,52.2,A2,2008-2012,5259102150,1ZRFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2019-2027,6563702210,2ZRFXE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,47.5,A3,2019-2027,5387602630,2ZRFXE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,50.0,A2,2002-2007,6563702020,3ZZFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,,2002-2007,8116387,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A1,1993-1997,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A1,2008-2012,5387512430,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2019-2027,6563802210,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2013-2018,5387502481,1ZRFAE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A1,2002-2007,5387502081,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2008-2012,,97kW,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,40.0,A2,2013-2018,5387502481,1ZRFAE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2008-2012,,97kW,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,33.2,A2,2008-2012,6563812030,1ZRFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,1998-2001,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,33.2,A2,2008-2012,6563712030,1ZRFE,,Toyota,Corolla,Kori,Sisälokasuoja
+Sisälokasuoja,30.0,A2,2008-2012,,,,Toyota,Corolla,Kori,Sisälokasuoja
+Kattokaiteet / Kattoteline,100.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,72.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,72.0,A3,2002-2007,,1CDFTV,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,72.0,A3,2002-2007,,1CDFTV,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,80.0,B2,2002-2007,,,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,120.0,B2,2002-2007,,E3ZY52L,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,120.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,76.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,200.0,A2,2019-2027,6347002060,2ZRFXE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,122.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,50.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,10.0,A2,2002-2007,,,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,46.8,A1,1998-2001,,4EFE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Kattokaiteet / Kattoteline,46.8,A1,1998-2001,,4EFE,,Toyota,Corolla,Kori,Kattokaiteet / Kattoteline
+Jarruvoimansäädin,40.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,20.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,4ZZFE,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,15.0,A2,2002-2007,,81kW,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A3,2002-2007,,1NDTV,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin AE82,20.0,A3,1983-1987,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin KE70,20.0,A3,1982-1987,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarruvoimansäädin,10.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarruvoimansäädin
+Jarrusatula,150.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,142.5,A1,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,8NRFTS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A1,2019-2027,46310F4011,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A1,2019-2027,46310F4011,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,140.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,140.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,120.0,A2,2019-2027,4785002350,M20AFXS,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,114.0,A2,2019-2027,4782209100,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,120.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,120.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,150.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,140.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2013-2018,4785002101,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,100.0,A2,2013-2018,4785002100,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,95.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,120.0,A2,2019-2027,4785002350,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2008-2012,4785002100,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2008-2012,,1NRFE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2013-2018,4785002101,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2002-2007,,E3ZE52,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrusatula,80.0,A2,2013-2018,4785002101,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen taka
+Jarrutehostin,427.5,A2,2019-2027,4705012A00,2ZRFXE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,427.5,A2,2019-2027,4707047090,2ZRFXE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,500.0,A2,2019-2027,4705012A01,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,370.0,A1,2019-2027,4721012500,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,125.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,130.0,A2,2013-2018,4720002E91,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,450.0,A2,2019-2027,4705012A00,M20AFXS,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,110.0,A2,2013-2018,4461009D10,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,427.5,A2,2019-2027,4707047090,2ZRFXE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,500.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2008-2012,4461009411,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2013-2018,4461009D10,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2008-2012,4461009641,1NRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,90.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2008-2012,4720002580,1ZRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2008-2012,4461009411,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,95.0,A2,2008-2012,4461009410,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,110.0,A2,2008-2012,4720002581,1ZRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,100.0,A2,2013-2018,4461009A30,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2008-2012,4720002601,1NDTV,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2008-2012,,1NRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,90.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A1,2008-2012,4720002601,1ZRFAE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,90.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2008-2012,4720002601,1NDTV,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,90.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2008-2012,4461009640,1NRFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrutehostin,80.0,A2,2002-2007,4461013110,3ZZFE,,Toyota,Corolla,Jarrut,Jarrutehostin
+Jarrusatula,150.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A1,2019-2027,4783002360,,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A1,2019-2027,46310F4011,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,142.5,A1,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,8NRFTS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,160.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,140.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,140.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,120.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,150.0,A2,2019-2027,4783002360,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,80.0,A2,2008-2012,4783002100,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,80.0,A2,2013-2018,4783002101,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,120.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,80.0,A2,2008-2012,,1NRFE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,120.0,A2,2019-2027,4783002360,M20AFXS,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,100.0,A2,2013-2018,4783002100,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,95.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,80.0,A2,2013-2018,4782109082,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,120.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,114.0,A2,2019-2027,4783002360,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea taka
+Jarrusatula,60.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,Oikea taka
+Pääsylinteri,500.0,A2,2019-2027,4705012A00,2ZRFXE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,500.0,A2,2019-2027,4705012A00,2ZRFXE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,500.0,A2,2019-2027,4705012A00,2ZRFXE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,51.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,60.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,60.0,A2,2008-2012,,1ADFTV,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,500.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,500.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,60.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,51.0,A2,1988-1992,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,4720109500,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,4720109500,1NRFE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,51.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,51.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2013-2018,4720109710,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,,1NRFE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,0204Y24235,1ZRFE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2013-2018,4720109710,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,4720109500,1NDTV,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,45.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,45.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,45.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,45.0,A2,2008-2012,,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2013-2018,4720109710,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2008-2012,4720109500,1ZRFAE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Pääsylinteri
+Pääsylinteri,50.0,A1,2002-2007,,,,Toyota,Corolla,Jarrut,Pääsylinteri
+Jarrusatulan pidin,57.0,A2,2019-2027,4772209260,2ZRFXE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,28.5,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,45.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,45.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,45.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,38.0,A2,2002-2007,4772109170,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,61.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,47.5,A2,2008-2012,4782209020,1NDTV,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,28.5,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,40.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,25.6,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,30.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,28.5,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,28.5,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,17.1,A2,2008-2012,4772212A10,1ZRFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Jarrusatulan pidin,17.1,A2,2008-2012,4772112A10,1ZRFE,,Toyota,Corolla,Jarrut,Jarrusatulan pidin
+Käsijarrun kahva,35.0,A2,1988-1992,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,40.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,40.0,A2,2008-2012,,1ADFTV,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,35.0,A2,2002-2007,,4ZZFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,35.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,40.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,35.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,35.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,40.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1998-2001,,4EFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,2008-2012,,1ZRFAE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,2008-2012,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A1,2008-2012,,1ZRFAE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1988-1992,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,20.0,A2,2008-2012,,1NDTV,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,20.0,A2,2008-2012,,97kW,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,20.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,15.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,30.0,A2,1993-1997,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+Käsijarrun kahva,25.0,B2,2002-2007,,,,Toyota,Corolla,Jarrut,Käsijarrun kahva
+ABS Hydraulikoneisto,465.0,A2,2019-2027,4405012E70,2ZR,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,500.0,A2,2019-2027,4405002K71,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,M20AFXS,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,470.0,A2,2019-2027,4405012E70,,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,500.0,A2,2019-2027,4405002K71,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,M20AFXS,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,500.0,A2,2019-2027,4405012E70,M20AFXS,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,M20AFXS,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,410.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2008-2012,0265950512,,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2019-2027,,,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2008-2012,0265951057,,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002740,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,450.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002B10,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,399.0,A2,2019-2027,4405012E70,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,370.5,A2,2008-2012,4405002190,4ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002740,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002740,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,380.0,A2,2008-2012,4454002080,1ZRFE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4405002B10,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,380.0,A2,2002-2007,4451002050,,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,400.0,A2,2013-2018,4454002570,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+ABS Hydraulikoneisto,380.0,A2,2008-2012,4405002180,4ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulikoneisto
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,47730F4010,M20AFXS,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,140.0,A2,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,140.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,150.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,120.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,100.0,A2,2019-2027,,,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,120.0,A2,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,80.0,A2,2008-2012,4773002341,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,120.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,100.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,100.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,120.0,A1,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,120.0,A1,2019-2027,02705205145,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,140.0,A2,2019-2027,4773002590,2ZRFXE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,70.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,80.0,A2,2013-2018,4773002510,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,70.0,A2,2013-2018,4773002510,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,80.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,71.0,A1,2002-2007,,,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,70.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,70.0,A2,2013-2018,4773002510,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,66.0,A1,1998-2001,,3ZZE62,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,80.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrusatula,70.0,A2,2013-2018,4773002510,1ZRFAE,,Toyota,Corolla,Jarrut,Oikea etu
+Jarrulevy,10.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Etu
+Jarrulevy AE82,11.0,A2,1983-1987,,,,Toyota,Corolla,Jarrut,Etu
+Jarrulevy,10.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,Etu
+Jarrulevy AE82,5.0,C2,1983-1987,,,,Toyota,Corolla,Jarrut,Etu
+ABS Hydraulipumppu,460.0,A2,2019-2027,4707047090,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,225.0,A2,2008-2012,4405002430,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,350.0,A2,2008-2012,4454002190,1NDTV,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,350.0,A2,2008-2012,4454002080,1ZRFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,450.0,A2,2019-2027,4707047090,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,250.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,250.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,250.0,A2,2008-2012,4454002360,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,370.0,A1,2019-2027,4707047070,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,450.0,A2,2019-2027,4707047090,2ZRFXE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,200.0,A2,1998-2001,8954102020,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,150.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,150.0,A2,2002-2007,4451002050,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,180.0,A3,2002-2007,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,200.0,A2,1998-2001,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,150.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,180.0,A2,2008-2012,,1ADFTV,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,200.0,A2,2002-2007,4451002050,4ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,200.0,A2,2002-2007,4451002050,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,180.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,150.0,A2,2002-2007,0265216850,3ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,125.0,A2,2002-2007,4451002050,4ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,100.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,150.0,A1,2008-2012,,1ZRFAE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,120.0,A2,1998-2001,4451012140,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,105.0,A2,2002-2007,4451013070,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,108.0,A2,2002-2007,,3ZZFE,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,100.0,A2,2002-2007,4451002050,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,100.0,A2,2002-2007,4451002050,1CDFTV,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+ABS Hydraulipumppu,100.0,A2,2002-2007,4451013070,,,Toyota,Corolla,Jarrut,ABS Hydraulipumppu
+Jarrusatula,150.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,140.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,47750F4010,M20AFXS,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,140.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,150.0,A2,2019-2027,47750F4010,M20AFXS,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,120.0,A2,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,80.0,A2,2013-2018,4775002250,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,120.0,A1,2019-2027,,M20AFXS,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,80.0,A2,2008-2012,4775002341,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,100.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,80.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,100.0,A2,2019-2027,4775002490,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,100.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,120.0,A2,2019-2027,,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,80.0,A1,2019-2027,,,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,120.0,A1,2019-2027,02705203947,2ZRFXE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,66.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,61.0,A2,2002-2007,,E3ZE52,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2013-2018,4775002250,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,61.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2013-2018,4775002250,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2008-2012,,1ZRFE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2013-2018,,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,70.0,A2,2013-2018,4775002250,1ZRFAE,,Toyota,Corolla,Jarrut,Vasen etu
+Jarrusatula,66.0,A2,2002-2007,,,,Toyota,Corolla,Jarrut,Vasen etu
