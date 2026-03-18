@@ -3,10 +3,9 @@ __pycache__/
 
 # logs
 *.out
-*.err
+*.errss
 *.log
 
-# optional: datasets (comment this OUT if you want to commit csv outputs)
-# crawler/crawler_datasets/
 datasets/traficom_datasets/
 notebooks/preprocessing/traficom_reduced_raw.csv
+datasets/traficom_outputs/traficom_reduced_raw.csv
