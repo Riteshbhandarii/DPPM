@@ -9,3 +9,4 @@ __pycache__/
 datasets/traficom_datasets/
 notebooks/preprocessing/traficom_reduced_raw.csv
 datasets/traficom_outputs/traficom_reduced_raw.csv
+catboost_info/
