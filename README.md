@@ -118,6 +118,28 @@ Adjust those values before reusing it elsewhere.
 
 Across the training notebooks, the main reported validation metric is MAE, with supporting checks such as MSE, R-squared, and MAPE.
 
+## Results
+
+The table below summarizes the best **trusted validation result** currently committed in each training notebook. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
+
+| Model | Selected feature set | Raw columns | Validation MAE | Validation RMSE | Validation R2 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Linear regression | trusted recommended features | 66 | 42.3640 | 153.2220 | 0.9270 |
+| Random forest | trusted recommended features without listing dates | 66 | 18.1299 | 48.5480 | 0.9927 |
+| XGBoost | trusted recommended features without date offsets without `oem_number` | 65 | 21.6889 | 52.6047 | 0.9914 |
+| CatBoost | trusted recommended features without date offsets | 66 | 46.0379 | 95.7289 | 0.9715 |
+
+Based on the current notebook outputs, **random forest** is the strongest validation model in the repository by MAE and RMSE.
+
+## Remaining work
+
+Based on the current repo state, the main work still to be done is:
+
+- Run the final selected model on the held-out `datasets/splits/test_grouped.csv` split and report the true final test metrics.
+- Freeze the environment in a `requirements.txt` or `pyproject.toml`, since setup is currently manual.
+- Convert the notebook-only workflow into reproducible scripts or a pipeline if repeatable reruns are needed.
+- Expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory.
+
 ## Notes on dataset behavior
 
 - The same marketplace listing can appear on multiple scrape dates.
