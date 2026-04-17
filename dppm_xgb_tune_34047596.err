@@ -1,8 +1,0 @@
-/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/xgboost/core.py:729: UserWarning: [14:33:21] WARNING: /workspace/src/common/error_msg.cc:58: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
-Potential solutions:
-- Use a data structure that matches the device ordinal in the booster.
-- Set the device for booster before call to inplace_predict.
-
-This warning will only be shown once.
-
-  return func(**kwargs)
