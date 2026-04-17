@@ -434,12 +434,10 @@ def main():
             }
             st.rerun()
 
-    with st.form("prediction_form"):
-        updated_values = render_operator_form(reference_rows)
-        submitted = st.form_submit_button("Estimate Price", type="primary")
-
+    updated_values = render_operator_form(reference_rows)
     st.session_state["input_values"] = updated_values
-    if submitted:
+
+    if st.button("Estimate Price", type="primary"):
         st.session_state["submitted_input_values"] = dict(updated_values)
 
     submitted_values = st.session_state.get("submitted_input_values")
