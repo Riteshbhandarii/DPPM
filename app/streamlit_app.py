@@ -48,6 +48,33 @@ def build_example_label(row):
     )
 
 
+def sorted_unique_options(series):
+    """Return stable alphabetical options without duplicates or NaNs."""
+
+    return sorted({str(value) for value in series.dropna().astype(str) if str(value).strip()})
+
+
+def filter_reference_rows(reference_rows, filters):
+    """Filter reference rows by the currently selected visible inputs."""
+
+    filtered = reference_rows
+    for key, value in filters.items():
+        if value in {None, "", "Any"} or pd.isna(value):
+            continue
+        filtered = filtered.loc[filtered[key].astype(str) == str(value)]
+    return filtered
+
+
+def choose_option(label, options, current_value, key):
+    """Render a selectbox with safe fallback handling."""
+
+    if not options:
+        return None
+    normalized_current = None if pd.isna(current_value) else str(current_value)
+    index = options.index(normalized_current) if normalized_current in options else 0
+    return st.selectbox(label, options=options, index=index, key=key)
+
+
 def derive_year_fields(values):
     """Fill the year helper features expected by the model."""
 
@@ -179,37 +206,162 @@ def initialize_form_state(reference_rows):
     }
 
 
-def render_input(feature_name, reference_rows):
-    """Render one simple widget based on the reference column dtype."""
+def render_operator_form(reference_rows):
+    """Render a filtered operator workflow instead of a flat all-fields form."""
 
-    feature_series = reference_rows[feature_name]
-    current_value = st.session_state["input_values"].get(feature_name)
-    label = feature_name.replace("_", " ").title()
+    current_values = dict(st.session_state["input_values"])
 
-    if pd.api.types.is_bool_dtype(feature_series):
-        return st.checkbox(label, value=bool(current_value))
+    st.subheader("Vehicle")
+    vehicle_col1, vehicle_col2, vehicle_col3 = st.columns(3)
 
-    if pd.api.types.is_numeric_dtype(feature_series):
-        numeric_series = pd.to_numeric(feature_series, errors="coerce")
-        min_value = float(numeric_series.min()) if numeric_series.notna().any() else 0.0
-        max_value = float(numeric_series.max()) if numeric_series.notna().any() else 0.0
-        default_value = float(current_value) if pd.notna(current_value) else min_value
-        step = 1.0 if float(default_value).is_integer() else 0.1
-        return st.number_input(
-            label,
-            min_value=min_value,
-            max_value=max_value,
-            value=default_value,
-            step=step,
+    with vehicle_col1:
+        brand_options = sorted_unique_options(reference_rows["brand"])
+        current_values["brand"] = choose_option(
+            "Brand",
+            brand_options,
+            current_values.get("brand"),
+            key="brand_select",
         )
 
-    choices = feature_series.dropna().astype(str).value_counts().index.tolist()
-    if choices and len(choices) <= 60:
-        default_choice = str(current_value) if pd.notna(current_value) else choices[0]
-        index = choices.index(default_choice) if default_choice in choices else 0
-        return st.selectbox(label, options=choices, index=index)
+    model_rows = filter_reference_rows(reference_rows, {"brand": current_values.get("brand")})
+    with vehicle_col2:
+        model_options = sorted_unique_options(model_rows["model"])
+        current_values["model"] = choose_option(
+            "Model",
+            model_options,
+            current_values.get("model"),
+            key="model_select",
+        )
 
-    return st.text_input(label, value="" if pd.isna(current_value) else str(current_value))
+    year_rows = filter_reference_rows(
+        reference_rows,
+        {
+            "brand": current_values.get("brand"),
+            "model": current_values.get("model"),
+        },
+    )
+    with vehicle_col3:
+        year_pairs = (
+            year_rows[["year_start", "year_end"]]
+            .dropna()
+            .drop_duplicates()
+            .sort_values(["year_start", "year_end"])
+        )
+        year_labels = [
+            f"{int(row.year_start)}-{int(row.year_end)}" for row in year_pairs.itertuples(index=False)
+        ]
+        year_options = ["Any"] + year_labels
+        default_year = "Any"
+        if pd.notna(current_values.get("year_start")) and pd.notna(current_values.get("year_end")):
+            candidate_default = f"{int(current_values['year_start'])}-{int(current_values['year_end'])}"
+            if candidate_default in year_options:
+                default_year = candidate_default
+        selected_year = choose_option(
+            "Compatible years",
+            year_options,
+            default_year,
+            key="year_range_select",
+        )
+        if selected_year and selected_year != "Any":
+            year_start, year_end = selected_year.split("-")
+            current_values["year_start"] = int(year_start)
+            current_values["year_end"] = int(year_end)
+        else:
+            current_values["year_start"] = None
+            current_values["year_end"] = None
+
+    st.subheader("Part")
+    part_scope = filter_reference_rows(
+        reference_rows,
+        {
+            "brand": current_values.get("brand"),
+            "model": current_values.get("model"),
+            "year_start": current_values.get("year_start"),
+            "year_end": current_values.get("year_end"),
+        },
+    )
+    part_col1, part_col2, part_col3 = st.columns(3)
+
+    with part_col1:
+        category_options = sorted_unique_options(part_scope["category"])
+        current_values["category"] = choose_option(
+            "Part group",
+            category_options,
+            current_values.get("category"),
+            key="category_select",
+        )
+
+    subcategory_scope = filter_reference_rows(
+        part_scope,
+        {"category": current_values.get("category")},
+    )
+    with part_col2:
+        subcategory_options = sorted_unique_options(subcategory_scope["subcategory"])
+        current_values["subcategory"] = choose_option(
+            "Part area",
+            subcategory_options,
+            current_values.get("subcategory"),
+            key="subcategory_select",
+        )
+
+    part_name_scope = filter_reference_rows(
+        subcategory_scope,
+        {"subcategory": current_values.get("subcategory")},
+    )
+    with part_col3:
+        part_name_options = sorted_unique_options(part_name_scope["part_name"])
+        current_values["part_name"] = choose_option(
+            "Part name",
+            part_name_options,
+            current_values.get("part_name"),
+            key="part_name_select",
+        )
+
+    st.subheader("Condition And Details")
+    detail_scope = filter_reference_rows(
+        part_name_scope,
+        {"part_name": current_values.get("part_name")},
+    )
+    detail_col1, detail_col2, detail_col3 = st.columns(3)
+
+    with detail_col1:
+        quality_options = sorted_unique_options(detail_scope["quality_grade"])
+        current_values["quality_grade"] = choose_option(
+            "Quality grade",
+            quality_options,
+            current_values.get("quality_grade"),
+            key="quality_grade_select",
+        )
+
+    with detail_col2:
+        repair_options = sorted_unique_options(detail_scope["repair_status"])
+        current_values["repair_status"] = choose_option(
+            "Repair status",
+            repair_options,
+            current_values.get("repair_status"),
+            key="repair_status_select",
+        )
+
+    mileage_series = pd.to_numeric(reference_rows["mileage"], errors="coerce")
+    default_mileage = current_values.get("mileage")
+    default_mileage = 0.0 if pd.isna(default_mileage) else float(default_mileage)
+    with detail_col3:
+        current_values["mileage"] = st.number_input(
+            "Vehicle mileage",
+            min_value=0.0,
+            max_value=float(mileage_series.max()) if mileage_series.notna().any() else 500000.0,
+            value=default_mileage,
+            step=1000.0,
+            key="mileage_input",
+        )
+
+    current_values["oem_number"] = st.text_input(
+        "OEM number (optional)",
+        value="" if pd.isna(current_values.get("oem_number")) else str(current_values.get("oem_number")),
+        key="oem_number_input",
+    )
+
+    return current_values
 
 
 def main():
@@ -225,21 +377,23 @@ def main():
     st.title("DPPM Price Estimator")
     st.caption("Operator-facing UI for the final random-forest dismantling-part price model.")
 
-    st.subheader("Load example")
-    example_labels = reference_rows.apply(build_example_label, axis=1).tolist()
-    selected_label = st.selectbox("Reference row", options=example_labels)
-    selected_index = example_labels.index(selected_label)
-    if st.button("Use example", type="primary"):
-        selected_row = reference_rows.iloc[selected_index]
-        st.session_state["input_values"] = {
-            feature_name: selected_row.get(feature_name) for feature_name in OPERATOR_FIELDS
-        }
-        st.rerun()
+    with st.expander("Load Example", expanded=False):
+        example_rows = (
+            reference_rows[OPERATOR_FIELDS]
+            .drop_duplicates(subset=["brand", "model", "category", "subcategory", "part_name"])
+            .reset_index(drop=True)
+        )
+        example_labels = example_rows.apply(build_example_label, axis=1).tolist()
+        selected_label = st.selectbox("Reference row", options=example_labels)
+        selected_index = example_labels.index(selected_label)
+        if st.button("Use example", type="primary"):
+            selected_row = example_rows.iloc[selected_index]
+            st.session_state["input_values"] = {
+                feature_name: selected_row.get(feature_name) for feature_name in OPERATOR_FIELDS
+            }
+            st.rerun()
 
-    st.subheader("Inputs")
-    updated_values = {}
-    for feature_name in OPERATOR_FIELDS:
-        updated_values[feature_name] = render_input(feature_name, reference_rows)
+    updated_values = render_operator_form(reference_rows)
     st.session_state["input_values"] = updated_values
 
     full_input = build_full_input(reference_rows, updated_values)
