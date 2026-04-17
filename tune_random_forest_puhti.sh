@@ -2,9 +2,9 @@
 #SBATCH --job-name=dppm-rf-tune
 #SBATCH --account=project_2017273
 #SBATCH --partition=small
-#SBATCH --time=08:00:00
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=32G
+#SBATCH --time=12:00:00
+#SBATCH --cpus-per-task=24
+#SBATCH --mem=64G
 #SBATCH --output=dppm_rf_tune_%j.out
 #SBATCH --error=dppm_rf_tune_%j.err
 
@@ -21,8 +21,11 @@ echo "HOST: $(hostname)"
 echo "TIME: $(date)"
 python3 -V
 
-python3 scripts/tune_random_forest.py \
+python3 -u scripts/tune_random_forest.py \
   --train-path datasets/splits/train_grouped.csv \
   --validation-path datasets/splits/validation_grouped.csv \
   --output-dir artifacts/random_forest_tuning \
-  --cv-splits 4
+  --cv-splits 4 \
+  --random-trials 24 \
+  --top-k-finalists 8 \
+  --random-seed 42
