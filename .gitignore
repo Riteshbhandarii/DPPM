@@ -3,7 +3,7 @@ __pycache__/
 
 # logs
 *.out
-*.errss
+*.err
 *.log
 
 datasets/traficom_datasets/
