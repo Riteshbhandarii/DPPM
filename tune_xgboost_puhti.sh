@@ -28,6 +28,7 @@ python3 -u scripts/tune_xgboost.py \
   --output-dir artifacts/xgboost_tuning \
   --xgboost-device cuda \
   --cv-splits 4 \
-  --random-trials 24 \
-  --top-k-finalists 8 \
+  --random-trials 32 \
+  --refinement-trials 20 \
+  --top-k-finalists 10 \
   --random-seed 42

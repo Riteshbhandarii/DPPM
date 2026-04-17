@@ -13,6 +13,7 @@ if str(ROOT) not in sys.path:
 from src.tree_modeling import (
     build_feature_catalog,
     evaluate_selected_xgboost_candidates,
+    generate_xgboost_refinement_configs,
     generate_xgboost_search_configs,
     load_training_data,
     save_tuning_reports,
@@ -32,13 +33,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--random-trials",
         type=int,
-        default=24,
+        default=32,
         help="Number of additional random-search XGBoost configurations to sample.",
+    )
+    parser.add_argument(
+        "--refinement-trials",
+        type=int,
+        default=20,
+        help="Number of local refinement configurations sampled around the best screened result.",
     )
     parser.add_argument(
         "--top-k-finalists",
         type=int,
-        default=8,
+        default=10,
         help="Number of screened candidates promoted to grouped cross-validation.",
     )
     parser.add_argument(
@@ -54,12 +61,14 @@ def main() -> None:
     args = parse_args()
     prepared_data = load_training_data(args.train_path, args.validation_path)
     feature_catalog = build_feature_catalog(prepared_data.train_df, model_kind="xgboost")
+
+    # Stage one runs a broader search across all trusted XGBoost feature variants.
     search_configs = generate_xgboost_search_configs(
         random_trials=args.random_trials,
         random_seed=args.random_seed,
     )
 
-    print(f"Generated {len(search_configs)} XGBoost configurations for screening.")
+    print(f"Generated {len(search_configs)} XGBoost configurations for broad screening.")
     screening_results_df, finalists = screen_xgboost_candidates(
         train_df=prepared_data.train_df,
         validation_df=prepared_data.validation_df,
@@ -69,19 +78,64 @@ def main() -> None:
         top_k_finalists=args.top_k_finalists,
     )
 
-    print(f"Promoting {len(finalists)} screened candidates to grouped cross-validation.")
+    # Stage two narrows the search around the best screened candidate and its feature set.
+    best_screened_candidate = screening_results_df.iloc[0].to_dict()
+    print(
+        "Best broad-screen candidate before refinement:",
+        best_screened_candidate["feature_variant"],
+        best_screened_candidate["config_name"],
+        f"MAE={best_screened_candidate['validation_MAE']:.4f}",
+    )
+    refinement_feature_sets = {
+        best_screened_candidate["feature_variant"]: list(best_screened_candidate["feature_names"])
+    }
+    refinement_configs = generate_xgboost_refinement_configs(
+        base_config=best_screened_candidate["config"],
+        refinement_trials=args.refinement_trials,
+        random_seed=args.random_seed + 1000,
+    )
+    print(
+        f"Generated {len(refinement_configs)} local refinement configurations "
+        f"for feature variant {best_screened_candidate['feature_variant']}."
+    )
+    refinement_results_df, refinement_finalists = screen_xgboost_candidates(
+        train_df=prepared_data.train_df,
+        validation_df=prepared_data.validation_df,
+        feature_sets=refinement_feature_sets,
+        configs=refinement_configs,
+        xgboost_device=args.xgboost_device,
+        top_k_finalists=args.top_k_finalists,
+    )
+
+    # Merge broad-search and refinement finalists before the grouped-CV selection pass.
+    combined_finalists = []
+    seen_finalists = set()
+    for candidate in finalists + refinement_finalists:
+        finalist_key = (candidate["feature_variant"], candidate["config_name"])
+        if finalist_key in seen_finalists:
+            continue
+        combined_finalists.append(candidate)
+        seen_finalists.add(finalist_key)
+
+    print(f"Promoting {len(combined_finalists)} screened candidates to grouped cross-validation.")
     cv_results_df, summary = evaluate_selected_xgboost_candidates(
         train_df=prepared_data.train_df,
         validation_df=prepared_data.validation_df,
-        selected_candidates=finalists,
+        selected_candidates=combined_finalists,
         cv_splits=args.cv_splits,
         xgboost_device=args.xgboost_device,
     )
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Save both screening stages separately so the tuning path is easy to inspect later.
     screening_results_df.drop(columns=["feature_names", "config"]).to_csv(
         output_dir / "screening_results.csv",
+        index=False,
+    )
+    refinement_results_df.drop(columns=["feature_names", "config"]).to_csv(
+        output_dir / "refinement_results.csv",
         index=False,
     )
 
