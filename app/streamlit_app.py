@@ -85,6 +85,18 @@ def keep_valid_choice(current_value, options):
     return options[0] if options else None
 
 
+def sync_dependent_state(current_values, field_name, options, session_key):
+    """Keep session state and current values aligned with the valid option list."""
+
+    valid_value = keep_valid_choice(current_values.get(field_name), options)
+    current_values[field_name] = valid_value
+    if session_key in st.session_state:
+        session_value = st.session_state.get(session_key)
+        if session_value not in options:
+            st.session_state[session_key] = valid_value
+    return valid_value
+
+
 def derive_year_fields(values):
     """Fill the year helper features expected by the model."""
 
@@ -227,7 +239,7 @@ def render_operator_form(reference_rows):
 
     with vehicle_col1:
         brand_options = sorted_unique_options(reference_rows["brand"])
-        current_values["brand"] = keep_valid_choice(current_values.get("brand"), brand_options)
+        sync_dependent_state(current_values, "brand", brand_options, "brand_select")
         current_values["brand"] = choose_option(
             "Brand",
             brand_options,
@@ -238,7 +250,7 @@ def render_operator_form(reference_rows):
     model_rows = filter_reference_rows(reference_rows, {"brand": current_values.get("brand")})
     with vehicle_col2:
         model_options = sorted_unique_options(model_rows["model"])
-        current_values["model"] = keep_valid_choice(current_values.get("model"), model_options)
+        sync_dependent_state(current_values, "model", model_options, "model_select")
         current_values["model"] = choose_option(
             "Model",
             model_options,
@@ -269,6 +281,8 @@ def render_operator_form(reference_rows):
             candidate_default = f"{int(current_values['year_start'])}-{int(current_values['year_end'])}"
             if candidate_default in year_options:
                 default_year = candidate_default
+        if "year_range_select" in st.session_state and st.session_state["year_range_select"] not in year_options:
+            st.session_state["year_range_select"] = "Any"
         default_year = keep_valid_choice(default_year, year_options)
         selected_year = choose_option(
             "Compatible years",
@@ -298,7 +312,7 @@ def render_operator_form(reference_rows):
 
     with part_col1:
         category_options = sorted_unique_options(part_scope["category"])
-        current_values["category"] = keep_valid_choice(current_values.get("category"), category_options)
+        sync_dependent_state(current_values, "category", category_options, "category_select")
         current_values["category"] = choose_option(
             "Part group",
             category_options,
@@ -312,7 +326,7 @@ def render_operator_form(reference_rows):
     )
     with part_col2:
         subcategory_options = sorted_unique_options(subcategory_scope["subcategory"])
-        current_values["subcategory"] = keep_valid_choice(current_values.get("subcategory"), subcategory_options)
+        sync_dependent_state(current_values, "subcategory", subcategory_options, "subcategory_select")
         current_values["subcategory"] = choose_option(
             "Part area",
             subcategory_options,
@@ -326,7 +340,7 @@ def render_operator_form(reference_rows):
     )
     with part_col3:
         part_name_options = sorted_unique_options(part_name_scope["part_name"])
-        current_values["part_name"] = keep_valid_choice(current_values.get("part_name"), part_name_options)
+        sync_dependent_state(current_values, "part_name", part_name_options, "part_name_select")
         current_values["part_name"] = choose_option(
             "Part name",
             part_name_options,
@@ -343,7 +357,7 @@ def render_operator_form(reference_rows):
 
     with detail_col1:
         quality_options = QUALITY_GRADE_OPTIONS
-        current_values["quality_grade"] = keep_valid_choice(current_values.get("quality_grade"), quality_options)
+        sync_dependent_state(current_values, "quality_grade", quality_options, "quality_grade_select")
         current_values["quality_grade"] = choose_option(
             "Quality grade",
             quality_options,
@@ -433,41 +447,41 @@ def main():
         full_input = build_full_input(reference_rows, submitted_values)
         prediction_input = {feature_name: full_input.get(feature_name) for feature_name in feature_names}
 
-        st.subheader("Prediction")
         prediction = predict_price_ranges(bundle, [prediction_input]).iloc[0]
         market_range = comparable_market_range(
             reference_rows=reference_rows,
             visible_values=submitted_values,
             predicted_price=float(prediction["predicted_price"]),
         )
-        col1, col2 = st.columns(2)
-        with col1:
+
+        st.subheader("Prediction")
+        market_col1, market_col2 = st.columns(2)
+        with market_col1:
             st.metric("Point estimate", f"{prediction['predicted_price']:.2f} EUR")
-            st.metric("Lower bound", f"{market_range['range_low']:.2f} EUR")
-        with col2:
-            st.metric("Upper bound", f"{market_range['range_high']:.2f} EUR")
-            st.metric("Range width", f"{market_range['range_width']:.2f} EUR")
+            st.metric("Comparable low", f"{market_range['range_low']:.2f} EUR")
+            st.metric("Comparable rows", int(market_range["comparable_count"]))
+        with market_col2:
+            st.metric("Comparable high", f"{market_range['range_high']:.2f} EUR")
+            st.metric("Comparable width", f"{market_range['range_width']:.2f} EUR")
 
         st.info(
-            "The displayed range is based on similar historical rows when available, with a minimum width floor to avoid fake certainty."
+            "This block is a separate market lookup based on similar historical rows from the saved reference data. It is not the same thing as model uncertainty."
         )
 
         with st.expander("Technical Details"):
             st.write("Hidden model fields are filled from the closest saved reference row and simple derived values.")
-            st.metric("Range source", str(market_range["range_source"]))
+            st.metric("Comparable source", str(market_range["range_source"]))
             st.metric("Comparable rows used", int(market_range["comparable_count"]))
-            st.caption(f"Matched on: {market_range['matched_on'] or 'fallback'}")
+            st.caption(f"Comparable match keys: {market_range['matched_on'] or 'fallback'}")
             tech_col1, tech_col2 = st.columns(2)
             with tech_col1:
-                st.metric("Displayed low", f"{market_range['range_low']:.2f} EUR")
-                st.metric("Displayed high", f"{market_range['range_high']:.2f} EUR")
                 st.metric("Ensemble low", f"{prediction['ensemble_range_low']:.2f} EUR")
                 st.metric("Ensemble high", f"{prediction['ensemble_range_high']:.2f} EUR")
             with tech_col2:
                 st.metric("Calibrated low", f"{prediction['price_range_low']:.2f} EUR")
                 st.metric("Calibrated high", f"{prediction['price_range_high']:.2f} EUR")
                 st.metric("Ensemble width", f"{prediction['ensemble_range_width']:.2f} EUR")
-                st.metric("Range source", str(prediction["uncertainty_source"]))
+                st.metric("Model range source", str(prediction["uncertainty_source"]))
             st.dataframe(
                 pd.DataFrame({"operator_input": submitted_values}).T,
                 use_container_width=True,
