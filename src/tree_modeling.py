@@ -491,6 +491,112 @@ def generate_xgboost_search_configs(
     return configs
 
 
+def generate_xgboost_refinement_configs(
+    base_config: dict[str, Any],
+    refinement_trials: int,
+    random_seed: int,
+) -> dict[str, dict[str, Any]]:
+    """Create a local XGBoost search around the best screened configuration."""
+
+    rng = np.random.default_rng(random_seed)
+    base_params = dict(base_config["model_params"])
+    configs = {"refinement_anchor": base_config}
+    seen_signatures = {make_config_signature(base_config)}
+
+    max_bin_choices = [128, 192, 256, 384, 512]
+    max_cat_to_onehot_choices = [2, 4, 6, 8, 10]
+    max_cat_threshold_choices = [32, 48, 64, 96, 128]
+
+    def clamp_int(value: int, low: int, high: int) -> int:
+        return max(low, min(high, value))
+
+    def clamp_float(value: float, low: float, high: float) -> float:
+        return max(low, min(high, value))
+
+    trial_id = 1
+    while len(configs) < refinement_trials + 1:
+        learning_rate = round(
+            clamp_float(base_params["learning_rate"] * float(rng.uniform(0.75, 1.30)), 0.010, 0.050),
+            6,
+        )
+        config = {
+            "target_mode": base_config["target_mode"],
+            "model_params": {
+                "objective": base_params["objective"],
+                "eval_metric": "mae",
+                "n_estimators": clamp_int(
+                    int(round(base_params["n_estimators"] * float(rng.uniform(0.80, 1.35)))),
+                    1400,
+                    4200,
+                ),
+                "learning_rate": learning_rate,
+                "max_depth": clamp_int(
+                    int(base_params["max_depth"]) + int(rng.integers(-1, 2)),
+                    3,
+                    6,
+                ),
+                "min_child_weight": clamp_int(
+                    int(base_params["min_child_weight"]) + int(rng.integers(-3, 4)),
+                    1,
+                    16,
+                ),
+                "gamma": round(
+                    clamp_float(base_params["gamma"] + float(rng.uniform(-0.04, 0.06)), 0.0, 0.20),
+                    6,
+                ),
+                "subsample": round(
+                    clamp_float(base_params["subsample"] + float(rng.uniform(-0.08, 0.06)), 0.70, 1.00),
+                    6,
+                ),
+                "colsample_bytree": round(
+                    clamp_float(
+                        base_params["colsample_bytree"] + float(rng.uniform(-0.08, 0.08)),
+                        0.60,
+                        1.00,
+                    ),
+                    6,
+                ),
+                "colsample_bylevel": round(
+                    clamp_float(
+                        base_params["colsample_bylevel"] + float(rng.uniform(-0.06, 0.06)),
+                        0.70,
+                        1.00,
+                    ),
+                    6,
+                ),
+                "reg_alpha": round(
+                    clamp_float(
+                        base_params["reg_alpha"] * float(rng.uniform(0.40, 2.50)),
+                        0.0005,
+                        0.25,
+                    ),
+                    6,
+                ),
+                "reg_lambda": round(
+                    clamp_float(
+                        base_params["reg_lambda"] * float(rng.uniform(0.70, 1.50)),
+                        1.0,
+                        8.0,
+                    ),
+                    6,
+                ),
+                "max_bin": int(sample_from_choices(rng, max_bin_choices)),
+                "max_cat_to_onehot": int(sample_from_choices(rng, max_cat_to_onehot_choices)),
+                "max_cat_threshold": int(sample_from_choices(rng, max_cat_threshold_choices)),
+            },
+        }
+
+        signature = make_config_signature(config)
+        if signature in seen_signatures:
+            continue
+
+        seen_signatures.add(signature)
+        configs[f"refinement_search_{trial_id:03d}"] = config
+        trial_id += 1
+
+    return configs
+
+
 def generate_random_forest_search_configs(
     random_trials: int,
     random_seed: int,
