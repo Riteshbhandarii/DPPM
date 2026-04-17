@@ -73,8 +73,25 @@ def ensure_feature_frame(rows, feature_names):
     return frame.loc[:, feature_names].copy()
 
 
+def bundle_error_scale(metadata):
+    """Return a practical error scale from held-out metrics when available."""
+
+    held_out_metrics = metadata.get("held_out_test_metrics", {})
+    validation_metrics = metadata.get("trusted_validation_metrics", {})
+
+    if "test_RMSE" in held_out_metrics:
+        return float(held_out_metrics["test_RMSE"])
+    if "validation_RMSE" in validation_metrics:
+        return float(validation_metrics["validation_RMSE"])
+    if "test_MAE" in held_out_metrics:
+        return float(held_out_metrics["test_MAE"])
+    if "validation_MAE" in validation_metrics:
+        return float(validation_metrics["validation_MAE"])
+    raise ValueError("Bundle metadata does not contain usable error metrics.")
+
+
 def predict_price_ranges(bundle, rows, lower_quantile=0.10, upper_quantile=0.90):
-    """Return point predictions and a model-based range from the tree ensemble."""
+    """Return point predictions and both calibrated and ensemble-spread ranges."""
 
     metadata = bundle["metadata"]
     model_pipeline = bundle["model"]
@@ -93,12 +110,25 @@ def predict_price_ranges(bundle, rows, lower_quantile=0.10, upper_quantile=0.90)
     tree_predictions = np.vstack([tree.predict(transformed_input) for tree in forest.estimators_])
     lower_bounds = np.quantile(tree_predictions, lower_quantile, axis=0)
     upper_bounds = np.quantile(tree_predictions, upper_quantile, axis=0)
+    ensemble_width = upper_bounds - lower_bounds
+
+    # The spread of tree predictions is often much narrower than real-world error.
+    # Use held-out RMSE as a practical uncertainty scale for the operator-facing range.
+    error_scale = bundle_error_scale(metadata)
+    z_value = 1.645
+    calibrated_half_width = np.full_like(point_predictions, fill_value=z_value * error_scale, dtype=float)
+    calibrated_low = np.maximum(np.asarray(point_predictions, dtype=float) - calibrated_half_width, 0.0)
+    calibrated_high = np.asarray(point_predictions, dtype=float) + calibrated_half_width
 
     return pd.DataFrame(
         {
             "predicted_price": np.asarray(point_predictions, dtype=float),
-            "price_range_low": np.asarray(lower_bounds, dtype=float),
-            "price_range_high": np.asarray(upper_bounds, dtype=float),
-            "range_width": np.asarray(upper_bounds - lower_bounds, dtype=float),
+            "price_range_low": np.asarray(calibrated_low, dtype=float),
+            "price_range_high": np.asarray(calibrated_high, dtype=float),
+            "range_width": np.asarray(calibrated_high - calibrated_low, dtype=float),
+            "ensemble_range_low": np.asarray(lower_bounds, dtype=float),
+            "ensemble_range_high": np.asarray(upper_bounds, dtype=float),
+            "ensemble_range_width": np.asarray(ensemble_width, dtype=float),
+            "uncertainty_source": np.full(shape=len(point_predictions), fill_value="held_out_rmse"),
         }
     )
