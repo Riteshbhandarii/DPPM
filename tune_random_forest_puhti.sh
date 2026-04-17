@@ -1,4 +1,3 @@
-sacct -j 34049731 --format=JobID,State,Elapsed,Start,End
 #!/bin/bash -l
 #SBATCH --job-name=dppm-rf-tune
 #SBATCH --account=project_2017273

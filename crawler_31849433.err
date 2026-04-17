@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scratch/project_2017273/DPPM/crawler/src/crawler.py", line 90, in <module>
+    main()
+  File "/scratch/project_2017273/DPPM/crawler/src/crawler.py", line 53, in main
+    results = scrape_brand_model(page, args.brand, args.model, output_csv)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/project_2017273/DPPM/crawler/src/crawler_scraper.py", line 199, in scrape_brand_model
+    flush_rows(subcategory_rows)
+  File "/scratch/project_2017273/DPPM/crawler/src/crawler_scraper.py", line 48, in flush_rows
+    df_rows.to_csv(
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/core/generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/io/common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "/PUHTI_TYKKY_Z2xYJyB/miniforge/envs/env1/lib/python3.12/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/scratch/project_2017273/DPPM/crawler/crawler_datasets/new'
