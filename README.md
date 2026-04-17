@@ -22,7 +22,7 @@ The current repository includes a working crawler, intermediate datasets, final 
 - `notebooks/02_integration/`: snapshot merging, dataset integration, cleaning, and split creation.
 - `notebooks/03_analysis/`: exploratory analysis of the prepared dataset.
 - `notebooks/04_training/`: model training and validation notebooks.
-- `crawler.sh`: SLURM batch script for running crawler jobs on CSC Puhti.
+- `scripts/batch/`: Puhti-oriented SLURM batch scripts for crawling, tuning, testing, and model export.
 
 ## Current tracked data artifacts
 
@@ -98,7 +98,7 @@ The crawler:
 
 The category allowlist and crawler settings live in `crawler/src/crawler_config.py`.
 
-For Puhti batch execution, `crawler.sh` runs several brand/model pairs sequentially through SLURM. That script is environment-specific and assumes:
+For Puhti batch execution, `scripts/batch/crawler.sh` runs several brand/model pairs sequentially through SLURM. That script is environment-specific and assumes:
 
 - CSC module-based Python
 - a project path of `/scratch/project_2017273/DPPM`
