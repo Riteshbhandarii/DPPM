@@ -6,6 +6,33 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+
+
+def patch_simple_imputer_compatibility(transformer):
+    """Patch older saved SimpleImputer instances for newer sklearn versions."""
+
+    if isinstance(transformer, SimpleImputer):
+        if not hasattr(transformer, "_fill_dtype"):
+            statistics = getattr(transformer, "statistics_", None)
+            if statistics is not None:
+                transformer._fill_dtype = np.asarray(statistics).dtype
+            else:
+                transformer._fill_dtype = np.dtype("float64")
+        return
+
+    if isinstance(transformer, Pipeline):
+        for _, step in transformer.steps:
+            patch_simple_imputer_compatibility(step)
+        return
+
+    if isinstance(transformer, ColumnTransformer):
+        for _, subtransformer, _ in transformer.transformers_:
+            if subtransformer in {"drop", "passthrough"}:
+                continue
+            patch_simple_imputer_compatibility(subtransformer)
 
 
 def load_random_forest_bundle(bundle_dir):
@@ -14,6 +41,7 @@ def load_random_forest_bundle(bundle_dir):
     bundle_path = Path(bundle_dir)
     metadata = json.loads((bundle_path / "model_metadata.json").read_text(encoding="utf-8"))
     model = joblib.load(bundle_path / "model.joblib")
+    patch_simple_imputer_compatibility(model)
 
     return {
         "bundle_dir": bundle_path,
