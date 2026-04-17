@@ -412,6 +412,76 @@ def regression_metrics(y_true: pd.Series, y_pred: np.ndarray) -> dict[str, float
     }
 
 
+def make_config_signature(config: dict[str, Any]) -> str:
+    """Build a stable JSON signature so repeated parameter sets can be removed safely."""
+
+    return json.dumps(config, sort_keys=True)
+
+
+def sample_log_uniform(
+    rng: np.random.Generator,
+    low: float,
+    high: float,
+) -> float:
+    """Sample a positive floating-point value on a log scale."""
+
+    return float(np.exp(rng.uniform(np.log(low), np.log(high))))
+
+
+def generate_xgboost_search_configs(
+    random_trials: int,
+    random_seed: int,
+) -> dict[str, dict[str, Any]]:
+    """Create a wider XGBoost search space while keeping the notebook finalists as anchors."""
+
+    rng = np.random.default_rng(random_seed)
+    configs = {name: dict(config) for name, config in XGBOOST_CONFIGS.items()}
+    seen_signatures = {make_config_signature(config) for config in configs.values()}
+
+    objectives = {
+        "raw": ["reg:squarederror", "reg:absoluteerror"],
+        "log": ["reg:squarederror", "reg:absoluteerror"],
+    }
+    max_bins = [128, 192, 256, 384, 512]
+    cat_to_onehot_choices = [4, 8, 10, 12, 16]
+    cat_threshold_choices = [32, 48, 64, 96, 128]
+
+    trial_id = 1
+    while len(configs) < len(XGBOOST_CONFIGS) + random_trials:
+        target_mode = str(rng.choice(["raw", "log"]))
+        objective = str(rng.choice(objectives[target_mode]))
+        config = {
+            "target_mode": target_mode,
+            "model_params": {
+                "objective": objective,
+                "eval_metric": "mae",
+                "n_estimators": int(rng.integers(1200, 3201)),
+                "learning_rate": round(sample_log_uniform(rng, 0.012, 0.06), 6),
+                "max_depth": int(rng.integers(3, 9)),
+                "min_child_weight": int(rng.integers(1, 13)),
+                "gamma": round(float(rng.uniform(0.0, 0.25)), 6),
+                "subsample": round(float(rng.uniform(0.65, 0.95)), 6),
+                "colsample_bytree": round(float(rng.uniform(0.55, 0.95)), 6),
+                "colsample_bylevel": round(float(rng.uniform(0.60, 1.00)), 6),
+                "reg_alpha": round(sample_log_uniform(rng, 0.001, 1.0), 6),
+                "reg_lambda": round(sample_log_uniform(rng, 1.0, 8.0), 6),
+                "max_bin": int(rng.choice(max_bins)),
+                "max_cat_to_onehot": int(rng.choice(cat_to_onehot_choices)),
+                "max_cat_threshold": int(rng.choice(cat_threshold_choices)),
+            },
+        }
+
+        signature = make_config_signature(config)
+        if signature in seen_signatures:
+            continue
+
+        seen_signatures.add(signature)
+        configs[f"random_search_{trial_id:03d}"] = config
+        trial_id += 1
+
+    return configs
+
+
 def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, Any]:
     """Recreate the trusted feature variants used by each model family."""
 
@@ -486,6 +556,18 @@ def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, 
                 )
                 if column != "oem_number"
             ],
+            "trusted_extended_traficom_stack": list(
+                dict.fromkeys(
+                    BASELINE_FEATURES
+                    + TRAFICOM_FEATURES
+                    + registry_lifecycle_features
+                    + traficom_extended_features
+                )
+            ),
+            "trusted_manual_all_features_usable_by_xgboost": (
+                manual_all_model_features_leakage_safe
+            ),
+            "trusted_recommended_features": recommended_model_features_leakage_safe,
             "trusted_recommended_features_without_date_offsets": (
                 recommended_model_features_leakage_safe_without_date_offsets
             ),
@@ -698,6 +780,220 @@ def fit_xgboost(
         "best_iteration": getattr(model, "best_iteration", None),
     }
     return model, metadata
+
+
+def screen_xgboost_candidates(
+    train_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
+    feature_sets: dict[str, list[str]],
+    configs: dict[str, dict[str, Any]],
+    xgboost_device: str,
+    top_k_finalists: int,
+) -> tuple[pd.DataFrame, list[dict[str, Any]]]:
+    """Score a broad XGBoost search space on the fixed validation split before grouped CV."""
+
+    y_train = train_df[TARGET_COLUMN].copy()
+    y_validation = validation_df[TARGET_COLUMN].copy()
+    total_candidates = len(feature_sets) * len(configs)
+    current_candidate = 0
+    screening_rows = []
+
+    for feature_variant_name, feature_list in feature_sets.items():
+        X_train = train_df[feature_list].copy()
+        X_validation = validation_df[feature_list].copy()
+
+        for config_name, config in configs.items():
+            current_candidate += 1
+            print(
+                f"[screen {current_candidate}/{total_candidates}] "
+                f"{feature_variant_name} | {config_name}"
+            )
+            model, metadata = fit_xgboost(
+                X_train,
+                y_train,
+                X_validation,
+                y_validation,
+                config,
+                device=xgboost_device,
+            )
+            _, X_validation_prepared, _ = align_xgboost_frames(X_train, X_validation)
+            raw_predictions = model.predict(X_validation_prepared)
+            validation_predictions = convert_predictions_to_eur(
+                raw_predictions,
+                config["target_mode"],
+                y_train_reference=y_train,
+            )
+            screening_rows.append(
+                {
+                    "model_type": "xgboost",
+                    "feature_variant": feature_variant_name,
+                    "config_name": config_name,
+                    "target_mode": config["target_mode"],
+                    "feature_count": len(feature_list),
+                    "best_iteration": metadata.get("best_iteration"),
+                    "validation_MAE": float(mean_absolute_error(y_validation, validation_predictions)),
+                    "validation_RMSE": float(
+                        np.sqrt(mean_squared_error(y_validation, validation_predictions))
+                    ),
+                    "validation_R2": float(r2_score(y_validation, validation_predictions)),
+                    "feature_names": feature_list,
+                    "config": config,
+                }
+            )
+
+    screening_results_df = pd.DataFrame(screening_rows).sort_values(
+        ["validation_MAE", "validation_RMSE", "feature_count"],
+        ascending=[True, True, True],
+    ).reset_index(drop=True)
+
+    finalists = []
+    seen_combinations = set()
+    best_per_feature_variant = (
+        screening_results_df.sort_values(["validation_MAE", "validation_RMSE"])
+        .groupby("feature_variant", as_index=False)
+        .head(1)
+    )
+
+    for _, row in best_per_feature_variant.iterrows():
+        combination_key = (row["feature_variant"], row["config_name"])
+        if combination_key in seen_combinations:
+            continue
+        finalists.append(row.to_dict())
+        seen_combinations.add(combination_key)
+
+    for _, row in screening_results_df.iterrows():
+        if len(finalists) >= top_k_finalists:
+            break
+        combination_key = (row["feature_variant"], row["config_name"])
+        if combination_key in seen_combinations:
+            continue
+        finalists.append(row.to_dict())
+        seen_combinations.add(combination_key)
+
+    finalists = finalists[:top_k_finalists]
+    return screening_results_df, finalists
+
+
+def evaluate_selected_xgboost_candidates(
+    train_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
+    selected_candidates: list[dict[str, Any]],
+    cv_splits: int,
+    xgboost_device: str,
+) -> tuple[pd.DataFrame, dict[str, Any]]:
+    """Run grouped cross-validation only on the best screened XGBoost candidates."""
+
+    if not selected_candidates:
+        raise RuntimeError("No XGBoost finalists were provided for grouped cross-validation.")
+
+    y_train = train_df[TARGET_COLUMN].copy()
+    y_validation = validation_df[TARGET_COLUMN].copy()
+    train_groups = train_df[GROUP_COLUMN]
+    group_kfold = GroupKFold(n_splits=cv_splits)
+    cv_rows = []
+
+    for candidate_index, candidate in enumerate(selected_candidates, start=1):
+        print(
+            f"[cv {candidate_index}/{len(selected_candidates)}] "
+            f"{candidate['feature_variant']} | {candidate['config_name']}"
+        )
+        feature_list = list(candidate["feature_names"])
+        config = dict(candidate["config"])
+        X_candidate_full = train_df[feature_list].copy()
+        fold_metrics = []
+
+        for fold_id, (fold_train_idx, fold_validation_idx) in enumerate(
+            group_kfold.split(X_candidate_full, y_train, train_groups),
+            start=1,
+        ):
+            print(
+                f"  fold {fold_id}/{cv_splits} for "
+                f"{candidate['feature_variant']} | {candidate['config_name']}"
+            )
+            X_fold_train = X_candidate_full.iloc[fold_train_idx].copy()
+            X_fold_validation = X_candidate_full.iloc[fold_validation_idx].copy()
+            y_fold_train = y_train.iloc[fold_train_idx].copy()
+            y_fold_validation = y_train.iloc[fold_validation_idx].copy()
+
+            model, metadata = fit_xgboost(
+                X_fold_train,
+                y_fold_train,
+                X_fold_validation,
+                y_fold_validation,
+                config,
+                device=xgboost_device,
+            )
+            _, X_fold_validation_prepared, _ = align_xgboost_frames(
+                X_fold_train,
+                X_fold_validation,
+            )
+            raw_predictions = model.predict(X_fold_validation_prepared)
+            fold_predictions = convert_predictions_to_eur(
+                raw_predictions,
+                config["target_mode"],
+                y_train_reference=y_fold_train,
+            )
+            fold_metrics.append(
+                {
+                    "fold": fold_id,
+                    "validation_MAE": float(mean_absolute_error(y_fold_validation, fold_predictions)),
+                    "validation_RMSE": float(
+                        np.sqrt(mean_squared_error(y_fold_validation, fold_predictions))
+                    ),
+                    "validation_R2": float(r2_score(y_fold_validation, fold_predictions)),
+                    "best_iteration": metadata.get("best_iteration"),
+                }
+            )
+
+        fold_metrics_df = pd.DataFrame(fold_metrics)
+        cv_rows.append(
+            {
+                "model_type": "xgboost",
+                "feature_variant": candidate["feature_variant"],
+                "config_name": candidate["config_name"],
+                "target_mode": config["target_mode"],
+                "feature_count": len(feature_list),
+                "screen_validation_MAE": candidate["validation_MAE"],
+                "screen_validation_RMSE": candidate["validation_RMSE"],
+                "cv_mean_MAE": float(fold_metrics_df["validation_MAE"].mean()),
+                "cv_std_MAE": float(fold_metrics_df["validation_MAE"].std(ddof=0)),
+                "cv_mean_RMSE": float(fold_metrics_df["validation_RMSE"].mean()),
+                "cv_mean_R2": float(fold_metrics_df["validation_R2"].mean()),
+                "feature_names": feature_list,
+                "config": config,
+            }
+        )
+
+    cv_results_df = pd.DataFrame(cv_rows).sort_values(
+        ["cv_mean_MAE", "cv_mean_RMSE", "screen_validation_MAE"],
+        ascending=[True, True, True],
+    ).reset_index(drop=True)
+    best_candidate = cv_results_df.iloc[0].to_dict()
+
+    X_train_best = train_df[best_candidate["feature_names"]].copy()
+    X_validation_best = validation_df[best_candidate["feature_names"]].copy()
+    fitted_model, metadata = fit_xgboost(
+        X_train_best,
+        y_train,
+        X_validation_best,
+        y_validation,
+        best_candidate["config"],
+        device=xgboost_device,
+    )
+    _, X_validation_best_prepared, _ = align_xgboost_frames(X_train_best, X_validation_best)
+    raw_predictions = fitted_model.predict(X_validation_best_prepared)
+    validation_predictions = convert_predictions_to_eur(
+        raw_predictions,
+        best_candidate["config"]["target_mode"],
+        y_train_reference=y_train,
+    )
+
+    final_summary = {
+        **best_candidate,
+        "best_iteration": metadata.get("best_iteration"),
+        **regression_metrics(y_validation, validation_predictions),
+    }
+    return cv_results_df, final_summary
 
 
 def evaluate_model_candidates(
