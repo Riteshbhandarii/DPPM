@@ -27,6 +27,5 @@ python3 -u scripts/tune_random_forest.py \
   --output-dir artifacts/random_forest_tuning \
   --cv-splits 4 \
   --random-trials 24 \
-  --refinement-trials 16 \
-  --top-k-finalists 10 \
+  --top-k-finalists 8 \
   --random-seed 42
