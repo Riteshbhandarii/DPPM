@@ -453,24 +453,24 @@ def main():
         )
 
         st.subheader("Prediction")
-        market_col1, market_col2 = st.columns(2)
-        with market_col1:
-            st.metric("Point estimate", f"{prediction['predicted_price']:.2f} EUR")
-            st.metric("Comparable low", f"{market_range['range_low']:.2f} EUR")
-            st.metric("Comparable rows", int(market_range["comparable_count"]))
-        with market_col2:
-            st.metric("Comparable high", f"{market_range['range_high']:.2f} EUR")
-            st.metric("Comparable width", f"{market_range['range_width']:.2f} EUR")
+        st.metric("Estimated price", f"{prediction['predicted_price']:.2f} EUR")
+        st.metric(
+            "Expected market range",
+            f"{market_range['range_low']:.0f}-{market_range['range_high']:.0f} EUR",
+        )
+        st.caption(
+            f"Market reference count: {int(market_range['comparable_count'])}"
+        )
 
         st.info(
-            "This block is a separate market lookup based on similar historical rows from the saved reference data. It is not the same thing as model uncertainty."
+            "Expected market range is derived from matching historical market examples in the saved reference data. It is a market reference signal, not pure model uncertainty."
         )
 
         with st.expander("Technical Details"):
             st.write("Hidden model fields are filled from the closest saved reference row and simple derived values.")
-            st.metric("Comparable source", str(market_range["range_source"]))
-            st.metric("Comparable rows used", int(market_range["comparable_count"]))
-            st.caption(f"Comparable match keys: {market_range['matched_on'] or 'fallback'}")
+            st.metric("Market reference source", str(market_range["range_source"]))
+            st.metric("Market reference count", int(market_range["comparable_count"]))
+            st.caption(f"Market reference match keys: {market_range['matched_on'] or 'fallback'}")
             tech_col1, tech_col2 = st.columns(2)
             with tech_col1:
                 st.metric("Ensemble low", f"{prediction['ensemble_range_low']:.2f} EUR")
