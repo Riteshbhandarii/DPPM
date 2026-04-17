@@ -482,6 +482,56 @@ def generate_xgboost_search_configs(
     return configs
 
 
+def generate_random_forest_search_configs(
+    random_trials: int,
+    random_seed: int,
+) -> dict[str, dict[str, Any]]:
+    """Create a wider random-forest search space while keeping the notebook finalists as anchors."""
+
+    rng = np.random.default_rng(random_seed)
+    configs = {name: dict(config) for name, config in RANDOM_FOREST_CONFIGS.items()}
+    seen_signatures = {make_config_signature(config) for config in configs.values()}
+    onehot_frequency_choices = [2, 3, 5, 8, 12]
+    max_features_choices: list[str | float] = ["sqrt", "log2", 0.35, 0.5, 0.7, 0.9]
+    max_samples_choices: list[float | None] = [None, 0.6, 0.75, 0.9]
+    max_depth_choices: list[int | None] = [None, 12, 18, 24, 32]
+
+    trial_id = 1
+    while len(configs) < len(RANDOM_FOREST_CONFIGS) + random_trials:
+        target_mode = str(rng.choice(["raw", "log"]))
+        bootstrap = bool(rng.integers(0, 2))
+        max_samples = None
+        if bootstrap:
+            max_samples = max_samples_choices[int(rng.integers(0, len(max_samples_choices)))]
+        config = {
+            "target_mode": target_mode,
+            "onehot_min_frequency": int(rng.choice(onehot_frequency_choices)),
+            "model_params": {
+                "n_estimators": int(rng.integers(300, 1401)),
+                "min_samples_leaf": int(rng.integers(1, 7)),
+                "min_samples_split": int(rng.integers(2, 13)),
+                "max_features": rng.choice(max_features_choices).item()
+                if hasattr(rng.choice(max_features_choices), "item")
+                else rng.choice(max_features_choices),
+                "bootstrap": bootstrap,
+                "max_depth": rng.choice(max_depth_choices).item()
+                if hasattr(rng.choice(max_depth_choices), "item")
+                else rng.choice(max_depth_choices),
+                "max_samples": max_samples,
+            },
+        }
+
+        signature = make_config_signature(config)
+        if signature in seen_signatures:
+            continue
+
+        seen_signatures.add(signature)
+        configs[f"random_search_{trial_id:03d}"] = config
+        trial_id += 1
+
+    return configs
+
+
 def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, Any]:
     """Recreate the trusted feature variants used by each model family."""
 
@@ -874,6 +924,88 @@ def screen_xgboost_candidates(
     return screening_results_df, finalists
 
 
+def screen_random_forest_candidates(
+    train_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
+    feature_sets: dict[str, list[str]],
+    configs: dict[str, dict[str, Any]],
+    top_k_finalists: int,
+) -> tuple[pd.DataFrame, list[dict[str, Any]]]:
+    """Score a broad random-forest search space on the fixed validation split before grouped CV."""
+
+    y_train = train_df[TARGET_COLUMN].copy()
+    y_validation = validation_df[TARGET_COLUMN].copy()
+    total_candidates = len(feature_sets) * len(configs)
+    current_candidate = 0
+    screening_rows = []
+
+    for feature_variant_name, feature_list in feature_sets.items():
+        X_train = train_df[feature_list].copy()
+        X_validation = validation_df[feature_list].copy()
+
+        for config_name, config in configs.items():
+            current_candidate += 1
+            print(
+                f"[screen {current_candidate}/{total_candidates}] "
+                f"{feature_variant_name} | {config_name}"
+            )
+            model = fit_random_forest(X_train, y_train, config)
+            raw_predictions = model.predict(X_validation)
+            validation_predictions = convert_predictions_to_eur(
+                raw_predictions,
+                config["target_mode"],
+                y_train_reference=y_train,
+            )
+            screening_rows.append(
+                {
+                    "model_type": "random_forest",
+                    "feature_variant": feature_variant_name,
+                    "config_name": config_name,
+                    "target_mode": config["target_mode"],
+                    "feature_count": len(feature_list),
+                    "validation_MAE": float(mean_absolute_error(y_validation, validation_predictions)),
+                    "validation_RMSE": float(
+                        np.sqrt(mean_squared_error(y_validation, validation_predictions))
+                    ),
+                    "validation_R2": float(r2_score(y_validation, validation_predictions)),
+                    "feature_names": feature_list,
+                    "config": config,
+                }
+            )
+
+    screening_results_df = pd.DataFrame(screening_rows).sort_values(
+        ["validation_MAE", "validation_RMSE", "feature_count"],
+        ascending=[True, True, True],
+    ).reset_index(drop=True)
+
+    finalists = []
+    seen_combinations = set()
+    best_per_feature_variant = (
+        screening_results_df.sort_values(["validation_MAE", "validation_RMSE"])
+        .groupby("feature_variant", as_index=False)
+        .head(1)
+    )
+
+    for _, row in best_per_feature_variant.iterrows():
+        combination_key = (row["feature_variant"], row["config_name"])
+        if combination_key in seen_combinations:
+            continue
+        finalists.append(row.to_dict())
+        seen_combinations.add(combination_key)
+
+    for _, row in screening_results_df.iterrows():
+        if len(finalists) >= top_k_finalists:
+            break
+        combination_key = (row["feature_variant"], row["config_name"])
+        if combination_key in seen_combinations:
+            continue
+        finalists.append(row.to_dict())
+        seen_combinations.add(combination_key)
+
+    finalists = finalists[:top_k_finalists]
+    return screening_results_df, finalists
+
+
 def evaluate_selected_xgboost_candidates(
     train_df: pd.DataFrame,
     validation_df: pd.DataFrame,
@@ -991,6 +1123,106 @@ def evaluate_selected_xgboost_candidates(
     final_summary = {
         **best_candidate,
         "best_iteration": metadata.get("best_iteration"),
+        **regression_metrics(y_validation, validation_predictions),
+    }
+    return cv_results_df, final_summary
+
+
+def evaluate_selected_random_forest_candidates(
+    train_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
+    selected_candidates: list[dict[str, Any]],
+    cv_splits: int,
+) -> tuple[pd.DataFrame, dict[str, Any]]:
+    """Run grouped cross-validation only on the best screened random-forest candidates."""
+
+    if not selected_candidates:
+        raise RuntimeError("No random-forest finalists were provided for grouped cross-validation.")
+
+    y_train = train_df[TARGET_COLUMN].copy()
+    y_validation = validation_df[TARGET_COLUMN].copy()
+    train_groups = train_df[GROUP_COLUMN]
+    group_kfold = GroupKFold(n_splits=cv_splits)
+    cv_rows = []
+
+    for candidate_index, candidate in enumerate(selected_candidates, start=1):
+        print(
+            f"[cv {candidate_index}/{len(selected_candidates)}] "
+            f"{candidate['feature_variant']} | {candidate['config_name']}"
+        )
+        feature_list = list(candidate["feature_names"])
+        config = dict(candidate["config"])
+        X_candidate_full = train_df[feature_list].copy()
+        fold_metrics = []
+
+        for fold_id, (fold_train_idx, fold_validation_idx) in enumerate(
+            group_kfold.split(X_candidate_full, y_train, train_groups),
+            start=1,
+        ):
+            print(
+                f"  fold {fold_id}/{cv_splits} for "
+                f"{candidate['feature_variant']} | {candidate['config_name']}"
+            )
+            X_fold_train = X_candidate_full.iloc[fold_train_idx].copy()
+            X_fold_validation = X_candidate_full.iloc[fold_validation_idx].copy()
+            y_fold_train = y_train.iloc[fold_train_idx].copy()
+            y_fold_validation = y_train.iloc[fold_validation_idx].copy()
+
+            model = fit_random_forest(X_fold_train, y_fold_train, config)
+            raw_predictions = model.predict(X_fold_validation)
+            fold_predictions = convert_predictions_to_eur(
+                raw_predictions,
+                config["target_mode"],
+                y_train_reference=y_fold_train,
+            )
+            fold_metrics.append(
+                {
+                    "fold": fold_id,
+                    "validation_MAE": float(mean_absolute_error(y_fold_validation, fold_predictions)),
+                    "validation_RMSE": float(
+                        np.sqrt(mean_squared_error(y_fold_validation, fold_predictions))
+                    ),
+                    "validation_R2": float(r2_score(y_fold_validation, fold_predictions)),
+                }
+            )
+
+        fold_metrics_df = pd.DataFrame(fold_metrics)
+        cv_rows.append(
+            {
+                "model_type": "random_forest",
+                "feature_variant": candidate["feature_variant"],
+                "config_name": candidate["config_name"],
+                "target_mode": config["target_mode"],
+                "feature_count": len(feature_list),
+                "screen_validation_MAE": candidate["validation_MAE"],
+                "screen_validation_RMSE": candidate["validation_RMSE"],
+                "cv_mean_MAE": float(fold_metrics_df["validation_MAE"].mean()),
+                "cv_std_MAE": float(fold_metrics_df["validation_MAE"].std(ddof=0)),
+                "cv_mean_RMSE": float(fold_metrics_df["validation_RMSE"].mean()),
+                "cv_mean_R2": float(fold_metrics_df["validation_R2"].mean()),
+                "feature_names": feature_list,
+                "config": config,
+            }
+        )
+
+    cv_results_df = pd.DataFrame(cv_rows).sort_values(
+        ["cv_mean_MAE", "cv_mean_RMSE", "screen_validation_MAE"],
+        ascending=[True, True, True],
+    ).reset_index(drop=True)
+    best_candidate = cv_results_df.iloc[0].to_dict()
+
+    X_train_best = train_df[best_candidate["feature_names"]].copy()
+    X_validation_best = validation_df[best_candidate["feature_names"]].copy()
+    fitted_model = fit_random_forest(X_train_best, y_train, best_candidate["config"])
+    raw_predictions = fitted_model.predict(X_validation_best)
+    validation_predictions = convert_predictions_to_eur(
+        raw_predictions,
+        best_candidate["config"]["target_mode"],
+        y_train_reference=y_train,
+    )
+
+    final_summary = {
+        **best_candidate,
         **regression_metrics(y_validation, validation_predictions),
     }
     return cv_results_df, final_summary

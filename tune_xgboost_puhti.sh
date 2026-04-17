@@ -22,7 +22,7 @@ echo "HOST: $(hostname)"
 echo "TIME: $(date)"
 python3 -V
 
-python3 scripts/tune_xgboost.py \
+python3 -u scripts/tune_xgboost.py \
   --train-path datasets/splits/train_grouped.csv \
   --validation-path datasets/splits/validation_grouped.csv \
   --output-dir artifacts/xgboost_tuning \
