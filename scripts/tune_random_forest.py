@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
 from src.tree_modeling import (
     build_feature_catalog,
     evaluate_selected_random_forest_candidates,
+    generate_random_forest_refinement_configs,
     generate_random_forest_search_configs,
     load_training_data,
     save_tuning_reports,
@@ -40,9 +41,15 @@ def parse_args():
         help="Number of additional random-search random-forest configurations to sample.",
     )
     parser.add_argument(
+        "--refinement-trials",
+        type=int,
+        default=16,
+        help="Number of local refinement configurations sampled around the best screened result.",
+    )
+    parser.add_argument(
         "--top-k-finalists",
         type=int,
-        default=8,
+        default=10,
         help="Number of screened candidates promoted to grouped cross-validation.",
     )
     parser.add_argument(
@@ -78,12 +85,49 @@ def main():
         top_k_finalists=args.top_k_finalists,
     )
 
-    # Promote only the best screened candidates to grouped cross-validation.
-    print(f"Promoting {len(finalists)} screened candidates to grouped cross-validation.")
+    # Narrow the next search around the best screened random-forest candidate.
+    best_screened_candidate = screening_results_df.iloc[0].to_dict()
+    print(
+        "Best broad-screen candidate before refinement:",
+        best_screened_candidate["feature_variant"],
+        best_screened_candidate["config_name"],
+        f"MAE={best_screened_candidate['validation_MAE']:.4f}",
+    )
+    refinement_feature_sets = {
+        best_screened_candidate["feature_variant"]: list(best_screened_candidate["feature_names"])
+    }
+    refinement_configs = generate_random_forest_refinement_configs(
+        base_config=best_screened_candidate["config"],
+        refinement_trials=args.refinement_trials,
+        random_seed=args.random_seed + 1000,
+    )
+    print(
+        f"Generated {len(refinement_configs)} local refinement configurations "
+        f"for feature variant {best_screened_candidate['feature_variant']}."
+    )
+    refinement_results_df, refinement_finalists = screen_random_forest_candidates(
+        train_df=prepared_data.train_df,
+        validation_df=prepared_data.validation_df,
+        feature_sets=refinement_feature_sets,
+        configs=refinement_configs,
+        top_k_finalists=args.top_k_finalists,
+    )
+
+    # Promote the combined broad-search and refinement finalists to grouped cross-validation.
+    combined_finalists = []
+    seen_finalists = set()
+    for candidate in finalists + refinement_finalists:
+        finalist_key = (candidate["feature_variant"], candidate["config_name"])
+        if finalist_key in seen_finalists:
+            continue
+        combined_finalists.append(candidate)
+        seen_finalists.add(finalist_key)
+
+    print(f"Promoting {len(combined_finalists)} screened candidates to grouped cross-validation.")
     cv_results_df, summary = evaluate_selected_random_forest_candidates(
         train_df=prepared_data.train_df,
         validation_df=prepared_data.validation_df,
-        selected_candidates=finalists,
+        selected_candidates=combined_finalists,
         cv_splits=args.cv_splits,
     )
 
@@ -92,6 +136,10 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     screening_results_df.drop(columns=["feature_names", "config"]).to_csv(
         output_dir / "screening_results.csv",
+        index=False,
+    )
+    refinement_results_df.drop(columns=["feature_names", "config"]).to_csv(
+        output_dir / "refinement_results.csv",
         index=False,
     )
 
