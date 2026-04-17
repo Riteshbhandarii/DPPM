@@ -132,11 +132,20 @@ The table below summarizes the best **trusted validation result** currently avai
 
 The latest Puhti-based scripted tuning kept the random forest configuration as the strongest trusted validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a much more competitive validation score.
 
+## Final test result
+
+After model selection was completed on the grouped training and validation splits, the selected random forest configuration was retrained on `datasets/splits/train_grouped.csv` plus `datasets/splits/validation_grouped.csv` and evaluated once on the held-out `datasets/splits/test_grouped.csv` split.
+
+| Model | Selected feature set | Test MAE | Test RMSE | Test R2 |
+| --- | --- | ---: | ---: | ---: |
+| Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
+
+The final held-out test result indicates that the selected random forest model remains strong as a spare-part price estimation and decision-support tool, while showing a moderate generalization drop compared with the validation split.
+
 ## Remaining work
 
 Based on the current repo state, the main work still to be done is:
 
-- Run the selected random forest configuration on the held-out `datasets/splits/test_grouped.csv` split and report the true final test metrics.
 - Freeze the environment in a `requirements.txt` or `pyproject.toml`, since setup is currently manual.
 - Save the final preprocessing and model artifact in a deployment-friendly format.
 - Build the planned FastAPI and Streamlit layers around the selected final model.
