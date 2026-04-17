@@ -428,6 +428,15 @@ def sample_log_uniform(
     return float(np.exp(rng.uniform(np.log(low), np.log(high))))
 
 
+def sample_from_choices(
+    rng: np.random.Generator,
+    choices: list[Any],
+) -> Any:
+    """Sample one item from a Python list without coercing mixed types."""
+
+    return choices[int(rng.integers(0, len(choices)))]
+
+
 def generate_xgboost_search_configs(
     random_trials: int,
     random_seed: int,
@@ -502,21 +511,17 @@ def generate_random_forest_search_configs(
         bootstrap = bool(rng.integers(0, 2))
         max_samples = None
         if bootstrap:
-            max_samples = max_samples_choices[int(rng.integers(0, len(max_samples_choices)))]
+            max_samples = sample_from_choices(rng, max_samples_choices)
         config = {
             "target_mode": target_mode,
-            "onehot_min_frequency": int(rng.choice(onehot_frequency_choices)),
+            "onehot_min_frequency": int(sample_from_choices(rng, onehot_frequency_choices)),
             "model_params": {
                 "n_estimators": int(rng.integers(300, 1401)),
                 "min_samples_leaf": int(rng.integers(1, 7)),
                 "min_samples_split": int(rng.integers(2, 13)),
-                "max_features": rng.choice(max_features_choices).item()
-                if hasattr(rng.choice(max_features_choices), "item")
-                else rng.choice(max_features_choices),
+                "max_features": sample_from_choices(rng, max_features_choices),
                 "bootstrap": bootstrap,
-                "max_depth": rng.choice(max_depth_choices).item()
-                if hasattr(rng.choice(max_depth_choices), "item")
-                else rng.choice(max_depth_choices),
+                "max_depth": sample_from_choices(rng, max_depth_choices),
                 "max_samples": max_samples,
             },
         }
