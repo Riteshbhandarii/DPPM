@@ -2,11 +2,13 @@
 
 import json
 from pathlib import Path
+import warnings
 
 import joblib
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
+from sklearn.exceptions import InconsistentVersionWarning
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 
@@ -40,7 +42,11 @@ def load_random_forest_bundle(bundle_dir):
 
     bundle_path = Path(bundle_dir)
     metadata = json.loads((bundle_path / "model_metadata.json").read_text(encoding="utf-8"))
-    model = joblib.load(bundle_path / "model.joblib")
+    with warnings.catch_warnings():
+        # The saved thesis artifact was produced with sklearn 1.7.2 and is loaded
+        # in a 1.8.x environment during local analysis and demo use.
+        warnings.simplefilter("ignore", InconsistentVersionWarning)
+        model = joblib.load(bundle_path / "model.joblib")
     patch_simple_imputer_compatibility(model)
 
     return {
