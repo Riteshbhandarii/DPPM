@@ -29,6 +29,7 @@ OPERATOR_FIELDS = [
     "year_end",
     "oem_number",
 ]
+QUALITY_GRADE_OPTIONS = ["A1", "A2", "A3", "B1", "B2", "B3", "C", "C1", "C2"]
 
 
 @st.cache_resource
@@ -204,6 +205,7 @@ def initialize_form_state(reference_rows):
     st.session_state["input_values"] = {
         feature_name: default_row.get(feature_name) for feature_name in OPERATOR_FIELDS
     }
+    st.session_state.setdefault("submitted_input_values", dict(st.session_state["input_values"]))
 
 
 def render_operator_form(reference_rows):
@@ -325,7 +327,7 @@ def render_operator_form(reference_rows):
     detail_col1, detail_col2, detail_col3 = st.columns(3)
 
     with detail_col1:
-        quality_options = sorted_unique_options(detail_scope["quality_grade"])
+        quality_options = QUALITY_GRADE_OPTIONS
         current_values["quality_grade"] = choose_option(
             "Quality grade",
             quality_options,
@@ -334,13 +336,22 @@ def render_operator_form(reference_rows):
         )
 
     with detail_col2:
-        repair_options = sorted_unique_options(detail_scope["repair_status"])
-        current_values["repair_status"] = choose_option(
-            "Repair status",
-            repair_options,
-            current_values.get("repair_status"),
-            key="repair_status_select",
-        )
+        repair_options = sorted_unique_options(reference_rows["repair_status"])
+        if len(repair_options) <= 1:
+            current_values["repair_status"] = repair_options[0] if repair_options else "original_valid"
+            st.text_input(
+                "Repair status",
+                value=current_values["repair_status"],
+                disabled=True,
+                key="repair_status_display",
+            )
+        else:
+            current_values["repair_status"] = choose_option(
+                "Repair status",
+                repair_options,
+                current_values.get("repair_status"),
+                key="repair_status_select",
+            )
 
     mileage_series = pd.to_numeric(reference_rows["mileage"], errors="coerce")
     default_mileage = current_values.get("mileage")
@@ -393,51 +404,58 @@ def main():
             }
             st.rerun()
 
-    updated_values = render_operator_form(reference_rows)
+    with st.form("prediction_form"):
+        updated_values = render_operator_form(reference_rows)
+        submitted = st.form_submit_button("Estimate Price", type="primary")
+
     st.session_state["input_values"] = updated_values
+    if submitted:
+        st.session_state["submitted_input_values"] = dict(updated_values)
 
-    full_input = build_full_input(reference_rows, updated_values)
-    prediction_input = {feature_name: full_input.get(feature_name) for feature_name in feature_names}
+    submitted_values = st.session_state.get("submitted_input_values")
+    if submitted_values:
+        full_input = build_full_input(reference_rows, submitted_values)
+        prediction_input = {feature_name: full_input.get(feature_name) for feature_name in feature_names}
 
-    st.subheader("Prediction")
-    prediction = predict_price_ranges(bundle, [prediction_input]).iloc[0]
-    market_range = comparable_market_range(
-        reference_rows=reference_rows,
-        visible_values=updated_values,
-        predicted_price=float(prediction["predicted_price"]),
-    )
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Point estimate", f"{prediction['predicted_price']:.2f} EUR")
-        st.metric("Lower bound", f"{market_range['range_low']:.2f} EUR")
-    with col2:
-        st.metric("Upper bound", f"{market_range['range_high']:.2f} EUR")
-        st.metric("Range width", f"{market_range['range_width']:.2f} EUR")
-
-    st.info(
-        "The displayed range is based on similar historical rows when available, with a minimum width floor to avoid fake certainty."
-    )
-
-    with st.expander("Technical Details"):
-        st.write("Hidden model fields are filled from the closest saved reference row and simple derived values.")
-        st.metric("Range source", str(market_range["range_source"]))
-        st.metric("Comparable rows used", int(market_range["comparable_count"]))
-        st.caption(f"Matched on: {market_range['matched_on'] or 'fallback'}")
-        tech_col1, tech_col2 = st.columns(2)
-        with tech_col1:
-            st.metric("Displayed low", f"{market_range['range_low']:.2f} EUR")
-            st.metric("Displayed high", f"{market_range['range_high']:.2f} EUR")
-            st.metric("Ensemble low", f"{prediction['ensemble_range_low']:.2f} EUR")
-            st.metric("Ensemble high", f"{prediction['ensemble_range_high']:.2f} EUR")
-        with tech_col2:
-            st.metric("Calibrated low", f"{prediction['price_range_low']:.2f} EUR")
-            st.metric("Calibrated high", f"{prediction['price_range_high']:.2f} EUR")
-            st.metric("Ensemble width", f"{prediction['ensemble_range_width']:.2f} EUR")
-            st.metric("Range source", str(prediction["uncertainty_source"]))
-        st.dataframe(
-            pd.DataFrame({"operator_input": updated_values}).T,
-            use_container_width=True,
+        st.subheader("Prediction")
+        prediction = predict_price_ranges(bundle, [prediction_input]).iloc[0]
+        market_range = comparable_market_range(
+            reference_rows=reference_rows,
+            visible_values=submitted_values,
+            predicted_price=float(prediction["predicted_price"]),
         )
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Point estimate", f"{prediction['predicted_price']:.2f} EUR")
+            st.metric("Lower bound", f"{market_range['range_low']:.2f} EUR")
+        with col2:
+            st.metric("Upper bound", f"{market_range['range_high']:.2f} EUR")
+            st.metric("Range width", f"{market_range['range_width']:.2f} EUR")
+
+        st.info(
+            "The displayed range is based on similar historical rows when available, with a minimum width floor to avoid fake certainty."
+        )
+
+        with st.expander("Technical Details"):
+            st.write("Hidden model fields are filled from the closest saved reference row and simple derived values.")
+            st.metric("Range source", str(market_range["range_source"]))
+            st.metric("Comparable rows used", int(market_range["comparable_count"]))
+            st.caption(f"Matched on: {market_range['matched_on'] or 'fallback'}")
+            tech_col1, tech_col2 = st.columns(2)
+            with tech_col1:
+                st.metric("Displayed low", f"{market_range['range_low']:.2f} EUR")
+                st.metric("Displayed high", f"{market_range['range_high']:.2f} EUR")
+                st.metric("Ensemble low", f"{prediction['ensemble_range_low']:.2f} EUR")
+                st.metric("Ensemble high", f"{prediction['ensemble_range_high']:.2f} EUR")
+            with tech_col2:
+                st.metric("Calibrated low", f"{prediction['price_range_low']:.2f} EUR")
+                st.metric("Calibrated high", f"{prediction['price_range_high']:.2f} EUR")
+                st.metric("Ensemble width", f"{prediction['ensemble_range_width']:.2f} EUR")
+                st.metric("Range source", str(prediction["uncertainty_source"]))
+            st.dataframe(
+                pd.DataFrame({"operator_input": submitted_values}).T,
+                use_container_width=True,
+            )
 
 
 if __name__ == "__main__":
