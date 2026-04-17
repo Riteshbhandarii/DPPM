@@ -76,6 +76,15 @@ def choose_option(label, options, current_value, key):
     return st.selectbox(label, options=options, index=index, key=key)
 
 
+def keep_valid_choice(current_value, options):
+    """Drop stale selections when parent filters change."""
+
+    normalized_current = None if pd.isna(current_value) else str(current_value)
+    if normalized_current in options:
+        return normalized_current
+    return options[0] if options else None
+
+
 def derive_year_fields(values):
     """Fill the year helper features expected by the model."""
 
@@ -218,6 +227,7 @@ def render_operator_form(reference_rows):
 
     with vehicle_col1:
         brand_options = sorted_unique_options(reference_rows["brand"])
+        current_values["brand"] = keep_valid_choice(current_values.get("brand"), brand_options)
         current_values["brand"] = choose_option(
             "Brand",
             brand_options,
@@ -228,6 +238,7 @@ def render_operator_form(reference_rows):
     model_rows = filter_reference_rows(reference_rows, {"brand": current_values.get("brand")})
     with vehicle_col2:
         model_options = sorted_unique_options(model_rows["model"])
+        current_values["model"] = keep_valid_choice(current_values.get("model"), model_options)
         current_values["model"] = choose_option(
             "Model",
             model_options,
@@ -258,6 +269,7 @@ def render_operator_form(reference_rows):
             candidate_default = f"{int(current_values['year_start'])}-{int(current_values['year_end'])}"
             if candidate_default in year_options:
                 default_year = candidate_default
+        default_year = keep_valid_choice(default_year, year_options)
         selected_year = choose_option(
             "Compatible years",
             year_options,
@@ -286,6 +298,7 @@ def render_operator_form(reference_rows):
 
     with part_col1:
         category_options = sorted_unique_options(part_scope["category"])
+        current_values["category"] = keep_valid_choice(current_values.get("category"), category_options)
         current_values["category"] = choose_option(
             "Part group",
             category_options,
@@ -299,6 +312,7 @@ def render_operator_form(reference_rows):
     )
     with part_col2:
         subcategory_options = sorted_unique_options(subcategory_scope["subcategory"])
+        current_values["subcategory"] = keep_valid_choice(current_values.get("subcategory"), subcategory_options)
         current_values["subcategory"] = choose_option(
             "Part area",
             subcategory_options,
@@ -312,6 +326,7 @@ def render_operator_form(reference_rows):
     )
     with part_col3:
         part_name_options = sorted_unique_options(part_name_scope["part_name"])
+        current_values["part_name"] = keep_valid_choice(current_values.get("part_name"), part_name_options)
         current_values["part_name"] = choose_option(
             "Part name",
             part_name_options,
@@ -328,6 +343,7 @@ def render_operator_form(reference_rows):
 
     with detail_col1:
         quality_options = QUALITY_GRADE_OPTIONS
+        current_values["quality_grade"] = keep_valid_choice(current_values.get("quality_grade"), quality_options)
         current_values["quality_grade"] = choose_option(
             "Quality grade",
             quality_options,
