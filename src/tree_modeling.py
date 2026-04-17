@@ -643,6 +643,73 @@ def generate_random_forest_search_configs(
     return configs
 
 
+def generate_random_forest_refinement_configs(
+    base_config: dict[str, Any],
+    refinement_trials: int,
+    random_seed: int,
+) -> dict[str, dict[str, Any]]:
+    """Create a local random-forest search around the best screened configuration."""
+
+    rng = np.random.default_rng(random_seed)
+    base_params = dict(base_config["model_params"])
+    configs = {"refinement_anchor": base_config}
+    seen_signatures = {make_config_signature(base_config)}
+
+    onehot_frequency_choices = [2, 3, 4, 5, 6, 8]
+    max_features_choices: list[str | float] = ["sqrt", "log2", 0.35, 0.45, 0.5, 0.55, 0.65]
+    max_samples_choices: list[float | None] = [None, 0.6, 0.75, 0.85, 0.95]
+    max_depth_choices: list[int | None] = [None, 12, 16, 20, 24, 32]
+
+    def clamp_int(value: int, low: int, high: int) -> int:
+        return max(low, min(high, value))
+
+    trial_id = 1
+    while len(configs) < refinement_trials + 1:
+        bootstrap = bool(base_params.get("bootstrap", True))
+        if rng.random() < 0.35:
+            bootstrap = not bootstrap
+
+        max_samples = None
+        if bootstrap:
+            max_samples = sample_from_choices(rng, max_samples_choices)
+
+        config = {
+            "target_mode": base_config["target_mode"],
+            "onehot_min_frequency": int(sample_from_choices(rng, onehot_frequency_choices)),
+            "model_params": {
+                "n_estimators": clamp_int(
+                    int(round(base_params["n_estimators"] * float(rng.uniform(0.70, 1.80)))),
+                    300,
+                    1800,
+                ),
+                "min_samples_leaf": clamp_int(
+                    int(base_params.get("min_samples_leaf", 1)) + int(rng.integers(-1, 3)),
+                    1,
+                    6,
+                ),
+                "min_samples_split": clamp_int(
+                    int(base_params.get("min_samples_split", 2)) + int(rng.integers(-2, 5)),
+                    2,
+                    14,
+                ),
+                "max_features": sample_from_choices(rng, max_features_choices),
+                "bootstrap": bootstrap,
+                "max_depth": sample_from_choices(rng, max_depth_choices),
+                "max_samples": max_samples,
+            },
+        }
+
+        signature = make_config_signature(config)
+        if signature in seen_signatures:
+            continue
+
+        seen_signatures.add(signature)
+        configs[f"refinement_search_{trial_id:03d}"] = config
+        trial_id += 1
+
+    return configs
+
+
 def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, Any]:
     """Recreate the trusted feature variants used by each model family."""
 
