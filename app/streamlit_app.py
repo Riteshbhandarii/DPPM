@@ -353,7 +353,7 @@ def render_operator_form(reference_rows):
         part_name_scope,
         {"part_name": current_values.get("part_name")},
     )
-    detail_col1, detail_col2, detail_col3 = st.columns(3)
+    detail_col1, detail_col2 = st.columns(2)
 
     with detail_col1:
         quality_options = QUALITY_GRADE_OPTIONS
@@ -365,28 +365,13 @@ def render_operator_form(reference_rows):
             key="quality_grade_select",
         )
 
-    with detail_col2:
-        repair_options = sorted_unique_options(reference_rows["repair_status"])
-        if len(repair_options) <= 1:
-            current_values["repair_status"] = repair_options[0] if repair_options else "original_valid"
-            st.text_input(
-                "Repair status",
-                value=current_values["repair_status"],
-                disabled=True,
-                key="repair_status_display",
-            )
-        else:
-            current_values["repair_status"] = choose_option(
-                "Repair status",
-                repair_options,
-                current_values.get("repair_status"),
-                key="repair_status_select",
-            )
+    repair_options = sorted_unique_options(reference_rows["repair_status"])
+    current_values["repair_status"] = repair_options[0] if repair_options else "original_valid"
 
     mileage_series = pd.to_numeric(reference_rows["mileage"], errors="coerce")
     default_mileage = current_values.get("mileage")
     default_mileage = 0.0 if pd.isna(default_mileage) else float(default_mileage)
-    with detail_col3:
+    with detail_col2:
         current_values["mileage"] = st.number_input(
             "Vehicle mileage",
             min_value=0.0,
@@ -458,13 +443,34 @@ def main():
             "Expected market range",
             f"{market_range['range_low']:.0f}-{market_range['range_high']:.0f} EUR",
         )
-        st.caption(
-            f"Market reference count: {int(market_range['comparable_count'])}"
+        if market_range["comparable_count"] >= 20:
+            support_text = "Strong"
+        elif market_range["comparable_count"] >= 8:
+            support_text = "Moderate"
+        else:
+            support_text = "Limited"
+        st.caption(f"Market support: {support_text} ({int(market_range['comparable_count'])} matching references)")
+
+        st.write(
+            f"Estimated price for this part is around {prediction['predicted_price']:.0f} EUR. "
+            f"Comparable market references suggest a range of {market_range['range_low']:.0f}-{market_range['range_high']:.0f} EUR."
         )
 
         st.info(
             "Expected market range is derived from matching historical market examples in the saved reference data. It is a market reference signal, not pure model uncertainty."
         )
+
+        st.subheader("Why this price?")
+        st.caption("SHAP-based explanation placeholder. This section will show the strongest positive and negative price drivers once the SHAP pipeline is connected.")
+        placeholder_col1, placeholder_col2 = st.columns(2)
+        with placeholder_col1:
+            st.markdown("**Positive drivers**")
+            st.write("- SHAP explanation will be added here")
+        with placeholder_col2:
+            st.markdown("**Negative drivers**")
+            st.write("- SHAP explanation will be added here")
+
+        st.caption("Decision-support prototype for dismantling-part pricing. Final pricing decisions should still include business judgment.")
 
         with st.expander("Technical Details"):
             st.write("Hidden model fields are filled from the closest saved reference row and simple derived values.")
