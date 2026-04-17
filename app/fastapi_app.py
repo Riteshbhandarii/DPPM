@@ -2,9 +2,15 @@
 
 import os
 from pathlib import Path
+import sys
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+
+# Add the repository root so local imports work when the app is launched directly.
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.random_forest_serving import load_random_forest_bundle, predict_price_ranges
 
