@@ -12,6 +12,7 @@ The current repository includes a working crawler, intermediate datasets, final 
 
 ## Repository structure
 
+- `requirements.txt`: pinned local thesis/demo dependencies, including the current SHAP-safe analysis versions.
 - `crawler/`: Playwright-based crawler package for collecting marketplace listings.
 - `crawler/crawler_datasets/`: archived crawler outputs; new runs are written under `crawler/crawler_datasets/new/`.
 - `datasets/traficom_outputs/`: cleaned Traficom summary tables used for enrichment.
@@ -167,6 +168,130 @@ Run the FastAPI app locally:
 ```bash
 uvicorn app.fastapi_app:app --reload
 ```
+
+## Deploying the tool
+
+The repository currently supports two practical deployment shapes:
+
+### 1. Streamlit demo deployment
+
+Use this when the goal is to present the PoC as an interactive decision-support tool.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+playwright install firefox
+streamlit run app/streamlit_app.py
+```
+
+Notes:
+
+- The app expects the saved model bundle at `artifacts/random_forest_final/full_data_bundle`.
+- The UI uses the random-forest point estimate plus a comparable market range from `reference_rows.csv`.
+- This is the simplest deployment option for demos, thesis presentations, and supervisor review.
+
+### 2. FastAPI model service deployment
+
+Use this when the goal is to expose the model as a backend API.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.fastapi_app:app --host 0.0.0.0 --port 8000
+```
+
+Optional bundle override:
+
+```bash
+MODEL_BUNDLE_DIR=/absolute/path/to/full_data_bundle uvicorn app.fastapi_app:app --host 0.0.0.0 --port 8000
+```
+
+The main endpoints are:
+
+- `GET /health`
+- `GET /model-info`
+- `POST /predict`
+
+Example request:
+
+```json
+{
+  "rows": [
+    {
+      "part_name": "Brake Caliper",
+      "quality_grade": "A1",
+      "oem_number": "FI02042722A",
+      "mileage": 224000,
+      "brand": "toyota",
+      "model": "corolla",
+      "category": "brakes",
+      "subcategory": "right rear",
+      "year_start": 2019,
+      "year_end": 2027,
+      "repair_status": "original_valid",
+      "brand_is_known_model_family": 1,
+      "model_total_registered": 0,
+      "model_median_vehicle_age": 0,
+      "model_mean_vehicle_age": 0,
+      "model_median_mileage": 0,
+      "model_mean_mileage": 0,
+      "model_median_engine_cc": 0,
+      "model_median_power_kw": 0,
+      "model_median_mass_kg": 0,
+      "model_share_of_market": 0,
+      "model_share_within_brand": 0,
+      "model_share_over_10y": 0,
+      "model_share_over_200k_km": 0,
+      "model_automatic_share": 0,
+      "model_petrol_share": 0,
+      "model_diesel_share": 0,
+      "model_ev_share": 0,
+      "model_hybrid_share": 0,
+      "model_turbo_share": 0,
+      "model_firstreg_total_2014_2026": 0,
+      "model_firstreg_year_span": 0,
+      "model_firstreg_peak_year": 0,
+      "model_firstreg_peak_count": 0,
+      "model_firstreg_recent_share": 0,
+      "model_firstreg_old_share": 0,
+      "model_firstreg_weighted_year": 0,
+      "brand_total_registered": 0,
+      "brand_median_vehicle_age": 0,
+      "brand_mean_vehicle_age": 0,
+      "brand_median_mileage": 0,
+      "brand_mean_mileage": 0,
+      "brand_median_engine_cc": 0,
+      "brand_median_power_kw": 0,
+      "brand_median_mass_kg": 0,
+      "brand_share_of_market": 0,
+      "brand_share_over_10y": 0,
+      "brand_share_over_200k_km": 0,
+      "brand_automatic_share": 0,
+      "brand_petrol_share": 0,
+      "brand_diesel_share": 0,
+      "brand_ev_share": 0,
+      "brand_hybrid_share": 0,
+      "brand_turbo_share": 0,
+      "brand_firstreg_total_2014_2026": 0,
+      "brand_firstreg_year_span": 0,
+      "brand_firstreg_peak_year": 0,
+      "brand_firstreg_peak_count": 0,
+      "brand_firstreg_recent_share": 0,
+      "brand_firstreg_old_share": 0,
+      "brand_firstreg_weighted_year": 0,
+      "mileage_missing_flag": 0,
+      "observations_so_far": 1,
+      "days_since_first_seen_so_far": 0
+    }
+  ]
+}
+```
+
+### Deployment recommendation for this thesis
+
+For thesis/demo use, deploy the Streamlit app as the presentation layer and treat the FastAPI app as the backend/service layer. The current repository is best understood as a PoC deployment target, not a production-hardened system.
 
 ## Current behavior of the demo UI
 
