@@ -1,6 +1,7 @@
 """Simple Streamlit UI for the final random-forest price estimator."""
 
 from pathlib import Path
+import re
 import sys
 
 import pandas as pd
@@ -30,6 +31,21 @@ OPERATOR_FIELDS = [
     "oem_number",
 ]
 QUALITY_GRADE_OPTIONS = ["A1", "A2", "A3", "B1", "B2", "B3", "C", "C1", "C2"]
+LOCATION_PATTERNS = {
+    "right rear": ("Right", "Rear"),
+    "left rear": ("Left", "Rear"),
+    "right front": ("Right", "Front"),
+    "left front": ("Left", "Front"),
+    "either side front": ("Either side", "Front"),
+    "either side rear": ("Either side", "Rear"),
+    "either side": ("Either side", None),
+    "right": ("Right", None),
+    "left": ("Left", None),
+    "rear": (None, "Rear"),
+    "front": (None, "Front"),
+    "centre": (None, "Centre"),
+}
+GENERIC_LOCATION_LABELS = {"all", "general", "any", "either side", "left", "right", "front", "rear", "centre"}
 
 
 @st.cache_resource
@@ -49,6 +65,76 @@ def build_example_label(row):
     )
 
 
+def clean_display_label(value):
+    """Convert noisy source labels into cleaner UI text without changing raw values."""
+
+    if pd.isna(value):
+        return ""
+
+    text = str(value).strip()
+    text = re.sub(r"\s*-\s*,\s*e-\s*$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*-\s*e-\s*$", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*-\s*$", "", text)
+    text = re.sub(r"\s+", " ", text).strip(" -")
+
+    replacements = {
+        "abs": "ABS",
+        "ac": "AC",
+        "airbag control unit": "Airbag control unit",
+        "airbag krocksensor": "Airbag impact sensor",
+        "contact roll airbag": "Airbag contact roll",
+        "fuse box / electricity central": "Fuse box / electrical central",
+        "gear box / drive axle / middle axle": "Drivetrain",
+        "parkeringshjälp frontsensor": "Parking assist front sensor",
+        "kamera utvändig": "Exterior camera",
+        "dörr styrenhet": "Door control unit",
+        "ljusinställning lägesgivare": "Headlight level sensor",
+        "komfort styrdon": "Comfort control unit",
+    }
+
+    lowered = text.lower()
+    if lowered in replacements:
+        return replacements[lowered]
+
+    if lowered in LOCATION_PATTERNS:
+        side, position = LOCATION_PATTERNS[lowered]
+        return " ".join(part for part in [side, position] if part) or "General"
+
+    return text[:1].upper() + text[1:]
+
+
+def build_option_label_map(options):
+    """Create unique display labels for raw options after cleanup."""
+
+    cleaned_values = {option: clean_display_label(option) for option in options}
+    counts = pd.Series(list(cleaned_values.values())).value_counts().to_dict()
+    label_map = {}
+
+    for option in options:
+        cleaned = cleaned_values[option]
+        if counts.get(cleaned, 0) <= 1:
+            label_map[option] = cleaned
+            continue
+
+        raw_text = str(option).strip()
+        raw_text = re.sub(r"\s+", " ", raw_text)
+        label_map[option] = f"{cleaned} [{raw_text}]"
+
+    return label_map
+
+
+def normalize_label_key(value):
+    """Normalize cleaned display labels for redundancy checks."""
+
+    if pd.isna(value):
+        return ""
+    text = clean_display_label(value)
+    text = re.sub(r"\s*\[[^\]]+\]\s*$", "", text)
+    text = re.sub(r"\s*\([^)]*\)\s*$", "", text)
+    text = re.sub(r"\s+", " ", text).strip().lower()
+    return text
+
+
 def sorted_unique_options(series):
     """Return stable alphabetical options without duplicates or NaNs."""
 
@@ -66,13 +152,16 @@ def filter_reference_rows(reference_rows, filters):
     return filtered
 
 
-def choose_option(label, options, current_value, key):
+def choose_option(label, options, current_value, key, label_map=None):
     """Render a selectbox with safe fallback handling."""
 
     if not options:
         return None
     normalized_current = None if pd.isna(current_value) else str(current_value)
     index = options.index(normalized_current) if normalized_current in options else 0
+    if label_map is not None:
+        format_func = lambda value: label_map.get(value, value)
+        return st.selectbox(label, options=options, index=index, key=key, format_func=format_func)
     return st.selectbox(label, options=options, index=index, key=key)
 
 
@@ -95,6 +184,91 @@ def sync_dependent_state(current_values, field_name, options, session_key):
         if session_value not in options:
             st.session_state[session_key] = valid_value
     return valid_value
+
+
+def parse_subcategory(raw_value):
+    """Split raw subcategory into a cleaned area label plus optional location fields."""
+
+    cleaned = clean_display_label(raw_value)
+    lowered = str(raw_value).strip().lower()
+    if lowered in LOCATION_PATTERNS:
+        side, position = LOCATION_PATTERNS[lowered]
+        return {
+            "area_label": "General",
+            "side_label": side,
+            "position_label": position,
+            "display_label": cleaned,
+        }
+
+    return {
+        "area_label": cleaned,
+        "side_label": None,
+        "position_label": None,
+        "display_label": cleaned,
+    }
+
+
+def extract_side_position(*texts):
+    """Extract side and position hints from one or more raw labels."""
+
+    side = None
+    position = None
+    candidate_texts = []
+    for text in texts:
+        if pd.isna(text):
+            continue
+        raw = str(text).strip()
+        candidate_texts.append(raw.lower())
+        candidate_texts.extend(match.lower() for match in re.findall(r"\(([^)]*)\)", raw))
+
+    for candidate in candidate_texts:
+        normalized = re.sub(r"\s+", " ", candidate).strip()
+        if normalized in LOCATION_PATTERNS:
+            parsed_side, parsed_position = LOCATION_PATTERNS[normalized]
+            side = side or parsed_side
+            position = position or parsed_position
+
+    return side, position
+
+
+def derive_part_type(part_name, subcategory):
+    """Derive a cleaner user-facing part type from raw part fields."""
+
+    cleaned_part_name = clean_display_label(re.sub(r"\([^)]*\)", "", str(part_name))).strip()
+    cleaned_subcategory = clean_display_label(subcategory).strip()
+
+    part_core = normalize_label_key(cleaned_part_name)
+    sub_core = normalize_label_key(cleaned_subcategory)
+
+    if part_core and sub_core and part_core != sub_core and sub_core not in GENERIC_LOCATION_LABELS:
+        return cleaned_part_name
+    if part_core and part_core not in GENERIC_LOCATION_LABELS:
+        return cleaned_part_name
+    if sub_core and sub_core not in GENERIC_LOCATION_LABELS:
+        return cleaned_subcategory
+    return cleaned_part_name or cleaned_subcategory or "Unknown part"
+
+
+def build_part_option_catalog(part_scope):
+    """Build a UI-facing part catalog from raw subcategory and part-name fields."""
+
+    rows = []
+    unique_rows = part_scope[["subcategory", "part_name"]].drop_duplicates()
+    for row in unique_rows.itertuples(index=False):
+        side, position = extract_side_position(row.part_name, row.subcategory)
+        display_part_type = derive_part_type(row.part_name, row.subcategory)
+        rows.append(
+            {
+                "raw_subcategory": str(row.subcategory),
+                "raw_part_name": str(row.part_name),
+                "display_part_type": display_part_type,
+                "display_side": side,
+                "display_position": position,
+                "display_variant": clean_display_label(row.part_name),
+            }
+        )
+
+    return pd.DataFrame(rows).drop_duplicates().reset_index(drop=True)
 
 
 def derive_year_fields(values):
@@ -245,6 +419,7 @@ def render_operator_form(reference_rows):
             brand_options,
             current_values.get("brand"),
             key="brand_select",
+            label_map={option: clean_display_label(option) for option in brand_options},
         )
 
     model_rows = filter_reference_rows(reference_rows, {"brand": current_values.get("brand")})
@@ -256,6 +431,7 @@ def render_operator_form(reference_rows):
             model_options,
             current_values.get("model"),
             key="model_select",
+            label_map={option: clean_display_label(option) for option in model_options},
         )
 
     year_rows = filter_reference_rows(
@@ -308,7 +484,7 @@ def render_operator_form(reference_rows):
             "year_end": current_values.get("year_end"),
         },
     )
-    part_col1, part_col2, part_col3 = st.columns(3)
+    part_col1, part_col2 = st.columns(2)
 
     with part_col1:
         category_options = sorted_unique_options(part_scope["category"])
@@ -318,41 +494,86 @@ def render_operator_form(reference_rows):
             category_options,
             current_values.get("category"),
             key="category_select",
+            label_map={option: clean_display_label(option) for option in category_options},
         )
 
     subcategory_scope = filter_reference_rows(
         part_scope,
         {"category": current_values.get("category")},
     )
+    part_catalog = build_part_option_catalog(subcategory_scope)
+
+    current_part_type = derive_part_type(current_values.get("part_name"), current_values.get("subcategory"))
+    part_type_options = sorted_unique_options(part_catalog["display_part_type"])
+
     with part_col2:
-        subcategory_options = sorted_unique_options(subcategory_scope["subcategory"])
-        sync_dependent_state(current_values, "subcategory", subcategory_options, "subcategory_select")
-        current_values["subcategory"] = choose_option(
-            "Part area",
-            subcategory_options,
-            current_values.get("subcategory"),
-            key="subcategory_select",
+        selected_part_type = choose_option(
+            "Part type",
+            part_type_options,
+            current_part_type,
+            key="part_type_select",
         )
 
-    part_name_scope = filter_reference_rows(
-        subcategory_scope,
-        {"subcategory": current_values.get("subcategory")},
-    )
-    with part_col3:
-        part_name_options = sorted_unique_options(part_name_scope["part_name"])
-        sync_dependent_state(current_values, "part_name", part_name_options, "part_name_select")
-        current_values["part_name"] = choose_option(
-            "Part name",
-            part_name_options,
-            current_values.get("part_name"),
-            key="part_name_select",
-        )
+    filtered_catalog = part_catalog.loc[part_catalog["display_part_type"] == selected_part_type]
+
+    side_options = sorted_unique_options(filtered_catalog["display_side"])
+    position_options = sorted_unique_options(filtered_catalog["display_position"])
+    show_side_selector = len(side_options) > 1
+    show_position_selector = len(position_options) > 1
+
+    if show_side_selector or show_position_selector:
+        extra_cols = st.columns(2)
+        if show_side_selector:
+            with extra_cols[0]:
+                selected_side = choose_option(
+                    "Side",
+                    side_options,
+                    side_options[0],
+                    key="subcategory_side_select",
+                )
+                filtered_catalog = filtered_catalog.loc[
+                    filtered_catalog["display_side"] == selected_side
+                ]
+        if show_position_selector:
+            with extra_cols[1]:
+                refreshed_position_options = sorted_unique_options(filtered_catalog["display_position"])
+                selected_position = choose_option(
+                    "Position",
+                    refreshed_position_options,
+                    refreshed_position_options[0],
+                    key="subcategory_position_select",
+                )
+                filtered_catalog = filtered_catalog.loc[
+                    filtered_catalog["display_position"] == selected_position
+                ]
+
+    variant_options = filtered_catalog["raw_part_name"].tolist()
+    current_values["part_name"] = keep_valid_choice(current_values.get("part_name"), variant_options)
+    if current_values["part_name"] is None and variant_options:
+        current_values["part_name"] = variant_options[0]
+
+    remaining_catalog = filtered_catalog
+    if current_values.get("part_name") not in {None, ""}:
+        remaining_catalog = remaining_catalog.loc[
+            remaining_catalog["raw_part_name"].astype(str) == str(current_values["part_name"])
+        ]
+
+    subcategory_options = remaining_catalog["raw_subcategory"].tolist()
+    current_values["subcategory"] = keep_valid_choice(current_values.get("subcategory"), subcategory_options)
+    if current_values["subcategory"] is None and subcategory_options:
+        current_values["subcategory"] = subcategory_options[0]
 
     st.subheader("Condition And Details")
-    detail_scope = filter_reference_rows(
-        part_name_scope,
-        {"part_name": current_values.get("part_name")},
-    )
+    detail_scope = subcategory_scope
+    if current_values.get("subcategory") not in {None, ""}:
+        detail_scope = detail_scope.loc[
+            detail_scope["subcategory"].astype(str) == str(current_values["subcategory"])
+        ]
+    if current_values.get("part_name") not in {None, ""}:
+        detail_scope = detail_scope.loc[
+            detail_scope["part_name"].astype(str) == str(current_values["part_name"])
+        ]
+
     detail_col1, detail_col2 = st.columns(2)
 
     with detail_col1:
@@ -394,6 +615,27 @@ def main():
     """Render the simple local UI."""
 
     st.set_page_config(page_title="DPPM Price Estimator", layout="wide")
+    st.markdown(
+        """
+        <style>
+        .block-container {
+            padding-top: 1.2rem;
+            padding-bottom: 2rem;
+            max-width: 1100px;
+        }
+        div[data-testid="stMetric"] {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+        }
+        div[data-testid="stMetric"] label {
+            font-size: 0.82rem;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     bundle = load_bundle()
     metadata = bundle["metadata"]
     reference_rows = pd.read_csv(BUNDLE_DIR / "reference_rows.csv")
@@ -438,18 +680,22 @@ def main():
         )
 
         st.subheader("Prediction")
-        st.metric("Estimated price", f"{prediction['predicted_price']:.2f} EUR")
-        st.metric(
-            "Expected market range",
-            f"{market_range['range_low']:.0f}-{market_range['range_high']:.0f} EUR",
-        )
+        metric_col1, metric_col2, metric_col3 = st.columns(3)
+        with metric_col1:
+            st.metric("Estimated price", f"{prediction['predicted_price']:.0f} EUR")
+        with metric_col2:
+            st.metric(
+                "Expected market range",
+                f"{market_range['range_low']:.0f}-{market_range['range_high']:.0f} EUR",
+            )
         if market_range["comparable_count"] >= 20:
             support_text = "Strong"
         elif market_range["comparable_count"] >= 8:
             support_text = "Moderate"
         else:
             support_text = "Limited"
-        st.caption(f"Market support: {support_text} ({int(market_range['comparable_count'])} matching references)")
+        with metric_col3:
+            st.metric("Market support", f"{support_text} ({int(market_range['comparable_count'])})")
 
         st.write(
             f"Estimated price for this part is around {prediction['predicted_price']:.0f} EUR. "
@@ -461,14 +707,8 @@ def main():
         )
 
         st.subheader("Why this price?")
-        st.caption("SHAP-based explanation placeholder. This section will show the strongest positive and negative price drivers once the SHAP pipeline is connected.")
-        placeholder_col1, placeholder_col2 = st.columns(2)
-        with placeholder_col1:
-            st.markdown("**Positive drivers**")
-            st.write("- SHAP explanation will be added here")
-        with placeholder_col2:
-            st.markdown("**Negative drivers**")
-            st.write("- SHAP explanation will be added here")
+        st.caption("SHAP explanation placeholder. This section will show the strongest positive and negative price drivers once the SHAP pipeline is connected.")
+        st.info("Feature-level price explanation will be added here after the SHAP output is wired into the app.")
 
         st.caption("Decision-support prototype for dismantling-part pricing. Final pricing decisions should still include business judgment.")
 
