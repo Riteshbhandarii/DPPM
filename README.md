@@ -12,18 +12,25 @@ The current repository includes a working crawler, intermediate datasets, final 
 
 ## Repository structure
 
-- `requirements.txt`: pinned local thesis/demo dependencies, including the current SHAP-safe analysis versions.
+The repository is organized by responsibility rather than by ad hoc experiments:
+
+- `app/`: user-facing application entrypoints and Streamlit helper modules.
+  - `app/streamlit_app.py`: compact Streamlit entrypoint for the PoC UI.
+  - `app/ui_helpers.py`: option cleaning, part-selection logic, and comparable-range helpers.
+  - `app/shap_utils.py`: local per-prediction SHAP explanation helpers.
+  - `app/fastapi_app.py`: minimal FastAPI serving entrypoint.
+- `src/`: model-serving and training code shared outside the UI.
+  - `src/random_forest_serving.py`: bundle loading and prediction-range helpers.
+  - `src/tree_modeling.py`: training-oriented utilities.
 - `crawler/`: Playwright-based crawler package for collecting marketplace listings.
-- `crawler/crawler_datasets/`: archived crawler outputs; new runs are written under `crawler/crawler_datasets/new/`.
-- `datasets/traficom_outputs/`: cleaned Traficom summary tables used for enrichment.
-- `datasets/merged/`: merged listing snapshots and listing-plus-Traficom outputs.
-- `datasets/cleaned/`: cleaned modeling datasets, including the final master dataset.
-- `datasets/splits/`: leakage-safe grouped train/validation/test splits.
-- `notebooks/01_preprocessing/`: Traficom preprocessing and per-model source cleaning.
-- `notebooks/02_integration/`: snapshot merging, dataset integration, cleaning, and split creation.
-- `notebooks/03_analysis/`: exploratory analysis of the prepared dataset.
-- `notebooks/04_training/`: model training and validation notebooks.
-- `scripts/batch/`: Puhti-oriented SLURM batch scripts for crawling, tuning, testing, and model export.
+- `datasets/`: cleaned, merged, split, and Traficom-derived CSV datasets used across the thesis workflow.
+- `artifacts/`: saved model bundles, tuning outputs, and SHAP analysis artifacts.
+- `notebooks/`: thesis pipeline notebooks grouped into preprocessing, integration, analysis, and training stages.
+- `scripts/`: reproducible command-line and Puhti batch entrypoints for tuning, evaluation, export, and crawling.
+- `tests/`: focused regression tests for serving logic, FastAPI, and Streamlit helper behavior.
+- `requirements.txt`: pinned local thesis/demo dependencies, including the current SHAP-safe analysis versions.
+
+Generated clutter such as notebook checkpoints, temporary notebook mirrors, local caches, and `__pycache__` directories is intentionally excluded from the repository.
 
 ## Current tracked data artifacts
 
@@ -148,7 +155,7 @@ The final held-out test result indicates that the selected random forest model r
 The repository is now beyond model-training-only status. It currently contains:
 
 - a final saved random-forest deployment bundle under `artifacts/random_forest_final/full_data_bundle`
-- a working Streamlit decision-support prototype in [`app/streamlit_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/streamlit_app.py)
+- a working Streamlit decision-support prototype in [`app/streamlit_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/streamlit_app.py), supported by [`app/ui_helpers.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/ui_helpers.py) and [`app/shap_utils.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/shap_utils.py)
 - a working FastAPI serving layer in [`app/fastapi_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/fastapi_app.py)
 - serving helpers for bundle loading and prediction in [`src/random_forest_serving.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/src/random_forest_serving.py)
 - automated tests covering Streamlit helper logic, serving logic, and FastAPI behavior under `tests/`
@@ -189,6 +196,7 @@ Notes:
 
 - The app expects the saved model bundle at `artifacts/random_forest_final/full_data_bundle`.
 - The UI uses the random-forest point estimate plus a comparable market range from `reference_rows.csv`.
+- The `Why this price?` block now computes a live local SHAP explanation for the submitted row, rather than showing a saved global summary.
 - This is the simplest deployment option for demos, thesis presentations, and supervisor review.
 
 ### 2. FastAPI model service deployment
