@@ -58,27 +58,26 @@ The notebooks are organized as a sequential pipeline:
 
 ## Environment setup
 
-This repository does not currently include a pinned `requirements.txt` or `pyproject.toml`, so dependencies need to be installed manually.
+The repository now includes a pinned root [`requirements.txt`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/requirements.txt) for the local thesis/demo workflow.
 
-The codebase uses:
-
-- Python
-- Jupyter notebooks
-- pandas and NumPy
-- matplotlib and seaborn
-- scikit-learn
-- XGBoost
-- CatBoost
-- Beautiful Soup
-- Playwright
-
-One reasonable local setup is:
+Recommended local setup:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost catboost beautifulsoup4 playwright jupyter ipython
+pip install -r requirements.txt
 playwright install firefox
+```
+
+Important version notes:
+
+- `scikit-learn==1.7.2` matches the saved random-forest bundle.
+- `numpy==1.26.4` and `shap==0.47.1` are pinned to avoid the numerically broken SHAP behavior seen with newer combinations during notebook analysis.
+- If you use Puhti modules instead of a local virtual environment, verify the runtime with:
+
+```python
+import shap, sklearn, numpy as np, pandas as pd
+print(shap.__version__, sklearn.__version__, np.__version__, pd.__version__)
 ```
 
 ## Running the crawler
@@ -115,6 +114,7 @@ Adjust those values before reusing it elsewhere.
 - `notebooks/04_training/02_random_forest.ipynb`: random forest experiments with grouped validation.
 - `notebooks/04_training/03_xgboost.ipynb`: XGBoost experiments with grouped validation.
 - `notebooks/04_training/04_catboost.ipynb`: CatBoost experiments with native categorical handling.
+- `notebooks/04_training/05_random_forest_shap_analysis.ipynb`: SHAP-based analysis notebook for the final random forest bundle, currently validated with a small-sample diagnostic workflow before larger runs.
 - `scripts/tune_random_forest.py` and `scripts/tune_xgboost.py`: reproducible Puhti-oriented tuning entrypoints for the final random forest and XGBoost searches.
 
 Across the training notebooks, the main reported validation metric is MAE, with supporting checks such as MSE, R-squared, and MAPE.
@@ -142,14 +142,47 @@ After model selection was completed on the grouped training and validation split
 
 The final held-out test result indicates that the selected random forest model remains strong as a spare-part price estimation and decision-support tool, while showing a moderate generalization drop compared with the validation split.
 
+## Current implementation status
+
+The repository is now beyond model-training-only status. It currently contains:
+
+- a final saved random-forest deployment bundle under `artifacts/random_forest_final/full_data_bundle`
+- a working Streamlit decision-support prototype in [`app/streamlit_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/streamlit_app.py)
+- a working FastAPI serving layer in [`app/fastapi_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/fastapi_app.py)
+- serving helpers for bundle loading and prediction in [`src/random_forest_serving.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/src/random_forest_serving.py)
+- automated tests covering Streamlit helper logic, serving logic, and FastAPI behavior under `tests/`
+
+The current product framing is a **proof-of-concept decision-support tool**, not a production-ready automated pricing system.
+
+## Running the demo apps
+
+Run the Streamlit prototype:
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+Run the FastAPI app locally:
+
+```bash
+uvicorn app.fastapi_app:app --reload
+```
+
+## Current behavior of the demo UI
+
+- The main point estimate comes from the final random-forest model.
+- The displayed market range is based on real historical reference-row prices for comparable cases in `reference_rows.csv`.
+- The UI is intentionally simplified for operator-facing use and PoC demonstration.
+- The current SHAP notebook is still an analysis workflow, not yet a front-end explanation feature.
+
 ## Remaining work
 
 Based on the current repo state, the main work still to be done is:
 
-- Freeze the environment in a `requirements.txt` or `pyproject.toml`, since setup is currently manual.
-- Save the final preprocessing and model artifact in a deployment-friendly format.
-- Build the planned FastAPI and Streamlit layers around the selected final model.
-- Expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory.
+- finish and validate the SHAP analysis path for the final thesis explanation layer
+- wire the eventual explanation output into the Streamlit UI
+- continue UI cleanup, especially label/display normalization for presentation quality
+- expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory
 
 ## Notes on dataset behavior
 
