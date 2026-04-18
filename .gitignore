@@ -1,5 +1,8 @@
 playwright/
 __pycache__/
+.pytest_cache/
+.virtual_documents/
+*.pyc
 
 # logs
 *.out
@@ -10,6 +13,7 @@ datasets/traficom_datasets/
 notebooks/preprocessing/traficom_reduced_raw.csv
 datasets/traficom_outputs/traficom_reduced_raw.csv
 catboost_info/
+.ipynb_checkpoints/
 
 # deployment bundles
 artifacts/random_forest_final/
