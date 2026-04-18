@@ -1,70 +1,70 @@
 {
   "task_definition": "Tracked-snapshot price prediction for unseen marketplace listings using information available up to the current snapshot.",
   "sample_size": 5,
-  "base_value": 270.6652077554986,
+  "base_value": 489.58260011904747,
   "top_features": [
     {
       "feature_name": "subcategory",
-      "mean_abs_shap": 2.0263339251951986e+20,
-      "mean_shap": 2.0067007522450706e+20
+      "mean_abs_shap": 511.33846724355215,
+      "mean_shap": 0.7212738516872832
     },
     {
       "feature_name": "part_name",
-      "mean_abs_shap": 1.547864952366704e+20,
-      "mean_shap": 1.5344611116104096e+20
-    },
-    {
-      "feature_name": "oem_number",
-      "mean_abs_shap": 1.456809119202301e+19,
-      "mean_shap": 1.4217228318273659e+19
-    },
-    {
-      "feature_name": "quality_grade",
-      "mean_abs_shap": 2.912151213643834e+18,
-      "mean_shap": 2.2073991554360602e+18
-    },
-    {
-      "feature_name": "mileage_missing_flag",
-      "mean_abs_shap": 2.033534029824224e+18,
-      "mean_shap": 1.7694201253741087e+18
+      "mean_abs_shap": 61.17606339107128,
+      "mean_shap": 21.710560406547746
     },
     {
       "feature_name": "category",
-      "mean_abs_shap": 1.6265682988033664e+18,
-      "mean_shap": 6.411486760625734e+17
-    },
-    {
-      "feature_name": "mileage",
-      "mean_abs_shap": 1.5849932865808392e+18,
-      "mean_shap": 1.5489578679156874e+18
+      "mean_abs_shap": 41.01079806048943,
+      "mean_shap": 16.74839105855803
     },
     {
       "feature_name": "year_start",
-      "mean_abs_shap": 8.984996925188099e+17,
-      "mean_shap": 8.333752736714908e+17
+      "mean_abs_shap": 11.171937564087319,
+      "mean_shap": -1.363520273611077
     },
     {
-      "feature_name": "observations_so_far",
-      "mean_abs_shap": 4.799810612256055e+17,
-      "mean_shap": -4.799810612256055e+17
+      "feature_name": "year_mid",
+      "mean_abs_shap": 9.422814347619042,
+      "mean_shap": -2.8515422357142177
     },
     {
-      "feature_name": "model_ev_share",
-      "mean_abs_shap": 4.500386254067081e+17,
-      "mean_shap": 3.804110764676447e+17
+      "feature_name": "year_end",
+      "mean_abs_shap": 8.227699904761915,
+      "mean_shap": -2.3842065297618302
+    },
+    {
+      "feature_name": "oem_number",
+      "mean_abs_shap": 5.040938857737997,
+      "mean_shap": -4.453316198214194
+    },
+    {
+      "feature_name": "mileage",
+      "mean_abs_shap": 3.5449592455085464,
+      "mean_shap": -2.213801168127687
+    },
+    {
+      "feature_name": "model",
+      "mean_abs_shap": 2.7326485673611356,
+      "mean_shap": -0.23736856736108775
+    },
+    {
+      "feature_name": "brand_median_engine_cc",
+      "mean_abs_shap": 2.246706000000025,
+      "mean_shap": 0.03872283333334785
     }
   ],
   "suggested_ui_inputs": [
     "subcategory",
     "part_name",
-    "oem_number",
-    "quality_grade",
     "category",
-    "mileage",
     "year_start",
-    "observations_so_far",
-    "model_ev_share",
-    "year_end"
+    "year_mid",
+    "year_end",
+    "oem_number",
+    "mileage",
+    "model",
+    "quality_grade"
   ],
   "local_example_prediction": 2123.4710416666767
 }
