@@ -31,14 +31,16 @@ The work does not claim to produce a production-ready pricing system or a defini
 
 ## Results snapshot
 
-The best documented validation result currently available in this repository is the random forest trained with the selected recommended feature set. Model selection was performed on grouped training and validation splits, followed by one held-out grouped test evaluation.
+The current model comparison uses the refreshed grouped train/validation split directly, without K-fold cross-validation in the notebooks. The validation rows below are the latest stored results from the four training notebooks.
 
-| Stage | Model | Feature set | MAE | RMSE | R2 |
-| --- | --- | --- | ---: | ---: | ---: |
-| Validation | Random forest | trusted recommended features without listing dates | 18.1299 | 48.5480 | 0.9927 |
-| Held-out test | Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
+| Model | Selected feature set | Validation MAE | Validation RMSE | Validation R2 |
+| --- | --- | ---: | ---: | ---: |
+| Random forest | trusted recommended features without listing dates | 18.2409 | 48.6056 | 0.9927 |
+| XGBoost | trusted recommended features without date offsets without `oem_number` | 21.9574 | 53.2804 | 0.9912 |
+| Linear regression | trusted recommended features | 42.3653 | 153.2226 | 0.9270 |
+| CatBoost | trusted recommended features without date offsets | 47.2953 | 97.7902 | 0.9703 |
 
-Metric values above are retained from the existing repository documentation. If final thesis reporting changes, update this table and the detailed results section below from the final evaluated artifacts.
+Random forest remains the strongest trusted model on validation MAE and RMSE. XGBoost is the second-best trusted model and is the other model selected for the next Puhti runs.
 
 ## Quickstart
 
@@ -199,26 +201,27 @@ Across the training notebooks, the main reported validation metric is MAE, with 
 
 ## Results
 
-The table below summarizes the best documented validation result currently available in the repository. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
+The table below summarizes the latest no-K-fold notebook comparison. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
 
 | Model | Selected feature set | Raw columns | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Linear regression | trusted recommended features | 66 | 42.3640 | 153.2220 | 0.9270 |
-| Random forest | trusted recommended features without listing dates | 66 | 18.1299 | 48.5480 | 0.9927 |
-| XGBoost | trusted recommended features without date offsets without `oem_number` | 65 | 20.4223 | 48.9317 | 0.9926 |
-| CatBoost | trusted recommended features without date offsets | 66 | 46.0379 | 95.7289 | 0.9715 |
+| Random forest | trusted recommended features without listing dates | 66 | 18.2409 | 48.6056 | 0.9927 |
+| XGBoost | trusted recommended features without date offsets without `oem_number` | 65 | 21.9574 | 53.2804 | 0.9912 |
+| Linear regression | trusted recommended features | 66 | 42.3653 | 153.2226 | 0.9270 |
+| CatBoost | trusted recommended features without date offsets | 66 | 47.2953 | 97.7902 | 0.9703 |
 
-The Puhti-based scripted tuning kept the random-forest configuration as the best documented validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a competitive validation score.
+Random forest and XGBoost are the two models selected for the next Puhti runs. The notebook comparison is now faster and easier to interpret because it uses the fixed grouped validation split instead of K-fold CV for every notebook experiment.
 
-## Final test result
+## Puhti model runs
 
-After model selection was completed on the grouped training and validation splits, the selected random-forest configuration was retrained on `datasets/splits/train_grouped.csv` plus `datasets/splits/validation_grouped.csv` and evaluated once on the held-out `datasets/splits/test_grouped.csv` split.
+The next Puhti run should focus on the two winning model families and their current best notebook configurations.
 
-| Model | Selected feature set | Test MAE | Test RMSE | Test R2 |
-| --- | --- | ---: | ---: | ---: |
-| Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
+| Model | Script | Current winning configuration | Feature set | Key settings |
+| --- | --- | --- | --- | --- |
+| Random forest | `scripts/tune_random_forest.py` | `raw_half_features_leaf_1` | trusted recommended features without listing dates | raw target, one-hot min frequency `5`, `n_estimators=400`, `min_samples_leaf=1`, `max_features=0.5`, `random_state=42`, `n_jobs=-1` |
+| XGBoost | `scripts/tune_xgboost.py` | `raw_sqerror_reference` | trusted recommended features without date offsets without `oem_number` | raw target, `objective=reg:squarederror`, `eval_metric=mae`, `n_estimators=1800`, `learning_rate=0.030`, `max_depth=5`, `min_child_weight=5`, `subsample=0.80`, `colsample_bytree=0.70`, `reg_alpha=0.20`, `reg_lambda=3.25`, native categorical handling |
 
-The final held-out test result suggests that the selected random-forest model performs consistently on the available grouped split, while showing a moderate drop compared with validation performance. It should be interpreted as evidence for a proof-of-concept listing-price estimation tool, not as a guarantee of production performance.
+Those scripts already contain the broader Puhti-oriented search and reporting code. The notebook results above define the current trusted baseline to beat.
 
 ## Current implementation status
 
