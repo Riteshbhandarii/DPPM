@@ -1015,6 +1015,7 @@ def fit_xgboost(
 def screen_xgboost_candidates(
     train_df: pd.DataFrame,
     validation_df: pd.DataFrame,
+    early_stopping_df: pd.DataFrame,
     feature_sets: dict[str, list[str]],
     configs: dict[str, dict[str, Any]],
     xgboost_device: str,
@@ -1024,6 +1025,7 @@ def screen_xgboost_candidates(
 
     y_train = train_df[TARGET_COLUMN].copy()
     y_validation = validation_df[TARGET_COLUMN].copy()
+    y_early_stopping = early_stopping_df[TARGET_COLUMN].copy()
     total_candidates = len(feature_sets) * len(configs)
     current_candidate = 0
     screening_rows = []
@@ -1031,6 +1033,7 @@ def screen_xgboost_candidates(
     for feature_variant_name, feature_list in feature_sets.items():
         X_train = train_df[feature_list].copy()
         X_validation = validation_df[feature_list].copy()
+        X_early_stopping = early_stopping_df[feature_list].copy()
 
         for config_name, config in configs.items():
             current_candidate += 1
@@ -1041,12 +1044,16 @@ def screen_xgboost_candidates(
             model, metadata = fit_xgboost(
                 X_train,
                 y_train,
-                X_validation,
-                y_validation,
+                X_early_stopping,
+                y_early_stopping,
                 config,
                 device=xgboost_device,
             )
-            _, X_validation_prepared, _ = align_xgboost_frames(X_train, X_validation)
+            _, X_validation_prepared, _ = align_xgboost_frames(
+                X_train,
+                X_validation,
+                category_levels=metadata.get("category_levels"),
+            )
             raw_predictions = model.predict(X_validation_prepared)
             validation_predictions = convert_predictions_to_eur(
                 raw_predictions,
