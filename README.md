@@ -127,7 +127,7 @@ The notebooks are organized as a sequential pipeline:
    - Remove only clear same-day duplicates.
    - Add conservative formatting fixes, mileage imputation, and listing-history features.
 5. **Create leakage-aware grouped splits**
-   - Keep all observations from the same listing group in exactly one split.
+   - Keep all observations from the same `product_id` listing group in exactly one split.
    - Save split files under `datasets/splits/`.
 6. **Train and compare models**
    - Evaluate baseline listing-only features, listing plus Traficom features, and broader recommended feature sets.
