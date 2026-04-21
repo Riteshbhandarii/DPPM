@@ -4,6 +4,8 @@ DPPM stands for **Dismantler Price Prediction Model**. This repository contains 
 
 The project combines marketplace listing data from Varaosahaku.fi with Traficom-derived Finnish passenger-car registry features. It covers data collection, cleaning, integration, leakage-aware grouped splitting, model comparison, explainability work with SHAP, and two proof-of-concept serving interfaces: a Streamlit prototype and a FastAPI service.
 
+The practical purpose is to support dismantler-facing price review by producing an expected listing-price estimate and an interpretable explanation from available listing, vehicle, and registry-derived features. The system is intended as a thesis proof of concept and decision-support prototype, not as an automated pricing authority.
+
 The repository currently includes a Playwright crawler, processed datasets, grouped train/validation/test splits, model-training notebooks, saved model artifacts, SHAP analysis outputs, application code, and focused tests.
 
 ## Key achievements
@@ -15,7 +17,7 @@ The repository currently includes a Playwright crawler, processed datasets, grou
 - Added SHAP-based explanation tooling for analysis and local Streamlit prediction explanations.
 - Implemented both a Streamlit decision-support prototype and a FastAPI prediction service.
 
-## Thesis scope / contribution
+## Thesis scope and contribution
 
 This project should be read as an applied ML thesis workflow and proof-of-concept decision-support system. Its contribution is the end-to-end construction and evaluation of a spare-part asking-price estimation pipeline that combines:
 
@@ -25,11 +27,11 @@ This project should be read as an applied ML thesis workflow and proof-of-concep
 - comparative regression modeling, and
 - prototype model serving with explainability support.
 
-The work does not claim to produce a production-ready pricing system or a definitive market valuation engine. The model estimates listing prices from the available dataset and feature representation.
+The work does not claim to produce a production-ready pricing system or a definitive market valuation engine. The model estimates expected listing prices from the available dataset and feature representation.
 
 ## Results snapshot
 
-The strongest trusted validation result currently documented in this repository is the random forest trained with the selected recommended feature set. Final model selection was performed on grouped training and validation splits, followed by one held-out grouped test evaluation.
+The best documented validation result currently available in this repository is the random forest trained with the selected recommended feature set. Model selection was performed on grouped training and validation splits, followed by one held-out grouped test evaluation.
 
 | Stage | Model | Feature set | MAE | RMSE | R2 |
 | --- | --- | --- | ---: | ---: | ---: |
@@ -112,7 +114,7 @@ The repository contains processed outputs, so the pipeline can be inspected with
 The notebooks are organized as a sequential pipeline:
 
 1. **Preprocess source data**
-   - Build Traficom market summary tables in `notebooks/01_preprocessing/01_preprocess_traficom.ipynb`.
+   - Build Traficom registry summary tables in `notebooks/01_preprocessing/01_preprocess_traficom.ipynb`.
    - Clean model-specific listing exports in the other preprocessing notebooks.
 2. **Merge snapshot files**
    - Combine repeated crawler exports by brand/model in `notebooks/02_integration/01_loading_and_merging.ipynb`.
@@ -197,7 +199,7 @@ Across the training notebooks, the main reported validation metric is MAE, with 
 
 ## Results
 
-The table below summarizes the best trusted validation result currently available in the repository. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
+The table below summarizes the best documented validation result currently available in the repository. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
 
 | Model | Selected feature set | Raw columns | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -206,7 +208,7 @@ The table below summarizes the best trusted validation result currently availabl
 | XGBoost | trusted recommended features without date offsets without `oem_number` | 65 | 20.4223 | 48.9317 | 0.9926 |
 | CatBoost | trusted recommended features without date offsets | 66 | 46.0379 | 95.7289 | 0.9715 |
 
-The latest Puhti-based scripted tuning kept the random-forest configuration as the strongest trusted validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a competitive validation score.
+The Puhti-based scripted tuning kept the random-forest configuration as the best documented validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a competitive validation score.
 
 ## Final test result
 
@@ -216,7 +218,7 @@ After model selection was completed on the grouped training and validation split
 | --- | --- | ---: | ---: | ---: |
 | Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
 
-The final held-out test result suggests that the selected random-forest model generalizes well on the available split, while showing a moderate drop compared with validation performance. It should be interpreted as evidence for a proof-of-concept asking-price estimation tool, not as a guarantee of production performance.
+The final held-out test result suggests that the selected random-forest model performs consistently on the available grouped split, while showing a moderate drop compared with validation performance. It should be interpreted as evidence for a proof-of-concept listing-price estimation tool, not as a guarantee of production performance.
 
 ## Current implementation status
 
@@ -378,9 +380,9 @@ For thesis/demo use, deploy the Streamlit app as the presentation layer and trea
 - The UI is intentionally simplified for operator-facing use and proof-of-concept demonstration.
 - The `Why this price?` section uses local SHAP values to explain the submitted prediction.
 
-## Limitations and scope
+## Scope and limitations
 
-- The target is the observed marketplace listing price / asking price, not an independently verified transaction price.
+- The prediction target is the observed marketplace listing price / asking price, not an independently verified transaction price or true market value.
 - The dataset is based on the crawler coverage and processed snapshots available in this repository.
 - Repeated listings are intentionally preserved for listing-history features, but this requires grouped splitting to avoid leakage across train, validation, and test data.
 - The model can reflect biases, sparsity, and taxonomy inconsistencies in the source listings.
