@@ -859,6 +859,8 @@ def build_random_forest_pipeline(
         include=["object", "category"]
     ).columns.tolist()
 
+    # Numeric missing values such as mileage are imputed from the current fit frame
+    # only, which is train-only for fixed splits and fold-train-only in GroupKFold.
     numeric_pipeline = Pipeline(
         steps=[
             ("imputer", SimpleImputer(strategy="median")),
