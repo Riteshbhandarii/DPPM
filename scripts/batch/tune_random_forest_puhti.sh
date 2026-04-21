@@ -2,7 +2,7 @@
 #SBATCH --job-name=dppm-rf-tune
 #SBATCH --account=project_2017273
 #SBATCH --partition=small
-#SBATCH --time=12:00:00
+#SBATCH --time=18:00:00
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=64G
 #SBATCH --output=dppm_rf_tune_%j.out
@@ -25,7 +25,8 @@ python3 -u scripts/tune_random_forest.py \
   --train-path datasets/splits/train_grouped.csv \
   --validation-path datasets/splits/validation_grouped.csv \
   --output-dir artifacts/random_forest_tuning \
-  --cv-splits 4 \
-  --random-trials 24 \
-  --top-k-finalists 8 \
+  --cv-splits 5 \
+  --random-trials 72 \
+  --refinement-trials 24 \
+  --top-k-finalists 12 \
   --random-seed 42
