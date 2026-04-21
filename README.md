@@ -1,22 +1,85 @@
 # DPPM
 
-DPPM stands for **Dismantler Price Prediction Model**. This repository contains a thesis-oriented workflow for predicting used car spare-part prices from dismantler marketplace data.
+DPPM stands for **Dismantler Price Prediction Model**. This repository contains an applied machine-learning thesis project for estimating used vehicle spare-part **listing prices** from dismantler marketplace listings.
 
-The project combines:
+The project combines marketplace listing data from Varaosahaku.fi with Traficom-derived Finnish passenger-car registry features. It covers data collection, cleaning, integration, leakage-aware grouped splitting, model comparison, explainability work with SHAP, and two proof-of-concept serving interfaces: a Streamlit prototype and a FastAPI service.
 
-- scraped spare-part listings from Varaosahaku.fi
-- Finnish Traficom M1 passenger-car registry summaries
-- notebook-based cleaning, integration, analysis, and model training
+The repository currently includes a Playwright crawler, processed datasets, grouped train/validation/test splits, model-training notebooks, saved model artifacts, SHAP analysis outputs, application code, and focused tests.
 
-The current repository includes a working crawler, intermediate datasets, final grouped train/validation/test splits, and regression experiments with linear regression, random forest, XGBoost, and CatBoost.
+## Key achievements
+
+- Built a thesis-oriented workflow that links dismantler spare-part listings with Traficom-derived brand and model features.
+- Preserved repeated listing observations where useful for listing-history features while using grouped train/validation/test splits to reduce leakage risk.
+- Compared linear regression, random forest, XGBoost, and CatBoost regressors on the prepared dataset.
+- Selected and exported a random-forest model bundle for local serving.
+- Added SHAP-based explanation tooling for analysis and local Streamlit prediction explanations.
+- Implemented both a Streamlit decision-support prototype and a FastAPI prediction service.
+
+## Thesis scope / contribution
+
+This project should be read as an applied ML thesis workflow and proof-of-concept decision-support system. Its contribution is the end-to-end construction and evaluation of a spare-part asking-price estimation pipeline that combines:
+
+- scraped marketplace listing attributes,
+- Traficom-derived vehicle-population and first-registration features,
+- leakage-aware grouped splitting for repeated listings,
+- comparative regression modeling, and
+- prototype model serving with explainability support.
+
+The work does not claim to produce a production-ready pricing system or a definitive market valuation engine. The model estimates listing prices from the available dataset and feature representation.
+
+## Results snapshot
+
+The strongest trusted validation result currently documented in this repository is the random forest trained with the selected recommended feature set. Final model selection was performed on grouped training and validation splits, followed by one held-out grouped test evaluation.
+
+| Stage | Model | Feature set | MAE | RMSE | R2 |
+| --- | --- | --- | ---: | ---: | ---: |
+| Validation | Random forest | trusted recommended features without listing dates | 18.1299 | 48.5480 | 0.9927 |
+| Held-out test | Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
+
+Metric values above are retained from the existing repository documentation. If final thesis reporting changes, update this table and the detailed results section below from the final evaluated artifacts.
+
+## Quickstart
+
+Create a local environment from the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+playwright install firefox
+```
+
+Run the Streamlit prototype:
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+Run the FastAPI service:
+
+```bash
+uvicorn app.fastapi_app:app --reload
+```
+
+Run the crawler for one brand/model pair:
+
+```bash
+python3 -m crawler --brand Toyota --model Corolla
+```
+
+Run the test suite:
+
+```bash
+pytest
+```
 
 ## Repository structure
 
-The repository is organized by responsibility rather than by ad hoc experiments:
+The repository is organized by responsibility:
 
 - `app/`: user-facing application entrypoints and Streamlit helper modules.
-  - `app/streamlit_app.py`: compact Streamlit entrypoint for the PoC UI.
-  - `app/ui_helpers.py`: option cleaning, part-selection logic, and comparable-range helpers.
+  - `app/streamlit_app.py`: compact Streamlit entrypoint for the proof-of-concept UI.
+  - `app/ui_helpers.py`: option cleaning, part-selection logic, comparable-range helpers, and display formatting.
   - `app/shap_utils.py`: local per-prediction SHAP explanation helpers.
   - `app/fastapi_app.py`: minimal FastAPI serving entrypoint.
 - `src/`: model-serving and training code shared outside the UI.
@@ -27,19 +90,20 @@ The repository is organized by responsibility rather than by ad hoc experiments:
 - `artifacts/`: saved model bundles, tuning outputs, and SHAP analysis artifacts.
 - `notebooks/`: thesis pipeline notebooks grouped into preprocessing, integration, analysis, and training stages.
 - `scripts/`: reproducible command-line and Puhti batch entrypoints for tuning, evaluation, export, and crawling.
-- `tests/`: focused regression tests for serving logic, FastAPI, and Streamlit helper behavior.
-- `requirements.txt`: pinned local thesis/demo dependencies, including the current SHAP-safe analysis versions.
+- `tests/`: focused regression tests for serving logic, FastAPI behavior, and Streamlit helper behavior.
+- `requirements.txt`: pinned local thesis/demo dependencies, including SHAP-compatible analysis versions.
 
 Generated clutter such as notebook checkpoints, temporary notebook mirrors, local caches, and `__pycache__` directories is intentionally excluded from the repository.
 
 ## Current tracked data artifacts
 
-The repository already contains processed outputs, so you can inspect the full pipeline without rerunning everything.
+The repository contains processed outputs, so the pipeline can be inspected without rerunning every notebook.
 
 - `datasets/cleaned/clean_master_dataset.csv`: final cleaned modeling dataset with 11,321 rows.
 - `datasets/splits/train_grouped.csv`: grouped training split with 7,954 rows.
 - `datasets/splits/validation_grouped.csv`: grouped validation split with 1,689 rows.
 - `datasets/splits/test_grouped.csv`: grouped test split with 1,678 rows.
+- `datasets/splits/group_split_assignment.csv`: listing-group split assignment table.
 - `datasets/traficom_outputs/brand_summary.csv` and `datasets/traficom_outputs/model_summary.csv`: brand-level and model-level registry summaries.
 - `datasets/traficom_outputs/brand_firstreg_summary.csv` and `datasets/traficom_outputs/model_firstreg_summary.csv`: registry lifecycle summaries based on first-registration history.
 
@@ -53,20 +117,24 @@ The notebooks are organized as a sequential pipeline:
 2. **Merge snapshot files**
    - Combine repeated crawler exports by brand/model in `notebooks/02_integration/01_loading_and_merging.ipynb`.
 3. **Integrate registry features**
-   - Merge listing data with Traficom summary tables in the integration notebooks.
+   - Merge marketplace listing data with Traficom-derived brand and model summary tables in the integration notebooks.
 4. **Clean the master dataset**
    - Preserve repeated listings across scrape dates.
    - Remove only clear same-day duplicates.
    - Add conservative formatting fixes, mileage imputation, and listing-history features.
-5. **Create leakage-safe grouped splits**
+5. **Create leakage-aware grouped splits**
    - Keep all observations from the same listing group in exactly one split.
    - Save split files under `datasets/splits/`.
 6. **Train and compare models**
    - Evaluate baseline listing-only features, listing plus Traficom features, and broader recommended feature sets.
+   - Compare linear regression, random forest, XGBoost, and CatBoost models.
+7. **Explain and serve the selected model**
+   - Use SHAP analysis for model interpretation.
+   - Serve the exported random-forest bundle through Streamlit and FastAPI proof-of-concept interfaces.
 
 ## Environment setup
 
-The repository now includes a pinned root [`requirements.txt`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/requirements.txt) for the local thesis/demo workflow.
+The repository includes a pinned root `requirements.txt` for the local thesis/demo workflow.
 
 Recommended local setup:
 
@@ -98,10 +166,10 @@ python3 -m crawler --brand Toyota --model Corolla
 
 The crawler:
 
-- launches Firefox through Playwright
-- writes output CSVs to `crawler/crawler_datasets/new/`
-- stamps results with the scrape date
-- currently limits scraping to `5` parts per subcategory for stability
+- launches Firefox through Playwright,
+- writes output CSVs to `crawler/crawler_datasets/new/`,
+- stamps results with the scrape date, and
+- currently limits scraping to `5` parts per subcategory for stability.
 
 The category allowlist and crawler settings live in `crawler/src/crawler_config.py`.
 
@@ -122,14 +190,14 @@ Adjust those values before reusing it elsewhere.
 - `notebooks/04_training/02_random_forest.ipynb`: random forest experiments with grouped validation.
 - `notebooks/04_training/03_xgboost.ipynb`: XGBoost experiments with grouped validation.
 - `notebooks/04_training/04_catboost.ipynb`: CatBoost experiments with native categorical handling.
-- `notebooks/04_training/05_random_forest_shap_analysis.ipynb`: SHAP-based analysis notebook for the final random forest bundle, currently validated with a small-sample diagnostic workflow before larger runs.
+- `notebooks/04_training/05_random_forest_shap_analysis.ipynb`: SHAP-based analysis notebook for the final random-forest bundle, including diagnostic checks before larger runs.
 - `scripts/tune_random_forest.py` and `scripts/tune_xgboost.py`: reproducible Puhti-oriented tuning entrypoints for the final random forest and XGBoost searches.
 
 Across the training notebooks, the main reported validation metric is MAE, with supporting checks such as MSE, R-squared, and MAPE.
 
 ## Results
 
-The table below summarizes the best **trusted validation result** currently available in the repository. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
+The table below summarizes the best trusted validation result currently available in the repository. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
 
 | Model | Selected feature set | Raw columns | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -138,26 +206,26 @@ The table below summarizes the best **trusted validation result** currently avai
 | XGBoost | trusted recommended features without date offsets without `oem_number` | 65 | 20.4223 | 48.9317 | 0.9926 |
 | CatBoost | trusted recommended features without date offsets | 66 | 46.0379 | 95.7289 | 0.9715 |
 
-The latest Puhti-based scripted tuning kept the random forest configuration as the strongest trusted validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a much more competitive validation score.
+The latest Puhti-based scripted tuning kept the random-forest configuration as the strongest trusted validation result in the repository, while the widened XGBoost search closed the gap substantially and reached a competitive validation score.
 
 ## Final test result
 
-After model selection was completed on the grouped training and validation splits, the selected random forest configuration was retrained on `datasets/splits/train_grouped.csv` plus `datasets/splits/validation_grouped.csv` and evaluated once on the held-out `datasets/splits/test_grouped.csv` split.
+After model selection was completed on the grouped training and validation splits, the selected random-forest configuration was retrained on `datasets/splits/train_grouped.csv` plus `datasets/splits/validation_grouped.csv` and evaluated once on the held-out `datasets/splits/test_grouped.csv` split.
 
 | Model | Selected feature set | Test MAE | Test RMSE | Test R2 |
 | --- | --- | ---: | ---: | ---: |
 | Random forest | trusted recommended features without listing dates | 22.4695 | 62.6210 | 0.9903 |
 
-The final held-out test result indicates that the selected random forest model remains strong as a spare-part price estimation and decision-support tool, while showing a moderate generalization drop compared with the validation split.
+The final held-out test result suggests that the selected random-forest model generalizes well on the available split, while showing a moderate drop compared with validation performance. It should be interpreted as evidence for a proof-of-concept asking-price estimation tool, not as a guarantee of production performance.
 
 ## Current implementation status
 
-The repository is now beyond model-training-only status. It currently contains:
+The repository is beyond model-training-only status. It currently contains:
 
 - a final saved random-forest deployment bundle under `artifacts/random_forest_final/full_data_bundle`
-- a working Streamlit decision-support prototype in [`app/streamlit_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/streamlit_app.py), supported by [`app/ui_helpers.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/ui_helpers.py) and [`app/shap_utils.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/shap_utils.py)
-- a working FastAPI serving layer in [`app/fastapi_app.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/app/fastapi_app.py)
-- serving helpers for bundle loading and prediction in [`src/random_forest_serving.py`](/Users/riteshbhandari/Documents/Dokumentit%20%E2%80%93%20Ritesh%20-%20MacBook%20Pro/GitHub/DPPM/src/random_forest_serving.py)
+- a working Streamlit decision-support prototype in `app/streamlit_app.py`, supported by `app/ui_helpers.py` and `app/shap_utils.py`
+- a working FastAPI serving layer in `app/fastapi_app.py`
+- serving helpers for bundle loading and prediction in `src/random_forest_serving.py`
 - automated tests covering Streamlit helper logic, serving logic, and FastAPI behavior under `tests/`
 
 The current product framing is a **proof-of-concept decision-support tool**, not a production-ready automated pricing system.
@@ -176,13 +244,15 @@ Run the FastAPI app locally:
 uvicorn app.fastapi_app:app --reload
 ```
 
+The saved model bundle is expected at `artifacts/random_forest_final/full_data_bundle` unless a different path is provided for the FastAPI service through `MODEL_BUNDLE_DIR`.
+
 ## Deploying the tool
 
-The repository currently supports two practical deployment shapes:
+The repository currently supports two practical deployment shapes.
 
 ### 1. Streamlit demo deployment
 
-Use this when the goal is to present the PoC as an interactive decision-support tool.
+Use this when the goal is to present the proof-of-concept as an interactive decision-support tool.
 
 ```bash
 python3 -m venv .venv
@@ -195,8 +265,8 @@ streamlit run app/streamlit_app.py
 Notes:
 
 - The app expects the saved model bundle at `artifacts/random_forest_final/full_data_bundle`.
-- The UI uses the random-forest point estimate plus a comparable market range from `reference_rows.csv`.
-- The `Why this price?` block now computes a live local SHAP explanation for the submitted row, rather than showing a saved global summary.
+- The UI uses the random-forest point estimate plus a comparable listing-price range from `reference_rows.csv`.
+- The `Why this price?` block computes a live local SHAP explanation for the submitted row.
 - This is the simplest deployment option for demos, thesis presentations, and supervisor review.
 
 ### 2. FastAPI model service deployment
@@ -299,23 +369,33 @@ Example request:
 
 ### Deployment recommendation for this thesis
 
-For thesis/demo use, deploy the Streamlit app as the presentation layer and treat the FastAPI app as the backend/service layer. The current repository is best understood as a PoC deployment target, not a production-hardened system.
+For thesis/demo use, deploy the Streamlit app as the presentation layer and treat the FastAPI app as the backend/service layer. The current repository is best understood as a proof-of-concept deployment target, not a production-hardened system.
 
 ## Current behavior of the demo UI
 
 - The main point estimate comes from the final random-forest model.
-- The displayed market range is based on real historical reference-row prices for comparable cases in `reference_rows.csv`.
-- The UI is intentionally simplified for operator-facing use and PoC demonstration.
-- The current SHAP notebook is still an analysis workflow, not yet a front-end explanation feature.
+- The displayed comparable range is based on historical reference-row listing prices for similar cases in `reference_rows.csv`.
+- The UI is intentionally simplified for operator-facing use and proof-of-concept demonstration.
+- The `Why this price?` section uses local SHAP values to explain the submitted prediction.
+
+## Limitations and scope
+
+- The target is the observed marketplace listing price / asking price, not an independently verified transaction price.
+- The dataset is based on the crawler coverage and processed snapshots available in this repository.
+- Repeated listings are intentionally preserved for listing-history features, but this requires grouped splitting to avoid leakage across train, validation, and test data.
+- The model can reflect biases, sparsity, and taxonomy inconsistencies in the source listings.
+- `subcategory` should be treated as a mixed taxonomy/location field rather than a fully standardized hierarchy.
+- The Streamlit and FastAPI apps are proof-of-concept interfaces and are not production-hardened.
+- SHAP explanations are useful for model interpretation, but they describe model behavior rather than causal effects.
 
 ## Remaining work
 
-Based on the current repo state, the main work still to be done is:
+Based on the current repository state, useful follow-up work includes:
 
-- finish and validate the SHAP analysis path for the final thesis explanation layer
-- wire the eventual explanation output into the Streamlit UI
-- continue UI cleanup, especially label/display normalization for presentation quality
-- expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory
+- continue validating and refining the SHAP explanation layer for final thesis reporting,
+- improve UI label/display normalization for presentation quality,
+- expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory,
+- add stronger deployment hardening if the tool is later moved beyond thesis/demo use.
 
 ## Notes on dataset behavior
 
