@@ -2,7 +2,7 @@
 #SBATCH --job-name=dppm-xgb-tune
 #SBATCH --account=project_2017273
 #SBATCH --partition=gpu
-#SBATCH --time=12:00:00
+#SBATCH --time=18:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --gres=gpu:v100:1
@@ -27,8 +27,8 @@ python3 -u scripts/tune_xgboost.py \
   --validation-path datasets/splits/validation_grouped.csv \
   --output-dir artifacts/xgboost_tuning \
   --xgboost-device cuda \
-  --cv-splits 4 \
-  --random-trials 32 \
-  --refinement-trials 20 \
-  --top-k-finalists 10 \
+  --cv-splits 5 \
+  --random-trials 72 \
+  --refinement-trials 24 \
+  --top-k-finalists 12 \
   --random-seed 42
