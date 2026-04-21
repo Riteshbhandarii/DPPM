@@ -1,15 +1,15 @@
 {
   "model_type": "random_forest",
   "feature_variant": "trusted_recommended_features_without_listing_dates",
-  "config_name": "raw_half_features_leaf_1",
+  "config_name": "refinement_anchor",
   "target_mode": "raw",
   "feature_count": 66,
-  "screen_validation_MAE": 18.129919024589036,
-  "screen_validation_RMSE": 48.548037058725555,
-  "cv_mean_MAE": 30.183346131645912,
-  "cv_std_MAE": 4.173919850849785,
-  "cv_mean_RMSE": 86.05701272086122,
-  "cv_mean_R2": 0.9781693391022575,
+  "screen_validation_MAE": 18.240877268354186,
+  "screen_validation_RMSE": 48.605595182743286,
+  "cv_mean_MAE": 28.042396287138807,
+  "cv_std_MAE": 4.710468561517846,
+  "cv_mean_RMSE": 75.51365028500476,
+  "cv_mean_R2": 0.9815894874957287,
   "feature_names": [
     "part_name",
     "quality_grade",
@@ -87,7 +87,7 @@
       "max_features": 0.5
     }
   },
-  "validation_MAE": 18.129919024589032,
-  "validation_RMSE": 48.54803705872554,
-  "validation_R2": 0.9926683840219765
+  "validation_MAE": 18.240877268354186,
+  "validation_RMSE": 48.60559518274328,
+  "validation_R2": 0.9926509891181448
 }
