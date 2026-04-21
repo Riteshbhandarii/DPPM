@@ -3,7 +3,7 @@
 #SBATCH --account=project_2017273
 #SBATCH --partition=small
 #SBATCH --time=01:00:00
-#SBATCH --cpus-per-task=24
+#SBATCH --cpus-per-task=40
 #SBATCH --mem=64G
 #SBATCH --output=dppm_rf_prune_%j.out
 #SBATCH --error=dppm_rf_prune_%j.err
