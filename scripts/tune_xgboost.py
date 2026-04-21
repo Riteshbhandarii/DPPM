@@ -6,11 +6,14 @@ import json
 from pathlib import Path
 import sys
 
+from sklearn.model_selection import GroupShuffleSplit
+
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.tree_modeling import (
+    GROUP_COLUMN,
     build_feature_catalog,
     evaluate_selected_xgboost_candidates,
     generate_xgboost_refinement_configs,
@@ -57,10 +60,39 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def make_inner_early_stopping_split(train_df):
+    """Create a train-only grouped eval split so validation data is never used for early stopping."""
+
+    if GROUP_COLUMN not in train_df.columns:
+        raise KeyError(
+            f"Expected grouped split column {GROUP_COLUMN!r} in train data for XGBoost early stopping."
+        )
+
+    splitter = GroupShuffleSplit(n_splits=1, test_size=0.1, random_state=42)
+    inner_train_idx, early_stopping_idx = next(
+        splitter.split(train_df, groups=train_df[GROUP_COLUMN])
+    )
+    inner_train_df = train_df.iloc[inner_train_idx].copy()
+    early_stopping_df = train_df.iloc[early_stopping_idx].copy()
+
+    overlap = set(inner_train_df[GROUP_COLUMN]).intersection(early_stopping_df[GROUP_COLUMN])
+    if overlap:
+        raise RuntimeError("Inner XGBoost early-stopping split has overlapping listing groups.")
+
+    print(
+        "XGBoost early-stopping split:",
+        f"inner_train_rows={len(inner_train_df)}",
+        f"early_stopping_rows={len(early_stopping_df)}",
+        f"group_column={GROUP_COLUMN}",
+    )
+    return inner_train_df, early_stopping_df
+
+
 def main() -> None:
     args = parse_args()
     prepared_data = load_training_data(args.train_path, args.validation_path)
     feature_catalog = build_feature_catalog(prepared_data.train_df, model_kind="xgboost")
+    inner_train_df, early_stopping_df = make_inner_early_stopping_split(prepared_data.train_df)
 
     # Stage one runs a broader search across all trusted XGBoost feature variants.
     search_configs = generate_xgboost_search_configs(
@@ -70,8 +102,9 @@ def main() -> None:
 
     print(f"Generated {len(search_configs)} XGBoost configurations for broad screening.")
     screening_results_df, finalists = screen_xgboost_candidates(
-        train_df=prepared_data.train_df,
+        train_df=inner_train_df,
         validation_df=prepared_data.validation_df,
+        early_stopping_df=early_stopping_df,
         feature_sets=feature_catalog["feature_sets"],
         configs=search_configs,
         xgboost_device=args.xgboost_device,
@@ -99,8 +132,9 @@ def main() -> None:
         f"for feature variant {best_screened_candidate['feature_variant']}."
     )
     refinement_results_df, refinement_finalists = screen_xgboost_candidates(
-        train_df=prepared_data.train_df,
+        train_df=inner_train_df,
         validation_df=prepared_data.validation_df,
+        early_stopping_df=early_stopping_df,
         feature_sets=refinement_feature_sets,
         configs=refinement_configs,
         xgboost_device=args.xgboost_device,
