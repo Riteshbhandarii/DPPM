@@ -437,6 +437,23 @@ def sample_from_choices(
     return choices[int(rng.integers(0, len(choices)))]
 
 
+def sample_xgboost_colsample_pair(
+    rng: np.random.Generator,
+    tree_low: float,
+    tree_high: float,
+    level_low: float,
+    level_high: float,
+    min_effective_fraction: float = 0.35,
+) -> tuple[float, float]:
+    """Sample cumulative XGBoost column fractions without starving split candidates."""
+
+    while True:
+        colsample_bytree = round(float(rng.uniform(tree_low, tree_high)), 6)
+        colsample_bylevel = round(float(rng.uniform(level_low, level_high)), 6)
+        if colsample_bytree * colsample_bylevel >= min_effective_fraction:
+            return colsample_bytree, colsample_bylevel
+
+
 def generate_xgboost_search_configs(
     random_trials: int,
     random_seed: int,
@@ -459,19 +476,26 @@ def generate_xgboost_search_configs(
     while len(configs) < len(XGBOOST_CONFIGS) + random_trials:
         target_mode = str(rng.choice(["raw", "log"]))
         objective = str(rng.choice(objectives[target_mode]))
+        colsample_bytree, colsample_bylevel = sample_xgboost_colsample_pair(
+            rng,
+            tree_low=0.55,
+            tree_high=0.95,
+            level_low=0.60,
+            level_high=1.00,
+        )
         config = {
             "target_mode": target_mode,
             "model_params": {
                 "objective": objective,
                 "eval_metric": "mae",
                 "n_estimators": int(rng.integers(1200, 3201)),
-                "learning_rate": round(sample_log_uniform(rng, 0.012, 0.06), 6),
+                "learning_rate": round(sample_log_uniform(rng, 0.010, 0.06), 6),
                 "max_depth": int(rng.integers(3, 9)),
-                "min_child_weight": int(rng.integers(1, 13)),
+                "min_child_weight": int(rng.integers(1, 16)),
                 "gamma": round(float(rng.uniform(0.0, 0.25)), 6),
                 "subsample": round(float(rng.uniform(0.65, 0.95)), 6),
-                "colsample_bytree": round(float(rng.uniform(0.55, 0.95)), 6),
-                "colsample_bylevel": round(float(rng.uniform(0.60, 1.00)), 6),
+                "colsample_bytree": colsample_bytree,
+                "colsample_bylevel": colsample_bylevel,
                 "reg_alpha": round(sample_log_uniform(rng, 0.001, 1.0), 6),
                 "reg_lambda": round(sample_log_uniform(rng, 1.0, 8.0), 6),
                 "max_bin": int(rng.choice(max_bins)),
@@ -519,6 +543,13 @@ def generate_xgboost_refinement_configs(
             clamp_float(base_params["learning_rate"] * float(rng.uniform(0.75, 1.30)), 0.010, 0.050),
             6,
         )
+        colsample_bytree, colsample_bylevel = sample_xgboost_colsample_pair(
+            rng,
+            tree_low=max(0.60, base_params["colsample_bytree"] - 0.08),
+            tree_high=min(1.00, base_params["colsample_bytree"] + 0.08),
+            level_low=max(0.70, base_params["colsample_bylevel"] - 0.06),
+            level_high=min(1.00, base_params["colsample_bylevel"] + 0.06),
+        )
         config = {
             "target_mode": base_config["target_mode"],
             "model_params": {
@@ -548,22 +579,8 @@ def generate_xgboost_refinement_configs(
                     clamp_float(base_params["subsample"] + float(rng.uniform(-0.08, 0.06)), 0.70, 1.00),
                     6,
                 ),
-                "colsample_bytree": round(
-                    clamp_float(
-                        base_params["colsample_bytree"] + float(rng.uniform(-0.08, 0.08)),
-                        0.60,
-                        1.00,
-                    ),
-                    6,
-                ),
-                "colsample_bylevel": round(
-                    clamp_float(
-                        base_params["colsample_bylevel"] + float(rng.uniform(-0.06, 0.06)),
-                        0.70,
-                        1.00,
-                    ),
-                    6,
-                ),
+                "colsample_bytree": colsample_bytree,
+                "colsample_bylevel": colsample_bylevel,
                 "reg_alpha": round(
                     clamp_float(
                         base_params["reg_alpha"] * float(rng.uniform(0.40, 2.50)),
@@ -610,6 +627,7 @@ def generate_random_forest_search_configs(
     max_features_choices: list[str | float] = ["sqrt", "log2", 0.35, 0.5, 0.7, 0.9]
     max_samples_choices: list[float | None] = [None, 0.6, 0.75, 0.9]
     max_depth_choices: list[int | None] = [None, 12, 18, 24, 32]
+    max_leaf_nodes_choices: list[int | None] = [None, 64, 128, 256, 512]
 
     trial_id = 1
     while len(configs) < len(RANDOM_FOREST_CONFIGS) + random_trials:
@@ -628,6 +646,7 @@ def generate_random_forest_search_configs(
                 "max_features": sample_from_choices(rng, max_features_choices),
                 "bootstrap": bootstrap,
                 "max_depth": sample_from_choices(rng, max_depth_choices),
+                "max_leaf_nodes": sample_from_choices(rng, max_leaf_nodes_choices),
                 "max_samples": max_samples,
             },
         }
@@ -659,6 +678,7 @@ def generate_random_forest_refinement_configs(
     max_features_choices: list[str | float] = ["sqrt", "log2", 0.35, 0.45, 0.5, 0.55, 0.65]
     max_samples_choices: list[float | None] = [None, 0.6, 0.75, 0.85, 0.95]
     max_depth_choices: list[int | None] = [None, 12, 16, 20, 24, 32]
+    max_leaf_nodes_choices: list[int | None] = [None, 64, 128, 256, 512, 768]
 
     def clamp_int(value: int, low: int, high: int) -> int:
         return max(low, min(high, value))
@@ -695,6 +715,7 @@ def generate_random_forest_refinement_configs(
                 "max_features": sample_from_choices(rng, max_features_choices),
                 "bootstrap": bootstrap,
                 "max_depth": sample_from_choices(rng, max_depth_choices),
+                "max_leaf_nodes": sample_from_choices(rng, max_leaf_nodes_choices),
                 "max_samples": max_samples,
             },
         }
