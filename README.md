@@ -31,16 +31,19 @@ The work does not claim to produce a production-ready pricing system or a defini
 
 ## Results snapshot
 
-The current model comparison uses the refreshed grouped train/validation split directly, without K-fold cross-validation in the notebooks. The validation rows below are the latest stored results from the four training notebooks.
+The latest model selection uses Puhti tuning runs for the two strongest tree models. Random forest is currently selected because it has the best validation MAE, the best grouped-CV MAE, and the lower grouped-CV spread. XGBoost remains close, especially on validation RMSE, but it is less stable across grouped folds.
 
 | Model | Selected feature set | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: |
-| Random forest | trusted recommended features without listing dates | 18.2409 | 48.6056 | 0.9927 |
-| XGBoost | trusted recommended features without date offsets without `oem_number` | 21.9574 | 53.2804 | 0.9912 |
-| Linear regression | trusted recommended features | 42.3653 | 153.2226 | 0.9270 |
-| CatBoost | trusted recommended features without date offsets | 47.2953 | 97.7902 | 0.9703 |
+| Random forest | trusted recommended features without listing dates | **18.2409** | 48.6056 | 0.9927 |
+| XGBoost | trusted recommended features | 18.8845 | **44.5546** | **0.9938** |
 
-Random forest remains the strongest trusted model on validation MAE and RMSE. XGBoost is the second-best trusted model and is the other model selected for the next Puhti runs.
+| Model | Grouped CV MAE | Grouped CV RMSE | Grouped CV R2 |
+| --- | ---: | ---: | ---: |
+| Random forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 |
+| XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** |
+
+The validation split gives the direct holdout score for the tuned configuration, while grouped CV is the stronger stability check because it rotates through several grouped train/validation folds. The final held-out test set has not been used for this selection step.
 
 ## Quickstart
 
@@ -201,7 +204,7 @@ Across the training notebooks, the main reported validation metric is MAE, with 
 
 ## Results
 
-The table below summarizes the latest no-K-fold notebook comparison. All values are from the grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows.
+The first table summarizes the broad notebook comparison across model families. These values use the fixed grouped validation split in `datasets/splits/validation_grouped.csv` with 1,689 rows and are kept as the baseline model-family comparison.
 
 | Model | Selected feature set | Raw columns | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -210,18 +213,36 @@ The table below summarizes the latest no-K-fold notebook comparison. All values 
 | Linear regression | trusted recommended features | 66 | 42.3653 | 153.2226 | 0.9270 |
 | CatBoost | trusted recommended features without date offsets | 66 | 47.2953 | 97.7902 | 0.9703 |
 
-Random forest and XGBoost are the two models selected for the next Puhti runs. The notebook comparison is now faster and easier to interpret because it uses the fixed grouped validation split instead of K-fold CV for every notebook experiment.
+Random forest and XGBoost were then tuned on Puhti with a three-stage funnel: broad random screening, local refinement, and grouped cross-validation of finalists. The validation split is used for candidate scoring, while grouped CV is used to judge robustness across listing groups.
+
+| Model | Feature set | Winning config | Target | Features | Validation MAE | Validation RMSE | Validation R2 |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: |
+| Random forest | trusted recommended features without listing dates | `refinement_anchor` | raw | 66 | **18.2409** | 48.6056 | 0.9927 |
+| XGBoost | trusted recommended features | `refinement_search_009` | raw | 67 | 18.8845 | **44.5546** | **0.9938** |
+
+| Model | Grouped CV MAE | Grouped CV RMSE | Grouped CV R2 | Interpretation |
+| --- | ---: | ---: | ---: | --- |
+| Random forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 | Best MAE and lower fold-to-fold variation |
+| XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** | Close competitor with stronger RMSE but higher MAE spread |
+
+The grouped-CV MAE is higher than the single validation MAE because each CV fold holds out different listing groups from the training data. That makes it a harder estimate of out-of-group generalization. Based on MAE as the main thesis metric, random forest is the current model to carry forward to the final held-out test evaluation.
 
 ## Puhti model runs
 
-The next Puhti run should focus on the two winning model families and their current best notebook configurations.
+The completed Puhti tuning runs used these entrypoints and selected configurations.
 
 | Model | Script | Current winning configuration | Feature set | Key settings |
 | --- | --- | --- | --- | --- |
-| Random forest | `scripts/tune_random_forest.py` | `raw_half_features_leaf_1` | trusted recommended features without listing dates | raw target, one-hot min frequency `5`, `n_estimators=400`, `min_samples_leaf=1`, `max_features=0.5`, `random_state=42`, `n_jobs=-1` |
-| XGBoost | `scripts/tune_xgboost.py` | `raw_sqerror_reference` | trusted recommended features without date offsets without `oem_number` | raw target, `objective=reg:squarederror`, `eval_metric=mae`, `n_estimators=1800`, `learning_rate=0.030`, `max_depth=5`, `min_child_weight=5`, `subsample=0.80`, `colsample_bytree=0.70`, `reg_alpha=0.20`, `reg_lambda=3.25`, native categorical handling |
+| Random forest | `scripts/tune_random_forest.py` | `refinement_anchor` | trusted recommended features without listing dates | raw target, one-hot min frequency `5`, `n_estimators=400`, `min_samples_leaf=1`, `max_features=0.5` |
+| XGBoost | `scripts/tune_xgboost.py` | `refinement_search_009` | trusted recommended features | raw target, `objective=reg:squarederror`, `eval_metric=mae`, `n_estimators=2194`, `learning_rate=0.041918`, `max_depth=6`, `min_child_weight=8`, `gamma=0.2`, `subsample=0.732287`, `colsample_bytree=0.929422`, `colsample_bylevel=0.957583`, `reg_alpha=0.075742`, `reg_lambda=3.333614`, `best_iteration=1672` |
 
-Those scripts already contain the broader Puhti-oriented search and reporting code. The notebook results above define the current trusted baseline to beat.
+The next modeling step is one additional random-forest-only confirmation run before opening the held-out test set. It uses the same search scale with a different random seed and writes to `artifacts/random_forest_tuning_confirm` so the current winning reports are preserved:
+
+```bash
+sbatch scripts/batch/tune_random_forest_confirm_puhti.sh
+```
+
+After that, the selected RF configuration should be evaluated once on `datasets/splits/test_grouped.csv`, exported with preprocessing, checked with SHAP, and then used by the Streamlit prototype.
 
 ## Current implementation status
 
@@ -397,8 +418,12 @@ For thesis/demo use, deploy the Streamlit app as the presentation layer and trea
 
 Based on the current repository state, useful follow-up work includes:
 
-- continue validating and refining the SHAP explanation layer for final thesis reporting,
-- improve UI label/display normalization for presentation quality,
+- run `scripts/batch/tune_random_forest_confirm_puhti.sh` to confirm the selected RF configuration before final test evaluation,
+- evaluate the selected RF model once on the held-out grouped test split,
+- export the selected RF model with its preprocessing bundle for the Streamlit and FastAPI apps,
+- refresh SHAP outputs for the final exported model,
+- run and review the Streamlit prototype with the refreshed bundle,
+- improve UI label/display normalization for presentation quality if needed,
 - expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory,
 - add stronger deployment hardening if the tool is later moved beyond thesis/demo use.
 
