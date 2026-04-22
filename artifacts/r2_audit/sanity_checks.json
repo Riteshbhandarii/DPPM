@@ -1,0 +1,41 @@
+{
+  "product_id_overlap": {
+    "status": "PASS",
+    "overlap_examples": {
+      "train_validation": [],
+      "train_test": [],
+      "validation_test": []
+    },
+    "interpretation": "Grouped split integrity holds."
+  },
+  "cross_split_exact_duplicates": {
+    "status": "FAIL",
+    "duplicate_counts": {
+      "train_validation": 113,
+      "train_test": 108,
+      "validation_test": 41
+    },
+    "interpretation": "Exact modeling-row plus target duplicates cross split boundaries."
+  },
+  "target_in_features": {
+    "status": "PASS",
+    "columns": [],
+    "interpretation": "No direct target column is selected."
+  },
+  "deterministic_or_near_target_numeric_features": {
+    "status": "PASS",
+    "columns": [],
+    "interpretation": "No selected numeric feature is nearly identical to price."
+  },
+  "future_or_listing_history_columns": {
+    "status": "PASS",
+    "future_columns": [],
+    "listing_dynamics_columns": [],
+    "interpretation": "Selected RF features exclude declared full-history leakage-risk columns."
+  },
+  "split_specific_preparation": {
+    "status": "PASS",
+    "date_offset_features": [],
+    "interpretation": "Selected RF features do not use date offsets; imputers and encoders are fit inside train-only pipelines."
+  }
+}
