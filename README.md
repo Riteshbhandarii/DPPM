@@ -31,7 +31,12 @@ The work does not claim to produce a production-ready pricing system or a defini
 
 ## Results snapshot
 
-The latest model selection uses Puhti tuning runs for the two strongest tree models. Random forest is currently selected because it has the best validation MAE, the best grouped-CV MAE, and the lower grouped-CV spread. XGBoost remains close, especially on validation RMSE, but it is less stable across grouped folds.
+The latest model selection uses Puhti tuning runs for the two strongest tree models. Random forest is currently selected because it has the best validation MAE, the best grouped-CV MAE, the lower grouped-CV spread, and the best stricter part-identity grouped CV result. XGBoost remains close in the original grouped-CV setting, especially on RMSE, but it is weaker under the stricter part-identity evaluation.
+
+The project now reports two evaluation settings:
+
+- **Product-id grouped evaluation**: prevents repeated observations of the same marketplace listing from crossing train/validation/test boundaries. This estimates performance for unseen listings in the same current-market comparable-pricing setting.
+- **Part-identity grouped evaluation**: groups by `part_name + brand + model + oem_number`. This stricter robustness check prevents identical modeled part identities from crossing folds and gives a more conservative estimate for unseen comparable part profiles.
 
 | Model | Selected feature set | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: |
@@ -43,7 +48,14 @@ The latest model selection uses Puhti tuning runs for the two strongest tree mod
 | Random forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 |
 | XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** |
 
-The validation split gives the direct holdout score for the tuned configuration, while grouped CV is the stronger stability check because it rotates through several grouped train/validation folds. The final held-out test set has not been used for this selection step.
+| Model | Part-identity grouped CV MAE | Part-identity grouped CV RMSE | Part-identity grouped CV R2 | Median AE |
+| --- | ---: | ---: | ---: | ---: |
+| Random forest | **35.6686 +/- 2.1188** | **71.9132** | **0.9858** | **14.8559** |
+| XGBoost | 39.3838 +/- 1.2814 | 85.1073 | 0.9798 | 15.1806 |
+| Linear ridge | 53.7993 +/- 3.8390 | 154.8746 | 0.9326 | 16.8031 |
+| CatBoost | 99.5891 +/- 16.4347 | 262.0683 | 0.7968 | 31.1834 |
+
+The fixed validation split gives the direct holdout score for the tuned configuration, while product-id grouped CV is the stronger stability check for unseen listing groups. The stricter part-identity grouped CV is the conservative robustness estimate after the leakage audit found comparable-item duplication across the product-id split. The random forest remains the strongest model in both grouped settings.
 
 ## Quickstart
 
@@ -225,7 +237,34 @@ Random forest and XGBoost were then tuned on Puhti with a three-stage funnel: br
 | Random forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 | Best MAE and lower fold-to-fold variation |
 | XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** | Close competitor with stronger RMSE but higher MAE spread |
 
-The grouped-CV MAE is higher than the single validation MAE because each CV fold holds out different listing groups from the training data. That makes it a harder estimate of out-of-group generalization. Based on MAE as the main thesis metric, random forest is the current model to carry forward to the final held-out test evaluation.
+The grouped-CV MAE is higher than the single validation MAE because each CV fold holds out different listing groups from the training data. That makes it a harder estimate of out-of-group generalization. Based on MAE as the main thesis metric, random forest is the current model to carry forward.
+
+### Leakage and robustness audit
+
+The very high validation R2 values were stress-tested with a dedicated leakage and robustness audit in `scripts/audit_r2_credibility.py`. The audit confirmed that the product-id grouped split has no `product_id` overlap across train, validation, and test, and the selected random-forest features do not include the target, near-deterministic numeric target proxies, or the declared full-history leakage-risk columns.
+
+The audit also found that exact duplicates on the selected modeling attributes plus target price can cross split boundaries under the product-id grouped split. This is not same-listing leakage, because `product_id` grouping still holds. It is comparable-item evaluation bias: different listings can share identical modeled part profiles and prices. Destructive controls supported this interpretation. Shuffling `y_train` and refitting collapsed performance to R2 = -0.1859 and MAE = 283.06, while shuffling all text/categorical features collapsed validation R2 to -1.0604 and MAE to 323.66. In contrast, a categorical-only model retained very high validation performance, showing that part taxonomy and identity variables carry most of the signal.
+
+The practical interpretation is that the product-id grouped result estimates current-market comparable-listing performance, while a stricter part-identity grouped evaluation is needed to estimate performance when exact comparable part identities are held out.
+
+### Part-identity grouped evaluation
+
+To quantify the comparable-item bias, the selected model configurations were re-evaluated with `GroupKFold` using:
+
+```text
+part_name + brand + model + oem_number
+```
+
+This stricter grouping removes exact modeled part-identity duplicates across folds. The fold sanity checks passed with zero group overlap and zero exact modeling-row-plus-target duplicates crossing strict folds.
+
+| Model | Feature set | Part-identity grouped CV MAE | Std MAE | RMSE | R2 | Median AE |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Random forest | trusted recommended features without listing dates | **35.6686** | **2.1188** | **71.9132** | **0.9858** | **14.8559** |
+| XGBoost | trusted recommended features | 39.3838 | 1.2814 | 85.1073 | 0.9798 | 15.1806 |
+| Linear ridge | trusted recommended features without listing dates | 53.7993 | 3.8390 | 154.8746 | 0.9326 | 16.8031 |
+| CatBoost | trusted recommended features without date offsets | 99.5891 | 16.4347 | 262.0683 | 0.7968 | 31.1834 |
+
+The stricter result confirms that the original 18.2409 validation MAE was optimistic for generalization to unseen part identities. However, performance does not collapse: random forest remains the strongest model with a stricter grouped-CV MAE of 35.6686 and median absolute error of 14.8559. The proof-of-concept should therefore be described as a comparable-market pricing decision-support tool, with higher uncertainty for rare or unseen part identities.
 
 ## Puhti model runs
 
@@ -236,13 +275,17 @@ The completed Puhti tuning runs used these entrypoints and selected configuratio
 | Random forest | `scripts/tune_random_forest.py` | `refinement_anchor` | trusted recommended features without listing dates | raw target, one-hot min frequency `5`, `n_estimators=400`, `min_samples_leaf=1`, `max_features=0.5` |
 | XGBoost | `scripts/tune_xgboost.py` | `refinement_search_009` | trusted recommended features | raw target, `objective=reg:squarederror`, `eval_metric=mae`, `n_estimators=2194`, `learning_rate=0.041918`, `max_depth=6`, `min_child_weight=8`, `gamma=0.2`, `subsample=0.732287`, `colsample_bytree=0.929422`, `colsample_bylevel=0.957583`, `reg_alpha=0.075742`, `reg_lambda=3.333614`, `best_iteration=1672` |
 
-The next modeling step is one additional random-forest-only confirmation run before opening the held-out test set. It uses the same search scale with a different random seed and writes to `artifacts/random_forest_tuning_confirm` so the current winning reports are preserved:
+The part-identity grouped robustness scripts use the selected configurations rather than retuning them:
 
 ```bash
-sbatch scripts/batch/tune_random_forest_confirm_puhti.sh
+python scripts/evaluate_linear_part_identity.py
+python scripts/evaluate_random_forest_part_identity.py
+python scripts/evaluate_xgboost_part_identity.py --xgboost-device cpu
+python scripts/evaluate_catboost_part_identity.py
+python scripts/summarize_part_identity_evaluation.py
 ```
 
-After that, the selected RF configuration should be evaluated once on `datasets/splits/test_grouped.csv`, exported with preprocessing, checked with SHAP, and then used by the Streamlit prototype.
+After model choice is fixed, the selected RF configuration should be exported with preprocessing, checked with SHAP, and used by the Streamlit prototype. The frontend should communicate predictions as decision-support estimates rather than final automatic prices.
 
 ## Current implementation status
 
