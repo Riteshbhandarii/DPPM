@@ -1,0 +1,37 @@
+{
+  "model": "xgboost",
+  "source_summary": "artifacts/xgboost_tuning/best_tuning_summary.json",
+  "feature_variant": "trusted_recommended_features",
+  "config_name": "refinement_search_009",
+  "target_mode": "raw",
+  "feature_count": 67,
+  "group_columns": [
+    "part_name",
+    "brand",
+    "model",
+    "oem_number"
+  ],
+  "group_count": 1268,
+  "row_count": 7954,
+  "cv_summary": {
+    "mean_MAE": 39.383793767887184,
+    "std_MAE": 1.2814264806839792,
+    "min_MAE": 37.26895076053243,
+    "max_MAE": 40.65853567607682,
+    "mean_RMSE": 85.10730118333223,
+    "std_RMSE": 12.321425153784077,
+    "min_RMSE": 67.14010628187599,
+    "max_RMSE": 101.63153072925196,
+    "mean_R2": 0.9798403718545304,
+    "std_R2": 0.004594639900774914,
+    "min_R2": 0.9758756816145462,
+    "max_R2": 0.9875599696293704,
+    "mean_median_AE": 15.18062133789062,
+    "std_median_AE": 1.3097064654020436,
+    "min_median_AE": 13.326336669921872,
+    "max_median_AE": 16.628193664550764,
+    "folds": 4
+  },
+  "quick_mode": false,
+  "xgboost_device": "cuda"
+}

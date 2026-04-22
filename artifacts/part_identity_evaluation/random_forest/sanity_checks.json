@@ -1,0 +1,50 @@
+{
+  "group_overlap": {
+    "status": "PASS",
+    "total_overlap": 0,
+    "interpretation": "Part-identity groups do not cross folds."
+  },
+  "cross_fold_exact_duplicates": {
+    "status": "PASS",
+    "total_duplicate_fingerprints": 0,
+    "interpretation": "No exact modeling-row plus target duplicates cross strict folds."
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_rows": 5965,
+      "validation_rows": 1989,
+      "train_groups": 951,
+      "validation_groups": 317,
+      "group_overlap": 0,
+      "duplicate_modeling_rows_with_target": 0
+    },
+    {
+      "fold": 2,
+      "train_rows": 5965,
+      "validation_rows": 1989,
+      "train_groups": 951,
+      "validation_groups": 317,
+      "group_overlap": 0,
+      "duplicate_modeling_rows_with_target": 0
+    },
+    {
+      "fold": 3,
+      "train_rows": 5966,
+      "validation_rows": 1988,
+      "train_groups": 951,
+      "validation_groups": 317,
+      "group_overlap": 0,
+      "duplicate_modeling_rows_with_target": 0
+    },
+    {
+      "fold": 4,
+      "train_rows": 5966,
+      "validation_rows": 1988,
+      "train_groups": 951,
+      "validation_groups": 317,
+      "group_overlap": 0,
+      "duplicate_modeling_rows_with_target": 0
+    }
+  ]
+}
