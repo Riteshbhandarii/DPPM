@@ -52,7 +52,10 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     frame, group_columns = load_strict_tuning_frame(args.data_path, args.group_columns)
-    feature_catalog = build_feature_catalog(frame, model_kind="xgboost")
+    feature_catalog = build_feature_catalog(
+        frame.drop(columns=["part_identity_group"]),
+        model_kind="xgboost",
+    )
 
     search_configs = generate_xgboost_search_configs(
         random_trials=args.random_trials,
