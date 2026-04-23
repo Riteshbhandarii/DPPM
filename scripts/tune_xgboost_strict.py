@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-path",
         action="append",
-        default=["datasets/splits/train_grouped.csv"],
+        default=None,
         help="One or more split files to combine into the strict tuning frame.",
     )
     parser.add_argument("--output-dir", default="artifacts/xgboost_tuning_strict")
@@ -51,7 +51,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    frame, group_columns = load_strict_tuning_frame(args.data_path, args.group_columns)
+    data_paths = args.data_path or ["datasets/splits/train_grouped.csv"]
+    frame, group_columns = load_strict_tuning_frame(data_paths, args.group_columns)
     feature_catalog = build_feature_catalog(
         frame.drop(columns=["part_identity_group"]),
         model_kind="xgboost",
@@ -101,7 +102,7 @@ def main() -> None:
         refinement_results_df=refinement_results_df,
         group_columns=group_columns,
         cv_splits=args.cv_splits,
-        source_paths=args.data_path,
+        source_paths=data_paths,
     )
 
     print("Best strict XGBoost config")
