@@ -26,7 +26,7 @@ python3 -u scripts/tune_xgboost_strict.py \
   --data-path datasets/splits/train_grouped.csv \
   --output-dir artifacts/xgboost_tuning_strict \
   --xgboost-device cuda \
-  --cv-splits 5 \
+  --cv-splits 4 \
   --random-trials 72 \
   --refinement-trials 24 \
   --top-k-finalists 12 \
