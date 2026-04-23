@@ -24,7 +24,7 @@ python3 -V
 python3 -u scripts/tune_random_forest_strict.py \
   --data-path datasets/splits/train_grouped.csv \
   --output-dir artifacts/random_forest_tuning_strict \
-  --cv-splits 5 \
+  --cv-splits 4 \
   --random-trials 72 \
   --refinement-trials 24 \
   --top-k-finalists 12 \
