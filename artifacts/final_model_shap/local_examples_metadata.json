@@ -1,0 +1,7 @@
+{
+  "model_type": "random_forest",
+  "feature_variant": "trusted_recommended_features_without_oem_number",
+  "config_name": "raw_half_features_leaf_1",
+  "base_value": 370.8448003472224,
+  "examples": 88
+}
