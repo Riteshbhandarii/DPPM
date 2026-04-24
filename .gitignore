@@ -17,3 +17,5 @@ catboost_info/
 
 # deployment bundles
 artifacts/random_forest_final/
+
+.venv_catboost/
