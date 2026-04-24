@@ -1,0 +1,37 @@
+{
+  "model": "random_forest",
+  "variant": "drop_listing_history_context",
+  "source_summary": "artifacts/random_forest_tuning_strict/best_tuning_summary.json",
+  "feature_variant": "trusted_recommended_features_without_oem_number",
+  "config_name": "raw_half_features_leaf_1",
+  "target_mode": "raw",
+  "feature_count": 63,
+  "group_columns": [
+    "part_name",
+    "brand",
+    "model",
+    "oem_number"
+  ],
+  "group_count": 1268,
+  "row_count": 15908,
+  "cv_summary": {
+    "mean_MAE": 35.652841759674004,
+    "std_MAE": 2.269102381760748,
+    "min_MAE": 32.893133293999824,
+    "max_MAE": 38.967030314812405,
+    "mean_RMSE": 73.37673667115382,
+    "std_RMSE": 8.608948201348058,
+    "min_RMSE": 63.83290304543879,
+    "max_RMSE": 86.5470290280479,
+    "mean_R2": 0.9851767512271861,
+    "std_R2": 0.002255750201845692,
+    "min_R2": 0.9825054632847828,
+    "max_R2": 0.9887553333818556,
+    "mean_median_AE": 12.616530543840994,
+    "std_median_AE": 0.6502056431687829,
+    "min_median_AE": 11.870788371611923,
+    "max_median_AE": 13.512301042727644,
+    "folds": 4
+  },
+  "quick_mode": false
+}
