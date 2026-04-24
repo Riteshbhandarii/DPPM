@@ -836,12 +836,35 @@ def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, 
                     + traficom_extended_features
                 )
             ),
+            "trusted_extended_traficom_stack_without_oem_number": [
+                column
+                for column in dict.fromkeys(
+                    BASELINE_FEATURES
+                    + TRAFICOM_FEATURES
+                    + registry_lifecycle_features
+                    + traficom_extended_features
+                )
+                if column != "oem_number"
+            ],
             "trusted_manual_all_features_set": manual_all_model_features_leakage_safe,
+            "trusted_manual_all_features_set_without_oem_number": [
+                column for column in manual_all_model_features_leakage_safe if column != "oem_number"
+            ],
             "trusted_recommended_features": recommended_model_features_leakage_safe,
+            "trusted_recommended_features_without_oem_number": [
+                column
+                for column in recommended_model_features_leakage_safe
+                if column != "oem_number"
+            ],
             "trusted_recommended_features_without_listing_dates": [
                 column
                 for column in recommended_model_features_leakage_safe_without_date_offsets
                 if column not in {"first_seen_date", "last_seen_date"}
+            ],
+            "trusted_recommended_features_without_listing_dates_without_oem_number": [
+                column
+                for column in recommended_model_features_leakage_safe_without_date_offsets
+                if column not in {"first_seen_date", "last_seen_date", "oem_number"}
             ],
         }
 
