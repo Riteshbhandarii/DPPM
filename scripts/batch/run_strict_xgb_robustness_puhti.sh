@@ -1,3 +1,5 @@
+squeue -j 34151015,34151016
+
 #!/bin/bash -l
 #SBATCH --job-name=xgb-robust
 #SBATCH --account=project_2017273

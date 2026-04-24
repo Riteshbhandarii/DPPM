@@ -41,11 +41,15 @@ def load_final_rf_inputs(
     data_paths: list[str | Path],
     summary_path: str | Path = DEFAULT_SUMMARY_PATH,
     group_columns: list[str] | None = None,
+    drop_features: list[str] | None = None,
 ) -> tuple[pd.DataFrame, list[str], dict[str, Any], dict[str, Any]]:
     """Load final strict RF summary and the modeling frame used for SHAP."""
 
     summary = load_json(summary_path)
     features = list(summary["feature_names"])
+    if drop_features:
+        drop_set = set(drop_features)
+        features = [feature for feature in features if feature not in drop_set]
     config = dict(summary["config"])
     config["model_params"] = dict(config["model_params"])
 

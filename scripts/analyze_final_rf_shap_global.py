@@ -39,6 +39,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--top-n", type=int, default=30)
     parser.add_argument("--quick-estimators", type=int, default=None)
     parser.add_argument("--group-columns", nargs="+", default=DEFAULT_GROUP_COLUMNS)
+    parser.add_argument("--drop-feature", action="append", dest="drop_features", default=None)
     return parser.parse_args()
 
 
@@ -99,6 +100,7 @@ def main() -> None:
         args.data_path,
         summary_path=args.summary_path,
         group_columns=args.group_columns,
+        drop_features=args.drop_features,
     )
     if args.quick_estimators is not None:
         config["model_params"]["n_estimators"] = args.quick_estimators
@@ -142,6 +144,7 @@ def main() -> None:
         "sample_size": int(len(sample_frame)),
         "background_size": int(len(background_frame)),
         "feature_count": len(features),
+        "dropped_features": args.drop_features or [],
         "transformed_feature_count": int(transformed.shape[1]),
         "base_value": float(np.asarray(explainer.expected_value).reshape(-1)[0]),
         "mean_prediction": float(np.mean(predictions)),
