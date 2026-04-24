@@ -1,0 +1,24 @@
+{
+  "model_type": "random_forest",
+  "feature_variant": "trusted_recommended_features_without_oem_number",
+  "config_name": "raw_half_features_leaf_1",
+  "target_mode": "raw",
+  "feature_count": 66,
+  "cv_splits": 4,
+  "group_columns": [
+    "part_name",
+    "brand",
+    "model",
+    "oem_number"
+  ],
+  "metrics": {
+    "MAE": 34.60208033381928,
+    "RMSE": 71.92253047085539,
+    "R2": 0.9858613802888551,
+    "median_AE": 12.420000000000016,
+    "mean_price": 272.3425572039226,
+    "median_price": 100.8,
+    "mean_absolute_percentage_error": 25.29765322260386,
+    "rows": 7954
+  }
+}
