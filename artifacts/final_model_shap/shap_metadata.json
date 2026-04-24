@@ -1,0 +1,12 @@
+{
+  "model_type": "random_forest",
+  "feature_variant": "trusted_recommended_features_without_oem_number",
+  "config_name": "raw_half_features_leaf_1",
+  "sample_size": 1200,
+  "background_size": 150,
+  "feature_count": 66,
+  "transformed_feature_count": 550,
+  "base_value": 370.8448003472224,
+  "mean_prediction": 250.61934786858964,
+  "mean_actual_price": 250.36700000000002
+}
