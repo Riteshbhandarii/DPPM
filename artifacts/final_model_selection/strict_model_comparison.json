@@ -1,0 +1,50 @@
+[
+  {
+    "model": "random_forest",
+    "role": "strict_tuned_finalist",
+    "feature_variant": "trusted_recommended_features_without_oem_number",
+    "config_name": "raw_half_features_leaf_1",
+    "feature_count": 66,
+    "mae": 34.479579306058405,
+    "rmse": 70.3158412352766,
+    "r2": 0.9863514393980539,
+    "median_ae": 12.362859895833104,
+    "status": "final_strict_tuned"
+  },
+  {
+    "model": "xgboost",
+    "role": "strict_tuned_finalist",
+    "feature_variant": "trusted_recommended_features_without_date_offsets_without_oem_number",
+    "config_name": "random_search_065",
+    "feature_count": 65,
+    "mae": 40.35827867398239,
+    "rmse": 87.11916851456989,
+    "r2": 0.97893395481482,
+    "median_ae": 16.780151748657225,
+    "status": "final_strict_tuned"
+  },
+  {
+    "model": "linear_ridge",
+    "role": "strict_baseline_comparator",
+    "feature_variant": "trusted_recommended_features_without_listing_dates",
+    "config_name": "ridge_alpha_0_1",
+    "feature_count": 66,
+    "mae": 53.79925105833266,
+    "rmse": 154.87462701897778,
+    "r2": 0.9325525129183229,
+    "median_ae": 16.803071683331737,
+    "status": "pending_clean_rerun"
+  },
+  {
+    "model": "catboost",
+    "role": "strict_baseline_comparator",
+    "feature_variant": "trusted_recommended_features_without_date_offsets",
+    "config_name": "raw_rmse_reference",
+    "feature_count": 66,
+    "mae": 99.58909114672953,
+    "rmse": 262.0682768946627,
+    "r2": 0.7968150966388464,
+    "median_ae": 31.183397522246626,
+    "status": "pending_clean_rerun"
+  }
+]
