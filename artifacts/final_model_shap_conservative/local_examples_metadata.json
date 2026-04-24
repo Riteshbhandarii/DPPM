@@ -1,0 +1,12 @@
+{
+  "model_type": "random_forest",
+  "feature_variant": "trusted_recommended_features_without_oem_number",
+  "config_name": "raw_half_features_leaf_1",
+  "dropped_features": [
+    "observations_so_far",
+    "days_since_first_seen_so_far",
+    "first_seen_day_offset"
+  ],
+  "base_value": 371.9567702979555,
+  "examples": 88
+}

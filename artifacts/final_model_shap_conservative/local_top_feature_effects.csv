@@ -1,0 +1,1057 @@
+feature_group,feature,shap_value,abs_shap_value,product_id,example_source,feature_value
+part_taxonomy,subcategory,-137.87528180391453,137.87528180391453,54161048,accurate_low_error,fuse box / electricity central
+part_taxonomy,part_name,-50.288189069769864,50.288189069769864,54161048,accurate_low_error,Fuse box / Electricity central -
+part_taxonomy,category,-14.948379053067294,14.948379053067294,54161048,accurate_low_error,electric / transmitter / databox / sensor
+vehicle_age_usage,year_end,-10.54298029701422,10.54298029701422,54161048,accurate_low_error,2012
+vehicle_age_usage,year_mid,-9.942544615344524,9.942544615344524,54161048,accurate_low_error,2010.0
+vehicle_age_usage,year_start,-4.723698346834717,4.723698346834717,54161048,accurate_low_error,2008
+vehicle_identity,brand,-2.9725386757681553,2.9725386757681553,54161048,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.625095865214389,2.625095865214389,54161048,accurate_low_error,1598.0
+vehicle_identity,model,-2.3707532294512204,2.3707532294512204,54161048,accurate_low_error,corolla
+vehicle_age_usage,mileage,-2.2732199299004425,2.2732199299004425,54161048,accurate_low_error,172000.0
+traficom_model_context,model_firstreg_peak_year,-2.2533295292960247,2.2533295292960247,54161048,accurate_low_error,2020.0
+traficom_brand_context,brand_firstreg_peak_year,-1.9626557038230386,1.9626557038230386,54161048,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-170.12734882206567,170.12734882206567,54338198,accurate_low_error,right
+part_taxonomy,part_name,-52.279613961059795,52.279613961059795,54338198,accurate_low_error,Strut rear -(Right)
+vehicle_age_usage,year_end,-17.776551043785293,17.776551043785293,54338198,accurate_low_error,1997
+vehicle_age_usage,year_mid,-15.774911508239239,15.774911508239239,54338198,accurate_low_error,1995.0
+part_taxonomy,category,-9.627391145668117,9.627391145668117,54338198,accurate_low_error,vehicle exterior / suspension
+vehicle_age_usage,year_start,-8.988621788239033,8.988621788239033,54338198,accurate_low_error,1993
+vehicle_identity,brand,-3.0194485854172672,3.0194485854172672,54338198,accurate_low_error,toyota
+traficom_brand_context,brand_median_engine_cc,-2.6395014499648823,2.6395014499648823,54338198,accurate_low_error,1598.0
+vehicle_identity,model,-2.3985758017549963,2.3985758017549963,54338198,accurate_low_error,corolla
+traficom_model_context,model_firstreg_peak_year,-2.3255479099493823,2.3255479099493823,54338198,accurate_low_error,2020.0
+vehicle_age_usage,mileage,-2.1571334000348,2.1571334000348,54338198,accurate_low_error,
+traficom_brand_context,brand_firstreg_peak_year,-1.9594190794153838,1.9594190794153838,54338198,accurate_low_error,2019.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,-203.23395191303524,203.23395191303524,59918008,accurate_low_error,gear lever
+part_taxonomy,category,87.94037353358361,87.94037353358361,59918008,accurate_low_error,gear box / drive axle / middle axle
+part_taxonomy,part_name,-50.81805357466721,50.81805357466721,59918008,accurate_low_error,Gear lever -
+vehicle_age_usage,year_end,9.191642292386895,9.191642292386895,59918008,accurate_low_error,2020
+vehicle_age_usage,mileage,-8.570783842079873,8.570783842079873,59918008,accurate_low_error,185000.0
+vehicle_age_usage,year_mid,7.5454218091590155,7.5454218091590155,59918008,accurate_low_error,2016.5
+vehicle_age_usage,year_start,4.548056681173912,4.548056681173912,59918008,accurate_low_error,2013
+vehicle_identity,brand,1.3299818568069894,1.3299818568069894,59918008,accurate_low_error,skoda
+vehicle_identity,model,0.93538348890841,0.93538348890841,59918008,accurate_low_error,octavia
+part_condition,quality_grade,-0.6891507626313979,0.6891507626313979,59918008,accurate_low_error,A2
+traficom_brand_context,brand_median_power_kw,0.6485900282982766,0.6485900282982766,59918008,accurate_low_error,96.0
+traficom_brand_context,brand_median_engine_cc,0.638085700048905,0.638085700048905,59918008,accurate_low_error,1498.0
+part_taxonomy,subcategory,1009.3324765358781,1009.3324765358781,54187634,expensive_high_error,gear box 6 speed
+vehicle_age_usage,mileage,-168.90455711393943,168.90455711393943,54187634,expensive_high_error,330000.0
+part_taxonomy,part_name,61.805636735059906,61.805636735059906,54187634,expensive_high_error,Gear Box 6 Speed -
+part_taxonomy,category,55.53393855928461,55.53393855928461,54187634,expensive_high_error,gear box / drive axle / middle axle
+vehicle_identity,model,-34.23449331398122,34.23449331398122,54187634,expensive_high_error,corolla
+vehicle_identity,brand,-32.16785006612234,32.16785006612234,54187634,expensive_high_error,toyota
+vehicle_age_usage,year_end,-20.700250878550722,20.700250878550722,54187634,expensive_high_error,2012
+traficom_model_context,model_firstreg_recent_share,-15.711003128603297,15.711003128603297,54187634,expensive_high_error,0.5992495417048579
+traficom_model_context,model_turbo_share,-14.88536108451648,14.88536108451648,54187634,expensive_high_error,0.036677322778708
+traficom_model_context,model_hybrid_share,-14.643057374199307,14.643057374199307,54187634,expensive_high_error,0.3193991982544273
+traficom_model_context,model_median_mass_kg,-14.371176840165862,14.371176840165862,54187634,expensive_high_error,1270.0
+traficom_brand_context,brand_firstreg_recent_share,-14.10181989654724,14.10181989654724,54187634,expensive_high_error,0.4851717810544028
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,subcategory,3242.0115473911856,3242.0115473911856,64483026,expensive_high_error,automatic gear
+part_taxonomy,part_name,399.9391474039501,399.9391474039501,64483026,expensive_high_error,Automatic gear -
+part_taxonomy,category,82.91202268686207,82.91202268686207,64483026,expensive_high_error,gear box / drive axle / middle axle
+vehicle_age_usage,year_start,36.57246384573671,36.57246384573671,64483026,expensive_high_error,2020
+vehicle_age_usage,mileage,27.577732355856078,27.577732355856078,64483026,expensive_high_error,103000.0
+vehicle_age_usage,year_mid,27.283628604568147,27.283628604568147,64483026,expensive_high_error,2023.5
+vehicle_age_usage,year_end,24.54156271247899,24.54156271247899,64483026,expensive_high_error,2027
+vehicle_identity,model,23.574480831913533,23.574480831913533,64483026,expensive_high_error,octavia
+vehicle_identity,brand,22.566012260148128,22.566012260148128,64483026,expensive_high_error,skoda
+traficom_model_context,model_petrol_share,15.113173442628904,15.113173442628904,64483026,expensive_high_error,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.489991338048421,12.489991338048421,64483026,expensive_high_error,93798.0
+traficom_model_context,model_diesel_share,11.743568837450658,11.743568837450658,64483026,expensive_high_error,0.3201865423051299
+part_taxonomy,part_name,190.0093227640944,190.0093227640944,62146906,expensive_high_error,Hybrid Inverter -
+part_taxonomy,subcategory,76.99237772087199,76.99237772087199,62146906,expensive_high_error,hybrid inverter
+vehicle_age_usage,year_end,61.74429714651546,61.74429714651546,62146906,expensive_high_error,2027
+vehicle_age_usage,year_mid,53.064512923868755,53.064512923868755,62146906,expensive_high_error,2023.0
+vehicle_age_usage,mileage,-42.43192664440306,42.43192664440306,62146906,expensive_high_error,83000.0
+vehicle_age_usage,year_start,20.85490401827381,20.85490401827381,62146906,expensive_high_error,2019
+part_taxonomy,category,-15.300226275599053,15.300226275599053,62146906,expensive_high_error,electric / transmitter / databox / sensor
+part_condition,quality_grade,-5.233896148508429,5.233896148508429,62146906,expensive_high_error,A2
+traficom_brand_context,brand_median_engine_cc,-2.5862379746735678,2.5862379746735678,62146906,expensive_high_error,1598.0
+vehicle_identity,brand,-2.2768289173513767,2.2768289173513767,62146906,expensive_high_error,toyota
+traficom_model_context,model_firstreg_peak_year,-2.236707936475577,2.236707936475577,62146906,expensive_high_error,2020.0
+vehicle_age_usage,year_span,2.1495427666021714,2.1495427666021714,62146906,expensive_high_error,8
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,3503.1002862590694,3503.1002862590694,63425718,largest_underprediction,automatic gear
+part_taxonomy,category,98.44563079675164,98.44563079675164,63425718,largest_underprediction,gear box / drive axle / middle axle
+part_taxonomy,part_name,25.187543015564064,25.187543015564064,63425718,largest_underprediction,Automatic gear -(Front)
+vehicle_identity,brand,16.251448063912832,16.251448063912832,63425718,largest_underprediction,skoda
+vehicle_identity,model,13.83181203807828,13.83181203807828,63425718,largest_underprediction,octavia
+traficom_model_context,model_petrol_share,13.217224908605568,13.217224908605568,63425718,largest_underprediction,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,12.87884183576636,12.87884183576636,63425718,largest_underprediction,93798.0
+vehicle_age_usage,year_mid,11.111503772957949,11.111503772957949,63425718,largest_underprediction,2016.5
+traficom_brand_context,brand_diesel_share,10.349736373414926,10.349736373414926,63425718,largest_underprediction,0.2690201280824612
+traficom_model_context,model_turbo_share,10.074114377486403,10.074114377486403,63425718,largest_underprediction,0.9126885106898432
+traficom_brand_context,brand_firstreg_peak_count,9.368430189454738,9.368430189454738,63425718,largest_underprediction,11697.0
+traficom_brand_context,brand_share_of_market,8.720878419455039,8.720878419455039,63425718,largest_underprediction,0.0664151587758892
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.54861507081424,122.54861507081424,65107261,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.64355370101578,114.64355370101578,65107261,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.642821857040104,51.642821857040104,65107261,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.276170089623555,51.276170089623555,65107261,largest_underprediction,2023.0
+part_taxonomy,category,41.56193598778118,41.56193598778118,65107261,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.51036570673117,29.51036570673117,65107261,largest_underprediction,2019
+vehicle_age_usage,year_span,12.511140827060736,12.511140827060736,65107261,largest_underprediction,8
+vehicle_age_usage,mileage,-3.854676702777724,3.854676702777724,65107261,largest_underprediction,115000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.535291806667228,3.535291806667228,65107261,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3499168848930276,3.3499168848930276,65107261,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.268955787941377,3.268955787941377,65107261,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.1439734922500793,3.1439734922500793,65107261,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,-122.80151481021727,122.80151481021727,60058879,largest_underprediction,main cylinder
+part_taxonomy,part_name,114.11115020156087,114.11115020156087,60058879,largest_underprediction,Main cylinder -
+vehicle_age_usage,year_end,51.621034180863354,51.621034180863354,60058879,largest_underprediction,2027
+vehicle_age_usage,year_mid,51.24619017769503,51.24619017769503,60058879,largest_underprediction,2023.0
+part_taxonomy,category,41.91915794987122,41.91915794987122,60058879,largest_underprediction,brakes
+vehicle_age_usage,year_start,29.523202573911767,29.523202573911767,60058879,largest_underprediction,2019
+vehicle_age_usage,year_span,12.598229618062906,12.598229618062906,60058879,largest_underprediction,8
+vehicle_age_usage,mileage,-3.708911591603828,3.708911591603828,60058879,largest_underprediction,119000.0
+traficom_brand_context,brand_firstreg_total_2014_2026,3.5384616611956154,3.5384616611956154,60058879,largest_underprediction,137879.0
+traficom_brand_context,brand_median_mass_kg,3.3504974576391398,3.3504974576391398,60058879,largest_underprediction,1345.0
+traficom_brand_context,brand_diesel_share,3.270930778816837,3.270930778816837,60058879,largest_underprediction,0.06929519343991
+traficom_model_context,model_turbo_share,3.144977478889632,3.144977478889632,60058879,largest_underprediction,0.036677322778708
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,2364.4173879395203,2364.4173879395203,59673805,largest_overprediction,engine diesel
+part_taxonomy,part_name,590.8793090310227,590.8793090310227,59673805,largest_overprediction,Engine Diesel -
+vehicle_age_usage,mileage,-162.21391677206122,162.21391677206122,59673805,largest_overprediction,201000.0
+vehicle_identity,brand,35.002827803800976,35.002827803800976,59673805,largest_overprediction,skoda
+vehicle_age_usage,year_end,27.11846557447483,27.11846557447483,59673805,largest_overprediction,2020
+vehicle_identity,model,22.331361198484082,22.331361198484082,59673805,largest_overprediction,octavia
+vehicle_age_usage,year_mid,21.908372877563743,21.908372877563743,59673805,largest_overprediction,2016.5
+traficom_brand_context,brand_median_engine_cc,19.785753066527686,19.785753066527686,59673805,largest_overprediction,1498.0
+traficom_model_context,model_firstreg_peak_year,17.21293862072831,17.21293862072831,59673805,largest_overprediction,2014.0
+traficom_model_context,model_hybrid_share,13.47459115740101,13.47459115740101,59673805,largest_overprediction,0.1003936769426443
+traficom_brand_context,brand_firstreg_peak_year,13.303931084847937,13.303931084847937,59673805,largest_overprediction,2018.0
+traficom_brand_context,brand_hybrid_share,13.06532775972708,13.06532775972708,59673805,largest_overprediction,0.0820385186576582
+part_taxonomy,subcategory,1130.4143695429857,1130.4143695429857,64533287,largest_overprediction,gear box 6 speed
+part_taxonomy,part_name,-83.88835328231765,83.88835328231765,64533287,largest_overprediction,Gear Box 6 Speed -(Front)
+part_taxonomy,category,57.433586004957014,57.433586004957014,64533287,largest_overprediction,gear box / drive axle / middle axle
+vehicle_age_usage,mileage_missing_flag,-42.934259748542644,42.934259748542644,64533287,largest_overprediction,1
+vehicle_identity,brand,-28.85007659932644,28.85007659932644,64533287,largest_overprediction,toyota
+vehicle_identity,model,-27.063238593763344,27.063238593763344,64533287,largest_overprediction,corolla
+vehicle_age_usage,year_end,-16.208988044516772,16.208988044516772,64533287,largest_overprediction,2012
+traficom_model_context,model_turbo_share,-11.96744569873219,11.96744569873219,64533287,largest_overprediction,0.036677322778708
+traficom_brand_context,brand_hybrid_share,-11.500263322385981,11.500263322385981,64533287,largest_overprediction,0.3234907231586875
+traficom_model_context,model_median_mileage,-11.146729797361841,11.146729797361841,64533287,largest_overprediction,206621.0
+traficom_brand_context,brand_median_mass_kg,-10.842008354933641,10.842008354933641,64533287,largest_overprediction,1345.0
+traficom_model_context,model_median_mass_kg,-10.839272419445406,10.839272419445406,64533287,largest_overprediction,1270.0
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,3258.823701916972,3258.823701916972,59824465,largest_overprediction,engine gasoline
+part_taxonomy,part_name,445.8952300075009,445.8952300075009,59824465,largest_overprediction,Engine Gasoline -
+vehicle_age_usage,mileage,-28.34628450451273,28.34628450451273,59824465,largest_overprediction,86000.0
+part_taxonomy,category,-10.821823282222468,10.821823282222468,59824465,largest_overprediction,engine
+vehicle_identity,brand,6.548499634030086,6.548499634030086,59824465,largest_overprediction,skoda
+vehicle_age_usage,year_mid,5.801832927420983,5.801832927420983,59824465,largest_overprediction,2016.5
+vehicle_identity,model,4.904532750169674,4.904532750169674,59824465,largest_overprediction,octavia
+traficom_brand_context,brand_median_mileage,3.1699110692256363,3.1699110692256363,59824465,largest_overprediction,162500.0
+traficom_brand_context,brand_mean_mileage,3.105525404840155,3.105525404840155,59824465,largest_overprediction,179263.6627464764
+traficom_brand_context,brand_median_vehicle_age,3.0903295131867345,3.0903295131867345,59824465,largest_overprediction,8.0
+part_condition,quality_grade,-2.960331718050329,2.960331718050329,59824465,largest_overprediction,A2
+traficom_brand_context,brand_share_of_market,2.9598105019240757,2.9598105019240757,59824465,largest_overprediction,0.0664151587758892
+part_taxonomy,subcategory,-235.24448332333913,235.24448332333913,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-55.624831628560806,55.624831628560806,54064944,cheap_item,"Ignition Diesel relay- , e-"
+part_taxonomy,category,-24.15214145646682,24.15214145646682,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.775848629122628,16.775848629122628,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.26731958341923,16.26731958341923,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.276174362254315,10.276174362254315,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-9.8655119047665,9.8655119047665,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.520233033962504,1.520233033962504,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6941082991310396,0.6941082991310396,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6367244963634584,0.6367244963634584,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.49683545925334327,0.49683545925334327,54064944,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4817013656228664,0.4817013656228664,54064944,cheap_item,2018.0
+part_taxonomy,subcategory,-235.753329356072,235.753329356072,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-57.11677494420214,57.11677494420214,54064944,cheap_item,"Ignition Diesel relay - , e-"
+part_taxonomy,category,-24.38269449351661,24.38269449351661,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.749683055067873,16.749683055067873,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.1991210869771,16.1991210869771,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.521733521254063,10.521733521254063,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-10.475859259315039,10.475859259315039,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.5296235949920811,1.5296235949920811,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6830831383861369,0.6830831383861369,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6327735164179467,0.6327735164179467,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.4952847067199764,0.4952847067199764,54064944,cheap_item,0.068186533274936
+traficom_model_context,model_firstreg_weighted_year,0.4759069418029685,0.4759069418029685,54064944,cheap_item,2017.575680272109
+part_taxonomy,subcategory,-235.753329356072,235.753329356072,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-57.11677494420214,57.11677494420214,54064944,cheap_item,"Ignition Diesel relay - , e-"
+part_taxonomy,category,-24.38269449351661,24.38269449351661,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.749683055067873,16.749683055067873,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.1991210869771,16.1991210869771,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.521733521254063,10.521733521254063,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-10.475859259315039,10.475859259315039,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.5296235949920811,1.5296235949920811,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6830831383861369,0.6830831383861369,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6327735164179467,0.6327735164179467,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.4952847067199764,0.4952847067199764,54064944,cheap_item,0.068186533274936
+traficom_model_context,model_firstreg_weighted_year,0.4759069418029685,0.4759069418029685,54064944,cheap_item,2017.575680272109
+part_taxonomy,subcategory,-235.753329356072,235.753329356072,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-57.11677494420214,57.11677494420214,54064944,cheap_item,"Ignition Diesel relay - , e-"
+part_taxonomy,category,-24.38269449351661,24.38269449351661,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.749683055067873,16.749683055067873,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.1991210869771,16.1991210869771,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.521733521254063,10.521733521254063,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-10.475859259315039,10.475859259315039,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.5296235949920811,1.5296235949920811,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6830831383861369,0.6830831383861369,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6327735164179467,0.6327735164179467,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.4952847067199764,0.4952847067199764,54064944,cheap_item,0.068186533274936
+traficom_model_context,model_firstreg_weighted_year,0.4759069418029685,0.4759069418029685,54064944,cheap_item,2017.575680272109
+part_taxonomy,subcategory,-235.753329356072,235.753329356072,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-57.11677494420214,57.11677494420214,54064944,cheap_item,"Ignition Diesel relay - , e-"
+part_taxonomy,category,-24.38269449351661,24.38269449351661,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.749683055067873,16.749683055067873,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.1991210869771,16.1991210869771,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.521733521254063,10.521733521254063,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-10.475859259315039,10.475859259315039,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.5296235949920811,1.5296235949920811,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6830831383861369,0.6830831383861369,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6327735164179467,0.6327735164179467,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.4952847067199764,0.4952847067199764,54064944,cheap_item,0.068186533274936
+traficom_model_context,model_firstreg_weighted_year,0.4759069418029685,0.4759069418029685,54064944,cheap_item,2017.575680272109
+part_taxonomy,subcategory,-235.753329356072,235.753329356072,54064944,cheap_item,ignition diesel relay
+part_taxonomy,part_name,-57.11677494420214,57.11677494420214,54064944,cheap_item,"Ignition Diesel relay - , e-"
+part_taxonomy,category,-24.38269449351661,24.38269449351661,54064944,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-16.749683055067873,16.749683055067873,54064944,cheap_item,2006.5
+vehicle_age_usage,year_end,-16.1991210869771,16.1991210869771,54064944,cheap_item,2009
+vehicle_age_usage,year_start,-10.521733521254063,10.521733521254063,54064944,cheap_item,2004
+vehicle_age_usage,mileage,-10.475859259315039,10.475859259315039,54064944,cheap_item,319000.0
+vehicle_age_usage,year_span,-1.5296235949920811,1.5296235949920811,54064944,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.6830831383861369,0.6830831383861369,54064944,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.6327735164179467,0.6327735164179467,54064944,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.4952847067199764,0.4952847067199764,54064944,cheap_item,0.068186533274936
+traficom_model_context,model_firstreg_weighted_year,0.4759069418029685,0.4759069418029685,54064944,cheap_item,2017.575680272109
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-234.15791073761753,234.15791073761753,54115323,cheap_item,all
+part_taxonomy,part_name,-64.00136648904494,64.00136648904494,54115323,cheap_item,"Airbag Front sensor - , e-(Right)"
+part_taxonomy,category,-24.968618135279467,24.968618135279467,54115323,cheap_item,electric / transmitter / databox / sensor
+vehicle_age_usage,year_mid,-18.011770502547297,18.011770502547297,54115323,cheap_item,2006.5
+vehicle_age_usage,year_end,-17.527752667561728,17.527752667561728,54115323,cheap_item,2009
+vehicle_age_usage,year_start,-11.090632688300103,11.090632688300103,54115323,cheap_item,2004
+vehicle_age_usage,mileage,-1.7643368545894917,1.7643368545894917,54115323,cheap_item,
+vehicle_age_usage,year_span,-0.900749079819434,0.900749079819434,54115323,cheap_item,5
+traficom_brand_context,brand_median_engine_cc,0.7149749742393032,0.7149749742393032,54115323,cheap_item,1498.0
+traficom_model_context,model_firstreg_peak_year,0.621833735562177,0.621833735562177,54115323,cheap_item,2014.0
+traficom_model_context,model_hybrid_share,0.5005416039893317,0.5005416039893317,54115323,cheap_item,0.068186533274936
+traficom_brand_context,brand_firstreg_peak_year,0.4807662229955531,0.4807662229955531,54115323,cheap_item,2018.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,-172.69044321806567,172.69044321806567,53950695,cheap_item,front
+part_taxonomy,part_name,-60.21017582410946,60.21017582410946,53950695,cheap_item,Brake disc -(Front)
+vehicle_age_usage,year_mid,-29.374351432062866,29.374351432062866,53950695,cheap_item,1985.0
+vehicle_age_usage,year_end,-28.955419474961964,28.955419474961964,53950695,cheap_item,1987
+vehicle_age_usage,year_start,-19.589562779005426,19.589562779005426,53950695,cheap_item,1983
+vehicle_age_usage,mileage,-4.294700143157025,4.294700143157025,53950695,cheap_item,101000.0
+part_taxonomy,category,-3.267943212558075,3.267943212558075,53950695,cheap_item,brakes
+vehicle_identity,brand,-2.866863460009954,2.866863460009954,53950695,cheap_item,toyota
+traficom_brand_context,brand_median_engine_cc,-2.5842160557643363,2.5842160557643363,53950695,cheap_item,1598.0
+part_condition,quality_grade,-2.51361874585773,2.51361874585773,53950695,cheap_item,C2
+vehicle_identity,model,-2.2999202793316362,2.2999202793316362,53950695,cheap_item,corolla
+traficom_model_context,model_firstreg_peak_year,-2.263427698625601,2.263427698625601,53950695,cheap_item,2020.0
+part_taxonomy,subcategory,3424.627665118544,3424.627665118544,53935379,expensive_item,engine gasoline
+part_taxonomy,part_name,481.42143587787905,481.42143587787905,53935379,expensive_item,Engine Gasoline -
+part_condition,quality_grade,51.72050374785846,51.72050374785846,53935379,expensive_item,B2
+vehicle_age_usage,year_mid,47.85544446685322,47.85544446685322,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.45430064556931,43.45430064556931,53935379,expensive_item,2020
+vehicle_age_usage,year_end,36.62253328784609,36.62253328784609,53935379,expensive_item,2027
+vehicle_age_usage,mileage,13.150400298585119,13.150400298585119,53935379,expensive_item,28000.0
+part_taxonomy,category,-10.90059497615257,10.90059497615257,53935379,expensive_item,engine
+vehicle_identity,brand,10.524361633404478,10.524361633404478,53935379,expensive_item,skoda
+vehicle_identity,model,7.771860900961365,7.771860900961365,53935379,expensive_item,octavia
+traficom_brand_context,brand_median_mileage,5.285599525708603,5.285599525708603,53935379,expensive_item,162500.0
+traficom_brand_context,brand_mean_mileage,5.167523247513964,5.167523247513964,53935379,expensive_item,179263.6627464764
+part_taxonomy,subcategory,3915.052705483441,3915.052705483441,53935379,expensive_item,engine gasoline
+vehicle_age_usage,year_mid,52.64503112844541,52.64503112844541,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.94710598347057,43.94710598347057,53935379,expensive_item,2020
+part_condition,quality_grade,43.70984685411253,43.70984685411253,53935379,expensive_item,B2
+vehicle_age_usage,year_end,42.06175766241984,42.06175766241984,53935379,expensive_item,2027
+part_taxonomy,part_name,-25.29213940534065,25.29213940534065,53935379,expensive_item,Engine Gasoline-
+part_taxonomy,category,-11.1927846540319,11.1927846540319,53935379,expensive_item,engine
+vehicle_identity,brand,4.483982927893776,4.483982927893776,53935379,expensive_item,skoda
+traficom_brand_context,brand_firstreg_recent_share,4.32394226168708,4.32394226168708,53935379,expensive_item,0.4114799889123435
+traficom_brand_context,brand_mean_mileage,4.274330039652487,4.274330039652487,53935379,expensive_item,179263.6627464764
+traficom_brand_context,brand_share_of_market,4.0948782928626315,4.0948782928626315,53935379,expensive_item,0.0664151587758892
+traficom_brand_context,brand_turbo_share,3.8857163067784857,3.8857163067784857,53935379,expensive_item,0.8308571898167987
+part_taxonomy,subcategory,3424.627665118544,3424.627665118544,53935379,expensive_item,engine gasoline
+part_taxonomy,part_name,481.42143587787905,481.42143587787905,53935379,expensive_item,Engine Gasoline -
+part_condition,quality_grade,51.72050374785846,51.72050374785846,53935379,expensive_item,B2
+vehicle_age_usage,year_mid,47.85544446685322,47.85544446685322,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.45430064556931,43.45430064556931,53935379,expensive_item,2020
+vehicle_age_usage,year_end,36.62253328784609,36.62253328784609,53935379,expensive_item,2027
+vehicle_age_usage,mileage,13.150400298585119,13.150400298585119,53935379,expensive_item,28000.0
+part_taxonomy,category,-10.90059497615257,10.90059497615257,53935379,expensive_item,engine
+vehicle_identity,brand,10.524361633404478,10.524361633404478,53935379,expensive_item,skoda
+vehicle_identity,model,7.771860900961365,7.771860900961365,53935379,expensive_item,octavia
+traficom_brand_context,brand_median_mileage,5.285599525708603,5.285599525708603,53935379,expensive_item,162500.0
+traficom_brand_context,brand_mean_mileage,5.167523247513964,5.167523247513964,53935379,expensive_item,179263.6627464764
+part_taxonomy,subcategory,3424.627665118544,3424.627665118544,53935379,expensive_item,engine gasoline
+part_taxonomy,part_name,481.42143587787905,481.42143587787905,53935379,expensive_item,Engine Gasoline -
+part_condition,quality_grade,51.72050374785846,51.72050374785846,53935379,expensive_item,B2
+vehicle_age_usage,year_mid,47.85544446685322,47.85544446685322,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.45430064556931,43.45430064556931,53935379,expensive_item,2020
+vehicle_age_usage,year_end,36.62253328784609,36.62253328784609,53935379,expensive_item,2027
+vehicle_age_usage,mileage,13.150400298585119,13.150400298585119,53935379,expensive_item,28000.0
+part_taxonomy,category,-10.90059497615257,10.90059497615257,53935379,expensive_item,engine
+vehicle_identity,brand,10.524361633404478,10.524361633404478,53935379,expensive_item,skoda
+vehicle_identity,model,7.771860900961365,7.771860900961365,53935379,expensive_item,octavia
+traficom_brand_context,brand_median_mileage,5.285599525708603,5.285599525708603,53935379,expensive_item,162500.0
+traficom_brand_context,brand_mean_mileage,5.167523247513964,5.167523247513964,53935379,expensive_item,179263.6627464764
+part_taxonomy,subcategory,3424.627665118544,3424.627665118544,53935379,expensive_item,engine gasoline
+part_taxonomy,part_name,481.42143587787905,481.42143587787905,53935379,expensive_item,Engine Gasoline -
+part_condition,quality_grade,51.72050374785846,51.72050374785846,53935379,expensive_item,B2
+vehicle_age_usage,year_mid,47.85544446685322,47.85544446685322,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.45430064556931,43.45430064556931,53935379,expensive_item,2020
+vehicle_age_usage,year_end,36.62253328784609,36.62253328784609,53935379,expensive_item,2027
+vehicle_age_usage,mileage,13.150400298585119,13.150400298585119,53935379,expensive_item,28000.0
+part_taxonomy,category,-10.90059497615257,10.90059497615257,53935379,expensive_item,engine
+vehicle_identity,brand,10.524361633404478,10.524361633404478,53935379,expensive_item,skoda
+vehicle_identity,model,7.771860900961365,7.771860900961365,53935379,expensive_item,octavia
+traficom_brand_context,brand_median_mileage,5.285599525708603,5.285599525708603,53935379,expensive_item,162500.0
+traficom_brand_context,brand_mean_mileage,5.167523247513964,5.167523247513964,53935379,expensive_item,179263.6627464764
+part_taxonomy,subcategory,3424.627665118544,3424.627665118544,53935379,expensive_item,engine gasoline
+part_taxonomy,part_name,481.42143587787905,481.42143587787905,53935379,expensive_item,Engine Gasoline -
+part_condition,quality_grade,51.72050374785846,51.72050374785846,53935379,expensive_item,B2
+vehicle_age_usage,year_mid,47.85544446685322,47.85544446685322,53935379,expensive_item,2023.5
+vehicle_age_usage,year_start,43.45430064556931,43.45430064556931,53935379,expensive_item,2020
+vehicle_age_usage,year_end,36.62253328784609,36.62253328784609,53935379,expensive_item,2027
+vehicle_age_usage,mileage,13.150400298585119,13.150400298585119,53935379,expensive_item,28000.0
+part_taxonomy,category,-10.90059497615257,10.90059497615257,53935379,expensive_item,engine
+vehicle_identity,brand,10.524361633404478,10.524361633404478,53935379,expensive_item,skoda
+vehicle_identity,model,7.771860900961365,7.771860900961365,53935379,expensive_item,octavia
+traficom_brand_context,brand_median_mileage,5.285599525708603,5.285599525708603,53935379,expensive_item,162500.0
+traficom_brand_context,brand_mean_mileage,5.167523247513964,5.167523247513964,53935379,expensive_item,179263.6627464764
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3167.3908560610294,3167.3908560610294,65552499,expensive_item,automatic gear
+part_taxonomy,part_name,379.90753890211664,379.90753890211664,65552499,expensive_item,Automatic gear -
+part_taxonomy,category,82.67896049726754,82.67896049726754,65552499,expensive_item,gear box / drive axle / middle axle
+vehicle_age_usage,mileage,-62.234353064851696,62.234353064851696,65552499,expensive_item,61000.0
+vehicle_age_usage,year_start,27.248784169661302,27.248784169661302,65552499,expensive_item,2020
+vehicle_identity,model,22.133976987461647,22.133976987461647,65552499,expensive_item,octavia
+vehicle_identity,brand,21.37598459140347,21.37598459140347,65552499,expensive_item,skoda
+vehicle_age_usage,year_mid,20.879271986225138,20.879271986225138,65552499,expensive_item,2023.5
+vehicle_age_usage,year_end,17.51502785837096,17.51502785837096,65552499,expensive_item,2027
+traficom_model_context,model_petrol_share,14.285499023533484,14.285499023533484,65552499,expensive_item,0.6174792562534068
+traficom_brand_context,brand_firstreg_total_2014_2026,11.227207166145963,11.227207166145963,65552499,expensive_item,93798.0
+traficom_model_context,model_diesel_share,11.02744967874365,11.02744967874365,65552499,expensive_item,0.3201865423051299
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
+part_taxonomy,subcategory,3599.459663026378,3599.459663026378,65116265,expensive_item,engine gasoline
+part_taxonomy,part_name,203.95600679673788,203.95600679673788,65116265,expensive_item,"Engine Gasoline - , e-"
+vehicle_age_usage,mileage,60.412270694876185,60.412270694876185,65116265,expensive_item,214000.0
+part_taxonomy,category,-10.674275859349144,10.674275859349144,65116265,expensive_item,engine
+vehicle_age_usage,year_mid,9.88247669209988,9.88247669209988,65116265,expensive_item,2016.5
+traficom_brand_context,brand_firstreg_recent_share,3.5598677813325774,3.5598677813325774,65116265,expensive_item,0.3926440262599496
+vehicle_age_usage,year_end,3.3104423221871913,3.3104423221871913,65116265,expensive_item,2020
+traficom_brand_context,brand_firstreg_weighted_year,3.2746668745501664,3.2746668745501664,65116265,expensive_item,2019.8421912513325
+traficom_brand_context,brand_share_of_market,3.1330897109645592,3.1330897109645592,65116265,expensive_item,0.1088905453357462
+traficom_brand_context,brand_turbo_share,2.92989482942412,2.92989482942412,65116265,expensive_item,0.6861312300625467
+traficom_brand_context,brand_firstreg_old_share,2.7924952860196934,2.7924952860196934,65116265,expensive_item,0.3906815034717725
+traficom_model_context,model_share_within_brand,2.70528730031976,2.70528730031976,65116265,expensive_item,0.3171647383524337
