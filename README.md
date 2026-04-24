@@ -58,8 +58,8 @@ The project now reports two evaluation settings:
 | --- | ---: | ---: | ---: | ---: |
 | Random forest, no `oem_number` | **34.4796 +/- 2.7151** | **70.3158** | **0.9864** | **12.3629** |
 | XGBoost, no date offsets/no `oem_number` | 40.3583 +/- 4.4666 | 87.1192 | 0.9789 | 16.7802 |
-| Linear ridge | 53.7993 +/- 3.8390 | 154.8746 | 0.9326 | 16.8031 |
-| CatBoost | 99.5891 +/- 16.4347 | 262.0683 | 0.7968 | 31.1834 |
+| Linear ridge, clean rerun | 53.6425 +/- 2.8193 | 152.9400 | 0.9343 | 16.5550 |
+| CatBoost, clean rerun | 78.8475 +/- 11.3952 | 206.9250 | 0.8789 | 26.4075 |
 
 The fixed validation split gives the direct holdout score for the tuned configuration, while product-id grouped CV is the stronger stability check for unseen listing groups. The stricter part-identity grouped CV is the conservative robustness estimate after the leakage audit found comparable-item duplication across the product-id split. The random forest remains the strongest model in both grouped settings.
 
@@ -267,8 +267,8 @@ This stricter grouping removes exact modeled part-identity duplicates across fol
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Random forest | trusted recommended features without `oem_number` | **34.4796** | **2.7151** | **70.3158** | **0.9864** | **12.3629** |
 | XGBoost | trusted recommended features without date offsets and without `oem_number` | 40.3583 | 4.4666 | 87.1192 | 0.9789 | 16.7802 |
-| Linear ridge | trusted recommended features without listing dates | 53.7993 | 3.8390 | 154.8746 | 0.9326 | 16.8031 |
-| CatBoost | trusted recommended features without date offsets | 99.5891 | 16.4347 | 262.0683 | 0.7968 | 31.1834 |
+| Linear ridge | trusted recommended features without listing dates | 53.6425 | 2.8193 | 152.9400 | 0.9343 | 16.5550 |
+| CatBoost | trusted recommended features without date offsets and without `oem_number` | 78.8475 | 11.3952 | 206.9250 | 0.8789 | 26.4075 |
 
 The stricter result confirms that the original 18.2409 validation MAE was optimistic for generalization to unseen part identities. However, performance does not collapse: random forest remains the strongest model with a stricter grouped-CV MAE of 34.4796 and median absolute error of 12.3629 after removing `oem_number`. The proof-of-concept should therefore be described as a comparable-market pricing decision-support tool, with higher uncertainty for rare or unseen part identities.
 
