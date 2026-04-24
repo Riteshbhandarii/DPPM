@@ -19,26 +19,25 @@ if str(ROOT) not in sys.path:
 from src.part_identity_evaluation import (  # noqa: E402
     add_part_identity_group,
     evaluate_grouped_cv,
-    load_json,
     load_split_frames,
     split_sanity_checks,
     write_model_outputs,
 )
-from src.tree_modeling import TARGET_COLUMN, convert_predictions_to_eur  # noqa: E402
+from src.tree_modeling import TARGET_COLUMN, build_feature_catalog, convert_predictions_to_eur  # noqa: E402
 
 
 CATBOOST_CONFIG = {
     "target_mode": "raw",
-    "config_name": "raw_rmse_reference",
+    "config_name": "raw_rmse_depth7",
     "model_params": {
         "loss_function": "RMSE",
         "eval_metric": "MAE",
-        "iterations": 2200,
-        "learning_rate": 0.04,
-        "depth": 6,
-        "l2_leaf_reg": 8,
+        "iterations": 2000,
+        "learning_rate": 0.035,
+        "depth": 7,
+        "l2_leaf_reg": 10,
         "random_strength": 1.0,
-        "bagging_temperature": 0.5,
+        "bagging_temperature": 0.75,
         "border_count": 254,
         "one_hot_max_size": 10,
         "rsm": 0.8,
@@ -54,9 +53,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--data-path", action="append", default=["datasets/splits/train_grouped.csv"])
     parser.add_argument("--cv-splits", type=int, default=4)
     parser.add_argument(
-        "--rf-summary-path",
-        default="artifacts/random_forest_tuning/best_tuning_summary.json",
-        help="Used to reuse the trusted 66-column no-date-offset feature set reported for CatBoost.",
+        "--feature-variant",
+        default="trusted_recommended_features_without_date_offsets_without_oem_number",
+        help="Feature variant from the CatBoost strict feature catalog.",
     )
     parser.add_argument("--output-dir", default="artifacts/part_identity_evaluation/catboost")
     parser.add_argument(
@@ -91,8 +90,6 @@ def main() -> None:
         raise ImportError("catboost is not installed. Install catboost before running this evaluation.")
 
     args = parse_args()
-    rf_summary = load_json(args.rf_summary_path)
-    features = list(rf_summary["feature_names"])
     config = {
         **CATBOOST_CONFIG,
         "model_params": dict(CATBOOST_CONFIG["model_params"]),
@@ -102,6 +99,17 @@ def main() -> None:
 
     frame = load_split_frames(args.data_path)
     frame, group_columns = add_part_identity_group(frame, args.group_columns)
+    feature_catalog = build_feature_catalog(
+        frame.drop(columns=["part_identity_group"]),
+        model_kind="catboost",
+    )
+    try:
+        features = list(feature_catalog["feature_sets"][args.feature_variant])
+    except KeyError as exc:
+        available = sorted(feature_catalog["feature_sets"])
+        raise KeyError(
+            f"Unknown CatBoost feature variant {args.feature_variant!r}. Available: {available}"
+        ) from exc
     missing = [column for column in features if column not in frame.columns]
     if missing:
         raise KeyError(f"CatBoost features missing from data: {missing}")
@@ -144,8 +152,11 @@ def main() -> None:
     )
     summary = {
         "model": "catboost",
-        "feature_source": args.rf_summary_path,
-        "feature_variant": "trusted_recommended_features_without_date_offsets",
+        "selection_mode": "strict_part_identity_grouped_cv",
+        "feature_source": "build_feature_catalog(model_kind='catboost')",
+        "feature_variant": args.feature_variant,
+        "config_name": config["config_name"],
+        "target_mode": config["target_mode"],
         "config": config,
         "feature_count": len(features),
         "group_columns": group_columns,

@@ -751,10 +751,10 @@ def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, 
         )
     )
 
-    if model_kind == "xgboost":
+    if model_kind in {"xgboost", "catboost"}:
         model_specific_exclusions = XGBOOST_SPECIFIC_EXCLUDED_FEATURES
         leakage_features = COMMON_LEAKAGE_RISK_FEATURES
-    elif model_kind == "random_forest":
+    elif model_kind in {"random_forest", "linear"}:
         model_specific_exclusions = set(DATE_COLUMNS)
         leakage_features = COMMON_LEAKAGE_RISK_FEATURES | RANDOM_FOREST_LEAKAGE_ONLY
     else:
@@ -793,7 +793,7 @@ def build_feature_catalog(train_df: pd.DataFrame, model_kind: str) -> dict[str, 
         if column not in leakage_features
     ]
 
-    if model_kind == "xgboost":
+    if model_kind in {"xgboost", "catboost"}:
         feature_sets = {
             "trusted_registry_lifecycle_stack": list(
                 dict.fromkeys(BASELINE_FEATURES + TRAFICOM_FEATURES + registry_lifecycle_features)
