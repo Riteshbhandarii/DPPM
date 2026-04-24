@@ -31,6 +31,12 @@ The work does not claim to produce a production-ready pricing system or a defini
 
 ## Results snapshot
 
+**Current final model:** Random forest with
+`trusted_recommended_features_without_oem_number`.
+
+**Final strict tuned result:** MAE **34.4796**, RMSE **70.3158**,
+R2 **0.9864**, median AE **12.3629**.
+
 The latest model selection uses Puhti tuning runs for the two strongest tree models. Random forest is currently selected because it has the best validation MAE, the best grouped-CV MAE, the lower grouped-CV spread, and the best stricter part-identity grouped CV result. XGBoost remains close in the original grouped-CV setting, especially on RMSE, but it is weaker under the stricter part-identity evaluation.
 
 The project now reports two evaluation settings:
@@ -50,8 +56,8 @@ The project now reports two evaluation settings:
 
 | Model | Part-identity grouped CV MAE | Part-identity grouped CV RMSE | Part-identity grouped CV R2 | Median AE |
 | --- | ---: | ---: | ---: | ---: |
-| Random forest | **35.6686 +/- 2.1188** | **71.9132** | **0.9858** | **14.8559** |
-| XGBoost | 39.3838 +/- 1.2814 | 85.1073 | 0.9798 | 15.1806 |
+| Random forest, no `oem_number` | **34.4796 +/- 2.7151** | **70.3158** | **0.9864** | **12.3629** |
+| XGBoost, no date offsets/no `oem_number` | 40.3583 +/- 4.4666 | 87.1192 | 0.9789 | 16.7802 |
 | Linear ridge | 53.7993 +/- 3.8390 | 154.8746 | 0.9326 | 16.8031 |
 | CatBoost | 99.5891 +/- 16.4347 | 262.0683 | 0.7968 | 31.1834 |
 
@@ -259,12 +265,12 @@ This stricter grouping removes exact modeled part-identity duplicates across fol
 
 | Model | Feature set | Part-identity grouped CV MAE | Std MAE | RMSE | R2 | Median AE |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Random forest | trusted recommended features without listing dates | **35.6686** | **2.1188** | **71.9132** | **0.9858** | **14.8559** |
-| XGBoost | trusted recommended features | 39.3838 | 1.2814 | 85.1073 | 0.9798 | 15.1806 |
+| Random forest | trusted recommended features without `oem_number` | **34.4796** | **2.7151** | **70.3158** | **0.9864** | **12.3629** |
+| XGBoost | trusted recommended features without date offsets and without `oem_number` | 40.3583 | 4.4666 | 87.1192 | 0.9789 | 16.7802 |
 | Linear ridge | trusted recommended features without listing dates | 53.7993 | 3.8390 | 154.8746 | 0.9326 | 16.8031 |
 | CatBoost | trusted recommended features without date offsets | 99.5891 | 16.4347 | 262.0683 | 0.7968 | 31.1834 |
 
-The stricter result confirms that the original 18.2409 validation MAE was optimistic for generalization to unseen part identities. However, performance does not collapse: random forest remains the strongest model with a stricter grouped-CV MAE of 35.6686 and median absolute error of 14.8559. The proof-of-concept should therefore be described as a comparable-market pricing decision-support tool, with higher uncertainty for rare or unseen part identities.
+The stricter result confirms that the original 18.2409 validation MAE was optimistic for generalization to unseen part identities. However, performance does not collapse: random forest remains the strongest model with a stricter grouped-CV MAE of 34.4796 and median absolute error of 12.3629 after removing `oem_number`. The proof-of-concept should therefore be described as a comparable-market pricing decision-support tool, with higher uncertainty for rare or unseen part identities.
 
 ## Puhti model runs
 
