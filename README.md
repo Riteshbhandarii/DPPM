@@ -13,8 +13,10 @@ The repository currently includes a Playwright crawler, processed datasets, grou
 - Built a thesis-oriented workflow that links dismantler spare-part listings with Traficom-derived brand and model features.
 - Preserved repeated listing observations where useful for listing-history features while using grouped train/validation/test splits to reduce leakage risk.
 - Compared linear regression, random forest, XGBoost, and CatBoost regressors on the prepared dataset.
-- Selected and exported a random-forest model bundle for local serving.
-- Added SHAP-based explanation tooling for analysis and local Streamlit prediction explanations.
+- Selected random forest as the strongest final model under the strict part-identity grouped evaluation.
+- Added strict robustness checks that remove listing-history/time features and confirmed that the random-forest result remains strong.
+- Added SHAP-based explanation tooling for the operational model, the strict thesis model, and the stricter no-time/history explanation variant.
+- Added reproducible export paths for local serving bundles, including a strict final random-forest export workflow.
 - Implemented both a Streamlit decision-support prototype and a FastAPI prediction service.
 
 ## Thesis scope and contribution
@@ -39,6 +41,12 @@ R2 **0.9864**, median AE **12.3629**.
 
 The latest model selection uses Puhti tuning runs for the two strongest tree models. Random forest is currently selected because it has the best validation MAE, the best grouped-CV MAE, the lower grouped-CV spread, and the best stricter part-identity grouped CV result. XGBoost remains close in the original grouped-CV setting, especially on RMSE, but it is weaker under the stricter part-identity evaluation.
 
+The project now separates three roles clearly:
+
+- **Operational/UI model**: the context-rich listing-price model used in the demo interface.
+- **Strict thesis model**: the strict grouped-CV random forest used for the main scientific result.
+- **Robustness/conservative variant**: the strict random forest with selected listing-history/time features removed to test sensitivity.
+
 The project now reports two evaluation settings:
 
 - **Product-id grouped evaluation**: prevents repeated observations of the same marketplace listing from crossing train/validation/test boundaries. This estimates performance for unseen listings in the same current-market comparable-pricing setting.
@@ -62,6 +70,21 @@ The project now reports two evaluation settings:
 | CatBoost, clean rerun | 78.8475 +/- 11.3952 | 206.9250 | 0.8789 | 26.4075 |
 
 The fixed validation split gives the direct holdout score for the tuned configuration, while product-id grouped CV is the stronger stability check for unseen listing groups. The stricter part-identity grouped CV is the conservative robustness estimate after the leakage audit found comparable-item duplication across the product-id split. The random forest remains the strongest model in both grouped settings.
+
+### Strict robustness check
+
+The final strict random forest and strict XGBoost models were re-evaluated after removing the listing-history/time fields that were most likely to raise interpretation questions:
+
+- `observations_so_far`
+- `days_since_first_seen_so_far`
+- `first_seen_day_offset` when present
+
+| Model | Baseline strict MAE | Ablated strict MAE | Delta MAE | Baseline strict RMSE | Ablated strict RMSE | Delta RMSE |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Random forest | **34.3072** | **35.6528** | +1.3456 | **70.7136** | **73.3767** | +2.6631 |
+| XGBoost | 36.0375 | 38.5332 | +2.4957 | 81.7593 | 87.2075 | +5.4483 |
+
+This robustness result is favorable for the thesis claim. Both models benefit from listing-history/time context, but neither collapses without it. Random forest remains the strongest model after the ablation and degrades less than XGBoost. The practical interpretation is that contextual listing features improve prediction quality, but they do not fully explain the model's performance.
 
 ## Quickstart
 
@@ -272,6 +295,23 @@ This stricter grouping removes exact modeled part-identity duplicates across fol
 
 The stricter result confirms that the original 18.2409 validation MAE was optimistic for generalization to unseen part identities. However, performance does not collapse: random forest remains the strongest model with a stricter grouped-CV MAE of 34.4796 and median absolute error of 12.3629 after removing `oem_number`. The proof-of-concept should therefore be described as a comparable-market pricing decision-support tool, with higher uncertainty for rare or unseen part identities.
 
+### Explainability status
+
+The repository now contains or supports three explainability views:
+
+- **Operational/context-rich SHAP**: explanation path for the UI-oriented listing-price model.
+- **Strict final-model SHAP**: explanation path for the strict grouped-CV random forest used in the main thesis result.
+- **Conservative SHAP variant**: the same strict RF explanation workflow with listing-history/time features removed, used to confirm that the core explanation story stays stable.
+
+Across the existing SHAP runs, the high-level explanation is stable:
+
+- `subcategory` is the strongest feature by far
+- `part_name` and `category` remain the next strongest taxonomy signals
+- `year_end`, `year_mid`, `year_start`, and `mileage` form the main age/usage layer
+- brand/model Traficom context remains secondary rather than dominant
+
+This matters because the robustness-oriented SHAP run still points to part taxonomy and age/usage as the primary explanation, even after the listing-history/time fields are removed.
+
 ## Puhti model runs
 
 The completed Puhti tuning runs used these entrypoints and selected configurations.
@@ -298,9 +338,11 @@ After model choice is fixed, the selected RF configuration should be exported wi
 The repository is beyond model-training-only status. It currently contains:
 
 - a final saved random-forest deployment bundle under `artifacts/random_forest_final/full_data_bundle`
+- a strict random-forest export workflow in `scripts/export_random_forest_model.py` and `scripts/batch/export_random_forest_strict_model_puhti.sh`
 - a working Streamlit decision-support prototype in `app/streamlit_app.py`, supported by `app/ui_helpers.py` and `app/shap_utils.py`
 - a working FastAPI serving layer in `app/fastapi_app.py`
 - serving helpers for bundle loading and prediction in `src/random_forest_serving.py`
+- strict robustness outputs under `artifacts/robustness_checks/strict_models/`
 - automated tests covering Streamlit helper logic, serving logic, and FastAPI behavior under `tests/`
 
 The current product framing is a **proof-of-concept decision-support tool**, not a production-ready automated pricing system.
@@ -453,6 +495,12 @@ For thesis/demo use, deploy the Streamlit app as the presentation layer and trea
 - The UI is intentionally simplified for operator-facing use and proof-of-concept demonstration.
 - The `Why this price?` section uses local SHAP values to explain the submitted prediction.
 
+The intended final interpretation split is:
+
+- the **operational/UI model** reflects realistic listing-time prediction with richer available context
+- the **strict thesis model** is the main conservative evaluation result
+- the **robustness/conservative variant** is used to discuss how much listing-history/time features matter
+
 ## Scope and limitations
 
 - The prediction target is the observed marketplace listing price / asking price, not an independently verified transaction price or true market value.
@@ -467,14 +515,13 @@ For thesis/demo use, deploy the Streamlit app as the presentation layer and trea
 
 Based on the current repository state, useful follow-up work includes:
 
-- run `scripts/batch/tune_random_forest_confirm_puhti.sh` to confirm the selected RF configuration before final test evaluation,
-- evaluate the selected RF model once on the held-out grouped test split,
-- export the selected RF model with its preprocessing bundle for the Streamlit and FastAPI apps,
-- refresh SHAP outputs for the final exported model,
-- run and review the Streamlit prototype with the refreshed bundle,
-- improve UI label/display normalization for presentation quality if needed,
-- expand or refresh crawler coverage if the dataset needs more brands, models, or observations per subcategory,
-- add stronger deployment hardening if the tool is later moved beyond thesis/demo use.
+- finalize which saved bundle the UI should load by default and expose the strict model as a clearly labeled comparison if desired
+- connect the final saved model bundle(s) and matching per-prediction SHAP explanations cleanly inside the UI
+- refresh and save any last SHAP artifacts that are needed for thesis figures or appendix material
+- prepare compact thesis-ready tables and figures from the already generated tuning, robustness, and SHAP outputs
+- improve UI label/display normalization and presentation quality for the final PoC demo
+- expand or refresh crawler coverage only if additional marketplace coverage is still needed
+- add stronger deployment hardening only if the prototype is later moved beyond thesis/demo use
 
 ## Notes on dataset behavior
 
