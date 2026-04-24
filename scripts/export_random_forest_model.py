@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from src.part_identity_evaluation import load_split_frames  # noqa: E402
 from src.tree_modeling import TARGET_COLUMN, fit_random_forest  # noqa: E402
 
 
@@ -59,7 +60,7 @@ def load_json_if_exists(path: str | Path | None) -> dict[str, Any] | None:
 
 
 def load_frame(path: str | Path) -> pd.DataFrame:
-    return pd.read_csv(path)
+    return load_split_frames([path])
 
 
 def save_bundle(
