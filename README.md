@@ -89,6 +89,17 @@ The main practical evaluation metric is **MAE**, because it is directly interpre
 
 In short, the validation and grouped-CV results are strong, but the stricter part-identity evaluation gives the more conservative estimate for unseen comparable part identities. Under that stricter setting, Random Forest remains the strongest direction.
 
+### How to read the evaluation layers
+
+The repository now contains four complementary evaluation layers:
+
+- **Fixed validation split**: about **18 EUR MAE** for model selection in the most optimistic development setting
+- **Product-id grouped CV**: about **28 EUR MAE** as a stability check across listing-group folds
+- **Strict part-identity grouped CV**: about **34 EUR MAE** as the conservative robustness estimate for unseen part identities
+- **Held-out grouped test**: about **22 EUR MAE** on the untouched product-id grouped test split
+
+Taken together, the results suggest that expected performance ranges from the more optimistic listing-group setting to the more conservative unseen-part-identity setting. For thesis interpretation, the strict part-identity result is the safest scientific claim, while the grouped test result remains useful as the final held-out estimate under the original product-id split design.
+
 ## Why is R2 so high?
 
 The high R2 values should be interpreted carefully.
