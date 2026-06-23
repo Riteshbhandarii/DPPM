@@ -1,21 +1,38 @@
-playwright/
+# Python runtime and test caches
 __pycache__/
+*.py[cod]
 .pytest_cache/
 .virtual_documents/
-*.pyc
 
-# logs
+# Local environments
+.venv/
+.venv_catboost/
+venv/
+env/
+
+# Local Playwright/browser artifacts
+.playwright/
+playwright/
+node_modules/
+playwright-report/
+test-results/
+
+# Logs
 *.out
 *.err
 *.log
 
+# Git metadata accidentally created at repository root
+/FETCH_HEAD
+
+# Raw/local source data not needed for normal CI runs
 datasets/traficom_datasets/
 notebooks/preprocessing/traficom_reduced_raw.csv
 datasets/traficom_outputs/traficom_reduced_raw.csv
+
+# Tool-generated training output
 catboost_info/
 .ipynb_checkpoints/
 
-# deployment bundles
+# Generated deployment bundles
 artifacts/random_forest_final/
-
-.venv_catboost/
