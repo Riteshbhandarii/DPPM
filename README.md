@@ -180,6 +180,26 @@ uvicorn app.fastapi_app:app --reload
 - `src/`: shared modeling and serving utilities
 - `tests/`: focused regression tests
 
+## Development and cleanup notes
+
+The repository intentionally preserves thesis evidence such as cleaned datasets,
+grouped split files, model-selection summaries, SHAP outputs, and evaluation
+artifacts. Do not delete these files as routine cleanup unless the thesis trail
+has been reviewed and the removal is documented.
+
+Generated local files are ignored instead:
+
+- Python caches: `__pycache__/`, `*.pyc`, `.pytest_cache/`
+- local environments: `.venv/`, `.venv_catboost/`, `venv/`, `env/`
+- Playwright/browser runtime files: `.playwright/`, `playwright/`, `node_modules/`,
+  `playwright-report/`, `test-results/`
+- local raw source data and generated deployment bundles that are too large or
+  environment-specific for normal CI use
+
+CI is intentionally lightweight. It installs `requirements.txt`, imports core
+modules, and runs `pytest`. It does not run crawler jobs, notebooks, model
+training, SHAP analysis, or artifact-generation scripts.
+
 ## Remaining work
 
 The remaining thesis-stage work is mainly:
