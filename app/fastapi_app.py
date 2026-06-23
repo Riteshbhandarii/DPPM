@@ -15,9 +15,22 @@ if str(ROOT) not in sys.path:
 from src.random_forest_serving import load_random_forest_bundle, predict_price_ranges
 
 
-# Load the production-ready bundle trained on all available labeled data.
 DEFAULT_BUNDLE_DIR = Path("artifacts/random_forest_final/full_data_bundle")
-MODEL_BUNDLE = load_random_forest_bundle(os.getenv("MODEL_BUNDLE_DIR", str(DEFAULT_BUNDLE_DIR)))
+MODEL_BUNDLE = None
+
+
+def get_model_bundle():
+    """Load the saved model bundle only when an endpoint needs it."""
+
+    global MODEL_BUNDLE
+    if MODEL_BUNDLE is None:
+        # The final thesis bundle is intentionally ignored by git because it is
+        # a generated artifact. Lazy loading keeps CI import checks independent
+        # from local artifact availability while preserving normal app behavior.
+        MODEL_BUNDLE = load_random_forest_bundle(
+            os.getenv("MODEL_BUNDLE_DIR", str(DEFAULT_BUNDLE_DIR))
+        )
+    return MODEL_BUNDLE
 
 app = FastAPI(
     title="DPPM Price Estimator API",
@@ -38,11 +51,13 @@ class PredictionRequest(BaseModel):
 def health_check():
     """Return a lightweight service health response."""
 
+    model_bundle = get_model_bundle()
+    metadata = model_bundle["metadata"]
     return {
         "status": "ok",
-        "model_type": MODEL_BUNDLE["metadata"]["model_type"],
-        "bundle_split": MODEL_BUNDLE["metadata"]["bundle_split"],
-        "config_name": MODEL_BUNDLE["metadata"]["config_name"],
+        "model_type": metadata["model_type"],
+        "bundle_split": metadata["bundle_split"],
+        "config_name": metadata["config_name"],
     }
 
 
@@ -50,16 +65,18 @@ def health_check():
 def model_info():
     """Expose model metadata for quick inspection."""
 
-    return MODEL_BUNDLE["metadata"]
+    return get_model_bundle()["metadata"]
 
 
 @app.post("/predict")
 def predict(request: PredictionRequest):
     """Return point estimates and model-based price ranges."""
 
+    model_bundle = get_model_bundle()
+    metadata = model_bundle["metadata"]
     try:
         predictions = predict_price_ranges(
-            MODEL_BUNDLE,
+            model_bundle,
             request.rows,
             lower_quantile=request.lower_quantile,
             upper_quantile=request.upper_quantile,
@@ -68,9 +85,9 @@ def predict(request: PredictionRequest):
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     return {
-        "model_type": MODEL_BUNDLE["metadata"]["model_type"],
-        "bundle_split": MODEL_BUNDLE["metadata"]["bundle_split"],
-        "feature_variant": MODEL_BUNDLE["metadata"]["feature_variant"],
-        "config_name": MODEL_BUNDLE["metadata"]["config_name"],
+        "model_type": metadata["model_type"],
+        "bundle_split": metadata["bundle_split"],
+        "feature_variant": metadata["feature_variant"],
+        "config_name": metadata["config_name"],
         "predictions": predictions.round(2).to_dict(orient="records"),
     }

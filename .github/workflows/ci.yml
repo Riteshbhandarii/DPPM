@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  tests:
+    name: Python tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: ${{ github.workspace }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Import core modules
+        run: |
+          # Keep this smoke check lightweight; do not run training, SHAP analysis,
+          # crawlers, notebooks, or artifact-generation scripts in CI.
+          python - <<'PY'
+          import app.fastapi_app
+          import app.streamlit_app
+          import crawler.src.crawler_parser
+          import src.random_forest_serving
+          import src.tree_modeling
+          PY
+
+      - name: Run tests
+        run: python -m pytest -q
