@@ -34,7 +34,7 @@ Boundary: This baseline is historical/contextual and operationally useful, but i
 
 Decision: The grouped baseline will not be retrained unless fresh verification logs are needed.
 
-Reasoning: The baseline has already been audited for split integrity. Future effort should focus on the final strict protocol and final reruns.
+Reasoning: The baseline has already been verified for split integrity. Future effort should focus on the final strict protocol and final reruns.
 
 ## 2026-06-26 - Final Strict Split Comes From Clean Master Dataset
 
