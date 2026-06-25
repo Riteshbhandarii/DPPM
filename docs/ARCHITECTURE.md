@@ -112,5 +112,5 @@ Before any production use, the project would need additional work around deploym
 ## Related documents
 
 * [Project README](../README.md)
-* [Roadmap](ROADMAP.md)
-* [Data pipeline](DATA_PIPELINE.md)
+* [Thesis roadmap](THESIS_ROADMAP.md)
+* [Strict evaluation protocol](STRICT_EVALUATION_PROTOCOL.md)
