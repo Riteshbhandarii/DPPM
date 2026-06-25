@@ -187,7 +187,7 @@ uvicorn app.fastapi_app:app --reload
 | Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
 | Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
 
-See [docs/ROADMAP.md](docs/ROADMAP.md) for the expanded roadmap.
+See [docs/THESIS_ROADMAP.md](docs/THESIS_ROADMAP.md) for the expanded roadmap.
 
 ## Development and cleanup notes
 
