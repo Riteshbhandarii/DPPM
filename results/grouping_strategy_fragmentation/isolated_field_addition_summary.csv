@@ -1,0 +1,3 @@
+comparison,interpretation,previous_groups,current_groups,previous_groups_split_or_smaller,resulting_smaller_fragments,new_singleton_groups,large_previous_groups_split_n_ge_20,current_groups_merging_previous_groups,rows_in_split_previous_groups
+"canonical(part_name, brand, model) -> + oem_number",Isolated OEM effect.,593,1624,348,1379,309,270,0,9772
+"canonical(part_name, brand, model) -> + compatibility years",Isolated compatibility-year effect.,593,1032,270,709,93,220,0,7911
