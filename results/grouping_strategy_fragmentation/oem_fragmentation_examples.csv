@@ -1,0 +1,21 @@
+row_index,product_id,part_name,brand,model,oem_number,year_start,year_end,price,previous_group_size,refined_group_size,refined_groups_within_previous,singleton_created
+4155,65399928,Drive shaft -(Left front),toyota,corolla,FI27837687A,2019,2027,296.0,87,60,12,False
+4158,64489889,Drive shaft -(Left front),toyota,corolla,FI09389104A,2019,2027,236.8,87,7,12,False
+4852,63710432,Drive shaft -(Left front),toyota,corolla,FI30987993A,2002,2007,236.8,87,1,12,True
+4263,60498741,Suspension -(Rear),toyota,corolla,FI27837687A,2019,2027,47.4,78,28,10,False
+4260,53865601,Suspension -(Rear),toyota,corolla,FI05028803A,2019,2027,47.4,78,20,10,False
+5038,53577432,Suspension -(Rear),toyota,corolla,FI02042722A,2019,2027,41.4,78,1,10,True
+4286,58830600,Trailing link rear -(Left),toyota,corolla,FI05028803A,2019,2027,71.0,77,35,8,False
+4289,55987887,Trailing link rear -(Left),toyota,corolla,FI02042722A,2019,2027,71.0,77,14,8,False
+5078,63127200,Trailing link rear -(Left),toyota,corolla,FI24637030A,2019,2027,71.0,77,1,8,True
+4215,54389246,Shock absorbers rear -(Rear),toyota,corolla,FI06376738A,2002,2007,60.4,73,32,8,False
+4212,53819760,Shock absorbers rear -(Rear),toyota,corolla,FI01853355A,1998,2001,60.4,73,12,8,False
+4961,54248598,Shock absorbers rear -(Rear),toyota,corolla,FI09389104A,2019,2027,59.2,73,2,8,False
+4296,53848794,Trailing link rear -(Right),toyota,corolla,FI05028803A,2019,2027,71.0,70,30,7,False
+4292,55987886,Trailing link rear -(Right),toyota,corolla,FI02042722A,2019,2027,71.0,70,14,7,False
+5087,53707144,Trailing link rear -(Right),toyota,corolla,FI02154548A,1993,1997,59.2,70,2,7,False
+8143,62656879,Drive shaft -(Right rear),skoda,octavia,FI23403240A,2013,2020,225.0,66,24,5,False
+8141,64531098,Drive shaft -(Right rear),skoda,octavia,FI09389104A,2013,2020,219.0,66,18,5,False
+8145,54159171,Drive shaft -(Right rear),skoda,octavia,FI06292622A,2013,2020,201.3,66,6,5,False
+4160,64546406,Drive shaft -(Right front),toyota,corolla,FI27837687A,2019,2027,355.2,65,26,16,False
+4874,53712062,Drive shaft -(Right front),toyota,corolla,FI02154548A,2002,2007,177.6,65,7,16,False
