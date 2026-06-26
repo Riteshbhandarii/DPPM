@@ -1,0 +1,21 @@
+part_name,brand,model,oem_number,listing_count,mean_price,median_price,std_price,price_variance,coefficient_of_variation,min_price,max_price,price_range
+fuel filling pipe / tube -,toyota,corolla,fi11042417a,5,47.4,47.4,0.0,0.0,0.0,47.4,47.4,0.0
+brake caliper -(right front),toyota,corolla,fi05028803a,4,142.1,142.1,0.0,0.0,0.0,142.1,142.1,0.0
+rear sensor -(centre),toyota,corolla,fi27837687a,4,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+shock absorbers rear -(rear),toyota,corolla,fi02154548a,4,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+brake caliper -(left rear),toyota,corolla,fi09389104a,3,219.0,219.0,0.0,0.0,0.0,219.0,219.0,0.0
+brake caliper -(right rear),toyota,corolla,fi09389104a,3,219.0,219.0,0.0,0.0,0.0,219.0,219.0,0.0
+contact roll airbag -,toyota,corolla,fi05028803a,3,177.6,177.6,0.0,0.0,0.0,177.6,177.6,0.0
+distributors -,toyota,corolla,fi15710056a,3,71.0,71.0,0.0,0.0,0.0,71.0,71.0,0.0
+engine casing -,toyota,corolla,fi07265116a,3,48.0,48.0,0.0,0.0,0.0,48.0,48.0,0.0
+injection control unit -,toyota,corolla,fi02154548a,3,355.2,355.2,0.0,0.0,0.0,355.2,355.2,0.0
+power steering control unit -,toyota,corolla,fi11042417a,3,177.6,177.6,0.0,0.0,0.0,177.6,177.6,0.0
+rear axle beam -,toyota,corolla,fi05028803a,3,296.0,296.0,0.0,0.0,0.0,296.0,296.0,0.0
+actuator loom -,toyota,corolla,fi06509801a,2,50.6,50.6,0.0,0.0,0.0,50.6,50.6,0.0
+air purifier -,skoda,octavia,fi24637030a,2,94.4,94.4,0.0,0.0,0.0,94.4,94.4,0.0
+airbag front sensor -(left),toyota,corolla,fi03986645a,2,47.4,47.4,0.0,0.0,0.0,47.4,47.4,0.0
+airbag front sensor -(left),toyota,corolla,fi05351686a,2,41.4,41.4,0.0,0.0,0.0,41.4,41.4,0.0
+airbag front sensor -(left),toyota,corolla,fi10331575a,2,23.7,23.7,0.0,0.0,0.0,23.7,23.7,0.0
+airbag krocksensor -,toyota,corolla,fi09515254a,2,53.3,53.3,0.0,0.0,0.0,53.3,53.3,0.0
+airbag krocksensor -,toyota,corolla,fi24637030a,2,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+alternator -,toyota,corolla,fi11042417a,2,118.4,118.4,0.0,0.0,0.0,118.4,118.4,0.0
