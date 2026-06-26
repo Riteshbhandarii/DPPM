@@ -1,0 +1,4 @@
+brand,train_count,train_pct,validation_count,validation_pct,test_count,test_pct,total_count,max_pct_gap
+toyota,2761,34.8172,574,33.8643,559,32.9599,3894,1.8572
+vw,2702,34.0731,524,30.9145,564,33.2547,3790,3.1587
+skoda,2467,31.1097,597,35.2212,573,33.7854,3637,4.1115
