@@ -1,0 +1,4 @@
+comparison,interpretation,previous_groups,current_groups,previous_groups_split_or_smaller,resulting_smaller_fragments,new_singleton_groups,large_previous_groups_split_n_ge_20,current_groups_merging_previous_groups,rows_in_split_previous_groups
+"product_id -> canonical(part_name, brand, model)",Crosswalk between repeated listing IDs and broad part identity. This is not a nested refinement.,2619,593,187,374,73,0,404,1114
+"canonical(part_name, brand, model) -> + oem_number",Nested refinement that isolates the effect of adding OEM.,593,1624,348,1379,309,270,0,9772
++ oem_number -> + compatibility years,"Ordered candidate-to-candidate comparison. This both removes OEM and adds compatibility years, so it should not be interpreted as the isolated effect of years.",1624,1032,179,386,26,38,405,2624
