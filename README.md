@@ -1,150 +1,144 @@
 # DPPM
 
-DPPM stands for **Dismantler Price Prediction Model**. This repository contains an AMK/Bachelor thesis project on predicting **used automotive spare-part listing prices** from Varaosahaku.fi marketplace listings combined with Traficom-derived Finnish vehicle registry summary features.
+**Dismantler Price Prediction Model**
 
-The project is designed as a **proof-of-concept decision-support tool** for price review. It is not intended as an automated pricing authority or a definitive market-valuation system.
+DPPM is an AMK/Bachelor thesis proof-of-concept for predicting used automotive spare-part listing prices from Varaosahaku.fi marketplace listings and Traficom-derived Finnish vehicle registry summary features.
+
+The project is designed as a **decision-support tool for price review**. It is not an automated pricing authority or a definitive market-valuation system.
+
+## Documentation
+
+| Document | Purpose |
+| --- | --- |
+| [Architecture](docs/ARCHITECTURE.md) | System overview, data flow, components, and evaluation design. |
+| [Roadmap](docs/ROADMAP.md) | Clear project phases, status, and remaining thesis work. |
 
 ## Project overview
 
-The thesis addresses a practical pricing problem for dismantler spare-part listings. The workflow combines:
+The project addresses a practical pricing problem for dismantler spare-part listings. The workflow combines:
 
 - repeated marketplace listing snapshots from **Varaosahaku.fi**
 - Traficom-derived **brand-level and model-level registry summary features**
 - cleaning, integration, and grouped evaluation designed to reduce leakage risk
+- model comparison across linear, tree-based, and gradient-boosting approaches
+- SHAP-based explainability for model-behavior interpretation
+- Streamlit and FastAPI proof-of-concept interfaces
 
 The goal is to estimate an expected listing price from available listing, vehicle, and registry-context information.
 
-## Repository contents
+## Current status
 
-The repository currently includes:
+| Area | Status | Notes |
+| --- | --- | --- |
+| Data collection | Done | Marketplace listing snapshots collected with the Playwright crawler. |
+| Data preparation | Done | Cleaned master dataset and grouped splits are available. |
+| Modeling | Done | Linear/Ridge, Random Forest, XGBoost, and CatBoost experiments completed. |
+| Evaluation | Done | Fixed validation, product-id grouped CV, strict part-identity CV, and held-out grouped test results available. |
+| Explainability | Mostly done | SHAP workflows and outputs exist for the main model paths. |
+| Prototype | Mostly done | Streamlit and FastAPI proof-of-concept interfaces exist. |
+| Thesis writing | In progress | Final writing, result presentation, and discussion polishing remain. |
 
-- a **Playwright crawler** for collecting marketplace listing snapshots
-- **preprocessing and integration notebooks** for cleaning, merging, and split creation
-- **cleaned datasets and grouped train/validation/test splits**
-- **model training notebooks and scripts** for linear, random forest, XGBoost, and CatBoost experiments
-- **SHAP explainability outputs** and analysis scripts
-- a **Streamlit prototype** for interactive decision-support use
-- a **FastAPI service** for API-style prediction
-- **tests** for serving and UI helper logic
+## Data artifacts
 
-## Current implementation status
+| Artifact | Description |
+| --- | --- |
+| `datasets/cleaned/clean_master_dataset.csv` | Final cleaned modeling dataset with **11,321 rows**. |
+| `datasets/splits/train_grouped.csv` | Grouped training split with **7,954 rows**. |
+| `datasets/splits/validation_grouped.csv` | Grouped validation split with **1,689 rows**. |
+| `datasets/splits/test_grouped.csv` | Grouped test split with **1,678 rows**. |
 
-The technical implementation is largely in place:
-
-- the final cleaned dataset exists: `datasets/cleaned/clean_master_dataset.csv`
-- grouped train/validation/test splits exist under `datasets/splits/`
-- multiple model families have been trained and compared
-- stricter **part-identity grouped evaluation** has been completed
-- SHAP-based explanation workflows exist for the main model paths
-- both Streamlit and FastAPI proof-of-concept interfaces exist
-
-The repository should therefore be read as a near-complete thesis implementation plus remaining thesis-writing and presentation work.
-
-## Data and preprocessing status
-
-The main processed data artifacts include:
-
-- `datasets/cleaned/clean_master_dataset.csv`: final cleaned modeling dataset with **11,321 rows**
-- `datasets/splits/train_grouped.csv`: grouped training split with **7,954 rows**
-- `datasets/splits/validation_grouped.csv`: grouped validation split with **1,689 rows**
-- `datasets/splits/test_grouped.csv`: grouped test split with **1,678 rows**
-
-Repeated listing observations were intentionally preserved where useful for listing-history construction. The grouped split keeps all observations from the same `product_id` listing group in exactly one split.
+Repeated listing observations are intentionally preserved where useful for listing-history construction. The grouped split keeps all observations from the same `product_id` listing group in exactly one split.
 
 ## Model roles
 
-The repository distinguishes three model roles:
-
-- **Operational/UI model**: the context-rich listing-price model used in the demo interface
-- **Strict thesis model**: the stricter random-forest modeling path used for the main thesis result
-- **Robustness/conservative variant**: a stricter variant with selected listing-history/time features removed to test sensitivity
+| Role | Purpose |
+| --- | --- |
+| Operational/UI model | Context-rich listing-price model used in the demo interface. |
+| Strict thesis model | Stricter Random Forest modeling path used for the main thesis result. |
+| Robustness/conservative variant | Variant with selected listing-history/time features removed to test sensitivity. |
 
 ## Key results summary
 
-The current final model direction is **Random Forest**.  
-The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
+The current final model direction is **Random Forest**. The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
 
 ### Fixed validation comparison
 
 | Model | Feature set | Validation MAE | Validation RMSE | Validation R2 |
 | --- | --- | ---: | ---: | ---: |
-| Random forest | trusted recommended features without listing dates | **18.2409** | 48.6056 | 0.9927 |
-| XGBoost | trusted recommended features | 18.8845 | **44.5546** | **0.9938** |
+| Random Forest | Trusted recommended features without listing dates | **18.2409** | 48.6056 | 0.9927 |
+| XGBoost | Trusted recommended features | 18.8845 | **44.5546** | **0.9938** |
 
 ### Product-id grouped CV comparison
 
 | Model | Grouped CV MAE | Grouped CV RMSE | Grouped CV R2 |
 | --- | ---: | ---: | ---: |
-| Random forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 |
+| Random Forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 |
 | XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** |
 
-### Stricter part-identity grouped CV comparison
+### Strict part-identity grouped CV comparison
 
 | Model | Part-identity grouped CV MAE | RMSE | R2 | Median AE |
 | --- | ---: | ---: | ---: | ---: |
-| Random forest, no `oem_number` | **34.4796 +/- 2.7151** | **70.3158** | **0.9864** | **12.3629** |
+| Random Forest, no `oem_number` | **34.4796 +/- 2.7151** | **70.3158** | **0.9864** | **12.3629** |
 | XGBoost, no date offsets/no `oem_number` | 40.3583 +/- 4.4666 | 87.1192 | 0.9789 | 16.7802 |
-| Linear ridge, clean rerun | 53.6425 +/- 2.8193 | 152.9400 | 0.9343 | 16.5550 |
+| Linear Ridge, clean rerun | 53.6425 +/- 2.8193 | 152.9400 | 0.9343 | 16.5550 |
 | CatBoost, clean rerun | 78.8475 +/- 11.3952 | 206.9250 | 0.8789 | 26.4075 |
 
-In short, the validation and grouped-CV results are strong, but the stricter part-identity evaluation gives the more conservative estimate for unseen comparable part identities. Under that stricter setting, Random Forest remains the strongest direction.
+The validation and grouped-CV results are strong, but the stricter part-identity evaluation gives the more conservative estimate for unseen comparable part identities. Under that stricter setting, Random Forest remains the strongest direction.
 
-### How to read the evaluation layers
+## Evaluation layers
 
-The repository now contains four complementary evaluation layers:
+| Layer | Approximate MAE | Purpose |
+| --- | ---: | --- |
+| Fixed validation split | 18 EUR | Optimistic model-selection estimate. |
+| Product-id grouped CV | 28 EUR | Stability check across listing-group folds. |
+| Strict part-identity grouped CV | 34 EUR | Conservative robustness estimate for unseen comparable part profiles. |
+| Held-out grouped test | 22 EUR | Final check under the original product-id split design. |
 
-- **Fixed validation split**: about **18 EUR MAE** for model selection in the most optimistic development setting
-- **Product-id grouped CV**: about **28 EUR MAE** as a stability check across listing-group folds
-- **Strict part-identity grouped CV**: about **34 EUR MAE** as the conservative robustness estimate for unseen part identities
-- **Held-out grouped test**: about **22 EUR MAE** on the untouched product-id grouped test split
+For thesis interpretation, the strict part-identity result is the safest scientific claim. The grouped test result remains useful as the final held-out estimate under the original product-id split design.
 
-Taken together, the results suggest that expected performance ranges from the more optimistic listing-group setting to the more conservative unseen-part-identity setting. For thesis interpretation, the strict part-identity result is the safest scientific claim, while the grouped test result remains useful as the final held-out estimate under the original product-id split design.
+## Architecture at a glance
 
-## Why is R2 so high?
+```mermaid
+flowchart LR
+    A[Varaosahaku listing snapshots] --> B[Cleaning and normalization]
+    C[Traficom registry summaries] --> D[Registry feature preparation]
+    B --> E[Integrated master dataset]
+    D --> E
+    E --> F[Grouped train validation test splits]
+    E --> G[Strict part identity CV]
+    F --> H[Model training and comparison]
+    G --> H
+    H --> I[Final model direction: Random Forest]
+    I --> J[SHAP explainability]
+    I --> K[Streamlit prototype]
+    I --> L[FastAPI service]
+```
 
-The high R2 values should be interpreted carefully.
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full architecture view.
+
+## Why the R2 values are high
+
+The high R2 values should be interpreted carefully:
 
 - Spare-part listing prices have strong **repeated-listing** and **comparable-item** structure.
 - Taxonomy variables such as `subcategory`, `part_name`, and `category` explain a large amount of price variation because different spare-part types naturally occupy very different price ranges.
 - Product-id grouping prevents the **same exact listing** from crossing train/validation/test boundaries.
-- However, highly similar part profiles can still exist under different `product_id` values.
+- Highly similar part profiles can still exist under different `product_id` values.
 
-For that reason, very high R2 should **not** be read as perfect general market-value prediction. It is better understood as strong predictive performance within a structured comparable-listing setting, which is why the stricter part-identity evaluation was added.
-
-## Why the stricter part-identity evaluation was needed
-
-Product-id grouping protects against leakage from repeated observations of the same listing, but it does not fully prevent highly similar part identities from appearing in different folds under different listing IDs.
-
-To test this more conservatively, a stricter evaluation grouped by:
-
-```text
-part_name + brand + model + oem_number
-```
-
-This keeps highly similar part identities within the same fold and gives a more cautious robustness estimate for unseen comparable part profiles.
-
-## Why part category and subcategory matter so much
-
-Spare-part type is naturally one of the strongest price drivers. Engines, gearboxes, control units, body parts, lights, sensors, and small interior parts have very different typical price ranges.
-
-For that reason, taxonomy variables such as `subcategory`, `part_name`, and `category` are expected to dominate SHAP importance. This does **not** mean the model discovered causal market laws. It means the fitted model relies heavily on part taxonomy when predicting listing prices.
+For that reason, very high R2 should not be read as perfect general market-value prediction. It is better understood as strong predictive performance within a structured comparable-listing setting.
 
 ## SHAP explainability
 
-SHAP is used here to explain **model behavior**.
+SHAP is used here to explain **model behavior**, not to prove causal market relationships.
 
-- **Global explanations** show which features influence predictions most overall.
-- **Local explanations** show why one specific prediction is higher or lower.
+| Explanation type | Purpose |
+| --- | --- |
+| Global explanations | Show which features influence predictions most overall. |
+| Local explanations | Show why one specific prediction is higher or lower. |
+| Conservative SHAP variant | Tests interpretation stability when selected listing-history/time fields are removed. |
 
-The repository supports three explanation paths:
-
-- **Operational/context-rich SHAP**
-- **Strict final-model SHAP**
-- **Conservative SHAP variant** with selected listing-history/time fields removed
-
-SHAP explanations in this project should be interpreted as **model-specific explanations**, not causal proof.
-
-## Demo / prototype
+## Demo and prototype
 
 The repository includes two proof-of-concept interfaces:
 
@@ -171,44 +165,42 @@ uvicorn app.fastapi_app:app --reload
 
 ## Repository structure
 
-- `crawler/`: Playwright crawler for marketplace snapshots
-- `notebooks/`: preprocessing, integration, analysis, and training notebooks
-- `datasets/`: cleaned, merged, split, and Traficom-derived CSV data
-- `scripts/`: tuning, evaluation, export, and utility scripts
-- `artifacts/`: model artifacts, tuning outputs, and SHAP outputs
-- `app/`: Streamlit and FastAPI proof-of-concept applications
-- `src/`: shared modeling and serving utilities
-- `tests/`: focused regression tests
+| Path | Purpose |
+| --- | --- |
+| `crawler/` | Playwright crawler for marketplace snapshots. |
+| `notebooks/` | Preprocessing, integration, analysis, and training notebooks. |
+| `datasets/` | Cleaned, merged, split, and registry-derived CSV data. |
+| `scripts/` | Tuning, evaluation, export, and utility scripts. |
+| `artifacts/` | Model artifacts, tuning outputs, and SHAP outputs. |
+| `app/` | Streamlit and FastAPI proof-of-concept applications. |
+| `src/` | Shared modeling and serving utilities. |
+| `tests/` | Focused regression tests. |
+| `docs/` | Architecture, roadmap, and project documentation. |
+
+## Roadmap
+
+| Phase | Status | Focus |
+| --- | --- | --- |
+| Phase 1: Data acquisition and preparation | Done | Crawler, cleaned dataset, registry features, grouped splits. |
+| Phase 2: Modeling and evaluation | Done | Model comparison, grouped evaluation, final model direction. |
+| Phase 3: Explainability and prototype | Mostly done | SHAP outputs, Streamlit demo, FastAPI demo, tests. |
+| Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
+| Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
+
+See [docs/THESIS_ROADMAP.md](docs/THESIS_ROADMAP.md) for the expanded roadmap.
 
 ## Development and cleanup notes
 
-The repository intentionally preserves thesis evidence such as cleaned datasets,
-grouped split files, model-selection summaries, SHAP outputs, and evaluation
-artifacts. Do not delete these files as routine cleanup unless the thesis trail
-has been reviewed and the removal is documented.
+The repository intentionally preserves thesis evidence such as cleaned datasets, grouped split files, model-selection summaries, SHAP outputs, and evaluation artifacts. Do not delete these files as routine cleanup unless the thesis trail has been reviewed and the removal is documented.
 
 Generated local files are ignored instead:
 
 - Python caches: `__pycache__/`, `*.pyc`, `.pytest_cache/`
 - local environments: `.venv/`, `.venv_catboost/`, `venv/`, `env/`
-- Playwright/browser runtime files: `.playwright/`, `playwright/`, `node_modules/`,
-  `playwright-report/`, `test-results/`
-- local raw source data and generated deployment bundles that are too large or
-  environment-specific for normal CI use
+- Playwright/browser runtime files: `.playwright/`, `playwright/`, `node_modules/`, `playwright-report/`, `test-results/`
+- local raw source data and generated deployment bundles that are too large or environment-specific for normal CI use
 
-CI is intentionally lightweight. It installs `requirements.txt`, imports core
-modules, and runs `pytest`. It does not run crawler jobs, notebooks, model
-training, SHAP analysis, or artifact-generation scripts.
-
-## Remaining work
-
-The remaining thesis-stage work is mainly:
-
-- final thesis writing and polishing
-- results chapter writing and tightening
-- final consistency checks and reruns where needed
-- literature review alignment with the implemented workflow
-- final SHAP and prototype presentation material preparation if needed
+CI is intentionally lightweight. It installs `requirements.txt`, imports core modules, and runs `pytest`. It does not run crawler jobs, notebooks, model training, SHAP analysis, or artifact-generation scripts.
 
 ## Summary
 
