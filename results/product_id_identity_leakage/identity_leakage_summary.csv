@@ -1,0 +1,4 @@
+identity_strategy,total_identities,identities_represented_by_multiple_product_ids,repeated_identity_pct,total_product_ids,product_ids_in_repeated_identities,product_ids_in_repeated_identity_pct,rows_in_repeated_identities,rows_in_repeated_identity_pct,largest_product_ids_per_identity,median_product_ids_per_repeated_identity
+"canonical(part_name, brand, model)",593,404,68.13,2619,2505,95.65,10689,94.42,31,5.0
+"canonical(part_name, brand, model, oem_number)",1624,546,33.62,2619,1696,64.76,7067,62.42,18,2.0
+"canonical(part_name, brand, model, year_start, year_end)",1032,552,53.49,2619,2249,85.87,9447,83.45,26,3.0
