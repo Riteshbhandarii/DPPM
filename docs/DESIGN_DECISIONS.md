@@ -46,9 +46,9 @@ datasets/cleaned/clean_master_dataset.csv
 
 Reasoning: The final split should be derived from the canonical cleaned dataset, not from historical grouped split files.
 
-## 2026-06-26 - Old Strict Setup Is Not Automatically Final
+## 2026-06-26 - Old Strict Setup Was Not Automatically Final
 
-Decision: The old strict setup is historical/contextual only until the final strict identity rule is decided.
+Decision: The old strict setup is historical/contextual and is not the selected final strict identity rule.
 
 Historical setup:
 
@@ -58,17 +58,41 @@ part_name + brand + model + oem_number
 
 Reasoning: Later inspection found concerns about OEM reuse and identity fragmentation.
 
-## 2026-06-26 - OEM Usage in Strict Identity Remains Under Review
+## 2026-06-26 - OEM Excluded From Final Strict Identity
 
-Decision: `oem_number` usage in the final strict identity key remains under review.
+Decision: `oem_number` is excluded from the final strict identity key.
 
-Current preferred candidate:
+Reasoning: The fragmentation diagnostics showed that adding OEM to `part_name + brand + model` split 348 base groups and created 309 new singleton groups. This was stronger fragmentation than the compatibility-year identity and raised the risk that OEM would act as a noisy fragmentation key rather than a reliable identity boundary.
+
+Reference: [Evaluation protocol decision](evaluation/01_PROTOCOL_DECISION.md).
+
+## 2026-06-26 - Final Strict Protocol Uses Connected Components
+
+Decision: The final strict thesis evaluation protocol uses connected components built from:
 
 ```text
-canonical_part_name + canonical_brand + canonical_model
+product_id
+OR
+canonical(part_name, brand, model, year_start, year_end)
 ```
 
-Reasoning: OEM values are complete but low-cardinality and reused across unrelated part identities. Including OEM can fragment groups and may make the strict split less conservative.
+Target proportions:
+
+```text
+train: 70%
+validation: 15%
+test: 15%
+```
+
+Diagnostic seed:
+
+```text
+32
+```
+
+Reasoning: The candidate split balance diagnostic found 886 connected components and showed that diagnostic seed 32 produced 70.05% / 14.97% / 14.98% row proportions with zero product-id, identity-key, or connected-component leakage.
+
+Reference: [Strict protocol specification](evaluation/02_PROTOCOL_SPECIFICATION.md).
 
 ## 2026-06-26 - Compatibility-Family Evaluation Is Robustness Analysis
 
