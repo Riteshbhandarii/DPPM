@@ -1,0 +1,8 @@
+category,train_count,train_pct,validation_count,validation_pct,test_count,test_pct,total_count,max_pct_gap
+electric / transmitter / databox / sensor,1884,23.7579,439,25.8997,489,28.8325,2812,5.0747
+vehicle exterior / suspension,1538,19.3947,97,5.7227,163,9.6108,1798,13.672
+engine,1138,14.3506,441,26.0177,201,11.8514,1780,14.1663
+gear box / drive axle / middle axle,1032,13.0139,216,12.7434,182,10.7311,1430,2.2827
+fuel,812,10.2396,238,14.0413,336,19.8113,1386,9.5717
+brakes,877,11.0593,173,10.2065,203,11.9693,1253,1.7628
+airbag,649,8.1841,91,5.3687,122,7.1934,862,2.8154
