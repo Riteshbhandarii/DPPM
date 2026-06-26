@@ -1,0 +1,4 @@
+split,component_count,min_component_size,median_component_size,max_component_size
+train,510,1,24.0,71
+validation,178,1,14.0,70
+test,198,1,12.0,48
