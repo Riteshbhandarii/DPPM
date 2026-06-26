@@ -1,0 +1,468 @@
+component_id,component_size,product_id_count,identity_count,product_id_sample,identity_sample,min_row_index
+product_id_part_name_brand_model_component_000001,87,25,1,"53367963, 53374161, 54232635, 54417013, 54521794, 54626514, 56269960, 59131986, 60059054, 60132522, 60224934, 60496432 ... (+13 more)",drive shaft -(left front) | toyota | corolla,4155
+product_id_part_name_brand_model_component_000002,80,30,2,"53375391, 53480837, 53577432, 53817908, 53827878, 53865601, 54491760, 54491761, 55960953, 55960954, 56269534, 56269536 ... (+18 more)",suspension -(rear) | toyota | corolla || suspension-(rear) | toyota | corolla,4260
+product_id_part_name_brand_model_component_000003,79,29,2,"53722743, 53722744, 53848080, 53848801, 53848805, 53848806, 53869465, 53883746, 53883759, 54363441, 55987887, 55987889 ... (+17 more)",trailing link rear -(left) | toyota | corolla || trailing link rear-(left) | toyota | corolla,4286
+product_id_part_name_brand_model_component_000004,74,29,2,"53706183, 53721247, 53819760, 53824358, 53853721, 53853777, 53859811, 53859812, 53881584, 54248598, 54389246, 54389283 ... (+17 more)",shock absorbers rear -(rear) | toyota | corolla || shock absorbers rear-(rear) | toyota | corolla,4210
+product_id_part_name_brand_model_component_000005,71,33,2,"53410756, 53712062, 53713676, 53714980, 53716391, 53716866, 53718651, 54151722, 54413270, 54521427, 54564547, 54626477 ... (+21 more)",drive shaft -(right front) | toyota | corolla || drive shaft-(right front) | toyota | corolla,4160
+product_id_part_name_brand_model_component_000006,70,25,1,"53707144, 53725967, 53848794, 53848803, 53848811, 53859508, 53860530, 53883758, 54360056, 55987886, 55987888, 55987890 ... (+13 more)",trailing link rear -(right) | toyota | corolla,4291
+product_id_part_name_brand_model_component_000007,66,11,1,"53375244, 53503260, 53589567, 54159171, 54272539, 54284856, 58539226, 61748921, 62656879, 63591065, 64531098",drive shaft -(right rear) | skoda | octavia,8141
+product_id_part_name_brand_model_component_000008,64,26,2,"53699458, 53708861, 53710888, 53715555, 53716493, 53717736, 54555112, 54560998, 54562514, 54568829, 54568941, 54574650 ... (+14 more)",hub rear -(rear) | toyota | corolla || hub rear-(rear) | toyota | corolla,4270
+product_id_part_name_brand_model_component_000009,63,23,1,"53663768, 53991822, 54082891, 54331761, 54470946, 54479779, 54492177, 59391659, 61845408, 62404856, 62465161, 63216298 ... (+11 more)",curtain airbags -(right) | toyota | corolla,3800
+product_id_part_name_brand_model_component_000011,62,22,2,"53853342, 53869656, 56933448, 58825527, 59131977, 59242297, 60059060, 60139248, 60419506, 60496437, 61076252, 61751482 ... (+10 more)",wheel bearing spindle shaft -(left rear) | toyota | corolla || wheel bearing spindle shaft-(left rear) | toyota | corolla,4240
+product_id_part_name_brand_model_component_000010,62,17,2,"53589483, 53618513, 53650880, 53664653, 53679064, 53682952, 53689539, 54008914, 54034252, 54321498, 54479232, 54554195 ... (+5 more)",strut rear -(left) | toyota | corolla || strut rear-(left) | toyota | corolla,4225
+product_id_part_name_brand_model_component_000013,60,10,2,"53449037, 53710187, 54245118, 55068239, 55068240, 57147922, 61159009, 61159010, 64947839, 65057619","suspension - , e-(rear) | vw | golf || suspension- , e-(rear) | vw | golf",574
+product_id_part_name_brand_model_component_000014,60,10,2,"53369770, 53409730, 53441870, 54680056, 59351317, 59351332, 59673189, 59673190, 60226034, 60226036",shock absorbers rear -(rear) | skoda | octavia || shock absorbers rear-(rear) | skoda | octavia,8235
+product_id_part_name_brand_model_component_000015,60,10,2,"54242387, 54280417, 54430941, 54443628, 54443630, 54447761, 56665933, 56665934, 56911282, 63591631",suspension -(rear) | skoda | octavia || suspension-(rear) | skoda | octavia,8245
+product_id_part_name_brand_model_component_000012,60,10,1,"53938689, 53938690, 54223177, 54244809, 54245168, 54247541, 54260459, 54263144, 64251591, 64496424","drive shaft - , e-(left front) | vw | golf",465
+product_id_part_name_brand_model_component_000016,56,21,2,"53449758, 53659100, 53672406, 54470943, 54476116, 54492143, 59391660, 59624287, 61845319, 62465163, 63310187, 63350255 ... (+9 more)",curtain airbags -(left) | toyota | corolla || curtain airbags-(left) | toyota | corolla,3795
+product_id_part_name_brand_model_component_000017,55,20,2,"53608052, 53850683, 53859861, 54238812, 56933443, 57220992, 58755576, 59131987, 59249691, 62404920, 62418504, 63127091 ... (+8 more)",brake caliper -(right rear) | toyota | corolla || brake caliper-(right rear) | toyota | corolla,3845
+product_id_part_name_brand_model_component_000018,55,15,1,"53467029, 53662663, 53674446, 53721223, 53792102, 54007262, 54338198, 54471239, 54484620, 54485592, 54486882, 54490443 ... (+3 more)",strut rear -(right) | toyota | corolla,4220
+product_id_part_name_brand_model_component_000019,54,9,2,"53862511, 54069563, 54253079, 54268110, 54291801, 54362669, 54416445, 60073919, 64667066","drive shaft - , e-(left rear) | vw | golf || drive shaft- , e-(left rear) | vw | golf",470
+product_id_part_name_brand_model_component_000020,54,9,2,"53713162, 53719558, 53721299, 53725158, 53824510, 53828430, 53923221, 54389700, 56566915","shock absorbers rear - , e-(rear) | vw | golf || shock absorbers rear- , e-(rear) | vw | golf",564
+product_id_part_name_brand_model_component_000023,54,9,2,"53842661, 53852853, 54017270, 54359903, 54360248, 58937124, 60226053, 60226162, 64800345",trailing link rear -(left) | skoda | octavia || trailing link rear-(left) | skoda | octavia,8257
+product_id_part_name_brand_model_component_000021,54,9,1,"53591509, 53833699, 54004599, 54017984, 54359584, 59888970, 64675780, 65059353, 65138583","trailing link rear - , e-(left) | vw | golf",590
+product_id_part_name_brand_model_component_000022,54,9,1,"53451718, 53485361, 53604578, 54252481, 54252635, 59583068, 60484610, 60973822, 63439416",curtain airbags -(right) | skoda | octavia,7709
+product_id_part_name_brand_model_component_000024,53,23,2,"53853364, 53855121, 53855165, 56933447, 57222704, 58825525, 59131976, 59241761, 60059059, 60139249, 60496436, 61076249 ... (+11 more)",wheel bearing spindle shaft -(right rear) | toyota | corolla || wheel bearing spindle shaft-(right rear) | toyota | corolla,4245
+product_id_part_name_brand_model_component_000025,51,9,2,"53862513, 54070809, 54253076, 54257213, 54268111, 54361570, 60073918, 64047277, 64667063","drive shaft - , e-(right rear) | vw | golf || drive shaft- , e-(right rear) | vw | golf",475
+product_id_part_name_brand_model_component_000026,50,20,1,"53608961, 53859868, 53860486, 53867130, 54232531, 56933444, 57220993, 58755577, 59131988, 59249690, 60058881, 62404922 ... (+8 more)",brake caliper -(left rear) | toyota | corolla,3840
+product_id_part_name_brand_model_component_000031,48,18,2,"53606571, 53859829, 53860488, 53879067, 53928357, 56933442, 57220995, 60058883, 60496428, 63310200, 63350262, 64546414 ... (+6 more)",brake caliper -(left front) | toyota | corolla || brake caliper-(left front) | toyota | corolla,3830
+product_id_part_name_brand_model_component_000029,48,8,2,"53420558, 53833336, 53932790, 54006448, 54360181, 64675777, 65059352, 65138584","trailing link rear - , e-(right) | vw | golf || trailing link rear- , e-(right) | vw | golf",594
+product_id_part_name_brand_model_component_000030,48,8,2,"53399687, 53401366, 54428216, 55067193, 56566908, 64675772, 65661352, 65682704","wheel bearing spindle shaft - , e-(right rear) | vw | golf || wheel bearing spindle shaft- , e-(right rear) | vw | golf",619
+product_id_part_name_brand_model_component_000033,48,8,2,"53502120, 54037329, 54229159, 59340765, 59823603, 63439418, 65398550, 65554234",drive shaft -(right front) | skoda | octavia || drive shaft-(right front) | skoda | octavia,8146
+product_id_part_name_brand_model_component_000034,48,8,2,"53397794, 53409888, 56848565, 62238856, 62662904, 62781323, 65037610, 65651373",wheel bearing spindle shaft -(left rear) | skoda | octavia || wheel bearing spindle shaft-(left rear) | skoda | octavia,8276
+product_id_part_name_brand_model_component_000027,48,8,1,"53386727, 54222111, 54265596, 58355099, 59552977, 60985824, 61914682, 63707445","curtain airbags - , e-(right) | vw | golf",24
+product_id_part_name_brand_model_component_000028,48,8,1,"53847073, 53882061, 54011729, 54012202, 54012204, 54012212, 54022459, 54033319","hub rear - , e-(rear) | vw | golf",544
+product_id_part_name_brand_model_component_000032,48,8,1,"53418003, 53503261, 53584385, 54107088, 54676853, 58539225, 62656774, 66395063",drive shaft -(left rear) | skoda | octavia,8137
+product_id_part_name_brand_model_component_000035,47,17,1,"53859828, 53860450, 53860490, 53895810, 53928356, 57220994, 58717890, 60058882, 61076237, 62404916, 63310199, 63350261 ... (+5 more)",brake caliper -(right front) | toyota | corolla,3835
+product_id_part_name_brand_model_component_000036,43,8,2,"53950212, 53950695, 54474182, 54474214, 54483257, 54490150, 54490161, 54491283",brake disc -(front) | toyota | corolla || brake disc-(front) | toyota | corolla,3855
+product_id_part_name_brand_model_component_000042,42,12,1,"53832121, 53917707, 53941082, 54015932, 54075417, 54547852, 54555195, 54556139, 54578670, 54579179, 54647883, 54659260",airbag front sensor -(left) | toyota | corolla,3902
+product_id_part_name_brand_model_component_000041,42,8,1,"53368149, 53399113, 53400059, 53931605, 54290596, 54428094, 65661358, 65682707","wheel bearing spindle shaft - , e-(left rear) | vw | golf",614
+product_id_part_name_brand_model_component_000039,42,7,2,"53419024, 58383840, 58952165, 62029253, 64491408, 65138592, 66709192","brake caliper - , e-(right front) | vw | golf || brake caliper- , e-(right front) | vw | golf",61
+product_id_part_name_brand_model_component_000045,42,7,2,"53502115, 54041614, 54252177, 54292467, 54760100, 59823602, 60226075",drive shaft -(left front) | skoda | octavia || drive shaft-(left front) | skoda | octavia,8132
+product_id_part_name_brand_model_component_000047,42,7,2,"54026243, 54358408, 54359991, 58937123, 60226057, 60226169, 64800332",trailing link rear -(right) | skoda | octavia || trailing link rear-(right) | skoda | octavia,8262
+product_id_part_name_brand_model_component_000048,42,7,2,"53379281, 53409488, 60557555, 62238855, 62781308, 65037599, 65651367",wheel bearing spindle shaft -(right rear) | skoda | octavia || wheel bearing spindle shaft-(right rear) | skoda | octavia,8281
+product_id_part_name_brand_model_component_000037,42,7,1,"53491409, 54217190, 56438889, 58952161, 60981201, 61914684, 64661502","curtain airbags - , e-(left) | vw | golf",19
+product_id_part_name_brand_model_component_000038,42,7,1,"53463472, 58952166, 61917764, 63199771, 64491409, 64675834, 65138593","brake caliper - , e-(left front) | vw | golf",56
+product_id_part_name_brand_model_component_000040,42,7,1,"53786468, 53801940, 54114896, 54125363, 54470408, 54476822, 54485432","brake disc - , e-(front) | vw | golf",81
+product_id_part_name_brand_model_component_000043,42,7,1,"53438211, 53460365, 53484488, 53493166, 53495141, 54677905, 64801679",brake caliper -(left front) | skoda | octavia,7735
+product_id_part_name_brand_model_component_000044,42,7,1,"53386676, 53398778, 53437974, 53447279, 53492535, 54672962, 64801568",brake caliper -(right front) | skoda | octavia,7740
+product_id_part_name_brand_model_component_000046,42,7,1,"53525478, 53721141, 53721194, 54012565, 54020560, 54033359, 54033361",hub rear -(rear) | skoda | octavia,8213
+product_id_part_name_brand_model_component_000049,41,16,2,"53402114, 53455139, 53471242, 53713033, 59140468, 60058722, 61076256, 63158119, 63310195, 63350253, 64466975, 64546429 ... (+4 more)",passenger airbag - | toyota | corolla || passenger airbag- | toyota | corolla,3815
+product_id_part_name_brand_model_component_000069,40,16,2,"53496516, 53836067, 53860384, 54054291, 54186234, 54505247, 54571054, 54583169, 56096102, 60805742, 61425451, 62496233 ... (+4 more)",starter diesel - | toyota | corolla || starter diesel- | toyota | corolla,4067
+product_id_part_name_brand_model_component_000070,40,16,2,"53653516, 53880349, 54212370, 54382401, 54394640, 54469829, 56545219, 59382148, 62465176, 62480986, 62516003, 65200160 ... (+4 more)",air purifier - | toyota | corolla || air purifier- | toyota | corolla,4085
+product_id_part_name_brand_model_component_000072,40,16,2,"53821389, 53826004, 54505764, 54517984, 54527967, 54527972, 54527974, 54555307, 54555440, 54560132, 54571032, 54571340 ... (+4 more)",fuel filling pipe / tube - | toyota | corolla || fuel filling pipe / tube- | toyota | corolla,4095
+product_id_part_name_brand_model_component_000065,40,16,1,"53687628, 53832764, 53832935, 53914784, 53954187, 54310467, 54335221, 54341466, 54345881, 54475593, 54497668, 54505192 ... (+4 more)",distributors - | toyota | corolla,4019
+product_id_part_name_brand_model_component_000067,40,16,1,"53397731, 53705104, 53725225, 53727493, 53821469, 53913410, 54528712, 54648612, 56268870, 58355946, 61808600, 62753472 ... (+4 more)",starter gasoline - | toyota | corolla,4029
+product_id_part_name_brand_model_component_000076,40,16,1,"53400892, 53413369, 53889068, 54560231, 54777180, 56989378, 59855589, 60930698, 61139026, 63216307, 64620693, 64929292 ... (+4 more)",gear box 5 speed - | toyota | corolla,4175
+product_id_part_name_brand_model_component_000051,40,15,2,"57231205, 59140465, 60058714, 60496419, 61076241, 62404925, 63026248, 63083244, 63310160, 63350249, 65250408, 65309287 ... (+3 more)",abs hydraulic aggregate - | toyota | corolla || abs hydraulic aggregate- | toyota | corolla,3825
+product_id_part_name_brand_model_component_000052,40,15,2,"53685056, 53728071, 54063593, 54151616, 54552749, 54556265, 54573754, 54586417, 55593606, 56798552, 60058715, 61070893 ... (+3 more)",abs hydraulic pump - | toyota | corolla || abs hydraulic pump- | toyota | corolla,3877
+product_id_part_name_brand_model_component_000053,40,15,2,"53817071, 53829075, 53836781, 53855578, 53881176, 53882640, 53994088, 54134876, 54365316, 54365356, 54365466, 54365505 ... (+3 more)",hand brake lever - | toyota | corolla || hand brake lever- | toyota | corolla,3887
+product_id_part_name_brand_model_component_000054,40,15,2,"53446995, 53496737, 53580055, 53729424, 53729426, 54045902, 54080251, 54432610, 54531816, 54556263, 56267982, 60224930 ... (+3 more)",airbag control unit - | toyota | corolla || airbag control unit- | toyota | corolla,3897
+product_id_part_name_brand_model_component_000055,40,15,2,"53831848, 54062472, 54132421, 54210583, 54500179, 54504299, 54530676, 54547503, 54574000, 54578012, 54585467, 57891268 ... (+3 more)",other relay - | toyota | corolla || other relay- | toyota | corolla,3930
+product_id_part_name_brand_model_component_000063,40,15,2,"53705345, 53713804, 53727775, 54230860, 56919452, 58508409, 61808601, 61842750, 64471152, 64498731, 64572767, 65618407 ... (+3 more)",alternator - | toyota | corolla || alternator- | toyota | corolla,4009
+product_id_part_name_brand_model_component_000064,40,15,2,"54311388, 54316693, 54321523, 54325977, 54533639, 54579565, 55161386, 58955945, 58955946, 64465053, 64465065, 64465066 ... (+3 more)",coil - | toyota | corolla || coil- | toyota | corolla,4014
+product_id_part_name_brand_model_component_000066,40,15,2,"53605194, 53848511, 56939596, 59078050, 59140483, 62989746, 63117883, 63305356, 63352462, 64538310, 65107242, 65176844 ... (+3 more)",engine gasoline - | toyota | corolla || engine gasoline- | toyota | corolla,4024
+product_id_part_name_brand_model_component_000071,40,15,2,"53835788, 54533836, 54534848, 54534956, 54539614, 56142206, 56142207, 56142208, 56142209, 58954021, 60114204, 62991558 ... (+3 more)",deliverer - | toyota | corolla || deliverer- | toyota | corolla,4090
+product_id_part_name_brand_model_component_000073,40,15,2,"54549667, 54549674, 54553339, 54557769, 54558057, 54558231, 54558291, 54569407, 54572196, 54574086, 54575016, 54575104 ... (+3 more)",fuel pump electric - | toyota | corolla || fuel pump electric- | toyota | corolla,4100
+product_id_part_name_brand_model_component_000075,40,15,2,"54137995, 57035004, 59078044, 59131981, 59269879, 61063287, 61808559, 62117685, 62404956, 63117910, 63127471, 63305358 ... (+3 more)",automatic gear - | toyota | corolla || automatic gear- | toyota | corolla,4150
+product_id_part_name_brand_model_component_000077,40,15,2,"53606551, 53700152, 53886312, 54145488, 54593502, 58718927, 60061114, 60467442, 61092453, 62404893, 63017018, 63125341 ... (+3 more)",gear lever - | toyota | corolla || gear lever- | toyota | corolla,4180
+product_id_part_name_brand_model_component_000078,40,15,2,"53663283, 53799748, 53829242, 53836797, 53858372, 54016900, 54318560, 54524529, 54528612, 54532592, 54552325, 54570198 ... (+3 more)",clutch cylinder slave - | toyota | corolla || clutch cylinder slave- | toyota | corolla,4190
+product_id_part_name_brand_model_component_000050,40,15,1,"53596126, 53856491, 53856614, 53928362, 54282984, 55149341, 58712351, 61076273, 62133431, 63019913, 63099984, 63126049 ... (+3 more)",contact roll airbag - | toyota | corolla,3790
+product_id_part_name_brand_model_component_000056,40,15,1,"53590879, 53696108, 53715029, 54063166, 54068576, 54469879, 54471168, 54527905, 54532256, 54684107, 54684257, 55491149 ... (+3 more)",power steering control unit - | toyota | corolla,3935
+product_id_part_name_brand_model_component_000057,40,15,1,"53835699, 53875465, 53897787, 54552575, 54558254, 54558373, 54559216, 54560130, 54561122, 54568794, 54572494, 54573990 ... (+3 more)",sensor abs - | toyota | corolla,3940
+product_id_part_name_brand_model_component_000058,40,15,1,"54137921, 57028353, 57887357, 58926177, 58991908, 59217624, 60117429, 60785799, 61156018, 62529942, 62769932, 64388412 ... (+3 more)",hybrid batteri - | toyota | corolla,3945
+product_id_part_name_brand_model_component_000059,40,15,1,"54137927, 54232530, 54248125, 57231214, 58198976, 59274610, 60063118, 61074258, 61156102, 61905395, 62146906, 63130124 ... (+3 more)",hybrid inverter - | toyota | corolla,3950
+product_id_part_name_brand_model_component_000060,40,15,1,"54432700, 54432701, 54492383, 54492396, 54493918, 54493926, 59245086, 59245089, 60132894, 61769058, 61769059, 61769263 ... (+3 more)",airbag krocksensor - | toyota | corolla,3962
+product_id_part_name_brand_model_component_000061,40,15,1,"53461881, 53650419, 53832045, 54071642, 54531250, 54531561, 54532022, 54532302, 54571247, 56093599, 56109907, 61038379 ... (+3 more)",insp.pump diesel control unit - | toyota | corolla,3990
+product_id_part_name_brand_model_component_000062,40,15,1,"53608931, 53608953, 53861120, 54103835, 54137955, 59244561, 60119199, 60125605, 60500078, 63020235, 63125499, 63334988 ... (+3 more)",other control unit - | toyota | corolla,3995
+product_id_part_name_brand_model_component_000068,40,15,1,"54570238, 54570295, 54570367, 54570499, 54572869, 54573063, 54573661, 54573914, 54574618, 54575400, 54575452, 54577513 ... (+3 more)",distributors vacuum regulator - | toyota | corolla,4039
+product_id_part_name_brand_model_component_000074,40,15,1,"53713302, 53715683, 53717128, 53720617, 54051647, 54173283, 54432606, 54472609, 54504379, 54526701, 56321354, 61866977 ... (+3 more)",fuel injection pump - | toyota | corolla,4130
+product_id_part_name_brand_model_component_000081,39,14,2,"53383800, 53420251, 53472798, 53726528, 53727624, 53728059, 53834883, 54434817, 60224931, 61766032, 63047746, 65257613 ... (+2 more)",injection control unit - | toyota | corolla || injection control unit- | toyota | corolla,3920
+product_id_part_name_brand_model_component_000079,39,14,1,"53472131, 53484104, 53573229, 53581161, 53691366, 53835769, 53966531, 53999838, 54400530, 54568070, 61094461, 63109721 ... (+2 more)",knee - | toyota | corolla,3810
+product_id_part_name_brand_model_component_000080,39,14,1,"53447491, 53487808, 53710872, 59140469, 60058723, 61092668, 63041911, 63350256, 63461617, 64546410, 64976681, 65257590 ... (+2 more)",steering wheel airbag - | toyota | corolla,3820
+product_id_part_name_brand_model_component_000082,39,14,1,"53838464, 53858477, 53881624, 53928354, 54129716, 58385449, 58761312, 58925051, 59862593, 60492667, 61918245, 62135565 ... (+2 more)",kamera utvändig - | toyota | corolla,3925
+product_id_part_name_brand_model_component_000083,39,14,1,"53616724, 53864019, 54000335, 54035815, 54161048, 54448932, 54537964, 54556301, 55161385, 55588422, 56120344, 62467106 ... (+2 more)",fuse box / electricity central - | toyota | corolla,3955
+product_id_part_name_brand_model_component_000084,39,14,1,"53677350, 54081552, 54398229, 54533387, 54612069, 54634256, 54634380, 54679094, 55544010, 58397284, 58423332, 59921570 ... (+2 more)",engine casing - | toyota | corolla,4044
+product_id_part_name_brand_model_component_000085,39,14,1,"53431833, 53449533, 53475815, 53727895, 53729179, 53729180, 53874568, 54036224, 54070887, 54561934, 58433455, 63233175 ... (+2 more)",mass air-flow sensor - | toyota | corolla,4108
+product_id_part_name_brand_model_component_000086,39,14,1,"53395854, 53655680, 53686810, 53820047, 53838227, 53864712, 53902200, 54000358, 54491958, 54509654, 54577046, 54615871 ... (+2 more)",tank lid - | toyota | corolla,4113
+product_id_part_name_brand_model_component_000087,38,13,1,"53421835, 53607268, 53714970, 54066047, 54219687, 54472538, 55885461, 61721306, 61751538, 61886697, 61997837, 63127022 ... (+1 more)",brake servo - | toyota | corolla,3862
+product_id_part_name_brand_model_component_000088,38,13,1,"53392046, 53723167, 54341930, 54513878, 56051567, 59746205, 59747247, 60058879, 65107261, 65399927, 65434802, 66220344 ... (+1 more)",main cylinder - | toyota | corolla,3872
+product_id_part_name_brand_model_component_000089,38,13,1,"53365006, 53365016, 53368241, 53657292, 53728297, 53884324, 53996296, 54010499, 54348690, 58974428, 59692172, 60793089 ... (+1 more)",engine diesel - | toyota | corolla,4034
+product_id_part_name_brand_model_component_000092,37,12,2,"53817670, 53827266, 54028562, 54316338, 54333672, 54395144, 54464657, 54515278, 54528400, 54544437, 62465201, 63181386",clutch cylinder main - | toyota | corolla || clutch cylinder main- | toyota | corolla,4185
+product_id_part_name_brand_model_component_000090,37,12,1,"53614687, 53621030, 53831847, 53834371, 53946424, 54442341, 54463527, 54498321, 54585352, 55157367, 62519614, 65132168",central lock control unit - | toyota | corolla,3980
+product_id_part_name_brand_model_component_000091,37,12,1,"53612965, 54016343, 54016497, 54023907, 54034176, 54143186, 54522220, 54653248, 54777219, 56873959, 60114021, 62989066",fuel filter / holder - | toyota | corolla,4123
+product_id_part_name_brand_model_component_000095,36,11,2,"54084378, 54084790, 54085064, 54098489, 54099109, 54100965, 54105228, 54121433, 54142195, 63050947, 63050948",motor cushion - | toyota | corolla || motor cushion- | toyota | corolla,4077
+product_id_part_name_brand_model_component_000094,36,11,1,"53688752, 53816223, 53819537, 53823586, 54546190, 54562239, 54571879, 54575568, 54597784, 54634804, 56321356",motor bracket - | toyota | corolla,4072
+product_id_part_name_brand_model_component_000093,36,6,1,"54053381, 54075917, 54075961, 54223993, 54387551, 54387781","side airbags - , e-(right) | vw | golf",44
+product_id_part_name_brand_model_component_000096,36,6,1,"53485816, 53492208, 54689453, 60484632, 63439417, 65210848",curtain airbags -(left) | skoda | octavia,7704
+product_id_part_name_brand_model_component_000097,36,6,1,"54061739, 54061753, 54080780, 56982221, 62513344, 65114420",side airbags -(right) | skoda | octavia,7722
+product_id_part_name_brand_model_component_000098,36,6,1,"53380327, 53391210, 56294984, 62238837, 62501993, 64594083",brake caliper -(right rear) | skoda | octavia,7750
+product_id_part_name_brand_model_component_000099,35,13,2,"53814471, 53840672, 53855171, 54137289, 59622865, 63305368, 63350257, 64522689, 64546427, 65250409, 65399914, 65680830 ... (+1 more)",rear axle beam - | toyota | corolla || rear axle beam- | toyota | corolla,4255
+product_id_part_name_brand_model_component_000101,34,14,1,"53452767, 53721809, 54403966, 54668815, 54669756, 54691624, 57021566, 62895199, 64257773, 64579006, 65434864, 65754016 ... (+2 more)",rear axle - | toyota | corolla,4206
+product_id_part_name_brand_model_component_000100,34,9,2,"54187634, 56279319, 56321370, 58540693, 60095678, 60987037, 63128547, 65059226, 65209258",gear box 6 speed - | toyota | corolla || gear box 6 speed- | toyota | corolla,4195
+product_id_part_name_brand_model_component_000103,33,8,1,"54164860, 54316286, 54346603, 54380818, 54556663, 54561043, 56096089, 60218544",tank transmitters - | toyota | corolla,4004
+product_id_part_name_brand_model_component_000104,33,8,1,"53573496, 54476682, 54512254, 54547063, 54586067, 56109868, 57195021, 59184602",pulley - | toyota | corolla,4054
+product_id_part_name_brand_model_component_000102,33,7,1,"53979568, 54243008, 56147885, 56935026, 57338371, 58398781, 62191587","drive shaft - , e-(right front) | vw | golf",480
+product_id_part_name_brand_model_component_000105,32,8,1,"53393524, 53394183, 53394186, 53496462, 61070360, 63351902, 63351960, 63351992",parkeringshjälp frontsensor - | toyota | corolla,3967
+product_id_part_name_brand_model_component_000106,32,7,1,"54310660, 54326986, 54340197, 54346272, 54357747, 54367095, 54371010",air-flow sensor - | toyota | corolla,4135
+product_id_part_name_brand_model_component_000107,31,6,1,"54475624, 54483536, 54484093, 54484658, 56109857, 56109858",piston / rod - | toyota | corolla,4049
+product_id_part_name_brand_model_component_000220,30,7,2,"54265057, 54291215, 55103367, 55500790, 65210861, 65455165, 65484076",air purifier - | skoda | octavia || air purifier- | skoda | octavia,8054
+product_id_part_name_brand_model_component_000238,30,7,2,"54083141, 55233937, 61412856, 65148479, 65580880, 66413259, 66730848",rear gear / diff. - | skoda | octavia || rear gear / diff.- | skoda | octavia,8230
+product_id_part_name_brand_model_component_000108,30,7,1,"58952159, 63136980, 63199756, 63225719, 63372058, 64336640, 64390201","contact roll airbag - , e- | vw | golf",0
+product_id_part_name_brand_model_component_000138,30,7,1,"53403168, 54222822, 54272328, 55905906, 57886776, 58398729, 65116468","alternator - , e- | vw | golf",266
+product_id_part_name_brand_model_component_000161,30,7,1,"53580265, 53585126, 53587007, 53606842, 54163225, 64336350, 64345962","air throttle housing / throttle housing - , e- | vw | golf",438
+product_id_part_name_brand_model_component_000207,30,7,1,"56800137, 59673805, 60445612, 60973010, 62661162, 62744962, 66395040",engine diesel - | skoda | octavia,7974
+product_id_part_name_brand_model_component_000236,30,7,1,"53369814, 53696921, 54501220, 54501287, 55842813, 61419210, 65598058",inter axle compl. - | skoda | octavia,8205
+product_id_part_name_brand_model_component_000183,30,6,2,"53392094, 53402374, 53991650, 54224758, 61759379, 65718767",brake servo - | skoda | octavia || brake servo- | skoda | octavia,7765
+product_id_part_name_brand_model_component_000224,30,6,2,"53581804, 58503314, 59655628, 61705839, 65487460, 66697123",fuel pump electric - | skoda | octavia || fuel pump electric- | skoda | octavia,8074
+product_id_part_name_brand_model_component_000235,30,6,2,"53407578, 57067071, 59077369, 59913951, 60522419, 66906976",gear distributor box - | skoda | octavia || gear distributor box- | skoda | octavia,8191
+product_id_part_name_brand_model_component_000109,30,6,1,"54243551, 62754570, 63199755, 63372062, 64675808, 65138597","steering wheel airbag - , e- | vw | golf",14
+product_id_part_name_brand_model_component_000111,30,6,1,"53938228, 54223147, 54270529, 54433079, 60055306, 64528096","abs hydraulic aggregate - , e- | vw | golf",51
+product_id_part_name_brand_model_component_000114,30,6,1,"53389308, 53447977, 54390343, 56454556, 63356798, 65318665","brake servo - , e- | vw | golf",91
+product_id_part_name_brand_model_component_000119,30,6,1,"54375921, 57524010, 59113738, 60125941, 64796630, 65059338","fuse box / electricity central - , e- | vw | golf",136
+product_id_part_name_brand_model_component_000128,30,6,1,"53984806, 54021478, 54038439, 54066811, 54166294, 61114227","battery cable - , e- | vw | golf",188
+product_id_part_name_brand_model_component_000145,30,6,1,"53368418, 53393260, 53467783, 53606468, 54224930, 60492911","sump - , e- | vw | golf",324
+product_id_part_name_brand_model_component_000159,30,6,1,"53382600, 54074047, 54399458, 54432860, 54433078, 58950659","rubber bellow / tube - , e- | vw | golf",423
+product_id_part_name_brand_model_component_000177,30,6,1,"53685062, 53707825, 54272034, 58399521, 64487421, 65066105",throttle housing - | toyota | corolla,4145
+product_id_part_name_brand_model_component_000182,30,6,1,"54214832, 54222147, 54284957, 54672150, 64592399, 66910398",abs hydraulic aggregate - | skoda | octavia,7730
+product_id_part_name_brand_model_component_000113,30,5,2,"54221227, 54332512, 56566931, 63233982, 63445334","brake caliper - , e-(right rear) | vw | golf || brake caliper- , e-(right rear) | vw | golf",71
+product_id_part_name_brand_model_component_000115,30,5,2,"53825961, 53833931, 64789477, 64823034, 65116987","main cylinder - , e- | vw | golf || main cylinder- , e- | vw | golf",106
+product_id_part_name_brand_model_component_000123,30,5,2,"53458852, 53467208, 53469091, 53486158, 53491539","parkeringshjälp frontsensor - , e- | vw | golf || parkeringshjälp frontsensor- , e- | vw | golf",161
+product_id_part_name_brand_model_component_000124,30,5,2,"53940481, 54042782, 54042783, 57388462, 64521531","rear sensor - , e- | vw | golf || rear sensor- , e- | vw | golf",168
+product_id_part_name_brand_model_component_000126,30,5,2,"53995131, 54014373, 54027459, 54057005, 61114117","signal horn - , e- | vw | golf || signal horn- , e- | vw | golf",178
+product_id_part_name_brand_model_component_000127,30,5,2,"53436195, 53437268, 53438834, 54410773, 64647714","battery box / fixing / holder - , e- | vw | golf || battery box / fixing / holder- , e- | vw | golf",183
+product_id_part_name_brand_model_component_000129,30,5,2,"54038732, 54064944, 54427678, 54506084, 54547761","ignition diesel relay - , e- | vw | golf || ignition diesel relay- , e- | vw | golf",193
+product_id_part_name_brand_model_component_000132,30,5,2,"53432419, 54055672, 54055876, 54429604, 54447678","insp.pump diesel control unit - , e- | vw | golf || insp.pump diesel control unit- , e- | vw | golf",225
+product_id_part_name_brand_model_component_000134,30,5,2,"54393455, 54399636, 54430147, 54430148, 64842504","avgas temperaturgivare - , e- | vw | golf || avgas temperaturgivare- , e- | vw | golf",240
+product_id_part_name_brand_model_component_000139,30,5,2,"53699195, 54151506, 54339592, 54545748, 54576135","alternator bracket / accessories - , e- | vw | golf || alternator bracket / accessories- , e- | vw | golf",271
+product_id_part_name_brand_model_component_000144,30,5,2,"59815058, 59815065, 60162113, 64251613, 65116552","starter gasoline - , e- | vw | golf || starter gasoline- , e- | vw | golf",319
+product_id_part_name_brand_model_component_000157,30,5,2,"54055840, 54341902, 54360755, 54373904, 54411874","fuel tank lid - , e- | vw | golf || fuel tank lid- , e- | vw | golf",413
+product_id_part_name_brand_model_component_000164,30,5,2,"54027084, 54322755, 54323239, 54324453, 54341230","fuel tank injection - , e- | vw | golf || fuel tank injection- , e- | vw | golf",453
+product_id_part_name_brand_model_component_000168,30,5,2,"53826568, 54044473, 54427542, 55057785, 58900682","gear box bracket - , e- | vw | golf || gear box bracket- , e- | vw | golf",514
+product_id_part_name_brand_model_component_000169,30,5,2,"53940105, 54068070, 55904254, 60225593, 62029274","gear lever - , e- | vw | golf || gear lever- , e- | vw | golf",524
+product_id_part_name_brand_model_component_000173,30,5,2,"54035214, 54245153, 54253106, 54315789, 60228190","rear axle beam - , e- | vw | golf || rear axle beam- , e- | vw | golf",629
+product_id_part_name_brand_model_component_000174,30,5,2,"53468309, 54229732, 54560355, 56109850, 59185397",sump - | toyota | corolla || sump- | toyota | corolla,4059
+product_id_part_name_brand_model_component_000181,30,5,2,"54280175, 54292142, 56974726, 57597013, 59309175",passenger airbag - | skoda | octavia || passenger airbag- | skoda | octavia,7694
+product_id_part_name_brand_model_component_000184,30,5,2,"53597130, 53847965, 53882587, 54440392, 63124125",hand brake lever - | skoda | octavia || hand brake lever- | skoda | octavia,7775
+product_id_part_name_brand_model_component_000185,30,5,2,"54040619, 54040892, 54041498, 54047336, 54069056",abs hydraulic pump - | skoda | octavia || abs hydraulic pump- | skoda | octavia,7785
+product_id_part_name_brand_model_component_000186,30,5,2,"53417014, 53445888, 54042626, 54069029, 54672182",injection control unit - | skoda | octavia || injection control unit- | skoda | octavia,7825
+product_id_part_name_brand_model_component_000187,30,5,2,"54432495, 55039443, 62638840, 62886295, 64295714",komfort styrdon - | skoda | octavia || komfort styrdon- | skoda | octavia,7830
+product_id_part_name_brand_model_component_000188,30,5,2,"53519269, 53590727, 54410190, 56649098, 56649099",other control unit - | skoda | octavia || other control unit- | skoda | octavia,7840
+product_id_part_name_brand_model_component_000190,30,5,2,"54049082, 59564435, 60048848, 60207964, 60519221",parking control unit - | skoda | octavia || parking control unit- | skoda | octavia,7850
+product_id_part_name_brand_model_component_000193,30,5,2,"55136030, 62013012, 62013022, 62013028, 64632985",ignition diesel relay - | skoda | octavia || ignition diesel relay- | skoda | octavia,7890
+product_id_part_name_brand_model_component_000194,30,5,2,"54618191, 54638958, 54650190, 54679054, 54687528",other sensor - | skoda | octavia || other sensor- | skoda | octavia,7895
+product_id_part_name_brand_model_component_000195,30,5,2,"53453680, 53992837, 54483957, 58994424, 64636107",rain sensor - | skoda | octavia || rain sensor- | skoda | octavia,7905
+product_id_part_name_brand_model_component_000197,30,5,2,"53430480, 53998555, 57336307, 58994403, 60048809",airbag control unit - | skoda | octavia || airbag control unit- | skoda | octavia,7915
+product_id_part_name_brand_model_component_000201,30,5,2,"53420634, 53840962, 53858012, 54487372, 56915273",insp.pump diesel control unit - | skoda | octavia || insp.pump diesel control unit- | skoda | octavia,7944
+product_id_part_name_brand_model_component_000210,30,5,2,"54214835, 54239478, 56394913, 59572701, 60507006",starter gasoline - | skoda | octavia || starter gasoline- | skoda | octavia,7996
+product_id_part_name_brand_model_component_000211,30,5,2,"53810040, 60439527, 64643597, 64902844, 66401424",sump - | skoda | octavia || sump- | skoda | octavia,8001
+product_id_part_name_brand_model_component_000214,30,5,2,"53418422, 53792769, 54121096, 54164158, 54174603",belt tensioner for fan belt - | skoda | octavia || belt tensioner for fan belt- | skoda | octavia,8016
+product_id_part_name_brand_model_component_000216,30,5,2,"54116551, 54148694, 54148695, 54148696, 62007019",piston / rod - | skoda | octavia || piston / rod- | skoda | octavia,8030
+product_id_part_name_brand_model_component_000218,30,5,2,"54068941, 54418779, 54418782, 54434254, 54447415",motor bracket - | skoda | octavia || motor bracket- | skoda | octavia,8044
+product_id_part_name_brand_model_component_000222,30,5,2,"54360852, 54564439, 54580231, 56910148, 60841392",diesel injection pump - | skoda | octavia || diesel injection pump- | skoda | octavia,8064
+product_id_part_name_brand_model_component_000234,30,5,2,"53490848, 53593156, 54241390, 54481797, 55801303",gear box 6 speed - | skoda | octavia || gear box 6 speed- | skoda | octavia,8180
+product_id_part_name_brand_model_component_000237,30,5,2,"53367213, 54669113, 62657264, 62896866, 66432442",rear axle - | skoda | octavia || rear axle- | skoda | octavia,8220
+product_id_part_name_brand_model_component_000110,30,5,1,"56985881, 58796753, 60960501, 60981203, 64306530","knee - , e- | vw | golf",39
+product_id_part_name_brand_model_component_000112,30,5,1,"54221225, 57338396, 63233983, 63445331, 65116750","brake caliper - , e-(left rear) | vw | golf",66
+product_id_part_name_brand_model_component_000116,30,5,1,"53985126, 54036564, 54044560, 54048685, 57338381","abs hydraulic pump - , e- | vw | golf",111
+product_id_part_name_brand_model_component_000117,30,5,1,"58798477, 59757960, 60721444, 63197509, 65711229","adaptiv farthållare sensor - , e- | vw | golf",121
+product_id_part_name_brand_model_component_000118,30,5,1,"59860320, 59860322, 63666797, 65421268, 65421272","control unit xenon - , e- | vw | golf",131
+product_id_part_name_brand_model_component_000120,30,5,1,"53458214, 53472320, 53500718, 56744090, 59734341","injection control unit - , e- | vw | golf",141
+product_id_part_name_brand_model_component_000121,30,5,1,"53998268, 54416798, 54430192, 59552982, 60920918","komfort styrdon - , e- | vw | golf",146
+product_id_part_name_brand_model_component_000122,30,5,1,"54059287, 54068339, 54500484, 54500496, 65219914","other relay - , e- | vw | golf",156
+product_id_part_name_brand_model_component_000125,30,5,1,"54049705, 54049714, 56857329, 58050859, 58348027","sensor steering - , e- | vw | golf",173
+product_id_part_name_brand_model_component_000130,30,5,1,"53894770, 53919106, 53919107, 53930516, 54345760","sensor abs - , e- | vw | golf",201
+product_id_part_name_brand_model_component_000131,30,5,1,"53726544, 53997515, 54036211, 57339194, 61914680","airbag control unit - , e- | vw | golf",211
+product_id_part_name_brand_model_component_000133,30,5,1,"54095103, 54427546, 54430249, 63387889, 66444857","parking control unit - , e- | vw | golf",230
+product_id_part_name_brand_model_component_000135,30,5,1,"54008546, 54049047, 54074856, 55972734, 56502632","load air pressure transmitters - , e- | vw | golf",250
+product_id_part_name_brand_model_component_000136,30,5,1,"54427789, 57273990, 57273998, 57274077, 57275076","other transmitters - , e- | vw | golf",255
+product_id_part_name_brand_model_component_000137,30,5,1,"53460454, 53680645, 54250000, 54250208, 54311846","tank transmitters - , e- | vw | golf",261
+product_id_part_name_brand_model_component_000140,30,5,1,"65403892, 65403904, 65403921, 65427076, 65427090","coil - , e- | vw | golf",276
+product_id_part_name_brand_model_component_000141,30,5,1,"53368462, 53429849, 58737655, 63205720, 65116265","engine gasoline - , e- | vw | golf",288
+product_id_part_name_brand_model_component_000142,30,5,1,"54100778, 54112903, 54118497, 54126464, 54162484","engine block - , e- | vw | golf",293
+product_id_part_name_brand_model_component_000143,30,5,1,"53373961, 53413355, 53471669, 53940167, 60221227","starter diesel - , e- | vw | golf",314
+product_id_part_name_brand_model_component_000146,30,5,1,"54347769, 54375865, 54420181, 54546417, 54652849","thermostat housing / cap - , e- | vw | golf",329
+product_id_part_name_brand_model_component_000147,30,5,1,"54069568, 54483157, 61787665, 62564689, 65869207","turbo aggregate - , e- | vw | golf",334
+product_id_part_name_brand_model_component_000148,30,5,1,"53601348, 54089299, 54272491, 54338772, 54393293","valve cap - , e- | vw | golf",339
+product_id_part_name_brand_model_component_000149,30,5,1,"54017432, 54027520, 54137596, 54320426, 54622957","cylinder head diesel - , e- | vw | golf",344
+product_id_part_name_brand_model_component_000150,30,5,1,"53700177, 53894965, 54654262, 54654297, 54664495","belt tensioner for fan belt - , e- | vw | golf",349
+product_id_part_name_brand_model_component_000151,30,5,1,"54137828, 54142483, 54142603, 54635308, 61134774","crankshaft - , e- | vw | golf",358
+product_id_part_name_brand_model_component_000152,30,5,1,"53694786, 54316903, 56877048, 60220863, 63741088","dipstick - , e- | vw | golf",363
+product_id_part_name_brand_model_component_000153,30,5,1,"54100052, 54124986, 54124988, 54125831, 54142915","piston / rod - , e- | vw | golf",368
+product_id_part_name_brand_model_component_000154,30,5,1,"53608557, 53835906, 54055052, 54071481, 54166559","motor cushion - , e- | vw | golf",373
+product_id_part_name_brand_model_component_000155,30,5,1,"53985258, 54073986, 54074053, 54959086, 63238739","air purifier - , e- | vw | golf",378
+product_id_part_name_brand_model_component_000156,30,5,1,"53820707, 53986991, 54038218, 54058306, 54079016","fuel filter / holder - , e- | vw | golf",398
+product_id_part_name_brand_model_component_000158,30,5,1,"53938447, 54337899, 54380915, 56228413, 60226848","mass air-flow sensor - , e- | vw | golf",418
+product_id_part_name_brand_model_component_000160,30,5,1,"55732520, 55972729, 56502635, 61796395, 64814195","throttle housing - , e- | vw | golf",433
+product_id_part_name_brand_model_component_000162,30,5,1,"53984272, 53985310, 54005766, 54027932, 54380653","carbon canister - , e- | vw | golf",443
+product_id_part_name_brand_model_component_000163,30,5,1,"53707675, 54020235, 54185803, 60058884, 64952167","diesel tank - , e- | vw | golf",448
+product_id_part_name_brand_model_component_000165,30,5,1,"54417788, 54417791, 57712714, 58738183, 64594102","automatic gear - , e- | vw | golf",460
+product_id_part_name_brand_model_component_000166,30,5,1,"53426452, 53987010, 54109076, 54166562, 54577204","fly wheel manual - , e- | vw | golf",499
+product_id_part_name_brand_model_component_000167,30,5,1,"53463140, 53593831, 53997371, 54025922, 62191263","gear box 6 speed - , e- | vw | golf",509
+product_id_part_name_brand_model_component_000170,30,5,1,"53679703, 53820701, 54354638, 54382680, 55743091","gear regulator - , e- | vw | golf",529
+product_id_part_name_brand_model_component_000171,30,5,1,"54004519, 54037003, 54048694, 54053254, 54101065","gear box cushion - , e- | vw | golf",539
+product_id_part_name_brand_model_component_000172,30,5,1,"53365106, 53403606, 53815272, 62058588, 62527580","rear gear / diff. - , e- | vw | golf",559
+product_id_part_name_brand_model_component_000175,30,5,1,"53815841, 53832778, 54016548, 54523885, 54530861",carbon canister - | toyota | corolla,4118
+product_id_part_name_brand_model_component_000176,30,5,1,"54327539, 54443287, 62465248, 63006838, 65106415",rubber bellow / tube - | toyota | corolla,4140
+product_id_part_name_brand_model_component_000178,30,5,1,"54469818, 54472631, 54473017, 54478903, 54480215",strut bearing rear -(rear) | toyota | corolla,4281
+product_id_part_name_brand_model_component_000179,30,5,1,"53484321, 53606519, 54668978, 57336303, 64799769",contact roll airbag - | skoda | octavia,7684
+product_id_part_name_brand_model_component_000180,30,5,1,"54289853, 55500795, 56974731, 59692310, 59856778",knee - | skoda | octavia,7689
+product_id_part_name_brand_model_component_000189,30,5,1,"54039164, 54039165, 54508620, 54508624, 63589615",other relay - | skoda | octavia,7845
+product_id_part_name_brand_model_component_000191,30,5,1,"53583320, 53588042, 53596792, 54531569, 54684184",sensor steering - | skoda | octavia,7860
+product_id_part_name_brand_model_component_000192,30,5,1,"53520193, 53549530, 59572698, 64295796, 65876184",battery cable - | skoda | octavia,7875
+product_id_part_name_brand_model_component_000196,30,5,1,"54434486, 54434487, 54434613, 65877447, 65877448",sensor ac inner temperature - | skoda | octavia,7910
+product_id_part_name_brand_model_component_000198,30,5,1,"53439276, 54666154, 56691920, 59583086, 63048923",baklucka styrenhet - | skoda | octavia,7920
+product_id_part_name_brand_model_component_000199,30,5,1,"53610225, 54428103, 54688469, 65432379, 65558491",bränslepump styrenhet - | skoda | octavia,7929
+product_id_part_name_brand_model_component_000200,30,5,1,"54410296, 54468823, 54660990, 55967124, 60199793",central lock control unit - | skoda | octavia,7934
+product_id_part_name_brand_model_component_000202,30,5,1,"53397093, 53490635, 53662597, 54468519, 64295799",avgas temperaturgivare - | skoda | octavia,7949
+product_id_part_name_brand_model_component_000203,30,5,1,"54040578, 54041499, 54439081, 54443290, 54443606",load air pressure transmitters - | skoda | octavia,7954
+product_id_part_name_brand_model_component_000204,30,5,1,"54343917, 54348909, 54373456, 54375958, 54381558",tank transmitters - | skoda | octavia,7959
+product_id_part_name_brand_model_component_000205,30,5,1,"54233068, 54280176, 54447421, 62238843, 62240132",alternator - | skoda | octavia,7964
+product_id_part_name_brand_model_component_000206,30,5,1,"53808277, 53809014, 53943649, 54352603, 54536085",coil - | skoda | octavia,7969
+product_id_part_name_brand_model_component_000208,30,5,1,"54216988, 54281829, 54385393, 56101920, 65709762",engine casing - | skoda | octavia,7984
+product_id_part_name_brand_model_component_000209,30,5,1,"53401025, 53490851, 53494115, 59769350, 59769471",starter diesel - | skoda | octavia,7991
+product_id_part_name_brand_model_component_000212,30,5,1,"54582425, 55170665, 62701480, 65114104, 65126978",turbo aggregate - | skoda | octavia,8006
+product_id_part_name_brand_model_component_000213,30,5,1,"54205365, 54238202, 54297434, 54307932, 63300312",valve cap - | skoda | octavia,8011
+product_id_part_name_brand_model_component_000215,30,5,1,"54084846, 54217991, 54229476, 54229479, 54268855",cam belt / transmission cap - | skoda | octavia,8021
+product_id_part_name_brand_model_component_000217,30,5,1,"54101072, 54241876, 54270425, 54271847, 55708357",pulley - | skoda | octavia,8035
+product_id_part_name_brand_model_component_000219,30,5,1,"53649460, 54108276, 54154575, 54273215, 54478278",motor cushion - | skoda | octavia,8049
+product_id_part_name_brand_model_component_000221,30,5,1,"54205411, 54205412, 61920905, 61920918, 61920928",deliverer - | skoda | octavia,8059
+product_id_part_name_brand_model_component_000223,30,5,1,"54218705, 54222472, 54998917, 55487905, 61839231",fuel distributor - | skoda | octavia,8069
+product_id_part_name_brand_model_component_000225,30,5,1,"53656183, 53656387, 54659768, 58749525, 59101497",fuel tank injection - | skoda | octavia,8079
+product_id_part_name_brand_model_component_000226,30,5,1,"53520184, 54428098, 54443614, 61734037, 63141783",mass air-flow sensor - | skoda | octavia,8084
+product_id_part_name_brand_model_component_000227,30,5,1,"53985513, 54410388, 54479475, 55973026, 65869007",rubber bellow / tube - | skoda | octavia,8089
+product_id_part_name_brand_model_component_000228,30,5,1,"53989118, 54045264, 54071165, 54386802, 55966413",throttle housing - | skoda | octavia,8099
+product_id_part_name_brand_model_component_000229,30,5,1,"53571584, 53835085, 54616959, 54659769, 60226199",carbon canister - | skoda | octavia,8107
+product_id_part_name_brand_model_component_000230,30,5,1,"54040408, 54063030, 54582112, 60471158, 62558824",fuel injection pump - | skoda | octavia,8112
+product_id_part_name_brand_model_component_000231,30,5,1,"53655666, 53661860, 54421710, 54436057, 54686864",förpump diesel - | skoda | octavia,8117
+product_id_part_name_brand_model_component_000232,30,5,1,"53555100, 53678716, 54139308, 54582424, 64858611",fly wheel manual - | skoda | octavia,8170
+product_id_part_name_brand_model_component_000233,30,5,1,"53376928, 53853245, 58491195, 59381610, 60974455",gear box 5 speed - | skoda | octavia,8175
+product_id_part_name_brand_model_component_000240,29,6,2,"54025932, 54054788, 54228590, 58360841, 61922680, 63021622","engine diesel - , e- | vw | golf || engine diesel- , e- | vw | golf",283
+product_id_part_name_brand_model_component_000239,29,5,2,"53415853, 54070103, 54442843, 61385413, 66431289","other control unit - , e- | vw | golf || other control unit- , e- | vw | golf",151
+product_id_part_name_brand_model_component_000241,29,5,2,"54398358, 54398390, 59328519, 60073930, 63589705","inter axle compl. - , e- | vw | golf || inter axle compl.- , e- | vw | golf",534
+product_id_part_name_brand_model_component_000242,29,5,1,"53393680, 53894970, 53894983, 53905737, 66459895","rear axle - , e- | vw | golf",554
+product_id_part_name_brand_model_component_000243,29,5,1,"53489119, 53847562, 53900720, 59705489, 66544168",tank lid - | skoda | octavia,8094
+product_id_part_name_brand_model_component_000246,27,7,1,"53921012, 54469880, 54547853, 54585113, 54586039, 54659450, 64412340",airbag front sensor -(right) | toyota | corolla,3909
+product_id_part_name_brand_model_component_000244,27,5,1,"54090871, 54244928, 54274286, 54286424, 66891089","cam belt / transmission cap - , e- | vw | golf",354
+product_id_part_name_brand_model_component_000245,27,5,1,"55328011, 55328012, 64863773, 64863775, 64863779","deliverer - , e- | vw | golf",383
+product_id_part_name_brand_model_component_000247,26,5,1,"54109610, 56026114, 63620454, 65781920, 66402915",adaptiv farthållare sensor - | skoda | octavia,7795
+product_id_part_name_brand_model_component_000251,25,10,2,"53659800, 53667121, 54101695, 54400534, 54508091, 54604285, 54622479, 54635083, 56321357, 63083786",gear box bracket - | toyota | corolla || gear box bracket- | toyota | corolla,4200
+product_id_part_name_brand_model_component_000248,25,5,1,"53523674, 53679613, 54309282, 57733393, 60553538","diesel injection pump - , e- | vw | golf",388
+product_id_part_name_brand_model_component_000249,25,5,1,"53477126, 54250831, 54250832, 54267520, 62199608","fuel distributor - , e- | vw | golf",393
+product_id_part_name_brand_model_component_000250,25,5,1,"54574587, 54579182, 54580238, 54597165, 54617886",brake intensity regulator - | toyota | corolla,3882
+product_id_part_name_brand_model_component_000252,25,5,1,"53380463, 53493733, 62238839, 62502054, 64594084",brake caliper -(left rear) | skoda | octavia,7745
+product_id_part_name_brand_model_component_000253,25,5,1,"54671236, 57328325, 64572268, 64572269, 64572275",parkeringshjälp frontsensor - | skoda | octavia,7900
+product_id_part_name_brand_model_component_000260,24,5,2,"54010542, 54228797, 63196643, 64589396, 66767101","engine casing - , e- | vw | golf || engine casing- , e- | vw | golf",298
+product_id_part_name_brand_model_component_000255,24,5,1,"53932799, 54061937, 54218581, 54440014, 60933072","passenger airbag - , e- | vw | golf",9
+product_id_part_name_brand_model_component_000273,24,5,1,"60295492, 61997585, 62801577, 65114099, 65784734",dragkrok styrenhet - | skoda | octavia,7815
+product_id_part_name_brand_model_component_000286,24,5,1,"53371576, 53989464, 54315884, 60214930, 60226014",rear axle beam - | skoda | octavia,8225
+product_id_part_name_brand_model_component_000258,24,4,2,"54652917, 54655022, 54657584, 54658533","sensor ac inner temperature - , e- | vw | golf || sensor ac inner temperature- , e- | vw | golf",207
+product_id_part_name_brand_model_component_000266,24,4,2,"58672402, 59207247, 63158314, 66541683","gear box 5 speed - , e- | vw | golf || gear box 5 speed- , e- | vw | golf",504
+product_id_part_name_brand_model_component_000268,24,4,2,"54077263, 54254408, 55078289, 55718253","trailing link rear - , e-(right upper) | vw | golf || trailing link rear- , e-(right upper) | vw | golf",584
+product_id_part_name_brand_model_component_000270,24,4,2,"53941959, 54652108, 54655734, 54661374",airbag front sensor -(right front) | toyota | corolla || airbag front sensor-(right front) | toyota | corolla,3907
+product_id_part_name_brand_model_component_000272,24,4,2,"53549027, 54064934, 56974744, 64809217",main cylinder - | skoda | octavia || main cylinder- | skoda | octavia,7780
+product_id_part_name_brand_model_component_000274,24,4,2,"54013759, 54024565, 54419574, 60537565",signal horn - | skoda | octavia || signal horn- | skoda | octavia,7866
+product_id_part_name_brand_model_component_000276,24,4,2,"53431937, 54683089, 64594097, 66430359",kamera utvändig - | skoda | octavia || kamera utvändig- | skoda | octavia,7885
+product_id_part_name_brand_model_component_000277,24,4,2,"54410277, 54688452, 62647179, 63308601",bensin/dieselvärmare styrenhet - | skoda | octavia || bensin/dieselvärmare styrenhet- | skoda | octavia,7925
+product_id_part_name_brand_model_component_000278,24,4,2,"53935379, 54279403, 57343770, 59824465",engine gasoline - | skoda | octavia || engine gasoline- | skoda | octavia,7979
+product_id_part_name_brand_model_component_000280,24,4,2,"53664646, 54687352, 54688491, 63021001",diesel tank - | skoda | octavia || diesel tank- | skoda | octavia,8122
+product_id_part_name_brand_model_component_000254,24,4,1,"53964588, 54058388, 54655558, 57846326","other airbags - , e- | vw | golf",5
+product_id_part_name_brand_model_component_000256,24,4,1,"53845074, 53878582, 58702432, 65264998","hand brake lever - , e- | vw | golf",102
+product_id_part_name_brand_model_component_000257,24,4,1,"57233767, 59939593, 60647802, 61428204","actuator loom - , e- | vw | golf",116
+product_id_part_name_brand_model_component_000259,24,4,1,"53621930, 54127948, 54942211, 54942212","stolsvärme styrenhet/relä - , e- | vw | golf",236
+product_id_part_name_brand_model_component_000261,24,4,1,"53517436, 53674378, 54044470, 59077572","motor bracket - , e- | vw | golf",303
+product_id_part_name_brand_model_component_000262,24,4,1,"54652147, 54652331, 54656176, 54656602","pulley - , e-(exterior) | vw | golf",310
+product_id_part_name_brand_model_component_000263,24,4,1,"54024254, 54291789, 54430621, 54657674","fuel injection pump - , e- | vw | golf",403
+product_id_part_name_brand_model_component_000264,24,4,1,"57331992, 58737420, 59725313, 65445075","fuel pump electric - , e- | vw | golf",408
+product_id_part_name_brand_model_component_000265,24,4,1,"54055839, 61779175, 62187719, 66703902","tank lid - , e- | vw | golf",428
+product_id_part_name_brand_model_component_000267,24,4,1,"53407905, 56162775, 58360868, 63451851","gear distributor box - , e- | vw | golf",519
+product_id_part_name_brand_model_component_000269,24,4,1,"54246609, 55078288, 55786133, 62729114","trailing link rear - , e-(left upper) | vw | golf",599
+product_id_part_name_brand_model_component_000271,24,4,1,"54666191, 55173603, 59259235, 64592441",steering wheel airbag - | skoda | octavia,7699
+product_id_part_name_brand_model_component_000275,24,4,1,"57006018, 61712045, 63308261, 64503156",inverter 12 -> 220 v - | skoda | octavia,7880
+product_id_part_name_brand_model_component_000279,24,4,1,"53810041, 54166117, 54547947, 54564168",alternator bracket / accessories - | skoda | octavia,8040
+product_id_part_name_brand_model_component_000281,24,4,1,"53387859, 64483026, 65552499, 66544405",automatic gear - | skoda | octavia,8127
+product_id_part_name_brand_model_component_000282,24,4,1,"53619181, 54221676, 56874903, 56901591",fly wheel automat - | skoda | octavia,8166
+product_id_part_name_brand_model_component_000283,24,4,1,"53680043, 54447424, 54447425, 54645153",gear box bracket - | skoda | octavia,8185
+product_id_part_name_brand_model_component_000284,24,4,1,"54024046, 54040561, 54161379, 54164982",gear box cushion - | skoda | octavia,8196
+product_id_part_name_brand_model_component_000285,24,4,1,"53935349, 56393685, 59918008, 64809583",gear lever - | skoda | octavia,8200
+product_id_part_name_brand_model_component_000287,23,4,1,"53380963, 56810305, 56811487, 65392594",ljusinställning lägesgivare - | skoda | octavia,7835
+product_id_part_name_brand_model_component_000288,22,4,2,"54678479, 63043738, 64574548, 66173210",rear sensor - | skoda | octavia || rear sensor- | skoda | octavia,7855
+product_id_part_name_brand_model_component_000289,20,5,1,"53655455, 55828295, 55828296, 63170801, 65145093",control unit xenon - | toyota | corolla,3985
+product_id_part_name_brand_model_component_000290,19,4,2,"55161324, 61416229, 61766112, 61855470",caliper bracket - | toyota | corolla || caliper bracket- | toyota | corolla,3867
+product_id_part_name_brand_model_component_000291,19,4,1,"61693784, 61693785, 61693786, 63352086",rear sensor - | toyota | corolla,3972
+product_id_part_name_brand_model_component_000292,19,4,1,"54423828, 54635470, 54646065, 62466708",strut rear -(left rear) | toyota | corolla,4228
+product_id_part_name_brand_model_component_000304,18,5,1,"53681429, 55104212, 61796804, 62837517, 66697711",fuse box / electricity central - | skoda | octavia,7820
+product_id_part_name_brand_model_component_000295,18,3,2,"53407814, 53419308, 53419701","dörr styrenhet - , e-(left) | vw | golf || dörr styrenhet- , e-(left) | vw | golf",218
+product_id_part_name_brand_model_component_000302,18,3,2,"53783208, 54094531, 54099834",brake disc -(front) | skoda | octavia || brake disc-(front) | skoda | octavia,7760
+product_id_part_name_brand_model_component_000293,18,3,1,"53486078, 54134400, 54139866","brake disc - , e-(rear) | vw | golf",88
+product_id_part_name_brand_model_component_000294,18,3,1,"62890188, 62890190, 65057587","airbag krocksensor - , e- | vw | golf",126
+product_id_part_name_brand_model_component_000296,18,3,1,"55972746, 58950529, 64333072","ljusinställning lägesgivare - , e- | vw | golf",245
+product_id_part_name_brand_model_component_000297,18,3,1,"54018118, 54064332, 54196395",abs control unit - | toyota | corolla,3977
+product_id_part_name_brand_model_component_000298,18,3,1,"64781438, 64781440, 64781443",sensor tire pressure - | toyota | corolla,4001
+product_id_part_name_brand_model_component_000299,18,3,1,"53398890, 63350083, 64546672",hybrid converter - | toyota | corolla,4064
+product_id_part_name_brand_model_component_000300,18,3,1,"53617942, 54529615, 54777206",turbo aggregate - | toyota | corolla,4082
+product_id_part_name_brand_model_component_000301,18,3,1,"60133533, 63181431, 64257752",fuel tank injection - | toyota | corolla,4105
+product_id_part_name_brand_model_component_000303,18,3,1,"53429617, 55972998, 64295797",actuator loom - | skoda | octavia,7790
+product_id_part_name_brand_model_component_000305,18,3,1,"54013733, 54442596, 54669794",battery box / fixing / holder - | skoda | octavia,7871
+product_id_part_name_brand_model_component_000306,18,3,1,"54166896, 57361686, 63299480",air throttle housing / throttle housing - | skoda | octavia,8104
+product_id_part_name_brand_model_component_000307,13,3,1,"61772978, 62010243, 65304226",actuator loom -(left rear) | toyota | corolla,3893
+product_id_part_name_brand_model_component_000308,13,3,1,"65594680, 65594689, 65594701",rear sensor -(interior) | toyota | corolla,3975
+product_id_part_name_brand_model_component_000325,12,3,1,"53480535, 63707683, 66914632",control unit xenon - | skoda | octavia,7810
+product_id_part_name_brand_model_component_000311,12,2,2,"54312600, 54378773","caliper bracket - , e- | vw | golf || caliper bracket- , e- | vw | golf",99
+product_id_part_name_brand_model_component_000312,12,2,2,"53410127, 53418701","dörr styrenhet - , e-(right) | vw | golf || dörr styrenhet- , e-(right) | vw | golf",219
+product_id_part_name_brand_model_component_000317,12,2,2,"53685047, 57682964",wiper arm motor relay - | toyota | corolla || wiper arm motor relay- | toyota | corolla,3960
+product_id_part_name_brand_model_component_000319,12,2,2,"53785897, 53802167",brake disc -(rear) | skoda | octavia || brake disc-(rear) | skoda | octavia,7761
+product_id_part_name_brand_model_component_000321,12,2,2,"64630721, 65749784",caliper bracket -(right front) | skoda | octavia || caliper bracket-(right front) | skoda | octavia,7772
+product_id_part_name_brand_model_component_000324,12,2,2,"53389449, 59936250",aktivt kollisionsskydd sensor -(left) | skoda | octavia || aktivt kollisionsskydd sensor-(left) | skoda | octavia,7807
+product_id_part_name_brand_model_component_000331,12,2,2,"54126407, 54141407",engine block - | skoda | octavia || engine block- | skoda | octavia,8028
+product_id_part_name_brand_model_component_000309,12,2,1,"53916640, 56108623","seat assembled - , e- | vw | golf",34
+product_id_part_name_brand_model_component_000310,12,2,1,"56350334, 56920584","seat assembled - , e-(left front) | vw | golf",35
+product_id_part_name_brand_model_component_000313,12,2,1,"54542890, 54543482","ignition module - , e- | vw | golf",223
+product_id_part_name_brand_model_component_000314,12,2,1,"53859698, 65059339","cylinder head fuel - , e- | vw | golf",281
+product_id_part_name_brand_model_component_000315,12,2,1,"53559706, 54378877","air-flow sensor - , e- | vw | golf",458
+product_id_part_name_brand_model_component_000316,12,2,1,"62463270, 62648549",caliper bracket -(left rear) | toyota | corolla,3870
+product_id_part_name_brand_model_component_000318,12,2,1,"54635082, 56321358",gear box bracket -(rear) | toyota | corolla,4201
+product_id_part_name_brand_model_component_000320,12,2,1,"60539167, 60539177",caliper bracket -(rear) | skoda | octavia,7770
+product_id_part_name_brand_model_component_000322,12,2,1,"56046798, 56413832",airbag krocksensor - | skoda | octavia,7800
+product_id_part_name_brand_model_component_000323,12,2,1,"57768479, 59320194",airbag krocksensor -(left front) | skoda | octavia,7803
+product_id_part_name_brand_model_component_000326,12,2,1,"60253689, 61731608",battery box / fixing / holder -(front) | skoda | octavia,7870
+product_id_part_name_brand_model_component_000327,12,2,1,"54446096, 65511004",dörr styrenhet -(right front) | skoda | octavia,7939
+product_id_part_name_brand_model_component_000328,12,2,1,"54446145, 65510436",dörr styrenhet -(left front) | skoda | octavia,7940
+product_id_part_name_brand_model_component_000329,12,2,1,"54100759, 54208682",oil filter holder - | skoda | octavia,7989
+product_id_part_name_brand_model_component_000330,12,2,1,"54635161, 54635239",crankshaft - | skoda | octavia,8026
+product_id_part_name_brand_model_component_000332,12,2,1,"53590615, 53843011",hub rear -(left rear) | skoda | octavia,8210
+product_id_part_name_brand_model_component_000333,12,2,1,"54028811, 54032513",trailing link rear -(right upper) | skoda | octavia,8255
+product_id_part_name_brand_model_component_000334,10,5,1,"53833528, 54448595, 59241763, 62010234, 64311333",actuator loom -(right rear) | toyota | corolla,3894
+product_id_part_name_brand_model_component_000335,9,2,1,"54169592, 54777181",diesel injection pump - | toyota | corolla,4128
+product_id_part_name_brand_model_component_000337,8,3,2,"53866330, 53885647, 59928489",hub rear -(left rear) | toyota | corolla || hub rear-(left rear) | toyota | corolla,4272
+product_id_part_name_brand_model_component_000338,8,3,2,"60280265, 60570293, 64295768",rear sensor -(rear) | skoda | octavia || rear sensor-(rear) | skoda | octavia,7856
+product_id_part_name_brand_model_component_000336,8,3,1,"53859449, 53866331, 64450819",hub rear -(right rear) | toyota | corolla,4271
+product_id_part_name_brand_model_component_000339,7,2,1,"53831986, 62010239",actuator loom -(right front) | toyota | corolla,3895
+product_id_part_name_brand_model_component_000340,7,2,1,"53834609, 54655649",airbag front sensor -(left front) | toyota | corolla,3906
+product_id_part_name_brand_model_component_000393,6,6,1,"54537330, 54599783, 54609541, 54611174, 54619116, 54646082",strut rear -(right rear) | toyota | corolla,4971
+product_id_part_name_brand_model_component_000346,6,1,2,57315705,"caliper bracket - , e-(left front) | vw | golf || caliper bracket- , e-(left front) | vw | golf",97
+product_id_part_name_brand_model_component_000358,6,1,2,63145272,"bränslepump styrenhet - , e- | vw | golf || bränslepump styrenhet- , e- | vw | golf",216
+product_id_part_name_brand_model_component_000377,6,1,2,53818503,"trailing link rear - , e-(right rear upper) | vw | golf || trailing link rear- , e-(right rear upper) | vw | golf",586
+product_id_part_name_brand_model_component_000400,6,1,2,64630705,caliper bracket -(left front) | skoda | octavia || caliper bracket-(left front) | skoda | octavia,7773
+product_id_part_name_brand_model_component_000416,6,1,2,62641335,inverter 12 -> 220 v -(interior rear) | skoda | octavia || inverter 12 -> 220 v-(interior rear) | skoda | octavia,7883
+product_id_part_name_brand_model_component_000427,6,1,2,53879747,trailing link rear -(left exterior rear) | skoda | octavia || trailing link rear-(left exterior rear) | skoda | octavia,8261
+product_id_part_name_brand_model_component_000428,6,1,2,53877017,trailing link rear -(right rear lower) | skoda | octavia || trailing link rear-(right rear lower) | skoda | octavia,8270
+product_id_part_name_brand_model_component_000341,6,1,1,66440187,"passenger airbag - , e-(interior front) | vw | golf",10
+product_id_part_name_brand_model_component_000342,6,1,1,56920585,"seat assembled - , e-(right front) | vw | golf",37
+product_id_part_name_brand_model_component_000343,6,1,1,54052693,"side airbags - , e-(left) | vw | golf",50
+product_id_part_name_brand_model_component_000344,6,1,1,65661397,"brake caliper - , e-(left front rear) | vw | golf",57
+product_id_part_name_brand_model_component_000345,6,1,1,53821928,"brake shield - , e-(rear) | vw | golf",96
+product_id_part_name_brand_model_component_000347,6,1,1,57315706,"caliper bracket - , e-(right front) | vw | golf",98
+product_id_part_name_brand_model_component_000348,6,1,1,54538248,"caliper bracket - , e-(right rear) | vw | golf",101
+product_id_part_name_brand_model_component_000349,6,1,1,65316485,"actuator loom - , e-(left rear) | vw | golf",119
+product_id_part_name_brand_model_component_000350,6,1,1,56041078,"airbag krocksensor - , e-(right) | vw | golf",129
+product_id_part_name_brand_model_component_000351,6,1,1,53366348,"airbag krocksensor - , e-(right front) | vw | golf",130
+product_id_part_name_brand_model_component_000352,6,1,1,63390872,"rain sensor - , e- | vw | golf",166
+product_id_part_name_brand_model_component_000353,6,1,1,66439372,"rain sensor - , e-(interior front) | vw | golf",167
+product_id_part_name_brand_model_component_000354,6,1,1,54650450,"airbag front sensor - , e-(right front) | vw | golf",198
+product_id_part_name_brand_model_component_000355,6,1,1,54115321,"airbag front sensor - , e-(left) | vw | golf",199
+product_id_part_name_brand_model_component_000356,6,1,1,54115323,"airbag front sensor - , e-(right) | vw | golf",200
+product_id_part_name_brand_model_component_000357,6,1,1,54651798,"sensor ac inner temperature - , e-(front centre) | vw | golf",206
+product_id_part_name_brand_model_component_000359,6,1,1,54309696,"central lock control unit - , e- | vw | golf",217
+product_id_part_name_brand_model_component_000360,6,1,1,61097288,"stolsvärme styrenhet/relä - , e-(left front) | vw | golf",235
+product_id_part_name_brand_model_component_000361,6,1,1,54267069,"ljusinställning lägesgivare - , e-(rear) | vw | golf",248
+product_id_part_name_brand_model_component_000362,6,1,1,57830354,"ljusinställning lägesgivare - , e-(left rear) | vw | golf",249
+product_id_part_name_brand_model_component_000363,6,1,1,64941867,"sensor acceleration - , e- | vw | golf",260
+product_id_part_name_brand_model_component_000364,6,1,1,66387038,"engine casing - , e-(front) | vw | golf",302
+product_id_part_name_brand_model_component_000365,6,1,1,54416780,"motor bracket - , e-(right) | vw | golf",307
+product_id_part_name_brand_model_component_000366,6,1,1,54167063,"oil filter holder - , e- | vw | golf",308
+product_id_part_name_brand_model_component_000367,6,1,1,54644988,"pulley - , e- | vw | golf",309
+product_id_part_name_brand_model_component_000368,6,1,1,66552461,"fuel injection pump - , e-(rear) | vw | golf",406
+product_id_part_name_brand_model_component_000369,6,1,1,66468709,"fuel pump electric - , e-(rear) | vw | golf",412
+product_id_part_name_brand_model_component_000370,6,1,1,65758942,"tank lid - , e-(rear) | vw | golf",429
+product_id_part_name_brand_model_component_000371,6,1,1,66694471,"fly wheel automat - , e-(front) | vw | golf",498
+product_id_part_name_brand_model_component_000372,6,1,1,64496754,"gear box 5 speed - , e-(front) | vw | golf",508
+product_id_part_name_brand_model_component_000373,6,1,1,66413511,"gear distributor box - , e-(front) | vw | golf",523
+product_id_part_name_brand_model_component_000374,6,1,1,53908797,"hub rear - , e-(left rear) | vw | golf",550
+product_id_part_name_brand_model_component_000375,6,1,1,53909464,"hub rear - , e-(right rear) | vw | golf",551
+product_id_part_name_brand_model_component_000376,6,1,1,64496467,"shock absorbers rear - , e-(right rear) | vw | golf",571
+product_id_part_name_brand_model_component_000378,6,1,1,64048539,"trailing link rear - , e-(left rear) | vw | golf",589
+product_id_part_name_brand_model_component_000379,6,1,1,64048622,"trailing link rear - , e-(right rear) | vw | golf",596
+product_id_part_name_brand_model_component_000380,6,1,1,53827797,"trailing link rear - , e-(left rear upper) | vw | golf",601
+product_id_part_name_brand_model_component_000381,6,1,1,53878896,"trailing link rear - , e-(either side) | vw | golf",606
+product_id_part_name_brand_model_component_000382,6,1,1,61772965,actuator loom -(left front) | toyota | corolla,3892
+product_id_part_name_brand_model_component_000383,6,1,1,62999040,aktivt kollisionsskydd sensor -(left) | toyota | corolla,3917
+product_id_part_name_brand_model_component_000384,6,1,1,64546679,aktivt kollisionsskydd sensor - | toyota | corolla,3918
+product_id_part_name_brand_model_component_000385,6,1,1,65459574,aktivt kollisionsskydd sensor -(left rear) | toyota | corolla,3919
+product_id_part_name_brand_model_component_000386,6,1,1,63687615,control unit xenon -(left) | toyota | corolla,3988
+product_id_part_name_brand_model_component_000387,6,1,1,63687620,control unit xenon -(right) | toyota | corolla,3989
+product_id_part_name_brand_model_component_000388,6,1,1,54479020,sensor steering - | toyota | corolla,4000
+product_id_part_name_brand_model_component_000389,6,1,1,56326691,rear axle -(rear) | toyota | corolla,4205
+product_id_part_name_brand_model_component_000390,6,1,1,57225601,shock absorbers rear -(left rear) | toyota | corolla,4214
+product_id_part_name_brand_model_component_000391,6,1,1,53822125,strut bearing rear -(left rear) | toyota | corolla,4280
+product_id_part_name_brand_model_component_000392,6,1,1,60410030,trailing link rear -(right upper) | toyota | corolla,4294
+product_id_part_name_brand_model_component_000394,6,1,1,60188260,steering wheel airbag -(interior front) | skoda | octavia,7700
+product_id_part_name_brand_model_component_000395,6,1,1,53938328,roof assembled -(right) | skoda | octavia,7719
+product_id_part_name_brand_model_component_000396,6,1,1,53938783,roof assembled -(left) | skoda | octavia,7720
+product_id_part_name_brand_model_component_000397,6,1,1,54057262,side airbags -(left) | skoda | octavia,7721
+product_id_part_name_brand_model_component_000398,6,1,1,60482533,side airbags -(left rear) | skoda | octavia,7726
+product_id_part_name_brand_model_component_000399,6,1,1,60482540,side airbags -(right rear) | skoda | octavia,7727
+product_id_part_name_brand_model_component_000401,6,1,1,61732495,main cylinder -(front) | skoda | octavia,7781
+product_id_part_name_brand_model_component_000402,6,1,1,66002340,actuator loom -(left front) | skoda | octavia,7792
+product_id_part_name_brand_model_component_000403,6,1,1,54545172,actuator loom -(right front) | skoda | octavia,7794
+product_id_part_name_brand_model_component_000404,6,1,1,56890768,airbag krocksensor -(right front) | skoda | octavia,7802
+product_id_part_name_brand_model_component_000405,6,1,1,59583084,aktivt kollisionsskydd sensor - | skoda | octavia,7805
+product_id_part_name_brand_model_component_000406,6,1,1,59692317,aktivt kollisionsskydd sensor -(right rear) | skoda | octavia,7806
+product_id_part_name_brand_model_component_000407,6,1,1,59936268,aktivt kollisionsskydd sensor -(right) | skoda | octavia,7808
+product_id_part_name_brand_model_component_000408,6,1,1,65497975,control unit xenon -(left front) | skoda | octavia,7811
+product_id_part_name_brand_model_component_000409,6,1,1,60222049,control unit xenon -(left) | skoda | octavia,7812
+product_id_part_name_brand_model_component_000410,6,1,1,65575757,control unit xenon -(front) | skoda | octavia,7813
+product_id_part_name_brand_model_component_000411,6,1,1,60208724,dragkrok styrenhet -(rear) | skoda | octavia,7818
+product_id_part_name_brand_model_component_000412,6,1,1,66466052,fuse box / electricity central -(front) | skoda | octavia,7822
+product_id_part_name_brand_model_component_000413,6,1,1,53501898,fuse box / electricity central -(interior front) | skoda | octavia,7824
+product_id_part_name_brand_model_component_000414,6,1,1,60538497,ljusinställning lägesgivare -(rear) | skoda | octavia,7837
+product_id_part_name_brand_model_component_000415,6,1,1,53510437,signal horn -(front) | skoda | octavia,7865
+product_id_part_name_brand_model_component_000417,6,1,1,53380920,kamera utvändig -(rear) | skoda | octavia,7888
+product_id_part_name_brand_model_component_000418,6,1,1,54447608,dörr styrenhet - | skoda | octavia,7941
+product_id_part_name_brand_model_component_000419,6,1,1,60213093,engine gasoline -(front) | skoda | octavia,7982
+product_id_part_name_brand_model_component_000420,6,1,1,62767166,diesel tank -(rear) | skoda | octavia,8123
+product_id_part_name_brand_model_component_000421,6,1,1,63425718,automatic gear -(front) | skoda | octavia,8128
+product_id_part_name_brand_model_component_000422,6,1,1,61730744,gear box bracket -(left front) | skoda | octavia,8189
+product_id_part_name_brand_model_component_000423,6,1,1,54092903,clutch cylinder main - | skoda | octavia,8190
+product_id_part_name_brand_model_component_000424,6,1,1,62662751,gear lever -(interior front) | skoda | octavia,8202
+product_id_part_name_brand_model_component_000425,6,1,1,53595243,hub rear -(right rear) | skoda | octavia,8212
+product_id_part_name_brand_model_component_000426,6,1,1,53520567,rear axle beam -(rear) | skoda | octavia,8227
+product_id_part_name_brand_model_component_000429,6,1,1,53877812,trailing link rear -(left rear lower) | skoda | octavia,8271
+product_id_part_name_brand_model_component_000430,5,2,1,"60134631, 66455737",rear axle beam -(rear) | toyota | corolla,5023
+product_id_part_name_brand_model_component_000431,5,1,1,63016293,parkeringshjälp frontsensor -(interior) | skoda | octavia,7904
+product_id_part_name_brand_model_component_000432,4,4,1,"55488983, 56121481, 57168981, 59868871",caliper bracket -(left front) | toyota | corolla,4448
+product_id_part_name_brand_model_component_000433,4,4,1,"65402900, 65402901, 65471012, 65684681",rear sensor -(centre) | toyota | corolla,4613
+product_id_part_name_brand_model_component_000434,4,1,1,64797981,adaptiv farthållare sensor -(front) | skoda | octavia,9005
+product_id_part_name_brand_model_component_000435,3,3,1,"54457578, 56121480, 57168980",caliper bracket -(right front) | toyota | corolla,4451
+product_id_part_name_brand_model_component_000436,3,3,1,"55828294, 61768055, 61768469",actuator loom - | toyota | corolla,4492
+product_id_part_name_brand_model_component_000437,3,3,1,"65402874, 65402876, 65594770",rear sensor -(exterior) | toyota | corolla,4610
+product_id_part_name_brand_model_component_000438,3,1,1,54520171,mapp sensor - | toyota | corolla,6317
+product_id_part_name_brand_model_component_000439,2,2,1,"54151623, 65861514",brake servo- | toyota | corolla,4437
+product_id_part_name_brand_model_component_000440,2,2,1,"54537570, 62648588",caliper bracket -(right rear) | toyota | corolla,4446
+product_id_part_name_brand_model_component_000441,2,2,1,"54371340, 54538992",main cylinder- | toyota | corolla,4461
+product_id_part_name_brand_model_component_000442,2,2,1,"53386263, 53492819",engine diesel- | toyota | corolla,4706
+product_id_part_name_brand_model_component_000443,2,2,1,"53614662, 53997747",carbon canister- | toyota | corolla,4820
+product_id_part_name_brand_model_component_000444,2,2,1,"61808614, 65250419",drive shaft-(left front) | toyota | corolla,4853
+product_id_part_name_brand_model_component_000445,1,1,1,54464655,knee -(left front) | toyota | corolla,4354
+product_id_part_name_brand_model_component_000446,1,1,1,65399999,steering wheel airbag- | toyota | corolla,4373
+product_id_part_name_brand_model_component_000447,1,1,1,59241764,actuator loom -(left) | toyota | corolla,4489
+product_id_part_name_brand_model_component_000448,1,1,1,53834731,injection control unit -(interior front) | toyota | corolla,4518
+product_id_part_name_brand_model_component_000449,1,1,1,57231213,kamera utvändig -(rear) | toyota | corolla,4529
+product_id_part_name_brand_model_component_000450,1,1,1,64257770,fuse box / electricity central- | toyota | corolla,4590
+product_id_part_name_brand_model_component_000451,1,1,1,65594694,rear sensor-(interior) | toyota | corolla,4608
+product_id_part_name_brand_model_component_000452,1,1,1,54192064,engine casing- | toyota | corolla,4726
+product_id_part_name_brand_model_component_000453,1,1,1,54539423,motor bracket -(right front) | toyota | corolla,4745
+product_id_part_name_brand_model_component_000454,1,1,1,54620422,motor bracket- | toyota | corolla,4747
+product_id_part_name_brand_model_component_000455,1,1,1,53823584,motor bracket -(left front) | toyota | corolla,4750
+product_id_part_name_brand_model_component_000456,1,1,1,54609722,motor bracket -(rear) | toyota | corolla,4753
+product_id_part_name_brand_model_component_000457,1,1,1,55589293,mass air-flow sensor- | toyota | corolla,4804
+product_id_part_name_brand_model_component_000458,1,1,1,59545708,tank lid- | toyota | corolla,4810
+product_id_part_name_brand_model_component_000459,1,1,1,56096094,fuel filter / holder- | toyota | corolla,4824
+product_id_part_name_brand_model_component_000460,1,1,1,64533287,gear box 6 speed -(front) | toyota | corolla,4932
+product_id_part_name_brand_model_component_000461,1,1,1,60415067,trailing link rear -(left upper) | toyota | corolla,5073
+product_id_part_name_brand_model_component_000462,1,1,1,60139447,trailing link rear -(left rear) | toyota | corolla,5076
+product_id_part_name_brand_model_component_000463,1,1,1,60139476,trailing link rear -(left rear lower) | toyota | corolla,5077
+product_id_part_name_brand_model_component_000464,1,1,1,60139512,trailing link rear -(right rear) | toyota | corolla,5083
+product_id_part_name_brand_model_component_000465,1,1,1,60139521,trailing link rear -(right rear lower) | toyota | corolla,5084
+product_id_part_name_brand_model_component_000466,1,1,1,62557843,ljusinställning lägesgivare -(front) | skoda | octavia,10865
+product_id_part_name_brand_model_component_000467,1,1,1,66924279,tank lid -(right rear) | skoda | octavia,11124
