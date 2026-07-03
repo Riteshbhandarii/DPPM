@@ -140,4 +140,10 @@ validation.csv
 test.csv
 ```
 
-Final split generation should be done only by a future explicitly approved split-generation script or command.
+Final split generation is done only by the approved split-generation entrypoint:
+
+```text
+python3 scripts/generate_strict_split.py
+```
+
+It freezes the artifacts under `datasets/splits_strict/` and refuses to overwrite them unless `--force` is passed.

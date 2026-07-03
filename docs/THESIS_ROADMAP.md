@@ -59,7 +59,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 | --- | --- | --- |
 | Strict identity rule and strict split design | #34 | Documented |
 | Preserve grouped baseline / transition narrative | #38 | In progress |
-| Generate final strict split | #35 | Not started |
+| Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
 | Strict model selection rerun | #36 | Not started |
 | Final strict holdout evaluation | #37 | Not started |
 | Compatibility-family robustness | #46 | Not started |
@@ -92,7 +92,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 
 - [x] Finalize strict identity rule.
 - [x] Document strict split generation requirements.
-- [ ] Generate final strict split.
+- [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
 - [ ] Rerun model selection.
 - [ ] Evaluate final strict holdout.
 - [ ] Run robustness and explainability analyses.
