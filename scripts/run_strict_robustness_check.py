@@ -51,7 +51,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-path",
         action="append",
-        default=["datasets/splits/train_grouped.csv"],
+        default=None,
+        help="Input split files. Defaults to datasets/splits/train_grouped.csv.",
     )
     parser.add_argument("--cv-splits", type=int, default=4)
     parser.add_argument(
@@ -344,7 +345,7 @@ def main() -> None:
     args = parse_args()
     drop_features = args.drop_features or list(DEFAULT_DROP_FEATURES)
 
-    frame = load_split_frames(args.data_path)
+    frame = load_split_frames(args.data_path or ["datasets/splits/train_grouped.csv"])
     frame, group_columns = add_part_identity_group(frame, args.group_columns)
     output_root = Path(args.output_dir)
     output_root.mkdir(parents=True, exist_ok=True)
