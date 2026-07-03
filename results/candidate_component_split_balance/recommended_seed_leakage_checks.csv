@@ -1,0 +1,4 @@
+check,status,leaked_value_count
+product_id appears in only one split,PASS,0
+identity key appears in only one split,PASS,0
+connected component appears in only one split,PASS,0

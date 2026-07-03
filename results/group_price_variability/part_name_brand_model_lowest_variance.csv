@@ -1,0 +1,21 @@
+part_name,brand,model,listing_count,mean_price,median_price,std_price,price_variance,coefficient_of_variation,min_price,max_price,price_range
+rear sensor -(centre),toyota,corolla,4,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+alternator-,toyota,corolla,2,142.1,142.1,0.0,0.0,0.0,142.1,142.1,0.0
+bensin/dieselvärmare styrenhet-,skoda,octavia,2,94.4,94.4,0.0,0.0,0.0,94.4,94.4,0.0
+brake disc-(front),skoda,octavia,2,11.8,11.8,0.0,0.0,0.0,11.8,11.8,0.0
+drive shaft-(left front),toyota,corolla,2,236.8,236.8,0.0,0.0,0.0,236.8,236.8,0.0
+"dörr styrenhet- , e-(right)",vw,golf,2,106.8,106.8,0.0,0.0,0.0,106.8,106.8,0.0
+"gear lever- , e-",vw,golf,2,176.9,176.9,0.0,0.0,0.0,176.9,176.9,0.0
+main cylinder-,toyota,corolla,2,60.4,60.4,0.0,0.0,0.0,60.4,60.4,0.0
+passenger airbag-,toyota,corolla,2,296.5,296.5,0.0,0.0,0.0,296.5,296.5,0.0
+rear axle beam-,toyota,corolla,2,415.2,415.2,0.0,0.0,0.0,415.2,415.2,0.0
+sump-,skoda,octavia,2,107.1,107.1,0.0,0.0,0.0,107.1,107.1,0.0
+"airbag front sensor - , e-(left)",vw,golf,6,5.9,5.9,0.0,0.0,0.0,5.9,5.9,0.0
+"airbag front sensor - , e-(right)",vw,golf,6,5.9,5.9,0.0,0.0,0.0,5.9,5.9,0.0
+rear sensor -(exterior),toyota,corolla,3,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+"brake shield - , e-(rear)",vw,golf,6,11.8333,11.8,0.0471,0.0022,0.004,11.8,11.9,0.1
+brake disc -(rear),skoda,octavia,11,11.8545,11.9,0.0498,0.0025,0.0042,11.8,11.9,0.1
+"fuel tank lid - , e-",vw,golf,29,17.7483,17.7,0.05,0.0025,0.0028,17.7,17.8,0.1
+other control unit-,skoda,octavia,2,237.15,237.15,0.05,0.0025,0.0002,237.1,237.2,0.1
+ignition diesel relay-,skoda,octavia,2,29.65,29.65,0.05,0.0025,0.0017,29.6,29.7,0.1
+"ignition module - , e-",vw,golf,12,17.75,17.75,0.05,0.0025,0.0028,17.7,17.8,0.1

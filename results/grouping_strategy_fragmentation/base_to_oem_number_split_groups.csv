@@ -1,0 +1,349 @@
+part_name,brand,model,previous_size,refined_group_count,largest_refined_group,smallest_refined_group,singleton_refined_groups
+drive shaft -(left front),toyota,corolla,87,12,60,1,8
+suspension -(rear),toyota,corolla,78,10,28,1,3
+trailing link rear -(left),toyota,corolla,77,8,35,1,1
+shock absorbers rear -(rear),toyota,corolla,73,8,32,2,0
+trailing link rear -(right),toyota,corolla,70,7,30,2,0
+drive shaft -(right rear),skoda,octavia,66,5,24,6,0
+drive shaft -(right front),toyota,corolla,65,16,26,1,9
+curtain airbags -(right),toyota,corolla,63,7,39,1,3
+hub rear -(rear),toyota,corolla,61,4,50,1,1
+wheel bearing spindle shaft -(left rear),toyota,corolla,60,7,21,1,2
+"drive shaft - , e-(left front)",vw,golf,60,3,42,6,0
+strut rear -(left),toyota,corolla,59,9,24,1,3
+"suspension - , e-(rear)",vw,golf,59,5,17,6,0
+suspension -(rear),skoda,octavia,57,5,22,6,0
+strut rear -(right),toyota,corolla,55,8,12,1,1
+curtain airbags -(left),toyota,corolla,55,5,38,2,0
+shock absorbers rear -(rear),skoda,octavia,55,5,15,6,0
+"trailing link rear - , e-(left)",vw,golf,54,6,12,6,0
+curtain airbags -(right),skoda,octavia,54,5,24,6,0
+brake caliper -(right rear),toyota,corolla,53,7,19,1,1
+"shock absorbers rear - , e-(rear)",vw,golf,53,5,24,5,0
+wheel bearing spindle shaft -(right rear),toyota,corolla,52,6,16,1,2
+trailing link rear -(left),skoda,octavia,51,4,17,6,0
+brake caliper -(left rear),toyota,corolla,50,7,24,1,2
+"drive shaft - , e-(right rear)",vw,golf,50,6,17,6,0
+"drive shaft - , e-(left rear)",vw,golf,48,7,14,5,0
+drive shaft -(left rear),skoda,octavia,48,6,12,6,0
+"curtain airbags - , e-(right)",vw,golf,48,4,18,6,0
+"hub rear - , e-(rear)",vw,golf,48,2,36,12,0
+drive shaft -(right front),skoda,octavia,47,5,12,6,0
+brake caliper -(right front),toyota,corolla,47,4,34,1,1
+"wheel bearing spindle shaft - , e-(right rear)",vw,golf,46,5,17,5,0
+wheel bearing spindle shaft -(left rear),skoda,octavia,46,2,35,11,0
+"trailing link rear - , e-(right)",vw,golf,45,5,17,5,0
+brake caliper -(left front),toyota,corolla,44,5,32,1,1
+airbag front sensor -(left),toyota,corolla,42,5,30,2,0
+"wheel bearing spindle shaft - , e-(left rear)",vw,golf,42,4,18,5,0
+brake caliper -(left front),skoda,octavia,42,3,30,6,0
+brake caliper -(right front),skoda,octavia,42,3,30,6,0
+"brake disc - , e-(front)",vw,golf,42,3,18,12,0
+brake disc -(front),toyota,corolla,42,3,23,7,0
+hub rear -(rear),skoda,octavia,42,3,24,6,0
+"curtain airbags - , e-(left)",vw,golf,42,2,36,6,0
+drive shaft -(left front),skoda,octavia,41,5,18,5,0
+"brake caliper - , e-(right front)",vw,golf,41,2,36,5,0
+gear box 5 speed -,toyota,corolla,40,13,6,1,6
+insp.pump diesel control unit -,toyota,corolla,40,9,12,1,5
+starter gasoline -,toyota,corolla,40,9,12,1,5
+fuel injection pump -,toyota,corolla,40,9,19,1,4
+power steering control unit -,toyota,corolla,40,9,12,1,3
+distributors -,toyota,corolla,40,8,19,1,2
+other control unit -,toyota,corolla,40,8,18,1,2
+contact roll airbag -,toyota,corolla,40,8,9,1,1
+hybrid batteri -,toyota,corolla,40,6,18,1,1
+hybrid inverter -,toyota,corolla,40,6,12,1,1
+airbag krocksensor -,toyota,corolla,40,5,16,2,0
+sensor abs -,toyota,corolla,40,3,37,1,1
+trailing link rear -(right),skoda,octavia,40,3,18,5,0
+knee -,toyota,corolla,39,11,12,1,6
+engine casing -,toyota,corolla,39,10,18,1,6
+tank lid -,toyota,corolla,39,10,18,1,6
+clutch cylinder slave -,toyota,corolla,39,10,12,1,5
+abs hydraulic pump -,toyota,corolla,39,9,17,1,5
+fuse box / electricity central -,toyota,corolla,39,9,8,1,3
+other relay -,toyota,corolla,39,7,20,1,4
+mass air-flow sensor -,toyota,corolla,39,7,20,1,3
+hand brake lever -,toyota,corolla,39,7,14,1,2
+kamera utvändig -,toyota,corolla,39,6,13,1,2
+passenger airbag -,toyota,corolla,39,5,26,1,2
+coil -,toyota,corolla,39,5,14,1,1
+steering wheel airbag -,toyota,corolla,39,4,24,1,2
+engine gasoline -,toyota,corolla,39,4,20,6,0
+wheel bearing spindle shaft -(right rear),skoda,octavia,39,2,21,18,0
+airbag control unit -,toyota,corolla,38,11,12,1,7
+engine diesel -,toyota,corolla,38,9,12,1,5
+brake servo -,toyota,corolla,38,9,13,1,3
+gear lever -,toyota,corolla,38,8,12,1,4
+injection control unit -,toyota,corolla,38,8,14,1,3
+main cylinder -,toyota,corolla,38,7,26,1,4
+alternator -,toyota,corolla,38,7,13,1,2
+deliverer -,toyota,corolla,38,5,23,1,2
+fuel filling pipe / tube -,toyota,corolla,38,4,29,2,0
+central lock control unit -,toyota,corolla,37,9,12,1,5
+starter diesel -,toyota,corolla,37,9,13,1,4
+automatic gear -,toyota,corolla,37,7,21,1,4
+fuel filter / holder -,toyota,corolla,37,5,18,1,2
+air purifier -,toyota,corolla,36,11,11,1,7
+clutch cylinder main -,toyota,corolla,36,7,13,1,3
+motor bracket -,toyota,corolla,36,5,18,1,1
+side airbags -(right),skoda,octavia,36,5,12,6,0
+brake caliper -(right rear),skoda,octavia,36,4,18,6,0
+abs hydraulic aggregate -,toyota,corolla,36,3,24,6,0
+curtain airbags -(left),skoda,octavia,36,3,24,6,0
+"side airbags - , e-(right)",vw,golf,36,3,18,6,0
+motor cushion -,toyota,corolla,35,2,23,12,0
+rear axle -,toyota,corolla,34,8,14,1,4
+rear axle beam -,toyota,corolla,33,5,27,1,3
+pulley -,toyota,corolla,33,5,14,1,1
+tank transmitters -,toyota,corolla,33,4,18,1,1
+"drive shaft - , e-(right front)",vw,golf,33,4,21,3,0
+piston / rod -,toyota,corolla,31,2,19,12,0
+engine diesel -,skoda,octavia,30,5,12,1,1
+inter axle compl. -,skoda,octavia,30,5,12,1,1
+"automatic gear - , e-",vw,golf,30,5,6,6,0
+central lock control unit -,skoda,octavia,30,5,6,6,0
+"diesel tank - , e-",vw,golf,30,5,6,6,0
+"dipstick - , e-",vw,golf,30,5,6,6,0
+fly wheel manual -,skoda,octavia,30,5,6,6,0
+"fuse box / electricity central - , e-",vw,golf,30,5,12,2,0
+throttle housing -,toyota,corolla,30,5,7,5,0
+valve cap -,skoda,octavia,30,5,6,6,0
+"valve cap - , e-",vw,golf,30,5,6,6,0
+abs hydraulic aggregate -,skoda,octavia,30,4,17,1,1
+"alternator - , e-",vw,golf,30,4,20,1,1
+"contact roll airbag - , e-",vw,golf,30,4,19,1,1
+"abs hydraulic aggregate - , e-",vw,golf,30,4,15,3,0
+"adaptiv farthållare sensor - , e-",vw,golf,30,4,12,6,0
+"airbag control unit - , e-",vw,golf,30,4,12,6,0
+avgas temperaturgivare -,skoda,octavia,30,4,12,6,0
+baklucka styrenhet -,skoda,octavia,30,4,12,6,0
+bränslepump styrenhet -,skoda,octavia,30,4,12,6,0
+carbon canister -,skoda,octavia,30,4,12,6,0
+coil -,skoda,octavia,30,4,12,6,0
+contact roll airbag -,skoda,octavia,30,4,12,6,0
+"cylinder head diesel - , e-",vw,golf,30,4,12,6,0
+"fly wheel manual - , e-",vw,golf,30,4,12,6,0
+fuel injection pump -,skoda,octavia,30,4,12,6,0
+"gear box 6 speed - , e-",vw,golf,30,4,12,6,0
+"gear regulator - , e-",vw,golf,30,4,12,6,0
+"komfort styrdon - , e-",vw,golf,30,4,12,6,0
+mass air-flow sensor -,skoda,octavia,30,4,12,6,0
+"mass air-flow sensor - , e-",vw,golf,30,4,12,6,0
+motor cushion -,skoda,octavia,30,4,12,6,0
+"motor cushion - , e-",vw,golf,30,4,12,6,0
+"parking control unit - , e-",vw,golf,30,4,12,6,0
+"rear gear / diff. - , e-",vw,golf,30,4,12,6,0
+"tank transmitters - , e-",vw,golf,30,4,12,6,0
+"thermostat housing / cap - , e-",vw,golf,30,4,12,6,0
+"throttle housing - , e-",vw,golf,30,4,12,6,0
+"turbo aggregate - , e-",vw,golf,30,4,12,6,0
+"brake servo - , e-",vw,golf,30,3,23,1,1
+alternator -,skoda,octavia,30,3,12,6,0
+battery cable -,skoda,octavia,30,3,18,6,0
+"belt tensioner for fan belt - , e-",vw,golf,30,3,18,6,0
+"brake caliper - , e-(left rear)",vw,golf,30,3,12,6,0
+carbon canister -,toyota,corolla,30,3,12,6,0
+"control unit xenon - , e-",vw,golf,30,3,12,6,0
+engine casing -,skoda,octavia,30,3,18,6,0
+"engine gasoline - , e-",vw,golf,30,3,18,6,0
+"fuel filter / holder - , e-",vw,golf,30,3,18,6,0
+förpump diesel -,skoda,octavia,30,3,12,6,0
+"knee - , e-",vw,golf,30,3,18,6,0
+other relay -,skoda,octavia,30,3,12,6,0
+pulley -,skoda,octavia,30,3,18,6,0
+rubber bellow / tube -,skoda,octavia,30,3,18,6,0
+rubber bellow / tube -,toyota,corolla,30,3,18,6,0
+"rubber bellow / tube - , e-",vw,golf,30,3,15,6,0
+sensor steering -,skoda,octavia,30,3,18,6,0
+"starter diesel - , e-",vw,golf,30,3,18,6,0
+"sump - , e-",vw,golf,30,3,18,5,0
+throttle housing -,skoda,octavia,30,3,18,6,0
+turbo aggregate -,skoda,octavia,30,3,18,6,0
+"abs hydraulic pump - , e-",vw,golf,30,2,24,6,0
+"air purifier - , e-",vw,golf,30,2,18,12,0
+"air throttle housing / throttle housing - , e-",vw,golf,30,2,16,14,0
+"battery cable - , e-",vw,golf,30,2,20,10,0
+cam belt / transmission cap -,skoda,octavia,30,2,24,6,0
+"carbon canister - , e-",vw,golf,30,2,24,6,0
+"coil - , e-",vw,golf,30,2,18,12,0
+"crankshaft - , e-",vw,golf,30,2,24,6,0
+deliverer -,skoda,octavia,30,2,18,12,0
+fuel distributor -,skoda,octavia,30,2,24,6,0
+fuel tank injection -,skoda,octavia,30,2,18,12,0
+gear box 5 speed -,skoda,octavia,30,2,24,6,0
+"gear box cushion - , e-",vw,golf,30,2,24,6,0
+load air pressure transmitters -,skoda,octavia,30,2,18,12,0
+"other relay - , e-",vw,golf,30,2,18,12,0
+"other transmitters - , e-",vw,golf,30,2,24,6,0
+"sensor abs - , e-",vw,golf,30,2,24,6,0
+sensor ac inner temperature -,skoda,octavia,30,2,18,12,0
+"sensor steering - , e-",vw,golf,30,2,18,12,0
+"steering wheel airbag - , e-",vw,golf,30,2,23,7,0
+gear box 6 speed -,toyota,corolla,29,9,6,1,4
+"alternator bracket / accessories - , e-",vw,golf,29,5,6,5,0
+parking control unit -,skoda,octavia,29,5,6,5,0
+"brake caliper - , e-(right rear)",vw,golf,29,4,12,5,0
+brake servo -,skoda,octavia,29,4,11,6,0
+diesel injection pump -,skoda,octavia,29,4,11,6,0
+gear box 6 speed -,skoda,octavia,29,4,11,6,0
+"gear box bracket - , e-",vw,golf,29,4,12,5,0
+rear axle -,skoda,octavia,29,4,12,5,0
+"starter gasoline - , e-",vw,golf,29,4,12,5,0
+sump -,toyota,corolla,29,4,12,5,0
+tank lid -,skoda,octavia,29,4,12,5,0
+"battery box / fixing / holder - , e-",vw,golf,29,3,17,6,0
+belt tensioner for fan belt -,skoda,octavia,29,3,17,6,0
+fuel pump electric -,skoda,octavia,29,3,20,3,0
+"fuel tank lid - , e-",vw,golf,29,3,17,6,0
+injection control unit -,skoda,octavia,29,3,12,5,0
+insp.pump diesel control unit -,skoda,octavia,29,3,12,6,0
+starter gasoline -,skoda,octavia,29,3,17,6,0
+gear distributor box -,skoda,octavia,29,2,28,1,1
+"avgas temperaturgivare - , e-",vw,golf,29,2,24,5,0
+"main cylinder - , e-",vw,golf,29,2,18,11,0
+motor bracket -,skoda,octavia,29,2,23,6,0
+"rear axle - , e-",vw,golf,29,2,18,11,0
+"signal horn - , e-",vw,golf,29,2,23,6,0
+rear gear / diff. -,skoda,octavia,28,6,7,1,1
+"gear lever - , e-",vw,golf,28,5,6,5,0
+"other control unit - , e-",vw,golf,28,5,6,5,0
+sump -,skoda,octavia,28,5,6,5,0
+air purifier -,skoda,octavia,28,4,14,2,0
+airbag control unit -,skoda,octavia,28,4,11,5,0
+hand brake lever -,skoda,octavia,28,4,11,5,0
+"ignition diesel relay - , e-",vw,golf,28,4,10,6,0
+komfort styrdon -,skoda,octavia,28,4,11,5,0
+"rear sensor - , e-",vw,golf,28,4,10,6,0
+"engine diesel - , e-",vw,golf,28,3,14,6,0
+ignition diesel relay -,skoda,octavia,28,3,17,5,0
+other control unit -,skoda,octavia,28,3,17,5,0
+"fuel tank injection - , e-",vw,golf,28,2,23,5,0
+airbag front sensor -(right),toyota,corolla,27,5,8,1,1
+rain sensor -,skoda,octavia,27,5,6,4,0
+"rear axle beam - , e-",vw,golf,27,4,11,5,0
+"insp.pump diesel control unit - , e-",vw,golf,27,3,12,6,0
+"cam belt / transmission cap - , e-",vw,golf,27,2,21,6,0
+"deliverer - , e-",vw,golf,27,2,17,10,0
+adaptiv farthållare sensor -,skoda,octavia,26,4,12,3,0
+"inter axle compl. - , e-",vw,golf,26,4,10,5,0
+"diesel injection pump - , e-",vw,golf,25,5,5,5,0
+parkeringshjälp frontsensor -,skoda,octavia,25,3,18,1,1
+brake caliper -(left rear),skoda,octavia,25,3,15,5,0
+"fuel distributor - , e-",vw,golf,25,3,15,5,0
+brake intensity regulator -,toyota,corolla,25,2,15,10,0
+other sensor -,skoda,octavia,25,2,15,10,0
+gear box bracket -,toyota,corolla,24,6,18,1,4
+dragkrok styrenhet -,skoda,octavia,24,5,6,1,1
+"passenger airbag - , e-",vw,golf,24,5,6,3,0
+fly wheel automat -,skoda,octavia,24,4,6,6,0
+"fuel injection pump - , e-",vw,golf,24,4,6,6,0
+inverter 12 -> 220 v -,skoda,octavia,24,4,6,6,0
+"other airbags - , e-",vw,golf,24,4,6,6,0
+rear axle beam -,skoda,octavia,24,4,6,6,0
+"actuator loom - , e-",vw,golf,24,3,12,6,0
+alternator bracket / accessories -,skoda,octavia,24,3,12,6,0
+automatic gear -,skoda,octavia,24,3,12,6,0
+gear box bracket -,skoda,octavia,24,3,12,6,0
+"gear distributor box - , e-",vw,golf,24,3,12,6,0
+gear lever -,skoda,octavia,24,3,12,6,0
+"hand brake lever - , e-",vw,golf,24,3,12,6,0
+"motor bracket - , e-",vw,golf,24,3,12,6,0
+steering wheel airbag -,skoda,octavia,24,3,12,6,0
+"tank lid - , e-",vw,golf,24,3,12,6,0
+"trailing link rear - , e-(left upper)",vw,golf,24,3,12,6,0
+"fuel pump electric - , e-",vw,golf,24,2,18,6,0
+gear box cushion -,skoda,octavia,24,2,12,12,0
+"stolsvärme styrenhet/relä - , e-",vw,golf,24,2,18,6,0
+main cylinder -,skoda,octavia,23,4,6,5,0
+"engine casing - , e-",vw,golf,23,3,14,3,0
+engine gasoline -,skoda,octavia,23,3,12,5,0
+kamera utvändig -,skoda,octavia,23,3,12,5,0
+ljusinställning lägesgivare -,skoda,octavia,23,3,11,6,0
+"trailing link rear - , e-(right upper)",vw,golf,23,3,11,6,0
+airbag front sensor -(right front),toyota,corolla,23,2,17,6,0
+diesel tank -,skoda,octavia,23,2,12,11,0
+bensin/dieselvärmare styrenhet -,skoda,octavia,22,3,11,5,0
+signal horn -,skoda,octavia,22,3,12,5,0
+"gear box 5 speed - , e-",vw,golf,21,4,6,5,0
+rear sensor -,skoda,octavia,21,3,11,5,0
+control unit xenon -,toyota,corolla,20,3,18,1,2
+strut rear -(left rear),toyota,corolla,19,3,7,6,0
+fuse box / electricity central -,skoda,octavia,18,5,6,2,0
+caliper bracket -,toyota,corolla,18,4,6,1,1
+actuator loom -,skoda,octavia,18,3,6,6,0
+battery box / fixing / holder -,skoda,octavia,18,3,6,6,0
+turbo aggregate -,toyota,corolla,18,3,6,6,0
+abs control unit -,toyota,corolla,18,2,12,6,0
+"airbag krocksensor - , e-",vw,golf,18,2,12,6,0
+"brake disc - , e-(rear)",vw,golf,18,2,12,6,0
+fuel tank injection -,toyota,corolla,18,2,12,6,0
+"ljusinställning lägesgivare - , e-",vw,golf,18,2,12,6,0
+brake disc -(front),skoda,octavia,16,2,10,6,0
+actuator loom -(left rear),toyota,corolla,13,2,12,1,1
+control unit xenon -,skoda,octavia,12,3,6,1,1
+"air-flow sensor - , e-",vw,golf,12,2,6,6,0
+"cylinder head fuel - , e-",vw,golf,12,2,6,6,0
+dörr styrenhet -(left front),skoda,octavia,12,2,6,6,0
+dörr styrenhet -(right front),skoda,octavia,12,2,6,6,0
+hub rear -(left rear),skoda,octavia,12,2,6,6,0
+oil filter holder -,skoda,octavia,12,2,6,6,0
+"seat assembled - , e-",vw,golf,12,2,6,6,0
+aktivt kollisionsskydd sensor -(left),skoda,octavia,11,2,6,5,0
+wiper arm motor relay -,toyota,corolla,11,2,6,5,0
+actuator loom -(right rear),toyota,corolla,10,4,7,1,3
+hub rear -(right rear),toyota,corolla,8,2,7,1,1
+actuator loom -(right front),toyota,corolla,7,2,6,1,1
+airbag front sensor -(left front),toyota,corolla,7,2,6,1,1
+hub rear -(left rear),toyota,corolla,7,2,6,1,1
+drive shaft-(right front),toyota,corolla,6,4,3,1,3
+"drive shaft- , e-(left rear)",vw,golf,6,3,4,1,2
+strut rear -(right rear),toyota,corolla,6,2,5,1,1
+gear box 6 speed-,toyota,corolla,5,4,2,1,3
+rear axle beam -(rear),toyota,corolla,5,2,4,1,1
+other sensor-,skoda,octavia,5,2,3,2,0
+shock absorbers rear-(rear),skoda,octavia,5,2,3,2,0
+abs hydraulic aggregate-,toyota,corolla,4,4,1,1,4
+air purifier-,toyota,corolla,4,2,2,2,0
+brake caliper-(left front),toyota,corolla,4,2,2,2,0
+automatic gear-,toyota,corolla,3,3,1,1,3
+"gear box 5 speed- , e-",vw,golf,3,3,1,1,3
+"inter axle compl.- , e-",vw,golf,3,3,1,1,3
+"rear axle beam- , e-",vw,golf,3,3,1,1,3
+starter diesel-,toyota,corolla,3,3,1,1,3
+strut rear-(left),toyota,corolla,3,3,1,1,3
+"trailing link rear- , e-(right)",vw,golf,3,3,1,1,3
+actuator loom -,toyota,corolla,3,2,2,1,1
+rain sensor-,skoda,octavia,3,2,2,1,1
+suspension-(rear),skoda,octavia,3,2,2,1,1
+trailing link rear-(left),skoda,octavia,3,2,2,1,1
+air purifier-,skoda,octavia,2,2,1,1,2
+airbag control unit-,skoda,octavia,2,2,1,1,2
+airbag control unit-,toyota,corolla,2,2,1,1,2
+alternator-,toyota,corolla,2,2,1,1,2
+bensin/dieselvärmare styrenhet-,skoda,octavia,2,2,1,1,2
+brake caliper-(right rear),toyota,corolla,2,2,1,1,2
+brake servo-,toyota,corolla,2,2,1,1,2
+carbon canister-,toyota,corolla,2,2,1,1,2
+deliverer-,toyota,corolla,2,2,1,1,2
+drive shaft-(left front),toyota,corolla,2,2,1,1,2
+fuel filling pipe / tube-,toyota,corolla,2,2,1,1,2
+"fuel tank injection- , e-",vw,golf,2,2,1,1,2
+gear lever-,toyota,corolla,2,2,1,1,2
+"gear lever- , e-",vw,golf,2,2,1,1,2
+hand brake lever-,skoda,octavia,2,2,1,1,2
+ignition diesel relay-,skoda,octavia,2,2,1,1,2
+komfort styrdon-,skoda,octavia,2,2,1,1,2
+main cylinder-,toyota,corolla,2,2,1,1,2
+other control unit-,skoda,octavia,2,2,1,1,2
+passenger airbag-,toyota,corolla,2,2,1,1,2
+rear gear / diff.-,skoda,octavia,2,2,1,1,2
+signal horn-,skoda,octavia,2,2,1,1,2
+sump-,skoda,octavia,2,2,1,1,2
+suspension-(rear),toyota,corolla,2,2,1,1,2
+trailing link rear-(left),toyota,corolla,2,2,1,1,2
+trailing link rear-(right),skoda,octavia,2,2,1,1,2
+"wheel bearing spindle shaft- , e-(right rear)",vw,golf,2,2,1,1,2
+wheel bearing spindle shaft-(left rear),skoda,octavia,2,2,1,1,2
+wheel bearing spindle shaft-(left rear),toyota,corolla,2,2,1,1,2

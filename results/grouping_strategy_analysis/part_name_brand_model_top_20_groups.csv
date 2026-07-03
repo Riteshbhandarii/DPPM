@@ -1,0 +1,21 @@
+part_name,brand,model,group_size
+drive shaft -(left front),toyota,corolla,87
+suspension -(rear),toyota,corolla,78
+trailing link rear -(left),toyota,corolla,77
+shock absorbers rear -(rear),toyota,corolla,73
+trailing link rear -(right),toyota,corolla,70
+drive shaft -(right rear),skoda,octavia,66
+drive shaft -(right front),toyota,corolla,65
+curtain airbags -(right),toyota,corolla,63
+hub rear -(rear),toyota,corolla,61
+"drive shaft - , e-(left front)",vw,golf,60
+wheel bearing spindle shaft -(left rear),toyota,corolla,60
+strut rear -(left),toyota,corolla,59
+"suspension - , e-(rear)",vw,golf,59
+suspension -(rear),skoda,octavia,57
+curtain airbags -(left),toyota,corolla,55
+shock absorbers rear -(rear),skoda,octavia,55
+strut rear -(right),toyota,corolla,55
+curtain airbags -(right),skoda,octavia,54
+"trailing link rear - , e-(left)",vw,golf,54
+brake caliper -(right rear),toyota,corolla,53
