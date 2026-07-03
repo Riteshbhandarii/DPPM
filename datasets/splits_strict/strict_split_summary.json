@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-07-03 15:16:16 UTC",
+  "generator": "scripts/generate_strict_split.py",
+  "protocol": "docs/evaluation/02_PROTOCOL_SPECIFICATION.md",
+  "input_path": "datasets/cleaned/clean_master_dataset.csv",
+  "input_sha256": "d3624a2c3175f77b007ee0145168439771841b590ca6e79da6f974df75e64bb8",
+  "target_column": "price",
+  "seed": 32,
+  "target_proportions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "total_rows": 11321,
+  "total_components": 886,
+  "largest_component_rows": 71,
+  "splits": {
+    "train": {
+      "file": "train_strict.csv",
+      "row_count": 7930,
+      "row_pct": 70.0468,
+      "component_count": 510,
+      "product_id_count": 1802,
+      "identity_key_count": 599
+    },
+    "validation": {
+      "file": "validation_strict.csv",
+      "row_count": 1695,
+      "row_pct": 14.9722,
+      "component_count": 178,
+      "product_id_count": 408,
+      "identity_key_count": 209
+    },
+    "test": {
+      "file": "test_strict.csv",
+      "row_count": 1696,
+      "row_pct": 14.981,
+      "component_count": 198,
+      "product_id_count": 409,
+      "identity_key_count": 224
+    }
+  },
+  "leakage_checks": [
+    {
+      "check": "product_id appears in only one split",
+      "status": "PASS",
+      "leaked_value_count": 0
+    },
+    {
+      "check": "identity key appears in only one split",
+      "status": "PASS",
+      "leaked_value_count": 0
+    },
+    {
+      "check": "connected component appears in only one split",
+      "status": "PASS",
+      "leaked_value_count": 0
+    }
+  ]
+}
