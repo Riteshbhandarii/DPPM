@@ -1,0 +1,21 @@
+part_name,brand,model,year_start,year_end,group_size
+drive shaft -(left front),toyota,corolla,2019,2027,70
+trailing link rear -(left),toyota,corolla,2019,2027,69
+drive shaft -(right rear),skoda,octavia,2013,2020,66
+trailing link rear -(right),toyota,corolla,2019,2027,62
+wheel bearing spindle shaft -(left rear),toyota,corolla,2019,2027,60
+suspension -(rear),toyota,corolla,2019,2027,59
+curtain airbags -(right),skoda,octavia,2013,2020,54
+"drive shaft - , e-(left front)",vw,golf,2013,2020,54
+brake caliper -(right rear),toyota,corolla,2019,2027,53
+wheel bearing spindle shaft -(right rear),toyota,corolla,2019,2027,52
+brake caliper -(left rear),toyota,corolla,2019,2027,50
+shock absorbers rear -(rear),skoda,octavia,2013,2020,49
+drive shaft -(left rear),skoda,octavia,2013,2020,48
+brake caliper -(right front),toyota,corolla,2019,2027,47
+wheel bearing spindle shaft -(left rear),skoda,octavia,2013,2020,46
+brake caliper -(left front),toyota,corolla,2019,2027,44
+hub rear -(rear),toyota,corolla,2002,2007,44
+curtain airbags -(right),toyota,corolla,2019,2027,43
+"curtain airbags - , e-(left)",vw,golf,2013,2020,42
+"curtain airbags - , e-(right)",vw,golf,2013,2020,42

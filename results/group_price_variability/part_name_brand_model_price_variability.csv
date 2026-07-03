@@ -1,0 +1,594 @@
+part_name,brand,model,listing_count,mean_price,median_price,std_price,price_variance,coefficient_of_variation,min_price,max_price,price_range
+"engine diesel - , e-",vw,golf,28,3884.2071,3970.1,243.6263,59353.7564,0.0627,3488.7,4117.4,628.7
+automatic gear -,skoda,octavia,24,4336.6542,4381.15,235.0895,55267.0708,0.0542,3951.0,4641.0,690.0
+"automatic gear - , e-",vw,golf,30,3598.94,3549.9,219.0576,47986.2151,0.0609,3305.2,3927.0,621.8
+hybrid inverter -,toyota,corolla,40,1013.5825,1085.45,209.1815,43756.8824,0.2064,355.2,1190.0,834.8
+engine diesel -,skoda,octavia,30,3888.4967,3910.85,209.1185,43730.5597,0.0538,3529.3,4165.0,635.7
+main cylinder -,toyota,corolla,38,494.9132,592.0,204.5015,41820.8438,0.4132,59.2,595.0,535.8
+"engine gasoline - , e-",vw,golf,30,4096.08,4100.45,186.2434,34686.6136,0.0455,3753.4,4343.5,590.1
+gear box 6 speed -,toyota,corolla,29,1287.9241,1356.6,185.871,34548.0405,0.1443,592.0,1428.0,836.0
+engine gasoline -,skoda,octavia,23,4309.7174,4262.4,171.3668,29366.5919,0.0398,4127.9,4641.0,513.1
+brake servo -,toyota,corolla,38,473.1132,508.7,166.4123,27693.068,0.3517,118.4,595.0,476.6
+"brake servo - , e-",vw,golf,30,265.9267,188.8,163.0195,26575.3553,0.613,176.9,595.0,418.1
+automatic gear-,toyota,corolla,3,2920.8333,2975.0,144.4249,20858.5489,0.0494,2723.2,3064.3,341.1
+kamera utvändig -,toyota,corolla,39,609.2128,652.4,142.6668,20353.8283,0.2342,296.0,714.0,418.0
+automatic gear -,toyota,corolla,37,2912.373,2960.0,126.0067,15877.6836,0.0433,2604.8,3054.5,449.7
+"gear box 5 speed - , e-",vw,golf,21,1983.1,2005.0,117.0206,13693.8133,0.059,1804.1,2142.0,337.9
+abs hydraulic pump -,toyota,corolla,39,474.3077,530.9,102.629,10532.7069,0.2164,236.8,547.4,310.6
+hybrid batteri -,toyota,corolla,40,1287.9025,1300.1,94.0762,8850.3242,0.073,1124.8,1462.2,337.4
+"gear box 6 speed - , e-",vw,golf,30,2199.2533,2138.6,93.8716,8811.8805,0.0427,2122.9,2380.0,257.1
+"gear box 5 speed- , e-",vw,golf,3,1929.9667,1963.5,92.734,8599.6022,0.048,1803.4,2023.0,219.6
+engine diesel -,toyota,corolla,38,901.3447,935.4,89.6232,8032.3098,0.0994,522.2,952.0,429.8
+gear box 6 speed-,toyota,corolla,5,1349.5,1368.5,89.256,7966.628,0.0661,1179.4,1428.0,248.6
+gear box 5 speed -,toyota,corolla,40,677.1525,651.6,88.4358,7820.882,0.1306,517.4,833.0,315.6
+injection control unit -,toyota,corolla,38,490.3079,496.6,77.3946,5989.9286,0.1578,355.2,595.0,239.8
+drive shaft -(right front),toyota,corolla,65,284.3862,296.4,73.0276,5333.0277,0.2568,153.9,357.0,203.1
+engine gasoline -,toyota,corolla,39,3611.5846,3656.1,69.9222,4889.1085,0.0194,3433.6,3689.0,255.4
+rear axle beam -,toyota,corolla,33,385.1606,412.9,68.7706,4729.4018,0.1786,80.5,416.5,336.0
+airbag control unit-,toyota,corolla,2,269.55,269.55,68.25,4658.0625,0.2532,201.3,337.8,136.5
+rear gear / diff. -,skoda,octavia,28,1133.075,1179.8,66.694,4448.094,0.0589,947.2,1190.0,242.8
+"cylinder head diesel - , e-",vw,golf,30,222.0533,204.7,66.0898,4367.8558,0.2976,123.8,297.5,173.7
+drive shaft-(right front),toyota,corolla,6,286.2667,296.2,63.272,4003.3456,0.221,177.6,357.0,179.4
+"drive shaft- , e-(left rear)",vw,golf,6,237.3333,243.3,60.2892,3634.7889,0.254,160.7,309.4,148.7
+knee -,toyota,corolla,39,222.9179,213.5,59.8146,3577.7871,0.2683,90.0,297.5,207.5
+other control unit -,toyota,corolla,40,425.195,438.75,58.6381,3438.423,0.1379,270.0,476.0,206.0
+"diesel injection pump - , e-",vw,golf,25,281.904,301.9,57.3684,3291.134,0.2035,177.0,333.2,156.2
+"gear distributor box - , e-",vw,golf,24,1054.9333,1080.95,57.2314,3275.4331,0.0543,955.3,1106.7,151.4
+curtain airbags -(right),toyota,corolla,63,210.1079,235.9,57.1248,3263.2471,0.2719,59.2,261.8,202.6
+rear gear / diff.-,skoda,octavia,2,1122.5,1122.5,56.9,3237.61,0.0507,1065.6,1179.4,113.8
+fuel tank injection -,skoda,octavia,30,139.96,141.6,53.7906,2893.4311,0.3843,89.2,238.0,148.8
+curtain airbags -(left),toyota,corolla,55,211.6036,226.1,53.4183,2853.5116,0.2524,59.2,261.8,202.6
+"drive shaft - , e-(right rear)",vw,golf,50,222.258,218.25,53.2691,2837.596,0.2397,159.2,357.0,197.8
+airbag control unit -,toyota,corolla,38,271.6553,260.05,51.8332,2686.683,0.1908,181.2,357.0,175.8
+gear distributor box -,skoda,octavia,29,988.6931,952.0,51.3215,2633.8972,0.0519,943.5,1093.9,150.4
+gear box 5 speed -,skoda,octavia,30,970.6067,947.2,47.4433,2250.8673,0.0489,943.5,1071.0,127.5
+brake servo-,toyota,corolla,2,485.45,485.45,47.35,2242.0225,0.0975,438.1,532.8,94.7
+diesel injection pump -,toyota,corolla,9,78.8222,47.4,44.4853,1978.9395,0.5644,47.2,142.1,94.9
+"drive shaft - , e-(left rear)",vw,golf,48,208.9896,200.8,43.3268,1877.2084,0.2073,159.2,308.4,149.2
+fly wheel automat -,skoda,octavia,24,143.5208,144.95,43.1609,1862.8591,0.3007,94.4,190.4,96.0
+drive shaft -(left front),toyota,corolla,87,267.308,294.9,42.6896,1822.4044,0.1597,153.9,297.5,143.6
+"passenger airbag - , e-",vw,golf,24,432.0625,425.95,38.7184,1499.1148,0.0896,353.8,476.0,122.2
+"side airbags - , e-(right)",vw,golf,36,106.925,106.55,38.2392,1462.2352,0.3576,60.1,178.5,118.4
+"deliverer - , e-",vw,golf,27,208.3148,236.0,37.1225,1378.0805,0.1782,159.3,238.0,78.7
+diesel tank -,skoda,octavia,23,257.7348,236.5,36.765,1351.6684,0.1426,233.6,321.3,87.7
+"rear gear / diff. - , e-",vw,golf,30,858.15,831.65,36.3776,1323.3318,0.0424,825.6,910.3,84.7
+kamera utvändig -,skoda,octavia,23,274.2783,294.9,36.3753,1323.1634,0.1326,212.3,297.5,85.2
+side airbags -(right),skoda,octavia,36,120.3917,118.35,35.795,1281.2824,0.2973,82.6,178.5,95.9
+"crankshaft - , e-",vw,golf,30,113.63,112.4,35.777,1279.9954,0.3149,70.8,154.7,83.9
+abs hydraulic aggregate-,toyota,corolla,4,562.225,574.8,35.6304,1269.5269,0.0634,506.2,593.1,86.9
+"turbo aggregate - , e-",vw,golf,30,375.2167,366.8,34.2514,1173.1581,0.0913,336.1,440.3,104.2
+"brake caliper - , e-(left front)",vw,golf,42,197.85,177.5,33.9009,1149.2744,0.1713,165.1,238.0,72.9
+fuel tank injection -,toyota,corolla,18,142.1111,165.2,33.5042,1122.5332,0.2358,94.4,166.6,72.2
+"brake caliper - , e-(right front)",vw,golf,41,187.8171,177.0,32.6654,1067.0258,0.1739,147.4,238.0,90.6
+inter axle compl. -,skoda,octavia,30,246.9033,260.35,32.3974,1049.5917,0.1312,177.6,295.7,118.1
+gear box 6 speed -,skoda,octavia,29,2341.9069,2359.6,32.2023,1036.9855,0.0138,2288.0,2380.0,92.0
+insp.pump diesel control unit -,toyota,corolla,40,208.2175,213.4,31.4101,986.5914,0.1509,118.4,238.0,119.6
+abs hydraulic aggregate -,skoda,octavia,30,664.1233,667.8,31.2187,974.6065,0.047,607.4,714.0,106.6
+"hub rear - , e-(rear)",vw,golf,48,227.8625,236.65,30.625,937.8898,0.1344,176.9,261.8,84.9
+power steering control unit -,toyota,corolla,40,203.965,178.2,29.7919,887.5568,0.1461,165.8,238.0,72.2
+deliverer-,toyota,corolla,2,113.2,113.2,29.1,846.81,0.2571,84.1,142.3,58.2
+diesel injection pump -,skoda,octavia,29,232.131,236.0,27.7406,769.5394,0.1195,176.9,267.8,90.9
+brake caliper -(left front),toyota,corolla,44,182.6886,177.6,27.452,753.6096,0.1503,118.4,238.0,119.6
+drive shaft -(left rear),skoda,octavia,48,240.4438,233.95,27.2854,744.4937,0.1135,200.5,285.6,85.1
+steering wheel airbag -,skoda,octavia,24,429.2542,415.05,25.6767,659.295,0.0598,412.8,476.0,63.2
+rear axle beam -(rear),toyota,corolla,5,381.9,394.2,25.2086,635.476,0.066,331.5,395.7,64.2
+"rear sensor - , e-",vw,golf,28,79.4786,59.5,24.6789,609.0467,0.3105,59.0,119.0,60.0
+brake caliper -(right rear),toyota,corolla,53,193.2057,177.9,24.423,596.4839,0.1264,168.7,238.0,69.3
+hybrid converter -,toyota,corolla,18,382.8722,379.15,24.3649,593.6476,0.0636,353.8,416.5,62.7
+drive shaft -(left front),skoda,octavia,41,251.7683,241.9,24.3326,592.0748,0.0966,235.9,309.4,73.5
+rear axle -,skoda,octavia,29,384.8862,378.4,24.232,587.1902,0.063,353.8,416.5,62.7
+brake caliper-(right rear),toyota,corolla,2,212.9,212.9,24.2,585.64,0.1137,188.7,237.1,48.4
+brake caliper -(right front),toyota,corolla,47,182.2787,177.6,24.06,578.8817,0.132,142.1,238.0,95.9
+abs hydraulic aggregate -,toyota,corolla,36,579.3472,590.95,23.9115,571.7619,0.0413,532.8,595.0,62.2
+deliverer -,toyota,corolla,38,128.9158,141.85,23.7543,564.2655,0.1843,84.1,142.8,58.7
+"cylinder head fuel - , e-",vw,golf,12,319.5917,319.75,23.696,561.4991,0.0741,294.9,345.1,50.2
+"rear axle - , e-",vw,golf,29,371.3552,355.9,23.558,554.9797,0.0634,353.8,416.5,62.7
+"inter axle compl. - , e-",vw,golf,26,446.3192,428.4,23.418,548.4039,0.0525,424.6,476.0,51.4
+drive shaft -(right rear),skoda,octavia,66,235.1258,236.65,23.0185,529.851,0.0979,200.5,285.6,85.1
+drive shaft -(right front),skoda,octavia,47,271.0128,260.5,22.9987,528.9411,0.0849,241.8,309.4,67.6
+brake caliper -(left rear),toyota,corolla,50,187.736,177.7,22.3298,498.6179,0.1189,165.8,238.0,72.2
+turbo aggregate -,skoda,octavia,30,385.87,390.5,21.9903,483.5748,0.057,353.8,416.5,62.7
+"inter axle compl.- , e-",vw,golf,3,440.8667,426.2,21.8829,478.8622,0.0496,424.6,471.8,47.2
+"other control unit - , e-",vw,golf,28,266.0679,260.75,21.0932,444.925,0.0793,240.9,308.4,67.5
+contact roll airbag -,toyota,corolla,40,209.7425,213.45,21.0317,442.3324,0.1003,177.6,238.0,60.4
+rear axle -,toyota,corolla,34,303.4794,318.4,20.0459,401.8381,0.0661,260.5,321.3,60.8
+abs control unit -,toyota,corolla,18,75.0111,88.5,19.5491,382.1665,0.2606,47.2,89.3,42.1
+control unit xenon -,toyota,corolla,20,121.01,118.55,19.3225,373.3609,0.1597,63.9,142.8,78.9
+hub rear -(rear),toyota,corolla,61,87.5492,94.4,18.5776,345.1268,0.2122,47.4,119.0,71.6
+brake caliper-(left front),toyota,corolla,4,160.3,160.3,18.2,331.24,0.1135,142.1,178.5,36.4
+dragkrok styrenhet -,skoda,octavia,24,115.2583,118.8,18.0986,327.5583,0.157,59.2,130.9,71.7
+engine diesel-,toyota,corolla,2,787.35,787.35,17.75,315.0625,0.0225,769.6,805.1,35.5
+"knee - , e-",vw,golf,30,197.6733,201.15,17.4055,302.952,0.0881,176.9,220.1,43.2
+"fuel tank injection - , e-",vw,golf,28,93.35,88.6,17.0703,291.3961,0.1829,71.9,121.4,49.5
+curtain airbags -(right),skoda,octavia,54,156.9685,148.1,16.7527,280.6529,0.1067,141.5,184.4,42.9
+rear sensor -(rear),skoda,octavia,7,80.1714,71.1,16.4086,269.242,0.2047,70.8,117.4,46.6
+brake caliper -(left front),skoda,octavia,42,164.0857,154.2,16.0605,257.9393,0.0979,153.3,190.4,37.1
+brake caliper -(right front),skoda,octavia,42,164.0857,154.2,16.0605,257.9393,0.0979,153.3,190.4,37.1
+"drive shaft - , e-(right front)",vw,golf,33,252.2879,243.2,15.7294,247.415,0.0623,241.8,296.0,54.2
+"fly wheel manual - , e-",vw,golf,30,130.2,141.55,14.9737,224.2107,0.115,106.1,142.8,36.7
+"brake caliper - , e-(right rear)",vw,golf,29,195.3276,183.9,14.9364,223.0965,0.0765,180.4,214.2,33.8
+"ignition diesel relay- , e-",vw,golf,2,20.75,20.75,14.85,220.5225,0.7157,5.9,35.6,29.7
+"drive shaft - , e-(left front)",vw,golf,60,300.055,306.7,14.2817,203.9665,0.0476,265.4,321.3,55.9
+"air throttle housing / throttle housing - , e-",vw,golf,30,80.1033,82.85,14.2336,202.5963,0.1777,59.0,95.2,36.2
+starter diesel -,toyota,corolla,37,80.8757,71.4,13.9898,195.7143,0.173,59.2,95.2,36.0
+passenger airbag -,toyota,corolla,39,300.1744,296.0,13.9222,193.8265,0.0464,281.2,333.2,52.0
+automatic gear -(front),skoda,octavia,6,4367.75,4366.4,13.5458,183.4892,0.0031,4352.0,4391.1,39.1
+wheel bearing spindle shaft -(left rear),toyota,corolla,60,187.81,177.9,13.5445,183.4529,0.0721,165.8,208.3,42.5
+bränslepump styrenhet -,skoda,octavia,30,83.8133,94.4,13.5236,182.8865,0.1614,63.7,95.2,31.5
+air purifier -,toyota,corolla,36,77.9972,73.3,13.2656,175.9758,0.1701,53.3,95.2,41.9
+"insp.pump diesel control unit - , e-",vw,golf,27,427.3556,425.7,13.1676,173.3862,0.0308,412.8,452.2,39.4
+wheel bearing spindle shaft -(right rear),toyota,corolla,52,189.7673,189.75,12.9583,167.9184,0.0683,165.8,208.3,42.5
+engine gasoline -(front),skoda,octavia,6,4142.8333,4141.55,12.8545,165.2389,0.0031,4127.9,4165.0,37.1
+wheel bearing spindle shaft -(right rear),skoda,octavia,39,218.4897,213.1,12.8403,164.8737,0.0588,200.5,238.0,37.5
+komfort styrdon-,skoda,octavia,2,224.75,224.75,12.45,155.0025,0.0554,212.3,237.2,24.9
+"air-flow sensor - , e-",vw,golf,12,47.9417,47.9,12.426,154.4058,0.2592,35.4,60.7,25.3
+brake caliper -(right rear),skoda,octavia,36,170.7111,177.3,12.0592,145.4254,0.0706,153.3,184.4,31.1
+gear lever -,skoda,octavia,24,248.5833,248.75,11.8743,140.9997,0.0478,235.9,261.8,25.9
+wheel bearing spindle shaft-(left rear),skoda,octavia,2,225.35,225.35,11.85,140.4225,0.0526,213.5,237.2,23.7
+"adaptiv farthållare sensor - , e-",vw,golf,30,421.14,424.7,11.8178,139.6611,0.0281,401.0,439.1,38.1
+rear sensor -,skoda,octavia,21,66.6333,59.3,11.7761,138.6775,0.1767,59.0,85.7,26.7
+sump -,toyota,corolla,29,43.2897,47.2,11.7469,137.9906,0.2714,23.6,59.5,35.9
+"wheel bearing spindle shaft - , e-(left rear)",vw,golf,42,218.7048,213.1,11.7199,137.3562,0.0536,200.6,238.0,37.4
+brake caliper -(left rear),skoda,octavia,25,168.28,177.0,11.6197,135.0176,0.069,153.4,178.5,25.1
+"brake caliper - , e-(left rear)",vw,golf,30,204.78,212.35,11.6173,134.9623,0.0567,182.8,214.2,31.4
+baklucka styrenhet -,skoda,octavia,30,104.1667,95.05,11.5987,134.5289,0.1113,94.4,119.0,24.6
+"ignition diesel relay - , e-",vw,golf,28,28.1964,35.4,11.5872,134.2632,0.4109,5.9,38.1,32.2
+wheel bearing spindle shaft -(left rear),skoda,octavia,46,221.7935,213.5,11.4381,130.8297,0.0516,212.3,238.0,25.7
+"fuel injection pump - , e-",vw,golf,24,137.6,142.0,11.3737,129.3617,0.0827,117.9,148.8,30.9
+"wheel bearing spindle shaft - , e-(right rear)",vw,golf,46,225.5391,228.0,11.3442,128.6906,0.0503,212.3,238.0,25.7
+turbo aggregate -,toyota,corolla,18,126.3,118.6,11.1793,124.9767,0.0885,117.9,142.8,24.9
+hub rear -(left rear),toyota,corolla,7,93.8,100.3,11.1233,123.7286,0.1186,71.0,100.8,29.8
+hub rear -(right rear),toyota,corolla,8,98.4125,100.7,11.0684,122.5086,0.1125,71.0,112.5,41.5
+"curtain airbags - , e-(right)",vw,golf,48,150.1771,147.65,11.0584,122.2872,0.0736,141.5,178.5,37.0
+brake servo -,skoda,octavia,29,164.9586,160.0,10.8803,118.3804,0.066,153.3,178.5,25.2
+alternator -,toyota,corolla,38,139.2947,142.3,10.8599,117.9373,0.078,106.6,148.8,42.2
+rear axle beam -,skoda,octavia,24,308.2375,302.95,10.6923,114.3257,0.0347,294.9,321.3,26.4
+fuse box / electricity central -,toyota,corolla,39,97.7564,95.2,10.6746,113.9466,0.1092,71.0,119.0,48.0
+alternator bracket / accessories -,skoda,octavia,24,34.0333,35.5,10.5703,111.7314,0.3106,17.7,47.6,29.9
+"parking control unit - , e-",vw,golf,30,77.63,84.9,10.3024,106.1401,0.1327,59.0,85.7,26.7
+inverter 12 -> 220 v -,skoda,octavia,24,136.1167,141.75,10.2567,105.1989,0.0754,117.9,142.8,24.9
+deliverer -,skoda,octavia,30,245.04,237.6,10.2009,104.0591,0.0416,235.9,258.9,23.0
+"brake disc - , e-(front)",vw,golf,42,32.1405,29.5,9.9286,98.5776,0.3089,23.6,47.6,24.0
+throttle housing -,toyota,corolla,30,147.2267,153.4,9.8253,96.5366,0.0667,127.4,154.7,27.3
+strut rear -(left),toyota,corolla,59,49.4661,53.3,9.5724,91.6317,0.1935,23.7,59.5,35.8
+air purifier-,toyota,corolla,4,78.575,74.45,9.561,91.4119,0.1217,71.0,94.4,23.4
+caliper bracket -,toyota,corolla,18,63.5444,67.45,9.5491,91.1858,0.1503,35.5,72.6,37.1
+"diesel tank - , e-",vw,golf,30,170.45,176.95,9.4854,89.9732,0.0556,153.3,178.5,25.2
+"abs hydraulic aggregate - , e-",vw,golf,30,600.72,601.2,9.333,87.1043,0.0155,589.7,612.9,23.2
+"wheel bearing spindle shaft- , e-(right rear)",vw,golf,2,227.9,227.9,8.9,79.21,0.0391,219.0,236.8,17.8
+distributors -,toyota,corolla,40,79.12,83.7,8.8849,78.9416,0.1123,59.2,95.2,36.0
+sump -,skoda,octavia,28,109.2143,106.7,8.8712,78.6984,0.0812,95.2,119.0,23.8
+"throttle housing - , e-",vw,golf,30,186.25,185.45,8.8073,77.5678,0.0473,176.9,202.3,25.4
+steering wheel airbag -,toyota,corolla,39,293.2179,296.0,8.8067,77.5584,0.03,260.5,297.5,37.0
+alternator -,skoda,octavia,30,229.6267,235.95,8.7314,76.2373,0.038,218.2,238.0,19.8
+"fuel distributor - , e-",vw,golf,25,101.864,95.2,8.7054,75.7839,0.0855,94.4,113.0,18.6
+"actuator loom - , e-",vw,golf,24,106.7333,106.5,8.6591,74.9806,0.0811,94.4,119.8,25.4
+"steering wheel airbag - , e-",vw,golf,30,531.07,532.2,8.6416,74.6774,0.0163,485.4,535.5,50.1
+pulley -,toyota,corolla,33,57.0636,59.2,8.4845,71.9872,0.1487,11.8,59.5,47.7
+fuel filter / holder -,toyota,corolla,37,40.0081,35.7,8.3003,68.8943,0.2075,17.8,47.6,29.8
+gear box bracket -,toyota,corolla,24,43.2083,47.3,8.2319,67.7641,0.1905,17.8,47.6,29.8
+piston / rod -,skoda,octavia,29,43.8655,41.4,8.1565,66.5278,0.1859,35.4,59.5,24.1
+strut rear -(right rear),toyota,corolla,6,37.5,35.5,8.1492,66.41,0.2173,23.7,47.4,23.7
+strut rear -(right),toyota,corolla,55,52.5291,59.0,8.0038,64.0606,0.1524,29.6,59.5,29.9
+tank lid -,toyota,corolla,39,48.6744,47.4,7.8654,61.8645,0.1616,32.0,59.5,27.5
+"tank transmitters - , e-",vw,golf,30,49.9533,47.35,7.7939,60.7452,0.156,41.3,59.5,18.2
+actuator loom -(right rear),toyota,corolla,10,62.33,67.3,7.7453,59.9901,0.1243,42.6,67.8,25.2
+"stolsvärme styrenhet/relä - , e-",vw,golf,24,19.2375,23.65,7.7006,59.2998,0.4003,5.9,23.8,17.9
+fuse box / electricity central -,skoda,octavia,18,101.5833,101.45,7.6809,58.9958,0.0756,85.3,112.5,27.2
+hub rear -(rear),skoda,octavia,42,131.8905,130.2,7.5712,57.3237,0.0574,117.9,142.8,24.9
+strut rear -(left rear),toyota,corolla,19,48.9895,47.4,7.4978,56.2167,0.153,35.5,59.5,24.0
+"trailing link rear- , e-(right)",vw,golf,3,84.8667,82.9,7.3586,54.1489,0.0867,77.0,94.7,17.7
+"trailing link rear - , e-(left)",vw,golf,54,85.1019,83.8,7.3297,53.7239,0.0861,76.7,95.2,18.5
+"trailing link rear - , e-(right)",vw,golf,45,86.2044,84.1,7.1255,50.7729,0.0827,76.7,95.2,18.5
+fuel filling pipe / tube -,toyota,corolla,38,53.6158,59.0,7.0586,49.8245,0.1317,35.5,59.5,24.0
+komfort styrdon -,skoda,octavia,28,224.7607,224.55,7.0552,49.7752,0.0314,212.4,238.0,25.6
+"engine block - , e-",vw,golf,30,58.0,59.15,6.9023,47.6413,0.119,47.2,65.5,18.3
+starter gasoline -,skoda,octavia,29,131.0207,130.1,6.8457,46.863,0.0522,123.8,142.8,19.0
+förpump diesel -,skoda,octavia,30,95.6467,95.6,6.7588,45.6818,0.0707,85.0,107.1,22.1
+curtain airbags -(left),skoda,octavia,36,146.6389,142.3,6.5175,42.4774,0.0444,141.5,158.3,16.8
+"fuel tank injection- , e-",vw,golf,2,95.8,95.8,6.5,42.25,0.0678,89.3,102.3,13.0
+central lock control unit -,toyota,corolla,37,41.1811,41.5,6.4807,41.9994,0.1574,23.7,47.6,23.9
+airbag front sensor -(left),toyota,corolla,42,39.1952,35.6,6.4516,41.6233,0.1646,23.7,47.6,23.9
+"sump - , e-",vw,golf,30,103.6933,106.2,6.3779,40.6773,0.0615,94.4,113.0,18.6
+sensor abs -,toyota,corolla,40,50.33,47.4,6.0765,36.9236,0.1207,41.4,59.5,18.1
+"fuse box / electricity central - , e-",vw,golf,30,100.2933,101.45,6.0653,36.788,0.0605,89.7,107.1,17.4
+"sensor abs - , e-",vw,golf,30,54.6867,59.0,6.0083,36.0992,0.1099,47.2,60.7,13.5
+air purifier-,skoda,octavia,2,89.25,89.25,5.95,35.4025,0.0667,83.3,95.2,11.9
+carbon canister-,toyota,corolla,2,11.85,11.85,5.95,35.4025,0.5021,5.9,17.8,11.9
+clutch cylinder main -,toyota,corolla,36,43.8972,47.2,5.9342,35.2153,0.1352,23.7,47.6,23.9
+engine block -,skoda,octavia,11,82.3182,77.3,5.886,34.6451,0.0715,76.7,89.3,12.6
+air purifier -,skoda,octavia,28,88.7464,88.85,5.8797,34.5703,0.0663,82.6,95.2,12.6
+tank transmitters -,toyota,corolla,33,36.9667,35.6,5.8321,34.0137,0.1578,17.8,47.6,29.8
+fly wheel manual -,skoda,octavia,30,122.5133,118.8,5.8187,33.8578,0.0475,117.9,133.9,16.0
+"control unit xenon - , e-",vw,golf,30,172.8233,176.95,5.8134,33.7958,0.0336,165.1,178.5,13.4
+fuel filling pipe / tube-,toyota,corolla,2,53.2,53.2,5.8,33.64,0.109,47.4,59.0,11.6
+carbon canister -,skoda,octavia,30,42.6167,47.2,5.7985,33.6227,0.1361,35.4,47.6,12.2
+caliper bracket -(right front),toyota,corolla,3,28.1,30.4,5.7463,33.02,0.2045,20.2,33.7,13.5
+motor cushion -,skoda,octavia,30,49.9567,47.4,5.7169,32.6825,0.1144,42.5,59.5,17.0
+trailing link rear -(left),skoda,octavia,51,76.9745,76.7,5.7034,32.5286,0.0741,70.8,84.5,13.7
+valve cap -,skoda,octavia,30,53.8667,55.05,5.6048,31.4142,0.1041,47.2,60.7,13.5
+fuel pump electric -,skoda,octavia,29,135.1966,130.9,5.601,31.3714,0.0414,129.7,142.8,13.1
+actuator loom -,skoda,octavia,18,102.6333,106.2,5.5955,31.31,0.0545,94.4,107.1,12.7
+air throttle housing / throttle housing -,skoda,octavia,18,51.2944,47.4,5.5804,31.1405,0.1088,47.2,59.5,12.3
+battery cable -,skoda,octavia,30,64.8933,65.15,5.5781,31.1153,0.086,57.8,71.4,13.6
+shock absorbers rear -(rear),skoda,octavia,55,51.2182,47.4,5.5575,30.8862,0.1085,47.2,59.5,12.3
+"fuel filter / holder - , e-",vw,golf,30,66.53,70.8,5.5319,30.6014,0.0831,59.0,71.4,12.4
+"gear box 5 speed - , e-(front)",vw,golf,6,1775.5,1774.95,5.5091,30.35,0.0031,1769.1,1785.0,15.9
+parkeringshjälp frontsensor -,toyota,corolla,32,55.5156,59.0,5.4875,30.1126,0.0988,47.2,59.5,12.3
+starter diesel-,toyota,corolla,3,63.0667,59.2,5.4683,29.9022,0.0867,59.2,70.8,11.6
+"rear axle beam - , e-",vw,golf,27,361.3704,362.3,5.467,29.888,0.0151,353.8,368.9,15.1
+adaptiv farthållare sensor -,skoda,octavia,26,399.1462,401.0,5.4121,29.2909,0.0136,392.2,409.0,16.8
+trailing link rear -(right),skoda,octavia,40,79.41,82.7,5.2329,27.3829,0.0659,70.8,84.5,13.7
+"main cylinder - , e-",vw,golf,29,78.8207,82.6,5.1814,26.8472,0.0657,71.9,83.3,11.4
+"fuel pump electric - , e-",vw,golf,24,174.5958,177.2,5.1449,26.4696,0.0295,165.1,178.5,13.4
+"tank lid - , e-",vw,golf,24,56.225,59.05,5.1267,26.2835,0.0912,47.2,59.5,12.3
+mass air-flow sensor -,skoda,octavia,30,88.5333,85.4,5.1141,26.1536,0.0578,82.6,95.2,12.6
+other relay -,toyota,corolla,39,41.5077,41.5,5.0433,25.4351,0.1215,29.6,47.6,18.0
+trailing link rear -(right),toyota,corolla,70,68.6943,71.0,4.998,24.98,0.0728,56.2,72.6,16.4
+ljusinställning lägesgivare -,skoda,octavia,23,75.8478,77.3,4.986,24.8599,0.0657,70.8,83.3,12.5
+other control unit -,skoda,octavia,28,239.35,237.1,4.9318,24.3225,0.0206,235.9,249.9,14.0
+strut rear-(left),toyota,corolla,3,49.6333,53.1,4.9026,24.0356,0.0988,42.7,53.1,10.4
+caliper bracket -(left front),toyota,corolla,4,36.525,33.7,4.893,23.9419,0.134,33.7,45.0,11.3
+"gear regulator - , e-",vw,golf,30,67.9467,71.0,4.8891,23.9032,0.072,60.1,72.6,12.5
+"rear axle beam- , e-",vw,golf,3,360.1333,360.9,4.8883,23.8956,0.0136,353.8,365.7,11.9
+main cylinder -,skoda,octavia,23,73.6217,71.1,4.8848,23.8608,0.0663,70.8,83.3,12.5
+"belt tensioner for fan belt - , e-",vw,golf,30,43.5633,47.2,4.8751,23.7663,0.1119,35.4,47.6,12.2
+"thermostat housing / cap - , e-",vw,golf,30,39.3033,35.65,4.8746,23.7617,0.124,35.4,47.6,12.2
+other sensor-,skoda,octavia,5,37.88,35.5,4.8602,23.6216,0.1283,35.4,47.6,12.2
+trailing link rear -(left),toyota,corolla,77,68.9104,71.0,4.8144,23.1789,0.0699,56.2,72.6,16.4
+belt tensioner for fan belt -,skoda,octavia,29,21.2276,23.7,4.7986,23.0261,0.2261,11.8,23.8,12.0
+gear lever -,toyota,corolla,38,179.6342,177.6,4.7839,22.8854,0.0266,171.7,190.4,18.7
+"starter diesel - , e-",vw,golf,30,120.7333,118.4,4.7483,22.5462,0.0393,117.9,130.9,13.0
+fuel distributor -,skoda,octavia,30,121.9167,124.2,4.748,22.5434,0.0389,112.0,124.9,12.9
+central lock control unit -,skoda,octavia,30,97.0667,94.7,4.7426,22.4922,0.0489,94.4,107.1,12.7
+sensor steering -,skoda,octavia,30,49.7367,47.4,4.7423,22.489,0.0953,47.2,59.5,12.3
+coil -,skoda,octavia,30,50.9,47.5,4.7357,22.4267,0.093,47.2,59.5,12.3
+"piston / rod - , e-",vw,golf,30,26.05,23.7,4.734,22.4105,0.1817,23.6,35.7,12.1
+other sensor -,skoda,octavia,25,37.884,35.6,4.7092,22.1765,0.1243,35.4,47.4,12.0
+motor cushion -,toyota,corolla,35,23.9657,23.7,4.6522,21.6428,0.1941,5.9,28.6,22.7
+engine casing -,skoda,octavia,30,61.79,59.4,4.6482,21.6056,0.0752,59.0,71.4,12.4
+"other relay - , e-",vw,golf,30,19.8967,23.6,4.6381,21.5117,0.2331,14.2,23.8,9.6
+"alternator bracket / accessories - , e-",vw,golf,29,45.3103,47.3,4.4707,19.9871,0.0987,35.4,47.6,12.2
+hand brake lever -,toyota,corolla,39,44.0205,47.2,4.4213,19.5478,0.1004,35.5,47.6,12.1
+"avgas temperaturgivare - , e-",vw,golf,29,52.2448,53.1,4.4183,19.5211,0.0846,47.2,59.5,12.3
+mass air-flow sensor -,toyota,corolla,39,80.7667,82.9,4.3665,19.0663,0.0541,71.0,83.3,12.3
+"curtain airbags - , e-(left)",vw,golf,42,144.5714,142.3,4.3352,18.7939,0.03,141.5,154.7,13.2
+engine casing -,toyota,corolla,39,56.9897,59.2,4.2634,18.1768,0.0748,47.4,59.5,12.1
+suspension -(rear),toyota,corolla,78,44.9128,47.2,4.2408,17.9847,0.0944,35.5,47.6,12.1
+airbag front sensor -(left front),toyota,corolla,7,37.2286,35.6,4.1537,17.2535,0.1116,35.4,47.4,12.0
+brake disc -(front),toyota,corolla,42,13.8452,13.0,4.1375,17.1187,0.2988,5.9,17.8,11.9
+"other airbags - , e-",vw,golf,24,19.8333,20.7,4.048,16.3864,0.2041,14.2,23.8,9.6
+"komfort styrdon - , e-",vw,golf,30,175.5467,177.4,4.0427,16.3432,0.023,166.9,178.5,11.6
+fuel injection pump -,toyota,corolla,40,117.335,118.4,3.7266,13.8873,0.0318,100.6,119.0,18.4
+"shock absorbers rear - , e-(rear)",vw,golf,53,60.9264,59.5,3.6565,13.3702,0.06,59.0,71.4,12.4
+tank lid -,skoda,octavia,29,49.1793,47.4,3.5804,12.8196,0.0728,47.2,56.5,9.3
+"alternator - , e-",vw,golf,30,219.37,219.0,3.4211,11.7041,0.0156,212.4,226.1,13.7
+airbag front sensor -(right),toyota,corolla,27,46.2667,47.4,3.249,10.5563,0.0702,35.5,47.6,12.1
+"cam belt / transmission cap - , e-",vw,golf,27,14.2037,11.9,3.2476,10.547,0.2286,9.5,17.8,8.3
+clutch cylinder slave -,toyota,corolla,39,30.3359,29.6,3.1562,9.9618,0.104,23.7,35.7,12.0
+starter gasoline -,toyota,corolla,40,94.4625,94.7,3.1454,9.8933,0.0333,82.9,106.7,23.8
+"gear distributor box - , e-(front)",vw,golf,6,1006.1167,1005.8,3.1291,9.7914,0.0031,1002.5,1011.5,9.0
+other relay -,skoda,octavia,30,21.5567,23.6,3.126,9.7718,0.145,17.7,25.0,7.3
+motor bracket -,toyota,corolla,36,45.925,47.4,3.0769,9.4674,0.067,35.5,47.6,12.1
+wheel bearing spindle shaft-(left rear),toyota,corolla,2,203.5,203.5,3.0,9.0,0.0147,200.5,206.5,6.0
+"dipstick - , e-",vw,golf,30,20.1267,18.9,2.9982,8.9893,0.149,16.5,23.8,7.3
+"hand brake lever - , e-",vw,golf,24,56.225,56.25,2.9629,8.7785,0.0527,53.1,59.5,6.4
+"motor bracket - , e-",vw,golf,24,56.2333,56.3,2.9553,8.7339,0.0526,53.1,59.5,6.4
+gear box cushion -,skoda,octavia,24,32.5667,32.6,2.9519,8.7139,0.0906,29.5,35.7,6.2
+caliper bracket -(right rear),toyota,corolla,2,50.35,50.35,2.95,8.7025,0.0586,47.4,53.3,5.9
+aktivt kollisionsskydd sensor -(left),skoda,octavia,11,228.3091,230.0,2.9318,8.5954,0.0128,224.2,232.0,7.8
+"starter gasoline - , e-",vw,golf,29,144.2828,142.3,2.9144,8.4938,0.0202,141.5,148.8,7.3
+tank transmitters -,skoda,octavia,30,44.9767,47.2,2.9095,8.4651,0.0647,41.3,47.6,6.3
+carbon canister -,toyota,corolla,30,27.2433,29.5,2.9082,8.4578,0.1068,23.6,29.8,6.2
+"coil - , e-",vw,golf,30,55.6333,53.45,2.903,8.4276,0.0522,53.1,59.5,6.4
+"valve cap - , e-",vw,golf,30,49.7167,47.5,2.9021,8.4221,0.0584,47.2,53.5,6.3
+rubber bellow / tube -,toyota,corolla,30,31.9833,29.75,2.9006,8.4134,0.0907,29.5,35.7,6.2
+rubber bellow / tube -,skoda,octavia,30,37.8767,35.65,2.8924,8.3658,0.0764,35.4,41.6,6.2
+"gear box bracket - , e-",vw,golf,29,49.6,47.4,2.8817,8.3041,0.0581,47.2,53.5,6.3
+brake disc -(front),skoda,octavia,16,14.075,11.9,2.86,8.1794,0.2032,11.8,17.8,6.0
+trailing link rear-(right),skoda,octavia,2,73.85,73.85,2.85,8.1225,0.0386,71.0,76.7,5.7
+"battery cable - , e-",vw,golf,30,43.3967,41.5,2.798,7.829,0.0645,41.3,47.6,6.3
+fuel pump electric -,toyota,corolla,38,102.5,100.8,2.7888,7.7774,0.0272,100.2,107.1,6.9
+avgas temperaturgivare -,skoda,octavia,30,58.4767,59.15,2.7599,7.6171,0.0472,53.1,61.9,8.8
+"rubber bellow / tube - , e-",vw,golf,30,37.2867,35.55,2.7239,7.4198,0.0731,35.4,41.6,6.2
+actuator loom -(right front),toyota,corolla,7,66.4714,67.4,2.4841,6.1706,0.0374,60.4,67.8,7.4
+hand brake lever -,skoda,octavia,28,57.9536,59.2,2.445,5.9782,0.0422,53.1,59.5,6.4
+fuel injection pump -,skoda,octavia,30,143.22,142.1,2.415,5.8323,0.0169,141.5,148.8,7.3
+cam belt / transmission cap -,skoda,octavia,30,18.9367,17.8,2.374,5.6357,0.1254,17.7,23.8,6.1
+"carbon canister - , e-",vw,golf,30,40.2367,41.4,2.3624,5.581,0.0587,35.4,41.6,6.2
+parking control unit -,skoda,octavia,29,96.131,95.2,2.344,5.4946,0.0244,94.4,101.1,6.7
+"mass air-flow sensor - , e-",vw,golf,30,80.9667,82.6,2.3393,5.4722,0.0289,77.8,83.3,5.5
+sensor ac inner temperature -,skoda,octavia,30,20.8333,19.0,2.3277,5.4182,0.1117,18.9,23.8,4.9
+coil -,toyota,corolla,39,52.2333,53.3,2.264,5.1258,0.0433,47.4,53.5,6.1
+actuator loom -(left rear),toyota,corolla,13,66.8462,67.4,2.2138,4.9009,0.0331,59.2,67.8,8.6
+airbag krocksensor -,toyota,corolla,40,57.1025,56.3,1.8536,3.4357,0.0325,53.3,59.5,6.2
+wiper arm motor relay -,toyota,corolla,11,33.9182,35.4,1.7719,3.1397,0.0522,31.9,35.7,3.8
+gear box bracket -,skoda,octavia,24,58.2375,59.05,1.6477,2.7148,0.0283,55.2,59.5,4.3
+passenger airbag -,skoda,octavia,29,485.4793,485.4,1.5282,2.3354,0.0031,483.6,487.9,4.3
+actuator loom -,toyota,corolla,3,49.5333,50.6,1.5085,2.2756,0.0305,47.4,50.6,3.2
+aktivt kollisionsskydd sensor -,toyota,corolla,6,473.6667,473.9,1.4738,2.1722,0.0031,471.8,476.0,4.2
+aktivt kollisionsskydd sensor -(left rear),toyota,corolla,6,473.6667,473.9,1.4738,2.1722,0.0031,471.8,476.0,4.2
+aktivt kollisionsskydd sensor -(left),toyota,corolla,6,473.6667,473.9,1.4738,2.1722,0.0031,471.8,476.0,4.2
+"abs hydraulic pump - , e-",vw,golf,30,473.4667,473.3,1.4693,2.1589,0.0031,471.8,476.0,4.2
+"passenger airbag - , e-(interior front)",vw,golf,6,473.4667,473.3,1.4693,2.1589,0.0031,471.8,476.0,4.2
+injection control unit -,skoda,octavia,29,473.7276,474.2,1.4614,2.1358,0.0031,471.8,476.0,4.2
+suspension -(rear),skoda,octavia,57,47.8456,47.4,1.4604,2.1327,0.0305,47.2,52.4,5.2
+abs hydraulic pump -,skoda,octavia,29,473.731,474.2,1.457,2.1228,0.0031,471.8,476.0,4.2
+"other transmitters - , e-",vw,golf,30,34.8033,35.5,1.4305,2.0463,0.0411,31.8,35.7,3.9
+"airbag krocksensor - , e-",vw,golf,18,57.1833,56.3,1.4253,2.0314,0.0249,56.0,59.5,3.5
+"injection control unit - , e-",vw,golf,30,449.8,449.65,1.3988,1.9567,0.0031,448.2,452.2,4.0
+adaptiv farthållare sensor -(front),skoda,octavia,4,426.7,426.9,1.3601,1.85,0.0032,424.6,428.4,3.8
+airbag control unit-,skoda,octavia,2,296.2,296.2,1.3,1.69,0.0044,294.9,297.5,2.6
+steering wheel airbag -(interior front),skoda,octavia,6,414.45,414.65,1.2971,1.6825,0.0031,412.8,416.5,3.7
+suspension-(rear),toyota,corolla,2,46.2,46.2,1.2,1.44,0.026,45.0,47.4,2.4
+load air pressure transmitters -,skoda,octavia,30,36.9367,37.75,1.166,1.3597,0.0316,35.4,38.1,2.7
+insp.pump diesel control unit -,skoda,octavia,29,355.1414,355.2,1.1128,1.2383,0.0031,353.8,357.0,3.2
+throttle housing -,skoda,octavia,30,142.5067,142.1,1.0446,1.0913,0.0073,141.5,145.2,3.7
+rear axle -(rear),toyota,corolla,6,331.5333,331.7,1.0435,1.0889,0.0031,330.2,333.2,3.0
+control unit xenon -,skoda,octavia,12,166.0417,165.9,1.0045,1.0091,0.006,165.1,168.9,3.8
+rear axle beam -(rear),skoda,octavia,6,295.9167,295.85,0.91,0.8281,0.0031,294.9,297.5,2.6
+signal horn-,skoda,octavia,2,34.8,34.8,0.9,0.81,0.0259,33.9,35.7,1.8
+wheel bearing spindle shaft-(right rear),skoda,octavia,3,213.5667,214.2,0.8957,0.8022,0.0042,212.3,214.2,1.9
+airbag control unit -,skoda,octavia,28,295.8964,295.85,0.872,0.7603,0.0029,294.9,297.5,2.6
+diesel tank -(rear),skoda,octavia,6,284.1,284.0,0.8679,0.7533,0.0031,283.1,285.6,2.5
+shock absorbers rear -(rear),toyota,corolla,73,60.3274,60.4,0.8414,0.708,0.0139,59.2,62.2,3.0
+gear lever-,toyota,corolla,2,177.7,177.7,0.8,0.64,0.0045,176.9,178.5,1.6
+gear lever -(interior front),skoda,octavia,6,260.4333,260.35,0.7972,0.6356,0.0031,259.5,261.8,2.3
+trailing link rear-(left),skoda,octavia,3,83.6,83.7,0.7789,0.6067,0.0093,82.6,84.5,1.9
+signal horn -,skoda,octavia,22,35.1091,35.45,0.771,0.5945,0.022,33.6,35.7,2.1
+knee -,skoda,octavia,30,242.75,242.85,0.732,0.5358,0.003,241.8,243.9,2.1
+"fly wheel automat - , e-(front)",vw,golf,6,242.65,242.55,0.732,0.5358,0.003,241.8,243.9,2.1
+aktivt kollisionsskydd sensor -,skoda,octavia,6,236.8333,236.95,0.7226,0.5222,0.0031,235.9,238.0,2.1
+"airbag control unit - , e-",vw,golf,30,236.7333,236.65,0.7203,0.5189,0.003,235.9,238.0,2.1
+aktivt kollisionsskydd sensor -(right rear),skoda,octavia,6,230.9167,231.05,0.6962,0.4847,0.003,230.0,232.0,2.0
+aktivt kollisionsskydd sensor -(right),skoda,octavia,6,230.9167,231.05,0.6962,0.4847,0.003,230.0,232.0,2.0
+kamera utvändig -(rear),skoda,octavia,6,213.0667,213.0,0.6498,0.4222,0.003,212.3,214.2,1.9
+oil filter holder -,skoda,octavia,12,23.0833,23.1,0.6039,0.3647,0.0262,22.4,23.8,1.4
+control unit xenon -(left front),skoda,octavia,6,177.6167,177.7,0.5459,0.2981,0.0031,176.9,178.5,1.6
+contact roll airbag -,skoda,octavia,30,177.6167,177.7,0.5459,0.2981,0.0031,176.9,178.5,1.6
+"brake caliper - , e-(left front rear)",vw,golf,6,177.55,177.5,0.5439,0.2958,0.0031,176.9,178.5,1.6
+"hub rear - , e-(left rear)",vw,golf,6,177.55,177.5,0.5439,0.2958,0.0031,176.9,178.5,1.6
+"hub rear - , e-(right rear)",vw,golf,6,177.55,177.5,0.5439,0.2958,0.0031,176.9,178.5,1.6
+"contact roll airbag - , e-",vw,golf,30,177.55,177.5,0.5439,0.2958,0.0031,176.9,178.5,1.6
+"gear lever - , e-",vw,golf,28,177.5964,177.6,0.5335,0.2846,0.003,176.9,178.5,1.6
+control unit xenon -(front),skoda,octavia,6,165.8,165.9,0.5196,0.27,0.0031,165.1,166.6,1.5
+side airbags -(left rear),skoda,octavia,6,157.5,157.6,0.5196,0.27,0.0033,156.8,158.3,1.5
+side airbags -(right rear),skoda,octavia,6,157.5,157.6,0.5196,0.27,0.0033,156.8,158.3,1.5
+control unit xenon -(left),skoda,octavia,6,159.85,159.9,0.5058,0.2558,0.0032,159.2,160.7,1.5
+roof assembled -(left),skoda,octavia,6,142.1,142.2,0.4435,0.1967,0.0031,141.5,142.8,1.3
+roof assembled -(right),skoda,octavia,6,142.1,142.2,0.4435,0.1967,0.0031,141.5,142.8,1.3
+hub rear -(left rear),skoda,octavia,12,142.0333,142.0,0.4384,0.1922,0.0031,141.5,142.8,1.3
+"fuel pump electric - , e-(rear)",vw,golf,6,142.0333,142.0,0.4384,0.1922,0.0031,141.5,142.8,1.3
+hub rear -(right rear),skoda,octavia,6,142.0333,142.0,0.4384,0.1922,0.0031,141.5,142.8,1.3
+"fuel injection pump - , e-(rear)",vw,golf,6,134.9333,134.9,0.4384,0.1922,0.0032,134.4,135.7,1.3
+starter diesel -,skoda,octavia,30,130.2,130.15,0.4082,0.1667,0.0031,129.7,130.9,1.2
+inverter 12 -> 220 v -(interior rear),skoda,octavia,5,142.14,142.1,0.403,0.1624,0.0028,141.6,142.8,1.2
+"insp.pump diesel control unit- , e-",vw,golf,3,414.9333,415.2,0.3771,0.1422,0.0009,414.4,415.2,0.8
+"dörr styrenhet - , e-(left)",vw,golf,17,106.5294,106.4,0.3544,0.1256,0.0033,106.1,107.1,1.0
+"dörr styrenhet - , e-(right)",vw,golf,10,106.48,106.4,0.3544,0.1256,0.0033,106.1,107.1,1.0
+actuator loom -(left front),skoda,octavia,6,106.5833,106.65,0.3436,0.1181,0.0032,106.1,107.1,1.0
+fuse box / electricity central -(front),skoda,octavia,6,101.2667,101.35,0.3197,0.1022,0.0032,100.8,101.7,0.9
+actuator loom -(right front),skoda,octavia,6,95.9167,95.95,0.3023,0.0914,0.0032,95.5,96.4,0.9
+"actuator loom - , e-(left rear)",vw,golf,6,100.5833,100.55,0.3023,0.0914,0.003,100.2,101.1,0.9
+dörr styrenhet -,skoda,octavia,6,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+"sensor acceleration - , e-",vw,golf,6,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+"trailing link rear - , e-(either side)",vw,golf,6,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+dörr styrenhet -(left front),skoda,octavia,12,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+dörr styrenhet -(right front),skoda,octavia,12,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+"air purifier - , e-",vw,golf,30,94.7,94.65,0.2828,0.08,0.003,94.4,95.2,0.8
+rain sensor -,skoda,octavia,27,94.6815,94.6,0.2816,0.0793,0.003,94.4,95.2,0.8
+control unit xenon -(left),toyota,corolla,6,94.7333,94.75,0.2809,0.0789,0.003,94.4,95.2,0.8
+control unit xenon -(right),toyota,corolla,6,94.7333,94.75,0.2809,0.0789,0.003,94.4,95.2,0.8
+fuse box / electricity central -(interior front),skoda,octavia,6,94.7333,94.75,0.2809,0.0789,0.003,94.4,95.2,0.8
+bensin/dieselvärmare styrenhet -,skoda,octavia,22,94.7273,94.7,0.2799,0.0783,0.003,94.4,95.2,0.8
+distributors vacuum regulator -,toyota,corolla,40,100.625,100.6,0.2681,0.0719,0.0027,100.2,101.1,0.9
+trailing link rear -(right rear lower),skoda,octavia,5,82.84,82.8,0.2577,0.0664,0.0031,82.6,83.3,0.7
+main cylinder -(front),skoda,octavia,6,82.9,82.95,0.2449,0.06,0.003,82.6,83.3,0.7
+side airbags -(left),skoda,octavia,6,82.9,82.95,0.2449,0.06,0.003,82.6,83.3,0.7
+"seat assembled - , e-",vw,golf,12,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"seat assembled - , e-(left front)",vw,golf,12,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"rain sensor - , e-",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"rain sensor - , e-(interior front)",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"seat assembled - , e-(right front)",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"side airbags - , e-(left)",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"trailing link rear - , e-(left rear)",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+"trailing link rear - , e-(right rear)",vw,golf,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+trailing link rear -(left rear lower),skoda,octavia,6,82.8667,82.85,0.2427,0.0589,0.0029,82.6,83.3,0.7
+rain sensor-,skoda,octavia,3,94.8667,94.7,0.2357,0.0556,0.0025,94.7,95.2,0.5
+sensor steering -,toyota,corolla,6,71.05,71.05,0.2141,0.0458,0.003,70.8,71.4,0.6
+trailing link rear -(right upper),toyota,corolla,6,71.05,71.05,0.2141,0.0458,0.003,70.8,71.4,0.6
+"engine casing - , e-(front)",vw,golf,6,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+"ljusinställning lägesgivare - , e-(rear)",vw,golf,6,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+"pulley - , e-",vw,golf,6,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+"pulley - , e-(exterior)",vw,golf,24,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+crankshaft -,skoda,octavia,12,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+"ljusinställning lägesgivare - , e-",vw,golf,18,71.0333,71.0,0.2134,0.0456,0.003,70.8,71.4,0.6
+"engine casing - , e-",vw,golf,23,71.0435,71.0,0.2123,0.0451,0.003,70.8,71.4,0.6
+"bränslepump styrenhet - , e-",vw,golf,5,55.08,55.0,0.1939,0.0376,0.0035,54.9,55.4,0.5
+caliper bracket -(left front),skoda,octavia,5,59.2,59.2,0.1897,0.036,0.0032,59.0,59.5,0.5
+parkeringshjälp frontsensor -,skoda,octavia,25,59.196,59.2,0.1843,0.034,0.0031,59.0,59.5,0.5
+caliper bracket -(right front),skoda,octavia,11,59.2091,59.2,0.1832,0.0336,0.0031,59.0,59.5,0.5
+shock absorbers rear-(rear),skoda,octavia,5,47.4,47.4,0.1789,0.032,0.0038,47.2,47.6,0.4
+"suspension - , e-(rear)",vw,golf,59,59.1831,59.1,0.1787,0.0319,0.003,59.0,59.5,0.5
+ljusinställning lägesgivare -(rear),skoda,octavia,6,73.1167,73.15,0.1772,0.0314,0.0024,72.9,73.4,0.5
+"motor cushion - , e-",vw,golf,30,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+pulley -,skoda,octavia,30,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+gear box bracket -(left front),skoda,octavia,6,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+"ljusinställning lägesgivare - , e-(left rear)",vw,golf,6,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+"motor bracket - , e-(right)",vw,golf,6,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+"shock absorbers rear - , e-(right rear)",vw,golf,6,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+"tank lid - , e-(rear)",vw,golf,6,59.1833,59.15,0.1772,0.0314,0.003,59.0,59.5,0.5
+caliper bracket -(rear),skoda,octavia,12,56.2167,56.25,0.1772,0.0314,0.0032,56.0,56.5,0.5
+airbag krocksensor -,skoda,octavia,12,59.2167,59.25,0.1772,0.0314,0.003,59.0,59.5,0.5
+airbag krocksensor -(left front),skoda,octavia,12,59.2167,59.25,0.1772,0.0314,0.003,59.0,59.5,0.5
+airbag krocksensor -(right front),skoda,octavia,6,59.2167,59.25,0.1772,0.0314,0.003,59.0,59.5,0.5
+dragkrok styrenhet -(rear),skoda,octavia,6,59.2167,59.25,0.1772,0.0314,0.003,59.0,59.5,0.5
+shock absorbers rear -(left rear),toyota,corolla,6,59.2167,59.25,0.1772,0.0314,0.003,59.0,59.5,0.5
+actuator loom -(left front),toyota,corolla,6,67.4833,67.45,0.1772,0.0314,0.0026,67.3,67.8,0.5
+rear sensor -,toyota,corolla,19,59.2158,59.2,0.1725,0.0298,0.0029,59.0,59.5,0.5
+rear sensor -(interior),toyota,corolla,13,59.2154,59.2,0.1703,0.029,0.0029,59.0,59.5,0.5
+motor bracket -,skoda,octavia,29,59.1724,59.1,0.17,0.0289,0.0029,59.0,59.5,0.5
+"parkeringshjälp frontsensor - , e-",vw,golf,29,59.1724,59.1,0.17,0.0289,0.0029,59.0,59.5,0.5
+suspension-(rear),skoda,octavia,3,47.4,47.4,0.1633,0.0267,0.0034,47.2,47.6,0.4
+"rear sensor- , e-",vw,golf,2,59.15,59.15,0.15,0.0225,0.0025,59.0,59.3,0.3
+"trailing link rear - , e-(right rear upper)",vw,golf,5,47.34,47.3,0.1497,0.0224,0.0032,47.2,47.6,0.4
+brake intensity regulator -,toyota,corolla,25,47.36,47.4,0.1497,0.0224,0.0032,47.2,47.6,0.4
+"caliper bracket - , e-(right front)",vw,golf,6,50.5667,50.55,0.1491,0.0222,0.0029,50.4,50.8,0.4
+caliper bracket -(left rear),toyota,corolla,12,53.2833,53.3,0.1462,0.0214,0.0027,53.1,53.5,0.4
+"caliper bracket - , e-(left front)",vw,golf,5,50.6,50.6,0.1414,0.02,0.0028,50.4,50.8,0.4
+"trailing link rear - , e-(right upper)",vw,golf,23,47.3478,47.3,0.141,0.0199,0.003,47.2,47.6,0.4
+"gear box cushion - , e-",vw,golf,30,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"trailing link rear - , e-(left upper)",vw,golf,24,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"brake disc - , e-(rear)",vw,golf,18,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"airbag krocksensor - , e-(right front)",vw,golf,6,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"airbag krocksensor - , e-(right)",vw,golf,6,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"caliper bracket - , e-(right rear)",vw,golf,6,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+"trailing link rear - , e-(left rear upper)",vw,golf,6,47.35,47.35,0.1384,0.0192,0.0029,47.2,47.6,0.4
+gear box bracket -(rear),toyota,corolla,12,47.3667,47.4,0.1374,0.0189,0.0029,47.2,47.6,0.4
+"caliper bracket - , e-",vw,golf,11,47.3636,47.4,0.1367,0.0187,0.0029,47.2,47.6,0.4
+airbag front sensor -(right front),toyota,corolla,23,47.3739,47.4,0.1358,0.0184,0.0029,47.2,47.6,0.4
+piston / rod -,toyota,corolla,31,47.3677,47.4,0.1353,0.0183,0.0029,47.2,47.6,0.4
+parkeringshjälp frontsensor -(interior),skoda,octavia,5,59.12,59.1,0.1166,0.0136,0.002,59.0,59.3,0.3
+battery box / fixing / holder -(front),skoda,octavia,12,35.5333,35.55,0.1106,0.0122,0.0031,35.4,35.7,0.3
+signal horn -(front),skoda,octavia,6,35.5333,35.55,0.1106,0.0122,0.0031,35.4,35.7,0.3
+battery box / fixing / holder -,skoda,octavia,18,35.5333,35.55,0.1106,0.0122,0.0031,35.4,35.7,0.3
+ignition diesel relay -,skoda,octavia,28,29.6143,29.6,0.1093,0.0119,0.0037,29.5,29.8,0.3
+"battery box / fixing / holder - , e-",vw,golf,29,35.5172,35.5,0.1085,0.0118,0.0031,35.4,35.7,0.3
+"signal horn - , e-",vw,golf,29,29.6172,29.6,0.1085,0.0118,0.0037,29.5,29.8,0.3
+"sensor steering - , e-",vw,golf,30,35.5167,35.5,0.1067,0.0114,0.003,35.4,35.7,0.3
+"airbag front sensor - , e-(right front)",vw,golf,6,35.5167,35.5,0.1067,0.0114,0.003,35.4,35.7,0.3
+"central lock control unit - , e-",vw,golf,6,35.5167,35.5,0.1067,0.0114,0.003,35.4,35.7,0.3
+"load air pressure transmitters - , e-",vw,golf,30,41.4167,41.4,0.1067,0.0114,0.0026,41.3,41.6,0.3
+"oil filter holder - , e-",vw,golf,6,29.6167,29.6,0.1067,0.0114,0.0036,29.5,29.8,0.3
+sensor tire pressure -,toyota,corolla,18,29.6167,29.6,0.1067,0.0114,0.0036,29.5,29.8,0.3
+trailing link rear -(left exterior rear),skoda,octavia,4,70.9,70.9,0.1,0.01,0.0014,70.8,71.0,0.2
+fuel pump electric-,toyota,corolla,2,100.7,100.7,0.1,0.01,0.001,100.6,100.8,0.2
+hand brake lever-,skoda,octavia,2,59.1,59.1,0.1,0.01,0.0017,59.0,59.2,0.2
+trailing link rear-(left exterior rear),skoda,octavia,2,71.3,71.3,0.1,0.01,0.0014,71.2,71.4,0.2
+trailing link rear-(left),toyota,corolla,2,70.9,70.9,0.1,0.01,0.0014,70.8,71.0,0.2
+hub rear-(rear),toyota,corolla,3,94.7667,94.7,0.0943,0.0089,0.001,94.7,94.9,0.2
+mapp sensor -,toyota,corolla,3,59.3667,59.3,0.0943,0.0089,0.0016,59.3,59.5,0.2
+trailing link rear -(right upper),skoda,octavia,12,26.0333,26.0,0.0943,0.0089,0.0036,25.9,26.2,0.3
+"sensor ac inner temperature - , e-",vw,golf,23,23.6826,23.7,0.0701,0.0049,0.003,23.6,23.8,0.2
+strut bearing rear -(rear),toyota,corolla,30,23.6833,23.7,0.0687,0.0047,0.0029,23.6,23.8,0.2
+"sensor ac inner temperature - , e-(front centre)",vw,golf,6,23.6833,23.7,0.0687,0.0047,0.0029,23.6,23.8,0.2
+"stolsvärme styrenhet/relä - , e-(left front)",vw,golf,6,23.6833,23.7,0.0687,0.0047,0.0029,23.6,23.8,0.2
+strut bearing rear -(left rear),toyota,corolla,6,23.6833,23.7,0.0687,0.0047,0.0029,23.6,23.8,0.2
+air-flow sensor -,toyota,corolla,32,23.6844,23.7,0.0667,0.0044,0.0028,23.6,23.8,0.2
+"ignition module - , e-",vw,golf,12,17.75,17.75,0.05,0.0025,0.0028,17.7,17.8,0.1
+clutch cylinder main -,skoda,octavia,6,17.75,17.75,0.05,0.0025,0.0028,17.7,17.8,0.1
+ignition diesel relay-,skoda,octavia,2,29.65,29.65,0.05,0.0025,0.0017,29.6,29.7,0.1
+other control unit-,skoda,octavia,2,237.15,237.15,0.05,0.0025,0.0002,237.1,237.2,0.1
+"fuel tank lid - , e-",vw,golf,29,17.7483,17.7,0.05,0.0025,0.0028,17.7,17.8,0.1
+brake disc -(rear),skoda,octavia,11,11.8545,11.9,0.0498,0.0025,0.0042,11.8,11.9,0.1
+"brake shield - , e-(rear)",vw,golf,6,11.8333,11.8,0.0471,0.0022,0.004,11.8,11.9,0.1
+rear sensor -(exterior),toyota,corolla,3,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+"airbag front sensor - , e-(left)",vw,golf,6,5.9,5.9,0.0,0.0,0.0,5.9,5.9,0.0
+"airbag front sensor - , e-(right)",vw,golf,6,5.9,5.9,0.0,0.0,0.0,5.9,5.9,0.0
+rear sensor -(centre),toyota,corolla,4,59.2,59.2,0.0,0.0,0.0,59.2,59.2,0.0
+alternator-,toyota,corolla,2,142.1,142.1,0.0,0.0,0.0,142.1,142.1,0.0
+bensin/dieselvärmare styrenhet-,skoda,octavia,2,94.4,94.4,0.0,0.0,0.0,94.4,94.4,0.0
+brake disc-(front),skoda,octavia,2,11.8,11.8,0.0,0.0,0.0,11.8,11.8,0.0
+drive shaft-(left front),toyota,corolla,2,236.8,236.8,0.0,0.0,0.0,236.8,236.8,0.0
+"dörr styrenhet- , e-(right)",vw,golf,2,106.8,106.8,0.0,0.0,0.0,106.8,106.8,0.0
+"gear lever- , e-",vw,golf,2,176.9,176.9,0.0,0.0,0.0,176.9,176.9,0.0
+main cylinder-,toyota,corolla,2,60.4,60.4,0.0,0.0,0.0,60.4,60.4,0.0
+passenger airbag-,toyota,corolla,2,296.5,296.5,0.0,0.0,0.0,296.5,296.5,0.0
+rear axle beam-,toyota,corolla,2,415.2,415.2,0.0,0.0,0.0,415.2,415.2,0.0
+sump-,skoda,octavia,2,107.1,107.1,0.0,0.0,0.0,107.1,107.1,0.0
+abs hydraulic pump-,skoda,octavia,1,471.8,471.8,,,,471.8,471.8,0.0
+abs hydraulic pump-,toyota,corolla,1,530.9,530.9,,,,530.9,530.9,0.0
+actuator loom -(left),toyota,corolla,1,56.2,56.2,,,,56.2,56.2,0.0
+airbag front sensor-(right front),toyota,corolla,1,47.2,47.2,,,,47.2,47.2,0.0
+aktivt kollisionsskydd sensor-(left),skoda,octavia,1,224.1,224.1,,,,224.1,224.1,0.0
+"alternator bracket / accessories- , e-",vw,golf,1,35.5,35.5,,,,35.5,35.5,0.0
+"avgas temperaturgivare- , e-",vw,golf,1,47.4,47.4,,,,47.4,47.4,0.0
+"battery box / fixing / holder- , e-",vw,golf,1,35.5,35.5,,,,35.5,35.5,0.0
+belt tensioner for fan belt-,skoda,octavia,1,23.8,23.8,,,,23.8,23.8,0.0
+"brake caliper- , e-(right front)",vw,golf,1,147.5,147.5,,,,147.5,147.5,0.0
+"brake caliper- , e-(right rear)",vw,golf,1,180.5,180.5,,,,180.5,180.5,0.0
+brake disc-(front),toyota,corolla,1,11.8,11.8,,,,11.8,11.8,0.0
+brake disc-(rear),skoda,octavia,1,11.8,11.8,,,,11.8,11.8,0.0
+brake servo-,skoda,octavia,1,177.6,177.6,,,,177.6,177.6,0.0
+"bränslepump styrenhet- , e-",vw,golf,1,55.1,55.1,,,,55.1,55.1,0.0
+caliper bracket-,toyota,corolla,1,67.3,67.3,,,,67.3,67.3,0.0
+"caliper bracket- , e-",vw,golf,1,47.2,47.2,,,,47.2,47.2,0.0
+"caliper bracket- , e-(left front)",vw,golf,1,50.4,50.4,,,,50.4,50.4,0.0
+caliper bracket-(left front),skoda,octavia,1,59.3,59.3,,,,59.3,59.3,0.0
+caliper bracket-(right front),skoda,octavia,1,59.3,59.3,,,,59.3,59.3,0.0
+clutch cylinder main-,toyota,corolla,1,41.6,41.6,,,,41.6,41.6,0.0
+clutch cylinder slave-,toyota,corolla,1,29.5,29.5,,,,29.5,29.5,0.0
+coil-,toyota,corolla,1,53.1,53.1,,,,53.1,53.1,0.0
+curtain airbags-(left),toyota,corolla,1,260.5,260.5,,,,260.5,260.5,0.0
+diesel injection pump-,skoda,octavia,1,178.5,178.5,,,,178.5,178.5,0.0
+diesel tank-,skoda,octavia,1,236.8,236.8,,,,236.8,236.8,0.0
+"drive shaft- , e-(right rear)",vw,golf,1,309.4,309.4,,,,309.4,309.4,0.0
+drive shaft-(left front),skoda,octavia,1,259.5,259.5,,,,259.5,259.5,0.0
+drive shaft-(right front),skoda,octavia,1,294.9,294.9,,,,294.9,294.9,0.0
+"dörr styrenhet- , e-(left)",vw,golf,1,106.6,106.6,,,,106.6,106.6,0.0
+engine block-,skoda,octavia,1,89.0,89.0,,,,89.0,89.0,0.0
+engine casing-,toyota,corolla,1,47.4,47.4,,,,47.4,47.4,0.0
+"engine casing- , e-",vw,golf,1,70.8,70.8,,,,70.8,70.8,0.0
+"engine diesel- , e-",vw,golf,1,3499.3,3499.3,,,,3499.3,3499.3,0.0
+engine gasoline-,skoda,octavia,1,4601.2,4601.2,,,,4601.2,4601.2,0.0
+engine gasoline-,toyota,corolla,1,3657.4,3657.4,,,,3657.4,3657.4,0.0
+fuel filter / holder-,toyota,corolla,1,35.5,35.5,,,,35.5,35.5,0.0
+fuel pump electric-,skoda,octavia,1,141.5,141.5,,,,141.5,141.5,0.0
+"fuel tank lid- , e-",vw,golf,1,17.8,17.8,,,,17.8,17.8,0.0
+fuse box / electricity central-,toyota,corolla,1,94.7,94.7,,,,94.7,94.7,0.0
+gear box 6 speed -(front),toyota,corolla,1,899.8,899.8,,,,899.8,899.8,0.0
+gear box 6 speed-,skoda,octavia,1,2358.8,2358.8,,,,2358.8,2358.8,0.0
+gear box bracket-,toyota,corolla,1,47.6,47.6,,,,47.6,47.6,0.0
+"gear box bracket- , e-",vw,golf,1,53.1,53.1,,,,53.1,53.1,0.0
+gear distributor box-,skoda,octavia,1,949.0,949.0,,,,949.0,949.0,0.0
+hand brake lever-,toyota,corolla,1,47.2,47.2,,,,47.2,47.2,0.0
+hub rear-(left rear),toyota,corolla,1,101.1,101.1,,,,101.1,101.1,0.0
+injection control unit -(interior front),toyota,corolla,1,362.3,362.3,,,,362.3,362.3,0.0
+injection control unit-,skoda,octavia,1,471.9,471.9,,,,471.9,471.9,0.0
+injection control unit-,toyota,corolla,1,535.5,535.5,,,,535.5,535.5,0.0
+insp.pump diesel control unit-,skoda,octavia,1,353.9,353.9,,,,353.9,353.9,0.0
+inverter 12 -> 220 v-(interior rear),skoda,octavia,1,141.5,141.5,,,,141.5,141.5,0.0
+kamera utvändig -(rear),toyota,corolla,1,307.8,307.8,,,,307.8,307.8,0.0
+kamera utvändig-,skoda,octavia,1,296.5,296.5,,,,296.5,296.5,0.0
+knee -(left front),toyota,corolla,1,67.4,67.4,,,,67.4,67.4,0.0
+ljusinställning lägesgivare -(front),skoda,octavia,1,83.0,83.0,,,,83.0,83.0,0.0
+main cylinder-,skoda,octavia,1,83.0,83.0,,,,83.0,83.0,0.0
+"main cylinder- , e-",vw,golf,1,72.2,72.2,,,,72.2,72.2,0.0
+mass air-flow sensor-,toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+motor bracket -(left front),toyota,corolla,1,35.5,35.5,,,,35.5,35.5,0.0
+motor bracket -(rear),toyota,corolla,1,35.5,35.5,,,,35.5,35.5,0.0
+motor bracket -(right front),toyota,corolla,1,47.4,47.4,,,,47.4,47.4,0.0
+motor bracket-,skoda,octavia,1,59.5,59.5,,,,59.5,59.5,0.0
+motor bracket-,toyota,corolla,1,47.4,47.4,,,,47.4,47.4,0.0
+motor cushion-,toyota,corolla,1,23.6,23.6,,,,23.6,23.6,0.0
+"other control unit- , e-",vw,golf,1,309.4,309.4,,,,309.4,309.4,0.0
+other relay-,toyota,corolla,1,41.6,41.6,,,,41.6,41.6,0.0
+"parkeringshjälp frontsensor- , e-",vw,golf,1,59.5,59.5,,,,59.5,59.5,0.0
+parking control unit-,skoda,octavia,1,94.9,94.9,,,,94.9,94.9,0.0
+passenger airbag-,skoda,octavia,1,486.1,486.1,,,,486.1,486.1,0.0
+piston / rod-,skoda,octavia,1,41.6,41.6,,,,41.6,41.6,0.0
+rear axle-,skoda,octavia,1,414.4,414.4,,,,414.4,414.4,0.0
+rear sensor-,skoda,octavia,1,59.5,59.5,,,,59.5,59.5,0.0
+rear sensor-(interior),toyota,corolla,1,59.2,59.2,,,,59.2,59.2,0.0
+rear sensor-(rear),skoda,octavia,1,71.4,71.4,,,,71.4,71.4,0.0
+"sensor ac inner temperature- , e-",vw,golf,1,23.7,23.7,,,,23.7,23.7,0.0
+"shock absorbers rear- , e-(rear)",vw,golf,1,59.2,59.2,,,,59.2,59.2,0.0
+shock absorbers rear-(rear),toyota,corolla,1,61.7,61.7,,,,61.7,61.7,0.0
+"signal horn- , e-",vw,golf,1,29.6,29.6,,,,29.6,29.6,0.0
+starter gasoline-,skoda,octavia,1,134.8,134.8,,,,134.8,134.8,0.0
+"starter gasoline- , e-",vw,golf,1,148.0,148.0,,,,148.0,148.0,0.0
+steering wheel airbag-,toyota,corolla,1,296.0,296.0,,,,296.0,296.0,0.0
+sump-,toyota,corolla,1,23.6,23.6,,,,23.6,23.6,0.0
+"suspension- , e-(rear)",vw,golf,1,59.2,59.2,,,,59.2,59.2,0.0
+tank lid -(right rear),skoda,octavia,1,59.1,59.1,,,,59.1,59.1,0.0
+tank lid-,toyota,corolla,1,47.4,47.4,,,,47.4,47.4,0.0
+trailing link rear -(left rear lower),toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+trailing link rear -(left rear),toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+trailing link rear -(left upper),toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+trailing link rear -(right rear lower),toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+trailing link rear -(right rear),toyota,corolla,1,71.0,71.0,,,,71.0,71.0,0.0
+"trailing link rear- , e-(right rear upper)",vw,golf,1,47.4,47.4,,,,47.4,47.4,0.0
+"trailing link rear- , e-(right upper)",vw,golf,1,47.4,47.4,,,,47.4,47.4,0.0
+trailing link rear-(right rear lower),skoda,octavia,1,83.0,83.0,,,,83.0,83.0,0.0
+wheel bearing spindle shaft-(right rear),toyota,corolla,1,206.5,206.5,,,,206.5,206.5,0.0
+wiper arm motor relay-,toyota,corolla,1,32.0,32.0,,,,32.0,32.0,0.0

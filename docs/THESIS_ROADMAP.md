@@ -23,6 +23,8 @@ The cleaned modeling dataset has been characterized and is suitable for a bachel
 
 The earlier `product_id` grouped split has been verified as a leakage-aware optimistic baseline for repeated listing observations. It is preserved as historical/contextual evidence and an operational benchmark, not as the final conservative thesis result.
 
+The final strict evaluation protocol has now been selected. It uses connected components built from `product_id` and `canonical(part_name, brand, model, year_start, year_end)`. The full decision record is maintained in [docs/evaluation/01_PROTOCOL_DECISION.md](evaluation/01_PROTOCOL_DECISION.md).
+
 ## Completed Checks
 
 - [x] Dataset characterized and assessed as suitable for proof-of-concept use.
@@ -35,20 +37,19 @@ The earlier `product_id` grouped split has been verified as a leakage-aware opti
 
 ## Current Phase
 
-Document methodology and define the final strict evaluation protocol before generating new final splits or rerunning models.
+Generate the final strict split and rerun final evaluation under the documented connected-component protocol.
 
-The immediate methodological task is to finalize the strict identity rule used to prevent comparable-part leakage.
+The immediate implementation task is to create final split artifacts from `datasets/cleaned/clean_master_dataset.csv` using the selected strict identity rule.
 
 ## Next Milestones
 
-1. Decide final strict identity rule.
-2. Generate a new strict split directly from `datasets/cleaned/clean_master_dataset.csv`.
-3. Rerun model selection under the new strict split.
-4. Evaluate the selected model on the final strict holdout.
-5. Run compatibility-family robustness analysis.
-6. Run SHAP explainability for the final model.
-7. Run subgroup analysis by brand, category, and price band.
-8. Prepare final thesis artifacts and tables.
+1. Generate a new strict connected-component split directly from `datasets/cleaned/clean_master_dataset.csv`.
+2. Rerun model selection under the new strict split.
+3. Evaluate the selected model on the final strict holdout.
+4. Run compatibility-family robustness analysis.
+5. Run SHAP explainability for the final model.
+6. Run subgroup analysis by brand, category, and price band.
+7. Prepare final thesis artifacts and tables.
 
 ## GitHub Issue Mapping
 
@@ -56,9 +57,9 @@ The current roadmap maps to the open DPPM thesis issues below.
 
 | Area | Issue | Status |
 | --- | --- | --- |
-| Strict identity rule and strict split design | #34 | In progress |
+| Strict identity rule and strict split design | #34 | Documented |
 | Preserve grouped baseline / transition narrative | #38 | In progress |
-| Generate final strict split | #35 | Not started |
+| Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
 | Strict model selection rerun | #36 | Not started |
 | Final strict holdout evaluation | #37 | Not started |
 | Compatibility-family robustness | #46 | Not started |
@@ -75,19 +76,23 @@ The current roadmap maps to the open DPPM thesis issues below.
 - [x] Grouped baseline verification
 - [x] Current strict identity implementation review
 - [x] Documentation system created
+- [x] Candidate identity and fragmentation diagnostics completed
+- [x] Connected-component split balance diagnostics completed
+- [x] Final strict evaluation protocol documented
 
 ### Current Decisions
 
 - [x] Do not recollect the dataset unless a fundamental invalidating issue is found.
 - [x] Preserve product-id grouped baseline as optimistic/contextual benchmark.
-- [x] Do not accept the old strict setup automatically as the final thesis protocol.
+- [x] Use connected-component splitting as the final strict thesis protocol.
 - [x] Generate the future final strict split directly from `clean_master_dataset.csv`.
+- [x] Use `canonical(part_name, brand, model, year_start, year_end)` as the strict identity key.
 
 ### Future Work
 
-- [ ] Finalize strict identity rule.
-- [ ] Implement or document strict split generation.
-- [ ] Generate final strict split.
+- [x] Finalize strict identity rule.
+- [x] Document strict split generation requirements.
+- [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
 - [ ] Rerun model selection.
 - [ ] Evaluate final strict holdout.
 - [ ] Run robustness and explainability analyses.
