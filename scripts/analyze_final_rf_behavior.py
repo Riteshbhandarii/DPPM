@@ -29,7 +29,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Analyze final strict random-forest out-of-fold prediction behavior."
     )
-    parser.add_argument("--data-path", action="append", default=["datasets/splits/train_grouped.csv"])
+    parser.add_argument(
+        "--data-path",
+        action="append",
+        default=None,
+        help="Input split files. Defaults to datasets/splits/train_grouped.csv.",
+    )
     parser.add_argument("--summary-path", default=DEFAULT_SUMMARY_PATH)
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--cv-splits", type=int, default=4)
@@ -200,7 +205,7 @@ def main() -> None:
     if args.quick_estimators is not None:
         config["model_params"]["n_estimators"] = args.quick_estimators
 
-    frame = load_split_frames(args.data_path)
+    frame = load_split_frames(args.data_path or ["datasets/splits/train_grouped.csv"])
     frame, group_columns = add_part_identity_group(frame, args.group_columns)
     missing = [feature for feature in features if feature not in frame.columns]
     if missing:

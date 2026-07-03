@@ -24,11 +24,16 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Evaluate the selected random forest with stricter part-identity grouped CV."
     )
-    parser.add_argument("--data-path", action="append", default=["datasets/splits/train_grouped.csv"])
+    parser.add_argument(
+        "--data-path",
+        action="append",
+        default=None,
+        help="Input split files. Defaults to datasets/splits/train_grouped.csv.",
+    )
     parser.add_argument("--cv-splits", type=int, default=4)
     parser.add_argument(
         "--summary-path",
-        default="artifacts/random_forest_tuning/best_tuning_summary.json",
+        default="artifacts/random_forest_tuning_strict/best_tuning_summary.json",
     )
     parser.add_argument(
         "--output-dir",
@@ -57,7 +62,7 @@ def main() -> None:
             },
         }
 
-    frame = load_split_frames(args.data_path)
+    frame = load_split_frames(args.data_path or ["datasets/splits/train_grouped.csv"])
     frame, group_columns = add_part_identity_group(frame, args.group_columns)
     missing = [column for column in features if column not in frame.columns]
     if missing:

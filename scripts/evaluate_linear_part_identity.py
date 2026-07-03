@@ -31,7 +31,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Evaluate the selected Ridge baseline with stricter part-identity grouped CV."
     )
-    parser.add_argument("--data-path", action="append", default=["datasets/splits/train_grouped.csv"])
+    parser.add_argument(
+        "--data-path",
+        action="append",
+        default=None,
+        help="Input split files. Defaults to datasets/splits/train_grouped.csv.",
+    )
     parser.add_argument("--cv-splits", type=int, default=4)
     parser.add_argument(
         "--feature-variant",
@@ -86,7 +91,7 @@ def main() -> None:
         "onehot_min_frequency": 5,
     }
 
-    frame = load_split_frames(args.data_path)
+    frame = load_split_frames(args.data_path or ["datasets/splits/train_grouped.csv"])
     frame, group_columns = add_part_identity_group(frame, args.group_columns)
     feature_catalog = build_feature_catalog(
         frame.drop(columns=["part_identity_group"]),
