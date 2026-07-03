@@ -28,7 +28,12 @@ from src.tree_modeling import TARGET_COLUMN  # noqa: E402
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Local SHAP examples for final strict RF.")
-    parser.add_argument("--data-path", action="append", default=["datasets/splits/train_grouped.csv"])
+    parser.add_argument(
+        "--data-path",
+        action="append",
+        default=None,
+        help="Input split files. Defaults to datasets/splits/train_grouped.csv.",
+    )
     parser.add_argument("--summary-path", default=DEFAULT_SUMMARY_PATH)
     parser.add_argument("--behavior-path", default="artifacts/final_model_behavior/oof_predictions.csv")
     parser.add_argument("--output-dir", default="artifacts/final_model_shap")
@@ -93,7 +98,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     frame, features, config, summary = load_final_rf_inputs(
-        args.data_path,
+        args.data_path or ["datasets/splits/train_grouped.csv"],
         summary_path=args.summary_path,
         group_columns=args.group_columns,
         drop_features=args.drop_features,
