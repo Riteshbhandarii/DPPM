@@ -36,3 +36,6 @@ catboost_info/
 
 # Generated deployment bundles
 artifacts/random_forest_final/
+
+# Quick-mode smoke-test outputs
+artifacts/*_quick/

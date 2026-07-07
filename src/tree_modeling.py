@@ -19,7 +19,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 try:
     from xgboost import XGBRegressor
-except ImportError:  # pragma: no cover - handled by CLI/runtime checks
+except Exception:  # pragma: no cover - import also fails with XGBoostError when libomp is missing
     XGBRegressor = None
 
 

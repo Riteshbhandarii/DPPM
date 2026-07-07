@@ -37,9 +37,9 @@ The final strict evaluation protocol has now been selected. It uses connected co
 
 ## Current Phase
 
-Generate the final strict split and rerun final evaluation under the documented connected-component protocol.
+The final strict split is frozen (`datasets/splits_strict/`, seed 32) and the stage-1 model comparison under it is complete (2026-07-07): all four models were compared with their known configurations on the fixed strict validation split. Ridge (92.05 EUR MAE) and Random Forest (92.93) advance to the tuning stage; XGBoost (106.91) and CatBoost (168.82) were eliminated. Protocol and results: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md).
 
-The immediate implementation task is to create final split artifacts from `datasets/cleaned/clean_master_dataset.csv` using the selected strict identity rule.
+The immediate task is stage-2 tuning of the two finalists (full config search ranked by component-grouped CV inside the strict training split), followed by the single final holdout evaluation.
 
 ## Next Milestones
 
@@ -60,8 +60,8 @@ The current roadmap maps to the open DPPM thesis issues below.
 | Strict identity rule and strict split design | #34 | Documented |
 | Preserve grouped baseline / transition narrative | #38 | In progress |
 | Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
-| Strict model selection rerun | #36 | Not started |
-| Final strict holdout evaluation | #37 | Not started |
+| Strict model selection rerun | #36 | Stage 1 done (4-model comparison, 2026-07-07) — finalist tuning next |
+| Final strict holdout evaluation | #37 | Not started (guarded run-once notebook ready) |
 | Compatibility-family robustness | #46 | Not started |
 | Subgroup analysis | #41 | Not started |
 | Feature leakage assessment | #42 | Not started |
