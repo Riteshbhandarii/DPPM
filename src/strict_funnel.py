@@ -76,17 +76,41 @@ SCREEN_RANK_COLUMNS = ["validation_MAE", "validation_RMSE", "feature_count"]
 def json_default(value: Any) -> Any:
     """Convert numpy scalars/arrays to plain Python so summaries round-trip cleanly."""
 
+    if isinstance(value, np.bool_):
+        return bool(value)
     if isinstance(value, np.integer):
         return int(value)
     if isinstance(value, np.floating):
-        return float(value)
+        value = float(value)
+        return value if np.isfinite(value) else None
     if isinstance(value, np.ndarray):
         return value.tolist()
     raise TypeError(f"Object of type {type(value).__name__} is not JSON serializable")
 
 
+def sanitize_for_json(value: Any) -> Any:
+    """Recursively convert summaries to strict JSON-compatible values."""
+
+    if isinstance(value, dict):
+        return {str(key): sanitize_for_json(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [sanitize_for_json(item) for item in value]
+    if isinstance(value, np.ndarray):
+        return sanitize_for_json(value.tolist())
+    if isinstance(value, np.bool_):
+        return bool(value)
+    if isinstance(value, np.integer):
+        return int(value)
+    if isinstance(value, np.floating):
+        value = float(value)
+    if isinstance(value, float):
+        return value if np.isfinite(value) else None
+    return value
+
+
 def write_summary_json(path: Path, summary: dict[str, Any]) -> None:
-    path.write_text(json.dumps(summary, indent=2, default=json_default) + "\n", encoding="utf-8")
+    clean_summary = sanitize_for_json(summary)
+    path.write_text(json.dumps(clean_summary, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------
@@ -111,16 +135,27 @@ def euro_metrics(y_true: pd.Series, y_pred: np.ndarray, prefix: str) -> dict[str
 # ---------------------------------------------------------------------------
 
 def generate_ridge_search_configs() -> dict[str, dict[str, Any]]:
-    """Log-target Ridge grid around the previously selected alpha=0.05 baseline."""
+    """Log-target Ridge grid across regularization and rare-category grouping.
+
+    Ridge has one main model hyperparameter (alpha). A log-spaced grid is used because
+    useful regularization strengths can differ by orders of magnitude. The one-hot
+    minimum frequency is tuned lightly because rare categorical part labels can affect
+    stability in this dataset.
+    """
 
     configs: dict[str, dict[str, Any]] = {}
-    for alpha in [0.01, 0.05, 0.1, 0.3, 1.0, 3.0]:
-        name = f"log_ridge_alpha_{str(alpha).replace('.', '_')}"
-        configs[name] = {
-            "target_mode": "log",
-            "onehot_min_frequency": 5,
-            "model_params": {"alpha": alpha},
-        }
+    alpha_grid = [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0, 30.0]
+    onehot_min_frequencies = [2, 5, 10]
+
+    for alpha in alpha_grid:
+        alpha_name = f"{alpha:g}".replace(".", "_")
+        for onehot_min_frequency in onehot_min_frequencies:
+            name = f"log_ridge_alpha_{alpha_name}_minfreq_{onehot_min_frequency}"
+            configs[name] = {
+                "target_mode": "log",
+                "onehot_min_frequency": onehot_min_frequency,
+                "model_params": {"alpha": alpha},
+            }
     return configs
 
 
@@ -643,6 +678,25 @@ def cap_configs_for_quick_mode(configs: dict[str, dict[str, Any]], max_configs: 
     return capped
 
 
+def apply_random_forest_n_jobs(
+    configs: dict[str, dict[str, Any]],
+    n_jobs: int | None,
+) -> dict[str, dict[str, Any]]:
+    """Return configs with an explicit Random Forest worker cap when requested."""
+
+    if n_jobs is None:
+        return configs
+    if n_jobs == 0 or n_jobs < -1:
+        raise ValueError("rf_n_jobs must be -1, a positive integer, or None.")
+
+    capped_configs = {}
+    for name, config in configs.items():
+        params = dict(config["model_params"])
+        params["n_jobs"] = int(n_jobs)
+        capped_configs[name] = {**config, "model_params": params}
+    return capped_configs
+
+
 def run_model_tuning(
     model: str,
     train_df: pd.DataFrame,
@@ -654,12 +708,15 @@ def run_model_tuning(
     cv_splits: int = 4,
     random_seed: int = 42,
     quick: bool = False,
+    rf_n_jobs: int | None = None,
     progress: Callable[[str], None] = print,
 ) -> dict[str, Any]:
     """Stage 2 for one model: screening -> finalist CV -> refinement CV. Saves artifacts."""
 
     feature_sets = model_feature_sets(model, train_df)
     configs = search_configs_for(model, random_trials=random_trials, random_seed=random_seed)
+    if model == "random_forest":
+        configs = apply_random_forest_n_jobs(configs, rf_n_jobs)
     if quick:
         feature_sets = dict(list(feature_sets.items())[:2])
         configs = cap_configs_for_quick_mode(configs)
@@ -672,6 +729,8 @@ def run_model_tuning(
     refinement = refinement_configs_for(
         model, dict(best_finalist["config"]), refinement_trials, random_seed + 1000
     )
+    if model == "random_forest":
+        refinement = apply_random_forest_n_jobs(refinement, rf_n_jobs)
     if quick:
         refinement = cap_configs_for_quick_mode(refinement)
     refinement_candidates = [
@@ -697,6 +756,7 @@ def run_model_tuning(
     best_summary["cv_group_column"] = COMPONENT_GROUP_COLUMN
     best_summary["cv_splits"] = int(cv_splits)
     best_summary["quick_mode"] = bool(quick)
+    best_summary["rf_n_jobs"] = int(rf_n_jobs) if model == "random_forest" and rf_n_jobs is not None else None
 
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
