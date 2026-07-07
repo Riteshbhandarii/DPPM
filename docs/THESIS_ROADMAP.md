@@ -37,19 +37,17 @@ The final strict evaluation protocol has now been selected. It uses connected co
 
 ## Current Phase
 
-The final strict split is frozen (`datasets/splits_strict/`, seed 32) and the stage-1 model comparison under it is complete (2026-07-07): all four models were compared with their known configurations on the fixed strict validation split. Ridge (92.05 EUR MAE) and Random Forest (92.93) advance to the tuning stage; XGBoost (106.91) and CatBoost (168.82) were eliminated. Protocol and results: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md).
+The final strict split is frozen (`datasets/splits_strict/`, seed 32). The stage-1 model comparison under it is complete (2026-07-07): all four models were compared with their known configurations on the fixed strict validation split. Ridge (92.05 EUR MAE) and Random Forest (92.93) advanced to stage 2; XGBoost (106.91) and CatBoost (168.82) were eliminated. Protocol and results: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md).
 
-The immediate task is stage-2 tuning of the two finalists (full config search ranked by component-grouped CV inside the strict training split), followed by the single final holdout evaluation.
+Stage-2 tuning is now complete. Under component-grouped cross-validation inside the strict training split, Random Forest won the primary MAE comparison and Ridge remained the linear runner-up. The remaining task is the single final strict holdout evaluation.
 
 ## Next Milestones
 
-1. Generate a new strict connected-component split - **done**, frozen under `datasets/splits_strict/`.
-2. Rerun model selection under the new strict split - **stage 1 done** (four-model comparison, 2026-07-07); stage 2 is finalist tuning (Ridge, Random Forest) via component-grouped CV.
-3. Evaluate the selected model on the final strict holdout (guarded run-once notebook ready).
-4. Run compatibility-family robustness analysis.
-5. Run SHAP explainability for the final model.
-6. Run subgroup analysis by brand, category, and price band.
-7. Prepare final thesis artifacts and tables.
+1. Evaluate the selected model on the final strict holdout.
+2. Run compatibility-family robustness analysis.
+3. Run SHAP explainability for the final model.
+4. Run subgroup analysis by brand, category, and price band.
+5. Prepare final thesis artifacts and tables.
 
 ## GitHub Issue Mapping
 
@@ -60,7 +58,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 | Strict identity rule and strict split design | #34 | Documented |
 | Preserve grouped baseline / transition narrative | #38 | In progress |
 | Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
-| Strict model selection rerun | #36 | Stage 1 done (4-model comparison, 2026-07-07) — finalist tuning next |
+| Strict model selection rerun | #36 | Stage 2 done (strict tuning winner: Random Forest) |
 | Final strict holdout evaluation | #37 | Not started (guarded run-once notebook ready) |
 | Compatibility-family robustness | #46 | Not started |
 | Subgroup analysis | #41 | Not started |
@@ -93,8 +91,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 - [x] Finalize strict identity rule.
 - [x] Document strict split generation requirements.
 - [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
-- [x] Stage 1: four-model comparison under the strict split (2026-07-07) - finalists: Ridge, Random Forest.
-- [ ] Stage 2: tune the finalists with component-grouped CV.
-- [ ] Evaluate final strict holdout (run once).
+- [x] Rerun model selection.
+- [ ] Evaluate final strict holdout.
 - [ ] Run robustness and explainability analyses.
 - [ ] Prepare final thesis results tables.

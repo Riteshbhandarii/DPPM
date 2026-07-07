@@ -1,0 +1,17 @@
+{
+  "started_at_utc": "2026-07-07 19:58:11 UTC",
+  "finished_at_utc": "2026-07-07 20:35:29 UTC",
+  "duration_seconds": 2237.714568,
+  "model": "random_forest",
+  "train_rows": 7930,
+  "validation_rows": 1695,
+  "output_dir": "artifacts/strict_model_tuning/random_forest",
+  "random_trials": 32,
+  "refinement_trials": 20,
+  "top_k_finalists": 10,
+  "cv_splits": 4,
+  "random_seed": 42,
+  "rf_n_jobs": 6,
+  "quick": false,
+  "strict_test_split_used": false
+}

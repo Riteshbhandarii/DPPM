@@ -91,3 +91,14 @@ price, and predict the training-set median price of the listing's subcategory.
 | (dummy: global median) | 238.27 | — | — | 59.10 |
 
 Per the pre-registered rule, **Ridge and Random Forest** proceed to the tuning stage.
+
+## 7. Stage-2 strict tuning result (2026-07-07)
+
+Stage-2 tuning used the strict connected-component protocol on the frozen training split. The test split was still not read, loaded, or touched.
+
+| Model | Feature set | Strict CV MAE (€) | RMSE (€) | R² | Median AE (€) |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Ridge | Trusted recommended features without listing dates without OEM number | 106.71 | 323.23 | 0.675 | 23.78 |
+| Random Forest | Trusted extended Traficom stack without OEM number | **105.33** | **265.63** | **0.765** | 34.85 |
+
+Under the primary MAE criterion, Random Forest is the strict tuning winner.

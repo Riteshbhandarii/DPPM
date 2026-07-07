@@ -33,8 +33,8 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | --- | --- | --- |
 | Data collection | Done | Marketplace listing snapshots collected with the Playwright crawler. |
 | Data preparation | Done | Cleaned master dataset and grouped splits are available. |
-| Modeling | In progress | Four-model comparison on the strict split done (2026-07-07); finalist tuning (Ridge, Random Forest) next. |
-| Evaluation | In progress | Strict connected-component split frozen; stage-1 comparison done; component-grouped CV tuning and the single final holdout remain. |
+| Modeling | Done | Linear/Ridge, Random Forest, XGBoost, and CatBoost experiments completed; strict stage-2 tuning finished and Random Forest won the strict MAE comparison. |
+| Evaluation | In progress | Fixed validation, product-id grouped CV, strict part-identity CV, and held-out grouped test results are available; the final strict holdout is still pending. |
 | Explainability | Mostly done | SHAP workflows and outputs exist for the main model paths. |
 | Prototype | Mostly done | Streamlit and FastAPI proof-of-concept interfaces exist. |
 | Thesis writing | In progress | Final writing, result presentation, and discussion polishing remain. |
@@ -56,12 +56,12 @@ The strict split keeps every connected component - rows linked by the same `prod
 | Role | Purpose |
 | --- | --- |
 | Operational/UI model | Context-rich listing-price model used in the demo interface. |
-| Strict thesis model | Winner of the strict-protocol tuning (Ridge vs Random Forest, pending) evaluated once on the strict holdout. |
+| Strict thesis model | Strict Random Forest path selected under component-grouped cross-validation for the main thesis result. |
 | Robustness/conservative variant | Variant with selected listing-history/time features removed to test sensitivity. |
 
 ## Key results summary
 
-The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
+The current strict thesis model direction is **Random Forest**. The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
 
 Thesis evidence comes from the **strict connected-component split** (`datasets/splits_strict/`). The earlier product-id grouped results are preserved as an optimistic historical baseline only, and the earlier OEM-based strict CV is superseded by the connected-component protocol (decision record in `docs/evaluation/`).
 
@@ -83,6 +83,15 @@ All four models with their known configurations were fit on `train_strict` and s
 ### Historical baseline (original product-id split)
 
 The original grouped split produced far lower errors (fixed validation about 18 EUR, grouped CV about 28 EUR, held-out grouped test about 22 EUR) because comparable part identities could still cross splits. The gap between those numbers and the strict results quantifies the comparable-part identity leakage. It is part of the thesis narrative, not evidence of final model performance.
+
+### Strict stage-2 tuning comparison
+
+| Model | Feature set | Strict CV MAE | Strict CV RMSE | Strict CV R2 | Strict CV Median AE |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Ridge | Trusted recommended features without listing dates without OEM number | 106.7056 | 323.2321 | 0.6754 | 23.7836 |
+| Random Forest | Trusted extended Traficom stack without OEM number | **105.3338** | **265.6255** | **0.7654** | 34.8453 |
+
+Random Forest is the selected strict winner under the primary MAE criterion. The final strict holdout evaluation is still pending.
 
 ## Evaluation layers
 
@@ -182,7 +191,7 @@ uvicorn app.fastapi_app:app --reload
 | Phase | Status | Focus |
 | --- | --- | --- |
 | Phase 1: Data acquisition and preparation | Done | Crawler, cleaned dataset, registry features, grouped splits. |
-| Phase 2: Modeling and evaluation | Redone under strict protocol | Strict split frozen; four-model comparison done; finalist tuning and single holdout next. |
+| Phase 2: Modeling and evaluation | Mostly done | Model comparison, grouped evaluation, strict tuning winner selected; final strict holdout remains. |
 | Phase 3: Explainability and prototype | Mostly done | SHAP outputs, Streamlit demo, FastAPI demo, tests. |
 | Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
 | Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
@@ -204,4 +213,4 @@ CI is intentionally lightweight. It installs `requirements.txt`, imports core mo
 
 ## Summary
 
-DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, strict split, stage-1 model comparison, explainability tooling, and prototype interfaces are in place. The next thesis step is strict-protocol tuning of Ridge and Random Forest, followed by the single final holdout evaluation.
+DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, grouped evaluation, model comparisons, explainability tooling, and prototype interfaces are already in place. The current strict thesis model direction is Random Forest, while the stricter part-identity evaluation provides the more conservative estimate for thesis interpretation. The final strict holdout is still pending.
