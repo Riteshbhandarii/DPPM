@@ -19,13 +19,13 @@ flowchart LR
     F --> H[Integrated master dataset]
     G --> H
 
-    H --> I[Product-id grouped train validation test split]
-    H --> J[Strict part-identity grouped CV]
+    H --> I[Strict connected-component train validation test split]
+    H --> J[Component-grouped CV]
 
     I --> K[Model training and comparison]
     J --> K
 
-    K --> L[Final model direction: Random Forest]
+    K --> L[Strict finalists: Ridge and Random Forest]
     K --> M[Metrics and model artifacts]
 
     L --> N[SHAP explainability]
@@ -47,7 +47,7 @@ flowchart LR
 | Data preparation | `notebooks/`, `scripts/`                    | Clean listings, integrate registry summaries, and create modeling-ready datasets.                                   |
 | Datasets         | `datasets/`                                 | Store cleaned data, merged data, grouped splits, and registry-derived CSV files.                                    |
 | Modeling         | `notebooks/`, `scripts/`, `src/`            | Train and compare Linear/Ridge, Random Forest, XGBoost, and CatBoost model paths.                                   |
-| Evaluation       | `scripts/`, `artifacts/`                    | Run fixed validation, product-id grouped CV, strict part-identity grouped CV, and held-out grouped test evaluation. |
+| Evaluation       | `scripts/`, `src/`, `artifacts/`            | Historical product-id evaluations plus the strict connected-component protocol: model comparison, component-grouped CV tuning, and a single final holdout. |
 | Explainability   | `artifacts/` and analysis notebooks/scripts | Store and inspect SHAP global and local explanation outputs.                                                        |
 | Prototype UI     | `app/streamlit_app.py`                      | Provide an interactive decision-support demonstration.                                                              |
 | Prediction API   | `app/fastapi_app.py`                        | Provide an API-style proof-of-concept prediction interface.                                                         |
@@ -59,30 +59,26 @@ DPPM uses several evaluation layers because used spare-part listings contain rep
 
 ```mermaid
 flowchart TD
-    A[Clean master dataset] --> B[Fixed validation split]
-    A --> C[Product-id grouped CV]
-    A --> D[Strict part-identity grouped CV]
-    A --> E[Held-out grouped test]
+    A[Clean master dataset] --> B[Historical product-id split and CV]
+    A --> C[Strict connected-component split]
 
-    B --> F[Fast development estimate]
-    C --> G[Listing-group stability estimate]
-    D --> H[Conservative unseen part-identity estimate]
-    E --> I[Final original-split test estimate]
+    C --> D[Stage 1: four-model comparison on strict validation]
+    D --> E[Stage 2: finalist tuning via component-grouped CV]
+    E --> F[Stage 3: single evaluation on untouched strict holdout]
 
-    F --> J[Thesis interpretation]
-    G --> J
-    H --> J
-    I --> J
+    B --> G[Leakage narrative: optimistic historical baseline]
+    F --> H[Thesis claim]
+    G --> H
 ```
 
-| Layer                           | Purpose                                                         | Interpretation                                                        |
-| ------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| Fixed validation split          | Supports quick model selection and comparison.                  | Optimistic development estimate.                                      |
-| Product-id grouped CV           | Keeps repeated observations of the same listing group together. | Stability check across listing groups.                                |
-| Strict part-identity grouped CV | Groups similar part identities together.                        | Conservative robustness estimate for unseen comparable part profiles. |
-| Held-out grouped test           | Uses the untouched original product-id grouped test split.      | Final check under the original split design.                          |
+| Layer                             | Purpose                                                                                   | Interpretation                                          |
+| --------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Historical product-id evaluations | Fixed validation, grouped CV, and grouped test under the original split.                  | Optimistic baseline; quantifies comparable-part leakage. |
+| Strict split fixed validation     | Four-model comparison with known configurations (stage 1, done).                          | Selects the tuning finalists.                           |
+| Strict component-grouped CV       | Ranks tuning candidates; folds grouped by the same connected-component rule as the split. | Selects the final model configuration.                  |
+| Strict untouched holdout          | One guarded evaluation of the single winner, refit on train+validation.                   | The final thesis claim.                                 |
 
-For thesis claims, the strict part-identity grouped CV result should be treated as the safest scientific estimate. The held-out grouped test remains useful as a final check under the original split design.
+For thesis claims, the strict connected-component protocol is the primary evidence. The historical product-id results explain why the strict protocol exists; the earlier OEM-based strict CV is superseded (see `docs/evaluation/`).
 
 ## Prototype boundary
 
