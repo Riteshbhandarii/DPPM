@@ -105,3 +105,26 @@ Boundary: It does not replace the main strict evaluation. The main thesis eviden
 Decision: Old grouped and strict runs are historical/contextual.
 
 Reasoning: The final thesis should rely on the new documented pipeline and future final reruns. Historical runs can explain the development path and motivate methodological decisions, but should not be presented as final results.
+
+## 2026-07-07 - Stage-1 Model Comparison Procedure on the Strict Split
+
+Decision: The four models (Ridge baseline, Random Forest, XGBoost, CatBoost) are compared on the frozen strict split using each model's known configurations from the original workflow, crossed with the trusted feature variants, fit on `train_strict` and scored once on `validation_strict`. No random-search tuning at this stage. The two best models by validation MAE proceed to tuning; the rule was fixed before results existed.
+
+Reasoning: Keeping the procedure identical to the original fixed-validation comparison makes the strict-vs-original difference attributable to the evaluation design alone. Known configurations give every model its best-known setup (library defaults would bias the comparison arbitrarily). Full protocol and bias controls: docs/STRICT_MODEL_COMPARISON.md.
+
+Result (2026-07-07): Ridge 92.05 EUR MAE, Random Forest 92.93, XGBoost 106.91, CatBoost 168.82; subcategory-median dummy 120.54. Ridge and Random Forest proceed to tuning.
+
+## 2026-07-07 - Early Stopping Uses Inner Component-Grouped Carve
+
+Decision: XGBoost and CatBoost early stopping always uses a 10% component-grouped carve of the (fold-)training data, never the validation split or CV fold being scored.
+
+Reasoning: Early stopping on the scored data lets the evaluation set influence training, which biases results optimistically. The original grouped-CV code had this weakness; the strict pipeline corrects it.
+
+
+## 2026-07-07 - Tuning Finalists: Ridge and Random Forest; XGBoost and CatBoost Eliminated
+
+Decision: The strict-protocol tuning stage covers Ridge and Random Forest, per the pre-registered rule (two best models by stage-1 validation MAE). XGBoost and CatBoost receive no further tuning.
+
+Reasoning: XGBoost (106.91 EUR MAE) trailed the untuned linear baseline (92.05) and has underperformed Random Forest under all three evaluation designs in this project (fixed validation, oem-identity strict CV, strict component split). The improvement needed to catch the leaders (~15%) exceeds gains realistically available from tuning already-tuned configurations while the leaders also improve. CatBoost (168.82) trails by ~80%, far beyond any plausible tuning gain, repeating its result under the earlier evaluation design. Tuning investment follows comparison performance under a consistent rule.
+
+Escape hatch: if the finalist cross-validation results are inconclusive, the tuning stage may be widened with a documented amendment - but only before the final holdout runs.
