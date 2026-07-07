@@ -11,7 +11,8 @@ The project is designed as a **decision-support tool for price review**. It is n
 | Document | Purpose |
 | --- | --- |
 | [Architecture](docs/ARCHITECTURE.md) | System overview, data flow, components, and evaluation design. |
-| [Roadmap](docs/ROADMAP.md) | Clear project phases, status, and remaining thesis work. |
+| [Roadmap](docs/THESIS_ROADMAP.md) | Clear project phases, status, and remaining thesis work. |
+| [Strict model comparison](docs/STRICT_MODEL_COMPARISON.md) | Protocol, bias controls, and results of the strict-split model comparison. |
 
 ## Project overview
 
@@ -32,8 +33,8 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | --- | --- | --- |
 | Data collection | Done | Marketplace listing snapshots collected with the Playwright crawler. |
 | Data preparation | Done | Cleaned master dataset and grouped splits are available. |
-| Modeling | Done | Linear/Ridge, Random Forest, XGBoost, and CatBoost experiments completed. |
-| Evaluation | Done | Fixed validation, product-id grouped CV, strict part-identity CV, and held-out grouped test results available. |
+| Modeling | In progress | Four-model comparison on the strict split done (2026-07-07); finalist tuning (Ridge, Random Forest) next. |
+| Evaluation | In progress | Strict connected-component split frozen; stage-1 comparison done; component-grouped CV tuning and the single final holdout remain. |
 | Explainability | Mostly done | SHAP workflows and outputs exist for the main model paths. |
 | Prototype | Mostly done | Streamlit and FastAPI proof-of-concept interfaces exist. |
 | Thesis writing | In progress | Final writing, result presentation, and discussion polishing remain. |
@@ -43,59 +44,58 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | Artifact | Description |
 | --- | --- |
 | `datasets/cleaned/clean_master_dataset.csv` | Final cleaned modeling dataset with **11,321 rows**. |
-| `datasets/splits/train_grouped.csv` | Grouped training split with **7,954 rows**. |
-| `datasets/splits/validation_grouped.csv` | Grouped validation split with **1,689 rows**. |
-| `datasets/splits/test_grouped.csv` | Grouped test split with **1,678 rows**. |
+| `datasets/splits_strict/train_strict.csv` | Strict training split, **7,930 rows** - thesis-final protocol. |
+| `datasets/splits_strict/validation_strict.csv` | Strict validation split, **1,695 rows**. |
+| `datasets/splits_strict/test_strict.csv` | Strict untouched test split, **1,696 rows** - reserved for one final evaluation. |
+| `datasets/splits/*_grouped.csv` | Historical product-id grouped split (7,954 / 1,689 / 1,678 rows) - optimistic baseline only. |
 
-Repeated listing observations are intentionally preserved where useful for listing-history construction. The grouped split keeps all observations from the same `product_id` listing group in exactly one split.
+The strict split keeps every connected component - rows linked by the same `product_id` or the same canonical part identity (`part_name + brand + model + year_start + year_end`) - in exactly one split (seed 32; provenance and leakage assertions in `datasets/splits_strict/strict_split_summary.json`). Repeated listing observations are intentionally preserved where useful for listing-history construction.
 
 ## Model roles
 
 | Role | Purpose |
 | --- | --- |
 | Operational/UI model | Context-rich listing-price model used in the demo interface. |
-| Strict thesis model | Stricter Random Forest modeling path used for the main thesis result. |
+| Strict thesis model | Winner of the strict-protocol tuning (Ridge vs Random Forest, pending) evaluated once on the strict holdout. |
 | Robustness/conservative variant | Variant with selected listing-history/time features removed to test sensitivity. |
 
 ## Key results summary
 
-The current final model direction is **Random Forest**. The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
+The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
 
-### Fixed validation comparison
+Thesis evidence comes from the **strict connected-component split** (`datasets/splits_strict/`). The earlier product-id grouped results are preserved as an optimistic historical baseline only, and the earlier OEM-based strict CV is superseded by the connected-component protocol (decision record in `docs/evaluation/`).
 
-| Model | Feature set | Validation MAE | Validation RMSE | Validation R2 |
-| --- | --- | ---: | ---: | ---: |
-| Random Forest | Trusted recommended features without listing dates | **18.2409** | 48.6056 | 0.9927 |
-| XGBoost | Trusted recommended features | 18.8845 | **44.5546** | **0.9938** |
+### Strict split model comparison (stage 1, 2026-07-07)
 
-### Product-id grouped CV comparison
+All four models with their known configurations were fit on `train_strict` and scored once on `validation_strict`. Full protocol and bias controls: [docs/STRICT_MODEL_COMPARISON.md](docs/STRICT_MODEL_COMPARISON.md).
 
-| Model | Grouped CV MAE | Grouped CV RMSE | Grouped CV R2 |
-| --- | ---: | ---: | ---: |
-| Random Forest | **28.0424 +/- 4.7105** | 75.5137 | 0.9816 |
-| XGBoost | 28.9228 +/- 7.3198 | **74.5482** | **0.9819** |
-
-### Strict part-identity grouped CV comparison
-
-| Model | Part-identity grouped CV MAE | RMSE | R2 | Median AE |
+| Model | Validation MAE | RMSE | R2 | Median AE |
 | --- | ---: | ---: | ---: | ---: |
-| Random Forest, no `oem_number` | **34.4796 +/- 2.7151** | **70.3158** | **0.9864** | **12.3629** |
-| XGBoost, no date offsets/no `oem_number` | 40.3583 +/- 4.4666 | 87.1192 | 0.9789 | 16.7802 |
-| Linear Ridge, clean rerun | 53.6425 +/- 2.8193 | 152.9400 | 0.9343 | 16.5550 |
-| CatBoost, clean rerun | 78.8475 +/- 11.3952 | 206.9250 | 0.8789 | 26.4075 |
+| Ridge (log target) | **92.05** | 247.57 | 0.847 | **15.89** |
+| Random Forest | 92.93 | **239.15** | **0.858** | 23.51 |
+| XGBoost | 106.91 | 281.80 | 0.802 | 27.09 |
+| CatBoost | 168.82 | 527.97 | 0.306 | 33.15 |
+| Dummy: subcategory median | 120.54 | 357.34 | - | 23.50 |
+| Dummy: global median | 238.27 | 662.60 | - | 59.10 |
 
-The validation and grouped-CV results are strong, but the stricter part-identity evaluation gives the more conservative estimate for unseen comparable part identities. Under that stricter setting, Random Forest remains the strongest direction.
+**Ridge and Random Forest** advance to strict-protocol tuning (full config search ranked by component-grouped CV); the winner is evaluated exactly once on the untouched strict test split.
+
+### Historical baseline (original product-id split)
+
+The original grouped split produced far lower errors (fixed validation about 18 EUR, grouped CV about 28 EUR, held-out grouped test about 22 EUR) because comparable part identities could still cross splits. The gap between those numbers and the strict results quantifies the comparable-part identity leakage. It is part of the thesis narrative, not evidence of final model performance.
 
 ## Evaluation layers
 
-| Layer | Approximate MAE | Purpose |
-| --- | ---: | --- |
-| Fixed validation split | 18 EUR | Optimistic model-selection estimate. |
-| Product-id grouped CV | 28 EUR | Stability check across listing-group folds. |
-| Strict part-identity grouped CV | 34 EUR | Conservative robustness estimate for unseen comparable part profiles. |
-| Held-out grouped test | 22 EUR | Final check under the original product-id split design. |
+| Layer | Status | Purpose |
+| --- | --- | --- |
+| Fixed validation split (product-id) | Historical | Optimistic development estimate. |
+| Product-id grouped CV | Historical | Stability check across listing-group folds. |
+| Held-out grouped test (product-id) | Historical | Final check under the original split design. |
+| Strict split fixed validation | Done (stage 1) | Four-model comparison under the final protocol. |
+| Strict component-grouped CV | Next (finalist tuning) | Candidate ranking for Ridge and Random Forest. |
+| Strict untouched holdout | Pending (run once) | The final thesis claim. |
 
-For thesis interpretation, the strict part-identity result is the safest scientific claim. The grouped test result remains useful as the final held-out estimate under the original product-id split design.
+For thesis interpretation, only the strict-protocol results are scientific evidence; the historical layers explain why the strict protocol exists.
 
 ## Architecture at a glance
 
@@ -105,11 +105,11 @@ flowchart LR
     C[Traficom registry summaries] --> D[Registry feature preparation]
     B --> E[Integrated master dataset]
     D --> E
-    E --> F[Grouped train validation test splits]
-    E --> G[Strict part identity CV]
+    E --> F[Strict connected component split]
+    E --> G[Component grouped CV]
     F --> H[Model training and comparison]
     G --> H
-    H --> I[Final model direction: Random Forest]
+    H --> I[Finalists: Ridge and Random Forest]
     I --> J[SHAP explainability]
     I --> K[Streamlit prototype]
     I --> L[FastAPI service]
@@ -182,7 +182,7 @@ uvicorn app.fastapi_app:app --reload
 | Phase | Status | Focus |
 | --- | --- | --- |
 | Phase 1: Data acquisition and preparation | Done | Crawler, cleaned dataset, registry features, grouped splits. |
-| Phase 2: Modeling and evaluation | Done | Model comparison, grouped evaluation, final model direction. |
+| Phase 2: Modeling and evaluation | Redone under strict protocol | Strict split frozen; four-model comparison done; finalist tuning and single holdout next. |
 | Phase 3: Explainability and prototype | Mostly done | SHAP outputs, Streamlit demo, FastAPI demo, tests. |
 | Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
 | Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
@@ -204,4 +204,4 @@ CI is intentionally lightweight. It installs `requirements.txt`, imports core mo
 
 ## Summary
 
-DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, grouped evaluation, model comparisons, explainability tooling, and prototype interfaces are already in place. The current final model direction is Random Forest, while the stricter part-identity evaluation provides the more conservative estimate for thesis interpretation.
+DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, strict split, stage-1 model comparison, explainability tooling, and prototype interfaces are in place. The next thesis step is strict-protocol tuning of Ridge and Random Forest, followed by the single final holdout evaluation.

@@ -43,9 +43,9 @@ The immediate task is stage-2 tuning of the two finalists (full config search ra
 
 ## Next Milestones
 
-1. Generate a new strict connected-component split directly from `datasets/cleaned/clean_master_dataset.csv`.
-2. Rerun model selection under the new strict split.
-3. Evaluate the selected model on the final strict holdout.
+1. Generate a new strict connected-component split - **done**, frozen under `datasets/splits_strict/`.
+2. Rerun model selection under the new strict split - **stage 1 done** (four-model comparison, 2026-07-07); stage 2 is finalist tuning (Ridge, Random Forest) via component-grouped CV.
+3. Evaluate the selected model on the final strict holdout (guarded run-once notebook ready).
 4. Run compatibility-family robustness analysis.
 5. Run SHAP explainability for the final model.
 6. Run subgroup analysis by brand, category, and price band.
@@ -93,7 +93,8 @@ The current roadmap maps to the open DPPM thesis issues below.
 - [x] Finalize strict identity rule.
 - [x] Document strict split generation requirements.
 - [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
-- [ ] Rerun model selection.
-- [ ] Evaluate final strict holdout.
+- [x] Stage 1: four-model comparison under the strict split (2026-07-07) - finalists: Ridge, Random Forest.
+- [ ] Stage 2: tune the finalists with component-grouped CV.
+- [ ] Evaluate final strict holdout (run once).
 - [ ] Run robustness and explainability analyses.
 - [ ] Prepare final thesis results tables.

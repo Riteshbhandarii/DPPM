@@ -14,7 +14,7 @@ Stage 2 - tuning (after the comparison): the top two models get the full search
 component-grouped cross-validation inside the strict training split. Boosted models
 early-stop on an inner component-grouped carve, never on the scored fold/split.
 
-Stage 3 - final holdout (notebook 02, run once): the single winner is refit on
+Stage 3 - final holdout (notebook 03, run once): the single winner is refit on
 train + validation and evaluated once on the untouched strict test split.
 """
 
