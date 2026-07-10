@@ -1,0 +1,43 @@
+{
+  "generated_for": "#62 SHAP explainability, descriptive only",
+  "model": "random_forest (frozen holdout winner)",
+  "feature_variant": "trusted_extended_traficom_stack_without_oem_number",
+  "config_name": "refinement_search_008",
+  "fit_scope": "train_strict + validation_strict (9,625 rows), identical to the holdout refit",
+  "explained_rows": 1696,
+  "explained_split": "test_strict.csv (features only; target used only to slice price bands)",
+  "expected_value_eur": 271.1689766233766,
+  "part_taxonomy_importance_share": 0.8067,
+  "traficom_importance_share": 0.0381,
+  "traficom_feature_count": 49,
+  "group_shares": {
+    "part_taxonomy": 0.8067,
+    "vehicle_age_usage": 0.141,
+    "traficom_model_context": 0.0204,
+    "traficom_brand_context": 0.0177,
+    "vehicle_identity": 0.0124,
+    "part_condition": 0.0018
+  },
+  "band_500_1000": {
+    "n": 67,
+    "group_shares": {
+      "part_taxonomy": 0.5886,
+      "vehicle_age_usage": 0.2876,
+      "traficom_model_context": 0.0629,
+      "traficom_brand_context": 0.0524,
+      "vehicle_identity": 0.0055,
+      "part_condition": 0.0031
+    }
+  },
+  "above_1000": {
+    "n": 75,
+    "signed_push_eur": {
+      "part_taxonomy": 2988.04,
+      "vehicle_age_usage": 74.68,
+      "traficom_brand_context": 10.26,
+      "traficom_model_context": 9.81,
+      "part_condition": -1.74,
+      "vehicle_identity": -38.04
+    }
+  }
+}
