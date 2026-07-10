@@ -35,7 +35,7 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | Data preparation | Done | Cleaned master dataset and grouped splits are available. |
 | Modeling | Done | Linear/Ridge, Random Forest, XGBoost, and CatBoost experiments completed; strict stage-2 tuning finished and Random Forest won the strict MAE comparison. |
 | Evaluation | Done | The final strict holdout ran once on 2026-07-10. The run-once guard is consumed and the numbers are final. |
-| Explainability | Mostly done | SHAP workflows and outputs exist for the main model paths. |
+| Explainability | Done for the frozen model | SHAP for the strict winner is in `artifacts/strict_final_shap/` (global, 500-1,000 EUR band, above-1,000 EUR tail). Dependence plots and a strict conservative-variant SHAP were **not** produced. Earlier `artifacts/*_shap*` outputs predate the strict protocol and explain a superseded model. |
 | Prototype | Mostly done | Streamlit and FastAPI proof-of-concept interfaces exist. |
 | Thesis writing | In progress | Final writing, result presentation, and discussion polishing remain. |
 
@@ -168,13 +168,29 @@ For thesis reporting, lead with **median AE** and **segment-wise errors**, prese
 
 ## SHAP explainability
 
-SHAP is used here to explain **model behavior**, not to prove causal market relationships.
+SHAP is used here to explain **model behavior**, not to prove causal market relationships. It is descriptive, and it is never grounds to retune: the holdout is spent (`docs/DESIGN_DECISIONS.md`, 2026-07-10).
 
-| Explanation type | Purpose |
-| --- | --- |
-| Global explanations | Show which features influence predictions most overall. |
-| Local explanations | Show why one specific prediction is higher or lower. |
-| Conservative SHAP variant | Tests interpretation stability when selected listing-history/time fields are removed. |
+**Which SHAP is the thesis evidence.** Only `artifacts/strict_final_shap/` explains the frozen strict winner. It is produced by `scripts/run_strict_shap.py`, which refits the winner on train+validation exactly as the holdout did and explains the test rows. Earlier outputs — `artifacts/final_model_shap/`, `artifacts/final_model_shap_conservative/`, `artifacts/random_forest_shap/` — were generated in April 2026, before the strict connected-component split existed, and describe a different model (`trusted_recommended_features_without_oem_number` / `raw_half_features_leaf_1`). They are historical, like the grouped baseline, and are not thesis evidence.
+
+### What SHAP found (2026-07-10)
+
+Attribution over all 1,696 test rows, aggregated back to raw features:
+
+| Feature group | Features | Share of attribution |
+| --- | ---: | ---: |
+| `part_taxonomy` | 3 | **80.67%** |
+| `vehicle_age_usage` | 5 | 14.10% |
+| `traficom_model_context` | 25 | 2.04% |
+| `traficom_brand_context` | 24 | 1.77% |
+| `vehicle_identity` | 2 | 1.24% |
+| `part_condition` | 2 | 0.18% |
+
+- **`subcategory` alone carries 66.55%.** This is the mechanism behind the holdout result: the model predicts the subcategory, which is why its predictions correlate with the subcategory-median lookup at 0.9841 and why it does not beat it.
+- **The Traficom registry join did not pay for itself.** The 49 registry-derived features carry **3.81%** of attribution between them, and 37 of the 61 features contribute under 0.1% each. `mileage` ranks 7th at 0.73%.
+- **Where the model wins, it wins on vehicle year.** In the 500-1,000 EUR band — its only significant win over the heuristic — `vehicle_age_usage` doubles to 28.76% while `part_taxonomy` falls to 58.86%.
+- **Why it over-predicts the expensive tail.** Above 1,000 EUR, `part_taxonomy` pushes predictions +2,988 EUR off a base value of 271.17 EUR. The model places a listing in its subcategory and cannot discriminate within it.
+
+Not produced: dependence plots, and a conservative-variant SHAP under the strict protocol.
 
 ## Demo and prototype
 
@@ -221,7 +237,7 @@ uvicorn app.fastapi_app:app --reload
 | --- | --- | --- |
 | Phase 1: Data acquisition and preparation | Done | Crawler, cleaned dataset, registry features, grouped splits. |
 | Phase 2: Modeling and evaluation | Done | Model comparison, grouped evaluation, strict tuning winner selected, final strict holdout run once. |
-| Phase 3: Explainability and prototype | Mostly done | SHAP outputs, Streamlit demo, FastAPI demo, tests. |
+| Phase 3: Explainability and prototype | Mostly done | SHAP for the frozen strict model done (2026-07-10); Streamlit demo, FastAPI demo, tests. Dependence plots outstanding. |
 | Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
 | Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
 
