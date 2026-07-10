@@ -12,18 +12,19 @@ Evaluate whether model behavior is stable across broader compatibility or part-f
 
 This is a robustness diagnostic, not a replacement for the main strict evaluation. The main evidence should remain the final strict split and strict holdout.
 
-### SHAP Explainability
+### SHAP Explainability — done 2026-07-10 (#62)
 
-Run SHAP analysis for the final selected model after final reruns.
+Run via `scripts/run_strict_shap.py` on the frozen strict winner, refit on train+validation exactly as the holdout did. Artifacts: `artifacts/strict_final_shap/`. Result and interpretation: `docs/STRICT_MODEL_COMPARISON.md` section 11.
 
-Expected outputs:
+| Expected output | Status |
+| --- | --- |
+| Global feature importance | Done — `shap_feature_importance.csv` |
+| Feature-group importance | Done — `shap_group_importance.csv`; `part_taxonomy` 80.67 %, the 49 Traficom features 3.81 % between them |
+| Segment-restricted attribution (500–1 000 €, above 1 000 €) | Done — the band where the model beats the heuristic, and the tail where it over-predicts |
+| Local example explanations | Partly — the above-1 000 € tail is characterized by signed group push, not by individual listing walkthroughs |
+| Dependence plots | **Not produced** |
 
-- Global feature importance.
-- Feature-group importance.
-- Local example explanations.
-- Dependence plots for key numeric and categorical features where appropriate.
-
-Historical SHAP outputs may guide planning, but final thesis explanations should be regenerated for the final model.
+Historical SHAP outputs (`artifacts/final_model_shap/`, `artifacts/final_model_shap_conservative/`, `artifacts/random_forest_shap/`, April 2026) predate the strict split and explain a different model (`trusted_recommended_features_without_oem_number` / `raw_half_features_leaf_1`). They are historical context, not thesis evidence, and were not regenerated.
 
 ### Feature Leakage Assessment
 

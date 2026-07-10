@@ -45,13 +45,15 @@ Stage-2 tuning is complete. Under component-grouped cross-validation inside the 
 
 Modeling is finished. All remaining work is analysis and writing. No model may be scored on the test split again.
 
+**SHAP is done (2026-07-10, #62), descriptive only.** The frozen model spends **80.67 %** of its attribution on three taxonomy features, `subcategory` alone carrying 66.55 %. The 49 Traficom registry features carry **3.81 %** between them; `mileage` ranks 7th at 0.73 %. This is the mechanism behind the tie with the subcategory-median lookup. Full result: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md) section 11.
+
 ## Next Milestones
 
-1. Run SHAP explainability for the frozen model — **descriptive only**, for the discussion chapter; never grounds to retune.
-2. Learning curve on train/validation (holdout-safe) to establish whether the model is data-limited or signal-limited. This determines whether "dataset too small" is a quantified finding or an unsupported hedge.
-3. Rewrite the contribution statement around the administered-pricing result (see `DESIGN_DECISIONS.md`, 2026-07-10).
-4. Run subgroup analysis by brand, category, and price band.
-5. Write the results and discussion chapters; prepare final thesis artifacts and tables.
+1. Learning curve on train/validation, holdout-safe, to establish whether the model is data-limited or signal-limited (#63). This determines whether "dataset too small" is a quantified finding or an unsupported hedge.
+2. Subgroup analysis by brand and category (#41) — the price-band half is already done in `artifacts/strict_final_holdout/holdout_baseline_comparison.json`.
+3. Formal feature leakage audit (#42) — appendix table.
+4. Rewrite the contribution statement around the administered-pricing result and write the results and discussion chapters (#64; see `DESIGN_DECISIONS.md`, 2026-07-10).
+5. Convert final notebook workflows into reproducible scripts (#47), then clean the repo surface (#40).
 
 ## GitHub Issue Mapping
 
@@ -62,12 +64,15 @@ The current roadmap maps to the open DPPM thesis issues below.
 | Strict identity rule and strict split design | #34 | Documented |
 | Preserve grouped baseline / transition narrative | #38 | In progress |
 | Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
-| Strict model selection rerun | #36 | Stage 2 done (strict tuning winner: Random Forest) |
-| Final strict holdout evaluation | #37 | **Done 2026-07-10 — run once, guard consumed, numbers final** |
-| Compatibility-family robustness | #46 | Not started |
-| Subgroup analysis | #41 | Not started |
+| Strict model selection rerun | #36 | **Closed 2026-07-10** — stages 1 and 2 complete, winner frozen and documented |
+| Final strict holdout evaluation | #37 | **Closed 2026-07-10** — run once, guard consumed, numbers final |
+| SHAP explainability (descriptive) | #62 | **Closed 2026-07-10** — `artifacts/strict_final_shap/`, section 11 |
+| Learning curve: data-limited or signal-limited | #63 | Not started — next |
+| Subgroup analysis | #41 | Price-band half done via the holdout baseline comparison; brand/category remain |
 | Feature leakage assessment | #42 | Not started |
-| Reproducible final scripts | #47 | Not started |
+| Contribution statement rewrite + results/discussion | #64 | Not started — the thesis writing |
+| Compatibility-family robustness | #46 | **Closed as not planned 2026-07-08** — superseded; the connected-component split *is* the broader grouping |
+| Reproducible final scripts | #47 | Partly done — `run_strict_shap.py` and `holdout_baseline_comparison.py` written as scripts. Any stage-3 script must stay guarded or read-only |
 | Final full rerun and artifact freeze | #50 | Not started |
 
 ## Progress Checklist
@@ -97,6 +102,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 - [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
 - [x] Rerun model selection.
 - [x] Evaluate final strict holdout (2026-07-10, run once).
-- [ ] Run explainability (SHAP, descriptive) and the holdout-safe learning curve.
+- [x] Run explainability (SHAP, descriptive) on the frozen model (2026-07-10, #62).
+- [ ] Run the holdout-safe learning curve (#63).
 - [ ] Rewrite the contribution statement around the administered-pricing finding.
 - [ ] Prepare final thesis results tables.

@@ -207,3 +207,95 @@ margin on mean CV MAE (105.33 vs 106.71) against a fold standard deviation of 24
 coin flip on a metric dominated by the tail, on a target whose median is 100.60 € and mean
 270.79 €. The choice of primary metric determined the winner. That is a methodological
 finding, and it belongs in the discussion chapter.
+
+## 11. Why the model ties the heuristic — SHAP on the frozen winner (2026-07-10)
+
+Descriptive only (`scripts/run_strict_shap.py`, artifacts in `artifacts/strict_final_shap/`).
+The winner is refit on `train_strict + validation_strict` exactly as the holdout did, then
+explained on the test rows so the attributions describe the predictions that were actually
+reported. Only test *features* are read; the target is used solely to slice price bands.
+SHAP explains model behaviour, not market causality, and is never grounds to retune.
+
+Section 9 established *that* the model ties a subcategory-median lookup. This section
+establishes *why*.
+
+### Global attribution (all 1,696 test rows)
+
+| Feature group | Features | Mean abs. SHAP (€) | Share |
+| --- | ---: | ---: | ---: |
+| `part_taxonomy` | 3 | 300.16 | **80.67 %** |
+| `vehicle_age_usage` | 5 | 52.45 | 14.10 % |
+| `traficom_model_context` | 25 | 7.60 | 2.04 % |
+| `traficom_brand_context` | 24 | 6.58 | 1.77 % |
+| `vehicle_identity` | 2 | 4.62 | 1.24 % |
+| `part_condition` | 2 | 0.65 | 0.18 % |
+
+`subcategory` alone carries **66.55 %** of attribution, `part_name` 9.57 %, `category`
+4.55 %. Expected value (base prediction): 271.17 €.
+
+**The model predicts the subcategory.** That is the mechanism behind the 0.9841 correlation
+with the lookup table in section 9, and behind its failure to beat it. A 373-tree forest
+across 61 features spends four fifths of its explanatory power on three taxonomy columns.
+
+### The registry join did not pay for itself
+
+The 49 Traficom-derived features — the large majority of the winning variant, and a
+substantial share of the data-engineering effort in this project — carry **3.81 %** of
+attribution between them. **37 of the 61 features contribute under 0.1 % each.** `mileage`,
+a headline variable in RQ1, ranks 7th at **0.73 %**.
+
+This is a reportable negative result in its own right: joining marketplace listings against
+the national vehicle registry did not measurably improve used spare-part price prediction
+under the strict protocol. It belongs in the results chapter and in the report to the
+commissioner, not only in limitations.
+
+### Where the model wins, it wins on vehicle year
+
+In the 500–1 000 € band — the only segment where the model significantly beats the
+heuristic (n=67, section 9) — the attribution shifts:
+
+| Feature group | Global share | 500–1 000 € share |
+| --- | ---: | ---: |
+| `part_taxonomy` | 80.67 % | 58.86 % |
+| `vehicle_age_usage` | 14.10 % | **28.76 %** |
+| `traficom_model_context` | 2.04 % | 6.29 % |
+| `traficom_brand_context` | 1.77 % | 5.24 % |
+
+Top features in the band: `subcategory`, `year_end`, `year_start`, `part_name`, `year_mid`.
+The model's one genuine advantage over a category median is that it conditions on vehicle
+year, which a per-subcategory lookup structurally cannot do.
+
+### Why it over-predicts the expensive tail
+
+Above 1 000 € (n=75), where the model over-predicts by a median of 897.91 € (section 9),
+the signed SHAP push is dominated by taxonomy:
+
+| Feature group | Mean signed SHAP (€) |
+| --- | ---: |
+| `part_taxonomy` | **+2 988.04** |
+| `vehicle_age_usage` | +74.68 |
+| `traficom_brand_context` | +10.26 |
+| `traficom_model_context` | +9.81 |
+| `part_condition` | −1.74 |
+| `vehicle_identity` | −38.04 |
+
+Off a base value of 271.17 €, the subcategory alone lifts the prediction to roughly the
+subcategory's own price level. The model places a listing into an expensive subcategory and
+then cannot discriminate within it — a scrap gearbox and a good one receive nearly the same
+prediction. This is the same failure as the tie with the dummy, observed from the tail, and
+it explains why both approaches score ~700 € MAE there.
+
+### Interpretation
+
+RQ1 is answered directly: **part taxonomy determines listing price; condition and mileage
+contribute almost nothing; registry context is negligible.** Combined with section 10, the
+picture is coherent — asking prices are administered by subcategory convention, the model
+learns the convention, and its residual value is confined to conditioning on vehicle year
+in a narrow mid-high price band.
+
+**Not produced:** dependence plots, and a conservative-variant SHAP under the strict
+protocol. Earlier SHAP outputs (`artifacts/final_model_shap/`,
+`artifacts/final_model_shap_conservative/`, `artifacts/random_forest_shap/`, April 2026)
+predate the strict split and explain a different model
+(`trusted_recommended_features_without_oem_number` / `raw_half_features_leaf_1`). They are
+historical context, not thesis evidence.

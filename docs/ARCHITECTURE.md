@@ -48,7 +48,7 @@ flowchart LR
 | Datasets         | `datasets/`                                 | Store cleaned data, merged data, grouped splits, and registry-derived CSV files.                                    |
 | Modeling         | `notebooks/`, `scripts/`, `src/`            | Train and compare Linear/Ridge, Random Forest, XGBoost, and CatBoost model paths.                                   |
 | Evaluation       | `scripts/`, `src/`, `artifacts/`            | Historical product-id evaluations plus the strict connected-component protocol: model comparison, component-grouped CV tuning, and a single final holdout. |
-| Explainability   | `artifacts/` and analysis notebooks/scripts | Store and inspect SHAP global and local explanation outputs.                                                        |
+| Explainability   | `scripts/run_strict_shap.py`, `artifacts/strict_final_shap/` | SHAP for the frozen strict winner: global, feature-group, and segment-restricted attribution. Earlier `artifacts/*_shap*` directories predate the strict protocol and describe a superseded model. |
 | Prototype UI     | `app/streamlit_app.py`                      | Provide an interactive decision-support demonstration.                                                              |
 | Prediction API   | `app/fastapi_app.py`                        | Provide an API-style proof-of-concept prediction interface.                                                         |
 | Tests            | `tests/`                                    | Cover serving and UI helper logic with focused regression tests.                                                    |
