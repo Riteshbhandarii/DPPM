@@ -34,7 +34,7 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | Data collection | Done | Marketplace listing snapshots collected with the Playwright crawler. |
 | Data preparation | Done | Cleaned master dataset and grouped splits are available. |
 | Modeling | Done | Linear/Ridge, Random Forest, XGBoost, and CatBoost experiments completed; strict stage-2 tuning finished and Random Forest won the strict MAE comparison. |
-| Evaluation | In progress | Fixed validation, product-id grouped CV, strict part-identity CV, and held-out grouped test results are available; the final strict holdout is still pending. |
+| Evaluation | Done | The final strict holdout ran once on 2026-07-10. The run-once guard is consumed and the numbers are final. |
 | Explainability | Mostly done | SHAP workflows and outputs exist for the main model paths. |
 | Prototype | Mostly done | Streamlit and FastAPI proof-of-concept interfaces exist. |
 | Thesis writing | In progress | Final writing, result presentation, and discussion polishing remain. |
@@ -46,7 +46,8 @@ The goal is to estimate an expected listing price from available listing, vehicl
 | `datasets/cleaned/clean_master_dataset.csv` | Final cleaned modeling dataset with **11,321 rows**. |
 | `datasets/splits_strict/train_strict.csv` | Strict training split, **7,930 rows** - thesis-final protocol. |
 | `datasets/splits_strict/validation_strict.csv` | Strict validation split, **1,695 rows**. |
-| `datasets/splits_strict/test_strict.csv` | Strict untouched test split, **1,696 rows** - reserved for one final evaluation. |
+| `datasets/splits_strict/test_strict.csv` | Strict test split, **1,696 rows** - **consumed 2026-07-10** by the single final evaluation. Do not score any further model on it. |
+| `artifacts/strict_final_holdout/` | Final holdout metrics, predictions, and the trivial-baseline comparison. |
 | `datasets/splits/*_grouped.csv` | Historical product-id grouped split (7,954 / 1,689 / 1,678 rows) - optimistic baseline only. |
 
 The strict split keeps every connected component - rows linked by the same `product_id` or the same canonical part identity (`part_name + brand + model + year_start + year_end`) - in exactly one split (seed 32; provenance and leakage assertions in `datasets/splits_strict/strict_split_summary.json`). Repeated listing observations are intentionally preserved where useful for listing-history construction.
@@ -61,7 +62,9 @@ The strict split keeps every connected component - rows linked by the same `prod
 
 ## Key results summary
 
-The current strict thesis model direction is **Random Forest**. The main practical evaluation metric is **MAE**, because it is directly interpretable in euros.
+> **Headline finding.** On the untouched strict test split, the tuned Random Forest **ties a subcategory-median lookup table on MAE and loses to it on median absolute error**. Used spare-part asking prices in this marketplace are largely administered by subcategory convention; the model reproduces that convention and adds modest incremental value on higher-priced, less conventional listings. DPPM is a **market-consistency check**, not a pricing engine. Details: [final holdout](#final-strict-holdout-2026-07-10--run-once) and [docs/STRICT_MODEL_COMPARISON.md](docs/STRICT_MODEL_COMPARISON.md).
+
+The strict thesis model is **Random Forest**. The pre-registered primary evaluation metric is **MAE**, because it is directly interpretable in euros — though see the caveat below on what that choice cost.
 
 Thesis evidence comes from the **strict connected-component split** (`datasets/splits_strict/`). The earlier product-id grouped results are preserved as an optimistic historical baseline only, and the earlier OEM-based strict CV is superseded by the connected-component protocol (decision record in `docs/evaluation/`).
 
@@ -91,7 +94,30 @@ The original grouped split produced far lower errors (fixed validation about 18 
 | Ridge | Trusted recommended features without listing dates without OEM number | 106.7056 | 323.2321 | 0.6754 | 23.7836 |
 | Random Forest | Trusted extended Traficom stack without OEM number | **105.3338** | **265.6255** | **0.7654** | 34.8453 |
 
-Random Forest is the selected strict winner under the primary MAE criterion. The final strict holdout evaluation is still pending.
+Random Forest is the selected strict winner under the primary MAE criterion — by a margin of **1.38 EUR** against a fold standard deviation of 24-34 EUR. That margin is a coin flip on a tail-dominated metric, and Ridge was clearly better on median AE. The winner was frozen before the test split was touched and has not been revisited; see the limitations discussion in [docs/STRICT_MODEL_COMPARISON.md](docs/STRICT_MODEL_COMPARISON.md).
+
+### Final strict holdout (2026-07-10) — run once
+
+The frozen Random Forest was refit on `train_strict + validation_strict` (9,625 rows) and evaluated **exactly once** on the untouched `test_strict.csv` (1,696 rows). The run-once guard is now consumed. Artifacts: `artifacts/strict_final_holdout/`.
+
+| Predictor | MAE (EUR) | Median AE (EUR) | RMSE (EUR) | R2 | MdAPE |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Random Forest (frozen winner) | 69.46 | 29.37 | **182.41** | **0.9113** | 29.74% |
+| Dummy: subcategory median | **66.15** | **15.32** | 200.94 | 0.8924 | **16.43%** |
+| Dummy: global median | 216.08 | 58.25 | - | - | 71.42% |
+
+Bootstrap 95% CI for the model (B=10,000, seed 32): MAE [61.70, 77.96], median AE [27.85, 31.92], R2 [0.8871, 0.9310].
+
+Paired bootstrap against the subcategory-median dummy on the same rows:
+
+- **MAE: +3.31 EUR, CI [-2.88, +8.59]** - not significant. The model ties a lookup table.
+- **Median AE: +14.04 EUR, CI [+11.51, +18.23]** - the model is significantly **worse** on the typical listing.
+- The dummy is closer to the true price on **66.0%** of test rows.
+- Segment-wise, the model's only significant win is the **500-1,000 EUR band** (67 rows, 4.0% of the split). It is significantly worse below 100 EUR and indistinguishable above 1,000 EUR, where both approaches fail badly (MAE 718.94 vs 679.61 EUR).
+
+Listings above 1,000 EUR are 4.4% of the test split but carry **45.8%** of total absolute error; excluding them, model MAE falls to **39.41 EUR**.
+
+**Scope of this negative result:** it shows that *this frozen Random Forest* does not beat the heuristic on typical listings. It does **not** show that no model can — in stage-2 cross-validation Ridge beat the same dummy by roughly 24% on MAE and 32% on median AE. Ridge was deliberately not scored on the holdout, because choosing it after seeing the Random Forest's result would be selection on the test set (`docs/DESIGN_DECISIONS.md`, 2026-07-10).
 
 ## Evaluation layers
 
@@ -101,8 +127,8 @@ Random Forest is the selected strict winner under the primary MAE criterion. The
 | Product-id grouped CV | Historical | Stability check across listing-group folds. |
 | Held-out grouped test (product-id) | Historical | Final check under the original split design. |
 | Strict split fixed validation | Done (stage 1) | Four-model comparison under the final protocol. |
-| Strict component-grouped CV | Next (finalist tuning) | Candidate ranking for Ridge and Random Forest. |
-| Strict untouched holdout | Pending (run once) | The final thesis claim. |
+| Strict component-grouped CV | Done (stage 2) | Candidate ranking for Ridge and Random Forest. Selection evidence only. |
+| Strict untouched holdout | Done (2026-07-10, run once) | The final thesis claim. Guard consumed; not repeatable. |
 
 For thesis interpretation, only the strict-protocol results are scientific evidence; the historical layers explain why the strict protocol exists.
 
@@ -128,14 +154,17 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full architecture view.
 
 ## Why the R2 values are high
 
-The high R2 values should be interpreted carefully:
+**R2 is not a useful headline metric for this project, and the holdout proves it.** The model scores R2 = 0.9113 on the strict test split. A subcategory-median lookup table, which learns nothing, scores **0.8924** on the same rows. Almost all of the explained variance is the informativeness of a human-assigned category label, not learned structure. The model's predictions correlate with the dummy's at **0.9841**.
 
+The model's genuine incremental contribution over that lookup is a **17.6% reduction in squared error** (RMSE 182.41 EUR vs 200.94 EUR), concentrated in higher-priced, less conventional listings. Real, but modest — and invisible if you only report R2.
+
+The underlying reasons R2 runs high here:
+
+- Taxonomy variables such as `subcategory`, `part_name`, and `category` explain a large amount of price variation, because different spare-part types occupy very different price ranges. This is the dominant effect.
 - Spare-part listing prices have strong **repeated-listing** and **comparable-item** structure.
-- Taxonomy variables such as `subcategory`, `part_name`, and `category` explain a large amount of price variation because different spare-part types naturally occupy very different price ranges.
-- Product-id grouping prevents the **same exact listing** from crossing train/validation/test boundaries.
-- Highly similar part profiles can still exist under different `product_id` values.
+- The strict connected-component split removes comparable-part identity leakage; the historical product-id split did not, which is why its errors were roughly 5x lower.
 
-For that reason, very high R2 should not be read as perfect general market-value prediction. It is better understood as strong predictive performance within a structured comparable-listing setting.
+For thesis reporting, lead with **median AE** and **segment-wise errors**, present MAE alongside, and state the dummy's score next to any R2 that appears. The target's median price is 100.60 EUR against a mean of 270.79 EUR, so mean-based metrics are dominated by a small expensive tail.
 
 ## SHAP explainability
 
@@ -191,7 +220,7 @@ uvicorn app.fastapi_app:app --reload
 | Phase | Status | Focus |
 | --- | --- | --- |
 | Phase 1: Data acquisition and preparation | Done | Crawler, cleaned dataset, registry features, grouped splits. |
-| Phase 2: Modeling and evaluation | Mostly done | Model comparison, grouped evaluation, strict tuning winner selected; final strict holdout remains. |
+| Phase 2: Modeling and evaluation | Done | Model comparison, grouped evaluation, strict tuning winner selected, final strict holdout run once. |
 | Phase 3: Explainability and prototype | Mostly done | SHAP outputs, Streamlit demo, FastAPI demo, tests. |
 | Phase 4: Thesis finalization | In progress | Results chapter, literature alignment, methodology tightening, discussion. |
 | Phase 5: Presentation and handover | Planned | Demo script, final presentation material, repository consistency check. |
@@ -213,4 +242,8 @@ CI is intentionally lightweight. It installs `requirements.txt`, imports core mo
 
 ## Summary
 
-DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, grouped evaluation, model comparisons, explainability tooling, and prototype interfaces are already in place. The current strict thesis model direction is Random Forest, while the stricter part-identity evaluation provides the more conservative estimate for thesis interpretation. The final strict holdout is still pending.
+DPPM is an applied thesis project that combines marketplace listing data and Traficom-derived registry context to estimate spare-part listing prices. The end-to-end workflow, cleaned datasets, strict leakage-controlled evaluation, model comparisons, explainability tooling, and prototype interfaces are in place, and the final strict holdout has been run once.
+
+Two results matter. **Methodologically**, comparable-part identity leakage inflated the original grouped-split numbers roughly fivefold; the connected-component protocol is the correction, and it is a contribution independent of any model's performance. **Substantively**, the tuned Random Forest ties a subcategory-median lookup on MAE and loses to it on median AE, which is evidence that used spare-part asking prices in this marketplace are administered by subcategory convention rather than discovered per listing. The model's incremental value is a 17.6% squared-error reduction concentrated in higher-priced, less conventional listings.
+
+DPPM therefore supports **human-in-the-loop price review on high-value inventory** - flagging listings inconsistent with comparables - and does not support automated pricing. Above 1,000 EUR neither the model nor the heuristic is usable, and pricing must remain manual.
