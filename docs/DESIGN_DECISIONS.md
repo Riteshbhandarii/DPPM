@@ -128,3 +128,41 @@ Decision: The strict-protocol tuning stage covers Ridge and Random Forest, per t
 Reasoning: XGBoost (106.91 EUR MAE) trailed the untuned linear baseline (92.05) and has underperformed Random Forest under all three evaluation designs in this project (fixed validation, oem-identity strict CV, strict component split). The improvement needed to catch the leaders (~15%) exceeds gains realistically available from tuning already-tuned configurations while the leaders also improve. CatBoost (168.82) trails by ~80%, far beyond any plausible tuning gain, repeating its result under the earlier evaluation design. Tuning investment follows comparison performance under a consistent rule.
 
 Escape hatch: if the finalist cross-validation results are inconclusive, the tuning stage may be widened with a documented amendment - but only before the final holdout runs.
+
+
+## 2026-07-10 - Final Strict Holdout Was Executed Once; The Guard Is Consumed
+
+Decision: The strict untouched test split (`datasets/splits_strict/test_strict.csv`, 1,696 rows) was evaluated exactly once, on 2026-07-10, against the frozen Random Forest winner. No further evaluation of any model on this split will be performed.
+
+Provenance: run from `main` at `b530e59` (the merge of PR #58, which documented the Random Forest winner *before* the holdout, satisfying the pre-registered ordering). Winner: `random_forest`, feature variant `trusted_extended_traficom_stack_without_oem_number`, config `refinement_search_008`, raw target, 61 features, refit on `train_strict + validation_strict` (9,625 rows). Pre-flight verification: 23/23 tests passing, no pre-existing holdout artifacts, zero `product_id` overlap between fit and test, zero connected components spanning splits.
+
+Result: MAE 69.46 EUR, median AE 29.37 EUR, RMSE 182.41 EUR, R2 0.9113. Bootstrap 95% CI (B=10,000, seed 32): MAE [61.70, 77.96], median AE [27.85, 31.92], R2 [0.8871, 0.9310]. Artifacts under `artifacts/strict_final_holdout/`.
+
+Boundary: These numbers are final. The run-once guard in `notebooks/05_strict_training/03_strict_final_holdout.ipynb` has been consumed and the notebook will refuse to re-run while the artifacts exist. Deleting the artifacts to obtain a different number would invalidate the holdout claim. A rerun is legitimate only on a demonstrated pipeline bug, documented here first.
+
+
+## 2026-07-10 - Trivial Baselines May Be Scored on the Holdout; Candidate Models May Not
+
+Decision: The two trivial anchors (global median, per-subcategory median), fitted on `train_strict + validation_strict` exactly as the Random Forest was, were scored on the holdout for reference (`scripts/holdout_baseline_comparison.py`, results in `artifacts/strict_final_holdout/holdout_baseline_comparison.json`).
+
+Reasoning: A reference baseline is part of *reporting* a holdout result, not a second attempt at *selecting* a model. Reporting a model's error without stating what a trivial rule achieves on the same data is uninformative. No model was fitted, chosen, retuned, or re-predicted by this comparison; the Random Forest predictions were read from the frozen artifact.
+
+Boundary: This permission does not extend to candidate models. See the next entry.
+
+
+## 2026-07-10 - Ridge Will Not Be Evaluated on the Holdout
+
+Decision: Ridge, the stage-2 runner-up, will not be scored on the strict test split. The final claim rests on Random Forest alone.
+
+Reasoning: Random Forest was frozen as the winner under the pre-registered primary metric (mean CV MAE) before the test split was touched. Evaluating Ridge afterwards - having now seen that Random Forest ties the subcategory-median dummy on MAE and loses to it on median AE, and knowing that Ridge cleared the dummy in cross-validation on both metrics - would be model selection on the test set. It would convert the holdout from an unbiased estimate into a shopped one, and would forfeit the pre-registration that is the methodological contribution of this thesis.
+
+Consequence for the write-up: the thesis may claim "this tuned Random Forest does not beat a subcategory-median heuristic on typical listings". It may **not** claim "machine learning cannot beat the heuristic on this dataset" - the stage-2 cross-validation evidence, where Ridge beat the subcategory-median dummy by roughly 24% on MAE and 32% on median AE, actively contradicts the stronger claim. The distinction belongs in the limitations section, together with the observation that the winner was decided by a 1.38 EUR margin on mean CV MAE (105.33 vs 106.71) against a fold standard deviation of 24-34 EUR - a coin flip on a tail-dominated metric.
+
+
+## 2026-07-10 - Contribution Claim on High-Value Inventory Is Withdrawn
+
+Decision: The drafted contribution claim that "ML adds value over category heuristics specifically on high-value heterogeneous inventory (engines/gearboxes)" is withdrawn. It is not supported by the holdout.
+
+Evidence: segment-wise paired bootstrap against the subcategory-median dummy shows the Random Forest is significantly *worse* below 100 EUR, indistinguishable between 100 and 500 EUR, significantly *better* only in the 500-1,000 EUR band (n=67), and indistinguishable above 1,000 EUR (n=75), where both approaches fail badly (MAE 718.94 vs 679.61 EUR).
+
+Replacement claim: used spare-part asking prices in this marketplace are largely administered by subcategory convention; a tuned Random Forest reproduces that convention (prediction correlation with the dummy 0.9841) and adds modest incremental value (17.6% squared-error reduction over the dummy, RMSE 182.41 vs 200.94 EUR) concentrated in higher-priced, less conventional listings. The model therefore belongs in the dismantler workflow as a consistency check on high-value inventory, not as a pricing engine. This supports, rather than weakens, the pre-existing "market-consistency tool, not valuation tool" claim boundary.

@@ -76,9 +76,11 @@ flowchart TD
 | Historical product-id evaluations | Fixed validation, grouped CV, and grouped test under the original split.                  | Optimistic baseline; quantifies comparable-part leakage. |
 | Strict split fixed validation     | Four-model comparison with known configurations (stage 1, done).                          | Selects the tuning finalists.                           |
 | Strict component-grouped CV       | Ranks tuning candidates; folds grouped by the same connected-component rule as the split. | Selects the final model configuration.                  |
-| Strict untouched holdout          | One guarded evaluation of the single winner, refit on train+validation.                   | The final thesis claim.                                 |
+| Strict untouched holdout          | One guarded evaluation of the single winner, refit on train+validation. **Consumed 2026-07-10.** | The final thesis claim.                          |
 
 For thesis claims, the strict connected-component protocol is the primary evidence. The historical product-id results explain why the strict protocol exists; the earlier OEM-based strict CV is superseded (see `docs/evaluation/`).
+
+The holdout has been run. `datasets/splits_strict/test_strict.csv` is spent: no model may be scored on it again, and the guard in `notebooks/05_strict_training/03_strict_final_holdout.ipynb` enforces this. Trivial reference baselines were scored alongside the winner (`scripts/holdout_baseline_comparison.py`); candidate models were not. See `docs/DESIGN_DECISIONS.md` (2026-07-10) and `docs/STRICT_MODEL_COMPARISON.md` sections 8-10.
 
 ## Prototype boundary
 

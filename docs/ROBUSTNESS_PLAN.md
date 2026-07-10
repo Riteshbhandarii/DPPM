@@ -62,5 +62,7 @@ If time permits, evaluate prediction intervals or uncertainty proxies. This is o
 Robustness analyses should be reported as supporting evidence. The final performance claim should be based on:
 
 1. Final strict model selection
-2. Final strict holdout evaluation
+2. Final strict holdout evaluation — **done 2026-07-10, run once**
 3. Documented leakage checks
+
+Any robustness analysis proposed from here on must run on the training and validation splits only. The test split is spent, and a robustness result is never grounds to revisit the frozen model. Reference baselines (trivial anchors) may be reported on the holdout; candidate models may not. See `docs/DESIGN_DECISIONS.md` (2026-07-10).

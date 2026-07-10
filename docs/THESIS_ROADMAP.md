@@ -39,15 +39,19 @@ The final strict evaluation protocol has now been selected. It uses connected co
 
 The final strict split is frozen (`datasets/splits_strict/`, seed 32). The stage-1 model comparison under it is complete (2026-07-07): all four models were compared with their known configurations on the fixed strict validation split. Ridge (92.05 EUR MAE) and Random Forest (92.93) advanced to stage 2; XGBoost (106.91) and CatBoost (168.82) were eliminated. Protocol and results: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md).
 
-Stage-2 tuning is now complete. Under component-grouped cross-validation inside the strict training split, Random Forest won the primary MAE comparison and Ridge remained the linear runner-up. The remaining task is the single final strict holdout evaluation.
+Stage-2 tuning is complete. Under component-grouped cross-validation inside the strict training split, Random Forest won the primary MAE comparison (by 1.38 EUR) and Ridge remained the linear runner-up.
+
+**Stage 3 is complete: the final strict holdout ran once on 2026-07-10 and the guard is consumed.** Random Forest scored MAE 69.46 EUR, median AE 29.37 EUR, RMSE 182.41 EUR, R2 0.9113. On the same rows a subcategory-median lookup scored MAE 66.15 EUR and median AE 15.32 EUR — the model ties the heuristic on MAE and is significantly worse on median AE, winning significantly only in the 500-1,000 EUR band. Full result, bootstrap intervals, and interpretation: [docs/STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md) sections 8-10; decision records in [docs/DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) (2026-07-10).
+
+Modeling is finished. All remaining work is analysis and writing. No model may be scored on the test split again.
 
 ## Next Milestones
 
-1. Evaluate the selected model on the final strict holdout.
-2. Run compatibility-family robustness analysis.
-3. Run SHAP explainability for the final model.
+1. Run SHAP explainability for the frozen model — **descriptive only**, for the discussion chapter; never grounds to retune.
+2. Learning curve on train/validation (holdout-safe) to establish whether the model is data-limited or signal-limited. This determines whether "dataset too small" is a quantified finding or an unsupported hedge.
+3. Rewrite the contribution statement around the administered-pricing result (see `DESIGN_DECISIONS.md`, 2026-07-10).
 4. Run subgroup analysis by brand, category, and price band.
-5. Prepare final thesis artifacts and tables.
+5. Write the results and discussion chapters; prepare final thesis artifacts and tables.
 
 ## GitHub Issue Mapping
 
@@ -59,7 +63,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 | Preserve grouped baseline / transition narrative | #38 | In progress |
 | Generate final strict split | #35 | Done — frozen artifacts in `datasets/splits_strict/` |
 | Strict model selection rerun | #36 | Stage 2 done (strict tuning winner: Random Forest) |
-| Final strict holdout evaluation | #37 | Not started (guarded run-once notebook ready) |
+| Final strict holdout evaluation | #37 | **Done 2026-07-10 — run once, guard consumed, numbers final** |
 | Compatibility-family robustness | #46 | Not started |
 | Subgroup analysis | #41 | Not started |
 | Feature leakage assessment | #42 | Not started |
@@ -92,6 +96,7 @@ The current roadmap maps to the open DPPM thesis issues below.
 - [x] Document strict split generation requirements.
 - [x] Generate final strict split (frozen under `datasets/splits_strict/`, seed 32).
 - [x] Rerun model selection.
-- [ ] Evaluate final strict holdout.
-- [ ] Run robustness and explainability analyses.
+- [x] Evaluate final strict holdout (2026-07-10, run once).
+- [ ] Run explainability (SHAP, descriptive) and the holdout-safe learning curve.
+- [ ] Rewrite the contribution statement around the administered-pricing finding.
 - [ ] Prepare final thesis results tables.
