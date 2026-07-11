@@ -203,8 +203,12 @@ Both are intended for thesis demonstration and proof-of-concept evaluation, not 
 
 ## Quickstart
 
+Requires **Python 3.12** (pinned in `.python-version`; `numpy==1.26.4` has no wheels on 3.13).
+Dependencies are fully pinned in `requirements.txt`, so the frozen results are deterministic on a
+clean install.
+
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 playwright install firefox
@@ -216,6 +220,18 @@ FastAPI can be started with:
 ```bash
 uvicorn app.fastapi_app:app --reload
 ```
+
+## Reproducibility
+
+Confirm the frozen strict split still regenerates byte-identically and the holdout headline is
+intact (regenerates into a temp dir; **modifies nothing frozen**; runs in seconds):
+
+```bash
+make verify        # or: python scripts/verify_reproducibility.py
+```
+
+`make help` lists the other entry points. The full run order, the list of **frozen** artifacts, and
+what raw data is / is not shipped are documented in [docs/PIPELINE.md](docs/PIPELINE.md).
 
 ## Repository structure
 
