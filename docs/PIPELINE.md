@@ -12,6 +12,23 @@ and which artifacts are **frozen** (source-of-truth, never regenerate). For desi
 > resolve the repo root themselves (`PROJECT_ROOT` bootstrap), so they no longer contain absolute
 > paths and can run from any working directory.
 
+## Environment & data availability
+
+- **Environment.** Python **3.12** (`.python-version`); all dependencies pinned in
+  `requirements.txt` (`scikit-learn==1.7.2`, `numpy==1.26.4`, `pandas==2.3.2`, …). A clean install
+  reproduces the frozen numbers; `numpy==1.26.4` has no wheels on Python 3.13, hence the pin.
+- **Determinism.** Strict split seed `32`; bootstrap CIs seed `32`. `make verify` regenerates the
+  split into a temp dir and SHA256-confirms it matches the frozen split (modifies nothing).
+- **Data availability.** Two raw inputs are **not** committed, so a full from-scratch rebuild
+  (stages 0–6) requires obtaining them yourself:
+  - **Traficom open data** (`datasets/traficom_datasets/*`) — gitignored (large); download from
+    Traficom's open-data portal.
+  - **Marketplace crawl** (`crawler/crawler_datasets/*`) — produced by the Playwright crawler.
+
+  The **results are fully reproducible from the committed frozen master** (`clean_master_dataset.csv`)
+  without either raw input — see the quickstart below. The raw data is only needed to re-derive the
+  master itself, which is frozen and should not be regenerated.
+
 ## Stage graph (input → output)
 
 | # | Stage | Entry point | Reads | Writes |
