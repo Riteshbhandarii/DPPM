@@ -1,0 +1,100 @@
+{
+  "description": "Learning curve of the frozen RF vs the refit subcategory-median dummy, strict component-grouped CV on the training split. Subsample unit = connected component. Descriptive; frozen holdout never touched.",
+  "frozen_cv_mean_MAE": 105.33375020713859,
+  "endpoint_reproduced": true,
+  "cv_splits": 4,
+  "n_seeds": 4,
+  "curve": [
+    {
+      "fraction": 0.1,
+      "mean_train_rows": 594.5625,
+      "mean_train_components": 38.0,
+      "rf_mae_mean": 205.72650922841987,
+      "rf_mae_p10": 144.55717204050183,
+      "rf_mae_p90": 263.3277816670335,
+      "rf_medae_mean": 58.02344124971604,
+      "dummy_mae_mean": 203.6887850478436,
+      "dummy_mae_p10": 140.95761856710394,
+      "dummy_mae_p90": 274.26381744831065,
+      "rf_minus_dummy_mae": 2.0377241805762765
+    },
+    {
+      "fraction": 0.2,
+      "mean_train_rows": 1180.1875,
+      "mean_train_components": 76.5,
+      "rf_mae_mean": 193.13169011924373,
+      "rf_mae_p10": 119.34335225872863,
+      "rf_mae_p90": 263.7930678203659,
+      "rf_medae_mean": 47.11407651943004,
+      "dummy_mae_mean": 183.08984298709822,
+      "dummy_mae_p10": 109.67407921291624,
+      "dummy_mae_p90": 257.564636913767,
+      "rf_minus_dummy_mae": 10.041847132145506
+    },
+    {
+      "fraction": 0.35,
+      "mean_train_rows": 2045.0625,
+      "mean_train_components": 134.0,
+      "rf_mae_mean": 172.2512527919571,
+      "rf_mae_p10": 98.31320688375061,
+      "rf_mae_p90": 243.71883818238308,
+      "rf_medae_mean": 43.0818905787724,
+      "dummy_mae_mean": 160.49609188269946,
+      "dummy_mae_p10": 100.6947275479314,
+      "dummy_mae_p90": 238.60215582450832,
+      "rf_minus_dummy_mae": 11.755160909257654
+    },
+    {
+      "fraction": 0.5,
+      "mean_train_rows": 2946.125,
+      "mean_train_components": 191.5,
+      "rf_mae_mean": 156.41748929288482,
+      "rf_mae_p10": 83.74054340477167,
+      "rf_mae_p90": 207.32554465367946,
+      "rf_medae_mean": 37.829789380564456,
+      "dummy_mae_mean": 144.16632910468675,
+      "dummy_mae_p10": 81.8723637739657,
+      "dummy_mae_p90": 195.41479213068905,
+      "rf_minus_dummy_mae": 12.251160188198071
+    },
+    {
+      "fraction": 0.65,
+      "mean_train_rows": 3825.25,
+      "mean_train_components": 248.5,
+      "rf_mae_mean": 130.97716797338512,
+      "rf_mae_p10": 73.31429052651848,
+      "rf_mae_p90": 171.00366602861152,
+      "rf_medae_mean": 35.51138962676511,
+      "dummy_mae_mean": 117.63935373607043,
+      "dummy_mae_p10": 74.27536579212916,
+      "dummy_mae_p90": 153.65360800787522,
+      "rf_minus_dummy_mae": 13.337814237314689
+    },
+    {
+      "fraction": 0.8,
+      "mean_train_rows": 4743.375,
+      "mean_train_components": 306.0,
+      "rf_mae_mean": 117.63738764877321,
+      "rf_mae_p10": 68.74240086203051,
+      "rf_mae_p90": 153.5792474105678,
+      "rf_medae_mean": 33.750041673822494,
+      "dummy_mae_mean": 103.72581045375347,
+      "dummy_mae_p10": 68.71444248234107,
+      "dummy_mae_p90": 137.70651712614742,
+      "rf_minus_dummy_mae": 13.911577195019746
+    },
+    {
+      "fraction": 1.0,
+      "mean_train_rows": 5947.5,
+      "mean_train_components": 382.5,
+      "rf_mae_mean": 105.33375020713859,
+      "rf_mae_p10": 78.66249109715645,
+      "rf_mae_p90": 125.8315541943484,
+      "rf_medae_mean": 34.84526838701843,
+      "dummy_mae_mean": 91.36257674338842,
+      "dummy_mae_p10": 75.39279806457817,
+      "dummy_mae_p90": 108.88578545029318,
+      "rf_minus_dummy_mae": 13.971173463750176
+    }
+  ]
+}
