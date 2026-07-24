@@ -351,8 +351,8 @@ def render_prediction_results(bundle, reference_rows, feature_names, submitted_v
             st.metric("Ensemble low", f"{prediction['ensemble_range_low']:.2f} EUR")
             st.metric("Ensemble high", f"{prediction['ensemble_range_high']:.2f} EUR")
         with tech_col2:
-            st.metric("Calibrated low", f"{prediction['price_range_low']:.2f} EUR")
-            st.metric("Calibrated high", f"{prediction['price_range_high']:.2f} EUR")
+            st.metric("Heuristic range low", f"{prediction['price_range_low']:.2f} EUR")
+            st.metric("Heuristic range high", f"{prediction['price_range_high']:.2f} EUR")
             st.metric("Ensemble width", f"{prediction['ensemble_range_width']:.2f} EUR")
             st.metric("Model range source", str(prediction["uncertainty_source"]))
         shap_col1, shap_col2, shap_col3 = st.columns(3)
