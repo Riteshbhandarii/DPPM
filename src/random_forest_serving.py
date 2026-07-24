@@ -91,7 +91,14 @@ def bundle_error_scale(metadata):
 
 
 def predict_price_ranges(bundle, rows, lower_quantile=0.10, upper_quantile=0.90):
-    """Return point predictions and both calibrated and ensemble-spread ranges."""
+    """Return point predictions and both a heuristic and an ensemble-spread range.
+
+    The "heuristic" range is an RMSE-based review range (point prediction
+    +/- 1.645 x held-out RMSE), not a calibrated prediction interval: there is
+    no empirical coverage study behind it, and residuals are known to be
+    non-normal and price-dependent, so it should not be described as
+    calibrated anywhere the output of this function is surfaced.
+    """
 
     metadata = bundle["metadata"]
     model_pipeline = bundle["model"]
@@ -116,16 +123,16 @@ def predict_price_ranges(bundle, rows, lower_quantile=0.10, upper_quantile=0.90)
     # Use held-out RMSE as a practical uncertainty scale for the operator-facing range.
     error_scale = bundle_error_scale(metadata)
     z_value = 1.645
-    calibrated_half_width = np.full_like(point_predictions, fill_value=z_value * error_scale, dtype=float)
-    calibrated_low = np.maximum(np.asarray(point_predictions, dtype=float) - calibrated_half_width, 0.0)
-    calibrated_high = np.asarray(point_predictions, dtype=float) + calibrated_half_width
+    heuristic_half_width = np.full_like(point_predictions, fill_value=z_value * error_scale, dtype=float)
+    heuristic_low = np.maximum(np.asarray(point_predictions, dtype=float) - heuristic_half_width, 0.0)
+    heuristic_high = np.asarray(point_predictions, dtype=float) + heuristic_half_width
 
     return pd.DataFrame(
         {
             "predicted_price": np.asarray(point_predictions, dtype=float),
-            "price_range_low": np.asarray(calibrated_low, dtype=float),
-            "price_range_high": np.asarray(calibrated_high, dtype=float),
-            "range_width": np.asarray(calibrated_high - calibrated_low, dtype=float),
+            "price_range_low": np.asarray(heuristic_low, dtype=float),
+            "price_range_high": np.asarray(heuristic_high, dtype=float),
+            "range_width": np.asarray(heuristic_high - heuristic_low, dtype=float),
             "ensemble_range_low": np.asarray(lower_bounds, dtype=float),
             "ensemble_range_high": np.asarray(upper_bounds, dtype=float),
             "ensemble_range_width": np.asarray(ensemble_width, dtype=float),
