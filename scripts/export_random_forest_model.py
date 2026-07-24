@@ -17,6 +17,13 @@ if str(ROOT) not in sys.path:
 from src.part_identity_evaluation import load_split_frames  # noqa: E402
 from src.tree_modeling import TARGET_COLUMN, fit_random_forest  # noqa: E402
 
+# Columns the operator-facing UI needs on every reference row even when a
+# feature-selection variant (e.g. "without_oem_number") excludes them from
+# the model's own feature_names. Without this, app/ui_helpers.py's
+# OPERATOR_FIELDS lookup breaks on any bundle trained on a variant that
+# drops one of these columns as a model feature.
+UI_PASSTHROUGH_COLUMNS = ["oem_number"]
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -61,6 +68,23 @@ def load_json_if_exists(path: str | Path | None) -> dict[str, Any] | None:
 
 def load_frame(path: str | Path) -> pd.DataFrame:
     return load_split_frames([path])
+
+
+def reference_row_columns(df: pd.DataFrame, feature_names: list[str]) -> list[str]:
+    """Columns to keep in a bundle's reference_rows.csv.
+
+    Always the model's own feature_names plus the target, plus any
+    UI_PASSTHROUGH_COLUMNS actually present in this frame that aren't
+    already a model feature (e.g. oem_number for the without_oem_number
+    variant) so the operator UI never loses a field it depends on.
+    """
+
+    extra = [
+        column
+        for column in UI_PASSTHROUGH_COLUMNS
+        if column in df.columns and column not in feature_names
+    ]
+    return feature_names + [TARGET_COLUMN] + extra
 
 
 def save_bundle(
@@ -188,13 +212,13 @@ def main() -> None:
         output_dir / "development_bundle",
         development_model,
         development_metadata,
-        development_df[feature_names + [TARGET_COLUMN]].copy(),
+        development_df[reference_row_columns(development_df, feature_names)].copy(),
     )
     save_bundle(
         output_dir / "full_data_bundle",
         full_data_model,
         full_data_metadata,
-        full_data_df[feature_names + [TARGET_COLUMN]].copy(),
+        full_data_df[reference_row_columns(full_data_df, feature_names)].copy(),
     )
 
     print("Saved random forest model bundles")
