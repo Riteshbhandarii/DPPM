@@ -51,6 +51,7 @@ OUT_VECTOR = OUT.with_suffix(".pdf")
 # Built at the thesis text width so the type lands at its intended size on the
 # page. Scaling a figure down in Word is what makes labels unreadable in print.
 TEXT_WIDTH_INCHES = 6.3
+GROUP_GAP = 1.15  # blank rows between parts; a hairline alone let the blocks merge
 CARS = [("corolla", "toyota"), ("golf", "vw"), ("octavia", "skoda")]
 TIERS = ["expensive", "middle", "cheapest"]
 
@@ -153,8 +154,14 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, 7.7))
-    rows = np.arange(len(cells))
+    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, 8.5))
+    # Each part occupies three consecutive rows, then a blank gap, so the eye
+    # reads one block per part instead of a continuous 33-row list.
+    rows = np.array([
+        position + cell.part_rank * GROUP_GAP
+        for position, cell in enumerate(cells.itertuples())
+    ])
+    cells = cells.assign(row=rows)
     label_x = 4.6
     # the euros column lives outside the plot, so the gridlines stop at the data
     outside = blended_transform_factory(axes.transAxes, axes.transData)
@@ -163,8 +170,8 @@ def main():
         colour = CAR_COLOUR[cell.car]
         axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
                   lw=2, zorder=1, solid_capstyle="round")
-        axes.scatter(cell.predicted, row, s=34, color=tint(colour), zorder=3,
-                     edgecolors=colour, linewidths=1.0)
+        axes.scatter(cell.predicted, row, s=34, color=SURFACE, zorder=3,
+                     edgecolors=colour, linewidths=1.3)
         axes.scatter(cell.price, row, s=34, color=colour, zorder=4)
 
     for row, cell in zip(rows, cells.itertuples()):
@@ -176,18 +183,16 @@ def main():
             color=MUTED if close else INK,
         )
 
-    # one part label per group, plus a hairline between groups
-    for part, group in cells.groupby("part_rank"):
-        middle = group.index.to_numpy().mean()
-        axes.text(label_x, middle, academic(group.subcategory.iat[0]), va="center",
-                  ha="left", fontsize=8.5, color=INK)
-        if part:
-            axes.axhline(group.index.min() - 0.5, color=GRID, lw=0.8, zorder=0)
+    # one part label per group; the blank rows do the separating
+    for _, group in cells.groupby("part_rank"):
+        axes.text(label_x, group.row.mean(), academic(group.subcategory.iat[0]),
+                  va="center", ha="left", fontsize=8.5, color=INK)
 
     axes.set_yticks(rows, [car.capitalize() for car in cells.car], fontsize=7.5)
+    axes.tick_params(axis="y", pad=1)
     axes.set_xscale("log")
     axes.set_xlim(4.2, 9000)
-    axes.set_ylim(len(cells) - 0.4, -2.2)
+    axes.set_ylim(rows.max() + 0.7, -3.0)
     axes.set_xticks([10, 30, 100, 300, 1000, 3000],
                     ["10", "30", "100", "300", "1 000", "3 000"], fontsize=8)
     axes.set_xticks([], minor=True)
@@ -201,22 +206,28 @@ def main():
 
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
-    observed = Line2D([], [], marker="o", linestyle="none", markersize=5.5,
-                      color=MUTED, label="Observed price")
-    predicted = Line2D([], [], marker="o", linestyle="none", markersize=5.5,
-                       markerfacecolor=tint(MUTED), markeredgecolor=MUTED,
-                       markeredgewidth=1.0, color="none", label="Predicted price")
-    axes.legend(handles=[observed, predicted], frameon=False, fontsize=8,
-                labelcolor=INK2, loc="upper left", bbox_to_anchor=(0.0, 1.055),
-                ncol=2, handletextpad=0.4, columnspacing=1.6)
-    axes.text(1.15, -1.5, "Error, EUR", transform=outside, va="center", ha="right",
+    # One colour key for the cars. The marker shape is explained in words
+    # underneath rather than as a second legend: two legends on a 16 cm figure
+    # end up on the same line and overlap.
+    car_key = [
+        Line2D([], [], marker="o", linestyle="none", markersize=5,
+               color=CAR_COLOUR[car], label=car.capitalize())
+        for car in CAR_ORDER
+    ]
+    axes.legend(
+        handles=car_key, frameon=False, fontsize=8, labelcolor=INK2,
+        loc="upper left", bbox_to_anchor=(0.0, 1.075), ncol=3,
+        handletextpad=0.4, columnspacing=1.6,
+    )
+    axes.text(
+        0.0, 1.035, "Filled marker: observed price.   Open marker: predicted price.",
+        transform=axes.transAxes, fontsize=8, color=INK2, va="top",
+    )
+    axes.text(1.15, -1.7, "Error, EUR", transform=outside, va="center", ha="right",
               fontsize=8, color=INK2)
 
-    for label, car in zip(axes.get_yticklabels(), cells.car):
-        label.set_color(CAR_COLOUR[car])
-
     # No in-image title: in the thesis the caption below the figure carries it.
-    figure.tight_layout(rect=[0, 0, 0.86, 0.985])
+    figure.tight_layout(rect=[0, 0, 0.86, 0.975])
     figure.savefig(OUT, dpi=300)
     figure.savefig(OUT_VECTOR)
     print(f"saved {OUT}\nsaved {OUT_VECTOR}")
