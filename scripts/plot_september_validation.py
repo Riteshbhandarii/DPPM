@@ -101,6 +101,11 @@ def three_per_cell(listings):
 
 def main():
     drawn = three_per_cell(scored_listings())
+    # The dearest listing of each cell: the tier the model can actually price.
+    cells = drawn[drawn.tier == "expensive"].copy()
+    cells["label"] = cells.subcategory + "  ·  " + cells.car
+    cells = cells.sort_values("price").reset_index(drop=True)
+    cells["euros_off"] = cells.predicted - cells.price
 
     plt.rcParams.update(
         {
@@ -112,64 +117,52 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(12, 5.8))
-    rng = np.random.default_rng(32)
+    figure, axes = plt.subplots(figsize=(12, 11))
+    rows = np.arange(len(cells))
 
-    # One dot per cell, so the spread stays visible: a single median per tier
-    # hides that the dearest listings cluster tightly while the cheap tail
-    # scatters over two orders of magnitude.
-    axes.axvspan(1, 50, color="#e8f0fb", zorder=0)
-    axes.axvline(50, color=BLUE, lw=1.2, ls="--", zorder=1)
+    for row, cell in zip(rows, cells.itertuples()):
+        axes.plot([cell.price, cell.predicted], [row, row], color=GRID, lw=2.5, zorder=1)
+    axes.scatter(cells.price, rows, s=90, color=INK2, zorder=3, label="real price")
+    axes.scatter(cells.predicted, rows, s=90, color=BLUE, zorder=3, label="model said")
 
-    for row, tier in enumerate(TIERS):
-        errors = drawn[drawn.tier == tier].ape_model.clip(lower=1)
-        axes.scatter(
-            errors, row + rng.uniform(-0.13, 0.13, len(errors)),
-            s=95, color=BLUE, alpha=0.75, edgecolors=SURFACE, linewidths=1.2, zorder=3,
-        )
-        axes.text(
-            3900, row, f"{(errors <= 50).sum()} of {len(errors)}",
-            va="center", ha="right", fontsize=17, color=BLUE,
-        )
+    for row, cell in zip(rows, cells.itertuples()):
+        off = cell.euros_off
+        text = "spot on" if abs(off) < 10 else f"{off:+,.0f} EUR"
+        colour = INK2 if abs(off) < 10 else ORANGE
+        axes.text(60000, row, text, va="center", ha="right", fontsize=11, color=colour)
 
-    axes.text(7, -0.72, "USABLE: within 50% of the real price",
-              fontsize=13, color=BLUE, va="center")
-    axes.text(3900, -0.72, "how many land\nin the usable band", fontsize=12,
-              color=INK2, va="center", ha="right")
-
+    axes.set_yticks(rows, cells.label, fontsize=10.5)
     axes.set_xscale("log")
-    axes.set_xlim(1, 4200)
-    axes.set_ylim(2.6, -1.0)
-    axes.set_xticks([1, 10, 50, 100, 1000], ["1%", "10%", "50%", "100%", "1000%"],
-                    fontsize=13)
-    axes.set_yticks(range(3),
-                    ["dearest listing\nof each part", "middle listing\nof each part",
-                     "cheapest listing\nof each part"], fontsize=13)
-    axes.set_xlabel("how far off the model was, % of the real price", fontsize=13,
-                    color=INK2, labelpad=10)
+    axes.set_xlim(8, 90000)
+    axes.set_ylim(-1.4, len(cells) - 0.3)
+    axes.set_xticks([10, 30, 100, 300, 1000, 3000],
+                    ["10", "30", "100", "300", "1 000", "3 000"], fontsize=12)
+    axes.set_xlabel("price, EUR", fontsize=12.5, color=INK2, labelpad=10)
+    axes.text(60000, -1.1, "how far off", va="center", ha="right", fontsize=11.5, color=INK2)
     axes.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
     axes.set_axisbelow(True)
     for spine in axes.spines.values():
         spine.set_visible(False)
     axes.tick_params(left=False)
+    axes.legend(frameon=False, loc="lower left", fontsize=12.5, labelcolor=INK2,
+                bbox_to_anchor=(0.0, -0.005), ncol=2)
 
     axes.set_title(
-        "The model works on the dearest part in each group, and only there",
-        fontsize=17, color=INK, loc="left", pad=22,
+        "Where the model got the price right, and where it did not\n"
+        "the dearest listing of each part, 33 cases",
+        fontsize=16, color=INK, loc="left", pad=20,
     )
     figure.text(
-        0.012, 0.028,
-        "One dot = one part on one car, 33 cells (11 parts x 3 cars: Corolla, Golf, Octavia). "
-        "varaosahaku.fi, September 2026.",
+        0.012, 0.018,
+        "Short bar = the model was close. varaosahaku.fi, September 2026, "
+        "11 parts x 3 cars (Corolla, Golf, Octavia).",
         fontsize=10.5, color=MUTED,
     )
-    figure.tight_layout(rect=[0, 0.055, 1, 1])
+    figure.tight_layout(rect=[0, 0.032, 1, 1])
     figure.savefig(OUT, dpi=200)
     print(f"saved {OUT}")
-    for tier in TIERS:
-        errors = drawn[drawn.tier == tier].ape_model
-        print(f"{tier:10s} median {errors.median():6.0f}%   within 50%: "
-              f"{(errors <= 50).sum():2d}/{len(errors)}   within 25%: {(errors <= 25).sum():2d}/{len(errors)}")
+    print(cells[["label", "price", "predicted", "euros_off"]].to_string(
+        index=False, float_format="{:,.0f}".format))
 
 
 if __name__ == "__main__":
