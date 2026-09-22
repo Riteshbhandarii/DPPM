@@ -1,0 +1,47 @@
+ 867 listings parsed
+- 54 already in the February training data
+ 813 unseen listings  <- census
+ 255 generation x top-5 by price  <- matched draw (primary)
+
+Random Forest
+                            n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                                        
+MATCHED DRAW (primary)    255 158.09 38.42 439.08 0.76      45.02        12.27
+- February HAD the cell   101 104.30 35.78 342.28 0.88      36.11        15.56
+- cell never seen         154 193.37 40.26 492.33 0.64      50.84        11.53
+CENSUS (market coverage)  813 274.93 50.81 624.84 0.46      57.84        35.80
+
+Subcategory-median heuristic
+                n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                            
+MATCHED DRAW  255 176.41 62.55 413.69 0.79      57.77        29.10
+CENSUS        813 303.63 88.80 630.20 0.45      87.88        76.95
+
+Matched draw by price band
+    band  n  RF_MdAPE  heuristic_MdAPE
+    0-50 46     100.9             97.0
+  50-100 88      24.8             42.0
+ 100-200 49      39.9             60.9
+ 200-500 37      46.9             50.3
+500-1000 18      43.6             68.0
+   1000+ 17      25.7             17.2
+
+Per part, matched draw
+                   part  n  median_price  median_pred  RF_MdAPE  heur_MdAPE  covered
+       starter gasoline 23         120.0         76.7      23.5        20.8       13
+     fuel pump electric 26          80.0         62.4      25.7       121.2       10
+        engine gasoline 17       3,500.0      4,320.4      25.7        17.2        5
+   mass air-flow sensor 26          60.5         61.3      26.4        37.7       18
+     abs hydraulic pump 20         300.0        143.5      29.5        57.8        5
+            brake servo 30         100.0         68.3      33.3        88.8       10
+          engine casing 21          60.0         75.8      35.1        18.3       10
+abs hydraulic aggregate 18         405.0        591.4      47.9        48.5        5
+               tank lid 34          40.0         61.3      80.2        47.8       10
+       passenger airbag 26         161.5        404.5     149.4       179.5       10
+            other relay 14          20.0         60.3     274.8        41.0        5
+
+Bootstrap, 5000 resamples of the matched draw
+  RF MdAPE          45.0%  95% CI 36.1% to 49.9%
+  RF minus heuristic -10.8 points  95% CI -24.4 to +0.9
+
+scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/golf_sept_scored.csv

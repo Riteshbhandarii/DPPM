@@ -33,8 +33,6 @@ import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.ticker import FuncFormatter
-from matplotlib.lines import Line2D
 from matplotlib.transforms import blended_transform_factory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,11 +51,8 @@ OUT_VECTOR = OUT.with_suffix(".pdf")
 TEXT_WIDTH_INCHES = 6.3
 GROUP_GAP = 1.15  # blank rows between parts; a hairline alone let the blocks merge
 CARS = [("corolla", "toyota"), ("golf", "vw"), ("octavia", "skoda")]
-TIERS = ["expensive", "middle", "cheapest"]
 
-BLUE, ORANGE = "#2a78d6", "#eb6834"
 INK, INK2, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#8a8a87", "#e4e3df", "#fcfcfb"
-CONTEXT = "#d9d8d3"
 
 
 def scored_listings():

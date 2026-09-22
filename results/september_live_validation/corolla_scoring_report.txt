@@ -44,4 +44,4 @@ Bootstrap, 5000 resamples of the matched draw
   RF MdAPE          32.8%  95% CI 26.4% to 39.7%
   RF minus heuristic -27.4 points  95% CI -37.0 to -19.2
 
-scored rows -> results/september_live_validation/corolla_sept_scored.csv
+scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/corolla_sept_scored.csv

@@ -44,4 +44,4 @@ Bootstrap, 5000 resamples of the matched draw
   RF MdAPE          36.8%  95% CI 31.6% to 46.7%
   RF minus heuristic +12.2 points  95% CI +3.7 to +21.6
 
-scored rows -> results/september_live_validation/octavia_sept_scored.csv
+scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/octavia_sept_scored.csv
