@@ -173,6 +173,10 @@ def main():
         axes.scatter(cell.predicted, row, s=34, color=SURFACE, zorder=3,
                      edgecolors=colour, linewidths=1.3)
         axes.scatter(cell.price, row, s=34, color=colour, zorder=4)
+        # the per-part median baseline: grey, because it is not a vehicle-specific
+        # method conceptually and must not compete with the car hues
+        axes.scatter(cell.heuristic, row, s=26, marker="D", color=SURFACE,
+                     edgecolors=MUTED, linewidths=1.1, zorder=2)
 
     for row, cell in zip(rows, cells.itertuples()):
         off = cell.euros_off
@@ -210,8 +214,10 @@ def main():
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
     axes.text(
-        0.0, 1.045, "Filled marker: observed price.   Open marker: predicted price.",
-        transform=axes.transAxes, fontsize=8, color=INK2, va="top",
+        0.0, 1.045,
+        "Filled circle: observed price.   Open circle: model.   "
+        "Grey diamond: per-part median baseline.",
+        transform=axes.transAxes, fontsize=7.6, color=INK2, va="top",
     )
     axes.text(1.15, -1.5, "Error, EUR", transform=outside, va="center", ha="right",
               fontsize=8, color=INK2)
