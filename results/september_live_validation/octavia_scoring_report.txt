@@ -1,0 +1,47 @@
+ 849 listings parsed
+- 57 already in the February training data
+ 792 unseen listings  <- census
+ 197 generation x top-5 by price  <- matched draw (primary)
+
+Random Forest
+                            n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                                        
+MATCHED DRAW (primary)    197 123.80 42.81 306.37 0.89      36.79        20.54
+- February HAD the cell   104  77.18 44.97 155.43 0.98      34.71        37.80
+- cell never seen          93 175.92 41.19 414.50 0.46      40.17        -0.24
+CENSUS (market coverage)  792 305.01 57.66 713.82 0.20      61.83        55.30
+
+Subcategory-median heuristic
+                n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                            
+MATCHED DRAW  197 146.25 30.15 338.18 0.87      23.12        15.40
+CENSUS        792 326.36 61.50 740.99 0.14      70.10        60.05
+
+Matched draw by price band
+    band  n  RF_MdAPE  heuristic_MdAPE
+    0-50 40     103.5             57.3
+  50-100 51      34.1             18.8
+ 100-200 43      35.7             30.1
+ 200-500 24      29.2             51.6
+500-1000 24      14.6             11.3
+   1000+ 15      15.0             18.1
+
+Per part, matched draw
+                   part  n  median_price  median_pred  RF_MdAPE  heur_MdAPE  covered
+        engine gasoline 15       3,600.0      4,255.5      15.0        18.1       10
+       starter gasoline 20          87.5         83.5      20.3        48.9        5
+       passenger airbag 19         400.0        484.2      21.4        21.4        5
+   mass air-flow sensor 18          80.0         61.4      24.2        18.3       10
+     abs hydraulic pump 19         400.0        197.8      25.1        28.7        5
+abs hydraulic aggregate 16         522.5        652.7      27.2        28.2       10
+     fuel pump electric 19         102.0         63.2      36.8        30.2       10
+            brake servo 20         120.0        108.3      39.2        60.1        5
+          engine casing 17          50.0         60.9      51.5        18.8       10
+               tank lid 20          45.0         84.2     108.8        18.5       20
+            other relay 14          18.0         60.5     303.4        49.2       14
+
+Bootstrap, 5000 resamples of the matched draw
+  RF MdAPE          36.8%  95% CI 31.6% to 46.7%
+  RF minus heuristic +12.2 points  95% CI +3.7 to +21.6
+
+scored rows -> results/september_live_validation/octavia_sept_scored.csv

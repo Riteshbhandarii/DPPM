@@ -1,0 +1,47 @@
+ 868 listings parsed
+-157 already in the February training data
+ 711 unseen listings  <- census
+ 254 generation x top-5 by price  <- matched draw (primary)
+
+Random Forest
+                            n    MAE  MdAE     RMSE    R2  MdAPE_pct  median_bias
+sample                                                                           
+MATCHED DRAW (primary)    254 227.21 30.33   651.47 -0.21      32.77        13.88
+- February HAD the cell   155  43.98 24.13    76.83  0.98      24.59        14.64
+- cell never seen          99 514.08 57.32 1,039.06 -2.64      48.54        10.23
+CENSUS (market coverage)  711 242.37 37.72   649.24  0.16      50.82        25.88
+
+Subcategory-median heuristic
+                n    MAE  MdAE   RMSE    R2  MdAPE_pct  median_bias
+sample                                                             
+MATCHED DRAW  254 308.14 44.20 721.81 -0.48      58.00        35.80
+CENSUS        711 327.88 49.80 720.62 -0.04     101.60        47.90
+
+Matched draw by price band
+    band   n  RF_MdAPE  heuristic_MdAPE
+    0-50  40     152.9            131.2
+  50-100 107      19.9             50.7
+ 100-200  31      39.7            142.6
+ 200-500  37      45.2             48.0
+500-1000  24      17.7             18.2
+   1000+  15      64.3             74.1
+
+Per part, matched draw
+                   part  n  median_price  median_pred  RF_MdAPE  heur_MdAPE  covered
+     abs hydraulic pump 18         150.0        171.6      12.0       253.9       18
+       starter gasoline 36          60.0         60.3      18.1        57.8       20
+            brake servo 32          75.0         60.0      18.7       581.3       16
+          engine casing 10          55.5         68.0      23.3        18.2       10
+     fuel pump electric 27          85.0         62.6      26.4        26.0       15
+   mass air-flow sensor 19          59.0         75.9      32.8        40.5       18
+       passenger airbag 21         200.0        290.4      45.2        48.0       15
+            other relay 13          40.0         59.7      49.3        48.1       13
+abs hydraulic aggregate 25         390.0         84.5      65.6        51.5        5
+               tank lid 28          30.0         60.4     147.2        58.0       20
+        engine gasoline 25       1,320.0      3,450.7     161.0       177.0        5
+
+Bootstrap, 5000 resamples of the matched draw
+  RF MdAPE          32.8%  95% CI 26.4% to 39.7%
+  RF minus heuristic -27.4 points  95% CI -37.0 to -19.2
+
+scored rows -> results/september_live_validation/corolla_sept_scored.csv

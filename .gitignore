@@ -39,3 +39,7 @@ artifacts/random_forest_final/
 
 # Quick-mode smoke-test outputs
 artifacts/*_quick/
+
+# Parsed September listing tables: raw scraped rows (seller names, OEM numbers),
+# kept out of this public repo. They live next to the saved HTML pages.
+results/september_live_validation/*.csv
