@@ -215,7 +215,7 @@ def main():
     first = cells.iloc[0]
     axes.text(
         0.0, 1.045,
-        "Filled circle: observed price.   Open circle: model.   "
+        "Filled circle: observed price.   Open circle: random forest.   "
         "Grey diamond: per-part median baseline.",
         transform=axes.transAxes, fontsize=7.6, color=INK2, va="top",
     )
