@@ -80,9 +80,22 @@ def build_features(september, february, brand, model, feature_names):
         if car[column].nunique(dropna=False) > 1:
             raise SystemExit(f"{column} is not constant for {brand}/{model}")
 
+    # February's part_name strings come from the product page's h1 run through
+    # clean_part_name, so they carry per-car residue: Golf listings read
+    # "Tank lid - , e-" because the crawler stripped "Golf" out of
+    # "Tank lid - VW Golf, e-Golf" on the merged Golf/e-Golf family pages.
+    # Rebuilding the string by hand silently mismatches that car, and with
+    # onehot_min_frequency=3 a mismatch does not raise -- it drops into the
+    # infrequent bucket and kills a 9.6%-SHAP feature without a warning. So
+    # take February's own dominant spelling per subcategory instead.
+    february_part_names = (
+        car.groupby("subcategory").part_name.agg(lambda names: names.mode().iat[0])
+    )
     frame = pd.DataFrame(
         {
-            "part_name": september.part_label.str.strip() + " -",
+            "part_name": september.subcategory.map(february_part_names).fillna(
+                september.part_label.str.strip() + " -"
+            ),
             "quality_grade": september.quality_grade if SCORE_WITH_QUALITY_GRADE else np.nan,
             "mileage": september.mileage,
             "brand": brand,
