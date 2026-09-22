@@ -102,12 +102,13 @@ def three_per_cell(listings):
 def main():
     listings = scored_listings()
     drawn = three_per_cell(listings)
-    floor = float(listings.predicted.min())
+    actual = [drawn[drawn.tier == t].price.median() for t in TIERS]
+    predicted = [drawn[drawn.tier == t].predicted.median() for t in TIERS]
 
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
-            "font.size": 10,
+            "font.size": 12,
             "axes.edgecolor": GRID,
             "axes.labelcolor": INK2,
             "text.color": INK,
@@ -117,107 +118,44 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, (left, right) = plt.subplots(
-        1, 2, figsize=(13, 5.6), gridspec_kw={"width_ratios": [1.25, 1]}
-    )
-
-    left.scatter(
-        listings.price, listings.predicted, s=9, c=CONTEXT, edgecolors="none",
-        zorder=1, label=f"all {len(listings):,} listings (not scored)",
-    )
-    left.scatter(
-        drawn.price, drawn.predicted, s=42, c=BLUE, edgecolors=SURFACE,
-        linewidths=1.2, zorder=3, label=f"the {len(drawn)} scored (3 per part x car)",
-    )
-    limits = [4, 9000]
-    left.plot(limits, limits, color=INK2, lw=1.2, ls="--", zorder=2)
-    left.axhline(floor, color=ORANGE, lw=2, zorder=2)
-    left.annotate(
-        f"prediction floor, {floor:.0f} EUR\nthe model cannot go below this",
-        xy=(6.5, floor), xytext=(6.5, 11), color=ORANGE, fontsize=9.5,
-        va="center", ha="left", arrowprops=dict(arrowstyle="-", color=ORANGE, lw=1),
-    )
-    left.text(
-        950, 1750, "a perfect prediction\nwould sit on this line", color=INK2,
-        fontsize=9, rotation=32, rotation_mode="anchor", ha="center", va="bottom",
-    )
-    left.set_xscale("log")
-    left.set_yscale("log")
-    left.set_xlim(limits)
-    left.set_ylim(limits)
-    plain = FuncFormatter(lambda value, _: f"{value:,.0f}")
-    left.xaxis.set_major_formatter(plain)
-    left.yaxis.set_major_formatter(plain)
-    left.set_xlabel("actual asking price, EUR")
-    left.set_ylabel("model prediction, EUR")
-    left.set_title(
-        "Every cheap part is predicted at the floor", fontsize=12.5, color=INK,
-        loc="left", pad=10,
-    )
-    left.grid(True, color=GRID, lw=0.7, zorder=0)
-    left.set_axisbelow(True)
-    for spine in ("top", "right"):
-        left.spines[spine].set_visible(False)
-    left.legend(
-        frameon=False, loc="lower right", fontsize=9.5, labelcolor=INK2,
-        bbox_to_anchor=(1, 0.02),
-    )
-
-    model_error = [drawn[drawn.tier == t].ape_model.median() for t in TIERS]
-    heuristic_error = [drawn[drawn.tier == t].ape_heuristic.median() for t in TIERS]
+    figure, axes = plt.subplots(figsize=(10, 5.4))
     positions = np.arange(3)
-    height = 0.36
-    right.barh(
-        positions - height / 2 - 0.01, model_error, height, color=BLUE,
-        label="random forest", zorder=3,
-    )
-    right.barh(
-        positions + height / 2 + 0.01, heuristic_error, height, color=ORANGE,
-        label="per-part median (baseline)", zorder=3,
-    )
-    for row, value in zip(positions - height / 2 - 0.01, model_error):
-        right.text(value + 7, row, f"{value:.0f}%", va="center", fontsize=10, color=INK2)
-    for row, value in zip(positions + height / 2 + 0.01, heuristic_error):
-        right.text(value + 7, row, f"{value:.0f}%", va="center", fontsize=10, color=INK2)
-    right.set_yticks(
-        positions,
-        [f"{t}\nmedian {drawn[drawn.tier == t].price.median():,.0f} EUR" for t in TIERS],
-        fontsize=10,
-    )
-    right.invert_yaxis()
-    right.set_xlim(0, 420)
-    right.set_xlabel("median error, % of the actual price")
-    right.set_title(
-        "Accuracy collapses at the cheap end", fontsize=12.5, color=INK, loc="left", pad=10
-    )
-    right.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
-    right.set_axisbelow(True)
-    for spine in ("top", "right", "left"):
-        right.spines[spine].set_visible(False)
-    right.legend(
-        frameon=False, loc="upper right", fontsize=9.5, labelcolor=INK2,
-        bbox_to_anchor=(1, 0.36),
-    )
+    height = 0.34
 
-    figure.suptitle(
-        "September live validation: 99 listings, 11 parts, 3 cars",
-        fontsize=14, color=INK, x=0.037, ha="left", y=0.985,
+    axes.barh(positions - height / 2 - 0.012, actual, height, color=INK2,
+              label="what it actually sells for", zorder=3)
+    axes.barh(positions + height / 2 + 0.012, predicted, height, color=BLUE,
+              label="what the model predicts", zorder=3)
+    for row, value in zip(positions - height / 2 - 0.012, actual):
+        axes.text(value + 5, row, f"{value:,.0f} EUR", va="center", fontsize=12, color=INK2)
+    for row, value in zip(positions + height / 2 + 0.012, predicted):
+        axes.text(value + 5, row, f"{value:,.0f} EUR", va="center", fontsize=12, color=BLUE)
+
+    axes.set_yticks(positions, ["the dearest\nlisting", "the middle\nlisting",
+                                "the cheapest\nlisting"], fontsize=12.5)
+    axes.invert_yaxis()
+    axes.set_xlim(0, 330)
+    axes.set_xticks([])
+    axes.grid(False)
+    for spine in ("top", "right", "left", "bottom"):
+        axes.spines[spine].set_visible(False)
+    axes.legend(frameon=False, loc="lower right", fontsize=11.5, labelcolor=INK2)
+
+    axes.set_title(
+        "The real price drops 9x. The model barely moves.",
+        fontsize=16, color=INK, loc="left", pad=16,
     )
     figure.text(
-        0.037, 0.015,
-        "Saved varaosahaku.fi result pages, 2026-09-17 to 09-22. From each part x car cell: "
-        "the most expensive, the middle and the cheapest listing. Listings already in the "
-        "February training data removed.",
-        fontsize=8.5, color=MUTED,
+        0.008, 0.035,
+        "Median of 33 cells (11 parts x 3 cars), varaosahaku.fi, September 2026. From each cell: "
+        "the dearest, the middle and the cheapest listing.",
+        fontsize=9.5, color=MUTED,
     )
-    figure.tight_layout(rect=[0, 0.045, 1, 0.95])
+    figure.tight_layout(rect=[0, 0.06, 1, 1])
     figure.savefig(OUT, dpi=200)
     print(f"saved {OUT}")
-    print(
-        pd.DataFrame(
-            {"tier": TIERS, "random_forest": model_error, "heuristic": heuristic_error}
-        ).to_string(index=False, float_format="{:,.1f}".format)
-    )
+    print(pd.DataFrame({"tier": TIERS, "actual": actual, "model": predicted}).to_string(
+        index=False, float_format="{:,.0f}".format))
 
 
 if __name__ == "__main__":
