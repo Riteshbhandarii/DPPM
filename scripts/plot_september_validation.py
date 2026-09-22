@@ -100,58 +100,43 @@ def three_per_cell(listings):
 
 
 def main():
-    listings = scored_listings()
-    drawn = three_per_cell(listings)
+    drawn = three_per_cell(scored_listings())
     actual = [drawn[drawn.tier == t].price.median() for t in TIERS]
     predicted = [drawn[drawn.tier == t].predicted.median() for t in TIERS]
 
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
-            "font.size": 12,
-            "axes.edgecolor": GRID,
-            "axes.labelcolor": INK2,
             "text.color": INK,
-            "xtick.color": INK2,
-            "ytick.color": INK2,
+            "ytick.color": INK,
             "figure.facecolor": SURFACE,
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(10, 5.4))
+    figure, axes = plt.subplots(figsize=(9, 4.6))
     positions = np.arange(3)
-    height = 0.34
+    height = 0.33
 
-    axes.barh(positions - height / 2 - 0.012, actual, height, color=INK2,
-              label="what it actually sells for", zorder=3)
-    axes.barh(positions + height / 2 + 0.012, predicted, height, color=BLUE,
-              label="what the model predicts", zorder=3)
-    for row, value in zip(positions - height / 2 - 0.012, actual):
-        axes.text(value + 5, row, f"{value:,.0f} EUR", va="center", fontsize=12, color=INK2)
-    for row, value in zip(positions + height / 2 + 0.012, predicted):
-        axes.text(value + 5, row, f"{value:,.0f} EUR", va="center", fontsize=12, color=BLUE)
+    axes.barh(positions - height / 2 - 0.015, actual, height, color=INK2,
+              label="actual", zorder=3)
+    axes.barh(positions + height / 2 + 0.015, predicted, height, color=BLUE,
+              label="model", zorder=3)
+    for row, value in zip(positions - height / 2 - 0.015, actual):
+        axes.text(value + 6, row, f"{value:,.0f}", va="center", fontsize=15, color=INK2)
+    for row, value in zip(positions + height / 2 + 0.015, predicted):
+        axes.text(value + 6, row, f"{value:,.0f}", va="center", fontsize=15, color=BLUE)
 
-    axes.set_yticks(positions, ["the dearest\nlisting", "the middle\nlisting",
-                                "the cheapest\nlisting"], fontsize=12.5)
+    axes.set_yticks(positions, ["dearest", "middle", "cheapest"], fontsize=15)
     axes.invert_yaxis()
-    axes.set_xlim(0, 330)
+    axes.set_xlim(0, 320)
     axes.set_xticks([])
-    axes.grid(False)
-    for spine in ("top", "right", "left", "bottom"):
-        axes.spines[spine].set_visible(False)
-    axes.legend(frameon=False, loc="lower right", fontsize=11.5, labelcolor=INK2)
+    axes.tick_params(left=False)
+    for spine in axes.spines.values():
+        spine.set_visible(False)
+    axes.legend(frameon=False, loc="lower right", fontsize=14, labelcolor=INK2)
+    axes.set_title("Price in euros", fontsize=17, color=INK, loc="left", pad=18)
 
-    axes.set_title(
-        "The real price drops 9x. The model barely moves.",
-        fontsize=16, color=INK, loc="left", pad=16,
-    )
-    figure.text(
-        0.008, 0.035,
-        "Median of 33 cells (11 parts x 3 cars), varaosahaku.fi, September 2026. From each cell: "
-        "the dearest, the middle and the cheapest listing.",
-        fontsize=9.5, color=MUTED,
-    )
-    figure.tight_layout(rect=[0, 0.06, 1, 1])
+    figure.tight_layout()
     figure.savefig(OUT, dpi=200)
     print(f"saved {OUT}")
     print(pd.DataFrame({"tier": TIERS, "actual": actual, "model": predicted}).to_string(
