@@ -20,8 +20,10 @@ from pathlib import Path
 CARD_SPLIT = re.compile(r'<li [^>]*class="item ')
 TAGS = re.compile(r"<[^>]+>")
 WS = re.compile(r"\s+")
+# Cmd+S writes some saves with root-relative hrefs and others with absolute
+# ones, so accept both rather than anchoring on a leading slash.
 HREF = re.compile(
-    r'href="(/[^"]*?/Search/Car-parts/[^"]*?/ID-(\d+)[^"]*)"'
+    r'href="([^"]*?/Search/Car-parts/[^"]*?/ID-(\d+)[^"]*)"'
 )
 PATH = re.compile(
     r"/Search/Car-parts/[^/]+/(?P<brand>[^/]+)/(?P<gen>[^/]+)/"
