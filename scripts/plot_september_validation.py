@@ -162,7 +162,7 @@ def main():
         for position, cell in enumerate(cells.itertuples())
     ])
     cells = cells.assign(row=rows)
-    label_x = 4.6
+    label_x = 2.7
     # the euros column lives outside the plot, so the gridlines stop at the data
     outside = blended_transform_factory(axes.transAxes, axes.transData)
 
@@ -178,21 +178,24 @@ def main():
         off = cell.euros_off
         close = abs(off) < 0.1 * cell.price
         axes.text(
-            1.15, row, "within 10%" if close else f"{off:+,.0f}",
-            transform=outside, va="center", ha="right", fontsize=7.5,
-            color=MUTED if close else INK,
+            1.15, row, f"{off:+,.0f}", transform=outside, va="center", ha="right",
+            fontsize=7.5, color=MUTED if close else INK,
         )
 
     # one part label per group; the blank rows do the separating
     for _, group in cells.groupby("part_rank"):
         axes.text(label_x, group.row.mean(), academic(group.subcategory.iat[0]),
-                  va="center", ha="left", fontsize=8.5, color=INK)
+                  va="center", ha="left", fontsize=8.2, color=INK)
 
     axes.set_yticks(rows, [car.capitalize() for car in cells.car], fontsize=7.5)
-    axes.tick_params(axis="y", pad=1)
+    axes.tick_params(axis="y", pad=11)
+    # the car's colour sits beside its own row rather than in a key at the top
+    for row, car in zip(rows, cells.car):
+        axes.plot(-0.016, row, marker="o", markersize=4, color=CAR_COLOUR[car],
+                  transform=outside, clip_on=False, zorder=5)
     axes.set_xscale("log")
-    axes.set_xlim(4.2, 9000)
-    axes.set_ylim(rows.max() + 0.7, -3.0)
+    axes.set_xlim(2.6, 9000)
+    axes.set_ylim(rows.max() + 0.7, -2.4)
     axes.set_xticks([10, 30, 100, 300, 1000, 3000],
                     ["10", "30", "100", "300", "1 000", "3 000"], fontsize=8)
     axes.set_xticks([], minor=True)
@@ -206,24 +209,11 @@ def main():
 
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
-    # One colour key for the cars. The marker shape is explained in words
-    # underneath rather than as a second legend: two legends on a 16 cm figure
-    # end up on the same line and overlap.
-    car_key = [
-        Line2D([], [], marker="o", linestyle="none", markersize=5,
-               color=CAR_COLOUR[car], label=car.capitalize())
-        for car in CAR_ORDER
-    ]
-    axes.legend(
-        handles=car_key, frameon=False, fontsize=8, labelcolor=INK2,
-        loc="upper left", bbox_to_anchor=(0.0, 1.075), ncol=3,
-        handletextpad=0.4, columnspacing=1.6,
-    )
     axes.text(
-        0.0, 1.035, "Filled marker: observed price.   Open marker: predicted price.",
+        0.0, 1.045, "Filled marker: observed price.   Open marker: predicted price.",
         transform=axes.transAxes, fontsize=8, color=INK2, va="top",
     )
-    axes.text(1.15, -1.7, "Error, EUR", transform=outside, va="center", ha="right",
+    axes.text(1.15, -1.5, "Error, EUR", transform=outside, va="center", ha="right",
               fontsize=8, color=INK2)
 
     # No in-image title: in the thesis the caption below the figure carries it.
