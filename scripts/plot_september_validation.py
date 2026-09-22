@@ -129,6 +129,41 @@ def tint(hex_colour, amount=0.58):
     return tuple(channel + (1 - channel) * amount for channel in (red, green, blue))
 
 
+def draw_key(figure):
+    """The key, drawn by hand in figure coordinates.
+
+    Two matplotlib legends stacked here end up on the same line at this width
+    and overlap, so the marker row and the colour row are placed explicitly.
+    """
+    box = figure.add_axes([0.10, 0.930, 0.80, 0.058])
+    box.set_xlim(0, 1)
+    box.set_ylim(0, 1)
+    box.set_xticks([])
+    box.set_yticks([])
+    for side, spine in box.spines.items():
+        spine.set_color(GRID)
+        spine.set_linewidth(0.8)
+    box.set_facecolor(SURFACE)
+
+    marker_row = [
+        ("o", MUTED, MUTED, "Observed price"),
+        ("o", SURFACE, MUTED, "Random forest"),
+        ("D", SURFACE, MUTED, "Per-part median"),
+    ]
+    for index, (shape, face, edge, text) in enumerate(marker_row):
+        x = 0.035 + index * 0.325
+        box.plot(x, 0.70, marker=shape, markersize=5, markerfacecolor=face,
+                 markeredgecolor=edge, markeredgewidth=1.2, linestyle="none")
+        box.text(x + 0.032, 0.70, text, va="center", fontsize=7.8, color=INK2)
+
+    for index, car in enumerate(CAR_ORDER):
+        x = 0.035 + index * 0.325
+        box.plot(x, 0.26, marker="o", markersize=5, color=CAR_COLOUR[car],
+                 linestyle="none")
+        box.text(x + 0.032, 0.26, car.capitalize(), va="center", fontsize=7.8,
+                 color=INK2)
+
+
 def main():
     drawn = three_per_cell(scored_listings())
     # The dearest listing of each cell: the tier the model can actually price.
@@ -199,7 +234,7 @@ def main():
                   transform=outside, clip_on=False, zorder=5)
     axes.set_xscale("log")
     axes.set_xlim(2.6, 9000)
-    axes.set_ylim(rows.max() + 0.7, -2.4)
+    axes.set_ylim(rows.max() + 0.7, -1.6)
     axes.set_xticks([10, 30, 100, 300, 1000, 3000],
                     ["10", "30", "100", "300", "1 000", "3 000"], fontsize=8)
     axes.set_xticks([], minor=True)
@@ -213,17 +248,12 @@ def main():
 
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
-    axes.text(
-        0.0, 1.045,
-        "Filled circle: observed price.   Open circle: random forest.   "
-        "Grey diamond: per-part median baseline.",
-        transform=axes.transAxes, fontsize=7.6, color=INK2, va="top",
-    )
-    axes.text(1.15, -1.5, "Error, EUR", transform=outside, va="center", ha="right",
+    axes.text(1.15, -1.0, "Error, EUR (random forest)", transform=outside, va="center", ha="right",
               fontsize=8, color=INK2)
 
     # No in-image title: in the thesis the caption below the figure carries it.
-    figure.tight_layout(rect=[0, 0, 0.86, 0.975])
+    figure.tight_layout(rect=[0, 0, 0.86, 0.92])
+    draw_key(figure)
     figure.savefig(OUT, dpi=300)
     figure.savefig(OUT_VECTOR)
     print(f"saved {OUT}\nsaved {OUT_VECTOR}")
