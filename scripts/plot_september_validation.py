@@ -101,69 +101,75 @@ def three_per_cell(listings):
 
 def main():
     drawn = three_per_cell(scored_listings())
-    actual = [drawn[drawn.tier == t].price.median() for t in TIERS]
-    predicted = [drawn[drawn.tier == t].predicted.median() for t in TIERS]
-    gap = [(p - a) / a * 100 for a, p in zip(actual, predicted)]
 
     plt.rcParams.update(
         {
             "font.family": "DejaVu Sans",
             "text.color": INK,
             "ytick.color": INK,
+            "xtick.color": INK2,
             "figure.facecolor": SURFACE,
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(11.5, 5.8))
-    positions = np.arange(3)
-    height = 0.33
-    scale = 430  # x-room for the verdict column on the right
+    figure, axes = plt.subplots(figsize=(12, 5.8))
+    rng = np.random.default_rng(32)
 
-    axes.barh(positions - height / 2 - 0.015, actual, height, color=INK2,
-              label="what it actually sells for", zorder=3)
-    axes.barh(positions + height / 2 + 0.015, predicted, height, color=BLUE,
-              label="what the model predicts", zorder=3)
-    for row, value in zip(positions - height / 2 - 0.015, actual):
-        axes.text(value + 7, row, f"{value:,.0f} EUR", va="center", fontsize=13, color=INK2)
-    for row, value in zip(positions + height / 2 + 0.015, predicted):
-        axes.text(value + 7, row, f"{value:,.0f} EUR", va="center", fontsize=13, color=BLUE)
+    # One dot per cell, so the spread stays visible: a single median per tier
+    # hides that the dearest listings cluster tightly while the cheap tail
+    # scatters over two orders of magnitude.
+    axes.axvspan(1, 50, color="#e8f0fb", zorder=0)
+    axes.axvline(50, color=BLUE, lw=1.2, ls="--", zorder=1)
 
-    for row, difference in zip(positions, gap):
-        direction = "too high" if difference > 0 else "too low"
-        axes.text(scale * 0.70, row, f"{direction} by {abs(difference):.0f}%",
-                  va="center", fontsize=15, color=ORANGE)
+    for row, tier in enumerate(TIERS):
+        errors = drawn[drawn.tier == tier].ape_model.clip(lower=1)
+        axes.scatter(
+            errors, row + rng.uniform(-0.13, 0.13, len(errors)),
+            s=95, color=BLUE, alpha=0.75, edgecolors=SURFACE, linewidths=1.2, zorder=3,
+        )
+        axes.text(
+            3900, row, f"{(errors <= 50).sum()} of {len(errors)}",
+            va="center", ha="right", fontsize=17, color=BLUE,
+        )
 
-    axes.set_yticks(
-        positions,
-        ["dearest listing\nof each part", "middle listing\nof each part",
-         "cheapest listing\nof each part"],
-        fontsize=13,
-    )
-    axes.invert_yaxis()
-    axes.set_xlim(0, scale)
-    axes.set_xticks([])
-    axes.tick_params(left=False)
+    axes.text(7, -0.72, "USABLE: within 50% of the real price",
+              fontsize=13, color=BLUE, va="center")
+    axes.text(3900, -0.72, "how many land\nin the usable band", fontsize=12,
+              color=INK2, va="center", ha="right")
+
+    axes.set_xscale("log")
+    axes.set_xlim(1, 4200)
+    axes.set_ylim(2.6, -1.0)
+    axes.set_xticks([1, 10, 50, 100, 1000], ["1%", "10%", "50%", "100%", "1000%"],
+                    fontsize=13)
+    axes.set_yticks(range(3),
+                    ["dearest listing\nof each part", "middle listing\nof each part",
+                     "cheapest listing\nof each part"], fontsize=13)
+    axes.set_xlabel("how far off the model was, % of the real price", fontsize=13,
+                    color=INK2, labelpad=10)
+    axes.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
+    axes.set_axisbelow(True)
     for spine in axes.spines.values():
         spine.set_visible(False)
-    axes.legend(frameon=False, loc="lower right", fontsize=12.5, labelcolor=INK2,
-                bbox_to_anchor=(0.72, -0.02))
+    axes.tick_params(left=False)
 
     axes.set_title(
-        "The model answers about 100 EUR no matter what the part is worth",
-        fontsize=17, color=INK, loc="left", pad=20,
+        "The model works on the dearest part in each group, and only there",
+        fontsize=17, color=INK, loc="left", pad=22,
     )
     figure.text(
         0.012, 0.028,
-        "Median across 33 cells: 11 parts x 3 cars (Corolla, Golf, Octavia). "
+        "One dot = one part on one car, 33 cells (11 parts x 3 cars: Corolla, Golf, Octavia). "
         "varaosahaku.fi, September 2026.",
         fontsize=10.5, color=MUTED,
     )
     figure.tight_layout(rect=[0, 0.055, 1, 1])
     figure.savefig(OUT, dpi=200)
     print(f"saved {OUT}")
-    print(pd.DataFrame(
-        {"tier": TIERS, "actual": actual, "model": predicted, "gap_pct": gap}
-    ).to_string(index=False, float_format="{:,.0f}".format))
+    for tier in TIERS:
+        errors = drawn[drawn.tier == tier].ape_model
+        print(f"{tier:10s} median {errors.median():6.0f}%   within 50%: "
+              f"{(errors <= 50).sum():2d}/{len(errors)}   within 25%: {(errors <= 25).sum():2d}/{len(errors)}")
 
 
 if __name__ == "__main__":
