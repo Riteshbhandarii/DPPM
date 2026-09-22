@@ -34,6 +34,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.ticker import FuncFormatter
+from matplotlib.lines import Line2D
 from matplotlib.transforms import blended_transform_factory
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,6 +46,11 @@ from src.random_forest_serving import load_random_forest_bundle
 
 LISTINGS = Path.home() / "Desktop/validation dataset/parsed"
 OUT = ROOT / "results/september_live_validation/september_validation.png"
+OUT_VECTOR = OUT.with_suffix(".pdf")
+
+# Built at the thesis text width so the type lands at its intended size on the
+# page. Scaling a figure down in Word is what makes labels unreadable in print.
+TEXT_WIDTH_INCHES = 6.3
 CARS = [("corolla", "toyota"), ("golf", "vw"), ("octavia", "skoda")]
 TIERS = ["expensive", "middle", "cheapest"]
 
@@ -109,6 +115,13 @@ CAR_ORDER = ["corolla", "golf", "octavia"]
 CAR_COLOUR = {"corolla": "#2a78d6", "golf": "#eb6834", "octavia": "#1baf7a"}
 
 
+def academic(name):
+    """Subcategory label as it should read in a thesis figure."""
+    if name.startswith("abs "):
+        return "ABS " + name[4:]
+    return name[0].upper() + name[1:]
+
+
 def tint(hex_colour, amount=0.58):
     """Lighter step of the same hue: the model's guess against the real price."""
     red, green, blue = mcolors.to_rgb(hex_colour)
@@ -140,45 +153,46 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(12, 10.5))
+    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, 7.7))
     rows = np.arange(len(cells))
-    label_x = 4.4
+    label_x = 4.6
     # the euros column lives outside the plot, so the gridlines stop at the data
     outside = blended_transform_factory(axes.transAxes, axes.transData)
 
     for row, cell in zip(rows, cells.itertuples()):
         colour = CAR_COLOUR[cell.car]
         axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
-                  lw=3.5, zorder=1, solid_capstyle="round")
-        axes.scatter(cell.predicted, row, s=110, color=tint(colour), zorder=3,
-                     edgecolors=colour, linewidths=1.6)
-        axes.scatter(cell.price, row, s=110, color=colour, zorder=4)
+                  lw=2, zorder=1, solid_capstyle="round")
+        axes.scatter(cell.predicted, row, s=34, color=tint(colour), zorder=3,
+                     edgecolors=colour, linewidths=1.0)
+        axes.scatter(cell.price, row, s=34, color=colour, zorder=4)
 
     for row, cell in zip(rows, cells.itertuples()):
         off = cell.euros_off
         close = abs(off) < 0.1 * cell.price
         axes.text(
-            1.13, row, "on the money" if close else f"{off:+,.0f} EUR",
-            transform=outside, va="center", ha="right", fontsize=11.5,
+            1.15, row, "within 10%" if close else f"{off:+,.0f}",
+            transform=outside, va="center", ha="right", fontsize=7.5,
             color=MUTED if close else INK,
         )
 
     # one part label per group, plus a hairline between groups
     for part, group in cells.groupby("part_rank"):
         middle = group.index.to_numpy().mean()
-        axes.text(label_x, middle, group.subcategory.iat[0], va="center", ha="left",
-                  fontsize=12.5, color=INK)
+        axes.text(label_x, middle, academic(group.subcategory.iat[0]), va="center",
+                  ha="left", fontsize=8.5, color=INK)
         if part:
             axes.axhline(group.index.min() - 0.5, color=GRID, lw=0.8, zorder=0)
 
-    axes.set_yticks(rows, cells.car, fontsize=11)
+    axes.set_yticks(rows, [car.capitalize() for car in cells.car], fontsize=7.5)
     axes.set_xscale("log")
     axes.set_xlim(4.2, 9000)
-    axes.set_ylim(len(cells) - 0.4, -3.1)
+    axes.set_ylim(len(cells) - 0.4, -2.2)
     axes.set_xticks([10, 30, 100, 300, 1000, 3000],
-                    ["10", "30", "100", "300", "1 000", "3 000"], fontsize=12)
+                    ["10", "30", "100", "300", "1 000", "3 000"], fontsize=8)
     axes.set_xticks([], minor=True)
-    axes.set_xlabel("price, EUR", fontsize=12, color=INK2, labelpad=8)
+    axes.set_xlabel("Asking price, EUR (logarithmic scale)", fontsize=8.5,
+                    color=INK2, labelpad=6)
     axes.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
     axes.set_axisbelow(True)
     for spine in axes.spines.values():
@@ -187,32 +201,25 @@ def main():
 
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
-    first_colour = CAR_COLOUR[first.car]
-    axes.annotate("what it sells for\n(solid)", xy=(first.price, -0.3),
-                  xytext=(first.price * 0.30, -2.25), fontsize=12, color=INK2, ha="center",
-                  arrowprops=dict(arrowstyle="-", color=INK2, lw=1))
-    axes.annotate("what the model said\n(pale)", xy=(first.predicted, -0.3),
-                  xytext=(first.predicted * 0.075, -1.35), fontsize=12, color=INK2, ha="center",
-                  arrowprops=dict(arrowstyle="-", color=first_colour, lw=1))
-    axes.text(1.13, -2.25, "euros out", transform=outside, va="center", ha="right",
-              fontsize=12, color=INK2)
+    observed = Line2D([], [], marker="o", linestyle="none", markersize=5.5,
+                      color=MUTED, label="Observed price")
+    predicted = Line2D([], [], marker="o", linestyle="none", markersize=5.5,
+                       markerfacecolor=tint(MUTED), markeredgecolor=MUTED,
+                       markeredgewidth=1.0, color="none", label="Predicted price")
+    axes.legend(handles=[observed, predicted], frameon=False, fontsize=8,
+                labelcolor=INK2, loc="upper left", bbox_to_anchor=(0.0, 1.055),
+                ncol=2, handletextpad=0.4, columnspacing=1.6)
+    axes.text(1.15, -1.5, "Error, EUR", transform=outside, va="center", ha="right",
+              fontsize=8, color=INK2)
 
     for label, car in zip(axes.get_yticklabels(), cells.car):
         label.set_color(CAR_COLOUR[car])
 
-    axes.set_title(
-        "What each part sells for, and what the model said",
-        fontsize=17, color=INK, loc="left", pad=26,
-    )
-    figure.text(
-        0.012, 0.016,
-        "The dearest listing of each part on each car, 33 cases. "
-        "varaosahaku.fi, September 2026.",
-        fontsize=10.5, color=MUTED,
-    )
-    figure.tight_layout(rect=[0, 0.028, 0.88, 1])
-    figure.savefig(OUT, dpi=200)
-    print(f"saved {OUT}")
+    # No in-image title: in the thesis the caption below the figure carries it.
+    figure.tight_layout(rect=[0, 0, 0.86, 0.985])
+    figure.savefig(OUT, dpi=300)
+    figure.savefig(OUT_VECTOR)
+    print(f"saved {OUT}\nsaved {OUT_VECTOR}")
     print(cells[["subcategory", "car", "price", "predicted", "euros_off"]].to_string(
         index=False, float_format="{:,.0f}".format))
 
