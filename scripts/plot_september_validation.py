@@ -103,6 +103,7 @@ def main():
     drawn = three_per_cell(scored_listings())
     actual = [drawn[drawn.tier == t].price.median() for t in TIERS]
     predicted = [drawn[drawn.tier == t].predicted.median() for t in TIERS]
+    gap = [(p - a) / a * 100 for a, p in zip(actual, predicted)]
 
     plt.rcParams.update(
         {
@@ -113,34 +114,56 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(9, 4.6))
+    figure, axes = plt.subplots(figsize=(11.5, 5.8))
     positions = np.arange(3)
     height = 0.33
+    scale = 430  # x-room for the verdict column on the right
 
     axes.barh(positions - height / 2 - 0.015, actual, height, color=INK2,
-              label="actual", zorder=3)
+              label="what it actually sells for", zorder=3)
     axes.barh(positions + height / 2 + 0.015, predicted, height, color=BLUE,
-              label="model", zorder=3)
+              label="what the model predicts", zorder=3)
     for row, value in zip(positions - height / 2 - 0.015, actual):
-        axes.text(value + 6, row, f"{value:,.0f}", va="center", fontsize=15, color=INK2)
+        axes.text(value + 7, row, f"{value:,.0f} EUR", va="center", fontsize=13, color=INK2)
     for row, value in zip(positions + height / 2 + 0.015, predicted):
-        axes.text(value + 6, row, f"{value:,.0f}", va="center", fontsize=15, color=BLUE)
+        axes.text(value + 7, row, f"{value:,.0f} EUR", va="center", fontsize=13, color=BLUE)
 
-    axes.set_yticks(positions, ["dearest", "middle", "cheapest"], fontsize=15)
+    for row, difference in zip(positions, gap):
+        direction = "too high" if difference > 0 else "too low"
+        axes.text(scale * 0.70, row, f"{direction} by {abs(difference):.0f}%",
+                  va="center", fontsize=15, color=ORANGE)
+
+    axes.set_yticks(
+        positions,
+        ["dearest listing\nof each part", "middle listing\nof each part",
+         "cheapest listing\nof each part"],
+        fontsize=13,
+    )
     axes.invert_yaxis()
-    axes.set_xlim(0, 320)
+    axes.set_xlim(0, scale)
     axes.set_xticks([])
     axes.tick_params(left=False)
     for spine in axes.spines.values():
         spine.set_visible(False)
-    axes.legend(frameon=False, loc="lower right", fontsize=14, labelcolor=INK2)
-    axes.set_title("Price in euros", fontsize=17, color=INK, loc="left", pad=18)
+    axes.legend(frameon=False, loc="lower right", fontsize=12.5, labelcolor=INK2,
+                bbox_to_anchor=(0.72, -0.02))
 
-    figure.tight_layout()
+    axes.set_title(
+        "The model answers about 100 EUR no matter what the part is worth",
+        fontsize=17, color=INK, loc="left", pad=20,
+    )
+    figure.text(
+        0.012, 0.028,
+        "Median across 33 cells: 11 parts x 3 cars (Corolla, Golf, Octavia). "
+        "varaosahaku.fi, September 2026.",
+        fontsize=10.5, color=MUTED,
+    )
+    figure.tight_layout(rect=[0, 0.055, 1, 1])
     figure.savefig(OUT, dpi=200)
     print(f"saved {OUT}")
-    print(pd.DataFrame({"tier": TIERS, "actual": actual, "model": predicted}).to_string(
-        index=False, float_format="{:,.0f}".format))
+    print(pd.DataFrame(
+        {"tier": TIERS, "actual": actual, "model": predicted, "gap_pct": gap}
+    ).to_string(index=False, float_format="{:,.0f}".format))
 
 
 if __name__ == "__main__":
