@@ -29,6 +29,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 
+import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -102,6 +103,17 @@ def three_per_cell(listings):
 
 CAR_ORDER = ["corolla", "golf", "octavia"]
 
+# One hue per car, so a part's three rows read as a block. Validated all-pairs
+# for normal vision and CVD; the aqua sits under 3:1 on this surface, which the
+# per-row car label covers -- identity is never carried by colour alone.
+CAR_COLOUR = {"corolla": "#2a78d6", "golf": "#eb6834", "octavia": "#1baf7a"}
+
+
+def tint(hex_colour, amount=0.58):
+    """Lighter step of the same hue: the model's guess against the real price."""
+    red, green, blue = mcolors.to_rgb(hex_colour)
+    return tuple(channel + (1 - channel) * amount for channel in (red, green, blue))
+
 
 def main():
     drawn = three_per_cell(scored_listings())
@@ -135,9 +147,12 @@ def main():
     outside = blended_transform_factory(axes.transAxes, axes.transData)
 
     for row, cell in zip(rows, cells.itertuples()):
-        axes.plot([cell.price, cell.predicted], [row, row], color=GRID, lw=3, zorder=1)
-    axes.scatter(cells.price, rows, s=95, color=INK2, zorder=3)
-    axes.scatter(cells.predicted, rows, s=95, color=BLUE, zorder=3)
+        colour = CAR_COLOUR[cell.car]
+        axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
+                  lw=3.5, zorder=1, solid_capstyle="round")
+        axes.scatter(cell.predicted, row, s=110, color=tint(colour), zorder=3,
+                     edgecolors=colour, linewidths=1.6)
+        axes.scatter(cell.price, row, s=110, color=colour, zorder=4)
 
     for row, cell in zip(rows, cells.itertuples()):
         off = cell.euros_off
@@ -145,7 +160,7 @@ def main():
         axes.text(
             1.13, row, "on the money" if close else f"{off:+,.0f} EUR",
             transform=outside, va="center", ha="right", fontsize=11.5,
-            color=INK2 if close else ORANGE,
+            color=MUTED if close else INK,
         )
 
     # one part label per group, plus a hairline between groups
@@ -159,7 +174,7 @@ def main():
     axes.set_yticks(rows, cells.car, fontsize=11)
     axes.set_xscale("log")
     axes.set_xlim(4.2, 9000)
-    axes.set_ylim(len(cells) - 0.4, -2.7)
+    axes.set_ylim(len(cells) - 0.4, -3.1)
     axes.set_xticks([10, 30, 100, 300, 1000, 3000],
                     ["10", "30", "100", "300", "1 000", "3 000"], fontsize=12)
     axes.set_xticks([], minor=True)
@@ -172,14 +187,18 @@ def main():
 
     # direct labels on the first row instead of a legend box
     first = cells.iloc[0]
-    axes.annotate("what it sells for", xy=(first.price, -0.3), xytext=(first.price * 0.30, -2.15),
-                  fontsize=12, color=INK2, ha="center",
+    first_colour = CAR_COLOUR[first.car]
+    axes.annotate("what it sells for\n(solid)", xy=(first.price, -0.3),
+                  xytext=(first.price * 0.30, -2.25), fontsize=12, color=INK2, ha="center",
                   arrowprops=dict(arrowstyle="-", color=INK2, lw=1))
-    axes.annotate("what the model said", xy=(first.predicted, -0.3),
-                  xytext=(first.predicted * 0.085, -1.25), fontsize=12, color=BLUE, ha="center",
-                  arrowprops=dict(arrowstyle="-", color=BLUE, lw=1))
-    axes.text(1.13, -2.15, "euros out", transform=outside, va="center", ha="right",
+    axes.annotate("what the model said\n(pale)", xy=(first.predicted, -0.3),
+                  xytext=(first.predicted * 0.075, -1.35), fontsize=12, color=INK2, ha="center",
+                  arrowprops=dict(arrowstyle="-", color=first_colour, lw=1))
+    axes.text(1.13, -2.25, "euros out", transform=outside, va="center", ha="right",
               fontsize=12, color=INK2)
+
+    for label, car in zip(axes.get_yticklabels(), cells.car):
+        label.set_color(CAR_COLOUR[car])
 
     axes.set_title(
         "What each part sells for, and what the model said",
