@@ -10,7 +10,8 @@ Inputs:
 - datasets/traficom_outputs/{model,brand}_summary.csv         registry values for vehicles February never saw
 
 Output:
-- the same CSV, with `predicted_eur` filled in
+- the same CSV, with `predicted_eur` filled in. `baseline_eur`, the per-part
+  median price used as the comparator, is data and is left unchanged.
 
 Assumptions:
 - The model is not refitted. Listing quality grade is left out, as in every run of the study.
