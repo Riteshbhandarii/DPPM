@@ -322,7 +322,10 @@ def main(listings_path, brand, model, generation=None):
 
     out = Path(listings_path).with_name(Path(listings_path).stem + "_scored.csv")
     unseen.to_csv(out, index=False)
-    print(f"\nscored rows -> {out}")
+    # The report is committed to a public repository, so the home directory is
+    # printed as ~ rather than as an absolute path carrying the user name.
+    shown = str(out.resolve()).replace(str(Path.home()), "~", 1)
+    print(f"\nscored rows -> {shown}")
 
 
 if __name__ == "__main__":
