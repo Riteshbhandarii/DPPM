@@ -1,6 +1,20 @@
 # Development
 
-Repository layout, the data files that matter, and how CI is set up.
+Setup, repository layout, the data files that matter, and how CI is set up.
+
+## Setup
+
+Python 3.12 (`.python-version`), dependencies pinned in `requirements.txt`.
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py        # demo UI
+uvicorn app.fastapi_app:app --reload      # API
+make verify PYTHON=.venv/bin/python       # split and test-set result still reproduce (read-only)
+make test PYTHON=.venv/bin/python
+```
 
 ## Repository layout
 
@@ -22,12 +36,12 @@ Repository layout, the data files that matter, and how CI is set up.
 | File | Rows | Note |
 | --- | ---: | --- |
 | `datasets/cleaned/clean_master_dataset.csv` | 11,321 | Modelling dataset, frozen |
-| `datasets/splits_strict/train_strict.csv` | 7,930 | Strict split, seed 32 |
+| `datasets/splits_strict/train_strict.csv` | 7,930 | Connected-component split, seed 32 |
 | `datasets/splits_strict/validation_strict.csv` | 1,695 | |
 | `datasets/splits_strict/test_strict.csv` | 1,696 | Used once on 2026-07-10; never score a model on it again |
 | `datasets/splits/*_grouped.csv` | 7,954 / 1,689 / 1,678 | Historical product-id split, optimistic baseline only |
 
-The strict split keeps every connected component (rows linked by the same
+The connected-component split keeps every connected component (rows linked by the same
 `product_id` or the same `part_name + brand + model + year_start + year_end`)
 in one split. Provenance and leakage checks:
 `datasets/splits_strict/strict_split_summary.json`. Which files are frozen and
@@ -37,16 +51,16 @@ how each is produced: [PIPELINE.md](PIPELINE.md).
 
 | Role | Purpose |
 | --- | --- |
-| Strict model | Random Forest selected under component-grouped CV; the reported result |
+| Reported model | Random Forest selected under component-grouped CV |
 | Operational model | Context-rich model used by the demo interface |
 | Conservative variant | Listing-history and time features removed, to test sensitivity |
 
 ## Explainability
 
 Only `artifacts/strict_final_shap/` (from `scripts/run_strict_shap.py`) explains
-the frozen strict model. `artifacts/final_model_shap/`,
+the reported model. `artifacts/final_model_shap/`,
 `artifacts/final_model_shap_conservative/` and `artifacts/random_forest_shap/`
-date from April 2026, before the strict split, and explain a different model.
+date from April 2026, before the connected-component split, and explain a different model.
 They are kept as history.
 
 ## Keeping the repository clean
