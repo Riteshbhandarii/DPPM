@@ -66,7 +66,7 @@ weaker comparator, so these gaps are not comparable with the table above)
 | Vehicle | Dearest RF / baseline | Middle RF / baseline | Cheapest RF / baseline |
 | --- | :---: | :---: | :---: |
 | Focus | 50.6% / 36.2% | 72.4% / 65.8% | 279.1% / 271.9% |
-| Qashqai | 17.1% / 37.4% | 105.4% / 58.1% | 332.0% / 163.9% |
+| Qashqai | 17.1% / 37.4% | 105.4% / 58.1% | 331.9% / 163.9% |
 | V70 | 49.7% / 29.2% | 68.6% / 58.3% | 209.6% / 138.0% |
 
 - Percentage error grows as the listing gets cheaper on every vehicle. The
@@ -77,4 +77,4 @@ weaker comparator, so these gaps are not comparable with the table above)
 
 The listings were chosen by hand; predictions come from the frozen model via
 `scripts/predict_september_listings.py`. Listings and predictions:
-`results/september_live_validation/september_listings.csv`.
+`results/september_live_validation/september_listings.csv` (with the baseline).
