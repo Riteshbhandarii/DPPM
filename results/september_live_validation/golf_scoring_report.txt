@@ -44,4 +44,11 @@ Bootstrap, 5000 resamples of the matched draw
   RF MdAPE          45.0%  95% CI 36.1% to 49.9%
   RF minus heuristic -10.8 points  95% CI -24.4 to +0.9
 
-scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/golf_sept_scored.csv
+Reported draw, dearest / middle / cheapest per cell, n=33
+     tier  n  median_price  RF_MdAPE  heuristic_MdAPE
+expensive 11         320.0      35.4             30.8
+   middle 11          81.0      92.2             77.5
+ cheapest 11          30.0     200.1            372.0
+all 33: RF 66.2%  heuristic 77.5%  RF closer on 17
+
+scored rows -> ~/Desktop/validation dataset/parsed/golf_sept_scored.csv
