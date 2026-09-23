@@ -75,6 +75,7 @@ weaker comparator, so these gaps are not comparable with the table above)
 - Whether the model or the median lookup is closer depends on the vehicle; no
   pooled "the model wins" result holds across all six.
 
-The listings were chosen by hand; predictions come from the frozen model via
-`scripts/predict_september_listings.py`. Listings and predictions:
-`results/september_live_validation/september_listings.csv` (with the baseline).
+Collected listings: `results/september_live_validation/september_listings.csv`.
+`scripts/predict_september_listings.py` runs the frozen model on them and writes
+`results/september_live_validation/september_predictions.csv` with the prediction
+and the baseline.
