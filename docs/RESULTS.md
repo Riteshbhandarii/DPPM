@@ -3,10 +3,10 @@
 The headline numbers in one place. Every figure here comes from a committed
 artifact; the linked documents carry the method and the full tables.
 
-## Strict holdout (2026-07-10, run once)
+## Connected-component test set (2026-07-10, run once)
 
 Frozen Random Forest, refit on train+validation (9,625 rows), scored once on the
-untouched strict test split (1,696 rows). Baselines fitted on the same rows.
+untouched test set of the connected-component split (1,696 rows). Baselines fitted on the same rows.
 
 | Predictor | MAE (EUR) | Median AE (EUR) | RMSE (EUR) | R2 | MdAPE |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -22,11 +22,11 @@ untouched strict test split (1,696 rows). Baselines fitted on the same rows.
 - R2 is not a useful headline here: the lookup table alone reaches 0.892.
 
 Source: `artifacts/strict_final_holdout/`. Full tables, bootstrap method and SHAP:
-[STRICT_MODEL_COMPARISON.md](STRICT_MODEL_COMPARISON.md) sections 8-11.
+[the model comparison](STRICT_MODEL_COMPARISON.md), sections 8-11.
 
-## Holdout error by brand and category
+## Test-set error by brand and category
 
-Same holdout, split by group. RF minus subcategory-median MAE with a paired
+Same test set, split by group. RF minus subcategory-median MAE with a paired
 bootstrap 95% CI; a positive value means the model is worse. Brand and vehicle
 are the same split here (one model per brand).
 
