@@ -1,16 +1,17 @@
 """
 Purpose:
-Draw the September live-validation figure: actual against predicted price for
-every collected listing, and median error by price tier for the model and the
-per-part median baseline.
+Draw the September live-validation figure: every listing the study reports,
+the dearest, the middle and the cheapest of each part x car cell, as three
+panels that share their rows. Each point pair is one real listing: its observed
+asking price and the frozen random forest's prediction for it.
 
-The draw shown is the one the study reports: from each part x car cell, the most
-expensive, the middle and the cheapest listing, 33 cells x 3 = 99 listings. Two
-of the three points are a cell's extremes by construction, so the figure reports
-the three tiers separately and never a pooled error figure.
+All three tiers are drawn because the model behaves differently across them,
+and a figure of the dearest tier alone reads as a best case. The comparison
+with the per-part median baseline is not drawn; it belongs in the tier table
+that accompanies the figure.
 
 Round 2 draws the same figure for the three vehicles February never saw, 9
-parts x 3 = 27 cells, against the all-brand per-part median.
+parts x 3 = 27 cells.
 
 Inputs:
 - <car>_sept_scored.csv, written by scripts/score_september_validation.py
@@ -34,7 +35,6 @@ matplotlib.use("Agg")
 
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from matplotlib.transforms import blended_transform_factory
 
@@ -79,12 +79,10 @@ HUES = ["#2a78d6", "#eb6834", "#1baf7a"]
 ROUNDS = {
     "1": {
         "cars": {"corolla": "Corolla", "golf": "Golf", "octavia": "Octavia"},
-        "baseline": "Per-part median",
         "out": "september_validation.png",
     },
     "2": {
         "cars": {"ford": "Focus", "nissan": "Qashqai", "volvo": "V70"},
-        "baseline": "All-brand per-part median",
         "out": "september_validation_round2.png",
     },
 }
@@ -103,13 +101,22 @@ def tint(hex_colour, amount=0.58):
     return tuple(channel + (1 - channel) * amount for channel in (red, green, blue))
 
 
-def draw_key(figure, names, colours, baseline):
-    """The key, drawn by hand in figure coordinates.
+TIERS = [
+    ("expensive", "Dearest listing"),
+    ("middle", "Middle listing"),
+    ("cheapest", "Cheapest listing"),
+]
 
-    Two matplotlib legends stacked here end up on the same line at this width
-    and overlap, so the marker row and the colour row are placed explicitly.
+
+def draw_key(figure):
+    """The key, drawn by hand in figure coordinates so it sits above the panels.
+
+    Only the two markers are keyed. Every row already carries its car's name
+    beside a dot in the car's colour, so a colour key would say it twice. The
+    per-part median is deliberately not drawn: the figure shows the raw result,
+    and the comparison with the baseline is reported in the tier table beside it.
     """
-    box = figure.add_axes([0.10, 0.930, 0.80, 0.058])
+    box = figure.add_axes([0.30, 0.955, 0.46, 0.030])
     box.set_xlim(0, 1)
     box.set_ylim(0, 1)
     box.set_xticks([])
@@ -122,20 +129,12 @@ def draw_key(figure, names, colours, baseline):
     marker_row = [
         ("o", MUTED, MUTED, "Observed price"),
         ("o", SURFACE, MUTED, "Random forest"),
-        ("D", SURFACE, MUTED, baseline),
     ]
     for index, (shape, face, edge, text) in enumerate(marker_row):
-        x = 0.035 + index * 0.325
-        box.plot(x, 0.70, marker=shape, markersize=5, markerfacecolor=face,
+        x = 0.08 + index * 0.50
+        box.plot(x, 0.5, marker=shape, markersize=5, markerfacecolor=face,
                  markeredgecolor=edge, markeredgewidth=1.2, linestyle="none")
-        box.text(x + 0.032, 0.70, text, va="center", fontsize=7.8, color=INK2)
-
-    for index, car in enumerate(names):
-        x = 0.035 + index * 0.325
-        box.plot(x, 0.26, marker="o", markersize=5, color=colours[car],
-                 linestyle="none")
-        box.text(x + 0.032, 0.26, names[car], va="center", fontsize=7.8,
-                 color=INK2)
+        box.text(x + 0.06, 0.5, text, va="center", fontsize=7.8, color=INK2)
 
 
 def main(round_number="1"):
@@ -144,18 +143,30 @@ def main(round_number="1"):
     colours = dict(zip(names, HUES))
     out = RESULTS / setup["out"]
     drawn = three_per_cell(scored_listings(names))
-    # The dearest listing of each cell: the tier the model can actually price.
-    cells = drawn[drawn.tier == "expensive"].copy()
-    cells["euros_off"] = cells.predicted - cells.price
 
-    # Group the rows by part, parts ordered by what they cost, so the part name
-    # is printed once instead of three times and the eye can scan down a group.
-    part_order = cells.groupby("subcategory").price.median().sort_values(ascending=False)
-    cells["part_rank"] = cells.subcategory.map(
-        {part: rank for rank, part in enumerate(part_order.index)}
+    # One row per part x car, the same rows in all three panels, so a row can be
+    # read straight across from its dearest to its cheapest listing. Parts are
+    # ordered by what their dearest listing costs.
+    dearest = drawn[drawn.tier == "expensive"]
+    part_order = dearest.groupby("subcategory").price.median().sort_values(ascending=False)
+    part_rank = {part: rank for rank, part in enumerate(part_order.index)}
+    car_rank = {car: rank for rank, car in enumerate(names)}
+    layout = (
+        dearest[["subcategory", "car"]]
+        .assign(
+            part_rank=lambda frame: frame.subcategory.map(part_rank),
+            car_rank=lambda frame: frame.car.map(car_rank),
+        )
+        .sort_values(["part_rank", "car_rank"])
+        .reset_index(drop=True)
     )
-    cells["car_rank"] = cells.car.map({car: rank for rank, car in enumerate(names)})
-    cells = cells.sort_values(["part_rank", "car_rank"]).reset_index(drop=True)
+    # Each part occupies three consecutive rows, then a blank gap that also
+    # carries the part's name.
+    layout["row"] = [
+        position + cell.part_rank * GROUP_GAP
+        for position, cell in enumerate(layout.itertuples())
+    ]
+    row_of = {(cell.subcategory, cell.car): cell.row for cell in layout.itertuples()}
 
     plt.rcParams.update(
         {
@@ -168,78 +179,56 @@ def main(round_number="1"):
         }
     )
     # 8.5 in held the 33 rows of round 1; fewer rows keep the same row pitch
-    groups = cells.part_rank.nunique()
-    height = 8.5 * (len(cells) + groups * GROUP_GAP + 6) / (33 + 11 * GROUP_GAP + 6)
-    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, height))
-    # Each part occupies three consecutive rows, then a blank gap, so the eye
-    # reads one block per part instead of a continuous 33-row list.
-    rows = np.array([
-        position + cell.part_rank * GROUP_GAP
-        for position, cell in enumerate(cells.itertuples())
-    ])
-    cells = cells.assign(row=rows)
-    label_x = 2.7
-    # the euros column lives outside the plot, so the gridlines stop at the data
-    outside = blended_transform_factory(axes.transAxes, axes.transData)
+    groups = layout.part_rank.nunique()
+    height = 8.5 * (len(layout) + groups * GROUP_GAP + 6) / (33 + 11 * GROUP_GAP + 6)
+    figure, panels = plt.subplots(
+        1, 3, figsize=(TEXT_WIDTH_INCHES, height), sharex=True, sharey=True
+    )
 
-    for row, cell in zip(rows, cells.itertuples()):
-        colour = colours[cell.car]
-        axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
-                  lw=2, zorder=1, solid_capstyle="round")
-        axes.scatter(cell.predicted, row, s=34, color=SURFACE, zorder=3,
-                     edgecolors=colour, linewidths=1.3)
-        axes.scatter(cell.price, row, s=34, color=colour, zorder=4)
-        # the per-part median baseline: grey, because it is not a vehicle-specific
-        # method conceptually and must not compete with the car hues
-        axes.scatter(cell.heuristic, row, s=26, marker="D", color=SURFACE,
-                     edgecolors=MUTED, linewidths=1.1, zorder=2)
+    for axes, (tier, title) in zip(panels, TIERS):
+        for cell in drawn[drawn.tier == tier].itertuples():
+            row = row_of[(cell.subcategory, cell.car)]
+            colour = colours[cell.car]
+            axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
+                      lw=2, zorder=1, solid_capstyle="round")
+            axes.scatter(cell.predicted, row, s=22, color=SURFACE, zorder=3,
+                         edgecolors=colour, linewidths=1.1)
+            axes.scatter(cell.price, row, s=22, color=colour, zorder=4)
+        axes.set_title(title, fontsize=8.5, color=INK, pad=6)
+        # One shared log axis across the panels, so a gap in one panel is the
+        # same ratio as an equally long gap in another.
+        axes.set_xscale("log")
+        axes.set_xlim(4, 9000)
+        axes.set_xticks([10, 100, 1000], ["10", "100", "1 000"], fontsize=7.5)
+        axes.set_xticks([], minor=True)
+        axes.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
+        axes.set_axisbelow(True)
+        for spine in axes.spines.values():
+            spine.set_visible(False)
+        axes.tick_params(left=False)
 
-    for row, cell in zip(rows, cells.itertuples()):
-        off = cell.euros_off
-        close = abs(off) < 0.1 * cell.price
-        axes.text(
-            1.15, row, f"{off:+,.0f}", transform=outside, va="center", ha="right",
-            fontsize=7.5, color=MUTED if close else INK,
-        )
-
-    # one part label per group; the blank rows do the separating
-    for _, group in cells.groupby("part_rank"):
-        axes.text(label_x, group.row.mean(), academic(group.subcategory.iat[0]),
-                  va="center", ha="left", fontsize=8.2, color=INK)
-
-    axes.set_yticks(rows, [names[car] for car in cells.car], fontsize=7.5)
-    axes.tick_params(axis="y", pad=11)
+    first = panels[0]
+    first.set_yticks(layout.row, [names[car] for car in layout.car], fontsize=7)
+    first.tick_params(axis="y", pad=9)
+    first.set_ylim(layout.row.max() + 0.7, -1.4)
+    beside = blended_transform_factory(first.transAxes, first.transData)
     # the car's colour sits beside its own row rather than in a key at the top
-    for row, car in zip(rows, cells.car):
-        axes.plot(-0.016, row, marker="o", markersize=4, color=colours[car],
-                  transform=outside, clip_on=False, zorder=5)
-    axes.set_xscale("log")
-    axes.set_xlim(2.6, 9000)
-    axes.set_ylim(rows.max() + 0.7, -1.6)
-    axes.set_xticks([10, 30, 100, 300, 1000, 3000],
-                    ["10", "30", "100", "300", "1 000", "3 000"], fontsize=8)
-    axes.set_xticks([], minor=True)
-    axes.set_xlabel("Asking price, EUR (logarithmic scale)", fontsize=8.5,
-                    color=INK2, labelpad=6)
-    axes.grid(True, axis="x", color=GRID, lw=0.7, zorder=0)
-    axes.set_axisbelow(True)
-    for spine in axes.spines.values():
-        spine.set_visible(False)
-    axes.tick_params(left=False)
+    for cell in layout.itertuples():
+        first.plot(-0.035, cell.row, marker="o", markersize=3.5, color=colours[cell.car],
+                   transform=beside, clip_on=False, zorder=5)
+    # the part's name sits in the gap above its three rows
+    for _, group in layout.groupby("part_rank"):
+        first.text(-0.62, group.row.min() - 0.95, academic(group.subcategory.iat[0]),
+                   transform=beside, va="center", ha="left", fontsize=7.8, color=INK)
 
-    # direct labels on the first row instead of a legend box
-    first = cells.iloc[0]
-    axes.text(1.15, -1.0, "Error, EUR (random forest)", transform=outside, va="center", ha="right",
-              fontsize=8, color=INK2)
-
+    figure.supxlabel("Asking price, EUR (logarithmic scale)", fontsize=8.5,
+                     color=INK2, y=0.012)
     # No in-image title: in the thesis the caption below the figure carries it.
-    figure.tight_layout(rect=[0, 0, 0.86, 0.92])
-    draw_key(figure, names, colours, setup["baseline"])
+    figure.tight_layout(rect=[0.03, 0.02, 1, 0.945], w_pad=0.6)
+    draw_key(figure)
     figure.savefig(out, dpi=300)
     figure.savefig(out.with_suffix(".pdf"))
     print(f"saved {out}\nsaved {out.with_suffix('.pdf')}")
-    print(cells[["subcategory", "car", "price", "predicted", "euros_off"]].to_string(
-        index=False, float_format="{:,.0f}".format))
 
 
 if __name__ == "__main__":
