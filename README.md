@@ -1,12 +1,17 @@
 # DPPM: Dismantler Price Prediction Model
 
-![September validation, vehicles the model was trained on](results/september_live_validation/september_validation.png)
+<table>
+  <tr>
+    <td align="center" width="50%"><b>Trained vehicles</b><br>Corolla, Golf, Octavia</td>
+    <td align="center" width="50%"><b>Unseen vehicles</b><br>Focus, Qashqai, V70</td>
+  </tr>
+  <tr>
+    <td><img src="results/september_live_validation/september_validation.png" alt="September validation, trained vehicles" width="100%"></td>
+    <td><img src="results/september_live_validation/september_validation_round2.png" alt="September validation, unseen vehicles" width="100%"></td>
+  </tr>
+</table>
 
-![September validation, vehicles the model never saw](results/september_live_validation/september_validation_round2.png)
-
-The frozen model scored, without refitting, on September 2026 listings. Top:
-the Corolla, Golf and Octavia it was trained on. Bottom: the Focus, Qashqai and
-V70 it never saw. Each row is one part on one vehicle, with the dearest, middle
+The frozen model scored, without refitting, on September 2026 listings. Each row is one part on one vehicle, with the dearest, middle
 and cheapest listing; filled dot is the real asking price, open dot the
 prediction.
 
