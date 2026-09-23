@@ -88,5 +88,5 @@ Headline numbers: [RESULTS.md](RESULTS.md).
 
 - Do not recollect the February dataset.
 - The product-id grouped split stays as an optimistic benchmark only.
-- The connected-component split is the strict protocol; its identity key is `canonical(part_name, brand, model, year_start, year_end)`.
-- No model is scored on the strict test split again.
+- The connected-component split is the evaluation protocol; its identity key is `canonical(part_name, brand, model, year_start, year_end)`.
+- No model is scored on the connected-component test set again.
