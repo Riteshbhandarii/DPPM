@@ -19,7 +19,7 @@ sklearn 1.7.2, the version the model bundle was pickled with.
 ```
 .venv/bin/python scripts/parse_september_listings.py "<folder of .html>" <out.csv>
 .venv/bin/python scripts/score_september_validation.py <out.csv> <brand> <model> [generation regex]
-.venv/bin/python scripts/plot_september_validation.py
+.venv/bin/python scripts/plot_september_validation.py 1   # or 2 for Round 2
 ```
 
 ## Where the data lives, and why it is not here
@@ -43,6 +43,10 @@ robots.txt is `User-agent: * / Disallow: /`.
 | `corolla_scoring_report.txt` | full metric set, Toyota Corolla |
 | `golf_scoring_report.txt` | full metric set, VW Golf |
 | `octavia_scoring_report.txt` | full metric set, Skoda Octavia |
+| `september_validation_round2.pdf` / `.png` | the same figure for Round 2 |
+| `ford_scoring_report.txt` | Round 2, Ford Focus (`'^FORD FOCUS \d'`) |
+| `nissan_scoring_report.txt` | Round 2, Nissan Qashqai (`'^NISSAN QASHQAI \d'`, Qashqai+2 dropped: its own registry family) |
+| `volvo_scoring_report.txt` | Round 2, Volvo V70 (`'^VOLVO V70 \d'`, the mixed `S70/V70/XC 97-00` label dropped) |
 
 ## Two conventions that change the numbers
 
