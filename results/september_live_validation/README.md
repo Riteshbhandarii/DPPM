@@ -18,7 +18,7 @@ sklearn 1.7.2, the version the model bundle was pickled with.
 
 ```
 .venv/bin/python scripts/parse_september_listings.py "<folder of .html>" <out.csv>
-.venv/bin/python scripts/score_september_validation.py <out.csv> <brand> <model>
+.venv/bin/python scripts/score_september_validation.py <out.csv> <brand> <model> [generation regex]
 .venv/bin/python scripts/plot_september_validation.py
 ```
 
@@ -55,6 +55,27 @@ in code rather than left to be rediscovered:
 2. **Scoring runs without the listing quality grade.** Including it moves the
    Corolla headline from 32.77% to 33.02%. The grade is still parsed into the
    listing table; it carries 0.2% of the model's SHAP importance.
+
+## Round 2, vehicles February never saw
+
+Ford Focus, Nissan Qashqai and Volvo V70, 9 parts each. Three things differ
+from Round 1 and are handled in the scorer:
+
+1. **Registry block.** There is no February row to copy it from, so it comes
+   from `datasets/traficom_outputs/model_summary.csv` and `brand_summary.csv`,
+   brand matched exactly. The same lookup run for the three trained vehicles
+   reproduces February's 49 values exactly.
+2. **Pooled pages.** The site lists Focus with C-Max and Grand C-Max, and V70
+   with S70 and V70 XC. The pooled page is saved as is and the scorer's
+   generation regex keeps the target car, printing what it kept and dropped.
+   Ford: `'^FORD FOCUS \d'`, which also drops `FORD FOCUS C-MAX I`.
+3. **Baseline.** No per-vehicle median exists, so the comparator is the
+   all-brand subcategory median. That is a weaker baseline than Round 1's, so
+   the Round 2 gap to it is not comparable with a Round 1 gap. The comparison
+   that is like for like is the same model and the same draw on trained
+   against unseen vehicles.
+
+Cells saved over several pages are de-duplicated on `product_id`.
 
 ## Reproduction gate
 
