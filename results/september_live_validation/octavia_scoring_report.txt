@@ -44,4 +44,11 @@ Bootstrap, 5000 resamples of the matched draw
   RF MdAPE          36.8%  95% CI 31.6% to 46.7%
   RF minus heuristic +12.2 points  95% CI +3.7 to +21.6
 
-scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/octavia_sept_scored.csv
+Reported draw, dearest / middle / cheapest per cell, n=33
+     tier  n  median_price  RF_MdAPE  heuristic_MdAPE
+expensive 11         200.0      28.4             21.0
+   middle 11          70.0      55.9             70.8
+ cheapest 11          30.0     243.6            342.8
+all 33: RF 55.9%  heuristic 77.1%  RF closer on 18
+
+scored rows -> ~/Desktop/validation dataset/parsed/octavia_sept_scored.csv
