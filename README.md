@@ -1,64 +1,25 @@
-# DPPM
+# DPPM: Dismantler Price Prediction Model
 
-**Dismantler Price Prediction Model.** Predicts asking prices for used car spare
-parts on Varaosahaku.fi from listing data and Finnish vehicle-registry
-(Traficom) summaries. Built as a proof of concept for price review, not as an
-automated pricing system.
+![September validation, vehicles the model was trained on](results/september_live_validation/september_validation.png)
 
-## Results
+![September validation, vehicles the model never saw](results/september_live_validation/september_validation_round2.png)
 
-**Strict holdout (1,696 listings, run once).** A tuned Random Forest scores
-MAE 69.46 EUR and median error 29.37 EUR. A per-subcategory median lookup scores
-MAE 66.15 EUR and median error 15.32 EUR on the same rows, so the model ties the
-lookup on MAE and loses on median error.
+The frozen model scored, without refitting, on September 2026 listings. Top:
+the Corolla, Golf and Octavia it was trained on. Bottom: the Focus, Qashqai and
+V70 it never saw. Each row is one part on one vehicle, with the dearest, middle
+and cheapest listing; filled dot is the real asking price, open dot the
+prediction.
 
-**Live validation on September 2026 listings.** The frozen model, not refitted,
-scored on current listings. Each row is one part on one vehicle: the dearest,
-the middle and the cheapest listing, observed price against prediction.
+## About
 
-Vehicles the model was trained on (Corolla, Golf, Octavia):
+DPPM predicts asking prices for used car spare parts on Varaosahaku.fi. A Random
+Forest was trained on February 2026 listings for three vehicles, joined with
+Finnish vehicle-registry (Traficom) summaries, and evaluated on a
+connected-component split that keeps repeated and comparable listings on one
+side of the split. On that test set it scores MAE 69.46 EUR, level with a simple
+per-subcategory median lookup (66.15 EUR). The September study above checks it
+against new listings: it is closest on the dearest listings and misses badly on
+the cheap ones. Built as a proof of concept for price review, not for automated
+pricing.
 
-![September validation, trained vehicles](results/september_live_validation/september_validation.png)
-
-Vehicles the model never saw (Focus, Qashqai, V70):
-
-![September validation, unseen vehicles](results/september_live_validation/september_validation_round2.png)
-
-Numbers behind both figures: [docs/RESULTS.md](docs/RESULTS.md).
-
-## Quickstart
-
-Python 3.12 (`.python-version`), dependencies pinned in `requirements.txt`.
-
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py        # demo UI
-uvicorn app.fastapi_app:app --reload      # API
-```
-
-Check that the frozen split and holdout result still reproduce (read-only):
-
-```bash
-make verify PYTHON=.venv/bin/python
-make test PYTHON=.venv/bin/python
-```
-
-## Documentation
-
-| Document | What it covers |
-| --- | --- |
-| [Results](docs/RESULTS.md) | Holdout, subgroup errors, September live validation |
-| [Architecture](docs/ARCHITECTURE.md) | Data flow, components, evaluation design |
-| [Pipeline](docs/PIPELINE.md) | Run order, frozen artifacts, how to reproduce |
-| [Strict model comparison](docs/STRICT_MODEL_COMPARISON.md) | Model selection, holdout, baseline comparison, SHAP |
-| [Evaluation protocol](docs/STRICT_EVALUATION_PROTOCOL.md) | The connected-component split |
-| [Leakage audit](docs/LEAKAGE_AUDIT.md) | Every candidate feature and its leakage risk |
-| [Design decisions](docs/DESIGN_DECISIONS.md) | Dated decision log |
-| [Development](docs/DEVELOPMENT.md) | Repository layout, data files, CI |
-| [Roadmap](docs/THESIS_ROADMAP.md) | Build status and issue mapping |
-
-## License
-
-See [LICENSE](LICENSE).
+Everything else is in [docs/](docs/README.md).
