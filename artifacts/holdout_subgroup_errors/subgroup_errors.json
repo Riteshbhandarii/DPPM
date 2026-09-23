@@ -1,5 +1,5 @@
 {
-  "note": "Descriptive breakdown of the already-run strict holdout. No refit, no selection.",
+  "note": "Descriptive breakdown of the already-run connected-component test set. No refit, no selection.",
   "baseline": "per-subcategory median fitted on train+validation, global-median fallback",
   "bootstrap": {
     "resamples": 10000,
