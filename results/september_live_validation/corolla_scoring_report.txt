@@ -44,4 +44,11 @@ Bootstrap, 5000 resamples of the matched draw
   RF MdAPE          32.8%  95% CI 26.4% to 39.7%
   RF minus heuristic -27.4 points  95% CI -37.0 to -19.2
 
-scored rows -> /Users/riteshbhandari/Desktop/validation dataset/parsed/corolla_sept_scored.csv
+Reported draw, dearest / middle / cheapest per cell, n=33
+     tier  n  median_price  RF_MdAPE  heuristic_MdAPE
+expensive 11         265.0      20.9             30.9
+   middle 11          60.0      54.7             97.0
+ cheapest 11          30.0     200.6            315.0
+all 33: RF 57.5%  heuristic 97.0%  RF closer on 22
+
+scored rows -> ~/Desktop/validation dataset/parsed/corolla_sept_scored.csv
