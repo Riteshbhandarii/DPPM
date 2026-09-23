@@ -1,20 +1,24 @@
 """
 Purpose:
-Run the frozen Random Forest on the September 2026 listings chosen by hand and
-write its prediction next to each asking price.
+Run the frozen Random Forest on the September 2026 listings chosen for
+validation, and put its prediction and the per-part median baseline next to
+each asking price.
 
 Inputs:
-- results/september_live_validation/september_listings.csv   the chosen listings
+- results/september_live_validation/september_listings.csv   the chosen listings, as collected
 - artifacts/random_forest_final/full_data_bundle              the frozen model (not in git)
-- datasets/cleaned/clean_master_dataset.csv                   February rows, for part names and registry values
+- datasets/cleaned/clean_master_dataset.csv                   February rows: part names, registry values, baseline
 - datasets/traficom_outputs/{model,brand}_summary.csv         registry values for vehicles February never saw
 
 Output:
-- the same CSV, with `predicted_eur` filled in. `baseline_eur`, the per-part
-  median price used as the comparator, is data and is left unchanged.
+- results/september_live_validation/september_predictions.csv
+  the listings plus `predicted_eur` and `baseline_eur`
 
 Assumptions:
 - The model is not refitted. Listing quality grade is left out, as in every run of the study.
+- Baseline: the median February price of the same part. For a trained vehicle
+  it is that vehicle's own median; for an unseen vehicle, the median over all
+  three February vehicles.
 - Registry columns are constant per vehicle, so they are copied from February, or
   from the Traficom summaries for a vehicle February never saw.
 - February's own part-name spelling is used where it exists; a different string
@@ -36,6 +40,7 @@ sys.path.insert(0, str(ROOT))
 from src.random_forest_serving import ensure_feature_frame, load_random_forest_bundle  # noqa: E402
 
 LISTINGS = ROOT / "results/september_live_validation/september_listings.csv"
+PREDICTIONS = ROOT / "results/september_live_validation/september_predictions.csv"
 BUNDLE = ROOT / "artifacts/random_forest_final/full_data_bundle"
 FEBRUARY = ROOT / "datasets/cleaned/clean_master_dataset.csv"
 TRAFICOM = ROOT / "datasets/traficom_outputs"
@@ -87,7 +92,16 @@ def main():
         features = features_for(rows, february, brand, model, feature_names)
         listings.loc[rows.index, "predicted_eur"] = bundle["model"].predict(features).round(2)
 
-    listings.to_csv(LISTINGS, index=False)
+    own_median = february.groupby(["brand", "model", "subcategory"]).price.median()
+    all_median = february.groupby("subcategory").price.median()
+    listings["baseline_eur"] = [
+        own_median.get((row.brand, row.model, row.subcategory), all_median.get(row.subcategory))
+        if row.round == 1 else all_median.get(row.subcategory)
+        for row in listings.itertuples()
+    ]
+    listings["baseline_eur"] = listings.baseline_eur.round(2)
+
+    listings.to_csv(PREDICTIONS, index=False)
     error = (listings.asking_price_eur - listings.predicted_eur).abs() / listings.asking_price_eur * 100
     print(listings.assign(error_pct=error).groupby(["round", "tier"]).error_pct.median().round(1).to_string())
 
