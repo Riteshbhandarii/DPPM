@@ -45,7 +45,7 @@ Modeling is finished. No model may be scored on the test split again.
 The build work is finished:
 
 - Learning curve and registry ablation (2026-07-11, #63): `artifacts/learning_curve/`, `artifacts/registry_ablation/`.
-- September 2026 live validation: current listings scored against the frozen model, on the three trained vehicles and on three vehicles the model never saw. `results/september_live_validation/`.
+- September 2026 live validation: listings chosen by hand and scored with the frozen model, on the three trained vehicles and on three vehicles the model never saw. `results/september_live_validation/`.
 - Holdout error by brand and category (#41): `artifacts/holdout_subgroup_errors/`.
 - Feature leakage audit (#42): `artifacts/leakage_audit/`, [LEAKAGE_AUDIT.md](LEAKAGE_AUDIT.md).
 
