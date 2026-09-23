@@ -1,6 +1,6 @@
 """
 Purpose:
-Break the strict holdout error down by brand and by part category, for the
+Break the test-set error (connected-component split) down by brand and by part category, for the
 frozen Random Forest and the subcategory-median baseline side by side. This is
 the brand/category half of the subgroup analysis; the price-band half is in
 `artifacts/strict_final_holdout/holdout_baseline_comparison.json`.
@@ -118,7 +118,7 @@ def main() -> None:
     (OUT / "subgroup_errors.json").write_text(
         json.dumps(
             {
-                "note": "Descriptive breakdown of the already-run strict holdout. No refit, no selection.",
+                "note": "Descriptive breakdown of the already-run connected-component test set. No refit, no selection.",
                 "baseline": "per-subcategory median fitted on train+validation, global-median fallback",
                 "bootstrap": {"resamples": BOOTSTRAP_RESAMPLES, "seed": SEED, "statistic": "RF MAE - baseline MAE"},
                 "brand_equals_vehicle": "three brands, one model each",
