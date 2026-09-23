@@ -1,0 +1,59 @@
+ 544 listings parsed
+
+generation filter '^NISSAN QASHQAI \\d'
+  keep  171  NISSAN QASHQAI 14-17
+  keep  127  NISSAN QASHQAI 10-14
+  keep   98  NISSAN QASHQAI 17-21
+  keep   72  NISSAN QASHQAI 07-10
+  drop   51  NISSAN QASHQAI+2 10-14
+  drop   13  NISSAN QASHQAI+2 08-10
+  keep   12  NISSAN QASHQAI 21->>
+ 480 listings kept
+-  0 already in the February training data
+ 480 unseen listings  <- census
+ 167 generation x top-5 by price  <- matched draw (primary)
+
+Random Forest
+                            n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                                        
+MATCHED DRAW (primary)    167  75.74 52.69 101.66 0.67      49.43        35.86
+CENSUS (market coverage)  480 101.15 65.52 132.96 0.28      66.20        55.86
+
+Subcategory-median heuristic
+                n    MAE  MdAE   RMSE   R2  MdAPE_pct  median_bias
+sample                                                            
+MATCHED DRAW  167  82.20 39.80 120.47 0.53      30.20        27.90
+CENSUS        480 106.71 74.35 146.40 0.12      65.80        66.95
+
+Matched draw by price band
+    band  n  RF_MdAPE  heuristic_MdAPE
+    0-50 24     133.7             26.3
+  50-100 36      50.2             18.8
+ 100-200 42      36.8             26.7
+ 200-500 50      51.0             69.8
+500-1000 15       9.6             10.2
+
+Per part, matched draw
+                   part  n  median_price  median_pred  RF_MdAPE  heur_MdAPE  covered
+     abs hydraulic pump 20         390.0        470.1      14.7        21.7        0
+     fuel pump electric 19         140.0        104.4      23.5        13.2        0
+abs hydraulic aggregate 22         479.5        582.8      31.5        33.7        0
+   mass air-flow sensor 16          63.0         75.9      37.5        52.3        0
+            brake servo 23         120.0        157.2      43.8        57.2        0
+       passenger airbag 22         250.0        405.1      62.9        69.8        0
+          engine casing 12          50.5         75.9      63.2        18.8        0
+               tank lid 23          45.0        104.4      89.7        18.8        0
+            other relay 10          32.5         89.3     168.4        40.4        0
+
+Bootstrap, 5000 resamples of the matched draw
+  RF MdAPE          49.4%  95% CI 37.5% to 58.0%
+  RF minus heuristic +16.9 points  95% CI -1.0 to +29.6
+
+Reported draw, dearest / middle / cheapest per cell, n=27
+     tier  n  median_price  RF_MdAPE  heuristic_MdAPE
+expensive  9         180.0      17.1             37.4
+   middle  9          90.0     105.4             58.1
+ cheapest  9          50.0     332.0            163.9
+all 27: RF 62.4%  heuristic 58.1%  RF closer on 16
+
+scored rows -> ~/Desktop/validation dataset/parsed/nissan_sept_scored.csv
