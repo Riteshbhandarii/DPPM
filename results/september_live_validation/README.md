@@ -39,7 +39,6 @@ robots.txt is `User-agent: * / Disallow: /`.
 |---|---|
 | `september_validation.pdf` | the figure, vector, for the thesis document |
 | `september_validation.png` | the same figure at 300 dpi, for slides |
-| `figure_caption.md` | draft caption and the notes that must travel with it |
 | `corolla_scoring_report.txt` | full metric set, Toyota Corolla |
 | `golf_scoring_report.txt` | full metric set, VW Golf |
 | `octavia_scoring_report.txt` | full metric set, Skoda Octavia |
