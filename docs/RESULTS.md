@@ -75,5 +75,6 @@ weaker comparator, so these gaps are not comparable with the table above)
 - Whether the model or the median lookup is closer depends on the vehicle; no
   pooled "the model wins" result holds across all six.
 
-Source, scripts, figures and per-vehicle reports:
-[results/september_live_validation/](../results/september_live_validation/README.md).
+The listings were chosen by hand; predictions come from the frozen model via
+`scripts/predict_september_listings.py`. Listings and predictions:
+`results/september_live_validation/september_listings.csv`.
