@@ -9,17 +9,20 @@ expensive, the middle and the cheapest listing, 33 cells x 3 = 99 listings. Two
 of the three points are a cell's extremes by construction, so the figure reports
 the three tiers separately and never a pooled error figure.
 
+Round 2 draws the same figure for the three vehicles February never saw, 9
+parts x 3 = 27 cells, against the all-brand per-part median.
+
 Inputs:
-- results/september_live_validation/<car>_sept.csv, from
-  scripts/parse_september_listings.py (kept outside the repo; see .gitignore)
-- artifacts/random_forest_final/full_data_bundle
-- datasets/cleaned/clean_master_dataset.csv
+- <car>_sept_scored.csv, written by scripts/score_september_validation.py
+  (kept outside the repo; see .gitignore)
 
 Outputs:
-- results/september_live_validation/september_validation.png
+- results/september_live_validation/september_validation.png  (round 1)
+- results/september_live_validation/september_validation_round2.png  (round 2)
+  each with a .pdf alongside
 
 How to run:
-  .venv/bin/python scripts/plot_september_validation.py
+  .venv/bin/python scripts/plot_september_validation.py [1|2]
 """
 
 import sys
@@ -39,12 +42,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from score_september_validation import BUNDLE, FEBRUARY, build_features, three_per_cell
-from src.random_forest_serving import load_random_forest_bundle
+from score_september_validation import three_per_cell
 
 LISTINGS = Path.home() / "Desktop/validation dataset/parsed"
-OUT = ROOT / "results/september_live_validation/september_validation.png"
-OUT_VECTOR = OUT.with_suffix(".pdf")
+RESULTS = ROOT / "results/september_live_validation"
 
 # Built at the thesis text width so the type lands at its intended size on the
 # page. Scaling a figure down in Word is what makes labels unreadable in print.
@@ -55,34 +56,38 @@ CARS = [("corolla", "toyota"), ("golf", "vw"), ("octavia", "skoda")]
 INK, INK2, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#8a8a87", "#e4e3df", "#fcfcfb"
 
 
-def scored_listings():
-    """Every unseen September listing, with the model and baseline prediction."""
-    february = pd.read_csv(FEBRUARY, low_memory=False)
-    seen = set(february.product_id.astype(int))
-    bundle = load_random_forest_bundle(BUNDLE)
-    feature_names = bundle["metadata"]["feature_names"]
+def scored_listings(cars):
+    """Every unseen September listing, as the scorer predicted and baselined it.
 
+    Reading the scorer's own output keeps the figure and the reports on the
+    same rows, including Round 2's generation filter and fallback baseline.
+    """
     frames = []
-    for model, brand in CARS:
-        listings = pd.read_csv(LISTINGS / f"{model}_sept.csv")
-        listings = listings[~listings.product_id.isin(seen)].reset_index(drop=True)
-        car = february[(february.brand == brand) & (february.model == model)]
-        features = build_features(listings, february, brand, model, feature_names)
-        listings["predicted"] = bundle["model"].predict(features)
-        listings["heuristic"] = listings.subcategory.map(
-            car.groupby("subcategory").price.median()
-        )
+    for model in cars:
+        listings = pd.read_csv(LISTINGS / f"{model}_sept_scored.csv")
         listings["car"] = model
         frames.append(listings)
     return pd.concat(frames, ignore_index=True)
 
 
-CAR_ORDER = ["corolla", "golf", "octavia"]
-
 # One hue per car, so a part's three rows read as a block. Validated all-pairs
 # for normal vision and CVD; the aqua sits under 3:1 on this surface, which the
 # per-row car label covers -- identity is never carried by colour alone.
-CAR_COLOUR = {"corolla": "#2a78d6", "golf": "#eb6834", "octavia": "#1baf7a"}
+# Round 2 reuses the same three hues in the same order: the two figures are
+# never shown on one axis, and every row carries its car's name.
+HUES = ["#2a78d6", "#eb6834", "#1baf7a"]
+ROUNDS = {
+    "1": {
+        "cars": {"corolla": "Corolla", "golf": "Golf", "octavia": "Octavia"},
+        "baseline": "Per-part median",
+        "out": "september_validation.png",
+    },
+    "2": {
+        "cars": {"ford": "Focus", "nissan": "Qashqai", "volvo": "V70"},
+        "baseline": "All-brand per-part median",
+        "out": "september_validation_round2.png",
+    },
+}
 
 
 def academic(name):
@@ -98,7 +103,7 @@ def tint(hex_colour, amount=0.58):
     return tuple(channel + (1 - channel) * amount for channel in (red, green, blue))
 
 
-def draw_key(figure):
+def draw_key(figure, names, colours, baseline):
     """The key, drawn by hand in figure coordinates.
 
     Two matplotlib legends stacked here end up on the same line at this width
@@ -117,7 +122,7 @@ def draw_key(figure):
     marker_row = [
         ("o", MUTED, MUTED, "Observed price"),
         ("o", SURFACE, MUTED, "Random forest"),
-        ("D", SURFACE, MUTED, "Per-part median"),
+        ("D", SURFACE, MUTED, baseline),
     ]
     for index, (shape, face, edge, text) in enumerate(marker_row):
         x = 0.035 + index * 0.325
@@ -125,16 +130,20 @@ def draw_key(figure):
                  markeredgecolor=edge, markeredgewidth=1.2, linestyle="none")
         box.text(x + 0.032, 0.70, text, va="center", fontsize=7.8, color=INK2)
 
-    for index, car in enumerate(CAR_ORDER):
+    for index, car in enumerate(names):
         x = 0.035 + index * 0.325
-        box.plot(x, 0.26, marker="o", markersize=5, color=CAR_COLOUR[car],
+        box.plot(x, 0.26, marker="o", markersize=5, color=colours[car],
                  linestyle="none")
-        box.text(x + 0.032, 0.26, car.capitalize(), va="center", fontsize=7.8,
+        box.text(x + 0.032, 0.26, names[car], va="center", fontsize=7.8,
                  color=INK2)
 
 
-def main():
-    drawn = three_per_cell(scored_listings())
+def main(round_number="1"):
+    setup = ROUNDS[round_number]
+    names = setup["cars"]
+    colours = dict(zip(names, HUES))
+    out = RESULTS / setup["out"]
+    drawn = three_per_cell(scored_listings(names))
     # The dearest listing of each cell: the tier the model can actually price.
     cells = drawn[drawn.tier == "expensive"].copy()
     cells["euros_off"] = cells.predicted - cells.price
@@ -145,7 +154,7 @@ def main():
     cells["part_rank"] = cells.subcategory.map(
         {part: rank for rank, part in enumerate(part_order.index)}
     )
-    cells["car_rank"] = cells.car.map({car: rank for rank, car in enumerate(CAR_ORDER)})
+    cells["car_rank"] = cells.car.map({car: rank for rank, car in enumerate(names)})
     cells = cells.sort_values(["part_rank", "car_rank"]).reset_index(drop=True)
 
     plt.rcParams.update(
@@ -158,7 +167,10 @@ def main():
             "axes.facecolor": SURFACE,
         }
     )
-    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, 8.5))
+    # 8.5 in held the 33 rows of round 1; fewer rows keep the same row pitch
+    groups = cells.part_rank.nunique()
+    height = 8.5 * (len(cells) + groups * GROUP_GAP + 6) / (33 + 11 * GROUP_GAP + 6)
+    figure, axes = plt.subplots(figsize=(TEXT_WIDTH_INCHES, height))
     # Each part occupies three consecutive rows, then a blank gap, so the eye
     # reads one block per part instead of a continuous 33-row list.
     rows = np.array([
@@ -171,7 +183,7 @@ def main():
     outside = blended_transform_factory(axes.transAxes, axes.transData)
 
     for row, cell in zip(rows, cells.itertuples()):
-        colour = CAR_COLOUR[cell.car]
+        colour = colours[cell.car]
         axes.plot([cell.price, cell.predicted], [row, row], color=tint(colour, 0.78),
                   lw=2, zorder=1, solid_capstyle="round")
         axes.scatter(cell.predicted, row, s=34, color=SURFACE, zorder=3,
@@ -195,11 +207,11 @@ def main():
         axes.text(label_x, group.row.mean(), academic(group.subcategory.iat[0]),
                   va="center", ha="left", fontsize=8.2, color=INK)
 
-    axes.set_yticks(rows, [car.capitalize() for car in cells.car], fontsize=7.5)
+    axes.set_yticks(rows, [names[car] for car in cells.car], fontsize=7.5)
     axes.tick_params(axis="y", pad=11)
     # the car's colour sits beside its own row rather than in a key at the top
     for row, car in zip(rows, cells.car):
-        axes.plot(-0.016, row, marker="o", markersize=4, color=CAR_COLOUR[car],
+        axes.plot(-0.016, row, marker="o", markersize=4, color=colours[car],
                   transform=outside, clip_on=False, zorder=5)
     axes.set_xscale("log")
     axes.set_xlim(2.6, 9000)
@@ -222,13 +234,13 @@ def main():
 
     # No in-image title: in the thesis the caption below the figure carries it.
     figure.tight_layout(rect=[0, 0, 0.86, 0.92])
-    draw_key(figure)
-    figure.savefig(OUT, dpi=300)
-    figure.savefig(OUT_VECTOR)
-    print(f"saved {OUT}\nsaved {OUT_VECTOR}")
+    draw_key(figure, names, colours, setup["baseline"])
+    figure.savefig(out, dpi=300)
+    figure.savefig(out.with_suffix(".pdf"))
+    print(f"saved {out}\nsaved {out.with_suffix('.pdf')}")
     print(cells[["subcategory", "car", "price", "predicted", "euros_off"]].to_string(
         index=False, float_format="{:,.0f}".format))
 
 
 if __name__ == "__main__":
-    main()
+    main(*sys.argv[1:2])
