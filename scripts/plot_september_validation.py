@@ -39,7 +39,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from score_september_validation import BUNDLE, FEBRUARY, build_features
+from score_september_validation import BUNDLE, FEBRUARY, build_features, three_per_cell
 from src.random_forest_serving import load_random_forest_bundle
 
 LISTINGS = Path.home() / "Desktop/validation dataset/parsed"
@@ -75,32 +75,6 @@ def scored_listings():
         listings["car"] = model
         frames.append(listings)
     return pd.concat(frames, ignore_index=True)
-
-
-def three_per_cell(listings):
-    """The reported draw: the dearest, the middle and the cheapest of each cell.
-
-    Ties are broken on product_id so the same pages always yield the same rows;
-    16 of the 33 cells hold a tie at the cut, so an explicit rule is required
-    for the draw to be reproducible at all.
-    """
-    rows = []
-    for _, cell in listings.groupby(["car", "subcategory"]):
-        cell = cell.sort_values(
-            ["price", "product_id"], ascending=[False, True]
-        ).reset_index(drop=True)
-        for tier, position in [
-            ("expensive", 0),
-            ("middle", len(cell) // 2),
-            ("cheapest", len(cell) - 1),
-        ]:
-            rows.append(cell.iloc[position].to_dict() | {"tier": tier})
-    drawn = pd.DataFrame(rows)
-    for column in ("price", "predicted", "heuristic"):
-        drawn[column] = drawn[column].astype(float)
-    drawn["ape_model"] = (drawn.price - drawn.predicted).abs() / drawn.price * 100
-    drawn["ape_heuristic"] = (drawn.price - drawn.heuristic).abs() / drawn.price * 100
-    return drawn
 
 
 CAR_ORDER = ["corolla", "golf", "octavia"]
