@@ -1,0 +1,64 @@
+ 610 listings parsed
+
+generation filter '^FORD FOCUS \\d'
+  keep  172  FORD FOCUS 11-14
+  keep   89  FORD FOCUS 15-18
+  keep   76  FORD FOCUS 99-04
+  keep   61  FORD FOCUS 08-11
+  keep   56  FORD FOCUS 04-07
+  keep   42  FORD FOCUS 19-25
+  drop   42  FORD C-MAX II 11-14
+  drop   29  FORD GRAND C-MAX 11-14
+  drop   14  FORD C-MAX II 15-19
+  drop   13  FORD FOCUS C-MAX I 03-06
+  drop   11  FORD FOCUS C-MAX I 07-10
+  drop    5  FORD GRAND C-MAX 15-19
+ 496 listings kept
+-  0 already in the February training data
+ 496 unseen listings  <- census
+ 212 generation x top-5 by price  <- matched draw (primary)
+
+Random Forest
+                            n   MAE  MdAE   RMSE    R2  MdAPE_pct  median_bias
+sample                                                                        
+MATCHED DRAW (primary)    212 84.79 54.17 118.25  0.42      51.65        25.82
+CENSUS (market coverage)  496 91.81 53.93 131.12 -0.10      65.93        30.82
+
+Subcategory-median heuristic
+                n    MAE  MdAE   RMSE    R2  MdAPE_pct  median_bias
+sample                                                             
+MATCHED DRAW  212 122.75 68.70 178.84 -0.33      57.69        43.95
+CENSUS        496 132.35 79.45 188.95 -1.28      88.70        68.70
+
+Matched draw by price band
+    band  n  RF_MdAPE  heuristic_MdAPE
+    0-50 51     159.6             58.7
+  50-100 50      24.9             38.2
+ 100-200 50      38.6             53.9
+ 200-500 51      61.4             89.7
+500-1000 10      37.5             57.0
+
+Per part, matched draw
+                   part  n  median_price  median_pred  RF_MdAPE  heur_MdAPE  covered
+     abs hydraulic pump 21         200.0        263.7      24.6       137.2        0
+            brake servo 30         105.0         72.9      27.1        92.3        0
+   mass air-flow sensor 23          90.0         70.1      31.3        36.2        0
+     fuel pump electric 21         100.0         77.2      43.3        30.2        0
+abs hydraulic aggregate 27         280.0         85.1      65.9       112.5        0
+          engine casing 15          45.0         75.8      68.5        32.0        0
+       passenger airbag 30         191.5        363.9      98.7       122.2        0
+               tank lid 26          42.5         75.8     114.0        16.2        0
+            other relay 19          15.0         69.1     360.6        58.7        0
+
+Bootstrap, 5000 resamples of the matched draw
+  RF MdAPE          51.7%  95% CI 45.0% to 65.9%
+  RF minus heuristic -5.0 points  95% CI -13.1 to +8.0
+
+Reported draw, dearest / middle / cheapest per cell, n=27
+     tier  n  median_price  RF_MdAPE  heuristic_MdAPE
+expensive  9         200.0      50.6             36.2
+   middle  9          85.0      72.4             65.8
+ cheapest  9          35.0     279.1            271.9
+all 27: RF 61.4%  heuristic 74.8%  RF closer on 16
+
+scored rows -> ~/Desktop/validation dataset/parsed/ford_sept_scored.csv
