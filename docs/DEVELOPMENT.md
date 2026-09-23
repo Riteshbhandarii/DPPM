@@ -25,7 +25,7 @@ make test PYTHON=.venv/bin/python
 | `datasets/` | Cleaned, merged, split and registry-derived CSV data |
 | `scripts/` | Tuning, evaluation, analysis and export scripts |
 | `artifacts/` | Model artifacts, tuning outputs, holdout and SHAP outputs |
-| `results/` | September live validation: reports and figures |
+| `results/` | September live validation: chosen listings and figures |
 | `app/` | Streamlit and FastAPI prototypes |
 | `src/` | Shared modelling and serving code |
 | `tests/` | Regression tests |
