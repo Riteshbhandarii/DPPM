@@ -1,15 +1,14 @@
 # DPPM: Dismantler Price Prediction Model
 
-<table>
-  <tr>
-    <td align="center" width="50%"><b>Trained vehicles</b><br>Corolla, Golf, Octavia</td>
-    <td align="center" width="50%"><b>Unseen vehicles</b><br>Focus, Qashqai, V70</td>
-  </tr>
-  <tr>
-    <td><img src="results/september_live_validation/september_validation.png" alt="September validation, trained vehicles" width="100%"></td>
-    <td><img src="results/september_live_validation/september_validation_round2.png" alt="September validation, unseen vehicles" width="100%"></td>
-  </tr>
-</table>
+<p align="center"><b>Trained vehicles</b>: Corolla, Golf, Octavia</p>
+<p align="center">
+  <a href="results/september_live_validation/september_validation.png"><img src="results/september_live_validation/september_validation.png" alt="September validation, trained vehicles" width="640"></a>
+</p>
+
+<p align="center"><b>Unseen vehicles</b>: Focus, Qashqai, V70</p>
+<p align="center">
+  <a href="results/september_live_validation/september_validation_round2.png"><img src="results/september_live_validation/september_validation_round2.png" alt="September validation, unseen vehicles" width="640"></a>
+</p>
 
 The frozen model scored, without refitting, on September 2026 listings. Each row is one part on one vehicle, with the dearest, middle
 and cheapest listing; filled dot is the real asking price, open dot the
