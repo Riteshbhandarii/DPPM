@@ -206,7 +206,7 @@ selecting it after seeing the Random Forest's result would be selection on the t
 margin on mean CV MAE (105.33 vs 106.71) against a fold standard deviation of 24–34 € — a
 coin flip on a metric dominated by the tail, on a target whose median is 100.60 € and mean
 270.79 €. The choice of primary metric determined the winner. That is a methodological
-finding, and it belongs in the discussion chapter.
+finding in its own right.
 
 ## 11. Why the model ties the heuristic — SHAP on the frozen winner (2026-07-10)
 
@@ -246,8 +246,7 @@ a headline variable in RQ1, ranks 7th at **0.73 %**.
 
 This is a reportable negative result in its own right: joining marketplace listings against
 the national vehicle registry did not measurably improve used spare-part price prediction
-under the strict protocol. It belongs in the results chapter and in the report to the
-commissioner, not only in limitations.
+under the strict protocol.
 
 ### Where the model wins, it wins on vehicle year
 
