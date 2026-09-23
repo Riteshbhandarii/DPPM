@@ -14,6 +14,9 @@ The frozen model scored, without refitting, on September 2026 listings. Each row
 and cheapest listing; filled dot is the real asking price, open dot the
 prediction.
 
+Median error of the prediction: trained cars 21-35% on the dearest listing and
+200-244% on the cheapest; unseen cars 17-51% and 210-332%.
+
 ## About
 
 DPPM predicts asking prices for used car spare parts on Varaosahaku.fi. A Random
