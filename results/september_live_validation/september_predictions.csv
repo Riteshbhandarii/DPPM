@@ -1,181 +1,181 @@
 round,vehicle,brand,model,category,subcategory,part_label,year_start,year_end,mileage,tier,asking_price_eur,predicted_eur,baseline_eur
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2019,2027,17000.0,dearest,665.0,592.04,590.95
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2012,304000.0,middle,300.0,84.49,590.95
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2012,290000.0,cheapest,199.0,84.49,590.95
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2019,2027,55000.0,dearest,515.0,540.2,530.9
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2002,2007,222000.0,middle,150.0,164.64,530.9
-1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2002,2007,,cheapest,40.0,183.77,530.9
-1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,2019,2027,10000.0,dearest,650.0,514.34,508.7
-1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,1993,1997,311000.0,middle,60.0,59.97,508.7
-1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,1982,1987,101000.0,cheapest,23.0,59.92,508.7
-1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,334000.0,dearest,150.0,60.12,59.1
-1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,329000.0,middle,35.0,60.12,59.1
-1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,300000.0,cheapest,20.0,60.12,59.1
-1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2019,2027,10000.0,dearest,3950.0,3582.9,3656.1
-1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2019,2027,18000.0,middle,2250.0,3582.9,3656.1
-1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2002,2007,,cheapest,500.0,3448.18,3656.1
-1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,2019,2027,80000.0,dearest,250.0,106.16,100.8
-1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,1993,1997,329000.0,middle,65.0,62.57,100.8
-1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,1993,1997,212000.0,cheapest,30.0,62.56,100.8
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2019,2027,17000.0,dearest,665.0,592.04,610.9
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2012,304000.0,middle,300.0,84.49,610.9
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2012,290000.0,cheapest,199.0,84.49,610.9
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2019,2027,55000.0,dearest,515.0,540.2,476.0
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2002,2007,222000.0,middle,150.0,164.64,476.0
+1,Toyota Corolla,toyota,corolla,brakes,abs hydraulic pump,ABS Hydraulic pump,2002,2007,,cheapest,40.0,183.77,476.0
+1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,2019,2027,10000.0,dearest,650.0,514.34,188.7
+1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,1993,1997,311000.0,middle,60.0,59.97,188.7
+1,Toyota Corolla,toyota,corolla,brakes,brake servo,Brake servo,1982,1987,101000.0,cheapest,23.0,59.92,188.7
+1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,334000.0,dearest,150.0,60.12,59.3
+1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,329000.0,middle,35.0,60.12,59.3
+1,Toyota Corolla,toyota,corolla,engine,engine casing,Engine casing,2002,2007,300000.0,cheapest,20.0,60.12,59.3
+1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2019,2027,10000.0,dearest,3950.0,3582.9,3771.6
+1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2019,2027,18000.0,middle,2250.0,3582.9,3771.6
+1,Toyota Corolla,toyota,corolla,engine,engine gasoline,Engine Gasoline,2002,2007,,cheapest,500.0,3448.18,3771.6
+1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,2019,2027,80000.0,dearest,250.0,106.16,141.75
+1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,1993,1997,329000.0,middle,65.0,62.57,141.75
+1,Toyota Corolla,toyota,corolla,fuel,fuel pump electric,Fuel pump electric,1993,1997,212000.0,cheapest,30.0,62.56,141.75
 1,Toyota Corolla,toyota,corolla,fuel,mass air-flow sensor,Mass air-flow sensor,1998,2001,117000.0,dearest,120.0,60.38,82.9
 1,Toyota Corolla,toyota,corolla,fuel,mass air-flow sensor,Mass air-flow sensor,2002,2007,247000.0,middle,40.0,60.33,82.9
 1,Toyota Corolla,toyota,corolla,fuel,mass air-flow sensor,Mass air-flow sensor,2002,2007,277000.0,cheapest,25.0,60.33,82.9
-1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2019,2027,38000.0,dearest,80.0,89.91,41.5
-1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2002,2007,230000.0,middle,20.0,59.72,41.5
-1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2008,2012,143000.0,cheapest,10.0,75.08,41.5
-1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,2008,2012,301000.0,dearest,300.0,294.85,296.0
-1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,2008,2012,77000.0,middle,180.0,278.46,296.0
-1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,1998,2001,,cheapest,40.0,288.32,296.0
-1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,2019,2027,17000.0,dearest,265.0,106.32,94.7
-1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,1998,2001,,middle,50.0,60.28,94.7
-1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,1993,1997,205000.0,cheapest,40.0,60.28,94.7
-1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,2019,2027,60000.0,dearest,75.0,105.96,47.4
-1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,1993,1997,,middle,20.0,60.38,47.4
-1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,1982,1987,,cheapest,10.0,60.38,47.4
-1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2020,2027,39000.0,dearest,810.0,594.11,601.2
-1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,194000.0,middle,300.0,591.72,601.2
-1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2009,2013,,cheapest,250.0,82.92,601.2
-1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,89000.0,dearest,470.0,473.52,473.3
-1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,122000.0,middle,300.0,473.52,473.3
-1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,1998,2006,,cheapest,60.0,118.75,473.3
-1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2020,2027,20000.0,dearest,760.0,507.04,188.8
-1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2013,2020,92000.0,middle,95.0,182.57,188.8
-1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2004,2009,445000.0,cheapest,30.0,60.73,188.8
-1,VW Golf,vw,golf,engine,engine casing,Engine casing,2004,2009,105000.0,dearest,73.0,60.8,71.0
-1,VW Golf,vw,golf,engine,engine casing,Engine casing,2009,2013,187000.0,middle,40.0,75.8,71.0
-1,VW Golf,vw,golf,engine,engine casing,Engine casing,1998,2006,,cheapest,20.0,60.02,71.0
-1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,100000.0,dearest,6950.0,3767.02,4100.45
-1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,103000.0,middle,2400.0,3767.02,4100.45
-1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,274000.0,cheapest,1400.0,4320.38,4100.45
-1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,2013,2020,196000.0,dearest,320.0,108.13,176.95
-1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,2013,2020,29000.0,middle,50.0,107.47,176.95
-1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,1992,1999,,cheapest,20.0,62.32,176.95
-1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,1984,1991,,dearest,163.0,60.49,82.6
-1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,2009,2013,118000.0,middle,50.0,75.81,82.6
-1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,2004,2009,77000.0,cheapest,40.0,61.28,82.6
-1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,1998,2006,89000.0,dearest,44.0,59.56,23.6
-1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,2009,2013,147000.0,middle,20.0,74.96,23.6
-1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,1998,2006,178000.0,cheapest,5.0,59.56,23.6
-1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2020,2027,67000.0,dearest,650.0,426.55,450.1
-1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2004,2009,241000.0,middle,135.0,414.28,450.1
-1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2004,2009,257000.0,cheapest,10.0,414.28,450.1
-1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,2013,2020,150000.0,dearest,200.0,106.25,142.55
-1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,1998,2006,122000.0,middle,81.0,60.17,142.55
-1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,2004,2009,239000.0,cheapest,60.0,61.17,142.55
-1,VW Golf,vw,golf,fuel,tank lid,Tank lid,2020,2027,,dearest,70.0,107.22,59.1
-1,VW Golf,vw,golf,fuel,tank lid,Tank lid,2009,2013,216000.0,middle,30.0,75.81,59.1
-1,VW Golf,vw,golf,fuel,tank lid,Tank lid,1998,2006,178000.0,cheapest,12.0,60.35,59.1
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,18000.0,dearest,800.0,632.08,667.8
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,160000.0,middle,350.0,673.76,667.8
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2005,2013,190000.0,cheapest,270.0,74.0,667.8
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,2020,2027,28000.0,dearest,665.0,476.38,473.9
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,63000.0,middle,350.0,473.63,473.9
-1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,1996,2011,231000.0,cheapest,50.0,171.78,473.9
-1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2020,2027,73000.0,dearest,700.0,358.3,160.05
-1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2013,2020,178000.0,middle,100.0,155.88,160.05
-1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2005,2013,109000.0,cheapest,40.0,60.81,160.05
-1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,123000.0,dearest,70.0,60.88,59.4
-1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,433000.0,middle,40.0,60.88,59.4
-1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,300000.0,cheapest,10.0,60.88,59.4
-1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2020,2027,61000.0,dearest,4759.0,4510.44,4252.45
-1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2013,2020,184000.0,middle,2300.0,4212.33,4252.45
-1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2005,2013,370300.0,cheapest,850.0,4198.07,4252.45
-1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,2013,2020,265000.0,dearest,150.0,108.13,132.85
-1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,2005,2013,176000.0,middle,65.0,63.21,132.85
-1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,1996,2011,118000.0,cheapest,30.0,62.61,132.85
-1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,1996,2011,60000.0,dearest,150.0,61.04,85.4
-1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,2013,2020,90000.0,middle,50.0,107.47,85.4
-1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,1996,2011,571000.0,cheapest,30.0,61.04,85.4
-1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,1996,2011,285000.0,dearest,40.0,60.14,23.6
-1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,2005,2013,360000.0,middle,15.0,60.51,23.6
-1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,2005,2013,152000.0,cheapest,10.0,60.51,23.6
-1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,2020,2027,29000.0,dearest,525.0,484.28,485.75
-1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,2005,2013,271000.0,middle,240.0,369.79,485.75
-1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,1996,2011,304000.0,cheapest,30.0,368.89,485.75
-1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2020,2027,103000.0,dearest,200.0,106.56,130.15
-1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2013,2020,78000.0,middle,70.0,106.17,130.15
-1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2005,2013,205000.0,cheapest,49.0,61.02,130.15
-1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2020,2027,38000.0,dearest,60.0,107.19,47.4
-1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2013,2020,374000.0,middle,40.0,108.13,47.4
-1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2013,2020,184000.0,cheapest,10.0,108.13,47.4
-2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2019,2025,28000.0,dearest,800.0,616.2,595.0
-2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2011,139000.0,middle,250.0,79.34,595.0
-2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2011,2014,149000.0,cheapest,160.0,85.13,595.0
-2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,2011,2014,103000.0,dearest,350.0,263.73,474.35
-2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,2011,2014,176000.0,middle,200.0,263.73,474.35
-2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,1999,2004,278000.0,cheapest,60.0,161.04,474.35
+1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2019,2027,38000.0,dearest,80.0,89.91,23.7
+1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2002,2007,230000.0,middle,20.0,59.72,23.7
+1,Toyota Corolla,toyota,corolla,electric / transmitter / databox / sensor,other relay,Other relay,2008,2012,143000.0,cheapest,10.0,75.08,23.7
+1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,2008,2012,301000.0,dearest,300.0,294.85,424.6
+1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,2008,2012,77000.0,middle,180.0,278.46,424.6
+1,Toyota Corolla,toyota,corolla,airbag,passenger airbag,Passenger airbag,1998,2001,,cheapest,40.0,288.32,424.6
+1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,2019,2027,17000.0,dearest,265.0,106.32,123.8
+1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,1998,2001,,middle,50.0,60.28,123.8
+1,Toyota Corolla,toyota,corolla,engine,starter gasoline,Starter Gasoline,1993,1997,205000.0,cheapest,40.0,60.28,123.8
+1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,2019,2027,60000.0,dearest,75.0,105.96,57.75
+1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,1993,1997,,middle,20.0,60.38,57.75
+1,Toyota Corolla,toyota,corolla,fuel,tank lid,Tank lid,1982,1987,,cheapest,10.0,60.38,57.75
+1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2020,2027,39000.0,dearest,810.0,594.11,610.9
+1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,194000.0,middle,300.0,591.72,610.9
+1,VW Golf,vw,golf,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2009,2013,,cheapest,250.0,82.92,610.9
+1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,89000.0,dearest,470.0,473.52,476.0
+1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,122000.0,middle,300.0,473.52,476.0
+1,VW Golf,vw,golf,brakes,abs hydraulic pump,ABS Hydraulic pump,1998,2006,,cheapest,60.0,118.75,476.0
+1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2020,2027,20000.0,dearest,760.0,507.04,188.7
+1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2013,2020,92000.0,middle,95.0,182.57,188.7
+1,VW Golf,vw,golf,brakes,brake servo,Brake servo,2004,2009,445000.0,cheapest,30.0,60.73,188.7
+1,VW Golf,vw,golf,engine,engine casing,Engine casing,2004,2009,105000.0,dearest,73.0,60.8,59.3
+1,VW Golf,vw,golf,engine,engine casing,Engine casing,2009,2013,187000.0,middle,40.0,75.8,59.3
+1,VW Golf,vw,golf,engine,engine casing,Engine casing,1998,2006,,cheapest,20.0,60.02,59.3
+1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,100000.0,dearest,6950.0,3767.02,3771.6
+1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,103000.0,middle,2400.0,3767.02,3771.6
+1,VW Golf,vw,golf,engine,engine gasoline,Engine Gasoline,2013,2020,274000.0,cheapest,1400.0,4320.38,3771.6
+1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,2013,2020,196000.0,dearest,320.0,108.13,141.75
+1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,2013,2020,29000.0,middle,50.0,107.47,141.75
+1,VW Golf,vw,golf,fuel,fuel pump electric,Fuel pump electric,1992,1999,,cheapest,20.0,62.32,141.75
+1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,1984,1991,,dearest,163.0,60.49,82.9
+1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,2009,2013,118000.0,middle,50.0,75.81,82.9
+1,VW Golf,vw,golf,fuel,mass air-flow sensor,Mass air-flow sensor,2004,2009,77000.0,cheapest,40.0,61.28,82.9
+1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,1998,2006,89000.0,dearest,44.0,59.56,23.7
+1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,2009,2013,147000.0,middle,20.0,74.96,23.7
+1,VW Golf,vw,golf,electric / transmitter / databox / sensor,other relay,Other relay,1998,2006,178000.0,cheapest,5.0,59.56,23.7
+1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2020,2027,67000.0,dearest,650.0,426.55,424.6
+1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2004,2009,241000.0,middle,135.0,414.28,424.6
+1,VW Golf,vw,golf,airbag,passenger airbag,Passenger airbag,2004,2009,257000.0,cheapest,10.0,414.28,424.6
+1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,2013,2020,150000.0,dearest,200.0,106.25,123.8
+1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,1998,2006,122000.0,middle,81.0,60.17,123.8
+1,VW Golf,vw,golf,engine,starter gasoline,Starter Gasoline,2004,2009,239000.0,cheapest,60.0,61.17,123.8
+1,VW Golf,vw,golf,fuel,tank lid,Tank lid,2020,2027,,dearest,70.0,107.22,57.75
+1,VW Golf,vw,golf,fuel,tank lid,Tank lid,2009,2013,216000.0,middle,30.0,75.81,57.75
+1,VW Golf,vw,golf,fuel,tank lid,Tank lid,1998,2006,178000.0,cheapest,12.0,60.35,57.75
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,18000.0,dearest,800.0,632.08,610.9
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2013,2020,160000.0,middle,350.0,673.76,610.9
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2005,2013,190000.0,cheapest,270.0,74.0,610.9
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,2020,2027,28000.0,dearest,665.0,476.38,476.0
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,2013,2020,63000.0,middle,350.0,473.63,476.0
+1,Skoda Octavia,skoda,octavia,brakes,abs hydraulic pump,ABS Hydraulic pump,1996,2011,231000.0,cheapest,50.0,171.78,476.0
+1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2020,2027,73000.0,dearest,700.0,358.3,188.7
+1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2013,2020,178000.0,middle,100.0,155.88,188.7
+1,Skoda Octavia,skoda,octavia,brakes,brake servo,Brake servo,2005,2013,109000.0,cheapest,40.0,60.81,188.7
+1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,123000.0,dearest,70.0,60.88,59.3
+1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,433000.0,middle,40.0,60.88,59.3
+1,Skoda Octavia,skoda,octavia,engine,engine casing,Engine casing,2005,2013,300000.0,cheapest,10.0,60.88,59.3
+1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2020,2027,61000.0,dearest,4759.0,4510.44,3771.6
+1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2013,2020,184000.0,middle,2300.0,4212.33,3771.6
+1,Skoda Octavia,skoda,octavia,engine,engine gasoline,Engine Gasoline,2005,2013,370300.0,cheapest,850.0,4198.07,3771.6
+1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,2013,2020,265000.0,dearest,150.0,108.13,141.75
+1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,2005,2013,176000.0,middle,65.0,63.21,141.75
+1,Skoda Octavia,skoda,octavia,fuel,fuel pump electric,Fuel pump electric,1996,2011,118000.0,cheapest,30.0,62.61,141.75
+1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,1996,2011,60000.0,dearest,150.0,61.04,82.9
+1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,2013,2020,90000.0,middle,50.0,107.47,82.9
+1,Skoda Octavia,skoda,octavia,fuel,mass air-flow sensor,Mass air-flow sensor,1996,2011,571000.0,cheapest,30.0,61.04,82.9
+1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,1996,2011,285000.0,dearest,40.0,60.14,23.7
+1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,2005,2013,360000.0,middle,15.0,60.51,23.7
+1,Skoda Octavia,skoda,octavia,electric / transmitter / databox / sensor,other relay,Other relay,2005,2013,152000.0,cheapest,10.0,60.51,23.7
+1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,2020,2027,29000.0,dearest,525.0,484.28,424.6
+1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,2005,2013,271000.0,middle,240.0,369.79,424.6
+1,Skoda Octavia,skoda,octavia,airbag,passenger airbag,Passenger airbag,1996,2011,304000.0,cheapest,30.0,368.89,424.6
+1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2020,2027,103000.0,dearest,200.0,106.56,123.8
+1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2013,2020,78000.0,middle,70.0,106.17,123.8
+1,Skoda Octavia,skoda,octavia,engine,starter gasoline,Starter Gasoline,2005,2013,205000.0,cheapest,49.0,61.02,123.8
+1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2020,2027,38000.0,dearest,60.0,107.19,57.75
+1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2013,2020,374000.0,middle,40.0,108.13,57.75
+1,Skoda Octavia,skoda,octavia,fuel,tank lid,Tank lid,2013,2020,184000.0,cheapest,10.0,108.13,57.75
+2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2019,2025,28000.0,dearest,800.0,616.2,610.9
+2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2011,139000.0,middle,250.0,79.34,610.9
+2,Ford Focus,ford,focus,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2011,2014,149000.0,cheapest,160.0,85.13,610.9
+2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,2011,2014,103000.0,dearest,350.0,263.73,476.0
+2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,2011,2014,176000.0,middle,200.0,263.73,476.0
+2,Ford Focus,ford,focus,brakes,abs hydraulic pump,ABS Hydraulic pump,1999,2004,278000.0,cheapest,60.0,161.04,476.0
 2,Ford Focus,ford,focus,brakes,brake servo,Brake servo,2019,2025,62000.0,dearest,750.0,364.16,188.7
 2,Ford Focus,ford,focus,brakes,brake servo,Brake servo,2015,2018,8000.0,middle,85.0,326.82,188.7
 2,Ford Focus,ford,focus,brakes,brake servo,Brake servo,1999,2004,230000.0,cheapest,60.0,59.97,188.7
-2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2008,2011,297000.0,dearest,120.0,69.96,59.4
-2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2015,2018,190000.0,middle,40.0,105.92,59.4
-2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2011,2014,271000.0,cheapest,20.0,75.82,59.4
-2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,2011,2014,12000.0,dearest,200.0,77.23,130.2
-2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,2015,2018,161000.0,middle,100.0,107.43,130.2
-2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,1999,2004,278000.0,cheapest,15.0,62.56,130.2
+2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2008,2011,297000.0,dearest,120.0,69.96,59.3
+2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2015,2018,190000.0,middle,40.0,105.92,59.3
+2,Ford Focus,ford,focus,engine,engine casing,Engine casing,2011,2014,271000.0,cheapest,20.0,75.82,59.3
+2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,2011,2014,12000.0,dearest,200.0,77.23,141.75
+2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,2015,2018,161000.0,middle,100.0,107.43,141.75
+2,Ford Focus,ford,focus,fuel,fuel pump electric,Fuel pump electric,1999,2004,278000.0,cheapest,15.0,62.56,141.75
 2,Ford Focus,ford,focus,fuel,mass air-flow sensor,Mass air-flow sensor,1999,2004,138000.0,dearest,130.0,60.43,82.9
 2,Ford Focus,ford,focus,fuel,mass air-flow sensor,Mass air-flow sensor,1999,2004,101000.0,middle,50.0,60.45,82.9
 2,Ford Focus,ford,focus,fuel,mass air-flow sensor,Mass air-flow sensor,2008,2011,,cheapest,35.0,70.08,82.9
-2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2004,2007,300000.0,dearest,39.0,59.86,23.8
-2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2011,2014,103000.0,middle,15.0,75.03,23.8
-2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2011,2014,103000.0,cheapest,10.0,75.03,23.8
+2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2004,2007,300000.0,dearest,39.0,59.86,23.7
+2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2011,2014,103000.0,middle,15.0,75.03,23.7
+2,Ford Focus,ford,focus,electric / transmitter / databox / sensor,other relay,Other relay,2011,2014,103000.0,cheapest,10.0,75.03,23.7
 2,Ford Focus,ford,focus,airbag,passenger airbag,Passenger airbag,2015,2018,58000.0,dearest,880.0,435.0,424.6
 2,Ford Focus,ford,focus,airbag,passenger airbag,Passenger airbag,2011,2014,107000.0,middle,160.0,354.88,424.6
 2,Ford Focus,ford,focus,airbag,passenger airbag,Passenger airbag,2004,2007,130000.0,cheapest,40.0,363.78,424.6
-2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,2011,2014,198000.0,dearest,55.0,75.83,47.5
-2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,1999,2004,,middle,35.0,60.35,47.5
-2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,1999,2004,221000.0,cheapest,10.0,60.39,47.5
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2021,2027,20000.0,dearest,950.0,620.37,595.0
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2014,2017,277000.0,middle,400.0,581.65,595.0
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2010,2014,346000.0,cheapest,250.0,85.78,595.0
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2017,336000.0,dearest,500.0,476.51,474.35
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2017,2021,158000.0,middle,300.0,487.28,474.35
-2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2017,103000.0,cheapest,50.0,470.33,474.35
+2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,2011,2014,198000.0,dearest,55.0,75.83,57.75
+2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,1999,2004,,middle,35.0,60.35,57.75
+2,Ford Focus,ford,focus,fuel,tank lid,Tank lid,1999,2004,221000.0,cheapest,10.0,60.39,57.75
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2021,2027,20000.0,dearest,950.0,620.37,610.9
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2014,2017,277000.0,middle,400.0,581.65,610.9
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2010,2014,346000.0,cheapest,250.0,85.78,610.9
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2017,336000.0,dearest,500.0,476.51,476.0
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2017,2021,158000.0,middle,300.0,487.28,476.0
+2,Nissan Qashqai,nissan,qashqai,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2017,103000.0,cheapest,50.0,470.33,476.0
 2,Nissan Qashqai,nissan,qashqai,brakes,brake servo,Brake servo,2021,2027,20000.0,dearest,350.0,407.07,188.7
 2,Nissan Qashqai,nissan,qashqai,brakes,brake servo,Brake servo,2017,2021,23000.0,middle,100.0,344.84,188.7
 2,Nissan Qashqai,nissan,qashqai,brakes,brake servo,Brake servo,2014,2017,157000.0,cheapest,70.0,148.92,188.7
-2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2007,2010,373000.0,dearest,90.0,69.99,59.4
-2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2014,2017,42000.0,middle,50.0,102.69,59.4
-2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2010,2014,74000.0,cheapest,35.0,75.85,59.4
-2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2021,2027,59000.0,dearest,180.0,106.8,130.2
-2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2014,2017,125000.0,middle,90.0,104.4,130.2
-2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2010,2014,116000.0,cheapest,60.0,77.26,130.2
+2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2007,2010,373000.0,dearest,90.0,69.99,59.3
+2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2014,2017,42000.0,middle,50.0,102.69,59.3
+2,Nissan Qashqai,nissan,qashqai,engine,engine casing,Engine casing,2010,2014,74000.0,cheapest,35.0,75.85,59.3
+2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2021,2027,59000.0,dearest,180.0,106.8,141.75
+2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2014,2017,125000.0,middle,90.0,104.4,141.75
+2,Nissan Qashqai,nissan,qashqai,fuel,fuel pump electric,Fuel pump electric,2010,2014,116000.0,cheapest,60.0,77.26,141.75
 2,Nissan Qashqai,nissan,qashqai,fuel,mass air-flow sensor,Mass air-flow sensor,2010,2014,282000.0,dearest,180.0,75.86,82.9
 2,Nissan Qashqai,nissan,qashqai,fuel,mass air-flow sensor,Mass air-flow sensor,2007,2010,373000.0,middle,50.0,70.11,82.9
 2,Nissan Qashqai,nissan,qashqai,fuel,mass air-flow sensor,Mass air-flow sensor,2007,2010,344000.0,cheapest,10.0,70.11,82.9
-2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2014,2017,134000.0,dearest,100.0,89.33,23.8
-2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2014,2017,140000.0,middle,30.0,89.33,23.8
-2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2007,2010,209000.0,cheapest,16.0,69.11,23.8
+2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2014,2017,134000.0,dearest,100.0,89.33,23.7
+2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2014,2017,140000.0,middle,30.0,89.33,23.7
+2,Nissan Qashqai,nissan,qashqai,electric / transmitter / databox / sensor,other relay,Other relay,2007,2010,209000.0,cheapest,16.0,69.11,23.7
 2,Nissan Qashqai,nissan,qashqai,airbag,passenger airbag,Passenger airbag,2021,2027,20000.0,dearest,500.0,414.69,424.6
 2,Nissan Qashqai,nissan,qashqai,airbag,passenger airbag,Passenger airbag,2014,2017,61000.0,middle,195.0,403.74,424.6
 2,Nissan Qashqai,nissan,qashqai,airbag,passenger airbag,Passenger airbag,2007,2010,140000.0,cheapest,50.0,355.46,424.6
-2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2021,2027,50000.0,dearest,100.0,106.8,47.5
-2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2007,2010,403000.0,middle,30.0,70.11,47.5
-2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2014,2017,2000.0,cheapest,18.0,104.43,47.5
-2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2013,1000.0,dearest,500.0,85.74,595.0
-2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2013,541000.0,middle,300.0,85.18,595.0
-2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2000,2004,593000.0,cheapest,250.0,69.8,595.0
-2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2016,338000.0,dearest,450.0,481.46,474.35
-2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2008,2013,152000.0,middle,225.0,261.57,474.35
-2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2000,2004,,cheapest,56.0,173.37,474.35
+2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2021,2027,50000.0,dearest,100.0,106.8,57.75
+2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2007,2010,403000.0,middle,30.0,70.11,57.75
+2,Nissan Qashqai,nissan,qashqai,fuel,tank lid,Tank lid,2014,2017,2000.0,cheapest,18.0,104.43,57.75
+2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2013,1000.0,dearest,500.0,85.74,610.9
+2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2008,2013,541000.0,middle,300.0,85.18,610.9
+2,Volvo V70,volvo,v70,brakes,abs hydraulic aggregate,ABS Hydraulic Aggregate,2000,2004,593000.0,cheapest,250.0,69.8,610.9
+2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2014,2016,338000.0,dearest,450.0,481.46,476.0
+2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2008,2013,152000.0,middle,225.0,261.57,476.0
+2,Volvo V70,volvo,v70,brakes,abs hydraulic pump,ABS Hydraulic pump,2000,2004,,cheapest,56.0,173.37,476.0
 2,Volvo V70,volvo,v70,brakes,brake servo,Brake servo,2014,2016,180000.0,dearest,234.0,151.2,188.7
 2,Volvo V70,volvo,v70,brakes,brake servo,Brake servo,2008,2013,318000.0,middle,150.0,75.64,188.7
 2,Volvo V70,volvo,v70,brakes,brake servo,Brake servo,2008,2013,324000.0,cheapest,100.0,75.64,188.7
-2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2005,2008,238000.0,dearest,85.0,60.29,59.4
-2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2014,2016,234000.0,middle,60.0,103.67,59.4
-2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2008,2013,291000.0,cheapest,10.0,75.64,59.4
-2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2008,2013,406000.0,dearest,200.0,77.17,130.2
-2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2005,2008,409000.0,middle,100.0,62.92,130.2
-2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2005,2008,600000.0,cheapest,80.0,62.92,130.2
+2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2005,2008,238000.0,dearest,85.0,60.29,59.3
+2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2014,2016,234000.0,middle,60.0,103.67,59.3
+2,Volvo V70,volvo,v70,engine,engine casing,Engine casing,2008,2013,291000.0,cheapest,10.0,75.64,59.3
+2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2008,2013,406000.0,dearest,200.0,77.17,141.75
+2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2005,2008,409000.0,middle,100.0,62.92,141.75
+2,Volvo V70,volvo,v70,fuel,fuel pump electric,Fuel pump electric,2005,2008,600000.0,cheapest,80.0,62.92,141.75
 2,Volvo V70,volvo,v70,fuel,mass air-flow sensor,Mass air-flow sensor,2005,2008,57000.0,dearest,250.0,60.72,82.9
 2,Volvo V70,volvo,v70,fuel,mass air-flow sensor,Mass air-flow sensor,2000,2004,396000.0,middle,65.0,60.43,82.9
 2,Volvo V70,volvo,v70,fuel,mass air-flow sensor,Mass air-flow sensor,2014,2016,290000.0,cheapest,49.0,105.69,82.9
-2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2005,2008,377000.0,dearest,40.0,59.88,23.8
-2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2008,2013,206000.0,middle,15.0,74.92,23.8
-2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2000,2004,351000.0,cheapest,8.0,59.71,23.8
+2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2005,2008,377000.0,dearest,40.0,59.88,23.7
+2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2008,2013,206000.0,middle,15.0,74.92,23.7
+2,Volvo V70,volvo,v70,electric / transmitter / databox / sensor,other relay,Other relay,2000,2004,351000.0,cheapest,8.0,59.71,23.7
 2,Volvo V70,volvo,v70,airbag,passenger airbag,Passenger airbag,2005,2008,39000.0,dearest,600.0,342.79,424.6
 2,Volvo V70,volvo,v70,airbag,passenger airbag,Passenger airbag,2008,2013,179000.0,middle,200.0,337.27,424.6
 2,Volvo V70,volvo,v70,airbag,passenger airbag,Passenger airbag,2000,2004,246000.0,cheapest,30.0,344.85,424.6
-2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2008,2013,320000.0,dearest,50.0,75.69,47.5
-2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2005,2008,,middle,30.0,60.72,47.5
-2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2008,2013,,cheapest,20.0,75.69,47.5
+2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2008,2013,320000.0,dearest,50.0,75.69,57.75
+2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2005,2008,,middle,30.0,60.72,57.75
+2,Volvo V70,volvo,v70,fuel,tank lid,Tank lid,2008,2013,,cheapest,20.0,75.69,57.75
