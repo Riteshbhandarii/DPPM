@@ -7,18 +7,22 @@ each asking price.
 Inputs:
 - results/september_live_validation/september_listings.csv   the chosen listings, as collected
 - artifacts/random_forest_final/full_data_bundle              the frozen model (not in git)
-- datasets/cleaned/clean_master_dataset.csv                   February rows: part names, registry values, baseline
+- datasets/cleaned/clean_master_dataset.csv                   February rows: part names, registry values
+- datasets/splits_strict/{train,validation}_strict.csv        February rows the baseline is fitted on
 - datasets/traficom_outputs/{model,brand}_summary.csv         registry values for vehicles February never saw
 
 Output:
 - results/september_live_validation/september_predictions.csv
   the listings plus `predicted_eur` and `baseline_eur`
+- the thesis results table (median absolute error and predictions within 25%
+  of the asking price, per round and listing), printed
 
 Assumptions:
 - The model is not refitted. Listing quality grade is left out, as in every run of the study.
-- Baseline: the median February price of the same part. For a trained vehicle
-  it is that vehicle's own median; for an unseen vehicle, the median over all
-  three February vehicles.
+- Baseline: the subcategory-median heuristic of the thesis, the median price of
+  the part over the strict training and validation splits, all three vehicles
+  together. It is the same baseline the frozen model was compared with on the
+  held-out test set, so the two evaluations use one definition.
 - Registry columns are constant per vehicle, so they are copied from February, or
   from the Traficom summaries for a vehicle February never saw.
 - February's own part-name spelling is used where it exists; a different string
@@ -43,6 +47,7 @@ LISTINGS = ROOT / "results/september_live_validation/september_listings.csv"
 PREDICTIONS = ROOT / "results/september_live_validation/september_predictions.csv"
 BUNDLE = ROOT / "artifacts/random_forest_final/full_data_bundle"
 FEBRUARY = ROOT / "datasets/cleaned/clean_master_dataset.csv"
+SPLITS = ROOT / "datasets/splits_strict"
 TRAFICOM = ROOT / "datasets/traficom_outputs"
 
 
@@ -92,18 +97,41 @@ def main():
         features = features_for(rows, february, brand, model, feature_names)
         listings.loc[rows.index, "predicted_eur"] = bundle["model"].predict(features).round(2)
 
-    own_median = february.groupby(["brand", "model", "subcategory"]).price.median()
-    all_median = february.groupby("subcategory").price.median()
-    listings["baseline_eur"] = [
-        own_median.get((row.brand, row.model, row.subcategory), all_median.get(row.subcategory))
-        if row.round == 1 else all_median.get(row.subcategory)
-        for row in listings.itertuples()
-    ]
-    listings["baseline_eur"] = listings.baseline_eur.round(2)
+    fitted = pd.concat([pd.read_csv(SPLITS / f"{name}_strict.csv", low_memory=False)
+                        for name in ("train", "validation")])
+    medians = fitted.groupby("subcategory").price.median()
+    listings["baseline_eur"] = listings.subcategory.map(medians).fillna(fitted.price.median()).round(2)
 
     listings.to_csv(PREDICTIONS, index=False)
-    error = (listings.asking_price_eur - listings.predicted_eur).abs() / listings.asking_price_eur * 100
-    print(listings.assign(error_pct=error).groupby(["round", "tier"]).error_pct.median().round(1).to_string())
+    print(results_table(listings).to_string(index=False))
+
+
+def results_table(listings):
+    """Median absolute error and predictions within 25% of the asking price."""
+    price = listings.asking_price_eur
+    scored = listings.assign(
+        rf_error=(listings.predicted_eur - price).abs(),
+        baseline_error=(listings.baseline_eur - price).abs(),
+    )
+    scored["rf_within_25"] = scored.rf_error <= 0.25 * price
+    scored["baseline_within_25"] = scored.baseline_error <= 0.25 * price
+
+    def summary(rows):
+        return {
+            "n": len(rows),
+            "median_ae_rf": round(rows.rf_error.median(), 2),
+            "median_ae_baseline": round(rows.baseline_error.median(), 2),
+            "within_25_rf": int(rows.rf_within_25.sum()),
+            "within_25_baseline": int(rows.baseline_within_25.sum()),
+        }
+
+    tiers = ["dearest", "middle", "cheapest"]
+    rows = []
+    for round_number, group in scored.groupby("round"):
+        for tier in tiers:
+            rows.append({"round": round_number, "listing": tier, **summary(group[group.tier == tier])})
+        rows.append({"round": round_number, "listing": "all", **summary(group)})
+    return pd.DataFrame(rows)
 
 
 if __name__ == "__main__":
