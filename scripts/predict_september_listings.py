@@ -18,7 +18,8 @@ Output:
   of the asking price, per round and listing), printed
 
 Assumptions:
-- The model is not refitted. Listing quality grade is left out, as in every run of the study.
+- The model is not refitted. Quality grade is the one read off each listing card, as the
+  model was trained with it; a missing grade would be imputed as the training mode (A2).
 - Baseline: the subcategory-median heuristic of the thesis, the median price of
   the part over the strict training and validation splits, all three vehicles
   together. It is the same baseline the frozen model was compared with on the
@@ -35,7 +36,6 @@ How to run:
 import sys
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,7 +69,7 @@ def features_for(listings, february, brand, model, feature_names):
     part_names = car.groupby("subcategory").part_name.agg(lambda names: names.mode().iat[0])
     frame = pd.DataFrame({
         "part_name": listings.subcategory.map(part_names).fillna(listings.part_label.str.strip() + " -"),
-        "quality_grade": np.nan,
+        "quality_grade": listings.quality_grade,
         "mileage": listings.mileage,
         "brand": brand,
         "model": model,
